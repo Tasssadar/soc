@@ -1,0 +1,275 @@
+% Když budete cokoli psát: ukládejte starší verze vždy odděleně, abyste se 
+% k nim mohli kdykoli vrátit. Kusy textu, které jste se rozhodli nepoužít, taky ukládejte do zvláštního souboru. Smazat se to dá vždycky, ale psát to znova je opruz. 
+
+% A POŘÁD ZÁLOHUJTE. POŘÁD !!!
+
+\documentclass[12pt, a4paper, oneside]{article} 
+% velikost písma, stránky, typ dokumentu - detaily viz literatura
+
+\usepackage{czech} % nastavení češtiny
+%\usepackage[latin2]{inputenc}
+%\usepackage[cp1250]{inputenc} % pro win1250
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig} % nastavení obtékání textu
+\usepackage{graphicx,amsmath} % nastavení grafiky, matematiky
+%\usepackage{subfig} % více obrázků vedle sebe 
+
+\usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
+\usepackage[bookmarksopen,colorlinks,plainpages=false,linkcolor=black,urlcolor=black,citecolor=black,filecolor=black,menucolor=black,unicode=true]{hyperref}
+%bookmarksopen - open up bookmark tree 
+%colorlinks - zbarví odkazy (implicitně orámovaný nezbarvený text)
+%urlcolor - barva odkazů (implicitně magenta) 
+%linkcolor=black - barva odkazů v obsahu (implicitně red)
+
+
+% \usepackage{parskip} - zapne americké odstavce v celé práci
+
+\addtolength{\textwidth}{-2mm} 
+\addtolength{\hoffset}{4mm}  % posun textu kvůli kroužkové vazbě  
+
+\setlength{\intextsep}{5mm} % nastavení mezery okolo obrázků
+
+% nastavení příkazu >\figcaption pro popis čehokoli, jako by to byly obrázky 
+\makeatletter   
+\newcommand\figcaption{\def\@captype{figure}\caption}
+\makeatother
+
+\def\refname{Literatura} 
+% přejmenuje anglický název Reference na české Literatura
+
+
+%\makeindex % příprava pro výrobu indexu (jestli ho chcete)
+
+%%    VLNKA <fileinput>  KkSsVvZzOoUuAaIi        
+% Defaultni  koncovka pro <fileinput> je  ".tex"
+%FIXME: haze error
+%\cstieon % Vypne chovani vlnky jako tvrde mezery v matematickem rezimu
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%V PROSTŘEDÍ ROVNIC SE NESMÍ VYSKYTOVAT PRÁZDNÝ ŘÁDEK
+%
+%PROGRAMY VLNKA A CSINDEX SE MUSÍ SPUSTIT SAMOSTATNĚ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% definice příkazů 
+\newcommand{\D}{\medskip \noindent} % nový odstavec v "americkém" formátování 
+\newcommand{\B}{\textbf} %tučné písmo
+\newcommand{\A}{\mathbf} %tučné písmo v matematickém režimu
+\newcommand{\TO}{\ensuremath{\boldsymbol\Omega}} % tučný znak velké omega - pro ohmy
+\newcommand{\I}{\index}  % vytváří položku indexu (asi nepoužijete)
+\newcommand{\Deg}[1][]{\ensuremath{{#1}^\circ}} % vysází značku stupně Celsia
+\newcommand{\Def}{\footnotesize Definice: \normalsize}
+\newcommand{\Pos}{\footnotesize Experiment: \normalsize}
+\newcommand{\Odv}{\footnotesize Odvození: \normalsize}
+\newcommand{\Vym}{\footnotesize Vymezení pojmu: \normalsize}
+\newcommand{\Ob}{obrázek }
+\newcommand{\It}{\textit}  % kurzíva
+\newcommand{\M}{\mathrm}   % v prostředí rovnic nastaví normální písmo (místo kurzívy ) 
+\newcommand{\F}{\footnotesize} % zmenšená velikost písma
+\newcommand{\N}{\normalsize} % normální velikost písma
+%\newcommand{\U}{\underline}  % podtržené písmo
+\newcommand{\e}{\ensuremath} 
+% další příkaz se aplikuje, pouze, když jste v matematickém režimu
+
+%\hyphenation{Pusť-me pla-tí hod-no-ty do-sa-dí-me za-da-né}
+% dělení slov, kdyby implicitní nevyhovovalo
+
+\linespread{1.3} 
+% řádkování 1,5x  
+% použijete podle situace  
+
+\unitlength=1mm % nastavení volby jednotek 
+
+% konec hlavičky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} % začátek textové části 
+
+% titulní strana
+\pagestyle{empty} % vynechá číslování
+ 
+\voffset = -20mm % posun začátku textu výš
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+
+\begin{center}
+ 
+\Large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}
+
+\vspace{60mm}
+
+\huge %\LARGE
+\B{GRAFICKÉ UŽIVATELSKÉ ROZHRANÍ} 
+% na titulní straně může být stručnější, pokud je to potřeba  
+
+\Large
+
+\vspace{90mm}
+
+
+\B{Vojtěch Boček} \\
+
+\vspace{40mm}
+
+\B{Brno 2011}
+
+
+\end{center}
+
+\newpage % konec titulní strany 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% vnitřní titulní strana
+\voffset = -20mm % posun začátku textu výš
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+
+\begin{center}
+
+\Large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}  \\
+\vspace{10mm}
+ \normalsize 
+\B{Obor SOČ: 18. Informatika}% číslo a název - vyplníme spolu 
+
+\vspace{45mm}
+
+\LARGE %\huge 
+\B{GRAFICKÉ UŽIVATELSKÉ ROZHRANÍ} 
+\end{center}  
+\large
+
+\vspace{50mm}
+
+
+\begin{tabbing}
+\hspace{10mm} \= \hspace{30mm}  \=   \kill % nastavení zarážek 
+  \> \B{Autor:}  \> \B{Vojtěch Boček}        \\[8mm] 
+  \> \B{Škola:}   \> \B{SPŠ a~VOŠ technická, }     \\
+  \>              \> \B{Sokolská 1 602 00 Brno}    \\[8mm]
+
+  \> \B{Konzultant:} \> \B {Jakub Streit} 
+\end{tabbing}
+
+\vspace{20mm}
+
+\begin{center}
+\B{Brno 2012}
+
+\end{center}
+\normalsize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage  % Prohlášení o autorství  
+\voffset = 0mm % posun začátku textu zpět
+
+~ % musí to tu být, aby fungovala svislá mezera
+
+\vspace{10mm}
+
+\section*{Prohlášení}
+
+Prohlašuji, že jsem svou práci vypracoval samostatně, použil jsem pouze 
+podklady (literaturu, SW atd.) citované v~práci a~uvedené v~přiloženém seznamu 
+a~postup při zpracování práce je v~souladu se zákonem č. 121/2000 Sb., o~právu 
+autorském, o~právech souvisejících s~právem autorským a~o~změně některých 
+zákonů (autorský zákon) v~platném znění. 
+ 
+\vspace{20mm} 
+ 
+\noindent V~Brně  dne: 6.3.2012 \hspace{50mm}                 podpis:   
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage   % Poděkování - nepovinné 
+
+~ % musí to tu být, aby fungovala svislá mezera
+
+\vspace{140mm}
+
+\section*{Poděkování}
+
+ Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu. % nebo cokoli dle Vašeho uvážení 
+ 
+ Dále děkuji organizaci DDM Junior, za poskytnutí podpory.
+ 
+ Také bych chtěl poděkovat panu profesorovi Mgr. Miroslavu Burdovi za všeobecnou pomoc s prací.  
+
+\D Tato práce byla vypracována za finanční podpory JMK.
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage   % Anotace 
+~ % musí to tu být, aby fungovala svislá mezera
+\vspace{10mm}
+
+\section*{Anotace }
+
+    Cílem této práce bylo vytvořit uživatelské prostředí určené k parsování a~zobrazování surových dat posílaných z mikrokontrolérů v~robotech, digitálních sondách apod. 
+Hlavní vlastností programu je modulárnost - rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
+
+\D \B{Klíčová slova:} parser, analýza dat, program
+
+\section*{Annotation}
+
+    Purpose of this labor is to create graphical user interface for parsing and displaying raw data sent from embedded devices, robots, digital probes and other devices which are using microcontrollers.
+Main feature of this application is modularity - it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
+
+\D \B{Key words:} parser, data analysis, program
+
+\addtolength{\textheight}{30mm} % prodlouží následující stránku
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\setlength{\voffset}{-20mm} % posune text/obrázek na této stránce nahoru
+%\setcounter{page}{1}  % nastaví čítač stránek znovu od jedné
+
+\tableofcontents  % vysází obsah
+
+\addtolength{\textheight}{-30mm} % zkrátí následující stránku
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patří
+%\pagestyle{headings} % znovu zapne číslování
+\pagestyle{plain}
+\section*{Úvod}
+
+\addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
+% zde začne text úvodu
+%TODO: naší?
+Díky fyzikálně-matematickém kroužku na~naší škole jsem se seznámil s~mikrokontroléry, které používáme k řízení robotů určených například pro soutěž Eurobot nebo jako učební pomůcka. S~tím vyvstal problém s~parsováním dat ze senzorů v~čitelnější podobě, než je běžný terminál, která by zároveň byla snadno a~rychle nastavitelná. Žádný program splňující tato kritéria jsem nenašel, a~proto jsem se začal zabývat vlastním řešením.
+ 
+\subsection*{Stanovené cíle}
+
+    \begin{itemize}
+        \item Modulárnost - jednoduché vytváření dalších modulů pro specifické činnosti.
+
+        \item Jednoduché a~rychlé určení formátu zdrojových dat.
+
+        \item Absolutní kontrola nad způsobem zobrazování parsovaných dat.
+
+        \item Využití Qt Frameworku - možnost běhu programu na různých platformách.
+
+    \end{itemize}
+
+\subsection*{Osobní cíle}
+
+    Qt Framework jsem zvolil protože jsem chtěl zkusit naprogramovat program s~GUI (do té doby jsem pracoval většinou se serverovým emulátorem MaNGOS \cite{mangos} a programy pro mikrokontroléry). Qt umožňuje vytvoření GUI pro vícero platforem s~jedním zdrojovým kódem.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{subsection}{Literatura}
+
+
+ \begin{thebibliography}{99}
+ %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
+% seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
+
+  \bibitem{mangos} \It{Massive Network Game Object Server - MaNGOS} \\
+   \verb#http://getmangos.com#% (Stav ke dni 8.3.2011)
+
+\end{thebibliography}
+
+\end{document}
