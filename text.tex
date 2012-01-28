@@ -242,14 +242,15 @@ Při stavbě robotů na soutěž Eurobot aj. jsem se setkal s problémem zpracov
 
 \section*{Aplikace}
 \addcontentsline{toc}{section}{Aplikace} 
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7. \\
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. \\
+Je licencovaný pod GNU GPLv3 a zdrojový kód je dostupný na Githubu\cite{repo}.
 \subsection*{Další použité knihovny}
     \begin{itemize}
         \item Qwt - kreslení grafů
         \item upravené QSerialDevice - připojení k sériovému portu
         \item upravený QHexEdit2 - hex editor 
     \end{itemize}
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -378,6 +379,8 @@ Co se týče Analyzéru, je možné přidat další widgety - mám v plánu impl
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
+    \bibitem{repo} \It{GIT repozitář Lorris} \\
+    \verb#https://github.com/Tasssadar/Lorris#
 
     \bibitem{qtfw} \It{Qt Framework - Cross-platform application and UI framework} \\
     \verb#http://qt.nokia.com/# (Stav ke dni 28.1.2012)
@@ -396,7 +399,6 @@ Co se týče Analyzéru, je možné přidat další widgety - mám v plánu impl
     
     \bibitem{qtscript} \It{QtScript} \\
     \verb#http://developer.qt.nokia.com/doc/qt-4.7/qtscript.html# (Stav ke dni 28.1.2012)    
-
 \end{thebibliography}
 
 \end{document}
