@@ -12,7 +12,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{wrapfig} % nastavení obtékání textu
 \usepackage{graphicx,amsmath} % nastavení grafiky, matematiky
-%\usepackage{subfig} % více obrázků vedle sebe 
+\usepackage{subfig} % více obrázků vedle sebe 
+\usepackage{float}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
 \renewcommand{\cftsecdotsep}{\cftdotsep}
@@ -188,7 +189,7 @@ zákonů (autorský zákon) v~platném znění.
 
 \section*{Poděkování}
 
- Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu. % nebo cokoli dle Vašeho uvážení 
+ Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, a Martinu Vejnárovi za informace o jeho programátoru Shupito. % nebo cokoli dle Vašeho uvážení 
  
  Dále děkuji organizaci DDM Junior, za poskytnutí podpory.
  
@@ -237,38 +238,164 @@ Main feature of this application is modularity - it is divided to sub-sections d
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
 %TODO: naší?
-Díky fyzikálně-matematickém kroužku na~naší škole jsem se seznámil s~mikrokontroléry, které používáme k řízení robotů určených například pro soutěž Eurobot nebo jako učební pomůcka. S~tím vyvstal problém s~parsováním dat ze senzorů v~čitelnější podobě, než je běžný terminál, která by zároveň byla snadno a~rychle nastavitelná. Žádný program splňující tato kritéria jsem nenašel, a~proto jsem se začal zabývat vlastním řešením.
- 
-\subsection*{Stanovené cíle}
+Při stavbě robotů na soutěž Eurobot aj. jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval - k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu - typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
 
+\section*{Aplikace}
+\addcontentsline{toc}{section}{Aplikace} 
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.
+\subsection*{Další použité knihovny}
     \begin{itemize}
-        \item Modulárnost - jednoduché vytváření dalších modulů pro specifické činnosti.
-
-        \item Jednoduché a~rychlé určení formátu zdrojových dat.
-
-        \item Absolutní kontrola nad způsobem zobrazování parsovaných dat.
-
-        \item Využití Qt Frameworku - možnost běhu programu na různých platformách.
-
+        \item Qwt - kreslení grafů
+        \item upravené QSerialDevice - připojení k sériovému portu
+        \item upravený QHexEdit2 - hex editor 
     \end{itemize}
-
-\subsection*{Osobní cíle}
-%TODO
-    Qt Framework jsem zvolil protože umožňuje jednoduché vytvoření GUIjsem chtěl zkusit naprogramovat program s~GUI (do té doby jsem pracoval většinou se serverovým emulátorem MaNGOS \cite{mangos} a programy pro mikrokontroléry). Qt umožňuje vytvoření GUI pro vícero platforem s~jedním zdrojovým kódem.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití.
 
 \newpage
-\addcontentsline{toc}{subsection}{Literatura}
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
 
+\section*{Moduly}
+\addcontentsline{toc}{section}{Moduly}
+Každý modul se otevírá v samostatné záložce, přičemž je možné mít otevřeno více stejných modulů zároveň, a aby více modulů sdílelo jedno připojení (např. Teminál a Analyzér, oba pracující s jedním sériovým portem).
+\subsection*{Současné moduly}
+    \begin{itemize}
+        \item Analyzér - zobrazování dat v grafických widgetech, hlavní část práce.
+        \item Shupito - rozhraní pro obsluhu programátoru "Shupito"\cite{shupito}
+        \item Terminál - terminál pro sériový port s podporou bootloaderu pro čipy ATmega\cite{avr232client}.
+    \end{itemize}
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/tabs.png}
+\caption{Záložky modulů}
+\label{Moduly}
+\end{center}
+\end{figure}
 
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\subsection*{Analyzér}
+\addcontentsline{toc}{subsection}{Analyzér} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/analyzer_all.png}
+\caption{Modul analyzér}
+\label{Analyzer}
+\end{center}
+\end{figure}
+
+Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
+
+Struktura dat se nastavuje v samostatném dialogu, kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah - statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+
+Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu "vytahat" na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+
+Nastavení widgetu (jeho jméno, u čísla např. jeho datový typ apod.) jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Widgety je taktéž možné "uzamknout", aby nebylo možné je zavřít, měnit jejich pozici a velikost.
+
+Aplikace si také přijatá data ukládá - navigace je umožněna posuvníkem a boxem v horní části okna.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.7]{img/analyzer_struct.png}
+\caption{Dialog nastavení struktury dat}
+\label{Analyzer_struct}
+\end{center}
+\end{figure}
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
+\hfill
+\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
+\caption{Widgety}
+\label{widgets}
+\end{center}
+\end{figure}
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\subsection*{Shupito}
+\addcontentsline{toc}{subsection}{Shupito} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/shupito.png}
+\caption{Modul Shupito}
+\label{Shupito}
+\end{center}
+\end{figure}
+
+Shupito je programátor mikročipů vytvořený Martinem Vejnarem. Dokáže programovat mikrokontroléry pomocí ISP, PDI *DOP: zeptat se martina co všechno to zvládá*. 
+
+Modul v mojí práci dokáže programátor Shupito obsluhovat - nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. Shupito dokáže pracovat také jako RS232 tunel, i tuto funkci program podporuje - aktivní tunel se zobrazí jako další typ připojení a je možné ho využívat v ostatních modulech.
+Komunikace s programátorem je naportována z oficiálního ovládacího programu\cite{avr232client}, který je však dostupný pouze pro MS Windows.
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\subsection*{Terminál}
+\addcontentsline{toc}{subsection}{Terminál} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/terminal.png}
+\caption{Modul terminál}
+\label{Terminal}
+\end{center}
+\end{figure}
+
+Klasický terminál - zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootlodaer, avr232client\cite{avr232client}.
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\section*{Možnosti dalšího rozšiřování programu}
+\addcontentsline{toc}{section}{Možnosti dalšího rozšiřování programu}
+Díky modulárnosti programu je možné poměrně jednoduše vytvořit další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je také možné přidat další typy připojení - například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
+
+Co se týče Analyzéru, je možné přidat další widgety - mám v plánu implementaci QtScriptu\cite{qtscript}, který podstatně rozšíří možnosti parsování dat.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{Reference}
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
-  \bibitem{mangos} \It{Massive Network Game Object Server - MaNGOS} \\
-   \verb#http://getmangos.com# (Stav ke dni 5.11.2011)
+    \bibitem{qtfw} \It{Qt Framework - Cross-platform application and UI framework} \\
+    \verb#http://qt.nokia.com/# (Stav ke dni 28.1.2012)
+    
+    \bibitem{shupito} \It{Shupito - Programátor} \\
+    \verb#http://shupito.net/# (Stav ke dni 28.1.2012)
+
+    \bibitem{avr232client} \It{avr232client} \\
+    \verb#http://technika.junior.cz/trac/wiki/avr232client# (Stav ke dni 28.1.2012)
+
+    \bibitem{endian} \It{Endianness} \\
+    \verb#http://en.wikipedia.org/wiki/Endianness# (Stav ke dni 28.1.2012)
+
+    \bibitem{hex} \It{Intel HEX} \\
+    \verb#http://en.wikipedia.org/wiki/Intel_hex# (Stav ke dni 28.1.2012)
+    
+    \bibitem{qtscript} \It{QtScript} \\
+    \verb#http://developer.qt.nokia.com/doc/qt-4.7/qtscript.html# (Stav ke dni 28.1.2012)    
 
 \end{thebibliography}
 

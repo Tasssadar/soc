@@ -3,7 +3,7 @@
     Při stavbě robotů na soutěž Eurobot aj. jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval - k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu - typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
 
 Aplikace
-    Svůj program jsem pojmenoval "Lorris" a je vytvořený v C++ a využívá Qt Framework (v4.7)*DOP: reference*, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.
+    Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework (v4.7)*DOP: reference*, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.
 
     Další použité knihovny: *DOP: reference*
     Qwt - kreslení grafů
@@ -28,7 +28,7 @@ Moduly
         *DOP: screenshot analyzéru*
 
         Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
-        Struktura dat se nastavuje v samostatném dialogu, kde je možno nastavit délku packetu, jeho endianess*DOP: vysvetleni* přitomnost hlavičky a její obsah - statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+        Struktura dat se nastavuje v samostatném dialogu, kde je možno nastavit délku packetu, jeho endianness*DOP: vysvetleni* přitomnost hlavičky a její obsah - statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
         *DOP: screenshot dialogu na strukturu dat?*
 
@@ -44,7 +44,6 @@ Moduly
         Shupito je programátor mikročipů vytvořený Martinem Vejnarem. Dokáže programovat mikrokontroléry pomocí ISP, PDI *DOP: zeptat se martina co všechno to zvládá*. Modul v mojí práci dokáže programátor Shupito obsluhovat - nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32 *DOP: reference*. Shupito dokáže pracovat také jako RS232 tunel, i tuto funkci program podporuje - aktivní tunel se zobrazí jako další typ připojení a je možné ho využívat v ostatních modulech.
         Komunikace s programátorem je naportována z oficiálního ovládacího programu (avr232client *DOP: reference*), který je však dostupný pouze pro MS Windows.
 
-
     Terminál
         *DOP: screenshot terminálu*
     
@@ -52,5 +51,5 @@ Moduly
 
 
 Možnosti dalšího rozšiřování programu
-    Díky modulárnosti programu je možné poměrně jednoduše vytvořit další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je možné také přidat další typy připojení - například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
-    Co se týče Analyzéru, je možné implementovat další widgety - mám v plánu implementaci QtScriptu*DOP: reference*, který podstatně rozšíří možnosti parsování dat.
+    Díky modulárnosti programu je možné poměrně jednoduše vytvořit další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je také možné přidat další typy připojení - například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
+    Co se týče Analyzéru, je možné přidat další widgety - mám v plánu implementaci QtScriptu*DOP: reference*, který podstatně rozšíří možnosti parsování dat.
