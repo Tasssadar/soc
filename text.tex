@@ -245,12 +245,14 @@ Při stavbě robotů na soutěž Eurobot aj. jsem se setkal s problémem zpracov
 Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7. \\
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. \\
 Je licencovaný pod GNU GPLv3 a zdrojový kód je dostupný na Githubu\cite{repo}.
+
+
 \subsection*{Další použité knihovny}
-    \begin{itemize}
-        \item Qwt - kreslení grafů
-        \item upravené QSerialDevice - připojení k sériovému portu
-        \item upravený QHexEdit2 - hex editor 
-    \end{itemize}
+{\bf Qwt} je knihovna pro Qt Framwork obsahující tzv. widgety pro aplikace technického charakteru - grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
+zatím z této knihovny používám pouze graf (v modulu analyzéru), ale v budoucnu bych chtěl použít i některé další součásti. \\
+{\bf QExtSerialPort} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
+{\bf QHexEdit2} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
+týkajících se především vzhledu.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
