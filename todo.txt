@@ -1,0 +1,20 @@
+- doplnit Ůvod a vytvořit závěr
+- Přiklady použití
+    - Data z enkodérů, senzorů
+    - logická sonda (?)
+    - shupito
+    - 
+- zkontrolovat/přepsat anotaci
+- licence
+- moduly do popisu rozhraní
+- slovník pojmů
+- web, video
+- prehrani dat (zpomalene)
+
+Popis rozhraní
+   - knihovny
+   - moduly
+
+Analyzér
+Terminál
+...

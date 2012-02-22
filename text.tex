@@ -4,7 +4,7 @@
 % A POŘÁD ZÁLOHUJTE. POŘÁD !!!
 
 \documentclass[12pt, a4paper, oneside]{article} 
-% velikost písma, stránky, typ dokumentu - detaily viz literatura
+% velikost písma, stránky, typ dokumentu -- detaily viz literatura
 
 \usepackage{czech} % nastavení češtiny
 %\usepackage[latin2]{inputenc}
@@ -18,14 +18,14 @@
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
 \renewcommand{\cftsecdotsep}{\cftdotsep}
 
-\usepackage[bookmarksopen,colorlinks,plainpages=false,linkcolor=black,urlcolor=black,citecolor=black,filecolor=black,menucolor=black,unicode=true]{hyperref}
-%bookmarksopen - open up bookmark tree 
-%colorlinks - zbarví odkazy (implicitně orámovaný nezbarvený text)
-%urlcolor - barva odkazů (implicitně magenta) 
-%linkcolor=black - barva odkazů v obsahu (implicitně red)
+\usepackage[bookmarksopen,colorlinks,plainpages=false,linkcolor=black,urlcolor=blue,citecolor=black,filecolor=black,menucolor=black,unicode=true]{hyperref}
+%bookmarksopen -- open up bookmark tree 
+%colorlinks -- zbarví odkazy (implicitně orámovaný nezbarvený text)
+%urlcolor -- barva odkazů (implicitně magenta) 
+%linkcolor=black -- barva odkazů v obsahu (implicitně red)
 
 
-% \usepackage{parskip} - zapne americké odstavce v celé práci
+% \usepackage{parskip} -- zapne americké odstavce v celé práci
 
 \addtolength{\textwidth}{-2mm} 
 \addtolength{\hoffset}{4mm}  % posun textu kvůli kroužkové vazbě  
@@ -58,7 +58,7 @@
 \newcommand{\D}{\medskip \noindent} % nový odstavec v "americkém" formátování 
 \newcommand{\B}{\textbf} %tučné písmo
 \newcommand{\A}{\mathbf} %tučné písmo v matematickém režimu
-\newcommand{\TO}{\ensuremath{\boldsymbol\Omega}} % tučný znak velké omega - pro ohmy
+\newcommand{\TO}{\ensuremath{\boldsymbol\Omega}} % tučný znak velké omega -- pro ohmy
 \newcommand{\I}{\index}  % vytváří položku indexu (asi nepoužijete)
 \newcommand{\Deg}[1][]{\ensuremath{{#1}^\circ}} % vysází značku stupně Celsia
 \newcommand{\Def}{\footnotesize Definice: \normalsize}
@@ -131,7 +131,7 @@
 \Large \B{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}  \\
 \vspace{10mm}
  \normalsize 
-\B{Obor SOČ: 18. Informatika}% číslo a název - vyplníme spolu 
+\B{Obor SOČ: 18. Informatika}% číslo a název -- vyplníme spolu 
 
 \vspace{45mm}
 
@@ -181,7 +181,7 @@ zákonů (autorský zákon) v~platném znění.
  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage   % Poděkování - nepovinné 
+\newpage   % Poděkování -- nepovinné 
 
 ~ % musí to tu být, aby fungovala svislá mezera
 
@@ -206,14 +206,14 @@ zákonů (autorský zákon) v~platném znění.
 \section*{Anotace }
 
     Cílem této práce bylo vytvořit uživatelské prostředí určené k parsování a~zobrazování surových dat posílaných z mikrokontrolérů v~robotech, digitálních sondách apod. 
-Hlavní vlastností programu je modulárnost - rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
+Hlavní vlastností programu je modulárnost -- rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
 
 \D \B{Klíčová slova:} parser, analýza dat, program
 
 \section*{Annotation}
 
     Purpose of this labor is to create graphical user interface for parsing and displaying raw data sent from embedded devices, robots, digital probes and other devices which are using microcontrollers.
-Main feature of this application is modularity - it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
+Main feature of this application is modularity -- it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
 
 \D \B{Key words:} parser, data analysis, program
 
@@ -238,20 +238,20 @@ Main feature of this application is modularity - it is divided to sub-sections d
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
 %TODO: naší?
-Při stavbě robotů na soutěž Eurobot aj. jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval - k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu - typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
+Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problémem  při zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval -- k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu -- typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
 
-\section*{Aplikace}
-\addcontentsline{toc}{section}{Aplikace} 
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech - testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7. \\
+\section*{Popis rozhraní}
+\addcontentsline{toc}{section}{Popis rozhraní}
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7. \\
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. \\
 Je licencovaný pod GNU GPLv3 a zdrojový kód je dostupný na Githubu\cite{repo}.
 
 
-\subsection*{Další použité knihovny}
-{\bf Qwt} je knihovna pro Qt Framwork obsahující tzv. widgety pro aplikace technického charakteru - grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
+\subsection*{Knihovny třetích stran}
+{\bf Qwt}\cite{qwt_link} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
 zatím z této knihovny používám pouze graf (v modulu analyzéru), ale v budoucnu bych chtěl použít i některé další součásti. \\
-{\bf QExtSerialPort} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
-{\bf QHexEdit2} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
+{\bf QExtSerialPort}\cite{qext_link} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
+{\bf QHexEdit2}\cite{qhex_link} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
 týkajících se především vzhledu.
 
 \newpage
@@ -263,9 +263,10 @@ týkajících se především vzhledu.
 Každý modul se otevírá v samostatné záložce, přičemž je možné mít otevřeno více stejných modulů zároveň, a aby více modulů sdílelo jedno připojení (např. Teminál a Analyzér, oba pracující s jedním sériovým portem).
 \subsection*{Současné moduly}
     \begin{itemize}
-        \item Analyzér - zobrazování dat v grafických widgetech, hlavní část práce.
-        \item Shupito - rozhraní pro obsluhu programátoru "Shupito"\cite{shupito}
-        \item Terminál - terminál pro sériový port s podporou bootloaderu pro čipy ATmega\cite{avr232client}.
+        \item Analyzér -- zobrazování dat v grafických widgetech, hlavní část práce.
+        \item Proxy mezi Sériovým portem a TCP socketem -- umožňuje vzdálený přístup k sériovému portu
+        \item Shupito -- rozhraní pro obsluhu programátoru "Shupito"\cite{shupito}
+        \item Terminál -- terminál pro sériový port s podporou bootloaderu pro čipy ATmega\cite{avr232client}.
     \end{itemize}
 \begin{figure}[h]
 \begin{center}
@@ -292,7 +293,7 @@ Každý modul se otevírá v samostatné záložce, přičemž je možné mít o
 
 Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
 
-Struktura dat se nastavuje v samostatném dialogu, kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah - statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu "vytahat" na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
 
@@ -304,7 +305,19 @@ Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud
 
 Nastavení widgetu (jeho jméno, u čísla např. jeho datový typ apod.) jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Widgety je taktéž možné "uzamknout", aby nebylo možné je zavřít, měnit jejich pozici a velikost.
 
-Aplikace si také přijatá data ukládá - navigace je umožněna posuvníkem a boxem v horní části okna.
+Aplikace si také přijatá data ukládá -- navigace je umožněna posuvníkem a boxem v horní části okna.
+
+\subsection*{Dostupné widgety}
+{\bf Číslo} - Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetiná čisla (single-precision\cite{float}, 32bit a 64bit -- jako v jazyku C).\\
+Widget dokáže zarovnat číslo na maximální délku jeho datového typu a formátovat ho těmito způsoby:
+\begin{itemize}
+    \item Desítkový -- číslo v desítkové soustavě
+    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetiná čísla.
+    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro typy bez znaménka. 
+    \item Binární -- zobrazí číslo ve dvojkové soustavě
+\end{itemize}
+
+{\bf Bar} - Sloupcový 
 
 \begin{figure}[h]
 \begin{center}
@@ -332,6 +345,23 @@ Aplikace si také přijatá data ukládá - navigace je umožněna posuvníkem a
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
+\subsection*{Proxy mezi sériovým portem a TCP socketem}
+\addcontentsline{toc}{subsection}{Proxy mezi sériovým portem a TCP socketem} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/proxy.png}
+\caption{Proxy mezi sériovým portem a TCP socketem}
+\label{Shupito}
+\end{center}
+\end{figure}
+Jednoduchá proxy mezi sériovým portem a TCP socketem, která umožňuje vzdálené připojení na sériový port, buďto z Lorris nebo jiného programu.
+
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
 \subsection*{Shupito}
 \addcontentsline{toc}{subsection}{Shupito} 
 
@@ -342,12 +372,10 @@ Aplikace si také přijatá data ukládá - navigace je umožněna posuvníkem a
 \label{Shupito}
 \end{center}
 \end{figure}
-
 Shupito je programátor mikročipů vytvořený Martinem Vejnarem. Dokáže programovat mikrokontroléry pomocí ISP, PDI *DOP: zeptat se martina co všechno to zvládá*. 
 
-Modul v mojí práci dokáže programátor Shupito obsluhovat - nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. Shupito dokáže pracovat také jako RS232 tunel, i tuto funkci program podporuje - aktivní tunel se zobrazí jako další typ připojení a je možné ho využívat v ostatních modulech.
+Modul v mojí práci dokáže programátor Shupito obsluhovat -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. Shupito dokáže pracovat také jako RS232 tunel, i tuto funkci program podporuje -- aktivní tunel se zobrazí jako další typ připojení a je možné ho využívat v ostatních modulech.
 Komunikace s programátorem je naportována z oficiálního ovládacího programu\cite{avr232client}, který je však dostupný pouze pro MS Windows.
-
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
@@ -363,7 +391,7 @@ Komunikace s programátorem je naportována z oficiálního ovládacího program
 \end{center}
 \end{figure}
 
-Klasický terminál - zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootlodaer, avr232client\cite{avr232client}.
+Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootlodaer, avr232client\cite{avr232client}.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -371,9 +399,10 @@ Klasický terminál - zobrazuje data přijatá přes sériový port a posílá s
 
 \section*{Možnosti dalšího rozšiřování programu}
 \addcontentsline{toc}{section}{Možnosti dalšího rozšiřování programu}
-Díky modulárnosti programu je možné poměrně jednoduše vytvořit další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je také možné přidat další typy připojení - například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
+Díky modulárnosti programu je možné poměrně jednoduše vytvořit \\ 
+další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je také možné přidat další typy připojení -- například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
 
-Co se týče Analyzéru, je možné přidat další widgety - mám v plánu implementaci QtScriptu\cite{qtscript}, který podstatně rozšíří možnosti parsování dat.
+Co se týče Analyzéru, je možné přidat další widgety -- mám v plánu implementaci QtScriptu\cite{qtscript}, který podstatně rozšíří možnosti parsování dat.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -381,26 +410,40 @@ Co se týče Analyzéru, je možné přidat další widgety - mám v plánu impl
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
-    \bibitem{repo} \It{GIT repozitář Lorris} \\
-    \verb#https://github.com/Tasssadar/Lorris#
+    \bibitem{qtfw} \It{Qt Framework -- Cross-platform application and UI framework} \\
+    \url{http://qt.nokia.com/} (Stav ke dni 28.1.2012)
 
-    \bibitem{qtfw} \It{Qt Framework - Cross-platform application and UI framework} \\
-    \verb#http://qt.nokia.com/# (Stav ke dni 28.1.2012)
+    \bibitem{repo} \It{GIT repozitář Lorris} \\
+    \url{https://github.com/Tasssadar/Lorris}
+
+    \bibitem{qwt_link} \It{Qt Widgets for Technical Applications} \\
+    \url{http://qwt.sourceforge.net/} (Stav ke dni 22.2.2012)
+
+    \bibitem{qext_link} \It{Qt interface class for old fashioned serial ports} \\
+    \url{http://code.google.com/p/qextserialport/} \\
+    (Stav ke dni 22.2.2012)
+
+    \bibitem{qhex_link} \It{Binary Editor for Qt} \\
+    \url{http://code.google.com/p/qhexedit2/} (Stav ke dni 22.2.2012)
     
-    \bibitem{shupito} \It{Shupito - Programátor} \\
-    \verb#http://shupito.net/# (Stav ke dni 28.1.2012)
+    \bibitem{shupito} \It{Shupito -- Programátor} \\
+    \url{http://shupito.net/} (Stav ke dni 28.1.2012)
 
     \bibitem{avr232client} \It{avr232client} \\
-    \verb#http://technika.junior.cz/trac/wiki/avr232client# (Stav ke dni 28.1.2012)
+    \url{http://technika.junior.cz/trac/wiki/avr232client}\\
+    (Stav ke dni 28.1.2012)
 
     \bibitem{endian} \It{Endianness} \\
-    \verb#http://en.wikipedia.org/wiki/Endianness# (Stav ke dni 28.1.2012)
+    \url{http://en.wikipedia.org/wiki/Endianness} (Stav ke dni 28.1.2012)
+
+    \bibitem{float} \It{Single-precision floating-point format} \\
+    \url{http://en.wikipedia.org/wiki/Single_precision} (Stav ke dni 28.1.2012)
 
     \bibitem{hex} \It{Intel HEX} \\
-    \verb#http://en.wikipedia.org/wiki/Intel_hex# (Stav ke dni 28.1.2012)
+    \url{http://en.wikipedia.org/wiki/Intel_hex} (Stav ke dni 28.1.2012)
     
     \bibitem{qtscript} \It{QtScript} \\
-    \verb#http://developer.qt.nokia.com/doc/qt-4.7/qtscript.html# (Stav ke dni 28.1.2012)    
+    \url{http://developer.qt.nokia.com/doc/qt-4.7/qtscript.html} (Stav ke dni 28.1.2012)    
 \end{thebibliography}
 
 \end{document}
