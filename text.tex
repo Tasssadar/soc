@@ -185,15 +185,14 @@ zákonů (autorský zákon) v~platném znění.
 
 ~ % musí to tu být, aby fungovala svislá mezera
 
-\vspace{140mm}
+\vspace{120mm}
 
 \section*{Poděkování}
 
- Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, a Martinu Vejnárovi za informace o jeho programátoru Shupito. % nebo cokoli dle Vašeho uvážení 
- 
- Dále děkuji organizaci DDM Junior, za poskytnutí podpory.
- 
- Také bych chtěl poděkovat panu profesorovi Mgr. Miroslavu Burdovi za všeobecnou pomoc s prací.  
+ Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, a Martinu Vejnárovi za informace o jeho programátoru Shupito.\\% nebo cokoli dle Vašeho uvážení 
+ Dále děkuji organizaci DDM Junior, za poskytnutí podpory.\\
+ Také bych chtěl poděkovat panu profesorovi Mgr. Miroslavu Burdovi za všeobecnou pomoc s prací.\\
+ V neposlední řadě děkuji Martinu Foučkovi za rady a pomoc s Qt Frameworkem.
 
 \D Tato práce byla vypracována za finanční podpory JMK.
  
@@ -242,9 +241,129 @@ Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problém
 
 \section*{Popis rozhraní}
 \addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7. \\
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. \\
-Je licencovaný pod GNU GPLv3 a zdrojový kód je dostupný na Githubu\cite{repo}.
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.  
+
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech
+%(jsou odděleny pouze v programu, nelze je instalovat odděleně jako např. plug-in do webového prohlížeče DOP: patří to sem?)
+, které jsou otevírány v záložkách (DOP: panelech?) - podobně jako stránky ve webovém prohlížeči.\\
+\\
+Možnosti připojení k zařízení:
+\begin{itemize}
+    \item Sériový port
+    \item Shupito Tunel (virtuální sériový port, viz \hyperref[label_name]{Shupito})
+    \item TCP socket\cite{tcp_sock}
+    \item Načtení dat ze souboru
+\end{itemize}
+Je možné mít připojeno více různých modulů na jedno zařízení.  
+
+\newpage
+\section*{Modul: Analyzér}
+\addcontentsline{toc}{section}{Modul: Analyzér} 
+\addcontentsline{toc}{subsection}{Popis}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/analyzer_all.png}
+\caption{Modul analyzér}
+\label{Analyzer}
+\end{center}
+\end{figure}
+
+Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
+
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+
+Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu "vytahat" na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+
+Nastavení widgetu (jeho jméno, u čísla např. jeho datový typ apod.) jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Widgety je taktéž možné "uzamknout", aby nebylo možné je zavřít, měnit jejich pozici a velikost.
+
+Aplikace si také přijatá data ukládá -- navigace je umožněna posuvníkem a boxem v horní části okna.
+
+\subsection*{Widget: číslo}
+\addcontentsline{toc}{subsection}{Widget: číslo}
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/w_num.png}
+\end{center}
+\end{figure}
+Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetiná čisla (single-precision\cite{float}, 32bit a 64bit -- jako v jazyku C).\\
+Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~formátovat ho těmito způsoby:
+\begin{itemize}
+    \item Desítkový -- číslo v desítkové soustavě
+    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetiná čísla.
+    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro typy bez znaménka. 
+    \item Binární -- zobrazí číslo ve dvojkové soustavě
+\end{itemize}
+
+\newpage
+\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
+\subsection*{Widget: sloupcový bar}
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/w_bar.png}
+\end{center}
+\end{figure}
+Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat, orientaci (vertikální nebo horizontální) a rozmezí hodnot.
+
+\addcontentsline{toc}{subsection}{Widget: barva}
+\subsection*{Widget: barva}
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/w_col.png}
+\end{center}
+\end{figure}
+Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu a hodnot každé z barev RGB.
+
+\newpage
+\addcontentsline{toc}{subsection}{Widget: graf}
+\subsection*{Widget: graf}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.65]{img/w_graph.png}
+\end{center}
+\end{figure}
+Zobrazuje hodnoty v grafu - osa Y jsou hodnoty, na ose X je počet vzorků. Lze nastavovat jméno, barvu a datový typ hrany, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na hranu v legendě grafu hranu skryje.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{img/w_graph_add.png}
+\caption{Dialog pro nastavení parametrů hrany}
+\end{center}
+\end{figure}
+
+% DOP: přímo ovládání grafu?
+
+
+\newpage
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.7]{img/analyzer_struct.png}
+\caption{Dialog nastavení struktury dat}
+\label{Analyzer_struct}
+\end{center}
+\end{figure}
+
+\newpage
+\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\pagestyle{plain}
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
+\hfill
+\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
+\caption{Widgety}
+\label{widgets}
+\end{center}
+\end{figure}
+
+
+
 
 
 \subsection*{Knihovny třetích stran}
@@ -276,70 +395,7 @@ Každý modul se otevírá v samostatné záložce, přičemž je možné mít o
 \end{center}
 \end{figure}
 
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
 
-\subsection*{Analyzér}
-\addcontentsline{toc}{subsection}{Analyzér} 
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=\textwidth]{img/analyzer_all.png}
-\caption{Modul analyzér}
-\label{Analyzer}
-\end{center}
-\end{figure}
-
-Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
-
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
-
-Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu "vytahat" na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
-
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
-
-Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
-
-Nastavení widgetu (jeho jméno, u čísla např. jeho datový typ apod.) jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Widgety je taktéž možné "uzamknout", aby nebylo možné je zavřít, měnit jejich pozici a velikost.
-
-Aplikace si také přijatá data ukládá -- navigace je umožněna posuvníkem a boxem v horní části okna.
-
-\subsection*{Dostupné widgety}
-{\bf Číslo} - Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetiná čisla (single-precision\cite{float}, 32bit a 64bit -- jako v jazyku C).\\
-Widget dokáže zarovnat číslo na maximální délku jeho datového typu a formátovat ho těmito způsoby:
-\begin{itemize}
-    \item Desítkový -- číslo v desítkové soustavě
-    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetiná čísla.
-    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro typy bez znaménka. 
-    \item Binární -- zobrazí číslo ve dvojkové soustavě
-\end{itemize}
-
-{\bf Bar} - Sloupcový 
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.7]{img/analyzer_struct.png}
-\caption{Dialog nastavení struktury dat}
-\label{Analyzer_struct}
-\end{center}
-\end{figure}
-
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
-
-\begin{figure}[H]
-\begin{center}
-\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
-\hfill
-\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
-\caption{Widgety}
-\label{widgets}
-\end{center}
-\end{figure}
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -412,6 +468,9 @@ Co se týče Analyzéru, je možné přidat další widgety -- mám v plánu imp
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
     \bibitem{qtfw} \It{Qt Framework -- Cross-platform application and UI framework} \\
     \url{http://qt.nokia.com/} (Stav ke dni 28.1.2012)
+
+    \bibitem{tcp_sock} \It{TCP socket} \\
+    \url{http://en.wikipedia.org/wiki/Transmission_Control_Protocol} (Stav ke dni 25.2.2012)
 
     \bibitem{repo} \It{GIT repozitář Lorris} \\
     \url{https://github.com/Tasssadar/Lorris}
