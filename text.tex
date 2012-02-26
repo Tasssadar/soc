@@ -245,12 +245,12 @@ Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Fra
 
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech
 %(jsou odděleny pouze v programu, nelze je instalovat odděleně jako např. plug-in do webového prohlížeče DOP: patří to sem?)
-, které jsou otevírány v záložkách (DOP: panelech?) - podobně jako stránky ve webovém prohlížeči.\\
+, které jsou otevírány v záložkách (DOP: panelech?) -- podobně jako stránky ve webovém prohlížeči.\\
 \\
 Možnosti připojení k zařízení:
 \begin{itemize}
     \item Sériový port
-    \item Shupito Tunel (virtuální sériový port, viz \hyperref[label_name]{Shupito})
+    \item Shupito Tunel (virtuální sériový port, viz \hyperref[tunel]{Shupito})
     \item TCP socket\cite{tcp_sock}
     \item Načtení dat ze souboru
 \end{itemize}
@@ -302,8 +302,8 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 \end{itemize}
 
 \newpage
-\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
 \subsection*{Widget: sloupcový bar}
+\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_bar.png}
@@ -311,8 +311,8 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 \end{figure}
 Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat, orientaci (vertikální nebo horizontální) a rozmezí hodnot.
 
-\addcontentsline{toc}{subsection}{Widget: barva}
 \subsection*{Widget: barva}
+\addcontentsline{toc}{subsection}{Widget: barva}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_col.png}
@@ -321,14 +321,14 @@ Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat, 
 Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu a hodnot každé z barev RGB.
 
 \newpage
-\addcontentsline{toc}{subsection}{Widget: graf}
 \subsection*{Widget: graf}
+\addcontentsline{toc}{subsection}{Widget: graf}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
 \end{center}
 \end{figure}
-Zobrazuje hodnoty v grafu - osa Y jsou hodnoty, na ose X je počet vzorků. Lze nastavovat jméno, barvu a datový typ hrany, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na hranu v legendě grafu hranu skryje.
+Zobrazuje hodnoty v grafu -- osa Y jsou hodnoty, na ose X je počet vzorků. Lze nastavovat jméno, barvu a datový typ hrany, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na hranu v legendě grafu hranu skryje.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_graph_add.png}
@@ -338,6 +338,22 @@ Zobrazuje hodnoty v grafu - osa Y jsou hodnoty, na ose X je počet vzorků. Lze 
 
 % DOP: přímo ovládání grafu?
 
+\newpage
+\subsection*{Widget: script}
+\addcontentsline{toc}{subsection}{Widget: script}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{img/w_script.png}
+\end{center}
+\end{figure}
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\cite{ecmascript}, stejně jako JavaScript\cite{javascript}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...).
+%DOP: že umožní zprcování hodně typů dat?
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{img/w_script_src.png}
+\caption{Dialog pro nastavení zdrojového scriptu}
+\end{center}
+\end{figure}
 
 \newpage
 \begin{figure}[h]
@@ -362,47 +378,13 @@ Zobrazuje hodnoty v grafu - osa Y jsou hodnoty, na ose X je počet vzorků. Lze 
 \end{center}
 \end{figure}
 
-
-
-
-
-\subsection*{Knihovny třetích stran}
-{\bf Qwt}\cite{qwt_link} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
-zatím z této knihovny používám pouze graf (v modulu analyzéru), ale v budoucnu bych chtěl použít i některé další součásti. \\
-{\bf QExtSerialPort}\cite{qext_link} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
-{\bf QHexEdit2}\cite{qhex_link} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
-týkajících se především vzhledu.
-
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\section*{Moduly}
-\addcontentsline{toc}{section}{Moduly}
-Každý modul se otevírá v samostatné záložce, přičemž je možné mít otevřeno více stejných modulů zároveň, a aby více modulů sdílelo jedno připojení (např. Teminál a Analyzér, oba pracující s jedním sériovým portem).
-\subsection*{Současné moduly}
-    \begin{itemize}
-        \item Analyzér -- zobrazování dat v grafických widgetech, hlavní část práce.
-        \item Proxy mezi Sériovým portem a TCP socketem -- umožňuje vzdálený přístup k sériovému portu
-        \item Shupito -- rozhraní pro obsluhu programátoru "Shupito"\cite{shupito}
-        \item Terminál -- terminál pro sériový port s podporou bootloaderu pro čipy ATmega\cite{avr232client}.
-    \end{itemize}
-\begin{figure}[h]
-\begin{center}
-\includegraphics{img/tabs.png}
-\caption{Záložky modulů}
-\label{Moduly}
-\end{center}
-\end{figure}
-
-
-
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
-
-\subsection*{Proxy mezi sériovým portem a TCP socketem}
-\addcontentsline{toc}{subsection}{Proxy mezi sériovým portem a TCP socketem} 
+\section*{Modul: Proxy mezi sériovým portem a TCP socketem}
+\addcontentsline{toc}{section}{Modul: Proxy mezi sériovým portem a TCP socketem} 
+\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -418,8 +400,9 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem, která umožňuje vzdá
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\subsection*{Shupito}
-\addcontentsline{toc}{subsection}{Shupito} 
+\section*{Modul: Shupito}
+\addcontentsline{toc}{section}{Modul: Shupito} 
+\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -430,14 +413,21 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem, která umožňuje vzdá
 \end{figure}
 Shupito je programátor mikročipů vytvořený Martinem Vejnarem. Dokáže programovat mikrokontroléry pomocí ISP, PDI *DOP: zeptat se martina co všechno to zvládá*. 
 
-Modul v mojí práci dokáže programátor Shupito obsluhovat -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. Shupito dokáže pracovat také jako RS232 tunel, i tuto funkci program podporuje -- aktivní tunel se zobrazí jako další typ připojení a je možné ho využívat v ostatních modulech.
-Komunikace s programátorem je naportována z oficiálního ovládacího programu\cite{avr232client}, který je však dostupný pouze pro MS Windows.
+Modul v mojí práci dokáže programátor Shupito obsluhovat -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. 
+Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však dostupný pouze pro MS Windows.
+
+\subsection*{RS232 tunel}
+\addcontentsline{toc}{subsection}{RS232 tunel}
+\label{tunel}
+Shupito dokáže vytvořit tunel pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
+
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\subsection*{Terminál}
-\addcontentsline{toc}{subsection}{Terminál} 
+\section*{Modul: Terminál}
+\addcontentsline{toc}{section}{Modul: Terminál} 
+\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -447,18 +437,42 @@ Komunikace s programátorem je naportována z oficiálního ovládacího program
 \end{center}
 \end{figure}
 
-Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootlodaer, avr232client\cite{avr232client}.
+Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento\\bootloader, avr232client\cite{avr232client}.
+
+
+\newpage
+\section*{Příklady použití}
+\addcontentsline{toc}{section}{Příklady použití}
+\subsection*{1. Testování barevného senzoru}
+\addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
+{\bf Situace:} Stavím robota do soutěže X (DOP: napsat přímo eurobot?), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
+\\
+{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu "barva" můžů vidět barvu, kterou senzor rozpoznal.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\section*{Možnosti dalšího rozšiřování programu}
-\addcontentsline{toc}{section}{Možnosti dalšího rozšiřování programu}
-Díky modulárnosti programu je možné poměrně jednoduše vytvořit \\ 
-další moduly, například modul pro ovládání robota přes bluetooth pomocí joysticku apod. Je také možné přidat další typy připojení -- například socket, pokud jsou data nejdříve zpracována nějákým jiným programem.
+\section*{Knihovny třetích stran, licence}
+\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
+\subsection*{Knihovny třetích stran}
+\addcontentsline{toc}{subsection}{Knihovny třetích stran}
+{\bf Qwt}\cite{qwt_link} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
+zatím z této knihovny používám pouze graf (v modulu analyzéru), ale v budoucnu bych chtěl použít i některé další součásti. \\
+{\bf QExtSerialPort}\cite{qext_link} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
+{\bf QHexEdit2}\cite{qhex_link} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
+týkajících se především vzhledu.
 
-Co se týče Analyzéru, je možné přidat další widgety -- mám v plánu implementaci QtScriptu\cite{qtscript}, který podstatně rozšíří možnosti parsování dat.
+\subsection*{Licence}
+\addcontentsline{toc}{subsection}{Licence}
+Lorris je dostupný pod licencí GNU GPLv3, licence použitých programů a knihoven jsou následující:
+\begin{itemize}
+    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1
+    \item {\bf Qwt} je distribuováno pod Qwt license, která je založená na GNU LGPLv2.1
+    \item {\bf QExtSerialPort} je distribuován pod The New BSD License
+    \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
+    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -495,14 +509,20 @@ Co se týče Analyzéru, je možné přidat další widgety -- mám v plánu imp
     \bibitem{endian} \It{Endianness} \\
     \url{http://en.wikipedia.org/wiki/Endianness} (Stav ke dni 28.1.2012)
 
+    \bibitem{qtscript} \It{QtScript -- Making Applications Scriptable} \\
+    \url{http://developer.qt.nokia.com/doc/qt-4.8/scripting.html} (Stav ke dni 26.2.2012)
+
+    \bibitem{ecmascript} \It{ECMAScript} \\
+    \url{http://en.wikipedia.org/wiki/ECMAScript} (Stav ke dni 26.2.2012)
+
+    \bibitem{javascript} \It{JavaScript} \\
+    \url{http://en.wikipedia.org/wiki/JavaScript} (Stav ke dni 26.2.2012)
+
     \bibitem{float} \It{Single-precision floating-point format} \\
     \url{http://en.wikipedia.org/wiki/Single_precision} (Stav ke dni 28.1.2012)
 
     \bibitem{hex} \It{Intel HEX} \\
     \url{http://en.wikipedia.org/wiki/Intel_hex} (Stav ke dni 28.1.2012)
-    
-    \bibitem{qtscript} \It{QtScript} \\
-    \url{http://developer.qt.nokia.com/doc/qt-4.7/qtscript.html} (Stav ke dni 28.1.2012)    
 \end{thebibliography}
 
 \end{document}
