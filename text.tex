@@ -114,7 +114,7 @@
 
 \vspace{40mm}
 
-\B{Brno 2011}
+\B{Brno 2012}
 
 
 \end{center}
@@ -243,9 +243,7 @@ Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problém
 \addcontentsline{toc}{section}{Popis rozhraní}
 Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.  
 
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech
-%(jsou odděleny pouze v programu, nelze je instalovat odděleně jako např. plug-in do webového prohlížeče DOP: patří to sem?)
-, které jsou otevírány v záložkách (DOP: panelech?) -- podobně jako stránky ve webovém prohlížeči.\\
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
 \\
 Možnosti připojení k zařízení:
 \begin{itemize}
@@ -269,21 +267,39 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{center}
 \end{figure}
 
-Tento modul parsuje data přicházející sériovou linkou a zobrazuje je v grafických "widgetech". Zpracovaná data je možné uložit a později zase v programu otevřít. Předpokládá se, že data mají formát packetů.
-
+Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických "widgetech". Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
+\\   
 Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
-Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu "vytahat" na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu \uv{vytahat} na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
 
-Nastavení widgetu (jeho jméno, u čísla např. jeho datový typ apod.) jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Widgety je taktéž možné "uzamknout", aby nebylo možné je zavřít, měnit jejich pozici a velikost.
+Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
-Aplikace si také přijatá data ukládá -- navigace je umožněna posuvníkem a boxem v horní části okna.
+Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
+%(jeho jméno, u čísla např. jeho datový typ apod. - podrobněji jsou možnosti nastavení popsány  u jednotlivých widgetů)
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.7]{img/analyzer_struct.png}
+\caption{Dialog nastavení struktury dat}
+\label{Analyzer_struct}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
+\hfill
+\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
+\caption{Widgety}
+\label{widgets}
+\end{center}
+\end{figure}
 
 \subsection*{Widget: číslo}
 \addcontentsline{toc}{subsection}{Widget: číslo}
@@ -292,16 +308,17 @@ Aplikace si také přijatá data ukládá -- navigace je umožněna posuvníkem 
 \includegraphics{img/w_num.png}
 \end{center}
 \end{figure}
-Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetiná čisla (single-precision\cite{float}, 32bit a 64bit -- jako v jazyku C).\\
+Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetinná čisla (single-precision\footnote{Standartní formát uložení desetinných čísel v jazyku C a dalších (standart IEEE 754-2008).}, 32bit a 64bit).\\
 Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~formátovat ho těmito způsoby:
 \begin{itemize}
     \item Desítkový -- číslo v desítkové soustavě
-    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetiná čísla.
-    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro typy bez znaménka. 
-    \item Binární -- zobrazí číslo ve dvojkové soustavě
+    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetinná čísla.
+    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro přirozená čísla. 
+    \item Binární -- zobrazí číslo ve dvojkové soustavě.  Dostupné pouze pro přirozená čísla.
 \end{itemize}
 
-\newpage
+
+%\newpage
 \subsection*{Widget: sloupcový bar}
 \addcontentsline{toc}{subsection}{Widget: sloupcový bar}
 \begin{figure}[h]
@@ -309,7 +326,7 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 \includegraphics{img/w_bar.png}
 \end{center}
 \end{figure}
-Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat, orientaci (vertikální nebo horizontální) a rozmezí hodnot.
+Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
 
 \subsection*{Widget: barva}
 \addcontentsline{toc}{subsection}{Widget: barva}
@@ -318,7 +335,7 @@ Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat, 
 \includegraphics{img/w_col.png}
 \end{center}
 \end{figure}
-Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu a hodnot každé z barev RGB.
+Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
 
 \newpage
 \subsection*{Widget: graf}
@@ -328,11 +345,11 @@ Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korek
 \includegraphics[scale=0.65]{img/w_graph.png}
 \end{center}
 \end{figure}
-Zobrazuje hodnoty v grafu -- osa Y jsou hodnoty, na ose X je počet vzorků. Lze nastavovat jméno, barvu a datový typ hrany, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na hranu v legendě grafu hranu skryje.
+Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a na osu $y$ hodnoty dat. Lze nastavovat jméno, barvu a datový typ křivky grafu, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na křivku grafu v legendě tuto křivku skryje. Měřítko osy se ovládá otáčením kolečka myši po najetí kurzoru nad osu, po najetí do prostoru grafu se podobně ovládá měřítko celého grafu. 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_graph_add.png}
-\caption{Dialog pro nastavení parametrů hrany}
+\caption{Dialog pro nastavení parametrů křivky grafu}
 \end{center}
 \end{figure}
 
@@ -356,29 +373,6 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 \end{figure}
 
 \newpage
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.7]{img/analyzer_struct.png}
-\caption{Dialog nastavení struktury dat}
-\label{Analyzer_struct}
-\end{center}
-\end{figure}
-
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
-
-\begin{figure}[H]
-\begin{center}
-\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
-\hfill
-\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
-\caption{Widgety}
-\label{widgets}
-\end{center}
-\end{figure}
-
-\newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
@@ -393,8 +387,7 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 \label{Shupito}
 \end{center}
 \end{figure}
-Jednoduchá proxy mezi sériovým portem a TCP socketem, která umožňuje vzdálené připojení na sériový port, buďto z Lorris nebo jiného programu.
-
+Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří jednoduchý server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -411,15 +404,17 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem, která umožňuje vzdá
 \label{Shupito}
 \end{center}
 \end{figure}
-Shupito je programátor mikročipů vytvořený Martinem Vejnarem. Dokáže programovat mikrokontroléry pomocí ISP, PDI *DOP: zeptat se martina co všechno to zvládá*. 
+% DOP: popsat typy programováni
+Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI a JTAG rozhraní. 
 
-Modul v mojí práci dokáže programátor Shupito obsluhovat -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. 
-Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však dostupný pouze pro MS Windows.
+% DOP: opravit
+Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. 
+Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však na rozdíl od Lorris dostupný pouze pro MS Windows.
 
 \subsection*{RS232 tunel}
 \addcontentsline{toc}{subsection}{RS232 tunel}
 \label{tunel}
-Shupito dokáže vytvořit tunel pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
+Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -437,7 +432,7 @@ Shupito dokáže vytvořit tunel pro RS232 linku z programovaného čipu do poč
 \end{center}
 \end{figure}
 
-Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves, obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento\\bootloader, avr232client\cite{avr232client}.
+Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Je obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento\\bootloader, avr232client\cite{avr232client}.
 
 
 \newpage
@@ -445,9 +440,9 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \addcontentsline{toc}{section}{Příklady použití}
 \subsection*{1. Testování barevného senzoru}
 \addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
-{\bf Situace:} Stavím robota do soutěže X (DOP: napsat přímo eurobot?), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
+{\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
 \\
-{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu "barva" můžů vidět barvu, kterou senzor rozpoznal.
+{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu "barva" mohu vidět barvu, kterou senzor rozpoznal.
 
 \begin{figure}[h]
 \begin{center}
@@ -460,7 +455,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \newpage
 \subsection*{2. Testování enkodérů}
 \addcontentsline{toc}{subsection}{2. Testování enkodérů}
-{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílá data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
+{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
 \\
 {\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu "script" napíšu jednochý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu "číslo".
 
@@ -484,7 +479,7 @@ V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo
 \subsection*{Knihovny třetích stran}
 \addcontentsline{toc}{subsection}{Knihovny třetích stran}
 {\bf Qwt}\cite{qwt_link} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
-zatím z této knihovny používám pouze graf (v modulu analyzéru), ale v budoucnu bych chtěl použít i některé další součásti. \\
+zatím z této knihovny používám pouze graf (v modulu analyzéru). \\
 {\bf QExtSerialPort}\cite{qext_link} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
 {\bf QHexEdit2}\cite{qhex_link} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
 týkajících se především vzhledu.
