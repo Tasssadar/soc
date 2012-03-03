@@ -239,6 +239,16 @@ Main feature of this application is modularity -- it is divided to sub-sections 
 %TODO: naší?
 Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problémem  při zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval -- k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu -- typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
 
+\subsection*{Existující programy}
+\addcontentsline{toc}{subsection}{Existující programy}
+Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
+
+\begin{itemize}
+    \item {\bf SerialChart}\footnote{\It{Analyse and chart serial data from RS-232 COM ports} -- \url{http://code.google.com/p/serialchart/}} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
+    \item {\bf WinWedge}\footnote{\It{RS232 data collection software} -- \url{http://www.taltech.com/products/winwedge/}} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, oproti Lorris má však horší ovládání (hlavně kvůli nutnosti použít další program pro zobrazování), má užší možnosti použití a je dostupný pouze pro MS Windows.
+    \item {\bf StampPlot Pro}\footnote{\It{Graphical Data Acquisition and Control} -- \url{http://www.selmaware.com/stampplot/index.htm}} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
+\end{itemize}
+
 \section*{Popis rozhraní}
 \addcontentsline{toc}{section}{Popis rozhraní}
 Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.  
