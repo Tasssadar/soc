@@ -251,7 +251,7 @@ Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
 
 \section*{Popis rozhraní}
 \addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework(v4.7)\cite{qtfw}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux (Wheezy, 64bit) a Windows 7.  
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\footnote{\It{Cross-platform application and UI framework} -- \url{http://qt.nokia.com/}} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\footnote{\It{The Universal Operating System} -- \url{http://www.debian.org/}} (Wheezy, 64bit) a Windows 7.  
 
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
 \\
@@ -259,7 +259,7 @@ Možnosti připojení k zařízení:
 \begin{itemize}
     \item Sériový port
     \item Shupito Tunel (virtuální sériový port, viz \hyperref[tunel]{Shupito})
-    \item TCP socket\cite{tcp_sock}
+    \item TCP socket\footnote{\It{Transmission Control Protocol} - připojení přes internet.}
     \item Načtení dat ze souboru
 \end{itemize}
 Je možné mít připojeno více různých modulů na jedno zařízení.  
@@ -278,8 +278,8 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{figure}
 
 Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických "widgetech". Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
-\\   
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianess\cite{endian}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 
 \newpage
@@ -371,7 +371,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \includegraphics[scale=0.8]{img/w_script.png}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\cite{ecmascript}, stejně jako JavaScript\cite{javascript}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...).
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...).
 %DOP: že umožní zprcování hodně typů dat?
 \begin{figure}[h]
 \begin{center}
@@ -388,14 +388,14 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 \addcontentsline{toc}{section}{Modul: Proxy mezi sériovým portem a TCP socketem} 
 \addcontentsline{toc}{subsection}{Popis}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/proxy.png}
 \caption{Proxy mezi sériovým portem a TCP socketem}
 \label{Shupito}
 \end{center}
 \end{figure}
-Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří jednoduchý server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
+Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -416,7 +416,7 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří jednoduchý s
 Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rohraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standartu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
 % DOP: opravit
-Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. 
+Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\footnote{\It{Intel HEX32} -- formát souborů obsahující paměť čipu}. 
 Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však na rozdíl od Lorris dostupný pouze pro MS Windows.
 
 \subsection*{RS232 tunel}
@@ -512,21 +512,22 @@ Všechny widgety jsou napozicované stejně jako na robotovi - 2 ultrazvuky mě�
 \addcontentsline{toc}{section}{Knihovny třetích stran, licence}
 \subsection*{Knihovny třetích stran}
 \addcontentsline{toc}{subsection}{Knihovny třetích stran}
-{\bf Qwt}\cite{qwt_link} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
+{\bf Qwt}\footnote{\It{Qt Widgets for Technical Applications} -- \url{http://qwt.sourceforge.net/}} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
 zatím z této knihovny používám pouze graf (v modulu analyzéru). \\
-{\bf QExtSerialPort}\cite{qext_link} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
-{\bf QHexEdit2}\cite{qhex_link} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
+{\bf QExtSerialPort}\footnote{\It{Qt interface class for old fashioned serial ports} -- \url{http://code.google.com/p/qextserialport/}} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
+{\bf QHexEdit2}\footnote{\It{Binary Editor for Qt} -- \url{http://code.google.com/p/qhexedit2/}} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
 týkajících se především vzhledu.
 
+\newpage
 \subsection*{Licence}
 \addcontentsline{toc}{subsection}{Licence}
-Lorris je dostupný pod licencí GNU GPLv3, licence použitých programů a knihoven jsou následující:
+Lorris je dostupný pod licencí GNU GPLv3\footnote{\It{GNU General Public License} -- \url{http://gplv3.fsf.org/}}, licence použitých programů a knihoven jsou následující:
 \begin{itemize}
-    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1
-    \item {\bf Qwt} je distribuováno pod Qwt license, která je založená na GNU LGPLv2.1
-    \item {\bf QExtSerialPort} je distribuován pod The New BSD License
+    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\footnote{\It{GNU Lesser General Public License} -- \url{http://www.gnu.org/licenses/lgpl-2.1.html}}
+    \item {\bf Qwt} je distribuováno pod Qwt license\footnote{\It{Qwt license} -- \url{http://qwt.sourceforge.net/qwtlicense.html}}, která je založená na GNU LGPLv2.1
+    \item {\bf QExtSerialPort} je distribuován pod The New BSD License\footnote{\It{The New BSD License} -- \url{http://www.opensource.org/licenses/bsd-license.php}}
     \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
-    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0
+    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\footnote{\It{Boost Software License} -- \url{http://www.boost.org/users/license.html}}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -535,25 +536,10 @@ Lorris je dostupný pod licencí GNU GPLv3, licence použitých programů a knih
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
-    \bibitem{qtfw} \It{Qt Framework -- Cross-platform application and UI framework} \\
-    \url{http://qt.nokia.com/} (Stav ke dni 28.1.2012)
-
-    \bibitem{tcp_sock} \It{TCP socket} \\
-    \url{http://en.wikipedia.org/wiki/Transmission_Control_Protocol} (Stav ke dni 25.2.2012)
 
     \bibitem{repo} \It{GIT repozitář Lorris} \\
     \url{https://github.com/Tasssadar/Lorris}
 
-    \bibitem{qwt_link} \It{Qt Widgets for Technical Applications} \\
-    \url{http://qwt.sourceforge.net/} (Stav ke dni 22.2.2012)
-
-    \bibitem{qext_link} \It{Qt interface class for old fashioned serial ports} \\
-    \url{http://code.google.com/p/qextserialport/} \\
-    (Stav ke dni 22.2.2012)
-
-    \bibitem{qhex_link} \It{Binary Editor for Qt} \\
-    \url{http://code.google.com/p/qhexedit2/} (Stav ke dni 22.2.2012)
-    
     \bibitem{shupito} \It{Shupito -- Programátor} \\
     \url{http://shupito.net/} (Stav ke dni 28.1.2012)
 
@@ -561,23 +547,6 @@ Lorris je dostupný pod licencí GNU GPLv3, licence použitých programů a knih
     \url{http://technika.junior.cz/trac/wiki/avr232client}\\
     (Stav ke dni 28.1.2012)
 
-    \bibitem{endian} \It{Endianness} \\
-    \url{http://en.wikipedia.org/wiki/Endianness} (Stav ke dni 28.1.2012)
-
-    \bibitem{qtscript} \It{QtScript -- Making Applications Scriptable} \\
-    \url{http://developer.qt.nokia.com/doc/qt-4.8/scripting.html} (Stav ke dni 26.2.2012)
-
-    \bibitem{ecmascript} \It{ECMAScript} \\
-    \url{http://en.wikipedia.org/wiki/ECMAScript} (Stav ke dni 26.2.2012)
-
-    \bibitem{javascript} \It{JavaScript} \\
-    \url{http://en.wikipedia.org/wiki/JavaScript} (Stav ke dni 26.2.2012)
-
-    \bibitem{float} \It{Single-precision floating-point format} \\
-    \url{http://en.wikipedia.org/wiki/Single_precision} (Stav ke dni 28.1.2012)
-
-    \bibitem{hex} \It{Intel HEX} \\
-    \url{http://en.wikipedia.org/wiki/Intel_hex} (Stav ke dni 28.1.2012)
 \end{thebibliography}
 
 \end{document}
