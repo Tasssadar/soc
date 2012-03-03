@@ -353,8 +353,6 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \end{center}
 \end{figure}
 
-% DOP: přímo ovládání grafu?
-
 \newpage
 \subsection*{Widget: script}
 \addcontentsline{toc}{subsection}{Widget: script}
@@ -405,7 +403,7 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří jednoduchý s
 \end{center}
 \end{figure}
 % DOP: popsat typy programováni
-Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI a JTAG rozhraní. 
+Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rohraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standartu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
 % DOP: opravit
 Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\cite{hex}. 
@@ -432,7 +430,7 @@ Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čip
 \end{center}
 \end{figure}
 
-Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Je obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento\\bootloader, avr232client\cite{avr232client}.
+Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Je obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootloader, avr232client\cite{avr232client}.
 
 
 \newpage
@@ -471,9 +469,35 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíšu jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
 
 \newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
+\subsection*{4. Vývoj robota pro soutěž Eurobot 2011}
+\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
+V minulém roce jsem se zúčastnil soutěže Eurobot. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm "pěšci" (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti).
 
+Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, který mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/use_david1.png}
+\caption{Data z robota v terminálu}
+\end{center}
+\end{figure}
+
+Toto byl také jeden z důvodů pro výběr toho tématu práce. S použitím programu Lorris vypádá výstup následnovně:
+\begin{figure}[H]
+\begin{center}
+\includegraphics{img/use_david2.png}
+\caption{Data z robota v analyzéru}
+\end{center}
+\end{figure}
+
+Widget "Robot" uprostřed reprezentuje tělo robota. Widgety "číslo" s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků vzálenosti. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost po které se robot zastaví aby nevrazil do soupeře - aby na tuto skutečnost upozornil, má červené pozadí.
+
+Widgety "barva" s názvy "btn" jsou tlačítka značící náraz do senzoru a "pwn" je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
+
+Poslední widgety "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
+
+Všechny widgety jsou napozicované stejně jako na robotovi - 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu atd. 
+\newpage
 \section*{Knihovny třetích stran, licence}
 \addcontentsline{toc}{section}{Knihovny třetích stran, licence}
 \subsection*{Knihovny třetích stran}
