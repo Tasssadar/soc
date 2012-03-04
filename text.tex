@@ -251,8 +251,19 @@ Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
 
 \section*{Popis rozhraní}
 \addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\footnote{\It{Cross-platform application and UI framework} -- \url{http://qt.nokia.com/}} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\footnote{\It{The Universal Operating System} -- \url{http://www.debian.org/}} (Wheezy, 64bit) a Windows 7.  
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\footnote{\It{Cross--platform application and UI framework} -- \url{http://qt.nokia.com/}} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\footnote{\It{The Universal Operating System} -- \url{http://www.debian.org/}} (Wheezy, 64bit) a Windows 7.  
 
+\subsection*{Web a repozitář programu}
+\addcontentsline{toc}{subsection}{Web a repozitář programu}
+GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\footnote{\It{GitHub -- Social Coding} -- \url{https://github.com}}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu který jsem vytvořil jsou odkazy ke stažení předkompilovaných souborů pro Windows, popis programu, krátké video s představením programu, screenshoty a návod ke zkompilování.
+
+\begin{itemize}
+    \item Repozitář: \url{https://github.com/Tasssadar/Lorris}
+    \item Web: \url{http://tasssadar.github.com/Lorris/cz/index.html}
+\end{itemize}
+
+\subsection*{Struktura aplikace}
+\addcontentsline{toc}{subsection}{Struktura aplikace}
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
 \\
 Možnosti připojení k zařízení:
