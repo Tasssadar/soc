@@ -74,7 +74,7 @@
 \newcommand{\e}{\ensuremath} 
 % další příkaz se aplikuje, pouze, když jste v matematickém režimu
 
-%\hyphenation{Pusť-me pla-tí hod-no-ty do-sa-dí-me za-da-né}
+%\hyphenation{Pusť-me pla-tí hod-no-ty do-sa-dí-me za-da-né dal-ším}
 % dělení slov, kdyby implicitní nevyhovovalo
 
 \linespread{1.3} 
@@ -249,36 +249,37 @@ Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
     \item {\bf StampPlot Pro}\footnote{\It{Graphical Data Acquisition and Control} -- \url{http://www.selmaware.com/stampplot/index.htm}} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
 \end{itemize}
 
-\section*{Popis rozhraní}
-\addcontentsline{toc}{section}{Popis rozhraní}
+\section{Popis rozhraní}
+%\addcontentsline{toc}{section}{Popis rozhraní}
 Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\footnote{\It{Cross--platform application and UI framework} -- \url{http://qt.nokia.com/}} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\footnote{\It{The Universal Operating System} -- \url{http://www.debian.org/}} (Wheezy, 64bit) a Windows 7.  
 
-\subsection*{Web a repozitář programu}
-\addcontentsline{toc}{subsection}{Web a repozitář programu}
-GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\footnote{\It{GitHub -- Social Coding} -- \url{https://github.com}}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu který jsem vytvořil jsou odkazy ke stažení předkompilovaných souborů pro Windows, popis programu, krátké video s představením programu, screenshoty a návod ke zkompilování.
+\subsection{Web a repozitář programu}
+%\addcontentsline{toc}{subsection}{Web a repozitář programu}
+GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\footnote{\It{GitHub -- Social Coding} -- \url{https://github.com}}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu, který jsem vytvořil, jsou odkazy ke stažení spustitelných souborů pro Windows, popis programu, video s představením programu (6 min.), ukázky z programu (screenshoty) a návod ke zkompilování pro MS Windows a Linux.
 
 \begin{itemize}
     \item Repozitář: \url{https://github.com/Tasssadar/Lorris}
-    \item Web: \url{http://tasssadar.github.com/Lorris/cz/index.html}
+    \item Web (česká verze):\\ \url{http://tasssadar.github.com/Lorris/cz/index.html}
+    \item Web (anglická verze):\\ \url{http://tasssadar.github.com/Lorris/index.html}
 \end{itemize}
 
-\subsection*{Struktura aplikace}
-\addcontentsline{toc}{subsection}{Struktura aplikace}
+\subsection{Struktura aplikace}
+%\addcontentsline{toc}{subsection}{Struktura aplikace}
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
 \\
 Možnosti připojení k zařízení:
 \begin{itemize}
     \item Sériový port
-    \item Shupito Tunel (virtuální sériový port, viz \hyperref[tunel]{Shupito})
-    \item TCP socket\footnote{\It{Transmission Control Protocol} - připojení přes internet.}
+    \item Shupito Tunel (virtuální sériový port, viz kapitola \ref{tunel})
+    \item TCP socket\footnote{\It{Transmission Control Protocol} -- připojení přes internet.}
     \item Načtení dat ze souboru
 \end{itemize}
 Je možné mít připojeno více různých modulů na jedno zařízení.  
 
 \newpage
-\section*{Modul: Analyzér}
-\addcontentsline{toc}{section}{Modul: Analyzér} 
-\addcontentsline{toc}{subsection}{Popis}
+\section{Modul: Analyzér}
+%\addcontentsline{toc}{section}{Modul: Analyzér} 
+%\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -290,7 +291,7 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 
 Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických "widgetech". Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek 3), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 
 \newpage
@@ -302,7 +303,7 @@ Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horn
 Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
 Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
-%(jeho jméno, u čísla např. jeho datový typ apod. - podrobněji jsou možnosti nastavení popsány  u jednotlivých widgetů)
+%(jeho jméno, u čísla např. jeho datový typ apod. -- podrobněji jsou možnosti nastavení popsány  u jednotlivých widgetů)
 
 \begin{figure}[h]
 \begin{center}
@@ -322,8 +323,8 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 \end{center}
 \end{figure}
 
-\subsection*{Widget: číslo}
-\addcontentsline{toc}{subsection}{Widget: číslo}
+\subsection{Widget: číslo}
+%\addcontentsline{toc}{subsection}{Widget: číslo}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_num.png}
@@ -340,8 +341,8 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 
 
 %\newpage
-\subsection*{Widget: sloupcový bar}
-\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
+\subsection{Widget: sloupcový bar}
+%\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_bar.png}
@@ -349,8 +350,8 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 \end{figure}
 Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
 
-\subsection*{Widget: barva}
-\addcontentsline{toc}{subsection}{Widget: barva}
+\subsection{Widget: barva}
+%\addcontentsline{toc}{subsection}{Widget: barva}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_col.png}
@@ -359,8 +360,8 @@ Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (
 Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
 
 \newpage
-\subsection*{Widget: graf}
-\addcontentsline{toc}{subsection}{Widget: graf}
+\subsection{Widget: graf}
+%\addcontentsline{toc}{subsection}{Widget: graf}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
@@ -375,8 +376,8 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \end{figure}
 
 \newpage
-\subsection*{Widget: script}
-\addcontentsline{toc}{subsection}{Widget: script}
+\subsection{Widget: script}
+%\addcontentsline{toc}{subsection}{Widget: script}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_script.png}
@@ -395,9 +396,9 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\section*{Modul: Proxy mezi sériovým portem a TCP socketem}
-\addcontentsline{toc}{section}{Modul: Proxy mezi sériovým portem a TCP socketem} 
-\addcontentsline{toc}{subsection}{Popis}
+\section{Modul: Proxy mezi sériovým portem a TCP socketem}
+%\addcontentsline{toc}{section}{Modul: Proxy mezi sériovým portem a TCP socketem} 
+%\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[H]
 \begin{center}
@@ -412,9 +413,9 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na kt
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\section*{Modul: Shupito}
-\addcontentsline{toc}{section}{Modul: Shupito} 
-\addcontentsline{toc}{subsection}{Popis}
+\section{Modul: Shupito}
+%\addcontentsline{toc}{section}{Modul: Shupito} 
+%\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -424,24 +425,21 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na kt
 \end{center}
 \end{figure}
 % DOP: popsat typy programováni
-Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rohraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standartu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
+Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standartu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
 % DOP: opravit
 Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\footnote{\It{Intel HEX32} -- formát souborů obsahující paměť čipu}. 
 Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však na rozdíl od Lorris dostupný pouze pro MS Windows.
 
-\subsection*{RS232 tunel}
-\addcontentsline{toc}{subsection}{RS232 tunel}
+\subsection{RS232 tunel}
+%\addcontentsline{toc}{subsection}{RS232 tunel}
 \label{tunel}
 Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
 
-\newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
-\pagestyle{plain}
 
-\section*{Modul: Terminál}
-\addcontentsline{toc}{section}{Modul: Terminál} 
-\addcontentsline{toc}{subsection}{Popis}
+\section{Modul: Terminál}
+%\addcontentsline{toc}{section}{Modul: Terminál} 
+%\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -451,14 +449,14 @@ Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čip
 \end{center}
 \end{figure}
 
-Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Je obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega(bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootloader, avr232client\cite{avr232client}.
+Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Je obohacený o podporu bootloaderu pro mikrokontroléry AVR ATmega (bootloader byl taktéž napsaný Martinem Vejnarem), který umožňuje jejich programování přes RS232 linku. Informace o protokolu bootloaderu jsem získal z oficiálního programu určeného k programování přes tento bootloader, avr232client.
 
 
 \newpage
-\section*{Příklady použití}
-\addcontentsline{toc}{section}{Příklady použití}
-\subsection*{1. Testování barevného senzoru}
-\addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
+\section{Příklady použití}
+%\addcontentsline{toc}{section}{Příklady použití}
+\subsection{Testování barevného senzoru}
+%\addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
 {\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
 \\
 {\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu "barva" mohu vidět barvu, kterou senzor rozpoznal.
@@ -472,17 +470,17 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \end{figure}
 
 \newpage
-\subsection*{2. Testování enkodérů}
-\addcontentsline{toc}{subsection}{2. Testování enkodérů}
+\subsection{Testování enkodérů}
+%\addcontentsline{toc}{subsection}{2. Testování enkodérů}
 {\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
 \\
-{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu "script" napíšu jednochý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu "číslo".
+{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu "script" napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu "číslo".
 
 % DOP: screenshot
 
 \newpage
-\subsection*{3. Ladění PID regulátoru}
-\addcontentsline{toc}{subsection}{3. Ladění PID regulátoru}
+\subsection{Ladění PID regulátoru}
+%\addcontentsline{toc}{subsection}{3. Ladění PID regulátoru}
 {\bf Situace:} Robot kvůli rozdílnému výkonu motorů nejede rovně. Tento problém jsem se rozhodl řešit pomocí PID regulátoru, pro jehož správnou funkci je potřeba nastavit několik konstant. \\
 \\
 {\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
@@ -490,11 +488,11 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíšu jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
 
 \newpage
-\subsection*{4. Vývoj robota pro soutěž Eurobot 2011}
-\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
+\subsection{Vývoj robota pro soutěž Eurobot 2011}
+%\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
 V minulém roce jsem se zúčastnil soutěže Eurobot. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm "pěšci" (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti).
 
-Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, který mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
+Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
 
 \begin{figure}[h]
 \begin{center}
@@ -503,7 +501,7 @@ Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazv
 \end{center}
 \end{figure}
 
-Toto byl také jeden z důvodů pro výběr toho tématu práce. S použitím programu Lorris vypádá výstup následnovně:
+Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris vypadá výstup následnovně:
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david2.png}
@@ -511,18 +509,19 @@ Toto byl také jeden z důvodů pro výběr toho tématu práce. S použitím pr
 \end{center}
 \end{figure}
 
-Widget "Robot" uprostřed reprezentuje tělo robota. Widgety "číslo" s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost po které se robot zastaví aby nevrazil do soupeře - aby na tuto skutečnost upozornil, má červené pozadí.
+Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
+
+Widget "Robot" uprostřed reprezentuje tělo robota. Widgety "číslo" s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
 
 Widgety "barva" s názvy "btn" jsou tlačítka značící náraz do mantinelu a "pwn" je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
 
-Poslední widgety "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
+Poslední widgety typu číslo s názvy "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
 
-Všechny widgety jsou napozicované stejně jako na robotovi - 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu atd. 
 \newpage
-\section*{Knihovny třetích stran, licence}
-\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
-\subsection*{Knihovny třetích stran}
-\addcontentsline{toc}{subsection}{Knihovny třetích stran}
+\section{Knihovny třetích stran, licence}
+%\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
+\subsection{Knihovny třetích stran}
+%\addcontentsline{toc}{subsection}{Knihovny třetích stran}
 {\bf Qwt}\footnote{\It{Qt Widgets for Technical Applications} -- \url{http://qwt.sourceforge.net/}} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
 zatím z této knihovny používám pouze graf (v modulu analyzéru). \\
 {\bf QExtSerialPort}\footnote{\It{Qt interface class for old fashioned serial ports} -- \url{http://code.google.com/p/qextserialport/}} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
@@ -530,8 +529,8 @@ zatím z této knihovny používám pouze graf (v modulu analyzéru). \\
 týkajících se především vzhledu.
 
 \newpage
-\subsection*{Licence}
-\addcontentsline{toc}{subsection}{Licence}
+\subsection{Licence}
+%\addcontentsline{toc}{subsection}{Licence}
 Lorris je dostupný pod licencí GNU GPLv3\footnote{\It{GNU General Public License} -- \url{http://gplv3.fsf.org/}}, licence použitých programů a knihoven jsou následující:
 \begin{itemize}
     \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\footnote{\It{GNU Lesser General Public License} -- \url{http://www.gnu.org/licenses/lgpl-2.1.html}}
