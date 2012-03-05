@@ -262,6 +262,7 @@ GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář prog
     \item Web (česká verze):\\ \url{http://tasssadar.github.com/Lorris/cz/index.html}
     \item Web (anglická verze):\\ \url{http://tasssadar.github.com/Lorris/index.html}
 \end{itemize}
+V repozitáři nadále probíhá aktivní vývoj.
 
 \subsection{Struktura aplikace}
 %\addcontentsline{toc}{subsection}{Struktura aplikace}
@@ -330,8 +331,8 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 \includegraphics{img/w_num.png}
 \end{center}
 \end{figure}
-Dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetinná čisla (single-precision\footnote{Standartní formát uložení desetinných čísel v jazyku C a dalších (standart IEEE 754-2008).}, 32bit a 64bit).\\
-Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~formátovat ho těmito způsoby:
+Tento widget dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetinná čisla (single-precision\footnote{Standartní formát uložení desetinných čísel v jazyku C a dalších (standart IEEE 754-2008).}, 32bit a 64bit).\\
+Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu\\a~formátovat ho těmito způsoby:
 \begin{itemize}
     \item Desítkový -- číslo v desítkové soustavě
     \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetinná čísla.
@@ -348,7 +349,7 @@ Widget dokáže zarovnat číslo na maximální délku jeho datového typu\\a~fo
 \includegraphics{img/w_bar.png}
 \end{center}
 \end{figure}
-Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
+Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
 
 \subsection{Widget: barva}
 %\addcontentsline{toc}{subsection}{Widget: barva}
@@ -357,7 +358,7 @@ Zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (
 \includegraphics{img/w_col.png}
 \end{center}
 \end{figure}
-Ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
+Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
 
 \newpage
 \subsection{Widget: graf}
@@ -383,7 +384,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \includegraphics[scale=0.8]{img/w_script.png}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...).
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) - script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu je ve wiki u repozitáře programu: \url{https://github.com/Tasssadar/Lorris/wiki}.
 %DOP: že umožní zprcování hodně typů dat?
 \begin{figure}[h]
 \begin{center}
@@ -511,11 +512,11 @@ Zkušenost s programováním a laděním robota byla jedním z hlavních důvod�
 
 Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
 
-Widget "Robot" uprostřed reprezentuje tělo robota. Widgety "číslo" s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Widget "Robot" uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
 
-Widgety "barva" s názvy "btn" jsou tlačítka značící náraz do mantinelu a "pwn" je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
+Widgety \It{barva} s názvy "btn" jsou tlačítka značící náraz do mantinelu a "pwn" je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
 
-Poslední widgety typu číslo s názvy "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
+Poslední widgety \It{číslo} s názvy "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
 
 \newpage
 \section{Knihovny třetích stran, licence}
