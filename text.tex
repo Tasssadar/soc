@@ -14,6 +14,9 @@
 \usepackage{graphicx,amsmath} % nastavení grafiky, matematiky
 \usepackage{subfig} % více obrázků vedle sebe 
 \usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbding}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
 \renewcommand{\cftsecdotsep}{\cftdotsep}
@@ -72,6 +75,8 @@
 \newcommand{\N}{\normalsize} % normální velikost písma
 %\newcommand{\U}{\underline}  % podtržené písmo
 \newcommand{\e}{\ensuremath} 
+\newcommand{\Has}{\textcolor{green}{\CheckmarkBold}}
+\newcommand{\NoHas}{\textcolor{red}{\XSolidBrush}}
 % další příkaz se aplikuje, pouze, když jste v matematickém režimu
 
 %\hyphenation{Pusť-me pla-tí hod-no-ty do-sa-dí-me za-da-né dal-ším}
@@ -188,11 +193,7 @@ zákonů (autorský zákon) v~platném znění.
 \vspace{120mm}
 
 \section*{Poděkování}
-
- Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, a Martinu Vejnárovi za informace o jeho programátoru Shupito.\\% nebo cokoli dle Vašeho uvážení 
- Dále děkuji organizaci DDM Junior, za poskytnutí podpory.\\
- Také bych chtěl poděkovat panu profesorovi Mgr. Miroslavu Burdovi za všeobecnou pomoc s prací.\\
- V neposlední řadě děkuji Martinu Foučkovi za rady a pomoc s Qt Frameworkem.
+Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, Martinu Vejnárovi za informace o programátoru Shupito, panu profesorovi Mgr. Miroslavu Burdovi za velkou pomoc s prací a v neposlední řadě Martinu Foučkovi za rady a pomoc při práci s Qt Frameworkem. Dále děkuji organizaci DDM Junior za poskytnutí podpory.
 
 \D Tato práce byla vypracována za finanční podpory JMK.
  
@@ -236,22 +237,48 @@ Main feature of this application is modularity -- it is divided to sub-sections 
 
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
-%TODO: naší?
-Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problémem  při zpracovávání dat z poměrně velkého množství senzorů, které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval -- k dispozici jsou pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat pouze v jednom formátu -- typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
+Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových měřáků vzdálenosti, enkodéry které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval -- k dispozici jsou buďto pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat data pouze v jednom formátu -- typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
 
 \subsection*{Existující programy}
 \addcontentsline{toc}{subsection}{Existující programy}
-Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
+% DOP: měli? Oo
+Aplikací, které by měly podobné zaměření, jsem našel pouze několik:
 
 \begin{itemize}
     \item {\bf SerialChart}\cite{serialchart} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
     \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, oproti Lorris má však horší ovládání (hlavně kvůli nutnosti použít další program pro zobrazování), má užší možnosti použití a je dostupný pouze pro MS Windows.
+    \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
     \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
 \end{itemize}
 
+\subsection*{Požadavky na aplikaci}
+\addcontentsline{toc}{subsection}{Požadavky na aplikaci}
+\begin{enumerate}
+    \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat % 1
+    \item Podpora co nejvíce formátů příchozích data % 2
+    \item Snadné a rychlé používání % 3
+    \item Možnost běhu i na jiných systémech než je MS Windows % 4
+    \item Co možná nejnižší cena % 5
+    \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
+    \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
+\end{enumerate}
+
+\subsection*{Porovnání aplikací}
+\addcontentsline{toc}{subsection}{Porovnání aplikací}
+
+\begin{tabular}{ | l | l | l | l | l | l | l | l |}
+    \hline
+    Požadavky:                  & 1      & 2      & 3      & 4      & 5      & 6      & 7      \\ \hline
+    SerialChart                 & \Has   & \NoHas & \Has   & \NoHas & \Has   & \Has   & \Has   \\ \hline 
+    WinWedge                    & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
+    Advanced Serial Data Logger & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
+    StampPlot Pro               & \Has   & \Has   & \NoHas & \NoHas & \Has   & \NoHas & \Has   \\ \hline 
+    Lorris                      & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   \\ \hline 
+\end{tabular}
+
 \section{Popis rozhraní}
 %\addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\cite{qtfrm} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
+Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v C++ a využívá Qt Framework\cite{qtfrm} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
 
 \subsection{Web a repozitář programu}
 %\addcontentsline{toc}{subsection}{Web a repozitář programu}
@@ -290,9 +317,9 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{center}
 \end{figure}
 
-Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických "widgetech". Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
+Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data ("start byte"), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start byte}), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 
 \newpage
@@ -329,6 +356,7 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_num.png}
+\caption{Widget: číslo}
 \end{center}
 \end{figure}
 Tento widget dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetinná čisla (single-precision\footnote{Standartní formát uložení desetinných čísel v jazyku C a dalších (standart IEEE 754-2008).}, 32bit a 64bit).\\
@@ -347,6 +375,7 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_bar.png}
+\caption{Widget: sloupcový bar}
 \end{center}
 \end{figure}
 Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
@@ -356,6 +385,7 @@ Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupníc
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_col.png}
+\caption{Widget: barva}
 \end{center}
 \end{figure}
 Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
@@ -366,6 +396,7 @@ Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže p
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
+\caption{Widget: graf}
 \end{center}
 \end{figure}
 Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a na osu $y$ hodnoty dat. Lze nastavovat jméno, barvu a datový typ křivky grafu, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na křivku grafu v legendě tuto křivku skryje. Měřítko osy se ovládá otáčením kolečka myši po najetí kurzoru nad osu, po najetí do prostoru grafu se podobně ovládá měřítko celého grafu. 
@@ -382,6 +413,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_script.png}
+\caption{Widget: script}
 \end{center}
 \end{figure}
 Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) - script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu je ve wiki u repozitáře programu: \url{https://github.com/Tasssadar/Lorris/wiki}.
@@ -460,7 +492,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 %\addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
 {\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
 \\
-{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu "barva" mohu vidět barvu, kterou senzor rozpoznal.
+{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu \uv{barva} mohu vidět barvu, kterou senzor rozpoznal.
 
 \begin{figure}[h]
 \begin{center}
@@ -475,7 +507,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 %\addcontentsline{toc}{subsection}{2. Testování enkodérů}
 {\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
 \\
-{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu "script" napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu "číslo".
+{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
 
 % DOP: screenshot
 
@@ -491,7 +523,7 @@ V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo
 \newpage
 \subsection{Vývoj robota pro soutěž Eurobot 2011}
 %\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
-V minulém roce jsem se zúčastnil soutěže Eurobot. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm "pěšci" (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti).
+V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti).
 
 Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
 
@@ -512,11 +544,11 @@ Zkušenost s programováním a laděním robota byla jedním z hlavních důvod�
 
 Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
 
-Widget "Robot" uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy "Ultra E0...8" ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu "Ultra E0" je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Widget \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
 
-Widgety \It{barva} s názvy "btn" jsou tlačítka značící náraz do mantinelu a "pwn" je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
+Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
 
-Poslední widgety \It{číslo} s názvy "Enc left" a "Enc right" vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
+Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
 
 \newpage
 \section{Knihovny třetích stran, licence}
@@ -543,37 +575,46 @@ Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých progr
 Všechny tyto licence umožňují svobodné používání a šíření kódu.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\addcontentsline{toc}{section}{Reference}
+
+\section*{PŘÍLOHY}
+\addcontentsline{toc}{section}{PŘÍLOHY}
+
+\addcontentsline{toc}{subsection}{Reference}
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
-    \bibitem{serialchart} \It{SerialChart -- Analyse and chart serial data from RS-232 COM ports} \\
+    \bibitem{serialchart} \It{SerialChart} -- Analyse and chart serial data from RS-232 COM ports \\
     \url{http://code.google.com/p/serialchart/}
 
-    \bibitem{winwedge} \It{WinWedge -- RS232 data collection software} \\
+    \bibitem{winwedge} \It{WinWedge} -- RS232 data collection software \\
     \url{http://www.taltech.com/products/winwedge/}
 
-    \bibitem{stamplot} \It{StampPlot Pro -- Graphical Data Acquisition and Control} \\
+    \bibitem{stamplot} \It{StampPlot Pro} -- Graphical Data Acquisition and Control \\
     \url{http://www.selmaware.com/stampplot/index.htm}
 
-    \bibitem{qtfrm} \It{Qt -- Cross--platform application and UI framework} \\
+    \bibitem{serialdatalogger} \It{Advanced Serial Data Logger} \\
+    \url{http://www.aggsoft.com/serial-data-logger.htm}
+
+    \bibitem{qtfrm} \It{Qt} -- Cross--platform application and UI framework \\
     \url{http://qt.nokia.com/}
 
-    
-    \bibitem{debian} \It{Debian Linux -- The Universal Operating System} \\
+    \bibitem{debian} \It{Debian Linux} -- The Universal Operating System \\
     \url{http://www.debian.org/}
 
-    \bibitem{github} \It{GitHub -- Social Coding} \\
+    \bibitem{github} \It{GitHub} -- Social Coding \\
     \url{https://github.com}
 
-    \bibitem{qwt} \It{Qwt -- Qt Widgets for Technical Applications} \\
+    \bibitem{eurobot} \It{Eurobot 2011} \\
+    \url{http://www.eurobot.cz/eurobot2011.php}
+
+    \bibitem{qwt} \It{Qwt} -- Qt Widgets for Technical Applications \\
     \url{http://qwt.sourceforge.net/}
 
-    \bibitem{qext} \It{QExtSerialPort -- Qt interface class for old fashioned serial ports} \\
+    \bibitem{qext} \It{QExtSerialPort} -- Qt interface class for old fashioned serial ports \\
     \url{http://code.google.com/p/qextserialport/}
 
-    \bibitem{qhex} \It{QHexEdit2 -- Binary Editor for Qt} \\
+    \bibitem{qhex} \It{QHexEdit2} -- Binary Editor for Qt \\
     \url{http://code.google.com/p/qhexedit2/}
 
     \bibitem{gpl3} \It{GNU General Public License v3} \\
@@ -596,5 +637,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     (Stav ke dni 28.1.2012)
 
 \end{thebibliography}
+
+\newpage
+\addcontentsline{toc}{subsection}{Seznam obrázků} % pøidá seznam obrázkù do obsahu 
+
+\listoffigures   % seznam obrázkù 
 
 \end{document}
