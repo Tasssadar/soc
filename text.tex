@@ -509,7 +509,22 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \\
 {\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
 
-% DOP: screenshot
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/use_enc_term.png}
+%DOP y/i?
+\caption{Surová data z enkodérů s vyznačenými byty, které obsahují úhel natočení}
+\label{Terminal}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/use_enc_analyzer.png}
+\caption{Data z enkodérů zpracovaná analyzérem}
+\label{Terminal}
+\end{center}
+\end{figure}
 
 \newpage
 \subsection{Ladění PID regulátoru}
@@ -518,7 +533,15 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \\
 {\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
 
-V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíšu jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
+V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/use_pid.png}
+\caption{Ladění PID regulátoru}
+\label{Terminal}
+\end{center}
+\end{figure}
 
 \newpage
 \subsection{Vývoj robota pro soutěž Eurobot 2011}
