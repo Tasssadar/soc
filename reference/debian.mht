@@ -1,0 +1,2330 @@
+Content-Type: multipart/related; start=<op.mhtml.1331063169099.a4319d7154353ca0@169.254.9.172>; boundary=----------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Location: http://www.debian.org/
+Subject: =?utf-8?Q?Debian=20--=20Univerz=C3=A1ln=C3=AD=20opera=C4=8Dn=C3=AD=20syst=C3=A9m?=
+MIME-Version: 1.0
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=index.cs.html
+Content-Type: text/html; charset=utf-8; name=index.cs.html
+Content-ID: <op.mhtml.1331063169099.a4319d7154353ca0@169.254.9.172>
+Content-Location: http://www.debian.org/
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="cs">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Debian -- Univerzální operační systém </title>
+  <link rev="made" href="mailto:webmaster@debian.org">
+  <meta name="Description" content="Debian GNU/Linux je svobodná distribuce operačního systému GNU/Linux. Je spravován a udržován za pomoci mnoha dobrovolníků, kteří mu věnují svůj čas a zkušenosti.">
+  <meta name="Generator" content="WML 2.0.11 (19-Aug-2006)">
+  <meta name="Modified" content="2012-03-06 04:41:22">
+  <meta name="viewport" content="width=device-width">
+  <meta name="mobileoptimized" content="300">
+  <meta name="HandheldFriendly" content="true">
+<link rel="alternate" type="application/rss+xml"
+ title="Aktuality" href="News/news">
+<link rel="alternate" type="application/rss+xml"
+ title="Novinky projektu Debian" href="News/weekly/dwn">
+<link rel="alternate" type="application/rss+xml"
+ title="Bezpečnostní zprávy (pouze názvy)" href="security/dsa">
+<link rel="alternate" type="application/rss+xml"
+ title="Bezpečnostní zprávy (souhrn)" href="security/dsa-long">
+<link href="./debhome.css" rel="stylesheet" type="text/css">
+  <link href="./debian-cs.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="Keywords" content="debian, GNU, linux, unix, open source, svobodný, DFSG">
+</head>
+<body>
+<div id="header">
+   <div id="upperheader">
+   <div id="logo">
+  <a href="./" title="Debian Home"><img src="./Pics/openlogo-50.png" alt="Debian"></a>
+  </div> <!-- end logo -->
+	<div id="searchbox">
+		<form name="p" method="get" action="http://search.debian.org/cgi-bin/omega">
+		<p>
+<input type="hidden" name="DB" value="cs">
+			<input name="P" value="" size="27">
+			<input type="submit" value="Vyhledat">
+		</p>
+		</form>
+	</div>   <!-- end sitetools -->
+ </div> <!-- end upperheader -->
+<!--UdmComment-->
+<div id="navbar">
+<p class="hidecss"><a href="#content">Přeskočit rychlou navigaci</a></p>
+<ul>
+   <li><a href="intro/about">O&nbsp;Debianu</a></li>
+   <li><a href="distrib/">Jak&nbsp;získat&nbsp;Debian</a></li>
+   <li><a href="./support">Podpora</a></li>
+   <li><a href="./devel/">Vývojářský koutek</a></li>
+</ul>
+</div> <!-- end navbar -->
+	<p id="breadcrumbs">&nbsp; </p>
+</div> <!-- end header -->
+<!--/UdmComment-->
+<div id="content">
+<span class="download"><a href="http://cdimage.debian.org/debian-cd/6.0.4/multi-arch/iso-cd/debian-6.0.4-amd64-i386-netinst.iso">Stáhnout Debian 6.0<em>(síťový instalátor pro 32/64bitové PC)</em></a> </span>
+<div id="splash">
+	<h1>Debian GNU/Linux</h1>
+</div>
+<div id="intro">
+<p><a href="http://www.debian.org/">Debian</a>
+je <a href="intro/free">svobodný</a> operační systém (OS) pro váš počítač.
+Operační systém se skládá ze základního
+programového vybavení a&nbsp;dalších nástrojů, kterých je k&nbsp;provozu
+počítače třeba. Vlastním základem OS je jádro. Jelikož Debian používá jádro
+<a href="http://www.kernel.org/">Linux</a> a&nbsp;většina základních systémových
+programů byla vytvořena v&nbsp;rámci <a href="http://www.gnu.org/">projektu GNU</a>,
+nese systém označení GNU/Linux.</p>
+<p>Debian GNU/Linux je však více než jen samotný operační systém. Obsahuje přes
+29000 <a href="distrib/packages">balíčků</a>
+s&nbsp;(předkompilovanými) programy a&nbsp;dokumentací, připravených
+pro snadnou instalaci. <a href="intro/about">Podrobnosti...</a></p>
+</div>
+<div id="hometoc">
+<!--UdmComment-->
+<ul id="hometoc-cola">
+  <li><a href="intro/about">O&nbsp;Debianu</a>
+    <ul>
+      <li><a href="./social_contract">Společenská smlouva</a></li>
+      <li><a href="./intro/free">Svobodný software</a></li>
+      <li><a href="./partners/">Partneři</a></li>
+      <li><a href="./donations">Dary</a></li>
+      <li><a href="./contact">Napište nám</a></li>
+    </ul>
+  </li>
+  <li><a href="./intro/help">Pomozte Debianu</a></li>
+</ul>
+<ul id="hometoc-colb">
+  <li><a href="distrib/">Jak&nbsp;získat&nbsp;Debian</a>
+    <ul>
+      <li><a href="./CD/vendors/">Prodejci CD</a></li>
+      <li><a href="./CD/">ISO obrazy CD</a></li>
+      <li><a href="distrib/netinst">Síťová instalace</a></li>
+      <li><a href="distrib/pre-installed">Předinstalovaný</a></li>
+    </ul>
+  </li>
+  <li><a href="./devel/">Vývojářský koutek</a></li>
+  <li><a href="distrib/packages">Balíčky Debianu</a></li>
+</ul>
+<ul id="hometoc-colc">
+  <li><a href="./News/">Aktuality</a>
+  <ul>
+    <li><a href="./News/weekly/">Novinky projektu</a></li>
+    <li><a href="./events/">Akce</a></li>
+  </ul>
+  </li>
+  <li><a href="doc/">Dokumentace</a>
+    <ul>
+      <li><a href="./releases/">Informace k verzím</a></li>
+      <li><a href="./releases/stable/installmanual">Instalační příručka</a></li>
+      <li><a href="doc/books">Knihy o Debianu</a></li>
+    </ul>
+  </li>
+</ul>
+<ul id="hometoc-cold">
+  <li><a href="./support">Podpora</a>
+    <ul>
+      <li><a href="./international/">Debian a jazyky</a></li>
+      <li><a href="./security/">Bezpečnostní informace</a></li>
+      <li><a href="Bugs/">Hlášení chyb</a></li>
+      <li><a href="./MailingLists/">Poštovní konference</a></li>
+      <li><a href="http://lists.debian.org/">Archivy poštovních konferencí</a></li>
+      <li><a href="./ports/">Porty/architektury</a></li>
+    </ul>
+  </li>
+</ul>
+<ul id="hometoc-cole">
+  <li><a href="misc/">Ostatní</a></li>
+  <li><a href="./sitemap">Mapa webu</a></li>
+  <li><a href="http://search.debian.org/">Vyhledat</a></li>
+  <li><a href="http://identi.ca/debian"><img src="Pics/identica.png"
+  alt="follow debian on identi.ca!"></a></li>
+  <li><a href="http://planet.debian.org"><img src="Pics/planet.png"
+  alt="follow debian on planet.debian.org!"></a></li>
+  </ul>
+<!--/UdmComment-->
+</div> <!-- end hometoc -->
+<p class="infobar"><a href="releases/stable/">Poslední stabilní verze Debianu</a> má číslo
+6.0. Tato verze byla naposledy aktualizována
+28. ledna 2012. Přečtěte si více
+o&nbsp;<a href="releases/">dostupných verzích Debianu</a>.</p>
+<h2>Začínáme</h2>
+<ul>
+  <li>Chcete-li začít používat Debian, můžete jej získat na
+    <a href="distrib/">distribuční stránce</a> a&nbsp;poté nainstalovat za pomoci
+    <a href="releases/stable/installmanual">instalační příručky</a>.</li>
+  <li>Pokud aktualizujete na nejnovější stabilní verzi z&nbsp;verze předchozí,
+    přečtete si prosím nejprve
+    <a href="releases/stable/releasenotes">poznámky k&nbsp;vydání</a>.</li>
+  <li>Potřebujete-li pomoc při používání nebo nastavení Debianu, podívejte se do
+    <a href="doc/">dokumentace</a> nebo na stránky
+    s&nbsp;<a href="support">uživatelskou podporou</a>.</li>
+  <li>Pro neanglicky hovořící uživatele jsou tu stránky
+    věnující se podpoře <a href="international/">ostatních jazyků</a>.</li>
+  <li>Uživatelé pracující s&nbsp;počítači jiných hardwarových platforem,
+  než je Intel x86, najdou informace na stránkách věnujících se
+  <a href="ports/">ostatním platformám</a>.</li>
+</ul>
+<hr>
+<a class="rss_logo" href="News/news">RSS</a>
+<h2>Aktuality</h2>
+<p><tt>[03.03.2012]</tt> <strong><a href="News/2012/20120304">Make DebConf12 a success: donate or become a sponsor</a></strong><br>
+<tt>[01.03.2012]</tt> <strong><a href="News/2012/20120301">Switzerland to host Debian Conference 2013</a></strong><br>
+<tt>[19.02.2012]</tt> <strong><a href="News/2012/20120219">Debian Position on Software Patents</a></strong><br>
+<tt>[18.02.2012]</tt> <strong><a href="News/2012/20120218">New machine for Debian archive main mirror</a></strong><br>
+<tt>[15.02.2012]</tt> <strong><a href="News/2012/20120215">Upcoming Debian Bug Squashing Parties</a></strong><br>
+<tt>[13.02.2012]</tt> <strong><a href="News/2012/20120213"><q>Wheezy</q> artwork contest: call for proposals</a></strong><br>
+</p>
+<p>Starší aktuality naleznete v&nbsp;<a href="./News/">archivu aktualit</a>.
+Pokud chcete být o&nbsp;novinkách ze světa Debianu informováni elektronickou
+poštou, přihlaste se do konference
+<a href="MailingLists/debian-announce">debian-announce</a>.</p>
+<hr>
+<a class="rss_logo" href="security/dsa">RSS</a>
+<h2>Bezpečnostní zprávy</h2>
+<p><tt>[04.03.2012]</tt> <strong><a href="security/2012/dsa-2425">DSA-2425 plib</a></strong> - buffer overflow <br>
+<tt>[04.03.2012]</tt> <strong><a href="security/2012/dsa-2424">DSA-2424 libxml-atom-perl</a></strong> - XML external entity expansion <br>
+<tt>[02.03.2012]</tt> <strong><a href="security/2012/dsa-2423">DSA-2423 movabletype-opensource</a></strong> - several vulnerabilities <br>
+<tt>[29.02.2012]</tt> <strong><a href="security/2012/dsa-2422">DSA-2422 file</a></strong> - missing bounds checks <br>
+<tt>[29.02.2012]</tt> <strong><a href="security/2012/dsa-2421">DSA-2421 moodle</a></strong> - several vulnerabilities <br>
+<tt>[28.02.2012]</tt> <strong><a href="security/2012/dsa-2420">DSA-2420 openjdk-6</a></strong> - several vulnerabilities <br>
+<tt>[27.02.2012]</tt> <strong><a href="security/2012/dsa-2419">DSA-2419 puppet</a></strong> - several vulnerabilities <br>
+<tt>[27.02.2012]</tt> <strong><a href="security/2012/dsa-2418">DSA-2418 postgresql-8.4</a></strong> - several vulnerabilities <br>
+<tt>[25.02.2012]</tt> <strong><a href="security/2012/dsa-2414">DSA-2414 fex</a></strong> - insufficient input sanitization <br>
+<tt>[22.02.2012]</tt> <strong><a href="security/2012/dsa-2417">DSA-2417 libxml2</a></strong> - computational denial of service <br>
+<tt>[22.02.2012]</tt> <strong><a href="security/2012/dsa-2416">DSA-2416 notmuch</a></strong> - information disclosure <br>
+<tt>[21.02.2012]</tt> <strong><a href="security/2012/dsa-2415">DSA-2415 libmodplug</a></strong> - several vulnerabilities <br>
+</p>
+<p>Starší bezpečnostní zprávy se nachází na stránce
+s&nbsp;<a href="./security/">bezpečnostními informacemi</a>.
+Pokud chcete být na potenciální bezpečnostní rizika upozorňováni
+elektronickou poštou co nejdříve po jejich ohlášení, přihlaste se do
+konference
+<a href="http://lists.debian.org/debian-security-announce/">debian-security-announce</a>.</p>
+<div class="clr"></div>
+</div> <!-- end content -->
+<div id="footer">
+  <hr class="hidecss">
+  <!--UdmComment-->
+<div id="pageLang">
+<div id="langSelector">
+Tato stránka je také dostupná v následujících jazycích:
+<div id="langContainer">
+ <a href="index.ar.html" title="arabština" hreflang="ar" lang="ar" rel="alternate">&#1593;&#1585;&#1576;&#1610;&#1577;&nbsp;(Arabiya)</a>
+ <a href="index.bg.html" title="bulharština" hreflang="bg" lang="bg" rel="alternate">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;&nbsp;(B&#601;lgarski)</a>
+ <a href="index.ca.html" title="katalánština" hreflang="ca" lang="ca" rel="alternate">catal&agrave;</a>
+ <a href="index.da.html" title="dánština" hreflang="da" lang="da" rel="alternate">dansk</a>
+ <a href="index.de.html" title="němčina" hreflang="de" lang="de" rel="alternate">Deutsch</a>
+ <a href="index.el.html" title="řečtina" hreflang="el" lang="el" rel="alternate">&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;&nbsp;(Ellinika)</a>
+ <a href="index.en.html" title="angličtina" hreflang="en" lang="en" rel="alternate">English</a>
+ <a href="index.es.html" title="španělština" hreflang="es" lang="es" rel="alternate">espa&ntilde;ol</a>
+ <a href="index.eo.html" title="esperanto" hreflang="eo" lang="eo" rel="alternate">Esperanto</a>
+ <a href="index.fa.html" title="perština" hreflang="fa" lang="fa" rel="alternate">&#x0641;&#x0627;&#x0631;&#x0633;&#x06cc;&nbsp;(Farsi)</a>
+ <a href="index.fr.html" title="francouzština" hreflang="fr" lang="fr" rel="alternate">fran&ccedil;ais</a>
+ <a href="index.ko.html" title="korejština" hreflang="ko" lang="ko" rel="alternate">&#54620;&#44397;&#50612;&nbsp;(Hangul)</a>
+ <a href="index.hy.html" title="arménština" hreflang="hy" lang="hy" rel="alternate">&#1344;&#1377;&#1397;&#1381;&#1408;&#1381;&#1398;&nbsp;(hayeren)</a>
+ <a href="index.hr.html" title="chorvatština" hreflang="hr" lang="hr" rel="alternate">hrvatski</a>
+ <a href="index.id.html" title="indonéština" hreflang="id" lang="id" rel="alternate">Indonesia</a>
+ <a href="index.it.html" title="italština" hreflang="it" lang="it" rel="alternate">Italiano</a>
+ <a href="index.he.html" title="hebrejština" hreflang="he" lang="he" rel="alternate">&#1506;&#1489;&#1512;&#1497;&#1514;&nbsp;(ivrit)</a>
+ <a href="index.lt.html" title="litevština" hreflang="lt" lang="lt" rel="alternate">Lietuvi&#371;</a>
+ <a href="index.hu.html" title="maďarština" hreflang="hu" lang="hu" rel="alternate">magyar</a>
+ <a href="index.nl.html" title="holandština" hreflang="nl" lang="nl" rel="alternate">Nederlands</a>
+ <a href="index.ja.html" title="japonština" hreflang="ja" lang="ja" rel="alternate">&#26085;&#26412;&#35486;&nbsp;(Nihongo)</a>
+ <a href="index.nb.html" title="norština" hreflang="nb" lang="nb" rel="alternate">norsk&nbsp;(bokm&aring;l)</a>
+ <a href="index.pl.html" title="polština" hreflang="pl" lang="pl" rel="alternate">polski</a>
+ <a href="index.pt.html" title="portugalština" hreflang="pt" lang="pt" rel="alternate">Portugu&ecirc;s</a>
+ <a href="index.ro.html" title="rumunština" hreflang="ro" lang="ro" rel="alternate">rom&acirc;n&#259;</a>
+ <a href="index.ru.html" title="ruština" hreflang="ru" lang="ru" rel="alternate">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&nbsp;(Russkij)</a>
+ <a href="index.sk.html" title="slovenština" hreflang="sk" lang="sk" rel="alternate">slovensky</a>
+ <a href="index.fi.html" title="finština" hreflang="fi" lang="fi" rel="alternate">suomi</a>
+ <a href="index.sv.html" title="švédština" hreflang="sv" lang="sv" rel="alternate">svenska</a>
+ <a href="index.ta.html" title="tamilština" hreflang="ta" lang="ta" rel="alternate">&#2980;&#2990;&#3007;&#2996;&#3021;&nbsp;(Tamil)</a>
+ <a href="index.tr.html" title="turečtina" hreflang="tr" lang="tr" rel="alternate">T&uuml;rk&ccedil;e</a>
+ <a href="index.uk.html" title="ukrajinština" hreflang="uk" lang="uk" rel="alternate">&#1091;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;&nbsp;(ukrajins'ka)</a>
+ <a href="index.zh-cn.html" title="čínština (Čína)" hreflang="zh-CN" lang="zh-CN" rel="alternate">&#20013;&#25991;(&#31616;)</a>
+ <a href="index.zh-hk.html" title="čínština (Hongkong)" hreflang="zh-HK" lang="zh-HK" rel="alternate">&#20013;&#25991;(HK)</a>
+ <a href="index.zh-tw.html" title="čínština (Tchaj-wan)" hreflang="zh-TW" lang="zh-TW" rel="alternate">&#20013;&#25991;(&#32321;)</a>
+</div>
+Jak nastavit <a href="./intro/cn">výchozí jazyk</a>
+</div></div><!--/UdmComment-->
+<hr>
+<!--UdmComment-->
+<div id="fineprint">
+  <p>To report a problem with the web site, e-mail <a href="mailto:debian-www@lists.debian.org">debian-www@lists.debian.org</a>. For other contact information, see the Debian <a href="./contact">contact page</a>. Web site source code is <a href="./devel/website/using_cvs">available</a>.</p>
+<p>
+Poslední změna: po, 2. led 23:29:11 UTC 2012
+  <br>
+  Copyright &copy; 1997-2012
+ <a href="http://www.spi-inc.org/">SPI</a> and others; Přečtete si <a href="./license" rel="copyright">licenční podmínky</a><br>
+  Debian je registrovaná <a href="./trademark">obchodní známka</a> organizace Software in the Public Interest, Inc.
+</p>
+</div>
+<!--/UdmComment-->
+</div> <!-- end footer -->
+</body>
+</html>
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline
+Content-Type: text/css; charset=utf-8
+Content-Location: http://www.debian.org/debian.css
+Content-Transfer-Encoding: 8bit
+
+/*
+	http://www.debian.org Stylesheet
+
+	Copyright 2011 Kalle Söderman
+
+	This stylesheet is free software; you can redistribute it and/or modify it
+	under the terms of the GNU General Public License, version 2, as published by
+	the Free Software Foundation.
+
+	This program is distributed in the hope that it will be useful, but WITHOUT ANY
+	WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License along with
+	this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+	Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+	The license text can also be found at http://www.gnu.org/copyleft/gpl.html and
+	/usr/share/common-licenses/GPL-2 on Debian GNU/Linux.  
+*/
+	
+/*	
+	Font size table (Browser default 16px)
+
+	pixels      relative
+	--------------------
+	36px        2.25em
+	31px        0.5161em
+	24px        1.5em
+	21px        1.3125em
+	18px        1.125em
+	16px        1em
+	14px        0.875em
+	12px        0.75em
+	11px        0.6875em
+	10px        0.625em
+	9px         0.5625em
+	--------------------
+*/
+
+/* Reset */
+ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td { 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body            { line-height: 1; color: black; background: white; }
+ol, ul          { list-style: none; }
+table           { border-collapse: separate; border-spacing: 0; }
+blockquote, q   { quotes: "" ""; }
+html            { background-color: transparent; }
+:focus          { outline: 1px dotted grey; }
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+/* Main */
+
+body {
+	margin: 0;
+	font: normal 100% sans-serif;
+	line-height: 1.5;
+	color: #222;
+	background-color: white;
+	background-image:url('Pics/gradient.png');
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	/* Uncomment to show baseline grid 
+	background-image: url('24grid.png');
+	background-position: 30px 9px; 
+	*/
+}
+#content {
+	margin: 0 10px 0 52px;
+}
+#inner {
+	position: relative;
+}
+#maincol {
+	margin: 0 15em 1.5em 0;
+}
+
+/* Header */
+
+#header {
+	margin:0;
+	padding:0 10px 0 52px; 
+}
+#header a:link
+, #header a:visited
+, #second-nav a:link
+, #second-nav a:visited {
+	text-decoration: none;
+}
+#header a:hover
+, #second-nav a:hover {
+	text-decoration: underline;
+}
+#breadcrumbs {
+	margin:0;
+	font-size: 0.75em;
+	text-transform: lowercase;
+	line-height: 2;
+	background-color: transparent;
+	background-color: #f5f6f7;
+	border-bottom: 1px solid #d2d3d7 ;
+	min-height: 20px;
+}
+#breadcrumbs:before {
+	content: "/";
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+p.section {
+	margin: 0;
+	padding: 0 5px 0 5px;
+	font-family:monospace;
+	line-height: 16px;
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	position:absolute;
+	top: 0px;
+	left:52px;
+	background-color: #c70036;
+}
+p.section a {
+	color: white;
+	text-decoration: none;
+}
+p.section a:hover {
+	color:white;
+	text-decoration: underline;
+}
+#navbar {
+	background-color: transparent;
+	list-style:none;
+	display:block;
+	border-bottom:1px solid #c70036;
+	text-indent:0;
+	padding: 0;
+	margin-top:0;
+	margin-bottom:0;
+}
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	overflow: hidden;
+	min-height: 45px;
+}
+#navbar li {
+	list-style: none;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+#navbar a:link
+, #navbar a:visited {
+	padding: 1.75em 0.5em 0.25em 0.5em;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	display: block;
+	text-decoration: none;
+}
+#navbar a:visited {
+	color: #54638c;
+}
+#navbar a:hover
+, #navbar a:visited:hover {
+	background-color: #f5f6f7;
+	border-left: 1px solid  #d2d3d7;
+	border-right: 1px solid #d2d3d7;
+	text-decoration: underline;
+}
+ul.subnav {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 0;
+}
+ul.subnav li {
+	display: inline;
+	margin-right: 1em;
+}
+#searchbox {
+	text-align:left;
+	line-height: 1;
+	margin: 0 10px 0 0.5em;
+	padding: 1px 0 1px 0;
+	position: absolute;
+	top:0;
+	right:0;
+	font-size: 0.75em;
+}
+#searchbox p {
+	margin: 0;
+	padding: 0;
+}
+#upperheader {
+	margin:0;
+	padding:0;
+}
+#logo {
+	position:absolute;
+	top:0;
+	left:0;
+	padding: 0;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-top: 0;
+	width: 50px;
+	height: 5.07em;
+	min-height: 65px;
+}
+#logo a {
+	display: block;
+	position: relative;
+	padding: 0;
+	height: 100%;
+	min-height: 65px;
+}
+#logo img {
+	margin-top: 5px;
+	position: absolute;
+	bottom: 0.3em;
+	overflow: auto;
+}
+#logo:hover {
+	border: 1px solid #d2d3d7 ;
+	border-top: 0;
+	background-color: #f5f6f7;
+}
+
+/* Links */
+
+a:link {
+	color: #0035c7;
+	text-decoration: underline;
+}
+a:visited {
+	color: #54638c;
+}
+a:link:hover {
+	text-decoration: none;
+	color: #00207a;
+}
+a:visited:hover {
+	text-decoration: none;
+}
+a:active {
+	color:#c2c3c7;
+}
+a img {
+	border:0;
+}
+a.rss_logo {
+	font-size: 0.75em;
+	float: right;
+	line-height: 10px;
+	color: #ffffff;
+	background-color: #ff6600;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-align: center;
+	text-decoration: none;
+	padding: 0.25em;
+	margin-left: 0.25em;
+	border: 1px solid #ff6600;
+}
+
+a.rss_logo:hover {
+	background-color: white;
+	border: 1px solid #ff6600;
+	color: #ff6600;
+}
+
+a.rss_logo.generic {
+	background-color: #ff8800;
+}
+
+a.rss_logo.generic:hover {
+	background-color: #ee7700;
+}
+
+
+/* Secondnav */
+
+#second-nav {
+	width: 16em;
+	font-size: 0.75em;
+	line-height: 1.5;
+	float: right;
+	top: 0;
+	right: 0;
+	margin: 3em 0 0 0;
+	padding: 0 0 0 1em;
+	border-left: 1px solid #d2d3d7 ;
+}
+#second-nav ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#second-nav ul ul {
+	margin-left: 1em;
+}
+#second-nav li {
+	font-weight: normal;
+	margin:0;
+	padding:0;
+}
+#second-nav p {
+	line-height: 2;
+	font-weight: bold;
+	margin: 0;
+}
+#second-nav h2 {
+	margin:0;
+}
+
+/* Typography */
+
+p {
+	margin: 1.5em 0 1.5em 0;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+	color: #444;
+}
+small {
+	font-size: 0.75em;
+}
+sup {
+	font-size: 0.75em;
+	vertical-align:top;
+}
+h1
+, h2
+, h3
+, h4
+, h5
+, h6 {
+	font-weight: 600;
+	color: black;
+}
+h1 {
+	font-weight: normal;
+	font-size: 1.8em;
+	line-height: 0.83333;
+	margin: 0.83333em 0 0.83333em 0;
+}
+h2 {
+	font-size: 1.4em;
+	font-weight: normal;
+	line-height: 1.0714286;
+	margin: 1.0714286em 0 1.0714286em 0;
+}
+h3 {
+	font-size: 1.125em;
+	line-height: 1.333em;
+	margin: 1.333em 0 0 0;
+}
+h4 {
+	font-weight: normal;
+	font-style: italic;
+	margin: 1.5em 0 1.5em 0;
+	color: #444;
+}
+h5 {
+	font-style: italic;
+	font-size: 0.75em;
+	margin: 2em 0 2em 0;
+}
+ol,ul {
+	padding-left: 1.5em;
+	margin-left:0;
+	margin: 1.5em 0 1.5em 0;
+}
+ol>ol, ul>ul, li>ol, li>ul {
+	margin: 0;
+}
+
+ol {
+	list-style-type: decimal;
+}
+ul {
+	list-style-type: disc;
+}
+th {
+	font-weight: bold;
+	margin: 1.5em 0 1.5em 0;
+}
+hr {
+	border: none;
+	background-color: #bbb;
+	height: 1px;
+	margin: 1.4375em 0 1.5em 0;
+}
+pre {
+	margin: 1.5em 0 1.5em 0;
+	overflow: auto;
+	font-family: monospace;
+	white-space: pre;
+	color: black;
+}
+tt, code {
+	font-family: monospace;
+	/* see http://lists.debian.org/debian-www/2011/08/msg00181.html */
+	/* white-space: pre; */
+	color: black;
+}
+dt {
+	margin: 1.5em 0 0 0;
+	font-weight: bold;
+}
+dd {
+	margin:  0 0 0 1.5em;
+}
+blockquote {
+	font-size: 0.75em;
+	margin: 2em;
+	line-height: 2;
+}
+cite {
+	font-style: italic;
+	color: #444;
+}
+acronym, abbr {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+.toc {
+	font-size: 0.75em;
+	list-style:none;
+	border-bottom: dotted grey;
+	border-width: 1px;
+	line-height:1.833;
+	padding: 0;
+	max-width: 62%;
+	margin: 2em 0 2em 0;
+}
+.toc li {
+	border-top: dotted grey;
+	border-width: 1px;
+	padding: 0.0833em 0 0.0833em 0;
+ }
+.toc a {
+	display:block;
+	text-decoration: none;
+}
+.toc a:hover {
+	display:block;
+	background-color: #f0f0f4;
+	text-decoration: underline;
+}
+.toc dt {
+	margin: 0;
+	border-top: dotted grey;
+	border-width: 1px;
+	padding: 0.0833em 0 0.0833em 0;
+}
+
+/* Sitemap */
+
+.card {
+	clear:both;
+	margin:1.5em 0 1.5em 0;
+	background-position: 0 -50px;
+	background-repeat: repeat-x;
+	padding:0;
+}
+.card ul {
+}
+.card ul li {
+	list-style:none;
+}
+.card h2 {
+}
+.lefthalf {
+	float:left;
+}
+.righthalf {
+	margin-left:50%;
+}
+.lefthalf ul {
+	margin-top:0;
+}
+
+/* Footer */
+
+#footer {
+	font-size: 0.75em;
+	border: 1px solid #dfdfe0;
+	padding:1em;
+	background-color: #f5f6f7;
+	margin: 0 10px 0 52px;
+	line-height: 1.5em;
+	border-left: 0;
+	border-right: 0;
+	clear: both;
+}
+#content #footer {
+	margin-left: 0;
+}
+#footer p {
+	margin: 1em 0 1em 0;
+}
+#footer hr {
+	border-top: 1px solid #d2d3d7;
+	border-bottom: 1px solid white;
+	height: 0;
+}
+#footer .editbar li {
+	display: inline;
+	margin-right: 2em;
+}
+#footer .info {
+}
+#fineprint {
+	margin-bottom: 1em;
+}
+#footermap {
+	list-style:none;
+	margin: 0 0 0 0;
+	padding: 0;
+	width:100%;
+	overflow: hidden;
+	border: 0;
+}
+ul#footermap-cola a
+, ul#footermap-colb a
+, ul#footermap-colc a
+, ul#footermap-cold a
+, ul#footermap-cole a {
+	padding-left: 0;
+}
+ul#footermap-cola
+, ul#footermap-colb
+, ul#footermap-colc
+, ul#footermap-cold
+, ul#footermap-cole {
+	float:left;
+	width: 19%;
+	min-width: 11em;
+	height: 12em;		/* Update when adding items */
+	margin:0 1% 0 0;
+	padding: 2em 0 0 0;
+	list-style: none;
+}
+ul#footermap-cole {
+	width: 18.9%;
+	margin-right:0;
+}
+#footermap-wrap {
+	padding:2em;
+	border-top: 1px solid white;
+}
+#footermap a {
+	margin: 0;
+}
+#footermap ul{
+	list-style: none;
+	padding:0;
+}
+#footermap li {
+	text-indent:0;
+	background-color: transparent;
+	font-weight:bold;
+}
+#footermap li ul {
+	margin: 0;
+	padding: 0;
+}
+#footermap li li {
+	margin:0;
+	text-indent:0;
+	padding:0;
+	font-weight:normal;
+	border:0;
+	background-image:none;
+	background-color:transparent;
+}
+#serverselect {
+}
+#serverselect input
+, #serverselect option 
+, #serverselect select {
+}
+#serverselect ul {
+	display: inline;
+	margin-left: 2em;
+}
+#serverselect li {
+	list-style: none;
+	display: inline;
+	padding:0 1em 0 1em;
+	margin:0;
+}
+#serverselect form p {
+	margin:0;
+	padding:0;
+	line-height: 1;
+}
+.lcol50 {
+	float: left;
+	width: 49%;
+	font-size:0.75em;
+	margin:0 0 0 0;
+	padding:0 0.5em 0 0;
+}
+.lcol50 h2 {
+	margin-top:0;
+}
+.rcol50 {
+	margin:0 0 0 51%;
+	padding:0;
+	font-size:0.75em;
+}
+#pageLang {
+	position: relative;	/*  establish a containing box. needed for
+				    langContainer */
+}
+form#pageLang {
+	display: inline;
+}
+
+/* Extras */
+
+input:focus {
+	background-color:#FFFFCB;
+	
+}
+.hidecss {
+	display: none;
+}
+.clear {
+	clear:both
+}
+#clear {
+	clear:both;
+	border:0;
+	height:1px;
+	display:block;
+}
+.quicklist {
+	list-style: none;
+	font-size: 0.75em;
+	margin: 2em 0 2em 0;
+	padding:0;
+	text-indent:0;
+	line-height: 2em;
+}
+.quicklist li  {
+	display:inline;
+}
+.item p{
+	margin: 0;
+}
+.item h2
+, .item p
+, .item ul{
+	margin-right: 10px 
+}
+.item h2
+, .item h3
+, .item h4
+, .item h5 {
+	margin-top: 0;
+}
+.line {
+	padding: 0;
+	width: auto;
+	overflow: hidden;
+	}
+div.downloads {
+	border-top: 0.17em solid #339900;
+	margin: 1.33em 0 0 0; 
+}
+.downloads ul.downlist {
+	margin:0;
+}
+div.downloads .col50 { 
+	border-top: 0.15em solid #339900;
+}
+ul.downlist {
+	padding-left: 30px;
+	text-indent:0;
+	background: url('Pics/emblem-downloads.png') no-repeat 0 0.15em;
+	min-height: 23px;
+	/* 
+	 * border-top: 0.17em solid #339900;
+	 */
+}
+ul.quicklist.downlist {
+	border-top: 0.17em solid #339900;
+	padding-top: 0.25em;
+	margin-top: 1.6em;
+}
+ul.downlist li {
+	display: inline;
+}
+ul.downlist li:after {
+	content: ', ';
+}
+ul.downlist li:last-child:after {
+	content: '';
+}
+div.tip
+, div.important
+, div.warning
+, div.note 
+, div.trans-note {
+	padding:0 2em 0 4em;
+	margin: 1.85em 0 1.85em 0;
+	background-repeat: no-repeat;
+	background-position: 0.5em 0.5em;
+	font-size: 0.75em;
+	line-height: 2em;
+	background-color:#FFFFCB;
+	border:0.15em solid #CCCCA3;
+}
+div.tip p
+, div.important p
+, div.warning p
+, div.note p 
+, div.trans-note p {
+	margin: 1em 0 1em 0;
+}
+div.tip {
+	background-image: url('Pics/admon-tip.png');
+}
+div.important{
+	background-image: url('Pics/admon-important.png');
+}
+div.warning {
+	background-image: url('Pics/admon-warning.png');
+}
+div.note
+, div.trans-note  {
+	background-image: url('Pics/admon-note.png');
+}
+
+/* Layout Elements */
+
+.col50
+, .cardleft
+, .cardright {
+	width:47.5%;
+	float: left;
+	padding-bottom: 1.5em;
+}
+.lastcol
+, .cardright {
+	margin: auto;
+	width: 47.5%;
+	float:left;
+	padding-right: 0;
+	margin-left: 5%;
+}
+.lastcol h2
+, .lastcol p
+, .lastcol ul {
+	margin-right:0;
+}
+.cardleft h2 {
+	margin-right: 1em;
+}
+.cardright div {
+	margin-left: 1.5em;
+}
+.cardright h2 {
+	margin-left: 1em;
+}
+.votemenu a {
+	display:block;
+}
+table.vote td, table.vote th {
+	padding-right: 1.5em;
+}
+#maincol.with-toolbox {
+	margin-right: 14em;
+}
+div.tabular table, table.tabular, table.vendors {
+/*	border-bottom: 1px solid #a9abb3;
+	border-top: 1px solid #a9abb3; */
+	border-bottom: 0.15em solid #666;
+	border-top: 0.15em solid #666;
+	font-size: 0.75em;
+	margin-bottom: 4em;
+	margin-top: -0.169em;
+	text-align: left;
+	width: 80%
+}
+
+table td {
+	padding-right: 1.5em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	line-height: 1.2em;
+	border-top: dotted grey;
+	border-width: 1px;
+}
+div.tabular table tr, table.tabular tr, table.vendors tr {
+	width: 100%;
+}
+table th {
+	padding-right: 1.5em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	line-height: 1.5em;
+}
+
+div.tabular table td, table.tabular td, table.vendors td {
+	border-top: dotted grey;
+	border-width: 1px;
+}
+div.tabular table > td:first-child, table.tabular > td:first-child, table.vendors  > td:first-child {
+	background-image: none;
+}
+#pageLang p, #pageLang form {
+	display: inline;
+}
+.inline  a {
+	float: left;
+	margin-right: 1em;
+}
+#langSelector {
+/*	color: #0035c7; */
+/*	text-decoration: underline; */
+}
+#langSelector:hover {
+/*	cursor: pointer; */
+/*	text-decoration: none; */
+}
+#langContainer {
+	padding-top: 0.5em;
+/*	background-color: #f5f6f7;
+	background-color: white;
+	background-image:url('Pics/gradient-flipped.png');
+	background-position: bottom;
+	background-repeat: repeat-x;
+	display: none;
+	position: absolute;
+	left: -1em;
+	padding: 0.5em 1em 1em 1em;
+	margin-right: -1em;
+	border-bottom: 1px solid #dfdfe0;
+	min-width: 100%; */     /* make it reach the right edge if only a few
+				   languages are available */
+}
+#langContainer a {
+	margin-right: 1em;
+}
+#pageLang:hover #langContainer {
+    display: block;
+}
+
+/* for l10n-arabic */
+.bidi {
+	direction: rtl;
+	text-align: right;
+}
+
+ul.nodecoration {
+	list-style: none;
+	padding: 0;
+}
+
+/*
+ * For small screens
+ */
+
+@media only screen and (max-width: 38em) {
+
+    div#header {
+        margin: 0 2px 0 2px;
+        padding: 0;
+    }
+    div#logo {
+        position: relative;
+        top: 0;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+    }
+    div#logo a {
+        height: auto;
+        height: 61px;
+    }
+    div#logo a img {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    #upperheader p.section {
+        left: 70px;
+        top: 0;
+    }
+    div#searchbox {
+        position: relative;
+        margin: -31px 0 0 60px;
+        float: right;
+        bottom: 0;
+        padding: 0;
+    }
+    div#searchbox input[name="P"] {
+        width: 200px;
+    }
+    div#navbar {
+        display: block;
+        position: relative;
+        clear: both;
+    }
+    #navbar ul {
+        min-height: 1.5em;
+        display: block;
+    }
+    #navbar li {
+        display: inline;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    div#navbar a:link, div#navbar a:visited {
+        display: inline;
+        margin: 0 1.5em 0 0;
+        padding: 0.25em 0 0.25em 0;
+        border: 0;
+        background-color: transparent;
+    }
+    div#content {
+        margin: 0 2px 0 2px;
+    }
+    ul.toc {
+        max-width: none;
+    }
+    div#maincol {
+        margin-right: 0;
+    }
+    div.tip, div.important, div.warning, div.note, div.trans-note {
+        overflow: hidden;
+    }
+    div.trans-note {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        background-image: none;
+        padding: 0;
+        padding-left: 1em;
+    }
+    div#second-nav {
+        margin-left: 1em;
+        width: auto;
+    }
+    div#footer {
+        margin-left: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.debian.org/Pics/gradient.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAABDCAIAAADS5/i5AAAAAXNSR0IArs4c6QAA
+AAlwSFlzAAAN/wAADf8B9IqyiQAAAAd0SU1FB9cIHhQeLyfm5HAAAAAWdEVYdENv
+bW1lbnQAS2FsbGUgU29kZXJtYW4Dov5qAAAABmJLR0QA/wD/AP+gvaeTAAAAVUlE
+QVQY012OwRHAMAjDJO+/X6/fLkIfcEnTF1iHbbjuJ4aIQQKzx1hEm4vRCiTKZswu
+Afue9unOdRjHJOhks1h7Tj9z09469Ope2X5+/DGIGU19u15WfQeCuEqAAgAAAABJ
+RU5ErkJggg==
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.debian.org/Pics/emblem-downloads.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAA3NCSVQICAjb4U/g
+AAAA/FBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC7u7sAAABra2sA
+AAAAAAAAAAAAAAC2v7aMjIQAAAC5ubm4v7i7u7SPj4p5fHmMj4x7fniOkIqNjomN
+jou9wLm+wbq9wLq9wbm9wLq9wLm/wryJi4aJi4bIysbx8vDz8/Jyn8+IioWLjYi6
+vba9wLm+wbrBxL3Dxr/IysTKzMbLzsfS1s7T18/U2NHa3dfb3tjd4Nre4dvf4t3k
+5+Pl6OTm6OTo6uXo6ubp6+fp6+jq6unq7Ojq7Onr7ent7uvu7uzu7+zv7+309PP1
+9fT29vX39/b5+fn6+vn+/v7///865Py2AAAAKnRSTlMAAQIEBQYHCQwODxETFBYX
+HBwfICEkKTtMUFXGzs7s7PDx9PX4/P3+/v7VkFyPAAAA+ElEQVQY052P2VLCQBBF
+OywBjGxhX8MimzHuBhQUXGbCKESG+f9/0ZlMAinfPE/dp7pu3QbQmwMzzKCpAzRG
+yAmDRg2AIZraYaZoCGA69tPqmLntmEK/nksYB/1PzzHGz5jz8o7xQmjZ5G75OJst
+7x/8JrL3Df1cr+ntm99bb4kvrf0XIfurC/9LiafPTiDMX523frlkXF/zMS99sT1m
+7JsQ4jI2bheD+5IxoYRDJ0bpKLnc2XBPN51y4JRYIlXpbndkt+1WUomY4lk1qWVy
+1b7L3H41l9GSqnLQhXrvo1cvHLQI0dLZmlXLprUgRBCJxtVTNR6NeOsP79JJD5P1
+T8MAAAAASUVORK5CYII=
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.debian.org/Pics/spacefun-bg.png
+Content-Transfer-Encoding: Base64
+
+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
+TyZSmBWvAAAAAElFTkSuQmCC
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://www.debian.org/Pics/spacefun.png
+Content-Transfer-Encoding: Base64
+
+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
+66TyZXdkkkEAAAAASUVORK5CYII=
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=debhome.css
+Content-Type: text/css; charset=utf-8; name=debhome.css
+Content-Location: http://www.debian.org/debhome.css
+Content-Transfer-Encoding: 8bit
+
+/*
+	http://www.debian.org Homepage Stylesheet
+
+	Copyright 2011 Kalle Söderman
+
+	This stylesheet is free software; you can redistribute it and/or modify it
+	under the terms of the GNU General Public License, version 2, as published by
+	the Free Software Foundation.
+
+	This program is distributed in the hope that it will be useful, but WITHOUT ANY
+	WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License along with
+	this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+	Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+	The license text can also be found at http://www.gnu.org/copyleft/gpl.html and
+	/usr/share/common-licenses/GPL-2 on Debian GNU/Linux.  
+*/
+
+@import url("debian.css");
+
+#splash {
+	background-image: url('Pics/spacefun-bg.png');
+	background-position:top center;
+	background-repeat: repeat-x;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	text-align: center;
+	overflow: hidden;
+	height: 120px;
+}
+#splash h1 {
+	background-image: url('Pics/spacefun.png');
+	background-position:top center;
+	padding-top:130px;
+	overflow:hidden;
+	text-align:center;
+	background-repeat:no-repeat;
+	display:block;
+	margin:0;
+	height:0;
+}
+span.download {
+	display: block;
+	position: absolute;
+	right: 13px;
+	font-size: 0.75em;
+	line-height: 2;
+	background-color: white;
+	margin-top: 10px;
+}
+span.download a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border: 0.15em solid #339900;
+	display: block;
+	background: transparent url('Pics/emblem-downloads.png') no-repeat 5px 5px; 
+	padding-left: 30px;
+	padding-right: 1em;
+	color:#339900;
+}
+span.download a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #339900;
+}
+span.download a em {
+	font-size: 0.75em;
+	font-weight: normal;
+	clear: right;
+	color: #339900;
+	line-height: 0.5em;
+	font-style: normal;
+	display: block;
+	margin-bottom: 1em;
+}
+span.download a:hover em {
+	color: white; 
+	background-color: #339900;
+}
+#announce {
+	text-align: center;
+	float: left;
+	width: 41%;
+	min-width: 260px;
+	margin-bottom: 1.5em;
+}
+#intro {
+	padding-top: 0;
+}
+#intro p {
+	margin-top: 0em;
+	padding:0;
+}
+
+/* Homepage Links */
+
+#hometoc {
+	list-style:none;
+	margin: 0 0 2em 0;
+	padding: 0;
+	width:100%;
+	font-size: 0.75em;
+	overflow: hidden;
+	line-height: 1.5em;
+	border: 0;
+}
+#hometoc a {
+	text-decoration: none;
+}
+#hometoc a:hover {
+	text-decoration: underline;
+}
+ul#hometoc-cola a, ul#hometoc-colb a, ul#hometoc-colc a, ul#hometoc-cold a, ul#hometoc-cole a {
+	padding-left: 5px;
+        display: block;
+}
+ul#hometoc-cola, ul#hometoc-colb,ul#hometoc-colc, ul#hometoc-cold, ul#hometoc-cole {
+	float:left;
+	width: 19.2%;
+	min-width: 11em;
+	min-height: 12em; 		/* Update when adding items */
+	margin:0 1% 0 0;
+	padding: 0;
+	border-bottom: dotted red;
+	border-width: 1px;
+	list-style: none;
+}
+ul#hometoc-cole {
+	width: 18.9%;
+	margin-right:0;
+}
+#hometoc-wrap {
+	padding:1em 1em 1em 1em;
+	border-top: 1px solid white;
+}
+#hometoc a {
+	margin: 0;
+}
+#hometoc ul{
+	list-style: none;
+	padding: 0 0 0 0;
+}
+#hometoc ul ul {
+	padding: 0;
+}
+#hometoc li {
+	text-indent:0;
+	background-color: transparent;
+	font-weight:bold;
+}
+#hometoc li ul {
+	margin: 0;
+	padding: 0;
+}
+#hometoc li li {
+	margin:0;
+	text-indent:0;
+	padding:0;
+	margin-left: 1em;
+	font-weight:normal;
+	border:0;
+	background-image:none;
+	background-color:transparent;
+}
+#hometoc li li a:before {
+	content:"» ";
+	width: 1em;
+}
+#hometoc li li a {
+	text-indent: -1em;
+}
+li.sponsorbutton {
+	padding-top: 1.25em;
+	text-align: left;
+	display: block;
+	width: 100%;
+	border-top: dotted grey;
+	border-width: 1px;
+}
+.infobar {
+	margin: 0 0 2em 0;
+	padding: 0 0 2em 0;
+	line-height: 1em;
+	font-size: 0.75em;
+	border-bottom: dotted grey;
+	border-width: 1px;
+	clear: both;
+}
+
+/*
+ * For small screens
+ */
+
+@media only screen and (max-width: 38em) {
+
+    div#content {
+        background-image: none;
+    }
+
+span.download {
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+}
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=debian-cs.css
+Content-Type: text/css; charset=utf-8; name=debian-cs.css
+Content-Location: http://www.debian.org/debian-cs.css
+Content-Transfer-Encoding: 8bit
+
+/* Debian language css file for czech - cs */
+/* please do not touch for now! - Jutta Wrage 2005 */
+
+html[lang=cs] #maincol {
+}
+/* quotes ok */
+html[lang=cs] q:before { content: "\201E"; }
+html[lang=cs] q:after { content: "\201C"; }
+html[lang=cs] q q:before { content: "\201A"; }
+html[lang=cs] q q:after { content: "\2018"; }
+
+html[lang=cs] blockquote.quote p:first-child:before { content: "\201E"; }
+html[lang=cs] blockquote.quote p:after { content: ""; }
+html[lang=cs] blockquote.quote p.last:after { content: "\201D"; }
+
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=favicon.ico
+Content-Type: image/x-icon; name=favicon.ico
+Content-Location: http://www.debian.org/favicon.ico
+Content-Transfer-Encoding: Base64
+
+AAABAAQAICAAAAEACACoCAAARgAAACAgEAABAAQA6AIAAO4IAAAQEAAAAQAIAGgF
+AADWCwAAEBAQAAEABAAoAQAAPhEAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDc
+wADwyqYAACBAAAAgYAAAIIAAACCgAAAgwAAAIOAAAEAAAABAIAAAQEAAAEBgAABA
+gAAAQKAAAEDAAABA4AAAYAAAAGAgAABgQAAAYGAAAGCAAABgoAAAYMAAAGDgAACA
+AAAAgCAAAIBAAACAYAAAgIAAAICgAACAwAAAgOAAAKAAAACgIAAAoEAAAKBgAACg
+gAAAoKAAAKDAAACg4AAAwAAAAMAgAADAQAAAwGAAAMCAAADAoAAAwMAAAMDgAADg
+AAAA4CAAAOBAAADgYAAA4IAAAOCgAADgwAAA4OAAQAAAAEAAIABAAEAAQABgAEAA
+gABAAKAAQADAAEAA4ABAIAAAQCAgAEAgQABAIGAAQCCAAEAgoABAIMAAQCDgAEBA
+AABAQCAAQEBAAEBAYABAQIAAQECgAEBAwABAQOAAQGAAAEBgIABAYEAAQGBgAEBg
+gABAYKAAQGDAAEBg4ABAgAAAQIAgAECAQABAgGAAQICAAECAoABAgMAAQIDgAECg
+AABAoCAAQKBAAECgYABAoIAAQKCgAECgwABAoOAAQMAAAEDAIABAwEAAQMBgAEDA
+gABAwKAAQMDAAEDA4ABA4AAAQOAgAEDgQABA4GAAQOCAAEDgoABA4MAAQODgAIAA
+AACAACAAgABAAIAAYACAAIAAgACgAIAAwACAAOAAgCAAAIAgIACAIEAAgCBgAIAg
+gACAIKAAgCDAAIAg4ACAQAAAgEAgAIBAQACAQGAAgECAAIBAoACAQMAAgEDgAIBg
+AACAYCAAgGBAAIBgYACAYIAAgGCgAIBgwACAYOAAgIAAAICAIACAgEAAgIBgAICA
+gACAgKAAgIDAAICA4ACAoAAAgKAgAICgQACAoGAAgKCAAICgoACAoMAAgKDgAIDA
+AACAwCAAgMBAAIDAYACAwIAAgMCgAIDAwACAwOAAgOAAAIDgIACA4EAAgOBgAIDg
+gACA4KAAgODAAIDg4ADAAAAAwAAgAMAAQADAAGAAwACAAMAAoADAAMAAwADgAMAg
+AADAICAAwCBAAMAgYADAIIAAwCCgAMAgwADAIOAAwEAAAMBAIADAQEAAwEBgAMBA
+gADAQKAAwEDAAMBA4ADAYAAAwGAgAMBgQADAYGAAwGCAAMBgoADAYMAAwGDgAMCA
+AADAgCAAwIBAAMCAYADAgIAAwICgAMCAwADAgOAAwKAAAMCgIADAoEAAwKBgAMCg
+gADAoKAAwKDAAMCg4ADAwAAAwMAgAMDAQADAwGAAwMCAAMDAoADw+/8ApKCgAICA
+gAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAADnTpen
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl0YAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAl0ZOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGTgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAARkYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAACXRpcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAEZGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABORgAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AABGRkYAAAAAAAAAAAAA75ef7wAAAAAAAAAAAAAAAAAAAJ9GAAAAAAAAAAAAV05O
+RkZGRp8AAAAAAAAAAAAAAAAARkYAAAAAAAAAp05OTqcAAADvRkbvAAAAAAAAAAAA
+AKdGRgAAAAAAAADvTp8AAAAAAAAA70aXAAAAAAAAAAAAp0aXAAAAAAAAAE5GAAAA
+p1cAAAAA70bvAAAAAAAAAACnRqcAAAAAAACnRu8AAAAAAABXAAAATkbvAAAAAAAA
+AJdGlwAAAAAAAKdGAAAAAAAAAKcAAAAARu8AAAAAAAAAp0ZOAAAAAAAAp0YAAAAA
+AAAAAAAAAABGTgAAAAAAAACnRkYAAAAAAAAARgAAAAAAAAAA5wAAAEZG7wAAAAAA
+AJ9GRgAAAAAAAADvnwAAAAAAAAAAAAAARkbvAAAAAAAA70ZGpwAAAAAAAABO7wAA
+AAAApwAAAABGTqcAAAAAAADvV0ZOAAAAAAAAAKdGpwAAAADvAAAA70ZO7wAAAAAA
+AO9GRkYAAAAAAAAAAO9ORkZGpwAAAACfRlfvAAAAAAAAAABGRk4AAAAAAAAAAAAA
+AAAAAAAAAEZGp6cAAAAAAAAApwBGRk4AAAAAAAAAAAAAAAAAAACnRkZGAAAAAAAA
+AAAAAJ9GRkbvAAAAAAAAAAAAAAAAAEZGRk4AAAAAAAAAAAAAAEZGRkanAAAAAAAA
+AAAAAABGRkZGAAAAAAAAAAAAAAAAAEZGRkZGlwAAAAAAAABORkZGRgAAAAAAAAAA
+AAAAAAAAAE5GRkZGRkZGRkZGRkZGRkYAAAAAAAAAAAAAAAAAAAAAAABGRkZGRkZG
+RkZGRk7vAAAAAAAAAAAAAAAAAAAAAAAAAAAATkZGTleXn6cAAAAAAAAAAAAAAP/8
+P///+f///+P////P////n////z////5////8f////P////n////5////8f+H//P+
+Af/z+Dh/4/j+P+P5zx/j8fuP4/P7z+Pz/8/j+/3H4/n/x+H8+8fh/HuH4f4Hh/j/
+/4f0f/8P/B//D/4P/h//A/g//4AAf//gAP//+Af/KAAAACAAAABAAAAAAQAEAAAA
+AACAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICA
+AACAgIAAwMDAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAAAAAAAAAACZkA
+AAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAACZkAAAAAAAAAAAAAAAAAAJkAAAAA
+AAAAAAAAAAAAAAmQAAAAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAAAJkAAAAAAA
+AAAAAAAAAAAAmZAAAAAAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAAAAAAmZAAAAAAAA
+AAAAAAAAAAAJmQAAAAAAAAAAAAAAAAAACZAAAAAAAJkAAAAAAAAAAJkAAAAACZmZ
+mZAAAAAAAACZAAAAAJmQAACZkAAAAAAAmQAAAAmQAAAAAJkAAAAAAJkAAAAJAAAJ
+AAAJkAAAAAmZAAAAmQAAAAkACZAAAAAJmQAAAJkAAAAAkACQAAAACZkAAACQAAAA
+AAAAmQAAAAmZAAAAmQAAAACQAJkAAAAJmQAAAAmQAAAAAACZkAAAAJkAAAAAkAAA
+AJAAmZAAAACZkAAAAAkAAAkAAJmQAAAACZAAAAAAmZkAAAmZAAAAAAmZAAAAAAAA
+AAAJmQAAAAAAmZAAAAAAAAAAmZkAAAAAAJmZAAAAAAAAAJmQAAAAAAAJmZAAAAAA
+AAmZkAAAAAAAAJmZmQAAAAmZmQAAAAAAAAAJmZmZmZmZmZAAAAAAAAAAAAmZmZmZ
+mZAAAAAAAAAAAAAACZmZmQAAAAAAAP/+P///+f///+P////P////n////z////5/
+///8f////P////j////4////+f/P//P+Af/z/Hx/8/n/P/P775/j8/uf4/P93+P3
+/8/j8/3P4/n/x/P9/cfx/vvH+f8Pj/j//4/8f/8P/D//H/4f/h//A/g//4AAf//g
+Af//+A//KAAAABAAAAAgAAAAAQAIAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAA
+AAAAAIAAAIAAAACAgACAAAAAgACAAICAAADAwMAAwNzAAPDKpgAAIEAAACBgAAAg
+gAAAIKAAACDAAAAg4AAAQAAAAEAgAABAQAAAQGAAAECAAABAoAAAQMAAAEDgAABg
+AAAAYCAAAGBAAABgYAAAYIAAAGCgAABgwAAAYOAAAIAAAACAIAAAgEAAAIBgAACA
+gAAAgKAAAIDAAACA4AAAoAAAAKAgAACgQAAAoGAAAKCAAACgoAAAoMAAAKDgAADA
+AAAAwCAAAMBAAADAYAAAwIAAAMCgAADAwAAAwOAAAOAAAADgIAAA4EAAAOBgAADg
+gAAA4KAAAODAAADg4ABAAAAAQAAgAEAAQABAAGAAQACAAEAAoABAAMAAQADgAEAg
+AABAICAAQCBAAEAgYABAIIAAQCCgAEAgwABAIOAAQEAAAEBAIABAQEAAQEBgAEBA
+gABAQKAAQEDAAEBA4ABAYAAAQGAgAEBgQABAYGAAQGCAAEBgoABAYMAAQGDgAECA
+AABAgCAAQIBAAECAYABAgIAAQICgAECAwABAgOAAQKAAAECgIABAoEAAQKBgAECg
+gABAoKAAQKDAAECg4ABAwAAAQMAgAEDAQABAwGAAQMCAAEDAoABAwMAAQMDgAEDg
+AABA4CAAQOBAAEDgYABA4IAAQOCgAEDgwABA4OAAgAAAAIAAIACAAEAAgABgAIAA
+gACAAKAAgADAAIAA4ACAIAAAgCAgAIAgQACAIGAAgCCAAIAgoACAIMAAgCDgAIBA
+AACAQCAAgEBAAIBAYACAQIAAgECgAIBAwACAQOAAgGAAAIBgIACAYEAAgGBgAIBg
+gACAYKAAgGDAAIBg4ACAgAAAgIAgAICAQACAgGAAgICAAICAoACAgMAAgIDgAICg
+AACAoCAAgKBAAICgYACAoIAAgKCgAICgwACAoOAAgMAAAIDAIACAwEAAgMBgAIDA
+gACAwKAAgMDAAIDA4ACA4AAAgOAgAIDgQACA4GAAgOCAAIDgoACA4MAAgODgAMAA
+AADAACAAwABAAMAAYADAAIAAwACgAMAAwADAAOAAwCAAAMAgIADAIEAAwCBgAMAg
+gADAIKAAwCDAAMAg4ADAQAAAwEAgAMBAQADAQGAAwECAAMBAoADAQMAAwEDgAMBg
+AADAYCAAwGBAAMBgYADAYIAAwGCgAMBgwADAYOAAwIAAAMCAIADAgEAAwIBgAMCA
+gADAgKAAwIDAAMCA4ADAoAAAwKAgAMCgQADAoGAAwKCAAMCgoADAoMAAwKDgAMDA
+AADAwCAAwMBAAMDAYADAwIAAwMCgAPD7/wCkoKAAgICAAAAA/wAA/wAAAP//AP8A
+AAD/AP8A//8AAP///wAAAAAAAADvTqfvAAAAAAAAAAAAAACXTu8AAAAAAAAAAAAA
+AACfTu8AAAAAAAAAAAAAAACfTu8AAAAAAAAAAAAAAADvRqcAAAAAAAAAAAAAAAAA
+VkYAAAAAp6fvAAAAAAAA70bvAACnl05GRpfvAAAAAKdGAAAAl6cAAABOTu8AAACf
+RgAAp1YA76cAAJeXAAAAn04AAKdWAAAApwCfTu8AAKdGAAAAnwAAAAAAp0bvAADv
+Rp8AAACfl58AAJdO7wAAAJdO7wAAAAAAAO9GlwAAAADvTkanAAAAAO+XRu8AAAAA
+AO9ORlaXl1ZORu8AAAAAAAAA76dWRkZWp+8AAAAA/D/vgfj/74Hx/wAA4/86AMf/
+AgDPHysBjAcAApzjAgCZM0oBmdEAAp3xBACOMVgBx+OBAcPDAALgB08C8A/OAigA
+AAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAACA
+AAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+AAD///8AAAAACZAAAAAAAAmQAAAAAAAAmQAAAAAAAAmQAAAAAAAAmQAAAAAAAACQ
+AAmZkAAACZAAmQCZkAAJkAmQAACZAAmQCQCZAJkACZAJAACQCZAJkACQAJAJkACZ
+AAmZAAmQAJmQAAAAmQAACZkAAAmZAAAAmZmZmZAAAAAJmZmQAAD+f++B+f/vgfP/
+PALn/+sCz/8CAN4fCgKcx+sCmfMGAJszJwKb2RICndmAAs456wLH8wIA4+M1AvAH
+6wL4H++B
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=openlogo-50.png
+Content-Type: image/png; name=openlogo-50.png
+Content-Location: http://www.debian.org/Pics/openlogo-50.png
+Content-Transfer-Encoding: Base64
+
+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
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=identica.png
+Content-Type: image/png; name=identica.png
+Content-Location: http://www.debian.org/Pics/identica.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAYAAABzyUiPAAAAAXNSR0IArs4c6QAA
+AAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sF
+DhQWBJzIxG0AAAJ+SURBVFjD7Zi/T1NRFMc/77VSWqCt0EAkAq0RKhBZrIMxqcHB
+xIkJFxNjDAl/ABvObpIwkGgICQNMEgf5MRVjIjGNwaEdQKQgQhGqVQwtSGlfex1I
+I+J7pRRYaL/JS17Ou++el88959xzn4S9W1BQztIDiKUnBRI5SHI83gOYScHVJV6M
+PmVXnsFcIdgIxzEkG7h94xHXXbcQQiBJ0qHO2jt6zhS8kYGuvxGopYQSZ/xNL5W1
+OzgvPcBmvczm1hqLQS9zay8xzZXQ5LyWNcQzm8Ja8vmnSemXaXHex1F9E6PBSrUt
+gdFQzszCaxaDXuw1jZhMprxNYznTw/fT7yizGKksb6Ck2IZeZ8Rwzoyt3EGZpYpw
+JEgsFssp+tIpkL5PXwfHHLSrjTnKeLX5s7UfGaC51IJISSjJBIK9zVogSISjbE99
+Ym14Es+z5yiKcuyVbO/oob2j578PT9u1oKnV2Wzq7chAl6pPLXtOAK84m0DoUJK7
+xOKbxBIRNr7Os+KZ5LdnjgvRUtbHRvk4MXGqxVoNarYRku3i5RqBGWtgdHuDZEph
+NeQn/HMRIQsivgC/3n6g4nwd9rt3WBgbw9vXx9W2tlMBqBVNJwkxHXUHfWYzf0aA
+69+/oCuysv5tBSGSKGKXncAyumiMOlc9lS4XPwIB/ENDJ9YWaKWrGsijQtwPav+7
+x2mxJOzdQquRnv/sJxqNYDZVIcsykCI0O0vw1ThyKESt282Cx0NRczP3envzrg88
+tJGud7T8s8MKIbhYXYO1xIxvcBBvfz8Ri4WHnZ35fZTTDE+V9qSouJim1lbKbDam
+hodxu93UNTbm73EuUwoXdPhZWCr8jTme/gAvNiP4LlzZzgAAAABJRU5ErkJggg==
+
+------------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Disposition: inline; filename=planet.png
+Content-Type: image/png; name=planet.png
+Content-Location: http://www.debian.org/Pics/planet.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAA
+AAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sF
+DwcZGd6KzjcAAAI7SURBVEjHY2RQqGIYSYCFgYHh//3WEeJbRsVqFvwqfvz6fvv+
+k3cvXjIwMAhJiKsqynCwceJRH5rSO2h9u3pOMTSGcYHLN29fPHaU/fu3Vy/fiYkL
+nTr0Yz0DW2CYu6666tBO0ljBlWuXbxw4zPzu8b1n7yAiJ699Y2BgePlmUUZW3ND1
+MwuulLz/wI2Pz/8JCUgxSYoqCHNcuPNBXZaHk5vvyu17PR3dM2dOxJ+24UkIOZ2v
+nlOMluYhapAVYGpBFsFUQCpgwip6+/6TV+9+vvv6/+u335IyQj85udgF+d59/nX2
+ym3Gfz/PnT55584dYkwPTekNTemFuxIzRDAV4BJB9iclJQX2GH734uXvPxwMDAxc
+f74xP3195sGnZ58YfvxmYWBgePjs+cvXr6/fuKWjpUtkOYHHfbjCgiRDqJOHf3/5
+ysDAcOXZHydDWWXOv99uvH3x5j07OzNJphN0JVpCpUPJjz1JC0mIKyhxcTJ8FuJl
+e/D2h7aJYUSMi7jgX3bOLy+eXWRgYNDUUCO7biAmVinUgq8qZlCowmx4/Pj1fdbM
+pR8+/FCS4WFgYGDn5z1++NT9+/fu3Ln18vVra0vr5asWYS20Bnk9jLPhwcHG6eRs
+3t09+ekTRlFxkW+f/9y/f+/ipXNfvn4XFxVtbqsjWEQPWsCES0JHS7e0NPfHr/8b
+123ZsHHN0eNHGRgYrC2tl61dQ0xxNXhbl1iTNHLavnPnzvUbtxgYGDS09Qg2LQd/
+W5pxpPWWAGSVCvcYU/EcAAAAAElFTkSuQmCC
+
+------------nq6mZ3k6vZtPPFJKKqDEYH--
