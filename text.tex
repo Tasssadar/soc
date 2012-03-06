@@ -244,18 +244,18 @@ Při stavbě robotů (například na soutěž Eurobot) jsem se setkal s problém
 Aplikace s tímto zaměřením jsem našel pouze několik málo aplikací.
 
 \begin{itemize}
-    \item {\bf SerialChart}\footnote{\It{Analyse and chart serial data from RS-232 COM ports} -- \url{http://code.google.com/p/serialchart/}} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
-    \item {\bf WinWedge}\footnote{\It{RS232 data collection software} -- \url{http://www.taltech.com/products/winwedge/}} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, oproti Lorris má však horší ovládání (hlavně kvůli nutnosti použít další program pro zobrazování), má užší možnosti použití a je dostupný pouze pro MS Windows.
-    \item {\bf StampPlot Pro}\footnote{\It{Graphical Data Acquisition and Control} -- \url{http://www.selmaware.com/stampplot/index.htm}} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
+    \item {\bf SerialChart}\cite{serialchart} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
+    \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, oproti Lorris má však horší ovládání (hlavně kvůli nutnosti použít další program pro zobrazování), má užší možnosti použití a je dostupný pouze pro MS Windows.
+    \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
 \end{itemize}
 
 \section{Popis rozhraní}
 %\addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\footnote{\It{Cross--platform application and UI framework} -- \url{http://qt.nokia.com/}} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\footnote{\It{The Universal Operating System} -- \url{http://www.debian.org/}} (Wheezy, 64bit) a Windows 7.  
+Svůj program jsem pojmenoval "Lorris", je vytvořený v C++ a využívá Qt Framework\cite{qtfrm} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
 
 \subsection{Web a repozitář programu}
 %\addcontentsline{toc}{subsection}{Web a repozitář programu}
-GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\footnote{\It{GitHub -- Social Coding} -- \url{https://github.com}}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu, který jsem vytvořil, jsou odkazy ke stažení spustitelných souborů pro Windows, popis programu, video s představením programu (6 min.), ukázky z programu (screenshoty) a návod ke zkompilování pro MS Windows a Linux.
+GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\cite{github}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu, který jsem vytvořil, jsou odkazy ke stažení spustitelných souborů pro Windows, popis programu, video s představením programu (6 min.), ukázky z programu (screenshoty) a návod ke zkompilování pro MS Windows a Linux.
 
 \begin{itemize}
     \item Repozitář: \url{https://github.com/Tasssadar/Lorris}
@@ -502,7 +502,7 @@ Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazv
 \end{center}
 \end{figure}
 
-Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris vypadá výstup následnovně:
+Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris vypadá výstup následovně:
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david2.png}
@@ -523,24 +523,24 @@ Poslední widgety \It{číslo} s názvy "Enc left" a "Enc right" vypisují ujeto
 %\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
 \subsection{Knihovny třetích stran}
 %\addcontentsline{toc}{subsection}{Knihovny třetích stran}
-{\bf Qwt}\footnote{\It{Qt Widgets for Technical Applications} -- \url{http://qwt.sourceforge.net/}} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci
-zatím z této knihovny používám pouze graf (v modulu analyzéru). \\
-{\bf QExtSerialPort}\footnote{\It{Qt interface class for old fashioned serial ports} -- \url{http://code.google.com/p/qextserialport/}} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.\\
-{\bf QHexEdit2}\footnote{\It{Binary Editor for Qt} -- \url{http://code.google.com/p/qhexedit2/}} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, 
-týkajících se především vzhledu.
-
-\newpage
-\subsection{Licence}
-%\addcontentsline{toc}{subsection}{Licence}
-Lorris je dostupný pod licencí GNU GPLv3\footnote{\It{GNU General Public License} -- \url{http://gplv3.fsf.org/}}, licence použitých programů a knihoven jsou následující:
 \begin{itemize}
-    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\footnote{\It{GNU Lesser General Public License} -- \url{http://www.gnu.org/licenses/lgpl-2.1.html}}
-    \item {\bf Qwt} je distribuováno pod Qwt license\footnote{\It{Qwt license} -- \url{http://qwt.sourceforge.net/qwtlicense.html}}, která je založená na GNU LGPLv2.1
-    \item {\bf QExtSerialPort} je distribuován pod The New BSD License\footnote{\It{The New BSD License} -- \url{http://www.opensource.org/licenses/bsd-license.php}}
-    \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
-    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\footnote{\It{Boost Software License} -- \url{http://www.boost.org/users/license.html}}
+    \item {\bf Qwt}\cite{qwt} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci zatím z této knihovny používám pouze graf (v modulu analyzéru).
+    \item {\bf QExtSerialPort}\cite{qext} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.
+    \item {\bf QHexEdit2}\cite{qhex} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, týkajících se především vzhledu.
 \end{itemize}
 
+\subsection{Licence}
+%\addcontentsline{toc}{subsection}{Licence}
+Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých programů a knihoven jsou následující:
+\begin{itemize}
+    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\cite{lgpl}
+    \item {\bf Qwt} je distribuováno pod Qwt license\cite{qwtlicense}, která je založená na GNU LGPLv2.1
+    \item {\bf QExtSerialPort} je distribuován pod The New BSD License\cite{newbsd}
+    \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
+    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\cite{boost}
+\end{itemize}
+
+Všechny tyto licence umožňují svobodné používání a šíření kódu.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \addcontentsline{toc}{section}{Reference}
@@ -548,11 +548,48 @@ Lorris je dostupný pod licencí GNU GPLv3\footnote{\It{GNU General Public Licen
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
-    \bibitem{repo} \It{GIT repozitář Lorris} \\
-    \url{https://github.com/Tasssadar/Lorris}
+    \bibitem{serialchart} \It{SerialChart -- Analyse and chart serial data from RS-232 COM ports} \\
+    \url{http://code.google.com/p/serialchart/}
 
-    \bibitem{shupito} \It{Shupito -- Programátor} \\
-    \url{http://shupito.net/} (Stav ke dni 28.1.2012)
+    \bibitem{winwedge} \It{WinWedge -- RS232 data collection software} \\
+    \url{http://www.taltech.com/products/winwedge/}
+
+    \bibitem{stamplot} \It{StampPlot Pro -- Graphical Data Acquisition and Control} \\
+    \url{http://www.selmaware.com/stampplot/index.htm}
+
+    \bibitem{qtfrm} \It{Qt -- Cross--platform application and UI framework} \\
+    \url{http://qt.nokia.com/}
+
+    
+    \bibitem{debian} \It{Debian Linux -- The Universal Operating System} \\
+    \url{http://www.debian.org/}
+
+    \bibitem{github} \It{GitHub -- Social Coding} \\
+    \url{https://github.com}
+
+    \bibitem{qwt} \It{Qwt -- Qt Widgets for Technical Applications} \\
+    \url{http://qwt.sourceforge.net/}
+
+    \bibitem{qext} \It{QExtSerialPort -- Qt interface class for old fashioned serial ports} \\
+    \url{http://code.google.com/p/qextserialport/}
+
+    \bibitem{qhex} \It{QHexEdit2 -- Binary Editor for Qt} \\
+    \url{http://code.google.com/p/qhexedit2/}
+
+    \bibitem{gpl3} \It{GNU General Public License v3} \\
+    \url{http://gplv3.fsf.org/}
+
+    \bibitem{lgpl} \It{GNU Lesser General Public License v2.1} \\
+    \url{http://www.gnu.org/licenses/lgpl-2.1.html}
+
+    \bibitem{qwtlicense} \It{Qwt license} \\
+    \url{http://qwt.sourceforge.net/qwtlicense.html}
+
+    \bibitem{newbsd} \It{The New BSD License} \\
+    \url{http://www.opensource.org/licenses/bsd-license.php}
+
+    \bibitem{boost} \It{The Boost Software License} \\
+    \url{http://www.boost.org/users/license.html}
 
     \bibitem{avr232client} \It{avr232client} \\
     \url{http://technika.junior.cz/trac/wiki/avr232client}\\
