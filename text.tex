@@ -237,22 +237,11 @@ Main feature of this application is modularity -- it is divided to sub-sections 
 
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
-Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových měřáků vzdálenosti, enkodéry které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. Nenašel jsem žádný program, který by mi vyhovoval -- k dispozici jsou buďto pouze komerční aplikace, které stojí poměrně velké množství peněz, anebo aplikace které dokáží zobrazovat data pouze v jednom formátu -- typicky graf. Z tohoto důvodu jsem se rozhodl napsat vlastní program.
-
-\subsection*{Existující programy}
-\addcontentsline{toc}{subsection}{Existující programy}
-% DOP: měli? Oo
-Aplikací, které by měly podobné zaměření, jsem našel pouze několik:
-
-\begin{itemize}
-    \item {\bf SerialChart}\cite{serialchart} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
-    \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, oproti Lorris má však horší ovládání (hlavně kvůli nutnosti použít další program pro zobrazování), má užší možnosti použití a je dostupný pouze pro MS Windows.
-    \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
-    \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, podobně jako modul Analyzér v Lorris, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod MS Windows 7 nefunguje.
-\end{itemize}
-
+Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových měřáků vzdálenosti, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
+%Nenašel jsem žádný program, který by mi vyhovoval.
 \subsection*{Požadavky na aplikaci}
 \addcontentsline{toc}{subsection}{Požadavky na aplikaci}
+Od programu vyžaduji tyto vlastnosti:
 \begin{enumerate}
     \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat % 1
     \item Podpora co nejvíce formátů příchozích dat % 2
@@ -263,8 +252,27 @@ Aplikací, které by měly podobné zaměření, jsem našel pouze několik:
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
 
+% Z tohoto důvodu jsem se rozhodl napsat vlastní program.
+
+\subsection*{Existující programy}
+\addcontentsline{toc}{subsection}{Existující programy}
+Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového portu a jejich zobrazování), jsem našel pouze několik. K dispozici jsou buď komerční aplikace, které stojí poměrně velké množství peněz (a přesto nesplňují všechny požadavky), anebo aplikace, které dokáží zobrazovat data pouze v jednom formátu -- typicky graf.
+
+\begin{itemize}
+    \item {\bf SerialChart}\cite{serialchart} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
+    \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, má však horší ovládání a užší možnosti použití (hlavně kvůli nutnosti použít další program pro zobrazování). Je dostupný pouze pro MS~Windows a základní verze stojí \$ 259.
+    \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
+    \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod verzí 7 nefunguje.
+%DOP: vyzkoušet win xp
+\end{itemize}
+
+
+
 \subsection*{Porovnání aplikací}
 \addcontentsline{toc}{subsection}{Porovnání aplikací}
+Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v kapitole \uv{Požadavky na aplikaci}.
+
+\vspace{5mm}
 
 \begin{tabular}{ | l | l | l | l | l | l | l | l |}
     \hline
@@ -273,8 +281,12 @@ Aplikací, které by měly podobné zaměření, jsem našel pouze několik:
     WinWedge                    & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
     Advanced Serial Data Logger & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
     StampPlot Pro               & \Has   & \Has   & \NoHas & \NoHas & \Has   & \NoHas & \Has   \\ \hline 
-    Lorris                      & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   \\ \hline 
+%    Lorris                      & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   \\ \hline 
 \end{tabular}
+
+\vspace{5mm}
+
+Z těchto důvodů jsem se rozhodl napsat vlastní aplikaci, která bude všechny výše uvedené požadavky splňovat.
 
 \section{Popis rozhraní}
 %\addcontentsline{toc}{section}{Popis rozhraní}
@@ -319,7 +331,7 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 
 Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start byte}), délka packetu(pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start byte}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 
 \newpage
@@ -546,30 +558,30 @@ V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo
 \newpage
 \subsection{Vývoj robota pro soutěž Eurobot 2011}
 %\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
-V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti).
+V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
 Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david1.png}
 \caption{Data z robota v terminálu}
 \end{center}
 \end{figure}
 
-Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris vypadá výstup následovně:
+Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris by se mohla tato data zobrazovat například takto:
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david2.png}
-\caption{Data z robota v analyzéru}
+\caption{Simulovaná data v analyzéru}
 \end{center}
 \end{figure}
 
 Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
 
-Widget \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Widget \It{script} s názvem \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
 
-Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko které se stiskne pokud je v robotovi pěšec. Tlačítko které má zelenou barvu není stisklé, tlačítko s červenou barvou stisklé je.
+Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko, které se stiskne, pokud je v robotovi pěšec. Tlačítko, které má zelenou barvu, není stisklé, tlačítko s červenou barvou stisklé je.
 
 Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
 
@@ -622,12 +634,12 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.taltech.com/products/winwedge/}\\
     (Stav ke dni 6.3.2012)
 
-    \bibitem{stamplot} \It{StampPlot Pro} -- Graphical Data Acquisition and Control \\
-    \url{http://www.selmaware.com/stampplot/index.htm}\\
-    (Stav ke dni 6.3.2012)
-
     \bibitem{serialdatalogger} \It{Advanced Serial Data Logger} \\
     \url{http://www.aggsoft.com/serial-data-logger.htm}\\
+    (Stav ke dni 6.3.2012)
+
+    \bibitem{stamplot} \It{StampPlot Pro} -- Graphical Data Acquisition and Control \\
+    \url{http://www.selmaware.com/stampplot/index.htm}\\
     (Stav ke dni 6.3.2012)
 
     \bibitem{qtfrm} \It{Qt} -- Cross--platform application and UI framework \\
@@ -642,7 +654,11 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{https://github.com}\\
     (Stav ke dni 6.3.2012)
 
-    \bibitem{eurobot} \It{Eurobot 2011} \\
+    \bibitem{eurobot} \It{Eurobot} \\
+    \url{http://www.eurobot.cz/}\\
+    (Stav ke dni 6.3.2012)
+
+    \bibitem{eurobot11} \It{Eurobot 2011} \\
     \url{http://www.eurobot.cz/eurobot2011.php}\\
     (Stav ke dni 6.3.2012)
 
