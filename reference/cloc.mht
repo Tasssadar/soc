@@ -1,0 +1,2414 @@
+Content-Type: multipart/related; start=<op.mhtml.1331244780046.eaa5fb097d4c787e@169.254.9.172>; boundary=----------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Location: http://cloc.sourceforge.net/
+Subject: =?utf-8?Q?CLOC=20--=20Count=20Lines=20of=20Code?=
+MIME-Version: 1.0
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Disposition: inline; filename=default.htm
+Content-Type: text/html; name=default.htm
+Content-ID: <op.mhtml.1331244780046.eaa5fb097d4c787e@169.254.9.172>
+Content-Location: http://cloc.sourceforge.net/
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>CLOC -- Count Lines of Code</title>
+  <meta http-equiv="refresh" content="86400">
+ </head>
+ <body>
+ <!-- style.css taken from search.cpan.org -->
+
+ <a name="_top"></a>
+ 
+ <center>
+ <div class=path>
+ <b><big><big>CLOC</big></big></b>
+ <br>
+Count Lines of Code
+ </div>
+ </center>
+
+<!-- top index {{{1 --> 
+<div class=pod> <a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#Overview'>Overview</a>
+  <li class='indexItem indexItem1'><a href=http://sourceforge.net/project/showfiles.php?group_id=174787>Download</a>  (latest version: 1.55, released 2011-10-14)
+  <li class='indexItem indexItem1'><a href=http://sourceforge.net/projects/cloc/>SourceForge Project Page</a>
+  <li class='indexItem indexItem1'><a href='#License'>License</a>
+  <li class='indexItem indexItem1'><a href='#why_use'>Why Use cloc?</a>
+  <li class='indexItem indexItem1'><a href='#Other_Counters'>Other Counters</a>
+  <li class='indexItem indexItem1'><a href='#Basic_Use'>Basic Use</a>
+  <li class='indexItem indexItem1'><a href='#Options'>Options</a>
+  <li class='indexItem indexItem1'><a href='#Languages'>Recognized Languages</a>
+  <li class='indexItem indexItem1'><a href='#How_it_works'>How it Works</a>
+  <li class='indexItem indexItem1'><a href='#Advanced_Use'>Advanced Use</a>
+    <ul   class='indexList indexList2>
+    <li class='indexItem indexItem2'><a href='#strip_comments'>Remove Comments from Source Code</a>
+    <li class='indexItem indexItem2'><a href='#compressed_arch'>Work with Compressed Archives</a>
+    <li class='indexItem indexItem2'><a href='#diff'>Differences</a>
+    <li class='indexItem indexItem2'><a href='#custom_lang'>Create Custom Language Definitions</a>
+    <li class='indexItem indexItem2'><a href='#combine_reports'>Combine Reports</a>
+    <li class='indexItem indexItem2'><a href='#sql'>SQL</a>
+    <li class='indexItem indexItem2'><a href='#scale_factors'>Third Generation Language Scale Factors</a>
+    <!--
+    <li class='indexItem indexItem2'><a href='#no3_output'>Suppress Third Generation Language Output</a>
+      -->
+    </ul>
+  <li class='indexItem indexItem1'><a href='#Limitations'>Limitations</a>
+  <!--
+  <li class='indexItem indexItem1'><a href='#Troubleshooting'>Troubleshooting</a>
+    <ul   class='indexList indexList2>
+    <li class='indexItem indexItem2'><a href='#ignored'>Some of my files are ignored.</a>
+    <li class='indexItem indexItem2'><a href='#extra_lang'>Why does cloc say I have files in language <i>XXX</i>?</a>
+    </ul>
+  -->
+  <li class='indexItem indexItem1'><a href='#Author'>Author</a>
+  <li class='indexItem indexItem1'><a href='#Acknowledgments'>Acknowledgments</a>
+  <li class='indexItem indexItem1'><a href='#Copyright'>Copyright</a>
+  <li class='indexItem indexItem1'><a href='#License'>License</a>
+</ul>
+</div>
+</div>
+<!-- 1}}} -->
+
+<!-- Overview {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Overview">Overview <img alt='^' src='up.gif'></a></h1>
+
+<p>
+cloc 
+counts blank lines, comment lines,
+and physical lines of source code in <a href='#Languages'>many programming languages</a>.
+Given two versions of a code base, cloc can also compute
+differences in blank, comment, and source lines.
+It is written entirely in Perl with no dependencies outside the
+standard distribution of Perl v5.6 and higher 
+(code from some external modules is <a href='index.html#regexp_common'>embedded within cloc</a>)
+and so is quite portable.
+cloc is known to run on many flavors of Linux, 
+Mac OS X, AIX, Solaris, IRIX, z/OS, and Windows.
+(To run the Perl source version of cloc on Windows one needs 
+ActiveState Perl 5.6.1 or higher, or Cygwin installed.
+Alternatively one can use the 
+Windows binary of cloc generated with 
+<a href=http://www.indigostar.com/perl2exe.htm>perl2exe</a>
+to run on Windows computers that have neither Perl nor Cygwin.)
+</p>
+<p>
+cloc contains code from David Wheeler's 
+<a href=http://www.dwheeler.com/sloccount/>SLOCCount</a>,
+Damian Conway and Abigail's Perl module
+<a href=http://search.cpan.org/~abigail/Regexp-Common-2.120/lib/Regexp/Common.pm>Regexp::Common</a>,
+Sean M. Burke's Perl module
+<a href=http://search.cpan.org/~sburke/Win32-Autoglob-1.01/Autoglob.pm>Win32::Autoglob</a>, and Tye McQueen's Perl module
+<a href=http://search.cpan.org/~tyemq/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm>Algorithm::Diff</a>.
+Language scale factors were derived from Mayes Consulting, LLC web site <a href=http://softwareestimator.com/IndustryData2.htm>http://softwareestimator.com/IndustryData2.htm</a>.
+<!--
+and Tye McQueen's module
+<a href=http://search.cpan.org/~tyemq/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm>Algorithm::Diff</a>.
+-->
+</p>
+<!-- 1}}} -->
+<!-- License {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="License">License<img alt='^' src='up.gif'></a></h1>
+<p>
+cloc is licensed under the 
+<a href=http://www.gnu.org/licenses/gpl-2.0.html>GNU General Public License, v2</a>
+, excluding
+portions which are copied from other sources.  Code copied from the 
+Regexp::Common, Win32::Autoglob, and Algorithm::Diff Perl 
+modules is subject to the 
+<a href=http://www.opensource.org/licenses/artistic-license-2.0.php>Artistic License</a>.
+</p>
+<!-- 1}}}
+<!-- Why use cloc? {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="why_use">Why Use cloc? <img alt='^' src='up.gif'></a></h1>
+<p>
+cloc has many features that make it easy to use, thorough,
+extensible, and portable:
+<ol>
+    <li> Exists as a single, self-contained file that requires minimal
+         installation effort---just download the file and run it.
+    <li> Can read language comment definitions from a file and thus
+         potentially work with computer languages that do not yet exist.
+    <li> Allows results from multiple runs to be summed together
+         by language and by project.
+    <li> Can produce results in a variety of formats:
+         plain text, SQL, XML, YAML, comma separated values.
+    <li> Can count code within compressed archives (tar balls, Zip files, 
+         Java .ear files).
+    <li> Has numerous troubleshooting options.
+    <li> Handles file and directory names with spaces and other unusual 
+         characters.
+    <li> Has no dependencies outside the standard Perl distribution.
+    <li> Runs on Linux, FreeBSD, NetBSD, Mac OS X, AIX, HP-UX, Solaris, IRIX,
+         and z/OS systems that have Perl 5.6 or higher.
+         The source version runs on Windows with either ActiveState
+         Perl or cygwin.  Alternatively on Windows one can run
+         the Windows binary which has no dependencies.
+</ol>
+</p>
+<!-- 1}}} -->
+<!-- Other Counters {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Other_Counters">Other Counters <img alt='^' src='up.gif'></a></h1>
+<p>
+If cloc does not suit your needs here are other freely available
+counters to consider:
+<ul>
+<li> <a href=http://www.sonarsource.org/>Sonar</a>
+<li> <a href=http://labs.ohloh.net/ohcount>Ohcount</a>
+<li> <a href=http://www.dwheeler.com/sloccount/>SLOCCount</a>
+<li> <a href=http://www.cmcrossroads.com/bradapp/clearperl/sclc.html>sclc</a>
+<li> USC's <a href=http://sunset.usc.edu/research/CODECOUNT/>CODECOUNT</a>
+<li> <a href=http://freshmeat.net/projects/loc/>loc</a>
+</ul>
+</p>
+<p>
+Other references:
+<ul>
+<li> QSM's <a href=http://www.qsm.com/CodeCounters.html>directory</a>
+     of code counting tools.
+<li> The <a href=http://en.wikipedia.org/wiki/Source_lines_of_code>Wikipedia entry</a> 
+     for source code line counts.
+</ul>
+</p>
+<!-- 1}}} -->
+<!-- Regexp::Common {{{1 -->
+<h1><a name='regexp_common'>Regexp::Common, Digest::MD5, Win32::Autoglob, Algorithm::Diff</a></h1>
+<p>
+Although cloc does not need Perl modules outside those found in the 
+standard distribution, cloc does rely on a few external modules.
+Code from three of these external modules--Regexp::Common,
+Win32::Autoglob, and Algorithm::Diff--is embedded within cloc.  
+A fourth module,
+Digest::MD5, is used only if it is available.
+If cloc finds Regexp::Common 
+or Algorithm::Diff
+installed locally it will use those
+installation.  If it doesn't, cloc will install the parts
+of Regexp::Common
+and/or Algorithm:Diff
+it needs to temporary directories that are created
+at the start of a cloc run then removed when the run is complete.    
+The necessary code from Regexp::Common v2.120 and
+Algorithm::Diff v1.1902 are embedded within
+the cloc source code (see subroutines
+<code>Install_Regexp_Common()</code> and
+<code>Install_Algorithm_Diff()</code> ).
+Only three lines are needed from Win32::Autoglob and these are
+included directly in cloc.
+</p>
+<p>
+Additionally, cloc will use Digest::MD5 to validate uniqueness among
+input files if Digest::MD5 is installed locally.  If Digest::MD5 is
+not found the file uniqueness check is skipped.
+</p>
+<p>
+The Windows binary is built on a computer that has both Regexp::Common
+and Digest::MD5 installed locally.
+</p>
+<!-- 1}}} -->
+<!-- Basic Use {{{1 -->
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Basic_Use">Basic Use <img alt='^' src='up.gif'></a></h1>
+<p>
+cloc is a command line program that takes file, directory, and/or archive
+names as inputs.
+Here's an example of running cloc against
+the Perl v5.10.0 source distribution:
+</p>
+
+<pre>  
+<i>prompt&gt;</i> cloc perl-5.10.0.tar.gz
+    4076 text files.
+    3883 unique files.                                          
+    1521 files ignored.
+
+http://cloc.sourceforge.net v 1.50  T=12.0 s (209.2 files/s, 70472.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Perl                          2052         110356         130018         292281
+C                              135          18718          22862         140483
+C/C++ Header                   147           7650          12093          44042
+Bourne Shell                   116           3402           5789          36882
+Lisp                             1            684           2242           7515
+make                             7            498            473           2044
+C++                             10            312            277           2000
+XML                             26            231              0           1972
+yacc                             2            128             97           1549
+YAML                             2              2              0            489
+DOS Batch                       11             85             50            322
+HTML                             1             19              2             98
+-------------------------------------------------------------------------------
+SUM:                          2510         142085         173903         529677
+-------------------------------------------------------------------------------
+
+</pre>
+<p>
+To run cloc on Windows computers, one must first open up a command
+(aka DOS) window and invoke cloc.exe from the command line there.
+</p>
+<!--
+<p>
+The untar command in the above example is actually unnecessary as cloc 
+can be told to work
+directly with compressed files.  See the 
+<a href='#compressed_arch'>Advanced Use</a>
+section for details.
+-->
+
+</p>
+<!-- 1}}} -->
+<!-- Options {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Options">Options <img alt='^' src='up.gif'></a></h1>
+
+<pre>  
+<i>prompt&gt;</i> cloc
+
+Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt;report files&gt;
+
+ Count, or compute differences of, physical lines of source code in the 
+ given files (may be archives such as compressed tarballs or zip files) 
+ and/or recursively below the given directories.
+
+ <b>Input Options</b>
+   --extract-with=&lt;cmd&gt;      This option is only needed if cloc is unable
+                             to figure out how to extract the contents of
+                             the input file(s) by itself.
+                             Use &lt;cmd&gt; to extract binary archive files (e.g.:
+                             .tar.gz, .zip, .Z).  Use the literal '&gt;FILE&lt;' as 
+                             a stand-in for the actual file(s) to be
+                             extracted.  For example, to count lines of code
+                             in the input files 
+                                gcc-4.2.tar.gz  perl-5.8.8.tar.gz  
+                             on Unix use  
+                               --extract-with='gzip -dc &gt;FILE&lt; | tar xf -'
+                             or, if you have GNU tar,
+                               --extract-with='tar zxf &gt;FILE&lt;' 
+                             and on Windows use: 
+                               --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ."
+                             (if WinZip is installed there).
+   --list-file=&lt;file&gt;        Take the list of file and/or directory names to 
+                             process from &lt;file&gt; which has one file/directory 
+                             name per line.  See also --exclude-list-file.
+   --unicode                 Check binary files to see if they contain Unicode
+                             expanded ASCII text.  This causes performance to
+                             drop noticably.
+
+ <b>Processing Options</b>
+   --autoconf                Count .in files (as processed by GNU autoconf) of 
+                             recognized languages.
+   --by-file                 Report results for every source file encountered.
+   --by-file-by-lang         Report results for every source file encountered
+                             in addition to reporting by language.
+   --diff &lt;set1&gt; &lt;set2&gt;      Compute differences in code and comments between
+                             source file(s) of &lt;set1&gt; and &lt;set2&gt;.  The inputs
+                             may be pairs of files, directories, or archives.
+                             Use --diff-alignment to generate a list showing
+                             which file pairs where compared.  See also
+                             --ignore-case, --ignore-whitespace.
+   --follow-links            [Unix only] Follow symbolic links to directories
+                             (sym links to files are always followed).
+   --force-lang=&lt;lang&gt;[,&lt;ext&gt;]
+                             Process all files that have a &lt;ext&gt; extension 
+                             with the counter for language &lt;lang&gt;.  For 
+                             example, to count all .f files with the 
+                             Fortran 90 counter (which expects files to 
+                             end with .f90) instead of the default Fortran 77 
+                             counter, use
+                               --force-lang="Fortran 90",f
+                             If &lt;ext&gt; is omitted, every file will be counted
+                             with the &lt;lang&gt; counter.  This option can be 
+                             specified multiple times (but that is only
+                             useful when &lt;ext&gt; is given each time).  
+                             See also --script-lang, --lang-no-ext.
+   --ignore-whitespace       Ignore horizontal white space when comparing files
+                             with --diff.  See also --ignore-case.
+   --ignore-case             Ignore changes in case; consider upper- and lower-
+                             case letters equivalent when comparing files with
+                             --diff.  See also --ignore-whitespace.
+   --lang-no-ext=&lt;lang&gt;      Count files without extensions using the &lt;lang&gt; 
+                             counter.  This option overrides internal logic 
+                             for files without extensions (where such files 
+                             are checked against known scripting languages
+                             by examining the first line for #!).  See also 
+                             --force-lang, --script-lang.
+   --read-binary-files       Process binary files in addition to text files.
+                             This is usually a bad idea and should only be
+                             attempted with text files that have embedded 
+                             binary data.
+   --read-lang-def=&lt;file&gt;    Load from &lt;file&gt; the language processing filters.
+                             (see also --write-lang-def) then use these filters
+                             instead of the built-in filters.
+   --script-lang=&lt;lang&gt;,&lt;s&gt;  Process all files that invoke &lt;s&gt; as a #!
+                             scripting language with the counter for language
+                             &lt;lang&gt;.  For example, files that begin with
+                                #!/usr/local/bin/perl5.8.8
+                             will be counted with the Perl counter by using
+                                --script-lang=Perl,perl5.8.8
+                             The language name is case insensitive but the
+                             name of the script language executable, &lt;s&gt;,
+                             must have the right case.  This option can be 
+                             specified multiple times.  See also --force-lang,
+                             --lang-no-ext.
+   --sdir=&lt;dir&gt;              Use &lt;dir&gt; as the scratch directory instead of
+                             letting File::Temp chose the location.  Files
+                             written to this location are not removed at
+                             the end of the run (as they are with File::Temp).
+   --skip-uniqueness         Skip the file uniqueness check.  This will give
+                             a performance boost at the expense of counting
+                             files with identical contents multiple times
+                             (if such duplicates exist).
+   --strip-comments=&lt;ext&gt;    For each file processed, write to the current
+                             directory a version of the file which has blank
+                             lines and comments removed.  The name of each
+                             stripped file is the original file name with 
+                             .&lt;ext&gt; appended to it.  It is written to the
+                             current directory unless --original-dir is on.
+   --original-dir            [Only effective in combination with 
+                             --strip-comments]  Write the stripped files 
+                             to the same directory as the original files.
+   --sum-reports             Input arguments are report files previously
+                             created with the --report-file option.  Makes
+                             a cumulative set of results containing the
+                             sum of data from the individual report files.
+
+ <b>Filter Options</b>
+   --exclude-dir=&lt;D1&gt;[,D2,]  Exclude the given comma separated directories
+                             D1, D2, D3, et cetera, from being scanned.  For
+                             example  --exclude-dir=.cache,test  will skip
+                             all files that have /.cache/ or /test/ as part
+                             of their path.
+                             Directories named .cvs and .svn are always
+                             excluded.
+   --exclude-ext=&lt;ext1&gt;[,&lt;ext2&gt;[...]]
+                             Do not count files having the given file name 
+                             extensions.
+   --exclude-lang=&lt;L1&gt;[,L2,] Exclude the given comma separated languages
+                             L1, L2, L3, et cetera, from being counted.
+   --exclude-list-file=&lt;file&gt;  Ignore files and/or directories whose names 
+                             appear in &lt;file&gt;.  &lt;file&gt; should have one entry 
+                             per line.  Relative path names will be resolved 
+                             starting from the directory where cloc is 
+                             invoked.  See also --list-file.
+   --match-f=&lt;regex&gt;         Only count files whose basenames match the Perl 
+                             regex.  For example
+                               --match-f=^[Ww]idget
+                             only counts files that start with Widget or widget.
+   --not-match-f=&lt;regex&gt;     Count all files except those whose basenames
+                             match the Perl regex.
+   --match-d=&lt;regex&gt;         Only count files in directories matching the Perl 
+                             regex.  For example
+                               --match-d=/src/
+                             only counts files in directories containing
+                             /src/
+   --not-match-d=&lt;regex&gt;     Count all files except those in directories
+                             matching the Perl regex.
+   --skip-win-hidden         On Windows, ignore hidden files.
+
+ <b>Debug Options</b>
+   --categorized=&lt;file&gt;      Save names of categorized files to &lt;file&gt;.
+   --counted=&lt;file&gt;          Save names of processed source files to &lt;file&gt;.
+   --diff-alignment=&lt;file&gt;   Write to &lt;file&gt; a list of files and file pairs 
+                             showing which files were added, removed, and/or
+                             compared during a run with --diff.  This switch
+                             forces the --diff mode on.
+   --help                    Print this usage information and exit.
+   --found=&lt;file&gt;            Save names of every file found to &lt;file&gt;.
+   --ignored=&lt;file&gt;          Save names of ignored files and the reason they
+                             were ignored to &lt;file&gt;.
+   --print-filter-stages     Print to STDOUT processed source code before and 
+                             after each filter is applied.
+   --show-ext[=&lt;ext&gt;]        Print information about all known (or just the
+                             given) file extensions and exit.
+   --show-lang[=&lt;lang&gt;]      Print information about all known (or just the
+                             given) languages and exit.
+   -v[=&lt;n&gt;]                  Verbose switch (optional numeric value).
+   --version                 Print the version of this program and exit.
+
+   --write-lang-def=&lt;file&gt;   Writes to &lt;file&gt; the language processing filters
+                             then exits.  Useful as a first step to creating
+                             custom language definitions (see --read-lang-def).
+
+ <b>Output Options</b>
+   --3                       Print third-generation language output.
+                             (This option can cause report summation to fail
+                             if some reports were produced with this option
+                             while others were produced without it.)
+   --progress-rate=&lt;n&gt;       Show progress update after every &lt;n&gt; files are
+                             processed (default &lt;n&gt;=100).  Set &lt;n&gt; to 0 to
+                             suppress progress output (useful when redirecting
+                             output to STDOUT).
+   --quiet                   Suppress all information messages except for
+                             the final report.
+   --report-file=&lt;file&gt;      Write the results to &lt;file&gt; instead of STDOUT.
+   --out=&lt;file&gt;              Synonym for --report-file=&lt;file&gt;.
+   --csv                     Write the results as comma separated values.
+   --sql=&lt;file&gt;              Write results as SQL create and insert statements
+                             which can be read by a database program such as
+                             SQLite.  If &lt;file&gt; is 1, output is sent to STDOUT.
+   --sql-project=&lt;name&gt;      Use &lt;name&gt; as the project identifier for the 
+                             current run.  Only valid with the --sql option.
+   --sql-append              Append SQL insert statements to the file specified
+                             by --sql and do not generate table creation 
+                             statements.  Only valid with the --sql option.
+   --sum-one                 For plain text reports, show the SUM: output line 
+                             even if only one input file is processed.
+   --xml                     Write the results in XML.
+   --xsl=&lt;file&gt;              Reference &lt;file&gt; as an XSL stylesheet within
+                             the XML output.  If &lt;file&gt; is 1 (numeric one), 
+                             writes a default stylesheet, cloc.xsl (or 
+                             cloc-diff.xsl if --diff is also given).  
+                             This switch forces --xml on.
+   --yaml                    Write the results in YAML.
+
+</pre>
+<!-- 1}}} -->
+<!-- Recognized Languages {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Languages">Recognized Languages <img alt='^' src='up.gif'></a></h1>
+<pre>
+<i>prompt&gt;</i> cloc --show-lang
+
+ABAP                       (abap)
+ActionScript               (as)
+Ada                        (ada, adb, ads, pad)
+ADSO/IDSM                  (adso)
+AMPLE                      (ample, dofile, startup)
+ASP                        (asa, asp)
+ASP.Net                    (asax, ascx, asmx, aspx, config, master, sitemap, webinfo)
+Assembly                   (asm, S, s)
+awk                        (awk)
+Bourne Again Shell         (bash)
+Bourne Shell               (sh)
+C                          (c, ec, pgc)
+C Shell                    (csh, tcsh)
+C#                         (cs)
+C++                        (C, cc, cpp, cxx, pcc)
+C/C++ Header               (H, h, hh, hpp)
+CCS                        (ccs)
+CMake                      (CMakeLists.txt)
+COBOL                      (cbl, CBL, cob, COB)
+ColdFusion                 (cfm)
+CSS                        (css)
+Cython                     (pyx)
+D                          (d)
+DAL                        (da)
+DOS Batch                  (bat, BAT)
+DTD                        (dtd)
+Erlang                     (erl, hrl)
+Expect                     (exp)
+Focus                      (focexec)
+Fortran 77                 (F, f, f77, F77, pfo)
+Fortran 90                 (F90, f90)
+Fortran 95                 (F95, f95)
+Go                         (go)
+Groovy                     (groovy)
+Haskell                    (hs, lhs)
+HTML                       (htm, html)
+IDL                        (idl, pro)
+Java                       (java)
+Javascript                 (js)
+JCL                        (jcl)
+JSP                        (jsp)
+Kermit                     (ksc)
+Korn Shell                 (ksh)
+lex                        (l)
+Lisp                       (cl, el, jl, lisp, lsp, sc, scm)
+LiveLink OScript           (oscript)
+Lua                        (lua)
+m4                         (ac, m4)
+make                       (am, gnumakefile, Gnumakefile, Makefile, makefile)
+MATLAB                     (m)
+Modula3                    (i3, ig, m3, mg)
+MSBuild scripts            (csproj, wdproj)
+MUMPS                      (mps, m)
+MXML                       (mxml)
+NAnt scripts               (build)
+NASTRAN DMAP               (dmap)
+Objective C                (m)
+Objective C++              (mm)
+Ocaml                      (ml)
+Oracle Forms               (fmt)
+Oracle Reports             (rex)
+Pascal                     (dpr, p, pas, pp)
+Patran Command Language    (pcl, ses)
+Perl                       (perl, PL, pl, plh, plx, pm)
+PHP                        (php, php3, php4, php5)
+PHP/Pascal                 (inc)
+Python                     (py)
+Rexx                       (rexx)
+Ruby                       (rb)
+Ruby HTML                  (rhtml)
+Scala                      (scala)
+sed                        (sed)
+SKILL                      (il)
+SKILL++                    (ils)
+Smarty                     (smarty, tpl)
+Softbridge Basic           (sbl, SBL)
+SQL                        (psql, SQL, sql)
+SQL Data                   (data.sql)
+SQL Stored Procedure       (spc.sql, spoc.sql, sproc.sql, udf.sql)
+Tcl/Tk                     (itk, tcl, tk)
+Teamcenter def             (def)
+Teamcenter met             (met)
+Teamcenter mth             (mth)
+VHDL                       (vhd, VHD, VHDL, vhdl)
+vim script                 (vim)
+Visual Basic               (bas, cls, frm, vb, VB, vba, VBA, vbs, VBS)
+XAML                       (xaml)
+XML                        (XML, xml)
+XSD                        (xsd, XSD)
+XSLT                       (xsl, XSL, xslt, XSLT)
+yacc                       (y)
+YAML                       (yaml, yml)
+</pre>
+<p>
+The above list can be customized by reading language definitions
+from a file with the <code>--read-lang-def</code> option.
+</p>
+<p>
+Two file extensions have multiple language mappings:
+<ul>
+<li>  <code>.m</code> files could be MATLAB, MUMPS, or Objective C
+<li>  <code>.inc</code> files could be PHP or Pascal
+</ul>
+cloc has subroutines 
+that attempt to identify the correct language
+based on the file's contents for these special cases.
+</p>
+
+<!-- 1}}} -->
+<!-- How it Works {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="How_it_works">How it Works <img alt='^' src='up.gif'></a></h1>
+<p>
+cloc's method of operation resembles SLOCCount's:  First, create
+a list of files to consider.  Next, attempt to determine whether or not
+found files contain recognized computer language source code.  Finally, 
+for files identified as source files, invoke language-specific routines
+to count the number of source lines.  
+</p>
+<p>
+A more detailed description:
+<ol>
+<li> If the input file is an archive (such as a <tt>.tar.gz</tt> or 
+     <tt>.zip</tt> file), create a temporary directory and expand the 
+     archive there
+     using a system call to an appropriate underlying utility (<tt>tar</tt>,
+     <tt>bzip2</tt>, <tt>unzip</tt>, etc) then add this temporary directory
+     as one of the inputs.  (This works more reliably on Unix than on
+     Windows.)
+<li> Use File::Find to recursively descend the input directories and 
+     make a list of candidate file names.  Ignore binary and zero-sized files.
+<li> Make sure the files in the candidate list have unique contents
+     (first by comparing file sizes, then for, similarly sized files,
+     compare MD5 hashes of the file contents with Digest::MD5).
+<li> Scan the candidate file list for 
+     file extensions which cloc associates with programming languages 
+     (see the <code><a href='#Languages'>--show-lang</a></code>
+     and <code>--show-ext</code> options).  Files which match are
+     classified as containing source code for that language.  
+     Each file without an extensions is opened and its first 
+     line read to see
+     if it is a Unix shell script (anything that begins with <code>#!</code>).
+     If it is shell script, the file is classified by that scripting
+     language (if the language is recognized).  If the file does not
+     have a recognized extension or is not a recognzied
+     scripting language, the file is ignored.
+<li> All remaining files in the candidate list should now be source
+     files for known programming languages.  For each of these files:
+    <ol>
+    <li>  Read the entire file into memory.
+    <li>  Count the number of lines (= L<sub>original</sub>).
+    <li>  Remove blank lines, then count again (= L<sub>non_blank</sub>).
+    <li>  Loop over the <i>comment filters</i> defined for
+          this language.  (For example, C++ has two filters:  
+          (1) remove lines that start with optional whitespace
+          followed by <code>//</code>  and 
+          (2) remove text between <code>/*</code> and <code>*/</code>)
+          Apply each filter to the code to remove comments.  
+          Count the left over lines (= L<sub>code</sub>).
+    <li>  Save the counts for this language:<br>
+          blank lines = L<sub>original</sub> - L<sub>non_blank</sub><br>
+          comment lines = L<sub>original</sub> - L<sub>non_blank</sub>
+                          - L<sub>code</sub><br>
+          code lines = L<sub>code</sub>
+    </ol>
+</ol>
+</p>
+<p>
+The options modify the algorithm slightly.  The
+<code>--read-lang-def</code> option for example allows the user to
+read definitions of comment filters, known file extensions, and known
+scripting languages from a file.  The code for this option is processed
+between Steps 2 and 3.
+</p>
+<!-- 1}}} -->
+<!-- Advanced Use {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Advanced_Use">Advanced Use <img alt='^' src='up.gif'></a></h1>
+<p>
+</p>
+<!-- 1}}} -->
+<!--   Remove Comments from Source Code {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="strip_comments">Remove Comments from Source Code<img alt='^' src='up.gif'></a></h2>
+<p>
+How can you tell if cloc correctly identifies comments?
+One way to convince yourself cloc is doing the right thing is to 
+use its <tt>--strip-comments</tt> option to
+remove comments and blank lines from files, then compare the 
+stripped-down files to originals.  
+</p>
+Let's try this out with the SQLite 
+<a href=http://www.sqlite.org/cvstrac/wiki?p=TheAmalgamation>amalgamation</a>,
+a C file containing all code needed to build the SQLite library along
+with a header file:
+<pre>
+<i>prompt</i>&gt; tar zxf sqlite-amalgamation-3.5.6.tar.gz 
+<i>prompt</i>&gt; cd sqlite-3.5.6/
+<i>prompt</i>&gt; cloc --strip-comments=nc sqlite.c
+       1 text file.
+       1 unique file.                              
+Wrote sqlite3.c.nc
+       0 files ignored.
+
+http://cloc.sourceforge.net v 1.03  T=1.0 s (1.0 files/s, 82895.0 lines/s)
+-------------------------------------------------------------------------------
+Language          files     blank   comment      code    scale   3rd gen. equiv
+-------------------------------------------------------------------------------
+C                     1      5167     26827     50901 x   0.77 =       39193.77
+-------------------------------------------------------------------------------
+</pre>
+
+<p>
+The extention argument given to <tt>--strip-comments</tt> is arbitrary;
+here <tt>nc</tt> was used as an abbreviation for "no comments".
+</p>
+<p>
+cloc removed over 31,000 lines from the file:
+</p>
+<pre>
+<i>prompt</i>&gt; wc -l sqlite3.c sqlite3.c.nc 
+  82895 sqlite3.c
+  50901 sqlite3.c.nc
+ 133796 total
+<i>prompt</i>&gt; echo "82895 - 50901" | bc
+31994
+</pre>
+
+<p>
+We can now compare the orignial file,
+<tt>sqlite3.c</tt> and the one stripped of comments,
+<tt>sqlite3.c.nc</tt> with tools like diff or vimdiff and see
+what exactly cloc considered comments and blank lines.
+A rigorous proof that the stripped-down file contains the same C code
+as the original is to compile these files and compare checksums of the
+resulting object files.
+</p>
+
+<p>
+First, the original source file:
+</p>
+<pre>
+<i>prompt</i>&gt; gcc -c sqlite3.c
+<i>prompt</i>&gt; md5sum sqlite3.o
+cce5f1a2ea27c7e44b2e1047e2588b49  sqlite3.o
+</pre>
+<p>
+Next, the version without comments:
+</p>
+<pre>
+<i>prompt</i>&gt; mv sqlite3.c.nc sqlite3.c
+<i>prompt</i>&gt; gcc -c sqlite3.c
+<i>prompt</i>&gt; md5sum sqlite3.o
+cce5f1a2ea27c7e44b2e1047e2588b49  sqlite3.o
+</pre>
+cloc removed over 31,000 lines of comments and blanks but did not modify
+the source code in any significant way since the resulting object file
+matches the original.
+<!-- 1}}} -->
+<!--   Work with Compressed Archives {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="compressed_arch">Work with Compressed Archives <img alt='^' src='up.gif'></a></h2>
+<p>
+Versions of cloc before v1.07 required an
+ <code>--extract-with=<i>&lt;cmd&gt;</i></code> option to tell cloc how
+to expand an archive file.  Beginning with v1.07 this is extraction is
+attempted automatically.  At the moment the automatic extraction method works
+reasonably well on Unix-type OS's for the following file types:
+<tt>.tar.gz</tt>,
+<tt>.tar.bz2</tt>,
+<tt>.tgz</tt>,
+<tt>.zip</tt>,
+<tt>.ear</tt>.
+Some of these extensions work on Windows if one has WinZip installed
+in the default location (<tt>C:\Program Files\WinZip\WinZip32.exe</tt>).
+Additionally, with newer versions of WinZip, the 
+<a href=http://www.winzip.com/downcl.htm>command line add-on</a>
+is needed for correct operation; in this case one would invoke cloc with
+something like<br>
+<code>
+ --extract-with="\"c:\Program Files\WinZip\wzunzip\" -e -o &gt;FILE&lt; ."
+ </code> (ref. <a href=http://sourceforge.net/projects/cloc/forums/forum/600963/topic/4021070?message=8938196>forum post</a>).
+</p>
+<p>
+In situations where the automatic extraction fails, one can try the 
+<code>--extract-with=<i>&lt;cmd&gt;</i></code>
+option to count lines of code within tar files, Zip files, or
+other compressed archives for which one has an extraction tool.
+cloc takes the user-provided extraction command and expands the archive
+to a temporary directory (created with File::Temp), 
+counts the lines of code in the temporary directory,
+then removes that directory.  While not especially helpful when dealing
+with a single compressed archive (after all, if you're going to type
+the extraction command anyway why not just manually expand the archive?)
+this option is handy for working with several archives at once.
+</p>
+<p>
+For example, say you have the following source tarballs on a Unix machine<br>
+&nbsp;&nbsp;  &nbsp; <code>perl-5.8.5.tar.gz</code><br>
+&nbsp;&nbsp;  &nbsp; <code>Python-2.4.2.tar.gz</code><br>
+and you want to count all the code within them.  The command would be
+</p>
+<pre>
+cloc --extract-with='gzip -dc &gt;FILE&lt; | tar xf -' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+</pre>
+If that Unix machine has GNU tar (which can uncompress and extract in one step) the command can be shortened to
+<pre>
+cloc --extract-with='tar zxf &gt;FILE&lt;' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+</pre>
+On a Windows computer with WinZip installed in <code>c:\Program Files\WinZip</code> the command would look like
+<pre>
+cloc.exe --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ." perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+</pre>
+Java <code>.ear</code> files are Zip files that contain additional Zip files.  cloc can handle nested compressed archives without difficulty--provided all such files are compressed and archived in the same way.  Examples of counting a
+Java <code>.ear</code> file in Unix and Windows:
+<pre>
+<i>Unix&gt;</i> cloc --extract-with="unzip -d . &gt;FILE&lt; " Project.ear
+
+<i>DOS&gt;</i> cloc.exe --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ." Project.ear
+</pre>
+<!-- 1}}} -->
+<!--   Differences {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="diff">Differences<img alt='^' src='up.gif'></a></h2>
+<p>
+The <tt>--diff</tt> switch allows one to measure the relative change in
+source code and comments between two versions of a file, directory,
+or archive.  Differences reveal much more than absolute code
+counts of two file versions.  For example, say a source file
+has 100 lines and its developer delivers a newer version with
+102 lines.  Did he add two comment lines, or delete seventeen source
+lines and add fourteen source lines and five comment lines, or did he
+do a complete rewrite, discarding all 100 original lines and
+adding 102 lines of all new source?  The diff option tells how
+many lines of source were added, removed, modified or stayed
+the same, and how many lines of comments were added, removed,
+modified or stayed the same.
+</p>
+<p>
+In addition to file pairs, one can give cloc pairs of
+directories, or pairs of file archives, or a file archive
+and a directory.  cloc will try to align 
+file pairs within the directories or archives and compare diffs
+for each pair.  For example, to see what changed between
+GCC 4.4.0 and 4.5.0 one could do
+<pre>
+  cloc --diff gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
+</pre>
+
+Be prepared to wait a while for the results though; the <tt>--diff</tt>
+option runs much more slowly than an absolute code count.
+</p>
+<p>
+To see how cloc aligns files between the two archives, use the
+<tt>--diff-alignment</tt> option
+
+<pre>
+  cloc --diff-aligment=align.txt gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
+</pre>
+
+to produce the file <tt>align.txt</tt> which shows the file pairs as well
+as files added and deleted.  The symbols == and != before each
+file pair indicate if the files are identical (==)
+or if they have different content (!=).
+</p>
+<p>
+Here's sample output showing the difference between the Python 2.6.6 and 2.7
+releases:
+<pre>
+<i>prompt&gt;</i> cloc --diff  Python-2.6.6.tar.bz2 Python-2.7.tar.bz2
+      3870 text files.
+      4130 text files.s
+      2177 files ignored.                                         
+  
+  2 errors:
+  Diff error (quoted comments?):  /tmp/4QAqkrHN7Z/Python-2.6.6/Mac/Modules/qd/qdsupport.py
+  Diff error (quoted comments?):  /tmp/LvStB1lQxd/Python-2.7/Mac/Modules/qd/qdsupport.py
+  
+  http://cloc.sourceforge.net v 1.52  T=422.0 s (0.0 files/s, 0.0 lines/s)
+  -------------------------------------------------------------------------------
+  Language                     files          blank        comment           code
+  -------------------------------------------------------------------------------
+  vim script
+   same                            0              0              7             85
+   modified                        1              0              0             20
+   added                           0              0              0              1
+   removed                         0              0              0              0
+  Expect
+   same                            1              0              0             60
+   modified                        0              0              0              0
+   added                           6              0              0              0
+   removed                         0              0              0              0
+  CSS
+   same                            1              0             19            318
+   modified                        0              0              0              0
+   added                           0              0              0              0
+   removed                         0              0              0              0
+  XML
+   same                            1              0              0              4
+   modified                        0              0              0              0
+   added                           3              0              0              0
+   removed                         1              0              0              0
+  m4
+   same                            1              0             19           1089
+   modified                        2              0              0            130
+   added                           5              6              5            150
+   removed                         0            660             15           5905
+  Visual Basic
+   same                            2              0              1             12
+   modified                        0              0              0              0
+   added                           0              0              0              0
+   removed                         0              0              0              0
+  Lisp
+   same                            1              0            503           2933
+   modified                        0              0              0              0
+   added                           0              0              0              0
+   removed                         0              0              0              0
+  NAnt scripts
+   same                            2              0              0             30
+   modified                        0              0              0              0
+   added                           0              0              0              0
+   removed                         0              0              0              0
+  HTML
+   same                           12              0             11           2329
+   modified                        2              0              0              2
+   added                           0              0              0              0
+   removed                         9              0              0              0
+  make
+   same                            3              0            353           2888
+   modified                        7              0              3             11
+   added                           2              1              0             14
+   removed                         0              2              0              8
+  Objective C
+   same                            6              0             70            633
+   modified                        1              0              0              2
+   added                           0              0              0              0
+   removed                         0              0              0              0
+  Assembly
+   same                           22              0           1575           9156
+   modified                       14              0             78            174
+   added                           3            171            111            998
+   removed                         2              1              0            189
+  Bourne Shell
+   same                           26              0           2828          20114
+   modified                        7              0            255           2179
+   added                           5            163           1103           4770
+   removed                         0            550           2444          11660
+  (unknown)
+   same                            0              0              0              0
+   modified                        0              0              0              0
+   added                          32              0              0              0
+   removed                        26              0              0              0
+  C++
+   same                            0              0              0              0
+   modified                        0              0              0              0
+   added                           2              0              0              0
+   removed                         0              0              0              0
+  Teamcenter def
+   same                            6              0            158            885
+   modified                        2              0              0              0
+   added                           1              2              4             17
+   removed                         1              0              4              2
+  DOS Batch
+   same                           26              0            101            416
+   modified                        5              0              1              8
+   added                           1              0              0              0
+   removed                         0              0              0              0
+  C/C++ Header
+   same                          143              0           9016          37452
+   modified                       90              0            157          15564
+   added                          12            181            341          10247
+   removed                         1            101            129           5219
+  C
+   same                          222              0          28753         322642
+   modified                      157              0            542           5023
+   added                         141           1485           1730          12440
+   removed                         4            223            619           4519
+  Python
+   same                         1211              0          92289         348923
+   modified                      740              0           1238          11589
+   added                         114           2845           4645          17251
+   removed                        23           1409           2617           6385
+  -------------------------------------------------------------------------------
+  SUM:
+   same                         1686              0         135703         749969
+   modified                     1028              0           2274          34702
+   added                         327           4854           7939          45888
+   removed                        67           2946           5828          33887
+  -------------------------------------------------------------------------------
+</pre>
+Note the two errors for the file 
+<tt>Python-<i>X</i>/Mac/Modules/qd/qdsupport.py</tt>.
+This file has Python docstrings (text between pairs of triple quotes) that
+contain C comments.  cloc treats docstrings as comments and handles them
+by first converting them to C comments, then using the C comment removing
+regular expression.  Nested C comments yield erroneous results however.
+<p>
+</p>
+There's also output for the language "(unknown)".  Files in this
+category are non-source files and therefore not counted; their
+presence is merely noted as having been removed, added, or modified.
+</p>
+<!-- 1}}} -->
+<!--   Create Custom Language Definitions {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="custom_lang">Create Custom Language Definitions <img alt='^' src='up.gif'></a></h2>
+<p>
+cloc can write its language comment definitions to a file or can read
+comment definitions from a file, overriding the built-in definitions.
+This can be useful when you want to use cloc to count lines of a
+language not yet included, to change association of file extensions
+to languages, or to modify the way existing languages are counted.
+</p>
+<p>
+The easiest way to create a custom language definition file is to
+make cloc write its definitions to a file, then modify that file:
+<pre>
+<i>Unix&gt;</i> cloc --write-lang-def=my_definitions.txt
+</pre>
+creates the file <code>my_definitions.txt</code> which can be modified
+then read back in with
+<pre>
+<i>Unix&gt;</i> cloc --read-lang-def=my_definitions.txt  <i>file1 file2 dir1 ...</i>
+</pre>
+</p>
+<p>
+Each language entry has four parts:
+<ol>
+    <li> The language name starting in column 1.
+    <li> One or more comment <i>filters</i> starting in column 5.
+    <li> One or more filename extensions starting in column 5.
+    <li> A 3rd generation scale factor starting in column 5.  This entry must be provided
+         but its value is not important
+         unless you want to compare your language to a hypothetical
+         third generation programming language.
+</ol>
+A filter defines a method to remove comment text from the source file.
+For example the entry for C++ looks like this
+<pre>
+C++
+    filter remove_matches ^\s*//
+    filter call_regexp_common C
+    extension C
+    extension cc
+    extension cpp
+    extension cxx
+    extension pcc
+    3rd_gen_scale 1.51
+</pre>
+C++ has two filters:  first, remove lines that start with optional
+whitespace and are followed by <code>//</code>.  
+Next, remove all C comments.  C comments are difficult to express
+as regular expressions so a call is made to Regexp::Common to get the
+appropriate regular expression to match C comments which are then removed.
+</p>
+<p>
+A more complete discussion of the different filter options may appear
+here in the future.  The output of cloc's 
+<code>--write-lang-def</code> option should provide enough examples
+for motivated individuals to modify or extend cloc's language definitions.
+</p>
+<!-- 1}}} -->
+<!--   Combine Reports {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="combine_reports">Combine Reports <img alt='^' src='up.gif'></a></h2>
+<p>
+If you manage multiple software projects you might be interested in
+seeing line counts by project, not just by language.
+Say you manage three software projects called MySQL, PostgreSQL, and SQLite.
+The teams responsible for each of these projects run cloc on their
+source code and provide you with the output.
+For example MySQL team does
+<pre>
+cloc --report-file=mysql-5.1.42.txt mysql-5.1.42.tar.gz
+</pre>
+and provides you with the file <code>mysql-5.1.42.txt</code>.
+The contents of the three files you get are
+<pre>
+<i>Unix&gt;</i> cat mysql-5.1.42.txt
+http://cloc.sourceforge.net v 1.50  T=26.0 s (108.1 files/s, 65774.5 lines/s)
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+C++                             615          93609         110909         521041
+C                               642          83179          82424         393602
+C/C++ Header                   1065          33980          77633         142779
+Bourne Shell                    178          14892          11437          74525
+Perl                             60           7634           4667          22703
+m4                               13           1220            394          10497
+make                            119            914           1855           4447
+XML                              27            564             23           4107
+SQL                              18            517            209           3433
+Assembly                         12            161              0           1304
+yacc                              2            167             40           1048
+lex                               2            332            113            879
+Teamcenter def                   43             85            219            701
+Javascript                        3             70            140            427
+Pascal                            2              0            436            377
+HTML                              1              7              0            250
+Bourne Again Shell                1              6              1             48
+DOS Batch                         8             23             73             36
+--------------------------------------------------------------------------------
+SUM:                           2811         237360         290573        1182204
+--------------------------------------------------------------------------------
+<i>Unix&gt;</i> cat sqlite-3.6.22.txt
+http://cloc.sourceforge.net v 1.50  T=3.0 s (4.7 files/s, 53833.7 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                                2           7459          37993          68944
+Bourne Shell                     7           3344           4522          25849
+m4                               2            754             20           6557
+C/C++ Header                     2            155           4808           1077
+make                             1              6              0             13
+-------------------------------------------------------------------------------
+SUM:                            14          11718          47343         102440
+-------------------------------------------------------------------------------
+
+<i>Unix&gt;</i> cat postgresql-8.4.2.txt
+http://cloc.sourceforge.net v 1.50  T=16.0 s (129.1 files/s, 64474.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                              923         102324         167390         563865
+C/C++ Header                   556           9180          22723          40990
+Bourne Shell                    51           3692           3245          28486
+SQL                            260           8246           5645          25862
+yacc                             6           2667           2126          22825
+Perl                            36            782            696           4894
+lex                              8            708           1525           3638
+make                           180           1215           1385           3453
+m4                              12            199             25           1431
+Teamcenter def                  13              4              0           1104
+HTML                             2             94              1            410
+DOS Batch                        7             53             22            188
+XSLT                             5             41             30            111
+Assembly                         3             17              0            105
+D                                1             14             14             65
+CSS                              1             16              7             44
+sed                              1              1              7             15
+Python                           1              5              1             12
+-------------------------------------------------------------------------------
+SUM:                          2066         129258         204842         697498
+-------------------------------------------------------------------------------
+</pre>
+</p>
+<p>
+While these three files are interesting, you also want to see
+the combined counts from all projects.
+That can be done with cloc's <code>--sum_reports</code>
+option:
+<pre>
+<i>Unix&gt;</i> cloc --sum-reports --report_file=databases mysql-5.1.42.txt  postgresql-8.4.2.txt  sqlite-3.6.22.txt
+Wrote databases.lang
+Wrote databases.file
+</pre>
+The report combination produces two output files, one for sums by
+programming language (<code>databases.lang</code>) and one by project 
+(<code>databases.file</code>).
+Their contents are
+<pre>
+<i>Unix&gt;</i> cat databases.lang
+http://cloc.sourceforge.net v 1.50
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+C                              1567         192962         287807        1026411
+C++                             615          93609         110909         521041
+C/C++ Header                   1623          43315         105164         184846
+Bourne Shell                    236          21928          19204         128860
+SQL                             278           8763           5854          29295
+Perl                             96           8416           5363          27597
+yacc                              8           2834           2166          23873
+m4                               27           2173            439          18485
+make                            300           2135           3240           7913
+lex                              10           1040           1638           4517
+XML                              27            564             23           4107
+Teamcenter def                   56             89            219           1805
+Assembly                         15            178              0           1409
+HTML                              3            101              1            660
+Javascript                        3             70            140            427
+Pascal                            2              0            436            377
+DOS Batch                        15             76             95            224
+XSLT                              5             41             30            111
+D                                 1             14             14             65
+Bourne Again Shell                1              6              1             48
+CSS                               1             16              7             44
+sed                               1              1              7             15
+Python                            1              5              1             12
+--------------------------------------------------------------------------------
+SUM:                           4891         378336         542758        1982142
+--------------------------------------------------------------------------------
+
+<i>Unix&gt;</i> cat databases.file
+----------------------------------------------------------------------------------
+Report File                     files          blank        comment           code
+----------------------------------------------------------------------------------
+mysql-5.1.42.txt                 2811         237360         290573        1182204
+postgresql-8.4.2.txt             2066         129258         204842         697498
+sqlite-3.6.22.txt                  14          11718          47343         102440
+----------------------------------------------------------------------------------
+SUM:                             4891         378336         542758        1982142
+----------------------------------------------------------------------------------
+
+</pre>
+</p>
+<p>
+Report files themselves can be summed together.  Say you also manage
+development of Perl and Python and you want to keep track
+of those line counts separately from your database projects.  First
+create reports for Perl and Python separately:
+<pre>
+cloc --report-file=perl-5.10.0.txt perl-5.10.0.tar.gz
+cloc --report-file=python-2.6.4.txt Python-2.6.4.tar.bz2
+</pre>
+then sum these together with
+<pre>
+<i>Unix&gt;</i> cloc --sum-reports --report_file=script_lang perl-5.10.0.txt python-2.6.4.txt
+Wrote script_lang.lang
+Wrote script_lang.file
+
+<i>Unix&gt;</i> cat script_lang.lang
+http://cloc.sourceforge.net v 1.50
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                              518          61871          52705         473034
+Python                        1965          76022          95289         365716
+Perl                          2052         110356         130018         292281
+C/C++ Header                   381          13762          21402         102276
+Bourne Shell                   149           9376          11665          81508
+Lisp                             2           1154           2745          10448
+Assembly                        38           1616           1712           9755
+m4                               3            825             34           7124
+make                            16            954            804           4829
+HTML                            25            516             13           3010
+Teamcenter def                   9            170            162           2075
+XML                             28            288              0           2034
+C++                             10            312            277           2000
+yacc                             2            128             97           1549
+DOS Batch                       42            175            152            746
+Objective C                      7            102             70            635
+YAML                             2              2              0            489
+CSS                              1             94             19            308
+vim script                       1             36              7            105
+Expect                           1              0              0             60
+NAnt scripts                     2              1              0             30
+Visual Basic                     2              1              1             12
+-------------------------------------------------------------------------------
+SUM:                          5256         277761         317172        1360024
+-------------------------------------------------------------------------------
+
+<i>Unix&gt;</i> cat script_lang.file
+-------------------------------------------------------------------------------
+Report File                  files          blank        comment           code
+-------------------------------------------------------------------------------
+python-2.6.4.txt              2746         135676         143269         830347
+perl-5.10.0.txt               2510         142085         173903         529677
+-------------------------------------------------------------------------------
+SUM:                          5256         277761         317172        1360024
+-------------------------------------------------------------------------------
+
+</pre>
+Finally, combine the combination files:
+<pre>
+<i>Unix&gt;</i> cloc --sum-reports --report_file=everything databases.lang script_lang.lang
+Wrote everything.lang
+Wrote everything.file
+
+<i>Unix&gt;</i> cat everything.lang
+http://cloc.sourceforge.net v 1.50
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+C                              2085         254833         340512        1499445
+C++                             625          93921         111186         523041
+Python                         1966          76027          95290         365728
+Perl                           2148         118772         135381         319878
+C/C++ Header                   2004          57077         126566         287122
+Bourne Shell                    385          31304          30869         210368
+SQL                             278           8763           5854          29295
+m4                               30           2998            473          25609
+yacc                             10           2962           2263          25422
+make                            316           3089           4044          12742
+Assembly                         53           1794           1712          11164
+Lisp                              2           1154           2745          10448
+XML                              55            852             23           6141
+lex                              10           1040           1638           4517
+Teamcenter def                   65            259            381           3880
+HTML                             28            617             14           3670
+DOS Batch                        57            251            247            970
+Objective C                       7            102             70            635
+YAML                              2              2              0            489
+Javascript                        3             70            140            427
+Pascal                            2              0            436            377
+CSS                               2            110             26            352
+XSLT                              5             41             30            111
+vim script                        1             36              7            105
+D                                 1             14             14             65
+Expect                            1              0              0             60
+Bourne Again Shell                1              6              1             48
+NAnt scripts                      2              1              0             30
+sed                               1              1              7             15
+Visual Basic                      2              1              1             12
+--------------------------------------------------------------------------------
+SUM:                          10147         656097         859930        3342166
+--------------------------------------------------------------------------------
+
+<i>Unix&gt;</i> cat everything.file
+-------------------------------------------------------------------------------
+Report File                  files          blank        comment           code
+-------------------------------------------------------------------------------
+databases.lang                4891         378336         542758        1982142
+script_lang.lang              5256         277761         317172        1360024
+-------------------------------------------------------------------------------
+SUM:                         10147         656097         859930        3342166
+-------------------------------------------------------------------------------
+
+</pre>
+</p>
+
+<!-- 1}}} -->
+<!--   SQL {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sql">SQL<img alt='^' src='up.gif'></a></h2>
+<p>
+Cloc can write results in the form of SQL table create and insert
+statements for use
+with relational database programs such as SQLite, MySQL, 
+PostgreSQL, Oracle, or Microsoft SQL.  Once the code count information is in a database,
+the information can be interrogated and displayed in interesting ways.
+</p>
+<p>
+A database created from cloc SQL output has two tables, 
+<b>metadata</b> and <b>t</b>:  
+
+<center>
+<table border="0">
+<tr>
+<td valign="top">
+
+<h4>metadata</h4>
+<table border="1">
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+</tr>
+<tr> <td>&nbsp; timestamp &nbsp; &nbsp; </td> <td>&nbsp; text</td> </tr>
+<tr> <td>&nbsp; project</td>                  <td>&nbsp; text</td> </tr>
+<tr> <td>&nbsp; elapsed_s</td>                <td>&nbsp; real</td> </tr>
+</table>
+</td>
+
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</td>
+
+<td valign="top">
+<h4>t</h4>
+<table border="1">
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+</tr>
+<tr> <td>&nbsp; project &nbsp; &nbsp; </td> <td>&nbsp; text</td> </tr>
+<tr> <td>&nbsp; language</td>               <td>&nbsp; text</td> </tr>
+<tr> <td>&nbsp; file</td>                   <td>&nbsp; text</td> </tr>
+<tr> <td>&nbsp; nBlank</td>                 <td>&nbsp; integer</td> </tr>
+<tr> <td>&nbsp; nComment</td>               <td>&nbsp; integer</td> </tr>
+<tr> <td>&nbsp; nCode</td>                  <td>&nbsp; integer</td> </tr>
+<tr> <td>&nbsp; nScaled</td>                <td>&nbsp; real</td> </tr>
+</table>
+
+</td>
+</tr>
+</table>
+</center>
+</p>
+<p>
+
+The <b>metadata</b> table contains information about when the cloc run 
+was made.  The <tt>--sql-append</tt> switch allows one to combine
+many runs in a single database; each run adds a
+row to the metadata table.
+The code count information resides in table <b>t</b>.
+</p>
+<p>
+Let's repeat the code count examples of Perl, Python, SQLite, MySQL and 
+PostgreSQL tarballs shown in the <a href=#combine_reports>combine reports</a>
+example above, this time
+using the SQL output options and the 
+<a href=http://www.sqlite.org>SQLite</a> database engine.
+</p>
+<p>
+The <tt>--sql</tt> switch tells cloc to generate output in the form
+of SQL table <tt>create</tt> and <tt>insert</tt> commands.  The switch takes 
+an argument of a file name to write these SQL statements into, or,
+if the argument is 1 (numeric one), streams output to STDOUT.
+Since the SQLite command line program, <tt>sqlite3</tt>, can read
+commands from STDIN, we can dispense with storing SQL statements to
+a file and use <tt>--sql 1</tt> to pipe data directly into the
+SQLite executable:
+<pre>
+cloc --sql 1 --sql-project mysql mysql-5.1.42.tar.gz    | sqlite3 code.db
+</pre>
+The <tt>--sql-project mysql</tt> part is optional; there's no need
+to specify a project name when working with just one code base.  However,
+since we'll be adding code counts from four other tarballs, we'll only
+be able to identify data by input source if we supply a
+project name for each run.
+</p>
+<p>
+Now that we have a database we will need to pass in the
+<tt>--sql-append</tt> switch to tell cloc not to wipe out this
+database but instead add more data:
+<pre>
+cloc --sql 1 --sql-project postgresql --sql-append postgresql-8.4.2.tar.bz2          | sqlite3 code.db
+cloc --sql 1 --sql-project sqlite     --sql-append sqlite-amalgamation-3.6.22.tar.gz | sqlite3 code.db
+cloc --sql 1 --sql-project python     --sql-append Python-2.6.4.tar.bz2              | sqlite3 code.db
+cloc --sql 1 --sql-project perl       --sql-append perl-5.10.0.tar.gz                | sqlite3 code.db
+</pre>
+</p>
+<p>
+Now the fun begins--we have a database, <tt>code.db</tt>, with lots of
+information about the five projects and can begin querying it for all
+manner of interesting facts.
+</p>
+<h4><i>Which is the longest file over all projects?</i></h4>
+
+<pre>
+&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)'
+<font color="darkgreen">
+sqlite|sqlite-3.6.22/sqlite3.c|110860
+</font>
+</pre>
+<tt>sqlite3</tt>'s default output format leaves a bit to be desired.  
+We can add an option to the program's rc file, <tt>~/.sqliterc</tt>, 
+to show column headers: <br>
+<tt>
+.header on<br>
+</tt>
+One might be tempted to also include<br>
+<tt>
+.mode column<br>
+</tt>
+in <tt>~/.sqliterc</tt>
+but this causes problems when the output has more than one row
+since the widths of entries in the first row govern 
+the maximum width for all subsequent rows.  Often this leads
+to truncated output--not at all desireable.
+One option is to write a custom SQLite output formatter such
+as <a href=sqlite_formatter><tt>sqlite_formatter</tt></a>.
+It is used like so:
+<pre>
+&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)' | sqlite_formatter
+<font color="darkgreen">
+Project File                    nL     
+_______ _______________________ ______ 
+sqlite  sqlite-3.6.22/sqlite3.c 110860
+</font>
+</pre>
+Note also that <tt>sqlite3</tt> has an HTML output option, <tt>--html</tt>,
+that might also prove useful.
+
+<h4><i>Which is the longest file in each project?</i></h4>
+<pre>
+&gt; sqlite3 code.db 'select project,file,max(nBlank+nComment+nCode) as nL from t group by project order by nL;' | sqlite_formatter
+<font color="darkgreen">
+Project    File                                          nL     
+__________ _____________________________________________ ______ 
+perl       perl-5.10.0/t/op/mkdir.t                       22658 
+python     Python-2.6.4/Lib/email/quoprimime.py           28091 
+postgresql postgresql-8.4.2/contrib/pgcrypto/pgp-pgsql.c  40041 
+mysql      mysql-5.1.42/netware/mysqldump.def             51841 
+sqlite     sqlite-3.6.22/config.sub                      110860 
+</font>
+</pre>
+
+<h4><i>Which files in each project have the most code lines?</i></h4>
+<pre>
+&gt; sqlite3 code.db 'select project,file,max(nCode) as nL from t group by project order by nL desc;' | sqlite_formatter
+<font color="darkgreen">
+Project    File                                          nL    
+__________ _____________________________________________ _____ 
+sqlite     sqlite-3.6.22/config.sub                      66142 
+mysql      mysql-5.1.42/netware/mysqldump.def            38555 
+postgresql postgresql-8.4.2/contrib/pgcrypto/pgp-pgsql.c 36905 
+python     Python-2.6.4/Lib/email/quoprimime.py          26705 
+perl       perl-5.10.0/t/op/mkdir.t                      20079 
+</font>
+</pre>
+
+<h4><i>Which C source files with more than 300 lines have a comment ratio below 1%?</i></h4>
+<pre>
+&gt; sqlite3 code.db 'select project, language, file, nCode, nComment, (100.0*nComment)/(nComment+nCode) as comment_ratio from t 
+   where language="C" and nCode &gt; 300 and comment_ratio &lt; 1 order by comment_ratio;' | sqlite_formatter
+<font color="darkgreen">
+Project    Language File                                                                          nCode nComment comment_ratio      
+__________ ________ _____________________________________________________________________________ _____ ________ __________________ 
+mysql      C        mysql-5.1.42/scripts/mysql_fix_privilege_tables_sql.c                           658        0 0.0                
+python     C        Python-2.6.4/Python/graminit.c                                                 2143        1 0.0466417910447761 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_turkish.c          2095        1 0.0477099236641221 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_french.c           1211        1 0.0825082508250825 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_french.c      1201        1 0.0831946755407654 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_hungarian.c        1182        1 0.084530853761623  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_hungarian.c   1178        1 0.0848176420695505 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_english.c          1072        1 0.0931966449207828 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c     1064        1 0.0938967136150235 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_spanish.c          1053        1 0.094876660341556  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_spanish.c     1049        1 0.0952380952380952 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_italian.c          1031        1 0.0968992248062016 
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_italian.c     1023        1 0.09765625         
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_portuguese.c        981        1 0.10183299389002   
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_portuguese.c   975        1 0.102459016393443  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_romanian.c          967        1 0.103305785123967  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_2_romanian.c     961        1 0.103950103950104  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_finnish.c           720        1 0.13869625520111   
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_porter.c            717        1 0.139275766016713  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_finnish.c      714        1 0.13986013986014   
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_porter.c       711        1 0.140449438202247  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_KOI8_R_russian.c          660        1 0.151285930408472  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_russian.c           654        1 0.152671755725191  
+python     C        Python-2.6.4/Mac/Modules/qt/_Qtmodule.c                                       26705       42 0.157026956294164  
+python     C        Python-2.6.4/Mac/Modules/icn/_Icnmodule.c                                      1521        3 0.196850393700787  
+mysql      C        mysql-5.1.42/strings/ctype-extra.c                                             8348       17 0.203227734608488  
+python     C        Python-2.6.4/Python/Python-ast.c                                               5910       17 0.286823013328834  
+python     C        Python-2.6.4/Mac/Modules/menu/_Menumodule.c                                    3263       10 0.305530094714329  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_dutch.c             596        2 0.334448160535117  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_dutch.c        586        2 0.340136054421769  
+perl       C        perl-5.10.0/x2p/a2p.c                                                          2916       10 0.341763499658236  
+python     C        Python-2.6.4/Mac/Modules/qd/_Qdmodule.c                                        6694       24 0.357249181303959  
+python     C        Python-2.6.4/Mac/Modules/win/_Winmodule.c                                      3056       11 0.358656667753505  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_german.c            476        2 0.418410041841004  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_german.c       470        2 0.423728813559322  
+perl       C        perl-5.10.0/x2p/walk.c                                                         2024       10 0.491642084562439  
+python     C        Python-2.6.4/Mac/Modules/ctl/_Ctlmodule.c                                      5442       28 0.511882998171846  
+python     C        Python-2.6.4/Mac/Modules/ae/_AEmodule.c                                        1347        7 0.51698670605613   
+python     C        Python-2.6.4/Mac/Modules/app/_Appmodule.c                                      1712        9 0.52295177222545   
+mysql      C        mysql-5.1.42/strings/ctype-euc_kr.c                                            8691       49 0.560640732265446  
+mysql      C        mysql-5.1.42/storage/archive/archive_reader.c                                   348        2 0.571428571428571  
+python     C        Python-2.6.4/Mac/Modules/evt/_Evtmodule.c                                       504        3 0.591715976331361  
+python     C        Python-2.6.4/Modules/expat/xmlrole.c                                           1250        8 0.635930047694754  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_UTF_8_danish.c            312        2 0.636942675159236  
+mysql      C        mysql-5.1.42/strings/ctype-gbk.c                                               9946       64 0.639360639360639  
+postgresql C        postgresql-8.4.2/src/backend/snowball/libstemmer/stem_ISO_8859_1_danish.c       310        2 0.641025641025641  
+mysql      C        mysql-5.1.42/strings/ctype-gb2312.c                                            5735       40 0.692640692640693  
+python     C        Python-2.6.4/Mac/Modules/res/_Resmodule.c                                      1621       12 0.734843845682792  
+python     C        Python-2.6.4/Mac/Modules/drag/_Dragmodule.c                                    1046        8 0.759013282732448  
+postgresql C        postgresql-8.4.2/contrib/hstore/hstore_op.c                                     522        4 0.760456273764259  
+python     C        Python-2.6.4/Mac/Modules/list/_Listmodule.c                                    1022        8 0.776699029126214  
+python     C        Python-2.6.4/Mac/Modules/te/_TEmodule.c                                        1198       10 0.827814569536424  
+python     C        Python-2.6.4/Mac/Modules/cg/_CGmodule.c                                        1190       10 0.833333333333333  
+postgresql C        postgresql-8.4.2/contrib/hstore/hstore_io.c                                     451        4 0.879120879120879  
+postgresql C        postgresql-8.4.2/src/interfaces/ecpg/preproc/preproc.c                        36905      330 0.886262924667651  
+python     C        Python-2.6.4/Modules/clmodule.c                                                2379       23 0.957535387177352  
+python     C        Python-2.6.4/Mac/Modules/folder/_Foldermodule.c                                 306        3 0.970873786407767  
+</font>
+</pre>
+
+<h4><i>What are the ten longest files (based on code lines) that have no comments at all?  Exclude header and YAML files.</i></h4>
+<pre>
+&gt; sqlite3 code.db 'select project, file, nCode from t where nComment = 0 and language not in ("C/C++ Header", "YAML") order by nCode desc limit 10;' | sqlite_formatter
+<font color="darkgreen">
+Project File                                                  nCode 
+_______ _____________________________________________________ _____ 
+python  Python-2.6.4/PC/os2emx/python26.def                    1188 
+python  Python-2.6.4/Lib/test/cjkencodings_test.py             1019 
+python  Python-2.6.4/Tools/msi/schema.py                        920 
+python  Python-2.6.4/Lib/msilib/schema.py                       920 
+perl    perl-5.10.0/symbian/config.sh                           810 
+perl    perl-5.10.0/uconfig.sh                                  771 
+python  Python-2.6.4/Tools/pybench/Lookups.py                   700 
+mysql   mysql-5.1.42/scripts/mysql_fix_privilege_tables_sql.c   658 
+python  Python-2.6.4/Tools/pybench/Numbers.py                   637 
+python  Python-2.6.4/Tools/pybench/Arithmetic.py                596
+</font>
+</pre>
+
+<h4><i>What are the most popular languages (in terms of lines
+of code) in each project?</i></h4>
+<pre>
+&gt; sqlite3 code.db 'select project, language, sum(nCode) as SumCode from t group by project,language order by project,SumCode desc;' | sqlite_formatter
+<font color="darkgreen">
+Project    Language           SumCode 
+__________ __________________ _______ 
+mysql      C++                 521041 
+mysql      C                   393602 
+mysql      C/C++ Header        142779 
+mysql      Bourne Shell         74525 
+mysql      Perl                 22703 
+mysql      m4                   10497 
+mysql      make                  4447 
+mysql      XML                   4107 
+mysql      SQL                   3433 
+mysql      Assembly              1304 
+mysql      yacc                  1048 
+mysql      lex                    879 
+mysql      Teamcenter def         701 
+mysql      Javascript             427 
+mysql      Pascal                 377 
+mysql      HTML                   250 
+mysql      Bourne Again Shell      48 
+mysql      DOS Batch               36 
+perl       Perl                292281 
+perl       C                   140483 
+perl       C/C++ Header         44042 
+perl       Bourne Shell         36882 
+perl       Lisp                  7515 
+perl       make                  2044 
+perl       C++                   2000 
+perl       XML                   1972 
+perl       yacc                  1549 
+perl       YAML                   489 
+perl       DOS Batch              322 
+perl       HTML                    98 
+postgresql C                   563865 
+postgresql C/C++ Header         40990 
+postgresql Bourne Shell         28486 
+postgresql SQL                  25862 
+postgresql yacc                 22825 
+postgresql Perl                  4894 
+postgresql lex                   3638 
+postgresql make                  3453 
+postgresql m4                    1431 
+postgresql Teamcenter def        1104 
+postgresql HTML                   410 
+postgresql DOS Batch              188 
+postgresql XSLT                   111 
+postgresql Assembly               105 
+postgresql D                       65 
+postgresql CSS                     44 
+postgresql sed                     15 
+postgresql Python                  12 
+python     Python              365716 
+python     C                   332551 
+python     C/C++ Header         58234 
+python     Bourne Shell         44626 
+python     Assembly              9755 
+python     m4                    7124 
+python     Lisp                  2933 
+python     HTML                  2912 
+python     make                  2785 
+python     Teamcenter def        2075 
+python     Objective C            635 
+python     DOS Batch              424 
+python     CSS                    308 
+python     vim script             105 
+python     XML                     62 
+python     Expect                  60 
+python     NAnt scripts            30 
+python     Visual Basic            12 
+sqlite     C                    68944 
+sqlite     Bourne Shell         25849 
+sqlite     m4                    6557 
+sqlite     C/C++ Header          1077 
+sqlite     make                    13 
+</font>
+</pre>
+
+<!-- 1}}} -->
+<!--   Third Generation Language Scale Factors {{{1 --> 
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="scale_factors">Third Generation Language Scale Factors<img alt='^' src='up.gif'></a></h2>
+<p>
+cloc versions before 1.50 by default computed, for the provided inputs, a
+rough estimate of how many lines of code would be needed to write the
+same code in a hypothetical third-generation computer language.
+To produce this output one must now use the <tt>--3</tt> switch.
+</p>
+<p>
+Scale factors were derived from the 2006 version of language gearing ratios
+listed at Mayes Consulting web site, <a href=http://softwareestimator.com/IndustryData2.htm
+>http://softwareestimator.com/IndustryData2.htm</a>, using this equation:</p>
+<p>
+cloc scale factor for language X = 3rd generation default gearing ratio / language X gearing ratio
+</p>
+<p>
+for example,
+</p>
+<p>
+cloc 3rd generation scale factor for DOS Batch = 80 / 128 = 0.625
+</p>
+<p>
+The biggest flaw with this approach is that gearing ratios
+are defined for logical lines of source code not physical lines (which cloc counts).
+The values in cloc's 'scale' and '3rd gen. equiv.' columns should be taken 
+with a large grain of salt.
+</p>
+<!-- 1}}} -->
+<!--   Suppress Third Generation Language Output {{{1 --> 
+<!--
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="no3_output">Suppress Third Generation Language Output<img alt='^' src='up.gif'></a></h2>
+<p>
+Third generation scale factor output can be suppressed with the <tt>--no3</tt> option to
+produce cleaner output.  Here's what the output looks like
+for the same Perl 5.10.0 count shown <a href=#Basic_Use>above</a>:
+</p>
+<pre>
+<i>prompt&gt;</i> cloc --no3 perl-5.10.0.tar.gz
+    4076 text files.
+    3882 unique files.                                          
+    1521 files ignored.
+
+http://cloc.sourceforge.net v 1.10  T=10.0 s (251.0 files/s, 84566.5 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Perl                          2052         110356         130018         292281
+C                              135          18718          22862         140483
+C/C++ Header                   147           7650          12093          44042
+Bourne Shell                   116           3402           5789          36882
+Lisp                             1            684           2242           7515
+make                             7            498            473           2044
+C++                             10            312            277           2000
+XML                             26            231              0           1972
+yacc                             2            128             97           1549
+YAML                             2              2              0            489
+DOS Batch                       11             85             50            322
+HTML                             1             19              2             98
+-------------------------------------------------------------------------------
+SUM:                          2510         142085         173903         529677
+-------------------------------------------------------------------------------
+
+</pre>
+<p>
+If you use the report summation feature, make sure
+all inputs were produced the same way, either all with the
+<tt>--no3</tt> option or all without.
+</p>
+ -->
+<!-- 1}}} -->
+<!-- Troubleshooting {{{1 --> 
+<!--
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Troubleshooting">Troubleshooting <img alt='^' src='up.gif'></a></h1>
+<p>
+</p>
+ -->
+<!-- 1}}} -->
+<!-- Limitations {{{1 --> 
+<!--
+ -->
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Limitations">Limitations <img alt='^' src='up.gif'></a></h1>
+<p>
+Identifying comments within source code is trickier than one might expect.
+Many languages would need a complete parser to be counted correctly.
+cloc does not attempt to parse any of 
+the languages it aims to count and therefore is an imperfect tool.
+The following are known problems:
+<ol>
+<li>  Lines containing both source code and comments are counted as lines of code.
+<li>  Comment markers within strings or 
+<a href=http://www.faqs.org/docs/abs/HTML/here-docs.html>here-documents</a>
+are treated as actual comment markers and not string literals.  
+For example the following lines of C code
+<pre>
+printf(" <font color="red">/* ");
+for (i = 0; i < 100; i++) {
+    a += i;
+}
+printf(" */</font> ");
+</pre>
+appear to cloc as two lines of C code (the lines with black text) and three
+lines of comments (the lines which have only red text--lines with both
+black and red text are treated as code).
+<li>  Lua long comments are not recognized.
+</ol>
+</p>
+<!-- 1}}} -->
+<!-- Author {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Author">Author <img alt='^' src='up.gif'></a></h1>
+<p>
+Al Danial <img src='address.png'>
+</p>
+<!-- 1}}} -->
+<!-- Acknowledgments {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Acknowledgments">Acknowledgments <img alt='^' src='up.gif'></a></h1>
+<p>
+Wolfram R&ouml;sler provided most of the code examples in the test suite.
+These examples come from his <a href=http://www.roesler-ac.de/wolfram/hello.htm>
+Hello World Collection</a>.
+</p>
+<p>
+Ismet Kursunoglu found errors with the MUMPS counter and provided
+access to a computer with a large body of MUMPS code to test cloc.
+</p>
+<p>
+Tod Huggins gave helpful suggestions for the Visual Basic filters.
+</p>
+<p>
+Anton Demichev found a flaw with the JSP counter in cloc v0.76
+and wrote the XML ouput generator for the <tt>--xml</tt> option.
+</p>
+<p>
+Reuben Thomas pointed out that ISO C99 allows <tt>//</tt> as a comment 
+marker, provided code for the <tt>--no3</tt> option and for counting
+the m4 language, and suggested several user-interface enhancements.
+</p>
+<p>
+Michael Bello provided code for the <tt>--opt-match-f</tt>,
+<tt>--opt-not-match-f</tt>,
+<tt>--opt-match-d</tt>, and <tt>--opt-not-match-d</tt>
+options. 
+</p>
+<p>
+Mahboob Hussain inspired the <tt>--original-dir</tt> and 
+<tt>--skip-uniqueness</tt> options, found a
+bug in the duplicate file detection logic and improved the JSP filter.
+</p>
+<p>
+Randy Sharo found and fixed an uninitialized variable bug for shell 
+scripts having only one line.
+</p>
+<p>
+Steven Baker found and fixed a problem with the YAML output generator.
+</p>
+<p>
+Greg Toth provided code to improve blank line detection in COBOL.
+</p>
+<p>
+Joel Oliveira provided code to let <tt>--exclude-list-file</tt> handle
+directory name exclusion.
+</p>
+<p>
+Blazej Kroll provided code to produce an XSLT file, <tt>cloc-diff.xsl</tt>,
+when producing XML output for the <tt>--diff</tt> option.
+</p>
+<p>
+Denis Silakov enhanced the code which generates <tt>cloc.xsl</tt> when 
+using <tt>--by-file</tt> and <tt>--by-file-by-lang</tt> options, and
+provided an XSL file that works with <tt>--diff</tt> output.
+</p>
+<p>
+Andy (awalshe@sf.net) provided code to fix several bugs:  
+correct output of <tt>--counted</tt>
+so that only files that are used in the code count appear and
+that results are shown by language rather than file name;
+allow <tt>--diff</tt> output from multiple runs to be summed
+together with <tt>--sum-reports</tt>.
+</p>
+<p>
+The development of cloc was partially funded by the Northrop Grumman 
+Corporation.
+</p>
+<!-- 1}}} -->
+<!-- Copyright {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Copyright">Copyright <img alt='^' src='up.gif'></a></h1>
+<p>
+Copyright (c) 2006-2011, Northrop Grumman Corporation.<br>
+</p>
+<!-- 1}}} -->
+<!-- License {{{1 --> 
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="License">License <img alt='^' src='up.gif'></a></h1>
+<p>
+This program is free software; you can redistribute it and/or modify
+it under the terms of the 
+<a href=http://www.gnu.org/licenses/gpl.txt>
+GNU General Public License</a>
+as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+</p>
+<!-- 1}}} -->
+
+</div>
+</div>
+<hr>
+<center>
+<a href="http://sourceforge.net/projects/cloc"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=174787&type=14" width="150" height="40" border="0" alt="Get cloc at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+</center>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22462821-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+ </body>
+</html>
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Disposition: inline; filename=style.css
+Content-Type: text/css; name=style.css
+Content-Location: http://cloc.sourceforge.net/style.css
+Content-Transfer-Encoding: 8bit
+
+BODY, .logo { background: white; }
+
+BODY {
+  color: black;
+  font-family: arial,sans-serif;
+  margin: 0;
+  padding: 1ex;
+}
+
+TABLE {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+  color: inherit;
+}
+
+IMG { border: 0; }
+FORM { margin: 0; }
+input { margin: 2px; }
+
+.logo {
+  float: left;
+  width: 264px;
+  height: 77px;
+}
+
+.front .logo  {
+  float: none;
+  display:block;
+}
+
+.front .searchbox  {
+  margin: 2ex auto;
+  text-align: center;
+}
+
+.front .menubar {
+  text-align: center;
+}
+
+.menubar {
+  background: #006699;
+  margin: 1ex 0;
+  padding: 1px;
+} 
+
+.menubar A {
+  padding: 0.8ex;
+  font: bold 10pt Arial,Helvetica,sans-serif;
+}
+
+.menubar A:link, .menubar A:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.menubar A:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+A:link, A:visited {
+  background: transparent;
+  color: #006699;
+}
+
+A[href="#POD_ERRORS"] {
+  background: transparent;
+  color: #FF0000;
+}
+
+TD {
+  margin: 0;
+  padding: 0;
+}
+
+DIV {
+  border-width: 0;
+}
+
+DT {
+  margin-top: 1em;
+}
+
+.credits TD {
+  padding: 0.5ex 2ex;
+}
+
+.huge {
+  font-size: 32pt;
+}
+
+.s {
+  background: #dddddd;
+  color: inherit;
+}
+
+.s TD, .r TD {
+  padding: 0.2ex 1ex;
+  vertical-align: baseline;
+}
+
+TH {
+  background: #bbbbbb;
+  color: inherit;
+  padding: 0.4ex 1ex;
+  text-align: left;
+}
+
+TH A:link, TH A:visited {
+  background: transparent;
+  color: black;
+}
+
+.box {
+  border: 1px solid #006699;
+  margin: 1ex 0;
+  padding: 0;
+}
+
+.distfiles TD {
+  padding: 0 2ex 0 0;
+  vertical-align: baseline;
+}
+
+.manifest TD {
+  padding: 0 1ex;
+  vertical-align: top;
+}
+
+.l1 {
+  font-weight: bold;
+}
+
+.l2 {
+  font-weight: normal;
+}
+
+.t1, .t2, .t3, .t4  {
+  background: #006699;
+  color: white;
+}
+.t4 {
+  padding: 0.2ex 0.4ex;
+}
+.t1, .t2, .t3  {
+  padding: 0.5ex 1ex;
+}
+
+/* IE does not support  .box>.t1  Grrr */
+.box .t1, .box .t2, .box .t3 {
+  margin: 0;
+}
+
+.t1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.t2 {
+  font-size: 1.0em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.t3 {
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* width: 100%; border: 0.1px solid #FFFFFF; */ /* NN4 hack */
+
+.datecell {
+  text-align: center;
+  width: 17em;
+}
+
+.cell {
+  padding: 0.2ex 1ex;
+  text-align: left;
+}
+
+.label {
+  background: #aaaaaa;
+  color: black;
+  font-weight: bold;
+  padding: 0.2ex 1ex;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.categories {
+  border-bottom: 3px double #006699;
+  margin-bottom: 1ex;
+  padding-bottom: 1ex;
+}
+
+.categories TABLE {
+  margin: auto;
+}
+
+.categories TD {
+  padding: 0.5ex 1ex;
+  vertical-align: baseline;
+}
+
+.path A {
+  background: transparent;
+  color: #006699;
+  font-weight: bold;
+}
+
+.pages {
+  background: #dddddd;
+  color: #006699;
+  padding: 0.2ex 0.4ex;
+}
+
+.path {
+  background: #dddddd;
+  border-bottom: 1px solid #006699;
+  color: #006699;
+ /*  font-size: 1.4em;*/
+  margin: 1ex 0;
+  padding: 0.5ex 1ex;
+}
+
+.menubar TD {
+  background: #006699;
+  color: white;
+}
+
+.menubar {
+  background: #006699;
+  color: white;
+  margin: 1ex 0;
+  padding: 1px;
+}
+
+.menubar .links     {
+  background: transparent;
+  color: white;
+  padding: 0.2ex;
+  text-align: left;
+}
+
+.menubar .searchbar {
+  background: black;
+  color: black;
+  margin: 0px;
+  padding: 2px;
+  text-align: right;
+}
+
+A.m:link, A.m:visited {
+  background: #006699;
+  color: white;
+  font: bold 10pt Arial,Helvetica,sans-serif;
+  text-decoration: none;
+}
+
+A.o:link, A.o:visited {
+  background: #006699;
+  color: #ccffcc;
+  font: bold 10pt Arial,Helvetica,sans-serif;
+  text-decoration: none;
+}
+
+A.o:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+A.m:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+table.dlsip     {
+  background: #dddddd;
+  border: 0.4ex solid #dddddd;
+}
+
+.pod PRE     {
+  background: #eeeeee;
+  border: 1px solid #888888;
+  color: black;
+  padding: 1em;
+  white-space: pre;
+}
+
+.pod H1      {
+  background: transparent;
+  color: #006699;
+  font-size: large;
+}
+
+.pod H1 A { text-decoration: none; }
+.pod H2 A { text-decoration: none; }
+
+.pod H2      {
+  background: transparent;
+  color: #006699;
+  font-size: medium;
+}
+
+.pod IMG     {
+  vertical-align: top;
+}
+
+.pod .toc A  {
+  text-decoration: none;
+}
+
+.pod .toc LI {
+  line-height: 1.2em;
+  list-style-type: none;
+}
+
+.faq DT {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.chmenu {
+  background: black;
+  color: red;
+  font: bold 1.1em Arial,Helvetica,sans-serif;
+  margin: 1ex auto;
+  padding: 0.5ex;
+}
+
+.chmenu TD {
+  padding: 0.2ex 1ex;
+}
+
+.chmenu A:link, .chmenu A:visited  {
+  background: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.chmenu A:hover {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+.column {
+  padding: 0.5ex 1ex;
+  vertical-align: top;
+}
+
+.datebar {
+  margin: auto;
+  width: 14em;
+}
+
+.date {
+  background: transparent;
+  color: #008000;
+}
+
+.footer {
+  margin-top: 1ex;
+  text-align: right;
+  color: #006699;
+  font-size: x-small;
+  border-top: 1px solid #006699;
+  line-height: 120%;
+}
+
+.front .footer {
+  border-top: none;
+}
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Disposition: inline; filename=up.gif
+Content-Type: image/gif; name=up.gif
+Content-Location: http://cloc.sourceforge.net/up.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhDwAPAIAAAABmmf///yH5BAEAAAEALAAAAAAPAA8AAAIjhI8Jwe1tXlgv
+ulMpS1crT33WuGBkpm3pZEEr1qGZHEuSKBYAOw==
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Disposition: inline; filename=address.png
+Content-Type: image/png; name=address.png
+Content-Location: http://cloc.sourceforge.net/address.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAKIAAAAVEAIAAAAaz37CAAAACW9GRnMAAACrAAAD
+SwC4On90AAAACXBIWXMAAAsSAAALEgHS3X78AAALDElEQVR42u1cZyzeXxt+UWpF
+1QpRglB7hGhCa6bSEjS1dxBbGlqq9o7ZkYpWiK5oCT5o6RAEsSJW7F3R6DJqtFRb
+6/1wvR9O8svPi8fTf+v/3J/knPM75z7Xuc89rvME287Ozs7Ozn9YwhKW/OXCzoKA
+JSxhXeb/I8XFxcXFxWxsbGxsbMvLy8vLy4c1s5aWlpaWlp+fn5+f3++H7PHjx48f
+P2ZnZ2dnZ19bW1tbW/udKE1PT09PTycmJiYmJurr6+vr6588efLkyZPQR1RUVFRU
+1MrKysrK6uXLly9fvjzamRfdWTDP9v6ll7mrq6urq0teXl5eXl5QUFBQUJDxOTc2
+NjY2NoaHh4eHh3V0dHR0dH4/ZL29vb29vadPnz59+jQfHx8fHx+zUfr69evXr1+D
+goKCgoIw8tGjR48ePTpz5syZM2du3bp169atp0+fPn36FGPGx8fHx8dxpT08PDw8
+PDY3Nzc3N4+e+dKdBTNs7y+QHaaJoaGhoaGhk5OTk5PTYc05MDAwMDBAHtjOb5dN
+QpiN0uTk5OTkpIKCgoKCgpCQkJCQ0IMHDx48eLD76uiNi4uLi4sDVlFRUVFRUTtH
+TujOghm29+cLUy7z1tbW1tYWPz8/Pz9/dnZ2dnb2Yc387NmzZ8+ecXJycnJy/vjx
+48ePH38v9Luj9PHjx48fP0pJSUlJSamoqKioqLx79+7du3f7XcXFxcXFxeX48ePH
+jx9fXFxcXFw82gbNPNs7Ipd5YmJiYmLC2dnZ2dlZTExMTEyMrNACAgICAgJQsWD8
+yMjIyMgIYkJ9fX19ff3eFUKld/bs2bNnz8IEURNmZGRkZGTcuHHjxo0b2tra2tra
+jGjY0tLS0tICDfG3nZ2dnZ3diRMnTpw4gXUdHR0dHR3X19fX19fxFeIkvnr9+vXr
+16+ZgRLM0djY2NjYGJf506dPnz59Qu/379+/f/+ekpKSkpIiKysrKysL1wZtS0tL
+S0tLkXDOzc3Nzc11d3d3d3djlRcvXrx48YLUuampqamp6fz58+fPn+fh4eHh4REW
+FhYWFr558+bNmzdjY2NjY2PPnTt37tw58qtTp06dOnUqKysrKyvr2rVr165dExER
+EREROXbs2LFjx2xtbW1tbbHT5OTk5ORkjOfg4ODg4DA1NTU1NUXhwAh6dGfBiO0t
+LS0tLS2Fh4eHh4fLyMjIyMhAB2lpaWlp6YcPHz58+JAcv7CwsLCwEBwcHBwcLCEh
+ISEhgT0qKysrKyu/evXq1atX1FWYgd6eLjPMCItpaGhoaGjk5ubm5uYWFRUVFRXZ
+2NjY2NgAOFRu+Ar1G9pBP+wFyrt37969exdfubq6urq6YhUYLi8vLy8vr6SkpKSk
+JKgvRjS8c+fOnTt3QJAArMzMzMzMzNra2traWi8vLy8vL3xVWFhYWFiIr0pKSkpK
+StCOq8IMlMj2xsbGxsZGMlZjflCAFRUVFRUVMFkgIy4uLi4uDpeHr37+/Pnz50/M
+RpojKCIYq4WFhYWFBerw9PT09PR0XGwgExISEhISQu4Us2G/SOCBG7IA9OIy+Pj4
++Pj41NTU1NTUQCv03rt37969e4ygR3cWB7M9zIDaG+4DOECHCxcuXLhwAXPCOeIa
+oyaHw719+/bt27eBMHbBxcXFxcU1NTU1NTXFPPT2cZkBGXwzFZrV1dXV1VUsUFBQ
+UFBQgPbQ0NDQ0FBUenuBEpUwfE9MTExMTAx1DCIz1srPz8/Pz2dEQwCHFdvb29vb
+28mvSF6UNCD4UQDNDJS2t7e3t7fV1NTU1NQsLS0tLS3RjoIC+Yienp6enh4ZoyDW
+1tbW1tZkTEb758+fP3/+jNWR9cApYCSiCtYlZ0NMxldPnjx58uQJ2isrKysrK+lM
+anBwcHBwEL1hYWFhYWFkL3aB3pycnJycHEbQozuL/doexN3d3d3dHXkZYj7ZS/Lh
+CDm4ZsggPnz48OHDB3I8mR1gPPPQ23eaTZoafFJ/f39/fz8uHhaAKhhpYGBgYGCA
+lGkvM5PQ0FXCJBDwjoxoiMNGak2dB2w5NVXDvhwcHBwcHJiB0tDQ0NDQEEYi6qId
+SS/S6bdv3759+5ZcEbEXnp6MyRBcReQgs7Ozs7OzIMZQvHz79u3bt2/UXSDCUHXG
+twICAgICAr9+/fr16xf5FXTGV3AZZG9PT09PTw9Z2jCOHvUs9mt78/Pz8/PzcOup
+qampqal0WiGu4uoi6pKOnhQgA52RTv8e9P6zu1GSXhOJLowG8UFTU1NTUxP+DJUe
+eEV4fZjgXgCFf0VySzcGngwgwnwPpiHqImoKTQoSTqSgqE/IfZG0yuGiBKYauuHi
+oR012KVLly5dukTV9v79+/fv36fGZKCEb83Nzc3NzdEOfVDI0KEdHx8fHx+PZBvP
+gWi/ePHixYsXUWNTv4IroUZLSF5eXl5eHipDVP6Mo0eexcFsr6ysrKysDJiPjo6O
+jo7uPh68A8ZTYzgET4NUnuJw0dvHZU5LS0tLSwMrCO9O5UJhXlCRGtMaGhoaGhr2
+Aij8YkJCQkJCAt0YEEJ4W2ZEQ9Qn0BDpPXUtf39/f39/dXV1dXV1tJBPYmQde7go
+YTa0k88twAcpMTkzjAmGjrQT7TB65Dvc3Nzc3NyIcugFvYfrSufEyZSebAc9RlcK
+4YxAxVF7PT09PT09SfLyYOjRncXBbI8s30i3RUpfX19fX19bW1tbWxsi7e7j4UqA
+M1J0ZqC3j8sMEwGzR+0dGxsbGxuDH01KSkpKSkI7CANsdWVlZWVlZS+AIvGwt7e3
+t7en9pJz4poxoiFpQHSvtaCXfH19fX19ybQTySrJJR4uSiQFSD5EKSoqKioqgpgB
+R4onOlVVVVVVVbLKAq9rZmZmZmYG3aqrq6urq0mtsHe6PAjEGOYk3QeIHLSj5CG/
+IqMiqCDqzHhgCwwMDAwMZAQ9urM4mO0h46OLzMiPgPzVq1evXr1KnhF1PNJjFIwk
+TcsM9PZxmbEBkDFVVVVVVVVv3rx58+YN+DcweFDu+vXr169fB3xgPsEKkrMh48eD
+E5JJstfNzc3NzQ2zYQYY65UrV65cuUKuRVIgB9Pw8uXLly9fNjExMTExoe4axBIi
+IZmEA0RcHuah1NHR0dHRgfFg19He3Nzc3NwM7hSVM37dBRNBggrjBqcN3N6/f//+
+/XvqHoE2EjaYTl1dXV1dXUREREREBH6aQmW/8ehFLQHI2IXe1tbW1tZWshe7hob4
+ASYj6NGdxcFsDyjBZUAT7Bokk5ycnJycHFAFlYhsCOUeWGsUZXgfgc5KSkpKSkpf
+vnz58uUL89Dbx2VGro+XTPIJB7ERr4IADp4ePgmGRaUfSH/2/Pnz58+fk71IrhCZ
+UafBZ4NjxDFTqa+DaQi4IyMjIyMjqbvGuys1CdfV1dXV1UWqwzyUkIwZGRkZGRnB
+T+N67xyqIPHDr6NgxEDb29vb29sbpA6VcMJ1oqvo4GTpKjqQiJgTTC8j6NGdxcFs
+D4L8BRkQNEHdjh/DzszMzMzMkOORAcGhwPXjURC5DHmNmYfePi4zS/4pQaxAHEbF
+Gx0dHR0djboXbD+4UDDboHDIqphOYCjgb+nGIG7jJxDUJyuW/MnCusx/qIB1h6dH
+tkL363o8MpWXl5eXl+8+JxmjqI9SqNLhPo7qb7mPtrD9706z5A8WVPIoMRBXkR4j
+QcWbOZK93edBPYZ0FKwpGG9Ug/jxIEZ2dnZ2dnYi/Wbh/9cIy5/92wTv0vi9MepD
+JNUglsiXapawIjNLWMKSf0BY/zaIJSw5IvJfQjCLRryLMn0AAAAASUVORK5CYII=
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Disposition: inline; filename=sflogo.gif
+Content-Type: image/gif; name=sflogo.gif
+Content-Location: http://sflogo.sourceforge.net/sflogo.php?group_id=174787&type=14
+Content-Transfer-Encoding: Base64
+
+R0lGODlhlgAoAPcAAPLx8P7+/v/+/vHv7/b29kBAQfb19fn4+Pj4+Pv5+fXz8/v7
++/z8/D08PD4+Pj09Pfj29g8PD35+fnp5ebi4uEBAQD8/P3t7e/z7+7a1tRAQELy7
+u7q6uj49Pby8vPPz83x8fHl5eCAgIL29vbWzsy0tLX59fX9/fy4uLu/v77u6ur6+
+vri2tjExMNPR0T8+PrW1tH18fB4eHqWkpO7u7uLg4Ht6ejAwLw8PEDAwMOjo6ODg
+4MnIyJ+fn+Df4F5eXczKyoeGhnl4eG1tbc3NzWpqadTT0mppaezs7C4tLSAgH7+/
+vxAQDy8vMO7u7Tw8POzr68bFxG5ubmxsbE9PT7++vunp6Z2dnS4uLUBAP7m3t9bV
+1K+vr1taWtra2l9fX0xMTMTEw6Cgn5ubm3p6ekxLS7u6uUxMS+Pi4eXl5cTCwi8v
+L8rKyqqqqpaVldDQ0OXk46qpqdrZ2piYl66uriEhIJuamtza24yMjN/f3xAPD6+u
+r09PULi3uFBQUNzc3NnX2LCwsF5cXKCgoG9ubl5eXs/PzpmZmV1dXaampqysrZeW
+lmtra9/f3qalpYiIiFtbWq2trcnJyvDw8Kimp2tqaR8fHru7u4qJib28vB8fH3Bw
+cMzMy9XU1JiXl3p6eba2tnx7e358fJqYmYCAgM/Ozqyrq8DAv9nX14B/f+jm5m9v
+cPPy8v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78i
+IGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxu
+czp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4w
+LWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8
+cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjIt
+cmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4
+bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1s
+bnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNv
+dXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4w
+LyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4
+bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6NjVFNjM5MDY4NkNGMTFEQkE2
+RTJEODg3Q0VBQ0I0MDciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0RFRTc3
+MjMyNEJEMTFFMEE5QUZGM0E4RDU5NEQzMTAiIHhtcE1NOkluc3RhbmNlSUQ9Inht
+cC5paWQ6Q0RFRTc3MjIyNEJEMTFFMEE5QUZGM0E4RDU5NEQzMTAiIHhtcDpDcmVh
+dG9yVG9vbD0iQWRvYmUgSWxsdXN0cmF0b3IgQ1M0Ij4gPHhtcE1NOkRlcml2ZWRG
+cm9tIHN0UmVmOmluc3RhbmNlSUQ9InV1aWQ6ZGE2MzgyYzItM2U4Ny0zNjQ0LTlk
+YzYtYjJmNDZjOTQwNmQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAxODAx
+MTc0MDcyMDY4MTE4MkQyQzZGNjVENDk0Njg1Ii8+IDxkYzp0aXRsZT4gPHJkZjpB
+bHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+bG9nbzwvcmRmOmxpPiA8
+L3JkZjpBbHQ+IDwvZGM6dGl0bGU+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpS
+REY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b1
+9PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bF
+xMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aV
+lJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2Zl
+ZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1
+NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYF
+BAMCAQAAIfkEAAAAAAAsAAAAAJYAKAAACP8AXQkcSLCgwYMIEypcyLChw4cQI0qc
+SLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcybKly5cwY8qcSbOmzZs4c+rcybNn
+zxIkBggdOrSGwAhuiBIlUULgDKFlCgYd0DSI0CMDn7gQIrCLC6VCa8hwFSFIDbAD
+1DwxWOarUqyuvKKtwdVVCaEzBsqYQUIgULRCXRx9ipYpwTAAEiteDEDgIsaMjQiE
+kThEQcUNXFEGYFmGo8qukkBenDnEaMVoIhBscNqy6NOJIbliDQAGWdO1BRqBnXgy
+7zAEWQkfTly4wOLIWaFwlUH4hILDHzAX/mgC8efWkwtf3ly7cOkDE7X/dpXduydX
+D4RnANNpeAZXKHj3duV9eHDnDfLrb4DlOH79RUQ3HSvP3ceKdN0VF8VY2W2xX379
+DUjJfmcIOFB3czyoWoMPRqEeesnBAQaIwhWxX3n+EXiifQMp4OJCLioAXosuSseC
+izYUFKONMbqYRiUD2eCiFgndqMAnOtZIECgffEDGQUIqQCRBZLjIAno9ujiKaug1
++UFBD3gp0I4E4RAjQQak2YFCaRqwJppqukJBmhcU1Oaac7ZpB5cCXZAmBQnlWedA
+U9xJkJE5GuSnAYAStCigHbRpQB/LDfTAmQRd+qIrhh51SJsEESDqqKTGoYdAozpQ
+UKpyijroQKxS/yCqKpU6KmqjB8lKwKAO8ECqaphIKmyaU7hywa0FHUsAoA6MyohB
+kaZZULQGoCqqqq4ggsqogBCkAwLghisuBwKFi+1A5rrCAbggFJTuugjgcRAI4JKL
+ELwgaDKGuAj8IJCupAZcJ70I2DsQweQ6AK4cBzUrakEOE1AuuA6sAS+4OtTqiiBW
+HODxxyAL9PG5Inusqgoex0DQECO7gvIB7RoUg8cqJPSyFx1/bMa5bUDg889AQxCK
+KzMfUDNBRdfsgMeXNPwzQRrw8LQrH7MB8gGmWGJQBA507bUoCYQtUNgJvFAQ2WZv
+ELYJAlmgNtquvM22QSaEvUFCb5OdwB3+lv/ZtSTgjuF11zi4UncCdxN0+N0v2N1w
+uAMN8S3kruhNNhAkL2TBApwLxPkCFhT0eegecC6BBld8ProrpS8gwUEScO5BQq1z
+DoUEfBrEgccxFxT7ArMT9PvsmwPf8MeuOODF1Qd4rjoUhUREBQPUC0Q9A1QQJML1
+oY9A/R9IXC9+99S/bpAE1BORkPfUK6LEQnLDnn5BkVA/gisW2H9Q42EDYTnZ1rse
+7hRCgwAY8IAIDIBAEsjAAFTAFStgoBMIccAHRjAAJzjICRpoQBqIAIIcPGAOCNI6
+8xVkgyEMAB1cUQEDruAgxVPdAjghhc8tMIU0IIgAdsjDHgrABwIxhA//fZgCgfTA
+h3tggit4+MAq7DAVB+HDEHv4wCNOkYkEyQQGMGBCgnzhijxcBQt3WAWEbPGMSJAC
+/s4oEB+AcYcEaYUc50jHFNxAIE1IAR33+AWB5ECPrdhBFgayAzk+kAtyJAVCxLBH
+Oo5QBIVs5BwfOBD2dZEgjJRkK06hARbKcQkIQR/1rqAaDbCPAQK5ASA1SZAWFOCV
+sIRlJwkSy1jOUiAieGVB6qBLV2jglbc0SC5rWYAW0JKYsCzIBTOIEFcS05gDeeUH
+EdKELLzPFZsooAGdMJBfIrOYPsnIMktSgVIgsBF3DGdJliBHP4xEBIicYwqYqc6S
+BOINBSBJHuY4HYlBKLGeAA2oQAdK0IIa9KAITahCF8rQhjpUJwEBADs=
+
+------------Cyp1Kbbv0kW9wu2sf3EOPY--

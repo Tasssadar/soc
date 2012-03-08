@@ -17,6 +17,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bbding}
+\usepackage{enumitem}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
 \renewcommand{\cftsecdotsep}{\cftdotsep}
@@ -263,7 +264,7 @@ Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového p
     \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, má však horší ovládání a užší možnosti použití (hlavně kvůli nutnosti použít další program pro zobrazování). Je dostupný pouze pro MS~Windows a základní verze stojí \$ 259.
     \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
     \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod verzí 7 nefunguje.
-%DOP: vyzkoušet win xp
+% pod win Xp se pripoji
 \end{itemize}
 
 
@@ -606,6 +607,7 @@ Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují
 \end{figure}
 
 \newpage
+%DOP: dát do příloh?
 \section{Knihovny třetích stran, licence}
 %\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
 \subsection{Knihovny třetích stran}
@@ -628,6 +630,30 @@ Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých progr
 \end{itemize}
 
 Všechny tyto licence umožňují svobodné používání a šíření kódu.
+
+\section*{Závěr}
+\addcontentsline{toc}{section}{Závěr}
+Vytvořená aplikace splňuje všechny stanovené požadavky:
+\begin{enumerate}[label=\Has\hspace{1.5mm}\arabic{*}.]
+    \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat% 1
+    \item Podpora co nejvíce formátů příchozích dat% 2
+    \item Snadné a rychlé používání % 3
+    \item Možnost běhu i na jiných systémech než je MS Windows % 4
+    \item Co možná nejnižší cena % 5
+    \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
+    \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
+\end{enumerate}
+
+Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříz, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Počet řádků kódu v programu je v současné době (8.3.2012) tento:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/cloc_edit.png}
+\caption{Počet řádků spočítaný programem CLOC\cite{cloc} (bez knihoven třetích stran)}
+\end{center}
+\end{figure}
+
+Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu rád vytvořil podobný program (hlavně vlastnosti modulu Analyzér) pro přenosná zařízení (chytrý mobilní telefon či tablet), protože pro tyto zařízení žádná taková aplikace v současné době neexistuje a chtěl bych vyzkoušet programování pro tyto platformy (zejména pro Google Android\cite{android}).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
@@ -665,6 +691,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
 
     \bibitem{github} \It{GitHub} -- Social Coding \\
     \url{https://github.com}\\
+    (Stav ke dni 6.3.2012)
+
+    \bibitem{avr232client} \It{avr232client} \\
+    \url{http://technika.junior.cz/trac/wiki/avr232client}\\
     (Stav ke dni 6.3.2012)
 
     \bibitem{eurobot} \It{Eurobot} \\
@@ -707,9 +737,13 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.boost.org/users/license.html}\\
     (Stav ke dni 6.3.2012)
 
-    \bibitem{avr232client} \It{avr232client} \\
-    \url{http://technika.junior.cz/trac/wiki/avr232client}\\
-    (Stav ke dni 6.3.2012)
+    \bibitem{cloc} \It{CLOC} -- Count Lines of Code \\
+    \url{http://cloc.sourceforge.net/}\\
+    (Stav ke dni 8.3.2012)
+
+    \bibitem{android} \It{Google Android} -- Operační systém pro chytré telefony\\
+    \url{http://www.android.com/}\\
+    (Stav ke dni 8.3.2012)
 
 \end{thebibliography}
 
