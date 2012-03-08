@@ -29,6 +29,45 @@
 %linkcolor=black -- barva odkazů v obsahu (implicitně red)
 
 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+\renewcommand{\lstlistingname}{Příklad}
+
 % \usepackage{parskip} -- zapne americké odstavce v celé práci
 
 \addtolength{\textwidth}{-2mm} 
@@ -657,10 +696,126 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section*{PŘÍLOHY}
-\addcontentsline{toc}{section}{PŘÍLOHY}
+%\section*{PŘÍLOHY}
+%\addcontentsline{toc}{section}{PŘÍLOHY}
 
-\addcontentsline{toc}{subsection}{Reference}
+\section*{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
+\addcontentsline{toc}{section}{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
+Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Prostě je to hodně podobné JavaScriptu a většinou můžete použít jeho referenci.
+
+\begin{itemize}
+    \item \url{http://en.wikipedia.org/wiki/ECMAScript}
+    \item \url{https://qt-project.org/doc/qt-4.8/scripting.html}
+    \item \url{http://www.w3schools.com/jsref/default.asp} - JS reference
+\end{itemize}
+
+\subsection*{Pár věcí na které je třeba myslet}
+\addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
+\begin{itemize}
+    \item Widgety vytvořené ze scriptu se neukládájí do datového souboru - po načtení se vytvoří znovu, bez dat.
+    \item Stav proměnných ve scritptu se zatím (?) neukládá do souboru.
+    \item Po stisknutí "Ok" nebo "Použít" v dialogu nastavení scritpu se script načte znovu - staré widgety se smažou a vytvoří nové, bez dat.
+    \item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
+\end{itemize}
+
+\newpage
+\subsection*{Základní script}
+\addcontentsline{toc}{subsection}{Základní script}
+Script by měl obsahovat následující dvě funkce (ale nemusí, pokud je nepoužívá):
+
+\begin{lstlisting}[caption=Základní script]
+function onDataChanged(data, dev, cmd, index) {
+    return "";
+}
+
+function onKeyPress(key) {
+
+}
+\end{lstlisting}
+
+{\color{blue}\verb/onDataChanged(data, dev, cmd, index)/} je volána při změně pozice v datech (tj. když přijdou nová data nebo uživatel pohne posuvníkem historie). Může vracet \verb/string/, který se přidá do terminálu.
+
+\begin{itemize}
+    \item \verb/data/ -- {\bf pole s Integery} obsahující příchozí data
+    \item \verb/dev/ -- {\bf Integer} s ID zařízení (může být definováno v hlavičce packetu -- pokud není, \verb/dev/ se rovná -1)
+    \item \verb/cmd/ -- {\bf Integer} s ID příkazu (může být definováno v hlavičce packetu -- pokud není, \verb/cmd/ se rovná -1)
+    \item \verb/index/ -- {\bf Integer} s indexem packetu v příchozích datech.
+\end{itemize}
+
+{\color{blue}\verb/onKeyPress(key)/} je volána po stisku klávesy v terminálu. Tato funkce by neměla vracet nic.
+\begin{itemize}
+    \item \verb/key/ -- {\bf String} se stisknutou klávesou
+\end{itemize}
+
+\subsection*{Dostupné funkce}
+\addcontentsline{toc}{subsection}{Dostupné funkce}
+Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...), jejich reference najdete na internetu. Samotný Lorris poskytuje další rozšiřující funkce. 
+
+\begin{itemize}
+    \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.
+        \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu]
+function onKeyPress(key) {
+    appendTerm(key); // vypise _key_ do terminalu
+}
+        \end{lstlisting}
+
+    \item {\color{blue}\verb/clearTerm()/} -- vyčistí terminál.
+        \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu a jeho vyčištění po stisku klávesy C]
+function onKeyPress(key) {
+    if(key == "c")
+        clearTerm(); // vycisti terminal
+    else
+        appendTerm(key); // vypise _key_ do terminalu
+}
+        \end{lstlisting}
+
+    \item {\color{blue}\verb/sendData(pole Integerů)/} -- pošle data do zařizení
+        \begin{lstlisting}[caption=Poslání ASCII kódu stisknuté klávesy]
+function onKeyPress(key) {
+    sendData(new Array(key.charCodeAt(0)));
+}
+        \end{lstlisting}
+
+    \item {\color{blue}\verb/newXXXXWidget()/} -- tato funkce potřebuje o něco obsáhlejší popis, který je v následující kapitole
+\end{itemize}
+
+\subsection*{Vytvoření widgetu}
+\addcontentsline{toc}{subsection}{Vytvoření widgetu}
+
+Script může vytvořit všechny ostatní typy widgetů a posílat do nich data. Samotných funkcí je několik, každá vytvoří jiný typ widgetu:
+\begin{itemize}
+    \item {\color{blue}\verb/newNumberWidget(...)/} -- vytvoří widget \It{číslo}
+    \item {\color{blue}\verb/newBarWidget(...)/} -- vytvoří widget \It{sloupcový bar}
+    \item {\color{blue}\verb/newColorWidget(...)/} -- vytvoří widget \It{barva}
+    \item {\color{blue}\verb/newGraphWidget(...)/} -- vytvoří widget \It{graf}
+    \item {\color{blue}\verb/newInputWidget(...)/} -- vytvoří widget \It{vstup} (dostupný pouze ze scriptu)
+\end{itemize}
+
+Všechny tyto funkce mají stejné parametry:
+{\color{blue}
+\begin{verbatim}newXXXXWidget("jméno");
+newXXXXWidget("jméno", šířka, výška);
+newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
+\end{verbatim}
+}
+
+\begin{itemize}
+    \item \verb/jméno/ -- {\bf String}, jméno widgetu, zobrazí se v titulku
+    \item \verb/šířka/ -- {\bf Integer}, šířka widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
+    \item \verb/výška/ -- {\bf Integer}, výška widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
+    \item \verb/Xoffset/ -- {\bf Integer}, vodorovná vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
+     \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
+\end{itemize}
+\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastavení jeho hodnoty z příchozích dat]
+var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
+
+function onDataChanged(data, dev, cmd, index) {
+    cislo.setValue(data[0]);
+    return "";
+}
+\end{lstlisting}
+\newpage
+\addcontentsline{toc}{section}{PŘÍLOHA B: Reference}
  \begin{thebibliography}{99}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
@@ -748,7 +903,7 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 \end{thebibliography}
 
 \newpage
-\addcontentsline{toc}{subsection}{Seznam obrázků} % pøidá seznam obrázkù do obsahu 
+\addcontentsline{toc}{section}{PŘÍLOHA C: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
 \listoffigures   % seznam obrázkù 
 
