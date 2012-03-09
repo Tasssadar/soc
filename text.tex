@@ -63,6 +63,8 @@
    tabsize=2,
    breaklines=true,
    showtabs=false,
+   aboveskip=5mm,
+   belowskip=5mm,
    captionpos=b
 }
 
@@ -701,7 +703,7 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 
 \section*{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
 \addcontentsline{toc}{section}{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
-Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Prostě je to hodně podobné JavaScriptu a většinou můžete použít jeho referenci.
+Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Prostě je to hodně podobné JavaScriptu a většinou můžete použít jeho referenci. Tento text předpokládá alespoň základní znalost JavaScriptu nebo podobného programovacího jazyku.
 
 \begin{itemize}
     \item \url{http://en.wikipedia.org/wiki/ECMAScript}
@@ -791,7 +793,7 @@ Script může vytvořit všechny ostatní typy widgetů a posílat do nich data.
     \item {\color{blue}\verb/newInputWidget(...)/} -- vytvoří widget \It{vstup} (dostupný pouze ze scriptu)
 \end{itemize}
 
-Všechny tyto funkce mají stejné parametry:
+Všechny tyto funkce mají stejné parametry a vrací object widgetu.
 {\color{blue}
 \begin{verbatim}newXXXXWidget("jméno");
 newXXXXWidget("jméno", šířka, výška);
@@ -806,6 +808,7 @@ newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
     \item \verb/Xoffset/ -- {\bf Integer}, vodorovná vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
      \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
 \end{itemize}
+
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastavení jeho hodnoty z příchozích dat]
 var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
 
@@ -814,6 +817,24 @@ function onDataChanged(data, dev, cmd, index) {
     return "";
 }
 \end{lstlisting}
+
+\subsection*{Dostupné funkce widgetů}
+\addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
+Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget - díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
+
+\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{width}]
+var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
+cislo.width = 40; // nastaveni sirky widgetu
+\end{lstlisting}
+
+Popis slotů je taktéž v Qt referenci, tentokrát pod kapitolou \uv{Public slots}. Používají se jako metody:
+
+\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a použití slotu]
+var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
+cislo.setDisabled(true); // znemozneni interakce s widgetem
+\end{lstlisting}
+
+
 \newpage
 \addcontentsline{toc}{section}{PŘÍLOHA B: Reference}
  \begin{thebibliography}{99}
