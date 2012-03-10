@@ -481,7 +481,7 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 %DOP: že umožní zprcování hodně typů dat?
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=0.5]{img/w_script_src.png}
+\includegraphics[width=\textwidth]{img/w_script_src.png}
 \caption{Dialog pro nastavení zdrojového scriptu}
 \end{center}
 \end{figure}
@@ -939,7 +939,7 @@ graf.updateVisibleArea();
 
 \subsubsection*{Widget vstup}
 \addcontentsline{toc}{subsubsection}{Widget vstup}
-Tento widget lze vyvořit pouze ze scriptu a umí zobrazit a ovládat většinu Qt widgetů\footnote{\url{http://qt-project.org/doc/qt-4.7/widgets-and-layouts.html}}, například tlačítko (\verb/QPushButton/), zaškrtávací políčko (\verb/QCheckBox/) či textové políčko (\verb/QLineEdit/). Dokumentace k těmto widgetům je v Qt referenci, opět můžete používat vlastnosti (\uv{Properties}) a funkce (\uv{Public slots}).\\
+Tento widget lze vytvořit pouze ze scriptu a umí zobrazit a ovládat většinu Qt widgetů\footnote{\url{http://qt-project.org/doc/qt-4.7/widgets-and-layouts.html}}, například tlačítko (\verb/QPushButton/), zaškrtávací políčko (\verb/QCheckBox/) či textové políčko (\verb/QLineEdit/). Dokumentace k těmto widgetům je v Qt referenci, opět můžete používat vlastnosti (\uv{Properties}) a funkce (\uv{Public slots}).\\
 Funkce widgetu \It{vstup}:
 \begin{itemize}
     \item {\color{blue}\verb/newWidget(String jméno, Integer roztahování = 0)/} -- Vytvoří a vrátí nový QWidget. \verb/jméno/ musí být jméno třídy widgetu, například QPushButton, QCheckBox nebo QLineEdit. \verb/roztahování/ značí jak moc se bude widget roztahovat oproti ostatním.
@@ -970,6 +970,7 @@ Widget vytvořený tímto příkladem vypadá takto:
 \end{center}
 \end{figure}
 
+\newpage
 QtScript podporuje i využití principu signálů a slotů, díky tomu lze ve scriptu reagovat například na stisknutí tlačítka.
 
 \noindent\begin{minipage}{\textwidth}
