@@ -36,7 +36,7 @@
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 
 \lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, for},
   keywordstyle=\color{blue}\bfseries,
   ndkeywords={class, export, boolean, throw, implements, import, this},
   ndkeywordstyle=\color{darkgray}\bfseries,
@@ -64,7 +64,7 @@
    breaklines=true,
    showtabs=false,
    aboveskip=5mm,
-   belowskip=5mm,
+   belowskip=7mm,
    captionpos=b
 }
 
@@ -477,7 +477,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \caption{Widget: script}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) - script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu je ve wiki u repozitáře programu: \url{https://github.com/Tasssadar/Lorris/wiki}.
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) - script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu je v \hyperref[script_ref]{příloze A}.
 %DOP: že umožní zprcování hodně typů dat?
 \begin{figure}[h]
 \begin{center}
@@ -703,6 +703,7 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 
 \section*{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
 \addcontentsline{toc}{section}{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
+\label{script_ref}
 Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Prostě je to hodně podobné JavaScriptu a většinou můžete použít jeho referenci. Tento text předpokládá alespoň základní znalost JavaScriptu nebo podobného programovacího jazyku.
 
 \begin{itemize}
@@ -725,6 +726,7 @@ Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtS
 \addcontentsline{toc}{subsection}{Základní script}
 Script by měl obsahovat následující dvě funkce (ale nemusí, pokud je nepoužívá):
 
+\noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Základní script]
 function onDataChanged(data, dev, cmd, index) {
     return "";
@@ -734,6 +736,7 @@ function onKeyPress(key) {
 
 }
 \end{lstlisting}
+\end{minipage}
 
 {\color{blue}\verb/onDataChanged(data, dev, cmd, index)/} je volána při změně pozice v datech (tj. když přijdou nová data nebo uživatel pohne posuvníkem historie). Může vracet \verb/string/, který se přidá do terminálu.
 
@@ -754,14 +757,17 @@ function onKeyPress(key) {
 Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...), jejich reference najdete na internetu. Samotný Lorris poskytuje další rozšiřující funkce. 
 
 \begin{itemize}
-    \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.
+    \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.\\
+        \noindent\begin{minipage}{\textwidth}
         \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu]
 function onKeyPress(key) {
     appendTerm(key); // vypise _key_ do terminalu
 }
         \end{lstlisting}
+        \end{minipage}
 
-    \item {\color{blue}\verb/clearTerm()/} -- vyčistí terminál.
+    \item {\color{blue}\verb/clearTerm()/} -- vyčistí terminál.\\
+        \noindent\begin{minipage}{\textwidth}
         \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu a jeho vyčištění po stisku klávesy C]
 function onKeyPress(key) {
     if(key == "c")
@@ -770,13 +776,16 @@ function onKeyPress(key) {
         appendTerm(key); // vypise _key_ do terminalu
 }
         \end{lstlisting}
+        \end{minipage}
 
-    \item {\color{blue}\verb/sendData(pole Integerů)/} -- pošle data do zařizení
+    \item {\color{blue}\verb/sendData(pole Integerů)/} -- pošle data do zařizení\\
+        \noindent\begin{minipage}{\textwidth}
         \begin{lstlisting}[caption=Poslání ASCII kódu stisknuté klávesy]
 function onKeyPress(key) {
     sendData(new Array(key.charCodeAt(0)));
 }
         \end{lstlisting}
+        \end{minipage}
 
     \item {\color{blue}\verb/newXXXXWidget()/} -- tato funkce potřebuje o něco obsáhlejší popis, který je v následující kapitole
 \end{itemize}
@@ -809,6 +818,7 @@ newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
      \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
 \end{itemize}
 
+\noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastavení jeho hodnoty z příchozích dat]
 var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
 
@@ -817,27 +827,182 @@ function onDataChanged(data, dev, cmd, index) {
     return "";
 }
 \end{lstlisting}
+\end{minipage}
 
 \subsection*{Dostupné funkce widgetů}
 \addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
 Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget - díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
 
+\noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{width}]
 var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
 cislo.width = 40; // nastaveni sirky widgetu
 \end{lstlisting}
+\end{minipage}
 
 Popis slotů je taktéž v Qt referenci, tentokrát pod kapitolou \uv{Public slots}. Používají se jako metody:
 
+\noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a použití slotu]
 var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
 cislo.setDisabled(true); // znemozneni interakce s widgetem
 \end{lstlisting}
+\end{minipage}
 
+Kromě těchto zděděných vlastností a funkcí má každý typ widgetu své vlastní.
 
 \newpage
-\addcontentsline{toc}{section}{PŘÍLOHA B: Reference}
+\subsubsection*{Widget číslo}
+\addcontentsline{toc}{subsubsection}{Widget číslo}
+\begin{itemize}
+    \item {\color{blue}\verb/setValue(Integer nebo double)/} - Nastaví hodnotu widgetu
+\end{itemize}
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Nastavení hodnoty widgetu \It{číslo}]
+var cislo = newNumberWidget("test cislo", 200, 100, -250, 0);
+cislo.setValue(40);
+...
+cislo.setValue(3.14);
+\end{lstlisting}
+\end{minipage}
+
+\subsubsection*{Widget sloupcový bar}
+\addcontentsline{toc}{subsubsection}{Widget sloupcový bar}
+\begin{itemize}
+    \item {\color{blue}\verb/setValue(Integer)/} - Nastaví hodnotu widgetu
+    \item {\color{blue}\verb/setRange(Integer min, Integer max)/} - Nastaví minimální a maximální hodnotu widgetu
+    \item {\color{blue}\verb/rotationSelected(Integer)/} - Nastaví rotaci sloupce. 0 pro svislou, 1 pro vodorovnou
+\end{itemize}
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Nastavení hodnot widgetu \It{sloupcový bar}]
+var bar = newBarWidget("test bar");
+bar.setRange(0, 100); // rozmezi hodnot 0 az 100
+bar.setValue(45); // nastaveni hodnoty na 45
+bar.rotationSelected(1); // otoceni na vodorovno
+\end{lstlisting}
+\end{minipage}
+
+\subsubsection*{Widget barva}
+\addcontentsline{toc}{subsubsection}{Widget barva}
+\begin{itemize}
+    \item {\color{blue}\verb/setValue(Integer r, Integer g, Integer b)/} - Nastaví barvu z hodnot RGB (každá 0 až 255)
+    \item {\color{blue}\verb/setValue(String barva)/} - Nastaví barvu z hex hodnoty jako v HTML (např. \#FF0000 pro červenou)
+\end{itemize}
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Nastavení hodnot widgetu \It{barva}]
+var bar = newColorWidget("test barva");
+bar.setValue(255, 255, 0);
+...
+bar.setValue("#00FF00");
+\end{lstlisting}
+\end{minipage}
+
+\subsubsection*{Widget graf}
+\addcontentsline{toc}{subsubsection}{Widget graf}
+Tento widget se od ostatních poměrně výrazně liší - je třeba nejdříve vytvořit křivku až té nastavovat hodnoty. Funkce samotného widgetu graf jsou tyto:
+\begin{itemize}
+    \item {\color{blue}\verb/addCurve(String jméno, String barva)/} -- Vytvoří a vrátí novou křivku. \verb/barva/ může být buďto html název (např. red, blue) nebo HTML hex zápis (např. \#FF0000)
+    \item {\color{blue}\verb/setAxisScale(bool proX, double min, double max)/} -- Nastaví měřítko os. \verb/proX/ je {\bf true} pokud nastavujete měřítko osy $x$
+    \item {\color{blue}\verb/updateVisibleArea()/} -- Přesune pohled na nejvyšší hodnotu osy $x$
+\end{itemize}
+
+{\color{blue}\verb/addCurve(String jméno, String barva)/} vrátí křivku, která má tyto funkce:
+
+\begin{itemize}
+    \item {\color{blue}\verb/addPoint(Integer index, double hodnota)/} -- Vloží bod křivky. \verb/index/ určuje pořadí bodů (bod s indexem 0 bude vždy před bodem s indexem 50, i když bude vložen až po něm). Pokud bod se stejným indexem už existuje, je jeho hodnota změněna
+    \item {\color{blue}\verb/clear()/} -- Smaže všechny body křivky
+\end{itemize}
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Zobrazení křivky funkce sinus ve widgetu \It{graf}]
+var graf = newGraphWidget("graf", 400, 250, -420, 0);
+graf.setAxisScale(false, -105, 105); // merito osy y
+graf.setAxisScale(true, 0, 200); // merito osy x
+
+// vytvoreni krivky sin
+var sin = graf.addCurve("sin", "blue"); 
+
+// pridani bodu do krivky sin
+var sinVal = 0;
+for(var i = 0; i < 500; ++i)
+{
+    sin.addPoint(i, Math.sin(sinVal)*100);
+    sinVal += 0.1;
+}
+// presunuti na posledni hodnotu krivky
+graf.updateVisibleArea(); 
+\end{lstlisting}
+\end{minipage}
+
+\subsubsection*{Widget vstup}
+\addcontentsline{toc}{subsubsection}{Widget vstup}
+Tento widget lze vyvořit pouze ze scriptu a umí zobrazit a ovládat většinu Qt widgetů\footnote{\url{http://qt-project.org/doc/qt-4.7/widgets-and-layouts.html}}, například tlačítko (\verb/QPushButton/), zaškrtávací políčko (\verb/QCheckBox/) či textové políčko (\verb/QLineEdit/). Dokumentace k těmto widgetům je v Qt referenci, opět můžete používat vlastnosti (\uv{Properties}) a funkce (\uv{Public slots}).\\
+Funkce widgetu \It{vstup}:
+\begin{itemize}
+    \item {\color{blue}\verb/newWidget(String jméno, Integer roztahování = 0)/} -- Vytvoří a vrátí nový QWidget. \verb/jméno/ musí být jméno třídy widgetu, například QPushButton, QCheckBox nebo QLineEdit. \verb/roztahování/ značí jak moc se bude widget roztahovat oproti ostatním.
+\end{itemize}
+
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Widget \It{vstup} -- vytvoření QLabel]
+var vstup = newInputWidget("test vstupu", 150, 100, -160, 0);
+var label = vstup.newWidget("QLabel", 1);
+
+// zarovnani textu na stred. 
+// 0x0080 a 0x0004 jsou konstanty Qt Frameworku 
+// Qt::AlignHCenter a Qt::AlignVCenter
+label.alignment = 0x0080 | 0x0004;
+
+// nastaveni textu
+label.text = "Testovaci popisek";
+\end{lstlisting}
+\end{minipage}
+
+Widget vytvořený tímto příkladem vypadá takto:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{img/ref_input.png}
+\caption{Widget \It{vstup} -- vytvoření QLabel}
+\end{center}
+\end{figure}
+
+QtScript podporuje i využití principu signálů a slotů, díky tomu lze ve scriptu reagovat například na stisknutí tlačítka.
+
+\noindent\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption=Widget \It{vstup} -- tlačítko]
+var vstup = newInputWidget("test vstupu", 150, 100, -160, 0);
+
+var rychlost = vstup.newWidget("QLineEdit");
+rychlost.text = "100";
+
+var btn = vstup.newWidget("QPushButton", 1);
+btn.text = "Nastavit";
+
+function posliRychlost()
+{
+    var speed = parseInt(rychlost.text);
+    sendData(new Array(speed));
+    appendTerm("Rychlost " + speed + "odeslana\n");
+}
+// Pripojeni signalu "clicked" na slot posliRychlost()
+btn.clicked.connect(posliRychlost);
+\end{lstlisting}
+\end{minipage}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{img/ref_input2.png}
+\caption{Widget \It{vstup} -- tlačítko}
+\end{center}
+\end{figure}
+
+\newpage
  \begin{thebibliography}{99}
+\addcontentsline{toc}{section}{PŘÍLOHA B: Reference}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
@@ -924,8 +1089,9 @@ cislo.setDisabled(true); // znemozneni interakce s widgetem
 \end{thebibliography}
 
 \newpage
+\listoffigures   % seznam obrázkù 
 \addcontentsline{toc}{section}{PŘÍLOHA C: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
-\listoffigures   % seznam obrázkù 
+
 
 \end{document}
