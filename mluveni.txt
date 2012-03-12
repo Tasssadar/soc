@@ -1,5 +1,8 @@
 Dobrý den, vážená poroto, úvod...
 
+Při stavbě robotů na různé soutěže jsem se setkal s problémem při zpracovávání dat z poměrně velkého množství senzorů které robot obsahuje - například náš loňský Eurobot měl 5 ultrazvukových měřáků vzdálenosti, enkodéry pro měření ujeté vzdálenosti a několik tlačítek, které sledují náraz do mantinelu. Když k tomu připočteme ještě data ze samotného řídícího programu, tvoří to značné množství dat, která je potřeba k ladění robota zobrazovat. Cílem mojí práce proto je vytvořit grafické rozhraní které tuto činnost zvládne rychle a přehledně.
 
-Moje aplikace se jmenuje Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
-Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub.
+Aplikace, kterou jsem vytvořil nese jméno Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
+Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub, na kterém jsem vytvořil i jednoduchý web s popisem programu, odkazy ke stažení spustitelných souborů pro Windows, návodem ke zkompilování a videem, ve kterém aplikaci představuji.
+Program má modulární strukturu, díky čemuž může sjednotit několik nástrojů, které mají podobnou oblast použití. Aplikace obsahuje moduly Analyzér, který parsuje a zobrazuje data v grafické podobě, Proxy mezi sériovým portem a TCP socketem, která umožňuje připojení k zařízení (např. nějákému čipu) přes internet, modul pro obsluhu programátoru Shupito a Terminál.
+Jednotlivé moduly se otevírají v záložkách, podobně jako stránky ve webovém prohlížeči. Základní část poskytuje připojení k zařízení, správu záložek s moduly, úložiště pro nastavení aplikace a správu joysticku, zpracovávání dat probíhá v modulech. 
