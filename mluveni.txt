@@ -1,0 +1,5 @@
+Dobrý den, vážená poroto, úvod...
+
+
+Moje aplikace se jmenuje Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
+Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub.
