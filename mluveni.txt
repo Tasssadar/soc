@@ -6,3 +6,41 @@ Aplikace, kterou jsem vytvořil nese jméno Lorris, je napsaná v C++ s použit�
 Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub, na kterém jsem vytvořil i jednoduchý web s popisem programu, odkazy ke stažení spustitelných souborů pro Windows, návodem ke zkompilování a videem, ve kterém aplikaci představuji.
 Program má modulární strukturu, díky čemuž může sjednotit několik nástrojů, které mají podobnou oblast použití. Aplikace obsahuje moduly Analyzér, který parsuje a zobrazuje data v grafické podobě, Proxy mezi sériovým portem a TCP socketem, která umožňuje připojení k zařízení (např. nějákému čipu) přes internet, modul pro obsluhu programátoru Shupito a Terminál.
 Jednotlivé moduly se otevírají v záložkách, podobně jako stránky ve webovém prohlížeči. Základní část poskytuje připojení k zařízení, správu záložek s moduly, úložiště pro nastavení aplikace a správu joysticku, zpracovávání dat probíhá v modulech. 
+
+Moduly se mohou k zařízení připojit pomocí Sériového portu, TCP socketu nebo mohou jen načíst data ze souboru.
+
+
+Prvním modulem který vám představím je Analyzér, který zpracovává přijatá data a zobrazuje je v grafických widgetech. Mám připravené video, ve kterém analyzér názorně představím. 
+*POPIS videa* nebo naživo?
+
+Widget:
+- číslo
+- sloupcový bar
+- barva
+- graf
+- script
+
+že další typy widgetů lze prakticky donekonečna přidávat
+
+
+Proxy mezi sériovým portem a TCP socketem
+- tento modul vytvoří server, na který je možné se přes internet připojit buďto z Lorris nebo jiného programu
+- přeposílá data se sériového portu
+- TODO? použití? nic mě nenapadá
+
+Shupito
+- Shupito je programátor mikročipů vytvořený Martinem Vejnárem
+- Rozhrani SPI, PDI a JTAG
+- modul dokáže shupito obsluhovat - číst, programovat a mazat čipy
+- shupito má také schopnost vytvořit tunel pro RS232 linku z programovaného čipu do počítače. Lorris umí těto schopnosti využít - aktivní tunel se zobrazí jako nový typ připojení a pracuje se s ním stejně, jako kdyby to byl sériový port.
+
+
+Terminál
+- Klasický terminál
+- Příchozí data zobrazuje buďto jako text (s podporou kontrolních znaků) nebo hex dump.
+- odesílá stisky kláves
+- podporuje ATmega bootloader, který umožňuje programování čipů přes bluetooth, bez programátoru.
+
+
+Použití
+ - Barevný senzor 
