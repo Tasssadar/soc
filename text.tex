@@ -475,10 +475,12 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \begin{center}
 \includegraphics[scale=0.8]{img/w_script.png}
 \caption{Widget: script}
+\label{script_w}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek nad tímto textem), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) - script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu je v \hyperref[script_ref]{příloze A}.
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
 %DOP: že umožní zprcování hodně typů dat?
+%TODO Qtscript ref
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/w_script_src.png}
@@ -685,15 +687,15 @@ Vytvořená aplikace splňuje všechny stanovené požadavky:
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
 
-Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříz, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Počet řádků kódu v programu je v současné době (8.3.2012) tento:
+Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříz, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (8.3.2012) skoro 14 tisíc řádků kódu (bez knihoven třetích stran).
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/cloc_edit.png}
-\caption{Počet řádků spočítaný programem CLOC\cite{cloc} (bez knihoven třetích stran)}
+\caption{Počet řádků spočítaný programem CLOC\cite{cloc}}
 \end{center}
 \end{figure}
 
-Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu rád vytvořil podobný program (hlavně vlastnosti modulu Analyzér) pro přenosná zařízení (chytrý mobilní telefon či tablet), protože pro tyto zařízení žádná taková aplikace v současné době neexistuje a chtěl bych vyzkoušet programování pro tyto platformy (zejména pro Google Android\cite{android}).
+Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu rád vytvořil podobný program (hlavně vlastnosti modulu Analyzér) pro přenosná zařízení (chytrý mobilní telefon či tablet), protože pro tato zařízení žádná taková aplikace v současné době neexistuje a chtěl bych vyzkoušet programování pro tyto platformy (zejména pro Google Android\cite{android}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -709,19 +711,9 @@ Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtS
 \begin{itemize}
     \item \url{http://en.wikipedia.org/wiki/ECMAScript}
     \item \url{https://qt-project.org/doc/qt-4.8/scripting.html}
-    \item \url{http://www.w3schools.com/jsref/default.asp} - JS reference
+    \item \url{http://www.w3schools.com/jsref/default.asp} -- JS reference
 \end{itemize}
 
-\subsection*{Pár věcí na které je třeba myslet}
-\addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
-\begin{itemize}
-    \item Widgety vytvořené ze scriptu se neukládájí do datového souboru - po načtení se vytvoří znovu, bez dat.
-    \item Stav proměnných ve scritptu se zatím (?) neukládá do souboru.
-    \item Po stisknutí "Ok" nebo "Použít" v dialogu nastavení scritpu se script načte znovu - staré widgety se smažou a vytvoří nové, bez dat.
-    \item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
-\end{itemize}
-
-\newpage
 \subsection*{Základní script}
 \addcontentsline{toc}{subsection}{Základní script}
 Script by měl obsahovat následující dvě funkce (ale nemusí, pokud je nepoužívá):
@@ -831,7 +823,7 @@ function onDataChanged(data, dev, cmd, index) {
 
 \subsection*{Dostupné funkce widgetů}
 \addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
-Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget - díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
+Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget -- díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
 
 \noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{width}]
@@ -855,7 +847,7 @@ Kromě těchto zděděných vlastností a funkcí má každý typ widgetu své v
 \subsubsection*{Widget číslo}
 \addcontentsline{toc}{subsubsection}{Widget číslo}
 \begin{itemize}
-    \item {\color{blue}\verb/setValue(Integer nebo double)/} - Nastaví hodnotu widgetu
+    \item {\color{blue}\verb/setValue(Integer nebo double)/} -- Nastaví hodnotu widgetu
 \end{itemize}
 
 \noindent\begin{minipage}{\textwidth}
@@ -870,9 +862,9 @@ cislo.setValue(3.14);
 \subsubsection*{Widget sloupcový bar}
 \addcontentsline{toc}{subsubsection}{Widget sloupcový bar}
 \begin{itemize}
-    \item {\color{blue}\verb/setValue(Integer)/} - Nastaví hodnotu widgetu
-    \item {\color{blue}\verb/setRange(Integer min, Integer max)/} - Nastaví minimální a maximální hodnotu widgetu
-    \item {\color{blue}\verb/rotationSelected(Integer)/} - Nastaví rotaci sloupce. 0 pro svislou, 1 pro vodorovnou
+    \item {\color{blue}\verb/setValue(Integer)/} -- Nastaví hodnotu widgetu
+    \item {\color{blue}\verb/setRange(Integer min, Integer max)/} -- Nastaví minimální a maximální hodnotu widgetu
+    \item {\color{blue}\verb/rotationSelected(Integer)/} -- Nastaví rotaci sloupce. 0 pro svislou, 1 pro vodorovnou
 \end{itemize}
 
 \noindent\begin{minipage}{\textwidth}
@@ -887,8 +879,8 @@ bar.rotationSelected(1); // otoceni na vodorovno
 \subsubsection*{Widget barva}
 \addcontentsline{toc}{subsubsection}{Widget barva}
 \begin{itemize}
-    \item {\color{blue}\verb/setValue(Integer r, Integer g, Integer b)/} - Nastaví barvu z hodnot RGB (každá 0 až 255)
-    \item {\color{blue}\verb/setValue(String barva)/} - Nastaví barvu z hex hodnoty jako v HTML (např. \#FF0000 pro červenou)
+    \item {\color{blue}\verb/setValue(Integer r, Integer g, Integer b)/} -- Nastaví barvu z hodnot RGB (každá 0 až 255)
+    \item {\color{blue}\verb/setValue(String barva)/} -- Nastaví barvu z hex hodnoty jako v HTML (např. \#FF0000 pro červenou)
 \end{itemize}
 
 \noindent\begin{minipage}{\textwidth}
@@ -902,7 +894,7 @@ bar.setValue("#00FF00");
 
 \subsubsection*{Widget graf}
 \addcontentsline{toc}{subsubsection}{Widget graf}
-Tento widget se od ostatních poměrně výrazně liší - je třeba nejdříve vytvořit křivku až té nastavovat hodnoty. Funkce samotného widgetu graf jsou tyto:
+Tento widget se od ostatních poměrně výrazně liší -- je třeba nejdříve vytvořit křivku až té nastavovat hodnoty. Funkce samotného widgetu graf jsou tyto:
 \begin{itemize}
     \item {\color{blue}\verb/addCurve(String jméno, String barva)/} -- Vytvoří a vrátí novou křivku. \verb/barva/ může být buďto html název (např. red, blue) nebo HTML hex zápis (např. \#FF0000)
     \item {\color{blue}\verb/setAxisScale(bool proX, double min, double max)/} -- Nastaví měřítko os. \verb/proX/ je {\bf true} pokud nastavujete měřítko osy $x$
@@ -1000,6 +992,15 @@ btn.clicked.connect(posliRychlost);
 \caption{Widget \It{vstup} -- tlačítko}
 \end{center}
 \end{figure}
+
+\subsection*{Pár věcí, na které je třeba při programování myslet}
+\addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
+\begin{itemize}
+    \item Widgety vytvořené ze scriptu se neukládájí do datového souboru -- po načtení se vytvoří znovu, bez dat.
+    \item Stav proměnných ve scritptu se zatím neukládá do souboru.
+    \item Po stisknutí "Ok" nebo "Použít" v dialogu nastavení scritpu se script načte znovu -- staré widgety se smažou a vytvoří nové, bez dat.
+    \item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
+\end{itemize}
 
 \newpage
  \begin{thebibliography}{99}
