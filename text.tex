@@ -309,7 +309,6 @@ Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového p
 \end{itemize}
 
 
-
 \subsection*{Porovnání aplikací}
 \addcontentsline{toc}{subsection}{Porovnání aplikací}
 Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v kapitole \uv{Požadavky na aplikaci}.
@@ -478,7 +477,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \label{script_w}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
 %DOP: že umožní zprcování hodně typů dat?
 %TODO Qtscript ref
 \begin{figure}[h]
@@ -650,30 +649,6 @@ Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují
 \end{figure}
 
 \newpage
-%DOP: dát do příloh?
-\section{Knihovny třetích stran, licence}
-%\addcontentsline{toc}{section}{Knihovny třetích stran, licence}
-\subsection{Knihovny třetích stran}
-%\addcontentsline{toc}{subsection}{Knihovny třetích stran}
-\begin{itemize}
-    \item {\bf Qwt}\cite{qwt} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci zatím z této knihovny používám pouze graf (v modulu analyzéru).
-    \item {\bf QExtSerialPort}\cite{qext} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.
-    \item {\bf QHexEdit2}\cite{qhex} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, týkajících se především vzhledu.
-\end{itemize}
-
-\subsection{Licence}
-%\addcontentsline{toc}{subsection}{Licence}
-Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých programů a knihoven jsou následující:
-\begin{itemize}
-    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\cite{lgpl}
-    \item {\bf Qwt} je distribuováno pod Qwt license\cite{qwtlicense}, která je založená na GNU LGPLv2.1
-    \item {\bf QExtSerialPort} je distribuován pod The New BSD License\cite{newbsd}
-    \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
-    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\cite{boost}
-\end{itemize}
-
-Všechny tyto licence umožňují svobodné používání a šíření kódu.
-
 \section*{Závěr}
 \addcontentsline{toc}{section}{Závěr}
 Vytvořená aplikace splňuje všechny stanovené požadavky:
@@ -703,10 +678,10 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 %\section*{PŘÍLOHY}
 %\addcontentsline{toc}{section}{PŘÍLOHY}
 
-\section*{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
-\addcontentsline{toc}{section}{PŘÍLOHA A: Podrobný popis widgetu \It{script} z modulu Analyzér}
+\section*{Reference k widgetu \It{script}}
+\addcontentsline{toc}{section}{PŘÍLOHA A: Reference k widgetu \It{script}}
 \label{script_ref}
-Script widget umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Prostě je to hodně podobné JavaScriptu a většinou můžete použít jeho referenci. Tento text předpokládá alespoň základní znalost JavaScriptu nebo podobného programovacího jazyku.
+Widget \It{script} umožňuje parsování dat pomocí scriptu, který se píše v QtScriptu, který je založený na standartu ECMAScript, na kterém je založený JavaScript. Jazyk je hodně podobný JavaScriptu a většinou můžete použít jeho referenci. Tento text předpokládá alespoň základní znalost JavaScriptu nebo podobného programovacího jazyku.
 
 \begin{itemize}
     \item \url{http://en.wikipedia.org/wiki/ECMAScript}
@@ -746,7 +721,7 @@ function onKeyPress(key) {
 
 \subsection*{Dostupné funkce}
 \addcontentsline{toc}{subsection}{Dostupné funkce}
-Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...), jejich reference najdete na internetu. Samotný Lorris poskytuje další rozšiřující funkce. 
+Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...) a samotný Lorris poskytuje další rozšiřující funkce. 
 
 \begin{itemize}
     \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.\\
@@ -1003,8 +978,30 @@ btn.clicked.connect(posliRychlost);
 \end{itemize}
 
 \newpage
+\section*{Knihovny třetích stran}
+\addcontentsline{toc}{section}{PŘÍLOHA B: Knihovny třetích stran}
+\begin{itemize}
+    \item {\bf Qwt}\cite{qwt} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci zatím z této knihovny používám pouze graf (v modulu analyzéru).
+    \item {\bf QExtSerialPort}\cite{qext} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.
+    \item {\bf QHexEdit2}\cite{qhex} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, týkajících se především vzhledu.
+\end{itemize}
+
+\section*{Licence}
+\addcontentsline{toc}{section}{PŘÍLOHA C: Licence}
+Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých programů a knihoven jsou následující:
+\begin{itemize}
+    \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\cite{lgpl}
+    \item {\bf Qwt} je distribuováno pod Qwt license\cite{qwtlicense}, která je založená na GNU LGPLv2.1
+    \item {\bf QExtSerialPort} je distribuován pod The New BSD License\cite{newbsd}
+    \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
+    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\cite{boost}
+\end{itemize}
+
+Všechny tyto licence umožňují svobodné používání a šíření kódu.
+
+\newpage
  \begin{thebibliography}{99}
-\addcontentsline{toc}{section}{PŘÍLOHA B: Reference}
+\addcontentsline{toc}{section}{PŘÍLOHA D: Reference}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
@@ -1035,6 +1032,10 @@ btn.clicked.connect(posliRychlost);
     \bibitem{github} \It{GitHub} -- Social Coding \\
     \url{https://github.com}\\
     (Stav ke dni 6.3.2012)
+
+    \bibitem{qtscript} \It{Making Applications Scriptable} \\
+    \url{http://qt-project.org/doc/qt-4.8/scripting.html}\\
+    (Stav ke dni 13.3.2012)
 
     \bibitem{avr232client} \It{avr232client} \\
     \url{http://technika.junior.cz/trac/wiki/avr232client}\\
@@ -1092,7 +1093,7 @@ btn.clicked.connect(posliRychlost);
 
 \newpage
 \listoffigures   % seznam obrázkù 
-\addcontentsline{toc}{section}{PŘÍLOHA C: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
+\addcontentsline{toc}{section}{PŘÍLOHA E: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
 
 
