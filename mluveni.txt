@@ -43,4 +43,8 @@ Terminál
 
 
 Použití
- - Barevný senzor 
+ - Barevný senzor
+- Enkodéry
+- PID regulátor
+- jízda po čáře
+- eurobot
