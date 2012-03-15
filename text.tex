@@ -886,8 +886,8 @@ Tento widget se od ostatních poměrně výrazně liší -- je třeba nejdříve
 \noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Zobrazení křivky funkce sinus ve widgetu \It{graf}]
 var graf = newGraphWidget("graf", 400, 250, -420, 0);
-graf.setAxisScale(false, -105, 105); // merito osy y
-graf.setAxisScale(true, 0, 200); // merito osy x
+graf.setAxisScale(false, -105, 105); // meritko osy y
+graf.setAxisScale(true, 0, 200); // meritko osy x
 
 // vytvoreni krivky sin
 var sin = graf.addCurve("sin", "blue"); 
@@ -973,7 +973,7 @@ btn.clicked.connect(posliRychlost);
 \begin{itemize}
     \item Widgety vytvořené ze scriptu se neukládájí do datového souboru -- po načtení se vytvoří znovu, bez dat.
     \item Stav proměnných ve scritptu se zatím neukládá do souboru.
-    \item Po stisknutí "Ok" nebo "Použít" v dialogu nastavení scritpu se script načte znovu -- staré widgety se smažou a vytvoří nové, bez dat.
+    \item Po stisknutí \uv{Ok} nebo \uv{Použít} v dialogu nastavení scritpu se script načte znovu -- staré widgety se smažou a vytvoří nové, bez dat.
     \item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
 \end{itemize}
 

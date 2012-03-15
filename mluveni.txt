@@ -1,6 +1,7 @@
 Dobrý den, vážená poroto, vážení diváci
 
-Při stavbě robotů na různé soutěže jsem se setkal s problémem při zpracovávání dat z poměrně velkého množství senzorů které robot obsahuje - například náš loňský Eurobot měl 5 ultrazvukových měřáků vzdálenosti, enkodéry pro měření ujeté vzdálenosti a několik tlačítek, které sledují náraz do mantinelu. Když k tomu připočteme ještě data ze samotného řídícího programu, tvoří to značné množství dat, která je potřeba k ladění robota zobrazovat. Cílem mojí práce proto je vytvořit grafické rozhraní které tuto činnost zvládne rychle a přehledně.
+Při stavbě robotů na různé soutěže jsem se setkal s problémem při zpracovávání dat z poměrně velkého množství senzorů které robot obsahuje - například náš loňský Eurobot měl 5 ultrazvukových měřáků vzdálenosti, enkodéry pro měření ujeté vzdálenosti a několik tlačítek, které sledují náraz do mantinelu. Když k tomu připočteme ještě data ze samotného řídícího programu, tvoří to značné množství dat, která je potřeba k ladění robota zobrazovat. Zkusil jsem tedy najít nějákou aplikaci, která by splňovala mé požadavky, bohužel jsem nenašel žádnou, která by mi úplně vyhovovala, proto jsem se rozhodl vytvořit vlastní aplikaci.
+
 
 Aplikace, kterou jsem vytvořil nese jméno Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
 Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub, na kterém jsem vytvořil i jednoduchý web s popisem programu, odkazy ke stažení spustitelných souborů pro Windows, návodem ke zkompilování a videem, ve kterém aplikaci představuji.
