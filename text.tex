@@ -82,7 +82,9 @@
 \newcommand\figcaption{\def\@captype{figure}\caption}
 \makeatother
 
-\def\refname{Literatura} 
+\renewcommand\refname{Literatura} 
+%\def\bibname{PŘÍLOHA D: Reference}
+\renewcommand\bibname{PŘÍLOHA D: Reference}
 % přejmenuje anglický název Reference na české Literatura
 
 
@@ -662,7 +664,7 @@ Vytvořená aplikace splňuje všechny stanovené požadavky:
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
 
-Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříz, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (8.3.2012) skoro 14 tisíc řádků kódu (bez knihoven třetích stran).
+Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříž, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (8.3.2012) asi 14 a půl tisíce řádků kódu (bez knihoven třetích stran).
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/cloc_edit.png}
@@ -678,6 +680,7 @@ Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu r�
 %\section*{PŘÍLOHY}
 %\addcontentsline{toc}{section}{PŘÍLOHY}
 
+\section*{PŘÍLOHA A:}
 \section*{Reference k widgetu \It{script}}
 \addcontentsline{toc}{section}{PŘÍLOHA A: Reference k widgetu \It{script}}
 \label{script_ref}
@@ -978,6 +981,7 @@ btn.clicked.connect(posliRychlost);
 \end{itemize}
 
 \newpage
+\section*{PŘÍLOHA B:}
 \section*{Knihovny třetích stran}
 \addcontentsline{toc}{section}{PŘÍLOHA B: Knihovny třetích stran}
 \begin{itemize}
@@ -986,6 +990,7 @@ btn.clicked.connect(posliRychlost);
     \item {\bf QHexEdit2}\cite{qhex} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, týkajících se především vzhledu.
 \end{itemize}
 
+\section*{PŘÍLOHA C:}
 \section*{Licence}
 \addcontentsline{toc}{section}{PŘÍLOHA C: Licence}
 Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých programů a knihoven jsou následující:
@@ -1000,6 +1005,7 @@ Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých progr
 Všechny tyto licence umožňují svobodné používání a šíření kódu.
 
 \newpage
+ \section*{PŘÍLOHA D:}
  \begin{thebibliography}{99}
 \addcontentsline{toc}{section}{PŘÍLOHA D: Reference}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
@@ -1092,6 +1098,7 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
 \end{thebibliography}
 
 \newpage
+\section*{PŘÍLOHA E:}
 \listoffigures   % seznam obrázkù 
 \addcontentsline{toc}{section}{PŘÍLOHA E: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
