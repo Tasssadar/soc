@@ -265,9 +265,10 @@ Main feature of this application is modularity -- it is divided to sub-sections 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\pagestyle{plain}
 
 \setlength{\voffset}{-20mm} % posune text/obrázek na této stránce nahoru
-%\setcounter{page}{1}  % nastaví čítač stránek znovu od jedné
+\setcounter{page}{1}  % nastaví čítač stránek znovu od jedné
 
 \tableofcontents  % vysází obsah
 
@@ -452,7 +453,7 @@ Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupníc
 \end{figure}
 Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
 
-\newpage
+%\newpage
 \subsection{Widget: graf}
 %\addcontentsline{toc}{subsection}{Widget: graf}
 \begin{figure}[h]
@@ -469,7 +470,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \end{center}
 \end{figure}
 
-\newpage
+%\newpage
 \subsection{Widget: script}
 %\addcontentsline{toc}{subsection}{Widget: script}
 \begin{figure}[h]
@@ -540,6 +541,7 @@ Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čip
 \end{center}
 \end{figure}
 
+\newpage
 \section{Modul: Terminál}
 %\addcontentsline{toc}{section}{Modul: Terminál} 
 %\addcontentsline{toc}{subsection}{Popis}
@@ -579,7 +581,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \\
 {\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_enc_term.png}
 %DOP y/i?
@@ -588,7 +590,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_enc_analyzer.png}
 \caption{Data z enkodérů zpracovaná analyzérem}
@@ -604,10 +606,9 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 {\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
-
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{img/use_pid.png}
+\includegraphics[scale=0.72]{img/use_pid.png}
 \caption{Ladění PID regulátoru}
 \label{Terminal}
 \end{center}
@@ -645,7 +646,7 @@ Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{img/use_david_robot.jpg}
+\includegraphics[scale=0.25]{img/use_david_robot.jpg}
 \caption{Náš robot \It{David} skončil na 4. místě v soutěži Eurobot 2011}
 \end{center}
 \end{figure}
@@ -821,7 +822,7 @@ cislo.setDisabled(true); // znemozneni interakce s widgetem
 
 Kromě těchto zděděných vlastností a funkcí má každý typ widgetu své vlastní.
 
-\newpage
+%\newpage
 \subsubsection*{Widget číslo}
 \addcontentsline{toc}{subsubsection}{Widget číslo}
 \begin{itemize}
