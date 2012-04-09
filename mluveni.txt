@@ -1,6 +1,30 @@
 Dobrý den, vážená poroto, vážení diváci
 
-Při stavbě robotů na různé soutěže jsem se setkal s problémem při zpracovávání dat z poměrně velkého množství senzorů které robot obsahuje - například náš loňský Eurobot měl 5 ultrazvukových měřáků vzdálenosti, enkodéry pro měření ujeté vzdálenosti a několik tlačítek, které sledují náraz do mantinelu. Když k tomu připočteme ještě data ze samotného řídícího programu, tvoří to značné množství dat, která je potřeba k ladění robota zobrazovat. Zkusil jsem tedy najít nějákou aplikaci, která by splňovala mé požadavky, bohužel jsem nenašel žádnou, která by mi úplně vyhovovala, proto jsem se rozhodl vytvořit vlastní aplikaci.
+Při stavbě robotů na různé soutěže jsem se setkal s problémem při zpracovávání dat z poměrně velkého množství senzorů které robot obsahuje - například náš loňský Eurobot měl 5 ultrazvukových měřáků vzdálenosti, enkodéry pro měření ujeté vzdálenosti a několik tlačítek, které sledují náraz do mantinelu. Když k tomu připočteme ještě data ze samotného řídícího programu, tvoří to značné množství dat, která je potřeba k ladění robota zobrazovat.
+
+- ukazka dat z lonskyho eurobota
+- nenasel sem zadny program ktery by to splnoval, ukazat ten slide?
+- proto bylo cilem moji prace vytvorit program, ktery by toto *data v terminalu* dokazal zobrazit prehledneji
+- vysledek vypada takto *analyzer* - popis
+- ted bych se vratil k prezentaci
+- Aplikace, kterou jsem vytvoril nese jmeno Lorris, je v C++....
+- Priklady pouziti analyzeru
+   - joystick
+   - lajna
+
+- Proxy
+  - "...a ted se na tohoto robota muzu pripojit odkudkoliv z internetu"
+- Shupito
+  - programovani
+  - barva
+- Terminal
+
+-- ted?
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+Zkusil jsem tedy najít nějákou aplikaci, která by splňovala mé požadavky, bohužel jsem nenašel žádnou, která by mi úplně vyhovovala, proto jsem se rozhodl vytvořit vlastní aplikaci.
 
 
 Aplikace, kterou jsem vytvořil nese jméno Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
