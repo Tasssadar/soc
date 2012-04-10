@@ -18,6 +18,7 @@ Při stavbě robotů na různé soutěže jsem se setkal s problémem při zprac
   - programovani
   - barva
 - Terminal
+  - programovani 3pi   
 
 -- ted?
 
