@@ -1,0 +1,1053 @@
+Content-Type: multipart/related; start=<op.mhtml.1334754815273.7b8fdf11335c0f5a@169.254.9.172>; boundary=----------x0LUSlyc4tM2oYJuQlKHyC
+Content-Location: http://www.roboticday.org/cz/
+Subject: =?utf-8?Q?Robotick=C3=BD=20den=202012?=
+MIME-Version: 1.0
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=default.htm
+Content-Type: text/html; charset=windows-1250; name=default.htm
+Content-ID: <op.mhtml.1334754815273.7b8fdf11335c0f5a@169.254.9.172>
+Content-Location: http://www.roboticday.org/cz/
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <link rel="stylesheet" href="incs/rd.css" type="text/css" />
+    <link rel="SHORTCUT ICON" href="/favicon.ico" />
+    <title>Robotický den 2012</title>
+</head>
+<body>
+<!--  -->
+<div class="obsah">
+
+    <!-- zacatek stranky -->
+
+<table width=100%><tr><td>
+<span style="float:left; position:absolute">
+<img src="RD-logo.png">
+</span>
+<span class="organizers">
+	<center>
+    <a href=".." style="color:white"><img src="../flag-en.gif" style="vertical-align:bottom"></a>
+    <a href="" style="color:white"><img src="../flag-cs.gif" style="vertical-align:bottom"></a>
+	<br>
+		<span style="font-size:x-small;">Pořadatel:</span>
+		<br><a href="http://www.ksi.mff.cuni.cz" title="MFF UK" target="_new"><img src="2012/images/logo_uk_mff-small.png" alt="MFF UK" style="border:0px none" border=0></a>
+		<br><a href="http://www.robonika.cz" title="Robonika" target="_new"><img src="2012/images/logo_robonika.png" width=72 height=72 alt="Robonika" style="border:0px none" border=0></a>
+		<br><img src="2012/images/spacer10.png" alt=" " style="border:0px none;border-bottom:1px solid;" width=90% height=10px>
+	<br><span style="font-size:x-small;">Organizační<br>podpora:</span>
+
+		<br><a href="http://www.hobbyrobot.cz" title="Hobbyrobot" target="_new"><img src="2012/images/logo_hobbyrobot_vert.png" alt="Hobbyrobot" style="border:0px none; vertical-align:middle" border=0></a>
+		<br><img src="2012/images/spacer10.png" alt=" " style="border:0px none;border-bottom:1px solid;" width=90% height=10px>
+	</center>
+</span>
+	<center>
+	<h1><span class="obsaha">Robotický den 2012<br><small><small>28.4.2012, Praha</small></small></span></h1>
+
+	<big>
+		pořádají
+	<br>
+  	<span class="obsaha"><big><br><b>Katedra softwarového inženýrství MFF UK</big></b></span>
+	  <br>a
+	  <br><span class="obsaha"><big><b>občanské sdružení Robonika</big></b></span>
+	</big>
+</center>
+
+
+<hr color="#0065A8">
+<h2><b>NOVINKY</b></h2>
+<P>
+<h2>Konec registrace: 15.4.2012</h2>
+<P>Pokud jste registraci nestihli, můžete se zeptat na pozdní registraci na <span id="rr"><u>registrační stránce</u> (registrační aplikace potřebuje JavaScript. Pokud nevidíte odkaz, ale tento text, pravděpodobně máte JavaScript vypnutý/zakázaný. Povolte jej a tuto stránku obnovte.)</span>.
+<br>Návrhy na prezentace, demonstrace, vystavování apod. zasílejte emailem na <span id="mejlp"><u>kontaktní adresu</u></span> nebo pomocí našeho <span id="wf"><u>webového formuláře</u></span>.
+<br><iframe src="/registration/curr.php?lang=CZ" style="border:none" height=150px;></iframe>
+</p>
+<P>Pokud nám chcete pomoci s organizací, kontaktujte nás nejlépe emailem na <span id="mejlp2"><u>kontaktní adrese</u></span>.
+<hr color="#0065A8">
+<h2><big>Kurz robotiky</big></h2>
+<P>Sdružení <a href="http://www.hobbyrobot.cz">Hobbyrobot</a> pořádá <b>Kurz robotiky se zaměřením na Robotický den 2012</b>. Bližší informace <a href="http://robodoupe.cz/2012/kurzy-robotiky-na-roboticky-den-2012/">zde</a>.
+	
+<P>
+<h2><big>9. Robotický den 2012 - 28.4.2012</big></h2>
+
+	<P><P>
+Tak jako v minulých letech, budeme v roce 2012 pořádat Robotický den se soutěžemi otevřenými jak českým tak zahraničním účastníkům. 
+<br>V rámci Robotického dne 2012 budou pořádány tyto soutěže:
+<table border=1 cellpadding=4>
+	<tr><th>soutěž                <th>robot              <th>úkol                                                                <th>pravidla                                              <th colspan=2>Rules                                                 
+	<tr><td>Bear Rescue Beginner  <td>dálkově řízený     <td rowspan=2 style="vertical-align:middle">v co nejkratším čase nalézt ztraceného medvěda a dovézt ho zpět domů<td rowspan=2 style="vertical-align:middle"><a href="2012/rules/2012-Bear_Rescue-CZ.pdf"  >PDF</a><td rowspan=2 style="vertical-align:middle"><a href="2012/rules/2012-Bear_Rescue-EN.pdf"  >PDF</a><td rowspan=2 style="vertical-align:middle"><a href="2012/rules/2012-Bear_Rescue-FAQ.html">FAQ</a>
+	<tr><td>Bear Rescue Advanced  <td>autonomní          
+	<tr><td>Line Follower Standard<td>autonomní          <td rowspan=2 style="vertical-align:middle">sledovat černou čáru a projet po ní trať v co nejkratším čase       <td rowspan=2 style="vertical-align:middle"><a href="2012/rules/2012-Line_Follower-CZ.pdf">PDF</a><td rowspan=2 style="vertical-align:middle"><a href="2012/rules/2012-Line_Follower-EN.pdf">PDF</a>
+	<tr><td>Line Follower Merkur  <td>autonomní z Merkuru
+	<tr><td>Mini Sumo             <td>autonomní          <td>vytlačit soupeře z kruhové arény                                    <td><a href="2012/rules/2012-Mini_Sumo-CZv2.pdf"    >PDF</a><td><a href="2012/rules/2012-Mini_Sumo-ENv2.pdf"    >PDF</a>
+	<tr><td>RoboCarts             <td>autonomní          <td>projet co nejrychleji stanovený počet kol na závodní trati          <td><a href="2012/rules/2012-RoboCarts-CZ.pdf"    >PDF</a><td><a href="2012/rules/2012-RoboCarts-EN.pdf"    >PDF</a><td><a href="2012/rules/2012-RoboCarts-FAQ.html">FAQ</a>
+</table>
+<small><i>Pozn.: Česká verze pravidel je podřízena anglickému originálu, který má v případě nejasností přednost.</i>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Robonika ani MFF UK v roce 2012 nebudou pořádat soutěž Eurobot.</i>
+</small>
+
+<P>Chcete předvést něco vlastního z robotiky? Dejte nám vědět!
+<P>
+
+<P><P>
+	
+<hr color="#0065A8">
+<h2>Odkazy:</h2>
+Historie Robotického dne: <a href="http://www.eurobot.cz/historie.php">zde</a>
+<br>České stránky o robotice: 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://robotika.cz" target="_new">http://robotika.cz</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://robodoupe.cz" target="_new">http://robodoupe.cz</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.hobbyrobot.cz" target="_new">http://www.hobbyrobot.cz</a>
+
+<P><P>
+<a name=kontakt><h2>Kontakt:</h2></a>
+<p>
+S dotazy se obracejte na <span id="mejl"><u>email</u></span> nebo na RNDr. Davida Obdržálka - MFF UK, katedra softwarového inženýrství, <span id="mD1"><u>(kontakt)</u></span>, tel. 221&nbsp;914&nbsp;270 nebo 728&nbsp;606&nbsp;425.
+
+<h2>Spolupráce:</h2>
+<p>
+
+Pokud byste chtěli na pořádání Robotického dne nebo na dalších robotických aktivitách spolupracovat, neváhejte se na nás obrátit. V rámci Robotického dne se také mohou partneři představit veřejnosti. 
+<br><br>Máme zájem nejen o podporu, ale i o spolupráci, a to i dlouhodobou. Od r. 2004, kdy Robotický den pořádáme, se stále zvyšuje jak počet soutěžících, tak zájem veřejnosti a proto jsme přesvědčeni, že i pro partnery je tato akce zajímavá.
+
+
+<P>&nbsp;<P>
+
+Za organizátory,
+<P>
+David Obdržálek, <span id="mD2"><u>(kontakt zde)</u></span>
+<br>KSI MFF UK
+
+<P><P><span id=hla><font color=red>Pokud nevidíte kontakty (emaily apod.), pravděpodobně máte vypnutý/zakázaný JavaScript. Povolte jej a tuto stránku obnovte.</font></span> 
+</td></tr>
+<tr><td align="center">
+
+<tr><td align="center">
+<SCRIPT type="text/javascript">
+<!-- 
+function writeAdr(b,a,tid)
+{
+	var c="@";
+	var str="<a href=\"mailto:";
+	str+=a;str+=c;str+=b;
+	str+="\">";
+	str+=a;str+=c;str+=b;
+	str+="</a>";
+	document.getElementById(tid).innerHTML=str;
+}
+
+
+function writeOdk(b,a,tid)
+{
+	var str="<a href=\"";
+	str+=b;
+	str+="\">";
+	str+=a;
+	str+="</a>";
+	tag=document.getElementById(tid);
+	tag.innerHTML=str;
+}
+
+writeOdk("../registration","registrační stránce","rr");
+writeOdk("../registration/presentation.php","webového formuláře","wf");
+writeAdr("roboticday.org","info","mejlp");
+writeAdr("roboticday.org","info","mejlp2");
+writeAdr("roboticday.org","info","mejl");
+writeAdr("mff.cuni.cz","david.obdrzalek","mD1");
+writeAdr("mff.cuni.cz","david.obdrzalek","mD2");
+document.getElementById("hla").innerHTML="";
+// -->
+</SCRIPT>
+</td></tr>
+
+    <!-- konec stranky -->
+
+</div>
+</body>
+</html>
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=rd.css
+Content-Type: text/css; charset=windows-1250; name=rd.css
+Content-Location: http://www.roboticday.org/cz/incs/rd.css
+Content-Transfer-Encoding: 8bit
+
+body {
+    text-align: justify;
+    background-color: #FBFBEF;
+}
+.organizers {
+    background-color: #FBFBEF;
+    text-align: center;
+    position: fixed;
+    right: 0px;
+}
+
+.needhelp {
+    background-color: #FBFBEF;
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border: 1px solid #0065a8;
+    padding: 2px;
+}
+
+img {
+    margin:4px; 
+}
+
+body, 
+table tr td,
+.obsah,
+.obsah td {
+    font-family: arial, helvetica, sans-serif;
+    font-size: small;
+    text-align: justify;
+}
+
+.nadpis td {
+    background-color: #0065A8;
+    height: 5px;
+    color: white;
+    font-size: medium;
+}
+
+.logo {
+    text-align: center;
+    width: 106px;
+}
+
+.menutext {
+}
+
+td.menutext,
+td.menutext a {
+    color: white;
+    text-align: right;
+    text-transform: lowercase;
+    text-decoration: none;
+    vertical-align: bottom;
+    font-size: small;
+}
+
+td.menutext a:hover {
+    text-decoration: underline;
+}
+
+div.obsah {
+    margin: 5px;
+}
+
+.obsaha {
+    color: #0065A8;
+}
+
+.obsah, .obsah td {
+    color: black;
+    vertical-align: top;
+}
+
+.obsah h2,
+.obsah h3 {
+    margin-bottom: 0px;
+    color: #0065A8;
+}
+
+.obsah .clovek_nadpis {
+    color: #0065A8;
+    font-weight: bold;
+}
+
+
+.thin {
+    font-size: 100%;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.lidi {
+    border-left: #0065A8 2px solid;
+    border-right: #0065A8 2px solid;
+}
+
+.lidi td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.lidi th {
+    vertical-align: middle;
+}
+
+.obsah img.externalLinkImg {
+    border-width: 0px;
+}
+
+form table th {
+    color: white;
+    background-color: #0065A8;
+    font-size: small;
+}
+
+.obsaha, .obsaha a {
+    color: #0065A8;
+}
+
+.ruda, .ruda a {
+    color: #FF0000;
+}
+
+
+a.info{
+    position:relative; /*this is the key*/
+    z-index:24;
+    color:#000;
+    text-decoration:none;
+    font-weight: normal;
+    font-size: small;
+}
+
+a.info:hover{z-index:25; }
+
+a.info span{display: none}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    top:-3em; left:-15em; width:30em;
+    border:1px solid #0cf;
+    background-color:#ccc; color:#000;
+    text-align: center;
+    font-weight: normal;
+}
+
+.outtable
+{
+	border:1px solid black;
+}
+
+.allbordered, .allbordered  th, .allbordered td, .allbordered tr
+{
+	border:1px solid #bbbbbb;
+	border-collapse:collapse;
+}
+
+
+[disabled]
+{
+  background-color: #FBFBd0;
+}
+
+	
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=favicon.ico
+Content-Type: image/x-icon; name=favicon.ico
+Content-Location: http://www.roboticday.org/favicon.ico
+Content-Transfer-Encoding: Base64
+
+AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAAEgA
+AABIAAAAAAAAAAAAAAD/////////////////////////////////////////////
+///////////////////////////////////////////7+/v/////////////////
+///////////29vb09PT////////////j4+PW1tb///96enrQ0ND/////////////
+//////////9sbGynp6f////////////h4eFRUVH///+Hh4eurq7/////////////
+//////////8vLy/Y2Nj///////////////88PDz29vakpKSOjo7/////////////
+///////u7u4TExP9/f3///////////////+EhIRjY2OEhIRkZGT39/f/////////
+//////+0tLRMTEz////////////////////09PSjo6OIiIhOTk5GRkZERERMTExa
+Wlp4eHhKSkqSkpL////////////BwcG4uLj8/Pz////q6upYWFj///+lpaW6urr4
++Pjb29uwsLDv7+/////////v7+9TU1NnZ2chISE+Pj5EREQ7OzuMjIxcXFyQkJDe
+3t739/f///////////////+Kioqzs7OhoaGqqqr9/f3n5+fMzMyxsbGWlpZ7e3tg
+YGBGRkZCQkJQUFBzc3P+/v49PT37+/tVVVX19fX/////////////////////////
+//////////////9OTk7FxcVxcXHq6upfX1////+9vb2ysrL/////////////////
+///19fX8/Pz+/v5ERESJiYnV1dWVlZWysrL///98fHx2dnb/////////////////
+//8iIiKIiIjv7+9VVVWHh4dSUlI8PDzKysrV1dXb29vg4ODm5ubs7Ozx8fH39/f9
+/f3T09Px8fHBwcGRkZH////d3d1ubm5YWFhWVlZWVlZWVlZWVlZWVlZWVlZWVlZW
+VlZbW1tgYGBgYGDY2Nj/////////////////////////////////////////////
+//////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=RD-logo.png
+Content-Type: image/png; name=RD-logo.png
+Content-Location: http://www.roboticday.org/cz/RD-logo.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAMAAAAB0CAIAAAEr4pqlAAAABnRSTlMA/wD/AP83
+WBt9AAAACXBIWXMAABcRAAAXEQHKJvM/AAAgAElEQVR4nO2deYCN1f/Hn5/0zb42
+KGJQNGTNbixRDZI1ZZcRJlH2rcgy1oRvWbOEMLYIYaxjH/teZIssWUN2Fb+X85k5
+Hs997p07994x45v3HzPPfe5zz3PO53zO5/P+nDXxvXv3evfu/fnnnxveITEJkcr/
+/d//cRESEjJ27Fj9Xd68efmqTp06biVEEvrD119/PWbMGEmUj5GRkaVKlZLrmBOS
+f/J0hQoV1q9fL9eTJ09+//333S2YTkiwbt06fd2kSZPChQvny5fPk4TA0qVLg4KC
+5JpUpJi6sLFIqFatWtevX9cfR40axd/cuXPPnj3btdQfSsgseH3dqlUr/r777rst
+W7akKtxKyJx/12XhNRR8z5491oSuXbuWIkWK8PDwSpUq2f4yVapUf/75p1zv3r3b
+/JqMGTNS11EJpUyZku8klaeffvqvv/4SAWfLlu23337jL6l06dJl0KBBPFCgQIHn
+FF577TV0mAeeeeaZh/RIQCr8vXTpUo4cOXgBDx09epQ7kgqgRL///rtco/q0sKii
+pU+f/uLFi5aypEmTRn5vwZYtW4oVK6Y/SipRCZn1UCNXrlx37949fPiwfKQUERER
+f//9N6n4+/sfO3bM8vz9hPLkyeOY0MGDB+UCJfrll19I5f7Tie8/75iKIa3f8a4H
+iGr9kpxZIf38/PLnz79ixQp3EzLnaNu2ba+++qqHOZJ/y5Yte/PNN82pFClSZPv2
+7e4XPCohUtFNnIvvvvuO3P3www+xzpHxsJgaNmzI35o1a8rNJUuWVK5c2d2EdHJb
+t241Jw0mTpwYi4RoUA0aNOjfv3/RokVHjx4t1kMjRtsWlVDy5MnN9uxDBWe/2blz
+J1bYkm5UQnPnzuXv2rVry5Yta6j2oTXbAgzOuXPnzKlIZqMSwk6TKRrRTz/99NRT
+T9HKkiVLdvPmTTHYlJqSdu7cmSdTp079zz//GMqYLFq0CNsgiSbWSQ4ePLh169ZS
+azlz5sSqvv7664YSOTepQXklUucjvpOXvfDCCxjyWbNmRSUkSX6kYFscc0F+/PFH
+fY2ulSxZ8iEZWSB53LBhQ+nSpTdt2jR16tQRI0Y4Pob2ixW8n1BwcDBqYpsFUiHz
+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
+f4oFrA5p2T7TAAAAAElFTkSuQmCC
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=flag-en.gif
+Content-Type: image/gif; name=flag-en.gif
+Content-Location: http://www.roboticday.org/flag-en.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhEAALAPcAAGNnxKG+/Dp5+T16+fv7+y9z+Pn5+f2CbTZ0+aLA/GNjuGNl
+wmNjt//9/+JjSvHx8RgQahoQa/T09Pv/+vE4PPI6PlRkqfX19Td3+SsmmG+CyoQg
+N/f++fjV1OdgVwNx5c3Q9ew4P+k4O/yLkZy9/I2SziYnjQR0+BUSaARz8fn5+EhP
+rvlycPc1O/x4YvI2SUtLp/717/pQTo620fxXWPPS0/hycvn6+fAxPjl2+WNnvykl
+lKCx1kN++hYSb5i5/DBw+DJ1+Ju7/Pz+9fRRSZpNZOhjSvxhY9phTBQUZPeQkvqD
+g/VUT/7+/yYrjsB2dfQ0Oyosh+lBO/ynp9ra0/xzc/b29vLy8kB8+lZmpf/8/uNh
+W/79/e+mnCYniMjA3QZouuvr60aA+v7+/f77+J2GnP75/Im1xldfrfI0Ovv69vr6
++fn/+/v99/X/+cKTsPr88/1/f/ssROLi3f79+Ccrg/rr8oEcNvb/7okaQfr/+/j4
+9wZx4cbY5v38/ufJykmC+mNjvv7588tQYHuv2Pb79MXU62Ryrf7Kwf/7/v7++22D
+xsPB3GNjsc3R5GZvqnd8vff39vXx8D9++u/v7/QzQSQnh+BjStTP7VZdqgAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78i
+IGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxu
+czp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4w
+LWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8
+cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjIt
+cmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4
+bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnht
+cE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJl
+Zj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVm
+IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3Mi
+IHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjMwNkE2NTBEMDkwMTFERjk3NEND
+NjYwMjI3MzBBMTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwNkE2NTFE
+MDkwMTFERjk3NENDNjYwMjI3MzBBMTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RS
+ZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMzA2QTY0RUQwOTAxMURGOTc0Q0M2NjAy
+MjczMEExNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMzA2QTY0RkQwOTAx
+MURGOTc0Q0M2NjAyMjczMEExNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6
+UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf2
+9fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfG
+xcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeW
+lZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdm
+ZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2
+NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcG
+BQQDAgEAACH5BAAAAAAALAAAAAAQAAsAAAjGAAEIBLAgkAIGjQ64MOLgEpIyAMYk
+mBCAAAkVP9YY2BOpQ6EzABIAEtNjgAAMBaocoWGDDY86OgIYmHRBAKUCJ67UsGMI
+hgZLCwJgMYmgQAowU+jgaSBIDyYFBAY8QBDmw59BUnBQaPGCSB4GQnIEAcKHkAg5
+WpoMIQPHTZ85BKxIkLREUYgKbcxUepMBTZIDiOKwGPHITxooHFaoUeKhBAQqN7p8
+WQSJCxMZiTJlYRRjy6EnRSx42RHF0Z0NIFBE8OFkhomAADs=
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=flag-cs.gif
+Content-Type: image/gif; name=flag-cs.gif
+Content-Location: http://www.roboticday.org/flag-cs.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhEAALAOYAALEAANlISMsiIskcHImdus4pKdIzM9AtLZKlwbkGBm+FqI6h
+voygvZapw7MAAO/v7/Pz85Cjv9Q3N6e3zthBQddAQKq60NfX10ZdhZqsxkphidU7
+O9Td6cfS4e3t7d3d3d5ZWeXl5b0LC91SUj1TfO6goPGzs7cEBOLi4vCsrOBfXzhO
+d/O7u5eqxPT09EEAALoHB7AAAKS0zNU5OTtRerUBAcrU47YDA8UXF0lgiONqauvr
+6+np6YSZtzpQefGxsd/f36y80fHx8dM0NPK3t9Y+PtlHR++oqOJmZrsHB52vyEti
+iufn53CGqLwICNtLS9vb28cZGaGyyu6lpUNagqW1zcPP30dehp+wyT9Wf4OYtpGk
+wMUVFZSmwv7+/vv7+/j4+Pz8/K8AAPn5+fb29vr6+tU6Ov39/ff39/X19QAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAQAAsAAAeigBhYaYQQEEIPDx47PEwh
+KDkTHF6UZ2dhYV9lY2BoQEtBDTZelpmbnWRoHxoWLVsdl5qcaGRpZFBXEw1dDFay
+qGkuaRdUVQgRCz0ILEQ/KUdTJSYiWTLIBE0BFGYGBwUCA0UAJFIMBAoBFWZD3uBR
+ZgA0SufpM93fAzhcEmI+GVo6kKgAMeKJEQobzEgwIGbFCydJYCRIcOJGDQcOAIgR
+EyMQADs=
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=logo_uk_mff-small.png
+Content-Type: image/png; name=logo_uk_mff-small.png
+Content-Location: http://www.roboticday.org/cz/2012/images/logo_uk_mff-small.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAIAAAC3LO29AAAABnRSTlMA/wD/AP83
+WBt9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAgAElEQVR4nO17d1iTSdf3hEAINXQI
+HaVX6SWA9AACgkiTRRdEF7EAgqCoiMpaULGxwiqKoFIUC0GkKCDSFkGqNEF6J/Sa
+EHK/f8z3ZXlcn2eLu+93vd/1/v6aOZl7cs49c585bVAIgoD/r8H0/5qBfxz/K+Hf
+hPb29suXLy8tLcFuW1sbjUb77/lrgPwDGB0d/YKye/duKysrUVFR2HV0dJydnaVS
+qaqqqpBSUVHxT3CCIMg/soYiIiJkMnk9RUJCgkKhUCgU2H337t3evXu9vLyQ/6vn
+XF1dR0ZGYmNjf/nll7+Xmb9BwpmZmdu3b3d3d68nuri4rO/i8XheXl6G2Hx8fImJ
+iVxcXEZGRpBy7NgxFRWVN2/eGBgYAACoVOr4+Pi38wa+XcLR0VFtbe3m5ubR0VFI
+GR4eBgD09PQ4OzszhgkICEhKSsL21NQUFovl4eGRk5MzMzODRHFxcSEhocLCQthV
+VVUlEom7d+/+RvYA+ObvMCoq6ty5c+spERERgYGBCIL4+/u/ffsWEtfW1mZnZxlj
+lpaWEAT58OHD3NwcpAQHBz9+/JgxwMbGpqOj44vxfw3Mf+29nDlzJioqCgDAw8Mz
+MzMDiQ8ePPDx8eHh4dm/fz8AICEhgbEtmZiYuLm5i4uLCwsLcTgcGo3m4ODg5eXN
+ycmRlJScmpoC6zb29evXCwoKBAQE4OOvXr26efNmXl7ef+saBgUFubq6IggyNzfH
+y8tra2srIyOza9eu9WNMTU2zs7O/eHB4eHhmZmZqamp0dJROp2tpadFotJGRkfVj
+2NjYnJycuLi4YFdaWvr9+/d/jU/kz67hzp07iUSit7f3tWvXNDQ0iouLLSwspqam
+qqurdXR00Gg0AIBMJgsICExNTdFoNCcnJwsLCwqFwsTEhEKhVFVVJycnVVVVl5eX
+e3p65OXl6+rqvvvuu+7ubgwGw8LC0tPTExAQsLS0VFBQkJ2dDQA4ffq0g4ODrq4u
+ACAxMXF+ft7IyIhAIPwja+jj4wMAePbsGexWVlYKCAjAdn19/ZYtWzZv3uzg4ODl
+5WVjYwMAWP9d/Tu4ubkx2unp6UZGRp8/f14/gI+PDzaMjY2DgoKeP3/Ozc09MDDw
+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
+BQVNTU0jI6PBwUEvL6+JiYnvvvtuZWWloKBgYWFhcnJSSkrK3d29oaEhOTk5KChI
+WVn5t4J8eVrk5eXZ2dn9dlxOTs6OHTv27dsXGxvr4ODw8uVLSL98+fL8/Pz09HRH
+R4eYmNjs7KyYmNjc3Nzs7Ozw8DA3N/fFixdLS0vHxsYePHjAz8+/uroqKiq6uLjI
+ysoaGxvb19f3+vXr5eXlhYUFLBabn5/v4eExNjamqKg4MzMzOzu7urqqrKyckJCg
+qKhoYmJiYGCgoKCQnJxMoVAWFxdv376tra198+ZNAQEBeXn5ry7VlxIaGBiQSKRb
+t25FR0f39vZKS0tXV1fn5eVxcXG1t7czMzMnJCSYmZm9ffuW8UhISEhRUZGQkJCf
+nx+JRFpYWPj06ZOPj8/g4KClpWVOTg6NRltaWhobG5OWlt6wYQMvL29/f//y8vLd
+u3eFhIR0dXXPnz+fmZlJoVD6+vr09PRSU1O1tLSwWGxjY6O1tXVbW5uuru6pU6dU
+VFR6e3vd3NwCAwPV1NQiIiJYWFgOHz7Mx8cHOSGRSCIiInp6eusl+pfvsK2trbq6
+OjAwEHaPHz9+69atlpaWqampwcHBq1evjoyMAAC4uLjggI6ODj8/v7KyMi0tLWtr
+6/z8fC4urqmpKR8fn8jISAkJifr6+qWlpdzc3NLSUhEREWtr68rKyocPHw4ODkpL
+S6uoqBgbG/f09JBIJAsLi5GRETweT6VSDQwMUlJS+Pn5CQTC6dOnWVhYJCUlk5KS
+7ty5A4/+/fv3GxsbKyoqxsTEkEik+fl5S0tLFAp1/Phxhk33dQmVlJQQBJGVlU1O
+ThYSEuLj4xsdHc3NzZWRkbl8+TInJycWi21vb5+amhofH6+rq1NQUNDW1oYGXXZ2
+9sjIyNzc3NDQkJGRUUlJCY1G6+vrq62t1dbWvnLlSnR0dGJiopGRUVpa2tDQUEZG
+Rmtrq6ys7OzsbGFhYXBw8MjIyMuXL7W0tKSkpA4cOFBcXFxeXu7v7w8AqKurExER
+YWNj++WXX44cOcLHxzcxMXHhwoWUlJStW7e6uLiEhIQgCNLc3KyqqvrlNv135lxv
+b29JSUlCQkJoaKiFhYWurq6enp6AgICKigoAQF5enhHejY6OJpPJOTk5KSkpDg4O
+P//8c3p6OoIgJ0+eFBER4eHhsbW1zc3NDQsL09XVLS0tPX/+fEBAAAaDCQgISE1N
+ffjwoZWVlZGRkZycXEZGRm9vr5+fX1dXl6ysrJWVlY2Nzf379w8fPszDw7Np0yZx
+cfEbN25A41ZTUxMAAM309vZ2BEFcXV2ZmJigift1uzQjI4OHh0dGRkZeXh6FQt24
+cePJkyd4PB6DwVAolLW1NQqFMj8///nz54iIiEOHDgEAyGSytrZ2X18fAODnn3+e
+m5s7cuQIAABqv4WFBQ0Nje+//x6NRkMPS1hY+PHjxzt27CgrKxMUFExNTeXi4mpq
+aoqLizt06BAHB0d4ePjc3BwAAIfDkcnks2fPKisrq6mpKSoqFhYW0ul0dXV1Op1e
+W1tLpVJdXFw2btzo7OxsYWHR2dl5/PjxgICAL5bwX6y2mZmZkJAQNBo9NTVVWFhI
+JBJFREQiIiLY2NiYmZmxWCwvL+/a2trU1FR9ff2xY8diYmIyMzOlpaXJZDIOhzt/
+/nxvby+c6uLFi9PT0wICAnv27GlsbFRSUjI3N6+rq6uurh4dHcVisbKysvLy8gYG
+BlVVVRISEpGRkSwsLOnp6e/fv3///v2WLVskJCQ2bNggJiZGoVAMDQ1pNFpAQEBw
+cHBjY+PS0pKVlRUvL6+0tPSHDx9evXr17wyaLyUMCAjo6+uDZxQAwMnJqbW1lZeX
+F2qnjo4OYWFhNBqtpKS0uroKz4C7d+/6+vo6OztraWmVl5cvLS2xs7N//vx5fHy8
+paXF1dX1/fv3KysrdDo9Nzf3w4cPMKbEzMzMz89PIpHq6+v7+vrExMQIBEJiYmJb
+W9vY2Nj+/ftfvnzJwsLCzs6Ox+OxWGxaWpq5ufm+ffsMDQ1NTU3FxMTq6+srKiro
+dPqtW7eysrIQBOno6FhYWAAA9PX1rQ9//KppHjx4QCAQLly4EBQUVFNTAwAgkUhE
+IvHIkSOJiYmJiYmhoaFiYmJTU1NXr159+PChk5MTDodrbm7euHHj5s2bS0pKxMXF
+bW1tAQBjY2OPHz9WUFCwtLTU1dVdWlqSlpY+cOAAkUhsbm7+8OGDsbFxd3e3nJwc
+DH9gMJjR0VFxcXF3d/eBgYHc3Fw1NTVRUdHi4uIbN254eXkNDAwAAEJDQ1VUVJ48
+ecLExJSQkLCwsPDixQshIaHu7u69e/f6+vp6eHiEhYVt377962vo4+Pj4+MzPj5+
+69at8+fPP336FIVCubu7JyUlOTg4tLe3w7VSUFBISUkRFxevqal59OiRq6urvb19
+fHz82NhYamrq1q1bh4aGqqurt23btra2lpeX9/79+6amJi4urmfPnrGyskpJSWEw
+GEVFxcHBwfz8fPjKxsfHYQJjeXl5cHBwZWVlbGxsfHx8enpaWlr64cOH+vr6OBzO
+1taWSqVmZ2c/fvzY3d1948aN9vb2AgIC1tbWampq6enpQkJC9fX1HBwc6yX8dQ2H
+hoYAAEJCQtHR0c+ePUOhUPLy8lgstq6ubmho6O3bt0JCQps2bWJhYVlcXLS3tz9w
+4AAMNL148SI4OPjmzZtpaWlubm4wEAwAMDQ0lJGRERYWVlZWFhMTm5yctLKycnd3
+RxDku+++y8jIsLa25uTkHBsbY2Njq6+v//jxo6SkJJlMlpWVXVlZQaFQvLy8goKC
+JiYmL168QKFQ6urq4+PjhoaGhYWFWCx27969y8vLPj4+IiIilpaWVlZW6urqu3bt
+ys3N/ZcPkaFVLS0tW1tbh4eHe3p6FhYWoI7ds2fPixcvYB4iKipKQkLC09MzPj5e
+UlISQRBvb28EQSIjI9dr57W1NVFRUVNT08DAwGvXrqmrq1+6dMne3l5NTU1DQ4Ob
+mzswMLCwsNDNzc3R0VFPT09ERMTKysrKygraCfr6+rt27YqOjo6Pj9fX13/x4oWh
+oSEOh1NUVPT19QUAqKqqqqmp8fPzGxsbAwBcXV03bdoEX6i4uDi0RpKTkxn8/LpL
+R0dHIyIi1tbWFhcXiUSirKysq6trX1/fp0+fbt26RSQSW1paBgYGVlZWQkNDKRSK
+v79/Xl6et7d3cXExNEThS8FiscPDw9PT02JiYigUikajdXV1LSws2NraWllZEYlE
+JSWl8vLy+fl5e3v70tJSDAZjbW1dW1v7+fNnPB4vKioaGxtrZ2dna2srICCAw+Ho
+dLqkpCQbG9u9e/eWl5djY2MzMzOHhoauXr26e/fuu3fvpqSk0Ol0X1/f9+/fV1ZW
+6urqrg+K/yqht7f3+qjuzp07NTQ0UlJSCARCVFTUx48fTU1Nh4eHlZSUtLW1aTTa
+6uqqv78/GxubhIQEAADufjY2NjExsdevXx88eJCLi0tBQYGDgyMrKwuHw/n4+AwM
+DAgLCz979qy1tTUhIYFGo83Ozvb09AwNDamoqHBychYUFJw4cWLHjh0wWmlqarq6
+usrCwjI+Ps7NzQ0AyMjIyM7OPn36NJlMrq2tNTc3h9GagwcPAgDi4uIWFhaCg4O/
+rmkY4rW1tdXW1ra1taWmpjIzM5PJZOhQAwDQaDTMK/1npKSknDx5MjIyko2NzcLC
+Ymlpyd7enpOTMzQ0lEAgYDCY5ubmxcXFpqYmCoVCp9MLCwspFAoaje7v76+urj54
+8GBMTExXV9f27dvxeLy0tPTs7KyLiwt0aPLz8/Pz8/v7+4OCgioqKk6cOLGwsMDP
+zw8AIBKJMI21Hl96wPHx8crKyoaGhjCgEh4ezsXF9fHjRwBAWFgYdK6h/f0f4O7u
+rq6uvm/fPmZmZg0NDVFR0cDAwP7+fiqV2tfXNzY2tri4iMfjiUQiCwuLgYFBX1+f
+p6fn5OTkzp07c3JyKisrw8LCjh49ysPDU1lZCSPiCgoK7969AwCYmprSaDRra2vo
+ow4PD6PRaBQKBQDw9fUNDQ39gplfPeD+/n4eHp6FhQVOTs6TJ0/q6+sDAJiYmObm
+5kxNTdnY2M6ePfv69eu2traJiYknT55MTk6qq6t/Md3nz58VFBSePn06NDQEg/N4
+PN7GxgZBkOTkZBqN5uzsDP1x6EwuLi6amJhwcXGdOXNmbm7uw4cP0tLSnp6eWCxW
+WFiYTCaTSCR4st+/f391dTUtLU1ISGjz5s1ycnKfP382NjZ+8uQJOzv7V33aL9eQ
+n58/OztbXV29tbVVTU1tcnIS0js6Ojg4OGD6cufOnTQaTU1NzcvLq6KiYv13C1FZ
+WQn3iYmJiaqqamtrKzMzc05OzokTJ169etXS0lJYWNjR0dHQ0HDjxo2XL1+WlJRU
+V1fPz8/z8/NPTExwc3N3dXUlJCSEhISwsrJyc3O/f//e0dGRh4cHAFBeXr5ly5bn
+z5/Pzc3p6+sfO3aMTCavrKzcv39/y5Yt4eHhvyMhBweHk5NTfHw8giAZGRlwZ+/d
+u3dgYEBHR+fatWv6+voDAwMUCiUgICAjIwNBkOfPnz958mT9dDA7jyCIiYlJX19f
+U1MTOzu7vr5+S0sLtK18fX1xONzOnTu7urpOnTrl4uIiJyc3OzsbFxcnLi4uKSl5
+9uzZo0ePtra2ysjIpKam8vDwdHV1ra2tvX379ty5c7m5uVgs1s7ObnFx0draWkBA
+QF9fX1hY+MqVKzk5OV+V8Osx79XV1aqqKlNTU2Fh4efPn1+4cGF1dRWLxdJoNFZW
+1v7+fmdn55WVFSqVmpmZ2dPTw3gQRn7hQbR7925JScnu7u7t27dfunSps7OTTCbD
++K+enp6qqmp1dXVjYyPMk6NQKGZm5tXVVS4uLmVlZSqV6ubmFhkZKSwsTCAQcDgc
+Ho//8ccfW1tblZWVk5KSIiMjYbFGY2PjoUOHCASCkpISzHB+gX+xvJeWln766afw
+8HAxMbFXr17V1tbKysqKioqOj4+TSCQnJycZGZmRkZHExEQKhbK6uorBYKD2JxAI
+4eHhKSkpMjIyAICmpiZ1dXVlZeXY2Fg6ne7u7o5Go62trWVkZDg5ORcWFpiYmOh0
+uqmpqYODAwqFQqPRdDqdg4Ojr68Ph8OVlJQoKyvn5eWFhIRUVlaGhoYaGRmhUChT
+U1Nzc/Pm5ub09PS4uDjIc2lp6fT0dE9Pzxfm6NclhE6ApqYmGxsbPz//0tLSysoK
+FoudmZlhZ2dHoVASEhLl5eV+fn5wMBsbGwDA2tq6q6srOzsb5qc4ODiSkpJu3LgR
+FhZWXFw8Pj6emZm5traGxWIfPXo0NDREoVDY2dkxGMzS0pKAgMD4+DiNRuPj42Nn
+Zx8cHMTj8R4eHp2dndzc3LC8Bpqsfn5+0Kw/dOhQUVERAKC6utrOzk5ISKi9vf2r
+sv0ffNXB37RpU21t7cTEhLCwcH9/v62tbXFxsZubW2JiIoIgLi4uAwMD09PTFArl
+8OHDvLy8MLojJSX17NkzBQUFR0dHxlQ6OjoqKio6Ojrm5uaJiYlDQ0MFBQVxcXFQ
+zZw/f76kpKSysrK0tPTjx481NTXR0dGurq7QcfH09PyCsaSkpLW1NdgOCgrS0dGB
+bTqdPjw8/FVZvpK30NbWbmho+OGHH1JTU/n5+Ts7O/X09MrKypSUlGDU1dbWVkJC
+QkhIiIWFZWJiwtvbOzU1VUlJ6dOnT2g0WlZWtra2dm1tDRYulJWVubu7T05OtrW1
+xcbGdnV1wZSGhIQEjAMJCQmRyeSampr+/v7c3FyYXZaVlQ0PD4+MjIQseXp6Ojs7
+e3p6rq8hSklJgVkjAMDt27cTExPr6+t/fw37+/v379/P6JaUlCgpKZWVldnY2OTk
+5AgICNDpdDqdDpOHEP7+/nfv3n327JmKisrc3BzUaU1NTeundXBwMDQ01NTUdHd3
+5+Pjk5WVZWVl1dTU3Lp1q4aGhoSEhJSUlL29PYxB6+npCQoK6urqQn6ysrI2btzI
+yB8yYGpq2tvbC9tHjhxZb22vx+9nSAEAExMT4uLio6OjeDzeycnJ19dXUFBQVVVV
+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
+LQAAAABJRU5ErkJggg==
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=logo_robonika.png
+Content-Type: image/png; name=logo_robonika.png
+Content-Location: http://www.roboticday.org/cz/2012/images/logo_robonika.png
+Content-Transfer-Encoding: Base64
+
+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
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=spacer10.png
+Content-Type: image/png; name=spacer10.png
+Content-Location: http://www.roboticday.org/cz/2012/images/spacer10.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAABnRSTlMA/wD/AP83
+WBt9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVR4nGP8//8/A27AhEduBEsD
+AKXjAxF9kqZqAAAAAElFTkSuQmCC
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=logo_hobbyrobot_vert.png
+Content-Type: image/png; name=logo_hobbyrobot_vert.png
+Content-Location: http://www.roboticday.org/cz/2012/images/logo_hobbyrobot_vert.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAEsAAAALCAIAAAHPc9dHAAAABnRSTlMA/wD/AP83
+WBt9AAAACXBIWXMAAC4jAAAuIwF4pT92AAAGv0lEQVR4nI1VCVgTVxDOsSEbyAFJ
+OBQqEZRDigiCFhRUvKjIpajVVgTBgwKK1YpnpVoRARWxHlWjXIoUEBGKRVv7KUIB
+rajlkEABo3LIGQVyk86yaRqxtn3f+zaTf+a92Zn5ZxY5lpQYvXUb4e31JiWYsSkV
+BORdHSxcJxaLEZVKBRLP1KT1ZQcIXf5Ew2sq3AjBf0CxK2Z73OEEjQLTgdfko0nO
+Li5LApc5u0xb4DkbUPvJDnnfbJZXl0jKcob72gHhpnUMpO+kR/LvlZaKRCIWi4VE
+hm84ceqMttP3rYEz4fSNp//22d/f/9XuncVFRfjhx7VP86/mxe7d/cC1D7F0Qmev
+ptjP6Y2cBFqdyXO7urpqa2qMTYzHjh2LZFy+Auj+g4c0lwWvDYWT3FypBtEOz8bG
+hqWvr47z5InjCoWi5UX7eLMxOjo6Dc3PwDno8gt/CPDxXrFy1dP6+oClgdeu5j2q
+fggR4TnsDiARECo3Rwx/wdggvmx4sF90wJs2b61qWCm5nYb7+7W8HC6nUBC5XAF/
+iUQilnavRd6FBdcgBCiPVCqVyWTgGJ4F+Ve379iVEB8HdgfjD0MEYCwrzyUbjlOJ
+OrFayiWwiRRUJZdI7lxSCmvBQHI3i53yBFyWl5UNDw+TSCQAh4bEmDMEY4CaJHhZ
+NDURtAg1Cfk8ahMu7Nq7b/3GcBDYboHaSYNA3y0gaA3fU1vEfKzxqOq7ujglHjk2
+02PWH01Nc2fN/Hdu9G6wYGw8RXH00ga12TvaH2GEM/y0jMfV1SnJRw8lJAFSeL0g
+OioyOy+f8BejHOxsjiSnZKSlZvpayO4XofNCBrNiGeFYYqRlua+PBXHSX3WvoKuk
+g4b5SgAH02P0gg4LhcJnra2QWKlMSkEoan8hoWGZaam/3P75SV3D5EnWvPHj3T1m
+ZWddBh6Ddm/s18sC/ECA+sNTXHySc/5ZT5g591Jv96dsxMyGMtlT/BNfXJhMGFZS
+p/u9SVoJZujcEIFA0NnRIRYPQf9KpFIOmwPkwPyxWBhl9Q0MwJmVlXVcQlKgvw8g
+U52d4Xkgdh8/NT00OChm2xdTHJ0AIXHHkZjcEWe2jCh+X4wbgLTFmwb4W6SVBeyT
+9dKq6w13bvSYTe3p6eZwuDSa7rTp06sqK7H4/rE8GlAjXMy4FL4+zC9giWFoMfzl
+pHdpjDWl0iYRl0DoaG939/AYHBjQ1dOTSCQwYwiaYfSfi0FnXEzPdHWb8T/tYZmM
+GQNPPTodi55Gw0H1gFvs67d6TTCbw5k40QpXdHd3Pa2rs7Wzg4QQRkjb3taWeDTZ
+2NhkipMTk8nE2QuqwhslUokUQGiy1yIRdDNKQ5lM1qvOThBMTc3ARtH8UPWml+Iw
+D2ToYEXrE4TnQGQZEUYYruxsYUSeJ3PMEKvpRD199ftKBuSNVdDxJJMJhJFJD52N
+un9CX5dCZL7Vbr89eNDX12tkbGJra9vYKBD1i7S16owWXS+ADYL/kqUwdjaGrSWM
+jCFsLCDIzdt3cLPqhw/zcrJhFgGL+akZOHg1Nyf1Ah8sIUeWEybCOAJigbw1ehMI
+eWeT+yJsQEs2NIeXE8X5aW4mkhGD5Mf4JYrG+wNno1QyMdnYQj/+Xu96C5hduBlW
+z4hz6qhLr5AMx0GvYZlSqW6WlOjq6oKMojRRf39lRQXkl8vlag7K5XJ1hD5+/paW
+E6CYYNfUKCCMtEjgshUXzp+F1hMIGqytbaCGgoZ6+JZlXcp8LhQaGhnRdHXFQ9gC
+/t2vqmoUCCbZ2cHZ+rra0ydP4DcrW59g4XE/YJ9rFefFA0KiG0CHiotSVEqF4nkt
+Mu5DqKGi9TE6J0hc8t1w1zOlsAbCw957UYSs4pqy54Wi5RHZiIefpVi73iguhq8k
+fCtRFAWQTCZDD1AoFHDEZrOpKFUmlQEOlVAqlchEK6tF3osdnZyAfiDY2dtHRG32
+8fU/mpRQVVnxWdCaLVu/NGCzvT5eVFZ690rW5aamRpg7IaHrYFbVNzbDnCv58Qad
+zkjNvDx7jifcS6Wi5WX3WpqbQYZ0kjimVLdAmBJYbyzdQZ25HMahvK4UXbBOb9V+
+IoNLdVsm//225BZfIayhByfSfKMJJISb9Xooez+YIdYfsZbvIfMc4LiO48KhnDhF
+RzOJagtfIRqKzvb0vHXzps7IgkTzxvPaXrYNDQ6p+Ykvbx9f2DikEcx5vOPfnhrV
+xzPcPWCPAoGNsLWRutra3O+zQZi/0OvMOT4kmLk9R6MlGVswotNHXUKx94StjRBp
+DL3gxFFmiLUrc08hCAu1wPkLFmjbwFwedepPkoAozFbFABAAAAAASUVORK5CYII=
+
+------------x0LUSlyc4tM2oYJuQlKHyC
+Content-Disposition: inline; filename=curr.htm
+Content-Type: text/html; charset=windows-1250; name=curr.htm
+Content-Location: http://www.roboticday.org/registration/curr.php?lang=CZ
+Content-Transfer-Encoding: 8bit
+
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+	<link rel="stylesheet" href="../incs/rd.css" type="text/css" />
+    <link rel="SHORTCUT ICON" href="/favicon.ico" />
+	<title>Robotic Day 2012 Registration</title>
+</head>
+<body style="margin:0">
+<table class=><tr><th colspan=2>Aktuální stav:
+<tr><th>země<th>robotů<tr><td>CZ<td>59</tr>
+<tr><td>DE<td>5</tr>
+<tr><td>PL<td>3</tr>
+<tr><td>RO<td>1</tr>
+<tr><td>SK<td>1</tr>
+</table></body>
+</html>
+------------x0LUSlyc4tM2oYJuQlKHyC--

@@ -22,6 +22,51 @@ Při stavbě robotů na různé soutěže jsem se setkal s problémem při zprac
 
 -- ted?
 
+Jiné zařízení
+Jiný program
+Minulý rok jsme na soutěž eurobot stavěli tohoto robota. Takový robot obsahuje poměrně velké množství senzorů - ultrazvukové měřáky vzdálenosti, pro detekci soupeře, na obou kolech jsou enkodéry, které měří ujetou vzdálenost a na každém rohu je tlačítko detekující náraz do mantinelu. Všechny tyto senzory , a k nim ještě výstup ze samotného programu robota, je potřeba při vývoji zobrazovat. Údaje z tohoto robota vypadají asi nějak takto. Je tam vše co robot dělá, údaje ze věech senzorů...ale není to příliš přehledné. Rozhodl jsem se proto vytvořit aplikaci, která všechna tato data zobrazí v přehledné formě, a když už, tak aby uměl i data ukládat a posílat do zařízení příkazy. Název pouhé "GUI" proto není příliš výstižný. Teď co znamená přehledně zobrazovat? Podle mě to znamená například takto: je to pohled zezhora na tohoto robota..popis
+
+- telo
+- ultra
+  - cerveny
+- tlacitka
+- enkodery
+- disk
+
+aplikace
+- Lorris
+- C++ s Qt
+- Linux a Win
+- Open source
+- na githubu
+- stránky
+  - popis
+  - binarky
+  - kompilace
+  - video
+
+- modularni sturktura
+- jadro zastresuje celou aplikaci a pripojeni k jednotlivim zarizenim
+- analyzer
+  - analyzer je ta cast kterou jsem vám ukazoval na začátku
+  - hlavnim ukolem je prehledne zobrazovat prichozi data
+- proxy
+  - tento modul vytvoří jednoduchý server
+  - připojit z přes internet
+  - 
+- shupito
+  - *toto*
+  - programator
+  - moje aplikace je ovladaci rozhrani
+
+
+- analyzer
+ - obsahuje scriptovací ja
+amuž%nuje přehledné zobrazení všech údajů, a navíc obsahuje scriptovací jazyk který umožňuje s daty libovolně pracovat.
+
+V analyzérů se data zobrazuji v tzv. widgetech, které si užival sám vytáhá na pracovní plochu, může je libovolně zmenšit/zvětšit nebo je přejmenovat. V horní části jsou vidět příchozí data, které se k widgetu přiřadí přetažením daného bytu na widget. Aplikace zobrazuje více typů widgetů, tohle je číslo, dalšími jsou například sloupcový bar nebo graf. Důležitým widgetem je script
+ - uživatel si v něm může napsat krátký script, který může zpracovávat data prakticky v jakémkoliv formátu. Ze scriptu lze využít ostatní zobrazovací widgety.
+
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -31,7 +76,7 @@ Zkusil jsem tedy najít nějákou aplikaci, která by splňovala mé požadavky,
 Aplikace, kterou jsem vytvořil nese jméno Lorris, je napsaná v C++ s použitím Qt Frameworku a dokáže běžet pod MS Windows a Linuxem. 
 Zdrojové kódy jsou uvolněné jako open-source a jsou dostupné v GIT repozitáři na serveru GitHub, na kterém jsem vytvořil i jednoduchý web s popisem programu, odkazy ke stažení spustitelných souborů pro Windows, návodem ke zkompilování a videem, ve kterém aplikaci představuji.
 Program má modulární strukturu, díky čemuž může sjednotit několik nástrojů, které mají podobnou oblast použití. Aplikace obsahuje moduly Analyzér, který parsuje a zobrazuje data v grafické podobě, Proxy mezi sériovým portem a TCP socketem, která umožňuje připojení k zařízení (např. nějákému čipu) přes internet, modul pro obsluhu programátoru Shupito a Terminál.
-Jednotlivé moduly se otevírají v záložkách, podobně jako stránky ve webovém prohlížeči. Základní část poskytuje připojení k zařízení, správu záložek s moduly, úložiště pro nastavení aplikace a správu joysticku, zpracovávání dat probíhá v modulech. 
+Jednotlivé moduly se otevírají v záložkách, podobně jako stránky ve weebovém prohlížeči. Základní část poskytuje připojení k zařízení, správu záložek s moduly, úložiště pro nastavení aplikace a správu joysticku, zpracovávání dat probíhá v modulech. 
 
 Moduly se mohou k zařízení připojit pomocí Sériového portu, TCP socketu nebo mohou jen načíst data ze souboru.
 

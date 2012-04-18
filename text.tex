@@ -18,6 +18,7 @@
 \usepackage{amssymb}
 \usepackage{bbding}
 \usepackage{enumitem}
+%\usepackage{indentfirst}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
 \renewcommand{\cftsecdotsep}{\cftdotsep}
@@ -84,7 +85,7 @@
 
 \renewcommand\refname{Literatura} 
 %\def\bibname{PŘÍLOHA D: Reference}
-\renewcommand\bibname{PŘÍLOHA D: Reference}
+%\renewcommand\bibname{PŘÍLOHA D: Reference}
 % přejmenuje anglický název Reference na české Literatura
 
 
@@ -151,7 +152,7 @@
 \vspace{60mm}
 
 \huge %\LARGE
-\B{GRAFICKÉ UŽIVATELSKÉ ROZHRANÍ} 
+\B{LORRIS TOOLBOX \\ Sada nástrojů pro vývoj a řízení robotů}
 % na titulní straně může být stručnější, pokud je to potřeba  
 
 \Large
@@ -185,7 +186,7 @@
 \vspace{45mm}
 
 \LARGE %\huge 
-\B{GRAFICKÉ UŽIVATELSKÉ ROZHRANÍ} 
+\B{LORRIS TOOLBOX \\ Sada nástrojů pro vývoj a řízení robotů}%SADA NÁSTORUJŮ PRO VÝVOJ A ŘÍZENÍ ROBOTŮ} 
 \end{center}  
 \large
 
@@ -249,17 +250,31 @@ Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnět
 
 \section*{Anotace }
 
-    Cílem této práce bylo vytvořit uživatelské prostředí určené k parsování a~zobrazování surových dat posílaných z mikrokontrolérů v~robotech, digitálních sondách apod. 
-Hlavní vlastností programu je modulárnost -- rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
 
-\D \B{Klíčová slova:} parser, analýza dat, program
+Tato práce popisuje sadu nástrojů pro vývoj a ovládání libovolného zařízení schopného komunikovat po sériové lince nebo TCP socketu.
+
+Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
+
+Hlavním přínosem tohoto softwaru je, že výrazně urychluje, zpřehledňuje a zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
+%Hlavní oblastí použití jsou čtení, parsování a zobrazování dat z mikročipů, 
+
+    %Cílem této práce bylo vytvořit uživatelské prostředí určené k parsování a~zobrazování surových dat posílaných z mikrokontrolérů v~robotech, digitálních sondách apod. 
+%Hlavní vlastností programu je modulárnost -- rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
+
+\D \B{Klíčová slova:} analýza dat, počítačový program, robot, grafické zobrazení, vývoj a testování aplikací
 
 \section*{Annotation}
 
-    Purpose of this labor is to create graphical user interface for parsing and displaying raw data sent from embedded devices, robots, digital probes and other devices which are using microcontrollers.
-Main feature of this application is modularity -- it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
+This labor describes toolbox designed for developement and control of any device capable of connecting to serial port or TCP socket.
 
-\D \B{Key words:} parser, data analysis, program
+This application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
+
+Main asset of this software is quick, well arranged and simple developement and testing of applications for microcontrollers -- typically programming and controling various kinds of robots.
+
+    %Purpose of this labor is to create graphical user interface for parsing and displaying raw data sent from embedded devices, robots, digital probes and other devices which are using microcontrollers.
+%Main feature of this application is modularity -- it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
+
+\D \B{Key words:} data analysis, computer program, robot, graphical interface, developement and testing of applications
 
 \addtolength{\textheight}{30mm} % prodlouží následující stránku
 
@@ -606,11 +621,13 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 {\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
+
+%refg
+Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.72]{img/use_pid.png}
+\includegraphics[scale=0.55]{img/use_pid.png}
 \caption{Ladění PID regulátoru}
-\label{Terminal}
 \end{center}
 \end{figure}
 
@@ -660,12 +677,15 @@ Vytvořená aplikace splňuje všechny stanovené požadavky:
     \item Podpora co nejvíce formátů příchozích dat% 2
     \item Snadné a rychlé používání % 3
     \item Možnost běhu i na jiných systémech než je MS Windows % 4
-    \item Co možná nejnižší cena % 5
+    \item Co možná nejnižší cena -- program je dostupný zdarma% 5
     \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
+Program navíc výrazně přesáhl původní cíle -- mimo zobrazování dat dokáže posílat data i zpět do zařízení, programovat mikročipy a vytvořit proxy mezi sériovým portem a TCP socketem. Ve srovnání s~nalezenými programy s~podobným zaměřením (viz úvod) je také jediný, který umožňuje uživateli napsat vlastní script pro parsování dat.
 
-Aplikace je nadále vyvíjena, můžu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříž, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (8.3.2012) asi 14 a půl tisíce řádků kódu (bez knihoven třetích stran).
+Přestože se jedná o zcela nový software, byl již použit při testování barevného senzoru, ladění PID regulátoru pro robota na sledování čáry a je používán pro ovládání programátoru Shupito. Další možnosti použití jsou uvedeny v kapitole 6.
+
+Aplikace je nadále vyvíjena, mohu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříž, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (8.3.2012) asi 14 a půl tisíce řádků kódu (bez knihoven třetích stran). Zdrojové kódy a instruktážní video jsou přiloženy na CD. 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/cloc_edit.png}
@@ -802,7 +822,7 @@ function onDataChanged(data, dev, cmd, index) {
 
 \subsection*{Dostupné funkce widgetů}
 \addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
-Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget -- díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
+Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget -- díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html\#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
 
 \noindent\begin{minipage}{\textwidth}
 \begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{width}]
@@ -1047,6 +1067,14 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \bibitem{avr232client} \It{avr232client} \\
     \url{http://technika.junior.cz/trac/wiki/avr232client}\\
     (Stav ke dni 6.3.2012)
+
+    \bibitem{3pi} \It{Pololu 3pi Robot} \\
+    \url{http://www.pololu.com/catalog/product/975}\\
+    (Stav ke dni 18.4.2012)
+
+    \bibitem{rob_den} \It{Robotický den 2012} \\
+    \url{http://www.roboticday.org/cz/}\\
+    (Stav ke dni 18.4.2012)
 
     \bibitem{eurobot} \It{Eurobot} \\
     \url{http://www.eurobot.cz/}\\
