@@ -46,7 +46,7 @@ aplikace
   - video
 
 - modularni sturktura
-- jadro zastresuje celou aplikaci a pripojeni k jednotlivim zarizenim
+- jadro zastresuje celou aplikaci a pripojeni k jednotlivym zarizenim
 - analyzer
   - analyzer je ta cast kterou jsem vám ukazoval na začátku
   - hlavnim ukolem je prehledne zobrazovat prichozi data
