@@ -238,13 +238,14 @@ zákonů (autorský zákon) v~platném znění.
 \newpage   % Poděkování -- nepovinné 
 
 ~ % musí to tu být, aby fungovala svislá mezera
-
-\vspace{120mm}
+\vspace{100mm}
 
 \section*{Poděkování}
 Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, Martinu Vejnárovi za informace o programátoru Shupito, panu profesorovi Mgr. Miroslavu Burdovi za velkou pomoc s prací a v neposlední řadě Martinu Foučkovi za rady a pomoc při práci s Qt Frameworkem. Dále děkuji organizaci DDM Junior za poskytnutí podpory.
 
-\D Tato práce byla vypracována za finanční podpory JMK.
+\D Tato práce byla vypracována za finanční podpory JMK a JCMM.
+
+\includegraphics[width=\textwidth]{img/jcmm.png}
  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,7 +253,7 @@ Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnět
 ~ % musí to tu být, aby fungovala svislá mezera
 \vspace{10mm}
 
-\section*{Anotace }
+\section*{Anotace}
 
 
 Tato práce popisuje sadu nástrojů pro vývoj a ovládání libovolného zařízení schopného komunikovat po sériové lince nebo TCP socketu.
@@ -260,10 +261,6 @@ Tato práce popisuje sadu nástrojů pro vývoj a ovládání libovolného zař�
 Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
 
 Hlavním přínosem tohoto softwaru je, že výrazně urychluje, zpřehledňuje a zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
-%Hlavní oblastí použití jsou čtení, parsování a zobrazování dat z mikročipů, 
-
-    %Cílem této práce bylo vytvořit uživatelské prostředí určené k parsování a~zobrazování surových dat posílaných z mikrokontrolérů v~robotech, digitálních sondách apod. 
-%Hlavní vlastností programu je modulárnost -- rozdělení na~podčásti určené ke specifickým úkonům (Terminál, grafický parser, vykreslování grafů).
 
 \D \B{Klíčová slova:} analýza dat, počítačový program, robot, grafické zobrazení, vývoj a testování aplikací
 
@@ -274,9 +271,6 @@ This labor describes toolbox designed for developement and control of any device
 This application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
 
 Main asset of this software is quick, well arranged and simple developement and testing of applications for microcontrollers -- typically programming and controling various kinds of robots.
-
-    %Purpose of this labor is to create graphical user interface for parsing and displaying raw data sent from embedded devices, robots, digital probes and other devices which are using microcontrollers.
-%Main feature of this application is modularity -- it is divided to sub-sections designed for specific operations (Terminal, graphical parser, graph drawer).
 
 \D \B{Key words:} data analysis, computer program, robot, graphical interface, developement and testing of applications
 
@@ -366,9 +360,7 @@ GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář prog
     \item Prezentace práce: \\ \burl{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
 \end{itemize}
 V repozitáři nadále probíhá aktivní vývoj.
-%Prezentace práce: \\ \url{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
 \subsection{Struktura aplikace}
-%\addcontentsline{toc}{subsection}{Struktura aplikace}
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
 \\
 Možnosti připojení k zařízení:
@@ -389,8 +381,6 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 
 \newpage
 \section{Modul: Analyzér}
-%\addcontentsline{toc}{section}{Modul: Analyzér} 
-%\addcontentsline{toc}{subsection}{Popis}
 
 \begin{figure}[h]
 \begin{center}
@@ -414,7 +404,6 @@ Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horn
 Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
 Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
-%(jeho jméno, u čísla např. jeho datový typ apod. -- podrobněji jsou možnosti nastavení popsány  u jednotlivých widgetů)
 
 \begin{figure}[h]
 \begin{center}
@@ -435,7 +424,6 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 \end{figure}
 
 \subsection{Widget: číslo}
-%\addcontentsline{toc}{subsection}{Widget: číslo}
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/w_num.png}
@@ -452,9 +440,7 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
 \end{itemize}
 
 
-%\newpage
 \subsection{Widget: sloupcový bar}
-%\addcontentsline{toc}{subsection}{Widget: sloupcový bar}
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/w_bar.png}
@@ -464,7 +450,6 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
 Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
 
 \subsection{Widget: barva}
-%\addcontentsline{toc}{subsection}{Widget: barva}
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/w_col.png}
@@ -473,9 +458,7 @@ Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupníc
 \end{figure}
 Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
 
-%\newpage
 \subsection{Widget: graf}
-%\addcontentsline{toc}{subsection}{Widget: graf}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
@@ -490,9 +473,7 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \end{center}
 \end{figure}
 
-%\newpage
 \subsection{Widget: script}
-%\addcontentsline{toc}{subsection}{Widget: script}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_script.png}
@@ -502,7 +483,6 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \end{figure}
 Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
 %DOP: že umožní zprcování hodně typů dat?
-%TODO Qtscript ref
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/w_script_src.png}
@@ -515,9 +495,6 @@ Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše 
 \pagestyle{plain}
 
 \section{Modul: Proxy mezi sériovým portem a TCP socketem}
-%\addcontentsline{toc}{section}{Modul: Proxy mezi sériovým portem a TCP socketem} 
-%\addcontentsline{toc}{subsection}{Popis}
-
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/proxy.png}
@@ -532,9 +509,6 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na kt
 \pagestyle{plain}
 
 \section{Modul: Shupito}
-%\addcontentsline{toc}{section}{Modul: Shupito} 
-%\addcontentsline{toc}{subsection}{Popis}
-
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/shupito.png}
@@ -542,15 +516,12 @@ Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na kt
 \label{Shupito}
 \end{center}
 \end{figure}
-% DOP: popsat typy programováni
 Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standartu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
-% DOP: opravit
 Modul v mojí práci dokáže obsluhovat programátor Shupito -- nastavovat výstupní napětí, číst a programovat paměť čipů (flash i EEPROM) a číst a měnit pojistky. Jako výstupní i vstupní data používá soubory ve formátu Intel HEX32\footnote{\It{Intel HEX32} -- formát souborů obsahující paměť čipu}. 
 Způsob komunikace s programátorem je přenesen z oficiálního ovládacího programu\cite{avr232client}, který je však na rozdíl od Lorris dostupný pouze pro MS Windows.
 
 \subsection{RS232 tunel}
-%\addcontentsline{toc}{subsection}{RS232 tunel}
 \label{tunel}
 Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
 
@@ -563,9 +534,6 @@ Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čip
 
 \newpage
 \section{Modul: Terminál}
-%\addcontentsline{toc}{section}{Modul: Terminál} 
-%\addcontentsline{toc}{subsection}{Popis}
-
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/terminal.png}
@@ -579,9 +547,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 
 \newpage
 \section{Příklady použití}
-%\addcontentsline{toc}{section}{Příklady použití}
 \subsection{Testování barevného senzoru}
-%\addcontentsline{toc}{subsection}{1. Testování barevného senzoru}
 {\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
 \\
 {\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu \uv{barva} mohu vidět barvu, kterou senzor rozpoznal.
@@ -596,7 +562,6 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 
 \newpage
 \subsection{Testování enkodérů}
-%\addcontentsline{toc}{subsection}{2. Testování enkodérů}
 {\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
 \\
 {\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
@@ -604,7 +569,6 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_enc_term.png}
-%DOP y/i?
 \caption{Surová data z enkodérů s vyznačenými byty, které obsahují úhel natočení}
 \label{Terminal}
 \end{center}
@@ -620,14 +584,12 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 
 \newpage
 \subsection{Ladění PID regulátoru}
-%\addcontentsline{toc}{subsection}{3. Ladění PID regulátoru}
 {\bf Situace:} Robot kvůli rozdílnému výkonu motorů nejede rovně. Tento problém jsem se rozhodl řešit pomocí PID regulátoru, pro jehož správnou funkci je potřeba nastavit několik konstant. \\
 \\
 {\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
 
-%refg
 Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}.
 \begin{figure}[H]
 \begin{center}
@@ -638,7 +600,6 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 
 \newpage
 \subsection{Vývoj robota pro soutěž Eurobot 2011}
-%\addcontentsline{toc}{subsection}{4. Vývoj robota pro soutěž Eurobot 2011}
 V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
 Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
