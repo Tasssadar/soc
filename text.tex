@@ -20,6 +20,7 @@
 \usepackage{bbding}
 \usepackage{enumitem}
 \usepackage{breakurl}
+
 %\usepackage{indentfirst}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
@@ -36,27 +37,31 @@
 
 \usepackage{listings}
 \usepackage{color}
-\definecolor{lightgray}{rgb}{.9,.9,.9}
+\usepackage{minted}
+\definecolor{lightgray}{RGB}{240,240,240}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{darkgreen}{RGB}{0,150,0}
+
+\usemintedstyle{perldoc}
+\newminted{js}{linenos=true, bgcolor=lightgray}
 
 \lstdefinelanguage{JavaScript}{
   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, for},
   keywordstyle=\color{blue}\bfseries,
   ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
+  ndkeywordstyle=\color{blue}\bfseries,
   identifierstyle=\color{black},
-  sensitive=false,
+  sensitive=zr,
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
+  commentstyle=\color{darkgreen}\ttfamily,
   stringstyle=\color{red}\ttfamily,
   morestring=[b]',
   morestring=[b]"
 }
 
 \lstset{
-   language=JavaScript,
    backgroundcolor=\color{lightgray},
    extendedchars=true,
    basicstyle=\footnotesize\ttfamily,
@@ -73,7 +78,8 @@
    captionpos=b
 }
 
-\renewcommand{\lstlistingname}{Příklad}
+\renewcommand{\listingscaption}{Příklad}
+\renewcommand{\listoflistingscaption}{Příklady}
 
 % \usepackage{parskip} -- zapne americké odstavce v celé práci
 
@@ -245,7 +251,11 @@ Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnět
 
 \D Tato práce byla vypracována za finanční podpory JMK a JCMM.
 
+\begin{figure}[H]
+\begin{center}
 \includegraphics[width=\textwidth]{img/jcmm.png}
+\end{center}
+\end{figure}
  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -266,9 +276,9 @@ Hlavním přínosem tohoto softwaru je, že výrazně urychluje, zpřehledňuje 
 
 \section*{Annotation}
 
-This labor describes toolbox designed for developement and control of any device capable of connecting to serial port or TCP socket.
+This work describes a toolbox designed for developement and control of any device capable of connecting to serial port or TCP socket.
 
-This application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
+The application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
 
 Main asset of this software is quick, well arranged and simple developement and testing of applications for microcontrollers -- typically programming and controling various kinds of robots.
 
@@ -346,11 +356,9 @@ Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Čí
 Z těchto důvodů jsem se rozhodl napsat vlastní aplikaci, která bude všechny výše uvedené požadavky splňovat.
 
 \section{Popis rozhraní}
-%\addcontentsline{toc}{section}{Popis rozhraní}
-Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v C++ a využívá Qt Framework\cite{qtfrm} (v4.7), což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více operačních systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
+Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v C++ a využívá Qt Framework\cite{qtfrm}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více operačních systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
 
 \subsection{Web a repozitář programu}
-%\addcontentsline{toc}{subsection}{Web a repozitář programu}
 GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\cite{github}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu, který jsem vytvořil, jsou odkazy ke stažení spustitelných souborů pro Windows, popis programu, video s představením programu (6 min.), ukázky z programu (screenshoty) a návod ke zkompilování pro MS Windows a Linux.
 
 \begin{itemize}
@@ -361,9 +369,9 @@ GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář prog
 \end{itemize}
 V repozitáři nadále probíhá aktivní vývoj.
 \subsection{Struktura aplikace}
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči.\\
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči. Lorris umí otevřit několik oken zaráz a dokáže také rozdělit okno na několik částí, na obrázku \ref{split_img} je nalevo modul analyzér a napravo terminál. \\
 \\
-Možnosti připojení k zařízení:
+\noindent Možnosti připojení k zařízení:
 \begin{itemize}
     \item Sériový port
     \item Shupito Tunel (virtuální sériový port, viz kapitola \ref{tunel})
@@ -372,10 +380,38 @@ Možnosti připojení k zařízení:
 \end{itemize}
 Je možné mít připojeno více různých modulů na jedno zařízení.  
 
+
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{img/con_dialog.png}
+\includegraphics[scale=0.6]{img/new_tab.png}
 \caption{Dialog vytvoření panelu}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/split.png}
+\caption{Ukázka rozdělení okna na více částí}
+\label{split_img}
+\end{center}
+\end{figure}
+
+\subsection{Sezení}
+Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a tímto se vrátit k předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu jako když aplikaci opouštěl.
+
+\subsection{Automatická aktualizace}
+Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zda je dostupná nová verze a pokud ano, zobrazí uživateli malé upozornění:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/update_notify.png}
+\caption{Upozornění o dostupné aktualizaci}
+\end{center}
+\end{figure}
+V případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a spustí se malý pomocný program, který stáhne novou verzi a nainstaluje ji. Zobrazuje při tom seznam změn oproti staré verzi.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/updater.png}
+\caption{Probíhající aktualizace}
 \end{center}
 \end{figure}
 
@@ -390,10 +426,9 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{center}
 \end{figure}
 
-Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.  
+Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start byte}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
-
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start bajt}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -401,13 +436,25 @@ Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_st
 
 Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu \uv{vytahat} na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
 
-Poté widget zobrazuje data tohoto bytu, nebo tento byte bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který byte je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+Poté widget zobrazuje data tohoto bytu, nebo tento bajt bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který bajt je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
 Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
 
-\begin{figure}[h]
+Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k síti anebo k ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a rychle duplikovat -- stačí přemístit widget se stiknutou klávesou control.
+
+U některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí gesta myší--stačí widget chytit jako při přesouvání a \uv{zatřepat} s ním zleva doprava. Při přesunutí se pak widget změnší na svoji původní velikost.
+
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{img/analyzer_struct.png}
+\includegraphics[scale=1]{img/lines.png}
+\caption{Zarovnávání widgetů pomocí sítě a čar}
+\label{widget_lines}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{img/analyzer_struct.png}
 \caption{Dialog nastavení struktury dat}
 \label{Analyzer_struct}
 \end{center}
@@ -415,7 +462,7 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 
 \begin{figure}[H]
 \begin{center}
-\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets.png}}
+\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets_new.png}}
 \hfill
 \subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
 \caption{Widgety}
@@ -423,10 +470,31 @@ Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí my�
 \end{center}
 \end{figure}
 
+\subsection{Filtrování dat}
+Analyzér umí příchozí data filtrovat pomocí filtrů. Tyto filtry obsahují podmínky, podle kterých se určí, zda příchozí packet projde nebo ne.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/filters.png}
+\caption{Nastavení filtrů}
+\end{center}
+\end{figure}
+Podmínka může kontrolovat buďto příkaz nebo zařízení z hlavičky packetu, hodnotu bajtu v packetu nebo může spustit jednoduchý uživatelský script. Díky scriptu je možné napsat takřka jakoukoliv podmínku pro filtrování.
+
+\begin{listing}[H]
+\begin{jscode}
+// Vraci true pokud ma projit, false pokud ne
+function dataPass(data, dev, cmd) {
+    return false;
+}
+\end{jscode}
+\caption{Script pro podmínku filtru}
+\end{listing}
+
+% TODO: newpage
 \subsection{Widget: číslo}
 \begin{figure}[h]
 \begin{center}
-\includegraphics{img/w_num.png}
+\includegraphics[scale=1]{img/w_num.png}
 \caption{Widget: číslo}
 \end{center}
 \end{figure}
@@ -439,6 +507,11 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
     \item Binární -- zobrazí číslo ve dvojkové soustavě.  Dostupné pouze pro přirozená čísla.
 \end{itemize}
 
+Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených senzorů vzdálenosti, kdy se hodnota, kterou na senzoru naměří AD převodník, musí přepočítat pomocí určité rovnice abychom dostali hodnotu v centimetrech. Výraz může vypadat například takto:
+\begin{center}
+\verb|2914/(%n+5)-1|
+\end{center}
+kde \verb|%n| je zástupná sekvence pro číslo, které by se jinak ve widgetu zobrazilo. Tento výraz je pro přepočítání vzdálenosti na centimetry podle hodnoty přečtené z infračerveného senzoru vzdálenosti Sharp GP2Y0A41.
 
 \subsection{Widget: sloupcový bar}
 \begin{figure}[H]
@@ -447,7 +520,7 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
 \caption{Widget: sloupcový bar}
 \end{center}
 \end{figure}
-Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot.
+Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot. Stejně jako widget číslo také dokáže přepočívat hodnotu podle výrazu.
 
 \subsection{Widget: barva}
 \begin{figure}[H]
@@ -456,7 +529,16 @@ Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupníc
 \caption{Widget: barva}
 \end{center}
 \end{figure}
-Tento widget ukáže 24-bitové hodnoty RGB jako barevný obdélník. Dokáže provést korekci jasu všech barev nebo každé z barev RGB zvlášť.
+Tento widget dokáže zobrazit příchozí hodnoty jako barevný obdélník. Podporované formáty:
+\begin{itemize}
+    \item {\bf RGB} (8b/kanál, 3x uint8)
+    \item {\bf RGB} (10b/kanál, 3x uint16)
+    \item {\bf RGB} (10b/kanál, 1x uint32)
+    \item {\bf Odstíny šedé} (8b/kanál, 1x uint8)
+    \item {\bf Odstíny šedé} (10b/kanál, 1x uint16)
+\end{itemize}
+
+Widget také dokáže provést korekci jasu všech barev zaráz nebo každé z barev RGB zvlášť.
 
 \subsection{Widget: graf}
 \begin{figure}[h]
@@ -481,14 +563,109 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \label{script_w}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Jazyk, ve kterém se tento script píše je QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
-%DOP: že umožní zprcování hodně typů dat?
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Může při tom použít buďto Python nebo QtScript\cite{qtscript} (jazyk založený na standartu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
+
+Editor scriptu má v sobě vestavěné ukázky kódu, například jak nastavit hodnotu existujícího widgetu \It{číslo}, jak odeslat data nebo jak reagovat na stisknutí klávesy (na obrázku \ref{script_src} jsou skryté pod ikonkou žárovky). Je v něm také odkaz na automaticky generovanou dokumentaci, která je na adrese \url{http://technika.junior.cz/docs/Lorris/}.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/w_script_src.png}
 \caption{Dialog pro nastavení zdrojového scriptu}
+\label{script_src}
 \end{center}
 \end{figure}
+
+\subsection{Widget: kolo}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{img/w_circle.png}
+\caption{Widget: kolo}
+\end{center}
+\end{figure}
+Widget kolo zobrazuje příchozí hodnotu jako úhel v kruhu, což se hodí například při zobrazování natočení kola robota. Dokáže zobrazit data přicházející jako úhel ve stupních, radiánech nebo jako číslo v určitém rozmezí (například enkodér s rozlišením 12 bitů vrací číslo od 0 do 4096).
+
+\subsection{Widget: plátno}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_canvas.png}
+\caption{Widget: plátno}
+\end{center}
+\end{figure}
+Plátno je widget který lze ovládat pouze ze scriptu a je určen ke kreslení 2D grafiky. Dokáže zobrazit čáry, obdélníky, kruhy a elipsy. V následujícím příkladu je kód pro nakreslení červeného kříže uprosřed widgetu.
+
+\begin{listing}[H]
+\begin{jscode}
+Canvas.setLineColor("red");
+Canvas.setFillColor("red");
+// x, y, sirka, vyska
+Canvas.drawRect(55, 10, 20, 110);
+Canvas.drawRect(10, 55, 110, 20);
+\end{jscode}
+\caption{Ovládání widgetu plátno}
+\end{listing}
+
+\subsection{Widget: tlačítko a slider}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_btn_slider.png}
+\caption{Widgety tlačítko a slider}
+\end{center}
+\end{figure}
+Tyto dva widgety pouze umožňují interakci se scriptem -- po stisknutí tlačítka se zavolá metoda ve scriptu, ve které může uživatel například poslat příkaz do robota, při posunutí slideru se ve scriptu zavolá metoda, ve které může uživatel například změnit rychlost robota a podobně. Tlačítku lze nastavit klávesovou zkratku a slideru zkratku pro \uv{zaostření}, aby ho uživatel poté mohl posouvat pomocí šipek na klávesnici.
+\begin{listing}[H]
+\begin{jscode}
+function Slider_valueChanged() {
+    appendTerm("Hodnota slideru " + Slider.getValue() + "\n");
+}
+
+function Tlacitko_clicked() {
+    appendTerm("Tlacitko stisknuto\n");
+}
+\end{jscode}
+\caption{Metody volané widgety \It{slider} a \It{tlačítko}}
+\end{listing}
+
+\subsection{Widget: vstup}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_input.png}
+\caption{Widget \It{vstup} s nastavením joysticku}
+\label{input}
+\end{center}
+\end{figure}
+Tento widget je také určený k interakci se scriptem (tj. vstupu uživatele), přičemž script také určuje prvky rozhraní -- widget je v základu prázdný a až script do něj přidá například tlačítko nebo textové pole. Tento widget je mírně složitější na obsluhu, ale lze díky němu použít všechny prveky UI, které Qt Framework obsahuje -- tlačítka, posuvníky, textová pole, vysouvací seznamy a podobně. V příkladu \ref{input_script} je script pro vytvoření prvků jako v obrázku \ref{input}.
+
+\begin{listing}[H]
+\begin{jscode}
+// parametry: jmeno Qt widgetu, "stretch" hodnota
+var joyList = joy_settings.newWidget("QComboBox");
+var maxSpdLabel = joy_settings.newWidget("QLabel", 1);
+var maxSpd = joy_settings.newWidget("QSpinBox");
+var turnSpdLabel = joy_settings.newWidget("QLabel", 1);
+var turnSpd = joy_settings.newWidget("QSpinBox");
+var invert = input.newWidget("QCheckBox");
+
+// Nastaveni textu do QLabel
+maxSpdLabel.text = "Max speed:";
+\end{jscode}
+\caption{Přidání prvků do widgetu \It{vstup}}
+\label{input_script}
+\end{listing}
+
+\subsection{Widget: status}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_status.png}
+\caption{Widget status}
+\end{center}
+\end{figure}
+Widget status je určený k zobrazování stavu například tlačítka (stisknuté/nestisknuté) nebo chybového stavu z enkodéru (0 = vše je v pořádku, ostatní čísla je možné dohledat v datasheetu enkodéru). Uživatel k příchozím hodnotám přiřadí jednotlivé stavy (text a barvu, viz obrázek \ref{status_dlg}) a widget je poté zobrazuje. Lze nastavit i \uv{neznámou hodnotu}, která se zobrazí pokud žádný z nadefinovaných stavů neodpovídá příchozí hodnotě.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_status_dlg.png}
+\caption{Nastavení stavů}
+\label{status_dlg}
+\end{center}
+\end{figure} 
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -562,7 +739,7 @@ Klasický terminál -- zobrazuje data přijatá přes sériový port a posílá 
 
 \newpage
 \subsection{Testování enkodérů}
-{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bytech v takovém formátu, který znemožňuje použití např. terminálu.\\
+{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bajtech v takovém formátu, který znemožňuje použití např. terminálu.\\
 \\
 {\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
 
@@ -711,7 +888,7 @@ function onKeyPress(key) {
 
 \subsection*{Dostupné funkce}
 \addcontentsline{toc}{subsection}{Dostupné funkce}
-Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...) a samotný Lorris poskytuje další rozšiřující funkce. 
+Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...) a samotná Lorris poskytuje další rozšiřující funkce. 
 
 \begin{itemize}
     \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.\\
@@ -775,16 +952,17 @@ newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
      \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
 \end{itemize}
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastavení jeho hodnoty z příchozích dat]
+\begin{listing}[H]
+\begin{jscode}
 var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
 
 function onDataChanged(data, dev, cmd, index) {
     cislo.setValue(data[0]);
     return "";
 }
-\end{lstlisting}
-\end{minipage}
+\end{jscode}
+\caption{Vytvoření widgetu \It{číslo} a nastavení jeho hodnoty z příchozích dat}
+\end{listing}
 
 \subsection*{Dostupné funkce widgetů}
 \addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
