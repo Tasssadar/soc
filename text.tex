@@ -811,6 +811,19 @@ Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují
 \end{center}
 \end{figure}
 
+\section{Podpora joysticku}
+Lorris podporuje použití joysticku v modulu analyzér například k řízení robota. Nejdříve jsem k přístupu k joysticku používal knihovnu SDL\cite{sdl}, která však pro moje použití nebyla příliš vhodná -- její předpokládané použijí je v počítačových hrách, a podpora joysticku je jen jedna z mnoha částí které knihovna obsahuje. Její architektura se také nehodila ke zbytku Lorris.
+
+Při hledání náhrady jsem ale nenašel žádnou vhodnou knihovnu, jejíž funkce by byla pouze přistupování k joysticku a neměla žádné zbytečné funkce které bych v Lorris nepoužil, a tak jsem si napsal vlastní knihovnu.
+
+Jmenuje se {\bf libenjoy}, funguje pod Windows a Linuxem a je velmi malá a jednoduchá. Oproti SDL si dokáže zapamatovat připojené joysticky, a když joystick odpojíte a zase ho připojíte zpět (například kvůli přeskládání kabelů u počítače nebo se joystick odpojí sám kvůli špatnému kontaktu), tak není třeba ho znovu vybírat jako aktivní -- sám se připojí bez jakékoliv interakce uživatele.
+
+Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
+
+\begin{itemize}
+\item GIT repozitář: \url{https://github.com/Tasssadar/libenjoy}
+\end{itemize}
+
 \newpage
 \section*{Závěr}
 \addcontentsline{toc}{section}{Závěr}
@@ -1227,6 +1240,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \bibitem{eurobot11} \It{Eurobot 2011} \\
     \url{http://www.eurobot.cz/eurobot2011.php}\\
     (Stav ke dni 6.3.2012)
+
+    \bibitem{sdl} \It{SDL} -- Simple Directmedia Layer \\
+    \url{http://www.libsdl.org/}\\
+    (Stav ke dni 13.2.2013)
 
     \bibitem{cloc} \It{CLOC} -- Count Lines of Code \\
     \url{http://cloc.sourceforge.net/}\\
