@@ -603,7 +603,7 @@ Canvas.drawRect(10, 55, 110, 20);
 \caption{Ovládání widgetu plátno}
 \end{listing}
 
-\subsection{Widget: tlačítko a slider}
+\subsection{Widgety tlačítko a slider}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_btn_slider.png}
@@ -898,23 +898,45 @@ Widget \It{script} umožňuje parsování dat pomocí scriptu, který se píše 
     \item \url{http://www.w3schools.com/jsref/default.asp} -- JS reference
 \end{itemize}
 
+\subsubsection*{Online dokumentace}
+Ke scriptu je dostupná automaticky generovaná dokumentace, který obsahuje všechny dostupné metody a příklady scriptů:
+\begin{itemize}
+\item \url{http://technika.junior.cz/docs/Lorris}
+\end{itemize}
+
+\newpage
 \subsection*{Základní script}
 \addcontentsline{toc}{subsection}{Základní script}
-Script by měl obsahovat následující dvě funkce (ale nemusí, pokud je nepoužívá):
-
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Základní script]
+Script by může obsahovat následující funkce (ale nemusí, pokud je nepoužívá):
+\begin{listing}[H]
+\begin{jscode}
 function onDataChanged(data, dev, cmd, index) {
     return "";
 }
 
 function onKeyPress(key) {
-
 }
-\end{lstlisting}
-\end{minipage}
 
-{\color{blue}\verb/onDataChanged(data, dev, cmd, index)/} je volána při změně pozice v datech (tj. když přijdou nová data nebo uživatel pohne posuvníkem historie). Může vracet \verb/string/, který se přidá do terminálu.
+function onRawData(data) {
+}
+
+function onWidgetAdd(widget, name) {
+}
+
+function onWidgetRemove(widget, name) {
+}
+
+function onScriptExit() {
+}
+
+function onSave() {
+}
+\end{jscode}
+\caption{Základní script}
+\label{input_script}
+\end{listing}
+
+\noindent{\color{blue}\verb/onDataChanged(data, dev, cmd, index)/} je volána při změně pozice v datech (tj. když přijdou nová data nebo uživatel pohne posuvníkem historie). Může vracet \verb/string/, který se přidá do terminálu.
 
 \begin{itemize}
     \item \verb/data/ -- {\bf pole s Integery} obsahující příchozí data
@@ -923,70 +945,95 @@ function onKeyPress(key) {
     \item \verb/index/ -- {\bf Integer} s indexem packetu v příchozích datech.
 \end{itemize}
 
-{\color{blue}\verb/onKeyPress(key)/} je volána po stisku klávesy v terminálu. Tato funkce by neměla vracet nic.
+\noindent{\color{blue}\verb/onKeyPress(key)/} je volána po stisku klávesy v terminálu.
 \begin{itemize}
     \item \verb/key/ -- {\bf String} se stisknutou klávesou
 \end{itemize}
 
-\subsection*{Dostupné funkce}
-\addcontentsline{toc}{subsection}{Dostupné funkce}
+\noindent{\color{blue}\verb/onRawData(data)/} je volána kdykoliv příjdou nějáká data.
+\begin{itemize}
+    \item \verb/data/ -- {\bf pole s bajty} obsahují nenaparsovaná data
+\end{itemize}
+
+\noindent{\color{blue}\verb/onWidgetAdd(widget, name)/} \\
+{\color{blue}\verb/onWidgetRemove(widget, name)/}
+
+jsou volány při přidání/odebrání widgetu z plochy
+\begin{itemize}
+    \item \verb/widget/ -- {\bf objekt} widgetu
+    \item \verb/name/ -- {\bf String} se jménem widgetu
+\end{itemize}
+
+\noindent{\color{blue}\verb/onScriptExit()/} -- tato funkce je volána při ukončení scriptu. Je určena pro ukládání nastavení scriptu.
+
+\noindent{\color{blue}\verb/onSave()/} -- tato funkce je volána těsně prěd uložením dat analyzéru. Je určena pro ukládání nastavení scriptu.
+
+\subsection*{Základní funkce}
+\addcontentsline{toc}{subsection}{Základní funkce}
 Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...) a samotná Lorris poskytuje další rozšiřující funkce. 
 
 \begin{itemize}
     \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.\\
-        \noindent\begin{minipage}{\textwidth}
-        \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu]
+        \begin{listing}[H]
+        \begin{jscode}
 function onKeyPress(key) {
     appendTerm(key); // vypise _key_ do terminalu
 }
-        \end{lstlisting}
-        \end{minipage}
+        \end{jscode}
+        \caption{Vypsání stisknutých kláves do terminálu}
+        \end{listing}
 
     \item {\color{blue}\verb/clearTerm()/} -- vyčistí terminál.\\
-        \noindent\begin{minipage}{\textwidth}
-        \begin{lstlisting}[caption=Vypsání stisknutých kláves do terminálu a jeho vyčištění po stisku klávesy C]
+        \begin{listing}[H]
+        \begin{jscode}
 function onKeyPress(key) {
     if(key == "c")
         clearTerm(); // vycisti terminal
     else
         appendTerm(key); // vypise _key_ do terminalu
 }
-        \end{lstlisting}
-        \end{minipage}
+        \end{jscode}
+        \caption{Vypsání stisknutých kláves do terminálu a jeho vyčištění po stisku klávesy C}
+        \end{listing}
 
-    \item {\color{blue}\verb/sendData(pole Integerů)/} -- pošle data do zařizení\\
-        \noindent\begin{minipage}{\textwidth}
-        \begin{lstlisting}[caption=Poslání ASCII kódu stisknuté klávesy]
+    \item {\color{blue}\verb/sendData(pole Integerů)/} \\
+         {\color{blue}\verb/sendData(String)/} -- pošle data do zařizení\\
+        \begin{listing}[H]
+        \begin{jscode}
 function onKeyPress(key) {
-    sendData(new Array(key.charCodeAt(0)));
+    sendData(key);
 }
-        \end{lstlisting}
-        \end{minipage}
+        \end{jscode}
+        \caption{Poslání ASCII kódu stisknuté klávesy}
+        \end{listing}
 
-    \item {\color{blue}\verb/newXXXXWidget()/} -- tato funkce potřebuje o něco obsáhlejší popis, který je v následující kapitole
+    \item {\color{blue}\verb/throwException(String)/} -- zobrazí vyskakovací okno s hláškou
+
+    \item {\color{blue}\verb/moveWidget(widget, int x, int y)/} \\
+    {\color{blue}\verb/resizeWidget(widget, int sirka, int vyska)/} \\
+        Tyto funkce přesunou/změní velikost widgetu. \verb|X| a \verb|Y| jsou absolutní hodnoty na ploše widgetů.
+
+    \item {\color{blue}\verb/newWidget()/} -- tato funkce potřebuje o něco obsáhlejší popis, který je v následující kapitole
 \end{itemize}
 
 \subsection*{Vytvoření widgetu}
 \addcontentsline{toc}{subsection}{Vytvoření widgetu}
 
-Script může vytvořit všechny ostatní typy widgetů a posílat do nich data. Samotných funkcí je několik, každá vytvoří jiný typ widgetu:
-\begin{itemize}
-    \item {\color{blue}\verb/newNumberWidget(...)/} -- vytvoří widget \It{číslo}
-    \item {\color{blue}\verb/newBarWidget(...)/} -- vytvoří widget \It{sloupcový bar}
-    \item {\color{blue}\verb/newColorWidget(...)/} -- vytvoří widget \It{barva}
-    \item {\color{blue}\verb/newGraphWidget(...)/} -- vytvoří widget \It{graf}
-    \item {\color{blue}\verb/newInputWidget(...)/} -- vytvoří widget \It{vstup} (dostupný pouze ze scriptu)
-\end{itemize}
-
-Všechny tyto funkce mají stejné parametry a vrací object widgetu.
+Script může vytvořit všechny ostatní typy widgetů a posílat do nich data. 
 {\color{blue}
-\begin{verbatim}newXXXXWidget("jméno");
-newXXXXWidget("jméno", šířka, výška);
-newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
+\begin{verbatim}newWidget(typ, "jméno");
+newWidget(typ, "jméno", šířka, výška);
+newWidget(typ, "jméno", šířka, výška, Xoffset, Yoffset);
 \end{verbatim}
 }
 
 \begin{itemize}
+    \item \verb|typ| -- {\bf konstanta}, typ widgetu. Používají se tyto konstanty:
+    \begin{verbatim}
+    WIDGET_NUMBER, WIDGET_BAR, WIDGET_COLOR, WIDGET_GRAPH,
+    WIDGET_SCRIPT, WIDGET_INPUT, WIDGET_TERMINAL, WIDGET_BUTTON,
+    WIDGET_CIRCLE, WIDGET_SLIDER, WIDGET_CANVAS, WIDGET_STATUS
+    \end{verbatim}
     \item \verb/jméno/ -- {\bf String}, jméno widgetu, zobrazí se v titulku
     \item \verb/šířka/ -- {\bf Integer}, šířka widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
     \item \verb/výška/ -- {\bf Integer}, výška widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
@@ -996,7 +1043,8 @@ newXXXXWidget("jméno", šířka, výška, Xoffset, Yoffset);
 
 \begin{listing}[H]
 \begin{jscode}
-var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
+var cislo = newWidget(WIDGET_NUMBER,
+                "rychlost", 200, 100, -250, 0);
 
 function onDataChanged(data, dev, cmd, index) {
     cislo.setValue(data[0]);
@@ -1010,21 +1058,24 @@ function onDataChanged(data, dev, cmd, index) {
 \addcontentsline{toc}{subsection}{Dostupné funkce widgetů}
 Objekt widgetu je podtřídou třídy z Qt Frameworku QWidget -- díky tomu může používat jeho vlastnosti a sloty. Popis vlastností najdete v Qt referenci\footnote{\url{http://qt-project.org/doc/qt-4.7/qwidget.html\#propertySection}} v kapitole \uv{Properties} a ve scriptu se používají takto:
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{width}]
-var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
-cislo.width = 40; // nastaveni sirky widgetu
-\end{lstlisting}
-\end{minipage}
-
+\begin{listing}[H]
+\begin{jscode}
+var cislo = newWidget(WIDGET_NUMBER,
+                "rychlost", 200, 100, -250, 0);
+cislo.visible = false; // skryti widgetu
+\end{jscode}
+\caption{Vytvoření widgetu \It{číslo} a nastaveni vlastnosti \uv{visible}}
+\end{listing}
 Popis slotů je taktéž v Qt referenci, tentokrát pod kapitolou \uv{Public slots}. Používají se jako metody:
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Vytvoření widgetu \It{číslo} a použití slotu]
-var cislo = newNumberWidget("rychlost", 200, 100, -250, 0);
+\begin{listing}[H]
+\begin{jscode}
+var cislo = newWidget(WIDGET_NUMBER,
+                "rychlost", 200, 100, -250, 0);
 cislo.setDisabled(true); // znemozneni interakce s widgetem
-\end{lstlisting}
-\end{minipage}
+\end{jscode}
+\caption{Vytvoření widgetu \It{číslo} a použití slotu}
+\end{listing}
 
 Kromě těchto zděděných vlastností a funkcí má každý typ widgetu své vlastní.
 
@@ -1033,69 +1084,94 @@ Kromě těchto zděděných vlastností a funkcí má každý typ widgetu své v
 \addcontentsline{toc}{subsubsection}{Widget číslo}
 \begin{itemize}
     \item {\color{blue}\verb/setValue(Integer nebo double)/} -- Nastaví hodnotu widgetu
+    \item {\color{blue}\verb/setFormula(String)/} -- nastaví výraz pro přepočítávání hodnoty
+    \item {\color{blue}\verb/setDataType(konstanta)/} -- Nastaví typ vstupu. Konstanty:
+        \begin{verbatim}
+NUM_UINT8, NUM_UINT16, NUM_UINT32, NUM_UINT64, 
+NUM_INT8, NUM_INT16, NUM_INT32, NUM_INT64, 
+NUM_FLOAT, NUM_DOUBLE
+        \end{verbatim}
 \end{itemize}
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Nastavení hodnoty widgetu \It{číslo}]
-var cislo = newNumberWidget("test cislo", 200, 100, -250, 0);
+\begin{listing}[H]
+\begin{jscode}
+var cislo = newWidget(WIDGET_NUMBER,
+                "test cislo", 200, 100, -250, 0);
 cislo.setValue(40);
+cislo.setFormula("%n-100");
 ...
 cislo.setValue(3.14);
-\end{lstlisting}
-\end{minipage}
+\end{jscode}
+\caption{Nastavení hodnoty widgetu \It{číslo}}
+\end{listing}
 
 \subsubsection*{Widget sloupcový bar}
 \addcontentsline{toc}{subsubsection}{Widget sloupcový bar}
 \begin{itemize}
     \item {\color{blue}\verb/setValue(Integer)/} -- Nastaví hodnotu widgetu
     \item {\color{blue}\verb/setRange(Integer min, Integer max)/} -- Nastaví minimální a maximální hodnotu widgetu
-    \item {\color{blue}\verb/rotationSelected(Integer)/} -- Nastaví rotaci sloupce. 0 pro svislou, 1 pro vodorovnou
+    \item {\color{blue}\verb/setRotation(Integer)/} -- Nastaví rotaci sloupce. 0 pro svislou, 1 pro vodorovnou
+    \item {\color{blue}\verb/setFormula(String)/} -- nastaví výraz pro přepočítávání hodnoty
+    \item {\color{blue}\verb/getMin(), getMax(), getValue()/} -- vrací minimální, maximální a aktualní hodnotu
 \end{itemize}
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Nastavení hodnot widgetu \It{sloupcový bar}]
-var bar = newBarWidget("test bar");
+\begin{listing}[H]
+\begin{jscode}
+var bar = newWidget(WIDGET_BAR, "test bar");
 bar.setRange(0, 100); // rozmezi hodnot 0 az 100
 bar.setValue(45); // nastaveni hodnoty na 45
-bar.rotationSelected(1); // otoceni na vodorovno
-\end{lstlisting}
-\end{minipage}
+bar.setRotation(1); // otoceni na vodorovno
+\end{jscode}
+\caption{Nastavení hodnot widgetu \It{sloupcový bar}}
+\end{listing}
 
 \subsubsection*{Widget barva}
 \addcontentsline{toc}{subsubsection}{Widget barva}
 \begin{itemize}
-    \item {\color{blue}\verb/setValue(Integer r, Integer g, Integer b)/} -- Nastaví barvu z hodnot RGB (každá 0 až 255)
-    \item {\color{blue}\verb/setValue(String barva)/} -- Nastaví barvu z hex hodnoty jako v HTML (např. \#FF0000 pro červenou)
+    \item {\color{blue}\verb/setValue(Integer r, Integer g, Integer b)/} \\
+    {\color{blue}\verb/setValue(String barva)/} \\
+    {\color{blue}\verb/setValue(Integer rgb)/} \\
+    {\color{blue}\verb/setValueAr(pole integerů)/} \\
+        -- Nastaví barvu ve widgetu.
+    \item {\color{blue}\verb/setColorType(konstanta)/} -- Nastavý formát vstupu. Konstanty:
+        \begin{verbatim}
+COLOR_RGB_8, COLOR_RGB_10, COLOR_RGB_10_UINT,
+COLOR_GRAY_8, COLOR_GRAY_10
+        \end{verbatim}
 \end{itemize}
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Nastavení hodnot widgetu \It{barva}]
-var bar = newColorWidget("test barva");
-bar.setValue(255, 255, 0);
-...
-bar.setValue("#00FF00");
-\end{lstlisting}
-\end{minipage}
+\begin{listing}[H]
+\begin{jscode}
+var clr = newWidget(WIDGET_COLOR, "test barva");
+clr.setValue(255, 255, 0);
+clr.setColorType(COLOR_RGB_10);
+clr.setValue(543, 1023, 200);
+\end{jscode}
+\caption{Nastavení hodnot widgetu \It{barva}}
+\end{listing}
 
 \subsubsection*{Widget graf}
 \addcontentsline{toc}{subsubsection}{Widget graf}
 Tento widget se od ostatních poměrně výrazně liší -- je třeba nejdříve vytvořit křivku až té nastavovat hodnoty. Funkce samotného widgetu graf jsou tyto:
 \begin{itemize}
     \item {\color{blue}\verb/addCurve(String jméno, String barva)/} -- Vytvoří a vrátí novou křivku. \verb/barva/ může být buďto html název (např. red, blue) nebo HTML hex zápis (např. \#FF0000)
+    \item {\color{blue}\verb/removeCurve(String jméno)/} \\
+        {\color{blue}\verb/removeAllCurves()/} \\
+        Odebrání jedné nebo všech křivek
     \item {\color{blue}\verb/setAxisScale(bool proX, double min, double max)/} -- Nastaví měřítko os. \verb/proX/ je {\bf true} pokud nastavujete měřítko osy $x$
     \item {\color{blue}\verb/updateVisibleArea()/} -- Přesune pohled na nejvyšší hodnotu osy $x$
 \end{itemize}
 
-{\color{blue}\verb/addCurve(String jméno, String barva)/} vrátí křivku, která má tyto funkce:
+\noindent{\color{blue}\verb/addCurve(String jméno, String barva)/} vrátí křivku, která má tyto funkce:
 
 \begin{itemize}
     \item {\color{blue}\verb/addPoint(Integer index, double hodnota)/} -- Vloží bod křivky. \verb/index/ určuje pořadí bodů (bod s indexem 0 bude vždy před bodem s indexem 50, i když bude vložen až po něm). Pokud bod se stejným indexem už existuje, je jeho hodnota změněna
     \item {\color{blue}\verb/clear()/} -- Smaže všechny body křivky
 \end{itemize}
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Zobrazení křivky funkce sinus ve widgetu \It{graf}]
-var graf = newGraphWidget("graf", 400, 250, -420, 0);
+\begin{listing}[H]
+\begin{jscode}
+var graf = newWidget(WIDGET_GRAPH, "graf", 400, 250, -420, 0);
 graf.setAxisScale(false, -105, 105); // meritko osy y
 graf.setAxisScale(true, 0, 200); // meritko osy x
 
@@ -1104,15 +1180,15 @@ var sin = graf.addCurve("sin", "blue");
 
 // pridani bodu do krivky sin
 var sinVal = 0;
-for(var i = 0; i < 500; ++i)
-{
+for(var i = 0; i < 500; ++i) {
     sin.addPoint(i, Math.sin(sinVal)*100);
     sinVal += 0.1;
 }
 // presunuti na posledni hodnotu krivky
 graf.updateVisibleArea(); 
-\end{lstlisting}
-\end{minipage}
+\end{jscode}
+\caption{Zobrazení křivky funkce sinus ve widgetu \It{graf}}
+\end{listing}
 
 \subsubsection*{Widget vstup}
 \addcontentsline{toc}{subsubsection}{Widget vstup}
@@ -1120,12 +1196,15 @@ Tento widget lze vytvořit pouze ze scriptu a umí zobrazit a ovládat většinu
 Funkce widgetu \It{vstup}:
 \begin{itemize}
     \item {\color{blue}\verb/newWidget(String jméno, Integer roztahování = 0)/} -- Vytvoří a vrátí nový QWidget. \verb/jméno/ musí být jméno třídy widgetu, například QPushButton, QCheckBox nebo QLineEdit. \verb/roztahování/ značí jak moc se bude widget roztahovat oproti ostatním.
+    \item {\color{blue}\verb/removeWidget(Objekt widget)/} -- Odstraní widget vrácený voláním \verb|newWidget|.
+    \item {\color{blue}\verb/clear()/} -- Odstraní všechny widgety.
+    \item {\color{blue}\verb/setHorizontal(bool horizontal)/} -- Nastaví způsob uspořádání widgetů (vedle sebe nebo pod sebou).
 \end{itemize}
 
-
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Widget \It{vstup} -- vytvoření QLabel]
-var vstup = newInputWidget("test vstupu", 150, 100, -160, 0);
+\begin{listing}[H]
+\begin{jscode}
+var vstup = newWidget(WIDGET_INPUT,
+                "test vstupu", 150, 100, -160, 0);
 var label = vstup.newWidget("QLabel", 1);
 
 // zarovnani textu na stred. 
@@ -1135,9 +1214,9 @@ label.alignment = 0x0080 | 0x0004;
 
 // nastaveni textu
 label.text = "Testovaci popisek";
-\end{lstlisting}
-\end{minipage}
-
+\end{jscode}
+\caption{Widget \It{vstup} -- vytvoření QLabel}
+\end{listing}
 Widget vytvořený tímto příkladem vypadá takto:
 
 \begin{figure}[H]
@@ -1150,9 +1229,10 @@ Widget vytvořený tímto příkladem vypadá takto:
 \newpage
 QtScript podporuje i využití principu signálů a slotů, díky tomu lze ve scriptu reagovat například na stisknutí tlačítka.
 
-\noindent\begin{minipage}{\textwidth}
-\begin{lstlisting}[caption=Widget \It{vstup} -- tlačítko]
-var vstup = newInputWidget("test vstupu", 150, 100, -160, 0);
+\begin{listing}[H]
+\begin{jscode}
+var vstup = newWidget(WIDGET_INPUT,
+                "test vstupu", 150, 100, -160, 0);
 
 var rychlost = vstup.newWidget("QLineEdit");
 rychlost.text = "100";
@@ -1160,16 +1240,16 @@ rychlost.text = "100";
 var btn = vstup.newWidget("QPushButton", 1);
 btn.text = "Nastavit";
 
-function posliRychlost()
-{
+function posliRychlost() {
     var speed = parseInt(rychlost.text);
     sendData(new Array(speed));
     appendTerm("Rychlost " + speed + "odeslana\n");
 }
 // Pripojeni signalu "clicked" na slot posliRychlost()
 btn.clicked.connect(posliRychlost);
-\end{lstlisting}
-\end{minipage}
+\end{jscode}
+\caption{Widget \It{vstup} -- tlačítko}
+\end{listing}
 
 \begin{figure}[H]
 \begin{center}
@@ -1178,6 +1258,265 @@ btn.clicked.connect(posliRychlost);
 \end{center}
 \end{figure}
 
+\subsubsection*{Widget kolo}
+\addcontentsline{toc}{subsubsection}{Widget kolo}
+\begin{itemize}
+    \item {\color{blue}\verb/setValue(číslo)/} -- Nastaví zobrazený úhel
+    \item {\color{blue}\verb/setClockwise(bool clockwise)/} -- Nastaví jestli se úhel počítá po nebo proti směru hodinových ručiček
+    \item {\color{blue}\verb/setAngType(konstanta, min, max/} -- Nastavý vstupní formát. Konstanty:
+\verb|ANG_RAD, ANG_DEG, ANG_RANGE|
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var c = newWidget(WIDGET_CIRCLE, "kolo", 200, 200, -210, 0);
+
+c.setAngType(ANG_DEG); // nastaveni vstupu na stupne
+c.setValue(270);
+\end{jscode}
+\caption{Nastavení hodnot widgetu \It{kolo}}
+\end{listing}
+
+\subsubsection*{Widget plátno}
+\addcontentsline{toc}{subsubsection}{Widget plátno}
+\begin{itemize}
+    \item {\color{blue}\verb/clear()/} -- Vymaže vše, co je ve widgetu namalované
+    \item {\color{blue}\verb/setBackground(String barva)/} -- Nastaví barvu pozadí
+    \item {\color{blue}\verb/drawLine(int x1, int y1, int x2, int y2)/} -- Nakreslí čáru.
+    \item {\color{blue}\verb/drawLine(int x, int y)/} -- Nakreslí čáru. Začátek je v bodě, kde končí předchozí nakreslená čára (nebo v [0,0] pokud ještě nebyla žádná nakreslená).
+    \item {\color{blue}\verb/drawRect(int x, int y, int sirka, int vyska)/} -- Nakreslí obdélník.
+    \item {\color{blue}\verb/drawEllipse(int x, int y, int sirka, int vyska)/} -- Nakreslí elipsu
+    \item {\color{blue}\verb/drawEllipse(int x, int y, int polomer)/} -- Nakreslí kruh
+    \item {\color{blue}\verb/setLineSize(int tloušťka)/} -- Tloušťka čáry, kterou se prvky kreslí.
+    \item {\color{blue}\verb/setLineColor(String barva)/} -- Barva čáry, kterou se prvky kreslí.
+    \item {\color{blue}\verb/setFillColor(String barva)/} -- Barva výplně obdélníků, elips a kruhů
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var c = newWidget(WIDGET_CANVAS, "Canvas", 140, 170, -150, 0);
+c.setLineColor("red");
+c.setFillColor("red");
+
+c.drawRect(55, 10, 20, 110);
+c.drawRect(10, 55, 110, 20);
+\end{jscode}
+\caption{Nakreslení kříže ve widgetu \It{plátno}}
+\end{listing}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/w_canvas.png}
+\caption{Nakreslení kříže ve widgetu \It{plátno}}
+\end{center}
+\end{figure}
+
+\subsubsection*{Widget status}
+\addcontentsline{toc}{subsubsection}{Widget status}
+\begin{itemize}
+    \item {\color{blue}\verb/addStatus(int id, bool bitMaska, String text, String barvaPozadí, String barvaTextu)/} -- Přidá nový status. \verb|bitMask| určuje, zda se má použít přímé porovnání s hodnotou \verb|id| nebo bitový operátor \verb|AND|.
+    \item {\color{blue}\verb/removeStatus(int id, bool bitMaska/} -- Odebere status
+    \item {\color{blue}\verb/setValue(Integer)/} -- Nastaví vstupní hodnotu
+    \item {\color{blue}\verb/getValue()/} -- Vrátí aktuální hodnotu
+    \item {\color{blue}\verb/showStatusManager()/} -- Vyvolá dialog pro správu stavů ve widgetu
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var s = newWidget(WIDGET_STATUS, "stav", 0, 0, 200, 0);
+
+s.addStatus(2, false, "Porucha", "orange", "black");
+s.setValue(2);
+\end{jscode}
+\caption{Ovládání widgetu \It{status} ze scriptu}
+\end{listing}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{img/status_script.png}
+\caption{Ovládání widgetu \It{status} ze scriptu}
+\end{center}
+\end{figure}
+
+\subsubsection*{Widget tlačítko}
+\addcontentsline{toc}{subsubsection}{Widget tlačítko}
+Kromě funkcí, které tento widget má je také možné nastavit metodu která se provede po kliknutí, stačí ve scriptu vytvořit metodu {\color{blue}\verb/JménoWidgetu_clicked()/}.
+\begin{itemize}
+    \item {\color{blue}\verb/setButtonName(String text)/} -- Nastaví text na tlačítku
+    \item {\color{blue}\verb/setShortcut(String zkratka)/} -- Nastaví klávesovou zkratku pro tlačítko
+    \item {\color{blue}\verb/setColor(String barva)/} -- Nastaví barvu tlačítka
+    \item {\color{blue}\verb/setTextColor(String barva)/} -- Nastaví barvu textu na tlačítku
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var t = newWidget(WIDGET_BUTTON, "tlacitko", 0, 0, 200, 0);
+
+t.setButtonName("Pokus");
+t.setShortcut("Ctrl+H");
+t.setColor("white");
+
+function tlacitko_clicked() {
+    appendTerm("Tlacitko stisknuto!\n");
+}
+\end{jscode}
+\caption{Nastavení widgetu \It{tlačítko} ze scriptu}
+\end{listing}
+
+\newpage
+\subsubsection*{Widget slider}
+\addcontentsline{toc}{subsubsection}{Widget tlačítko}
+Kromě funkcí, které tento widget má je také možné nastavit metodu která se provedou při různých změnách stavu slideru. Mají tvar  {\color{blue}\verb/JménoWidgetu_jmenoZmeny()/}, v následujícím příkladě má widget jméno \Uv{Slider}.
+\begin{listing}[H]
+\begin{jscode}
+function Slider_valueChanged() {
+    appendTerm("hodnota: " + Slider.getValue() + "\n");
+}
+
+function Slider_minimumChanged() {
+    appendTerm("nove minimum: " + Slider.getMin() + "\n");
+}
+
+function Slider_maximumChanged() {
+    appendTerm("nove maximum: " + Slider.getMax() + "\n");
+}
+
+function Slider_typeChanged() {
+    appendTerm("Typ vstupu zmene na " +
+        (Slider.isInteger() ? "Integer" : "Double") + "\n");
+}
+
+function Slider_orientationChanged() {
+    appendTerm("orientace zmenena na " +
+        Slider.getOrientation() + "\n");
+}
+\end{jscode}
+\caption{Funkce, ktere jsou volány při změně stavu widgetu \It{slider}}
+\end{listing}
+\begin{itemize}
+    \item {\color{blue}\verb/setType(bool double)/} -- Nastaví typ hodnot které widget nastavuje (celá nebo desetinná čísla).
+    \item {\color{blue}\verb/setMin, setMax, setValue (číslo)/} -- Nastaví minimální, maximální a aktuální hodnotu
+    \item {\color{blue}\verb/getMin(), getMax(), getValue()/} -- Vrátí minimální, maximální a aktální hodnotu
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var s = newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
+
+s.setType(true); // desetinna cisla
+s.setMax(6.28);
+s.setValue(3.14);
+
+function Slider_valueChanged() {
+    appendTerm("value changed: " + Slider.getValue() + "\n");
+}
+\end{jscode}
+\caption{Ovládání wigetu \It{slider} ze scriptu}
+\end{listing}
+
+\newpage
+\subsection*{Ukládání dat scriptu}
+\addcontentsline{toc}{subsection}{Ukládání dat scriptu}
+Na uložení hodnot použitých ve scriptu (například nastavení) je připravena třída \verb|ScriptStorage|. Ve scriptu je dostupná jako objekt \verb|storage| a má tyto funkce:
+\begin{itemize}
+    \item {\color{blue}\verb/clear()/} -- Vymaže všechna uložená dataPass
+    \item {\color{blue}\verb/exists(String klíč)/} -- Vrátí \verb|true| pokud hodnota s tímto klíčem existuje.
+    \item {\color{blue}\verb/setXXXX(String klíč, XXX hodnota)/} \\
+        {\color{blue}\verb/getXXXX(String klíč, XXX pokudKlíčNeexistuje)/} \\
+        {\color{blue}\verb/setYYYYArray(String klíč, PoleYYY hodnota)/} \\
+        {\color{blue}\verb/getYYYYArray(String klíč, PoleYYY pokudKlíčNeexistuje)/} \\
+            Funkce pro uložení a načtení hodnoty.
+
+        \verb|XXX| typy mohou být \verb|Bool, Uint32, Int32, Float| nebo \verb|String|. Pole \verb|YYYY| může být s prvky typu \verb|UInt32, Int32| nebo \verb|Float|. Druhý parametr u \verb|getXXX| metod je výchozí hodnota, která se vrátí pokud klíč neexistuje.
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+var s = newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
+s.setType(true); // desetinna cisla
+s.setMax(6.28);
+
+// Nacte hodnotu, ktera byla pred tim ulozena v metode save()
+var ulozene = storage.getFloat("hodnotaPosuvniku", 3.14);
+s.setValue(ulozene);
+
+// Nacte pokusne pole cisel ulozene v metode save()
+var pokus = storage.getInt32Array("pokusnePole", new Array());
+appendTerm("Ulozene pole: " + pokus + "\n");
+
+function onSave() {
+    save();
+}
+
+function onScriptExit() {
+    save();
+}
+
+function save() {
+    storage.setFloat("hodnotaPosuvniku", Slider.getValue());
+
+    var pokus = new Array(4, 8, 15, 16, 23, 42);
+    storage.setInt32Array("pokusnePole", pokus);
+}
+\end{jscode}
+\caption{Ukládání dat scriptu}
+\end{listing}
+
+\newpage
+\subsection*{Přístup k joysticku}
+\addcontentsline{toc}{subsection}{Přístup k joysticku}
+Nejříve několik globálních metod pro práci s joysticky:
+\begin{itemize}
+    \item {\color{blue}\verb/getJoystickNames()/} -- Vráti pole Stringů se jmény přípojených joysticků.
+    \item {\color{blue}\verb/getJoystickIds()/} -- Vráti pole Integerů s ID připojených joysticků. Indexy v tomto poli korespondují s polem z funkce \verb|getJoystickNames()|, tj. ID na pozici 0 patří ke jménu na pozici 0.
+    \item {\color{blue}\verb/getJoystick(int id)/} -- Otevře joystick s daným ID a vrací object \verb|Joystick| neno NULL pokud nebylo možné joystick otevřit.
+    \item {\color{blue}\verb/closeJoystick(Joystick)/} -- Zavře a uvolní objekt joysticku
+\end{itemize}
+Objekt \verb|joystick| pak má následující metody:
+\begin{itemize}
+    \item {\color{blue}\verb/getId()/} -- Vrátí ID joysticku
+    \item {\color{blue}\verb/getNumAxes()/} \\
+          {\color{blue}\verb/getNumButtons()/} -- Vrátí počet os nebo tlačítek
+    \item {\color{blue}\verb/getAxisVal(int osa)/} -- Vrátí aktuální hodnotu osy joysticku jako číslo mezi -32768 a 32767. Parametr \verb|osa| je číslo od 0 do \verb|getNumAxes()-1|.
+    \item {\color{blue}\verb/getButtonVal(int tlačítko)/} -- Vrátí aktuální hodnotu tlačítka jako číslo 0 (uvolněno) nebo 1 (stisknuto). Parametr \verb|tlačítko| je číslo od 0 do \verb|getNumButtons()-1|.
+\end{itemize}
+Kromě toho má joystick také dva signály, na které se můžete ve scriptu napojit:
+\begin{itemize}
+    \item {\color{blue}\verb/axesChanged(Pole integerů)/} -- Volá se když se hodnota některé z os změní. V poli jsou indexy os které se změnily.
+    \item {\color{blue}\verb/buttonChanged(int tlačítko, int stav)/} -- Volá se když se zmení stav tlačítka. Parametr \verb|tlačítko| je index tlačítka a \verb|stav| je číslo 0 nebo 1.
+\end{itemize}
+
+\begin{listing}[H]
+\begin{jscode}
+// Pokusi se otevrit prvni dostupny joystick
+var ids = getJoystickIds();
+var joy = getJoystick(ids[0]);
+
+if(joy) {
+    // pripojeni na signaly
+    joy.axesChanged.connect(axesChanged);
+    joy.buttonChanged.connect(buttonChanged);
+
+    appendTerm("ID joysticku: " + joy.getId() + "\n");
+    appendTerm("Pocet os: " + joy.getNumAxes() + "\n");
+    appendTerm("Pocet tlacitek: " +
+            joy.getNumButtons() + "\n");
+}
+
+function axesChanged(axes) {
+    for(var i = 0; i < axes.length; ++i) {
+        var hodnota = joy.getAxisVal(axes[i]);
+        appendTerm("Osa " + axes[i] + ": " + hodnota + "\n");
+    }
+}
+
+function buttonChanged(id, state) {
+    appendTerm("Tlacitko " + id + ", stav: " + state + "\n");
+}
+\end{jscode}
+\caption{Otevření joysticku a čtení jeho hodnot}
+\end{listing}
+\newpage
 \subsection*{Pár věcí, na které je třeba při programování myslet}
 \addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
 \begin{itemize}
