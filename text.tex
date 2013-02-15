@@ -667,10 +667,18 @@ Widget status je určený k zobrazování stavu například tlačítka (stisknut
 \end{center}
 \end{figure} 
 
+\subsection{Widget: terminál}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.70]{img/w_terminal.png}
+\caption{Widget terminál}
+\end{center}
+\end{figure}
+Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It{script} ve kterém je přednastavený kód díky kterému se tento widget chová stejně jako terminál. Uživatel může script tohoto widgetu libovolně upravovat.
+
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
-
 \section{Modul: Proxy mezi sériovým portem a TCP socketem}
 \begin{figure}[H]
 \begin{center}
@@ -851,7 +859,43 @@ Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
 \end{figure}
 Aplikace {\bf Lorris mobile} pro operační systém Google Android$^{tm}$ slouží jako přenosný doplněk k počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce dekstopové aplikace ale má pomoci zejména když je v terénu potřeba rychle něco přenastavit či poupravit.
 
-Aplikace funguje na telefonech a tabletech s OS Android ve verzi 2.2 a vyšší a je dostupná v oficiálním distribučním kanále Android aplíkací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
+Aplikace funguje telefonech a tabletech s OS Android ve verzi 2.2 a vyšší, je optimalizována i pro větší obrazovky tabletů a je dostupná v oficiálním distribučním kanále Android aplíkací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
+
+Lorris mobile má podobnou architekturu jako desktopová verze Lorris. Začíná se vytvořením sezení, do kterého se ukládá vše, co uživatel v aplikaci otevře (obrázek \ref{mobile_session}). Po vytvoření a otevření sezení se uživatel dostane na hlavní obrazovku programu, kde si může otevřit jednotlivé moduly v záložkách podobně jako v desktopové aplikaci (obrázek \ref{mobile_tabs}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/mobile_session.png}
+\caption{Lorris mobile - výběr sezení}
+\label{mobile_session}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/mobile_tabs.png}
+\caption{Lorris mobile - přepínání záložek}
+\label{mobile_tabs}
+\end{center}
+\end{figure}
+
+\subsection{Programátor}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/mobile_programmer.png}
+\caption{Lorris mobile - programátor}
+\end{center}
+\end{figure}
+Modul programátor dokáže programovat čipy pomocí bootloaderů {\bf avr232boot} a {\bf AVROSP} a také pomocí programátoru Shupito, pokud tablet nebo telefon na kterém aplikace běží podporuje připojení USB zařízení.
+Tato část Lorris mobile používá části nativního kódu z desktopové verze Lorris, díky tomu se kód lépe spravuje a je rychlejší.
+
+\subsection{Terminál}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/mobile_term.png}
+\caption{Lorris mobile - terminál}
+\end{center}
+\end{figure}
+Klasický terminál. Umí většinu funkcí terminálu v desktopové verzi Lorris -- zobrazuje data (jako text nebo hexadecimální hodnoty bajtů), odesílá stisky kláves, lze nastavit velikost a barva textu, barvu pozadí a jaké kontrolní znaky se mají odeslat při stisknutí klávesy enter. 
 
 \newpage
 \section*{Závěr}
@@ -1365,7 +1409,7 @@ function tlacitko_clicked() {
 
 \newpage
 \subsubsection*{Widget slider}
-\addcontentsline{toc}{subsubsection}{Widget tlačítko}
+\addcontentsline{toc}{subsubsection}{Widget slider}
 Kromě funkcí, které tento widget má je také možné nastavit metodu která se provedou při různých změnách stavu slideru. Mají tvar  {\color{blue}\verb/JménoWidgetu_jmenoZmeny()/}, v následujícím příkladě má widget jméno \Uv{Slider}.
 \begin{listing}[H]
 \begin{jscode}
