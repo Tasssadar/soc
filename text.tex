@@ -6,7 +6,7 @@
 \documentclass[12pt, a4paper, oneside]{article} 
 % velikost písma, stránky, typ dokumentu -- detaily viz literatura
 
-\usepackage{czech} % nastavení češtiny
+%\usepackage{czech} % nastavení češtiny
 %\usepackage[latin2]{inputenc}
 %\usepackage[cp1250]{inputenc} % pro win1250
 \usepackage[center]{caption} 
@@ -78,8 +78,8 @@
    captionpos=b
 }
 
-\renewcommand{\listingscaption}{Příklad}
-\renewcommand{\listoflistingscaption}{Příklady}
+\renewcommand{\listingscaption}{Example}
+\renewcommand{\listoflistingscaption}{Code samples}
 
 % \usepackage{parskip} -- zapne americké odstavce v celé práci
 
@@ -93,7 +93,7 @@
 \newcommand\figcaption{\def\@captype{figure}\caption}
 \makeatother
 
-\renewcommand\refname{Literatura} 
+\renewcommand\refname{References} 
 %\def\bibname{PŘÍLOHA D: Reference}
 %\renewcommand\bibname{PŘÍLOHA D: Reference}
 % přejmenuje anglický název Reference na české Literatura
@@ -123,7 +123,7 @@
 \newcommand{\Pos}{\footnotesize Experiment: \normalsize}
 \newcommand{\Odv}{\footnotesize Odvození: \normalsize}
 \newcommand{\Vym}{\footnotesize Vymezení pojmu: \normalsize}
-\newcommand{\Ob}{obrázek }
+\newcommand{\Ob}{image }
 \newcommand{\It}{\textit}  % kurzíva
 \newcommand{\M}{\mathrm}   % v prostředí rovnic nastaví normální písmo (místo kurzívy ) 
 \newcommand{\F}{\footnotesize} % zmenšená velikost písma
@@ -162,7 +162,7 @@
 \vspace{60mm}
 
 \huge %\LARGE
-\B{LORRIS TOOLBOX \\ Sada nástrojů pro vývoj a~řízení robotů}
+\B{LORRIS TOOLBOX \\ Set of tools for developement and control of robots}
 % na titulní straně může být stručnější, pokud je to potřeba  
 
 \Large
@@ -196,7 +196,7 @@
 \vspace{45mm}
 
 \LARGE %\huge 
-\B{LORRIS TOOLBOX \\ Sada nástrojů pro vývoj a~řízení robotů}%SADA NÁSTORUJŮ PRO VÝVOJ A ŘÍZENÍ ROBOTŮ} 
+\B{LORRIS TOOLBOX \\ Set of tools for developement and control of robots} 
 \end{center}  
 \large
 
@@ -205,11 +205,11 @@
 
 \begin{tabbing}
 \hspace{10mm} \= \hspace{30mm}  \=   \kill % nastavení zarážek 
-  \> \B{Autor:}  \> \B{Vojtěch Boček}        \\[8mm] 
-  \> \B{Škola:}   \> \B{SPŠ a~VOŠ technická, }     \\
+  \> \B{Author:}  \> \B{Vojtěch Boček}        \\[8mm] 
+  \> \B{School:}   \> \B{SPŠ a~VOŠ technická, }     \\
   \>              \> \B{Sokolská 1 602 00 Brno}    \\[8mm]
 
-  \> \B{Konzultant:} \> \B {Jakub Streit} 
+  \> \B{Consultant:} \> \B {Jakub Streit} 
 \end{tabbing}
 
 \vspace{20mm}
@@ -246,10 +246,10 @@ zákonů (autorský zákon) v~platném znění.
 ~ % musí to tu být, aby fungovala svislá mezera
 \vspace{100mm}
 
-\section*{Poděkování}
-Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, Martinu Vejnárovi za informace o programátoru Shupito, panu profesorovi Mgr. Miroslavu Burdovi za velkou pomoc s prací a v neposlední řadě Bc. Martinu Foučkovi za rady a pomoc při práci s Qt Frameworkem. Dále děkuji organizaci DDM Junior za poskytnutí podpory.
+\section*{Acknowledgement}
+Thanks to Jakub Streit for his advices, help, and much patience he provided during my work on this project, to Martin Vejnár for his Shupito programmer, to Mgr. Miroslav Burda for great help with text part of this work and last but not least, to Bc. Martin Fouček for his advices and help with Qt Framework. Thanks goes also to DDM Junior for their support.
 
-\D Tato práce byla vypracována za finanční podpory JMK a JCMM.
+\D This work was made with financial support from JMK a JCMM.
 
 \begin{figure}[H]
 \begin{center}
@@ -263,24 +263,13 @@ Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnět
 ~ % musí to tu být, aby fungovala svislá mezera
 \vspace{10mm}
 
-\section*{Anotace}
-
-
-Tato práce popisuje sadu nástrojů pro vývoj a ovládání libovolného zařízení schopného komunikovat po sériové lince nebo TCP socketu.
-
-Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
-
-Hlavním přínosem tohoto softwaru je, že výrazně urychluje, zpřehledňuje a zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
-
-\D \B{Klíčová slova:} analýza dat, počítačový program, robot, grafické zobrazení, vývoj a testování aplikací
-
 \section*{Annotation}
 
 This work describes a toolbox designed for developement and control of any device capable of connecting to serial port or TCP socket.
 
-The application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
+The application contains several modules and each module is designed for one particular function: parsing and displaying data, programming microcontrollers, etc.
 
-Main asset of this software is quick, well arranged and simple developement and testing of applications for microcontrollers -- typically programming and controling various kinds of robots.
+This software is designed to speed-up and simplify developement and testing of applications for microcontrollers, typically programming and controling various kinds of robots.
 
 \D \B{Key words:} data analysis, computer program, robot, graphical interface, developement and testing of applications
 
@@ -301,49 +290,45 @@ Main asset of this software is quick, well arranged and simple developement and 
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patří
 %\pagestyle{headings} % znovu zapne číslování
 \pagestyle{plain}
-\section*{Úvod}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+I'm member of one of the teams which build robots for various competitions, and I've met a problem while we were building one of our robots -- such robot usually contains a pretty large number of various sensors (ultrasound range meters, encoders for measuring covered distance, buttons which detects collision with borders of the game field ...), and there was no way to comfortably and clearly show data from those sensors.
 
-\addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
-% zde začne text úvodu
-Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových měřáků vzdálenosti, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
 %Nenašel jsem žádný program, který by mi vyhovoval.
-\subsection*{Požadavky na aplikaci}
-\addcontentsline{toc}{subsection}{Požadavky na aplikaci}
-Od programu vyžaduji tyto vlastnosti:
+\subsection*{Requirements for application}
+\addcontentsline{toc}{subsection}{Requirements for application}
+I require following features from the application:
 \begin{enumerate}
-    \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat % 1
-    \item Podpora co nejvíce formátů příchozích dat % 2
-    \item Snadné a rychlé používání % 3
-    \item Možnost běhu i na jiných systémech než je MS Windows % 4
-    \item Co možná nejnižší cena % 5
-    \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
-    \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
+    \item Ability to process data from device and cleary show them % 1
+    \item Support for many formats of incoming data% 2
+    \item Quick and simple to use% 3
+    \item Support for other operating systems than MS Windows % 4
+    \item Low price% 5
+    \item Ability to easily expand program, ideally open-source % 6
+    \item No dependencies on other applications (eg. MS Office Excel) % 7
 \end{enumerate}
 
-% Z tohoto důvodu jsem se rozhodl napsat vlastní program.
-
-\subsection*{Existující programy}
-\addcontentsline{toc}{subsection}{Existující programy}
-Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového portu a jejich zobrazování), jsem našel pouze několik. K dispozici jsou buď komerční aplikace, které stojí poměrně velké množství peněz (a přesto nesplňují všechny požadavky), anebo aplikace, které dokáží zobrazovat data pouze v jednom formátu -- typicky graf.
+\subsection*{Present applications}
+\addcontentsline{toc}{subsection}{Present applications}
+I've found only several programs which have at least similiar function (reading data from serial port and displaying them). Basically only two types of applications are available -- commercial, which cost a lot of money (and still don't meet all the requirements) or applications which can display data in only one format, typically in graph.
 
 \begin{itemize}
-    \item {\bf SerialChart}\cite{serialchart} je open-source program\footnote{Program s otevřeným zdrojovým kódem} pro parsování a zobrazování dat přicházející ze sériového portu. Je jednoduchý a přehledný, dokáže však zobrazovat pouze graf a nastavení je třeba ručně napsat.
-    \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, má však horší ovládání a užší možnosti použití (hlavně kvůli nutnosti použít další program pro zobrazování). Je dostupný pouze pro MS~Windows a základní verze stojí \$ 259.
-    \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
-    \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod verzí 7 nefunguje.
+    \item {\bf SerialChart}\cite{serialchart} is open-soruce program\footnote{Program with publicly available source code, free to modify and use} which can parse and display data from serial port. SerialChart is simple and well arranged, but it can display data only in graph and it is configured by hand-written configuration file.
+    \item {\bf WinWedge}\cite{winwedge} is commercial program. It can process data from serial port and display them as graph in MS Excel or as web page. It can also send commands back to connected device, but it has bad user interface and the need for another program (like MS Excel) to actually show the data is not ideal. It is available only for MS Windows and basic version costs \$ 259.
+    \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} is designed to be used primarily to collect data from serial port and export them, thus you have to use another application to display the data (eg. MS Excel), similarly to WinWedge.
+    \item {\bf StampPlot Pro}\cite{stamplot} can process incoming data in widgets created by user, but it is not simple to use, it is not open-source, it is available only for MS Windows and I haven't managed to get it working under Windows 7.
 % pod win Xp se pripoji
 \end{itemize}
 
-
-\subsection*{Porovnání aplikací}
-\addcontentsline{toc}{subsection}{Porovnání aplikací}
-Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v kapitole \uv{Požadavky na aplikaci}.
+\subsection*{Comparison of applications}
+\addcontentsline{toc}{subsection}{Comparison of applications}
+Following table lists features of each application. Numbering of requirements matches the list in chapter "Requirements for application".
 
 \vspace{5mm}
 
 \begin{tabular}{ | l | l | l | l | l | l | l | l |}
     \hline
-    Požadavky:                  & 1      & 2      & 3      & 4      & 5      & 6      & 7      \\ \hline
+    Requirements                & 1      & 2      & 3      & 4      & 5      & 6      & 7      \\ \hline
     SerialChart                 & \Has   & \NoHas & \Has   & \NoHas & \Has   & \Has   & \Has   \\ \hline 
     WinWedge                    & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
     Advanced Serial Data Logger & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
@@ -353,101 +338,102 @@ Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Čí
 
 \vspace{5mm}
 
-Z těchto důvodů jsem se rozhodl napsat vlastní aplikaci, která bude všechny výše uvedené požadavky splňovat.
+I've decided to write my own program which will meet all the requirements because no such application exists.
 
-\section{Popis rozhraní}
-Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v C++ a využívá Qt Framework\cite{qtfrm}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více operačních systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
+\section{Lorris}
+Lorris is program written in C++ with use of Qt Framework\cite{qtfrm}. Qt is multiplatform framework, which (among other things) makes it possible to run Lorris on multiple operating systems -- I'm using Debian Linux\cite{debian} (Wheezy, 64bit) and Windows 7 for testing.
 
-\subsection{Web a repozitář programu}
-GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář programu jsem vytvořil na serveru GitHub\cite{github}, který kromě hostingu repozitáře poskytuje i několik dalších služeb, mezi nimi i hosting webu projektu. Na webu, který jsem vytvořil, jsou odkazy ke stažení spustitelných souborů pro Windows, popis programu, video s představením programu (6 min.), ukázky z programu (screenshoty) a návod ke zkompilování pro MS Windows a Linux.
-
+\subsection{Website and repository}
+Lorris' GIT\footnote{\It{GIT} -- distributed version control system} repository is hosted on GitHub\cite{github}. GitHub also provides hosting for project's website, which contains links to prebuilt Lorris binaries for Windows, description of program, video introduction to Lorris (6 min.), screenshots of Lorris and information how to build Lorris under MS Windows and Linux.
 \begin{itemize}
-    \item Repozitář: \url{https://github.com/Tasssadar/Lorris}
-    \item Web (česká verze):\\ \url{http://tasssadar.github.com/Lorris/cz/index.html}
-    \item Web (anglická verze):\\ \url{http://tasssadar.github.com/Lorris/index.html}
-    \item Prezentace práce: \\ \burl{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
+    \item Repository: \url{https://github.com/Tasssadar/Lorris}
+    \item Website (czech):\\ \url{http://tasssadar.github.com/Lorris/cz/index.html}
+    \item Website (english):\\ \url{http://tasssadar.github.com/Lorris/index.html}
+    \item SOČ presentation: \\ \burl{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
 \end{itemize}
-V repozitáři nadále probíhá aktivní vývoj.
-\subsection{Struktura aplikace}
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči. Lorris umí otevřit několik oken zaráz a dokáže také rozdělit okno na několik částí, na obrázku \ref{split_img} je nalevo modul analyzér a napravo terminál. \\
+There is still an ongoing developement in application's repository.
+\subsection{Application's structure}
+Program is designed as modular application, so that it can accommodate several parts which, although they are separate, share the same area of use.
+Base part of application provides connection to device (eg. to robot or to development board with chip), tab-based user interface and storage for application settings, but data processing itself takes place in individual modules.
+
+Modules are opened as tabs, much alike pages in web browser. Lorris can open several windows at once and it can split each windows to multiple parts like presented in image \ref{split_img} -- windows is divided in the middle, you can see two tabs at once. The one on the left is analyser and the other one is terminal. \\
 \\
-\noindent Možnosti připojení k zařízení:
+\noindent Connection options:
 \begin{itemize}
-    \item Sériový port
-    \item Shupito Tunel (virtuální sériový port, viz kapitola \ref{tunel})
-    \item TCP socket\footnote{\It{Transmission Control Protocol} -- připojení přes internet.}
-    \item Načtení dat ze souboru
+    \item Serial port
+    \item Shupito Tunel (virtual serial port, more in chapter \ref{tunel})
+    \item TCP socket\footnote{\It{Transmission Control Protocol} -- connection via internet.}
+    \item Loading data from file
 \end{itemize}
-Je možné mít připojeno více různých modulů na jedno zařízení.  
-
+It is possible to connect multiple modules to one device.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.6]{img/new_tab.png}
-\caption{Dialog vytvoření panelu}
+\caption{Tab creation dialog}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/split.png}
-\caption{Ukázka rozdělení okna na více částí}
+\caption{Window divided to multiple parts}
 \label{split_img}
 \end{center}
 \end{figure}
 
-\subsection{Sezení}
-Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a tímto se vrátit k předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu jako když aplikaci opouštěl.
+\subsection{Session}
+Lorris can save everything user opened (tabs, their layout, connection, data of each tab, ...) as session. User can later load saved session and thus return to his previous work. Lorris automatically saves session before it is closed, so when user starts Lorris again, all his work is in the same state as it was before he left.
 
-\subsection{Automatická aktualizace}
-Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zda je dostupná nová verze a pokud ano, zobrazí uživateli malé upozornění:
+\subsection{Automatic updates}
+Lorris can update itself under MS Windows. It checks for new version on start, and if there is one available, it shows little notification:
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/update_notify.png}
-\caption{Upozornění o dostupné aktualizaci}
+\caption{New update notification}
 \end{center}
 \end{figure}
-V případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a spustí se malý pomocný program, který stáhne novou verzi a nainstaluje ji. Zobrazuje při tom seznam změn oproti staré verzi.
+In case user confirms the update, Lorris closes itself and runs little updater application. Updater shows changelog and downloads new version and installs it.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/updater.png}
-\caption{Probíhající aktualizace}
+\caption{Ongoing update}
 \end{center}
 \end{figure}
 
 \newpage
-\section{Modul: Analyzér}
+\section{Module: Analyzer}
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/analyzer_all.png}
-\caption{Modul analyzér}
+\caption{Modul analyzer}
 \label{Analyzer}
 \end{center}
 \end{figure}
 
-Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.
+This module parses incoming data (structured as packets) and displays them in graphical widgets. Application saves processed data into memory -- user can go through received packets using slider and textbox in upper part of the window. All data (received packets, packet structure and widgets positions and settings) can be saved to file. 
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start bajt}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Packet structure is configured in dialog window (image \ref{Analyzer_struct}). It is possible to set packet's length, endianness\footnote{\It{Endianness} -- order of bytes in numbers}, packet's header and its content -- static data ("start byte"), dynamic lenght od packet and command and device ID. Packets can be later filtered by command or device ID.
 
 \newpage
-\setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
+\setlength{\voffset}{0mm}
 \pagestyle{plain}
 
-Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu \uv{vytahat} na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
+Incoming data show up in upper part of the window when packet strcuture is set and user can then "drag" widgets from list in right part of the window to workspace. Data are assigned to widget again using drag\&drop, this time user has to drag first byte of data to widget.
 
-Poté widget zobrazuje data tohoto bytu, nebo tento bajt bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který bajt je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+Widget then displays data from that byte (or several bytes if needed). Assigned byte is highlighted when user puts mouse over the widget, so that he can know which data belong to which widget.
 
-Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
+Widget settings are available in context menu under right-click. User can set title and other parameters different for each widgets -- these parameters will be described in each widget's section later. Widgets can also be locked, which means the widget can't be closed nor moved or resized.
 
-Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k síti anebo k ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a rychle duplikovat -- stačí přemístit widget se stiknutou klávesou control.
+It is possible to precisely position widgets using grid or by using "aligment lines" (see image \ref{widget_lines}). User can also easily clone widgets by moving them while holding the control key.
 
-U některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí gesta myší--stačí widget chytit jako při přesouvání a \uv{zatřepat} s ním zleva doprava. Při přesunutí se pak widget změnší na svoji původní velikost.
+Some widgets might profit from following feature: if user grasps widget with mouse as if he wanted to move it and then "shakes it" from right to left, the widget will expand itself to cover all of the visible workspace. When it is moved, it will shrink to it's original size.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/lines.png}
-\caption{Zarovnávání widgetů pomocí sítě a čar}
+\caption{Widget aligment using grid and lines}
 \label{widget_lines}
 \end{center}
 \end{figure}
@@ -455,103 +441,103 @@ U některých widgetů se může hodit následující funkce: widgety je možné
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.65]{img/analyzer_struct.png}
-\caption{Dialog nastavení struktury dat}
+\caption{Packet structure dialog}
 \label{Analyzer_struct}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-\subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets_new.png}}
+\subfloat[List of widgets]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets_new.png}}
 \hfill
-\subfloat[Přiřazení dat pomocí drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
+\subfloat[Assigning data using drag\&drop]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_drag_data.png}}  
 \caption{Widgety}
 \label{widgets}
 \end{center}
 \end{figure}
 
-\subsection{Filtrování dat}
-Analyzér umí příchozí data filtrovat pomocí filtrů. Tyto filtry obsahují podmínky, podle kterých se určí, zda příchozí packet projde nebo ne.
+\subsection{Filters}
+Analyzer can filter data using multiple filters at once. Each filter contains conditions, which determine if packet is filtered out or not.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/filters.png}
-\caption{Nastavení filtrů}
+\caption{Filter settings}
 \end{center}
 \end{figure}
-Podmínka může kontrolovat buďto příkaz nebo zařízení z hlavičky packetu, hodnotu bajtu v packetu nebo může spustit jednoduchý uživatelský script. Díky scriptu je možné napsat takřka jakoukoliv podmínku pro filtrování.
+Each condition can check command or device ID from packet's header, value of byte in packet or  it can run simple user script. Thanks to the script, it is possible to write almost any kind of condition.
 
 \begin{listing}[H]
 \begin{jscode}
-// Vraci true pokud ma projit, false pokud ne
+// Return true if passes, false if it
+// should be filtered out
 function dataPass(data, dev, cmd) {
     return false;
 }
 \end{jscode}
-\caption{Script pro podmínku filtru}
+\caption{Script filter condition}
 \end{listing}
 
 % TODO: newpage
-\subsection{Widget: číslo}
+\subsection{Widget: number}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=1]{img/w_num.png}
-\caption{Widget: číslo}
+\caption{Widget: number}
 \end{center}
 \end{figure}
-Tento widget dokáže zobrazovat celá čísla (se znaménkem i bez, 8 až 64 bitů dlouhé) a desetinná čisla (single-precision\footnote{Standardní formát uložení desetinných čísel v jazyku C a dalších (standard IEEE 754-2008).}, 32bit a 64bit).\\
-Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu\\a~formátovat ho těmito způsoby:
+This widget displays integers (both signed and unsigned, 8 to 64bits) and decimal numbers (single-precision\footnote{Standard floating-point number format used in C and other languages (IEEE 754-2008)}, 32 and 64 bit).
+Widget can align the number to max lenght of it's data type and format as follows:
 \begin{itemize}
-    \item Desítkový -- číslo v desítkové soustavě
-    \item Desítkový s exponentem -- použije exponent pro zapsaní velkých čísel. Dostupné pouze pro desetinná čísla.
-    \item Hexadecimální -- výpis v šestnáctkové soustavě. Dostupné pouze pro přirozená čísla. 
-    \item Binární -- zobrazí číslo ve dvojkové soustavě.  Dostupné pouze pro přirozená čísla.
+    \item Decimal -- number as base 10
+    \item Decimal with exponent -- uses exponent to display big numbers, available only for decimal numbers
+    \item Hexadecimal -- number as base 16, available only for unsigned numbers
+    \item Binary -- number as base 2, available only for unsigned numbers
 \end{itemize}
 
-Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených senzorů vzdálenosti, kdy se hodnota, kterou na senzoru naměří AD převodník, musí přepočítat pomocí určité rovnice abychom dostali hodnotu v centimetrech. Výraz může vypadat například takto:
+Another feature is formula to re-calculate widget's value. This is useful for example while showing data from infrared range meters, because their output value must be converted to centimeters using equasion. Formula can look like this:
 \begin{center}
 \verb|2914/(%n+5)-1|
 \end{center}
-kde \verb|%n| je zástupná sekvence pro číslo, které by se jinak ve widgetu zobrazilo. Tento výraz je pro přepočítání vzdálenosti na centimetry podle hodnoty přečtené z infračerveného senzoru vzdálenosti Sharp GP2Y0A41.
+where \verb|%n| is alias for number which would otherwise be displayed in the widget. This particular formula is for converting distance measured by Sharp GP2Y0A41 infrared range meter to centimeters.
 
-\subsection{Widget: sloupcový bar}
+\subsection{Widget: bar}
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/w_bar.png}
-\caption{Widget: sloupcový bar}
+\caption{Widget: bar}
 \end{center}
 \end{figure}
-Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u čísla), orientaci (vertikální nebo horizontální) a rozmezí zobrazovaných hodnot. Stejně jako widget číslo také dokáže přepočívat hodnotu podle výrazu.
+Data in this widget are displayed as bar. User can set data type (same as widget \It{number}), orientation (vertical or horizontal) and range of displayed values. It can also use formula to re-calculate it's value, same as widget \It{number}.
 
-\subsection{Widget: barva}
+\subsection{Widget: color}
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/w_col.png}
-\caption{Widget: barva}
+\caption{Widget: color}
 \end{center}
 \end{figure}
-Tento widget dokáže zobrazit příchozí hodnoty jako barevný obdélník. Podporované formáty:
+This widget shows incoming data as colored rectangle. Supported color formats:
 \begin{itemize}
-    \item {\bf RGB} (8b/kanál, 3x uint8)
-    \item {\bf RGB} (10b/kanál, 3x uint16)
-    \item {\bf RGB} (10b/kanál, 1x uint32)
-    \item {\bf Odstíny šedé} (8b/kanál, 1x uint8)
-    \item {\bf Odstíny šedé} (10b/kanál, 1x uint16)
+    \item {\bf RGB} (8b/channel, 3x uint8)
+    \item {\bf RGB} (10b/channel, 3x uint16)
+    \item {\bf RGB} (10b/channel, 1x uint32)
+    \item {\bf Shades of gray} (8b/channel, 1x uint8)
+    \item {\bf Shades of gray} (10b/channel, 1x uint16)
 \end{itemize}
+Widget supports brightness correction for all colors at once or for each color of RGB space separately.
 
-Widget také dokáže provést korekci jasu všech barev zaráz nebo každé z barev RGB zvlášť.
-
-\subsection{Widget: graf}
+\subsection{Widget: graph}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
-\caption{Widget: graf}
+\caption{Widget: graph}
 \end{center}
 \end{figure}
-Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a na osu $y$ hodnoty dat. Lze nastavovat jméno, barvu a datový typ křivky grafu, automatické posouvání grafu, velikost vzorku, měřítko os grafu a zobrazení legendy. Kliknutí na křivku grafu v legendě tuto křivku skryje. Měřítko osy se ovládá otáčením kolečka myši po najetí kurzoru nad osu, po najetí do prostoru grafu se podobně ovládá měřítko celého grafu. 
+This widget shows data in graph -- data order are on  $x$ axis and data values on axis $y$. User can set name, color and data type of each graph curve and automatic scrolling, sample size and scale for graph. Graph also has legend which shows curve's names and colors, and curves can be hidden by clicking at their names in legend. Scale of each axis can be changed by scrolling the mouse wheel while hovering the cursor above axis. If the mouse is above graph area, mousewheel changes scale of both axes at once.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_graph_add.png}
-\caption{Dialog pro nastavení parametrů křivky grafu}
+\caption{Curve settings dialog}
 \end{center}
 \end{figure}
 
@@ -563,80 +549,83 @@ Widget graf zobrazuje hodnoty v grafu -- na osu $x$ se vynáší pořadí dat a 
 \label{script_w}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Může při tom použít buďto Python nebo QtScript\cite{qtscript} (jazyk založený na standardu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a posílat data do zařízení. Základní výstup může být zobrazen v terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a nastavuje do nich data. Reference k vestavěným funkcím, které lze použít ve scriptu, je v \hyperref[script_ref]{příloze A}.
+This widget uses user-written script to process data. Script can be written in Python or QtScript\cite{qtscript} (language based on ECMAScript\footnote{\It{ECMAScript} -- scripting language accoring to stadard ECMA-262 and ISO/IEC 16262}, same as JavaScript\footnote{\It{JavaScript} -- scripting languge used primarily on web}, so JavaScript and QtScript are very similar).
 
-Editor scriptu má v sobě vestavěné ukázky kódu, například jak nastavit hodnotu existujícího widgetu \It{číslo}, jak odeslat data nebo jak reagovat na stisknutí klávesy (na obrázku \ref{script_src} jsou skryté pod ikonkou žárovky). Je v něm také odkaz na automaticky generovanou dokumentaci, která je na adrese \url{http://technika.junior.cz/docs/Lorris/}.
+Script can process incoming data, react to keypresses and send data to device. Basic output can be display in terminal (image \ref{script_w}), but it is also possible to use other widget types to show data (number, bar, ...). Script reference is in \hyperref[script_ref]{attachment A}.
+
+Script editor has buil-in code samples, for example how to set value of existing \It{number} widget, how to send data to device or how to react to keypresses (on image \ref{script_src} are hidden under the lightbulb icon). Editor also has link to automatically generated documentation, which is available on \url{http://technika.junior.cz/docs/Lorris/}.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{img/w_script_src.png}
-\caption{Dialog pro nastavení zdrojového scriptu}
+\caption{Script editor}
 \label{script_src}
 \end{center}
 \end{figure}
 
-\subsection{Widget: kolo}
+\subsection{Widget: circle}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.8]{img/w_circle.png}
-\caption{Widget: kolo}
+\caption{Widget: circle}
 \end{center}
 \end{figure}
-Widget kolo zobrazuje příchozí hodnotu jako úhel v kruhu, což se hodí například při zobrazování natočení kola robota. Dokáže zobrazit data přicházející jako úhel ve stupních, radiánech nebo jako číslo v určitém rozmezí (například enkodér s rozlišením 12 bitů vrací číslo od 0 do 4096).
+Widget circle shows incoming data as angle in circle, which is useful for example when displaying rotation of robot's wheel. Incoming data can be in degrees, radians or just number in certain range (eg. data from 12bit encoder in range from 0 to 4096).
 
-\subsection{Widget: plátno}
+\subsection{Widget: canvas}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_canvas.png}
-\caption{Widget: plátno}
+\caption{Widget: canvas}
 \end{center}
 \end{figure}
-Plátno je widget který lze ovládat pouze ze scriptu a je určen ke kreslení 2D grafiky. Dokáže zobrazit čáry, obdélníky, kruhy a elipsy. V následujícím příkladu je kód pro nakreslení červeného kříže uprosřed widgetu.
+Canvas can be only controled from script and is supposed to be used to draw 2D graphics. It can draw lines, rectangles, circles and ellipses. Following code sample will draw red cross in the center of the widget.
 
 \begin{listing}[H]
 \begin{jscode}
 Canvas.setLineColor("red");
 Canvas.setFillColor("red");
-// x, y, sirka, vyska
+// x, y, width, height
 Canvas.drawRect(55, 10, 20, 110);
 Canvas.drawRect(10, 55, 110, 20);
 \end{jscode}
-\caption{Ovládání widgetu plátno}
+\caption{Drawing to canvas}
 \end{listing}
 
-\subsection{Widgety tlačítko a slider}
+\subsection{Widgets button and slider}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_btn_slider.png}
-\caption{Widgety tlačítko a slider}
+\caption{Widgets button and slider}
 \end{center}
 \end{figure}
-Tyto dva widgety pouze umožňují interakci se scriptem -- po stisknutí tlačítka se zavolá metoda ve scriptu, ve které může uživatel například poslat příkaz do robota, při posunutí slideru se ve scriptu zavolá metoda, ve které může uživatel například změnit rychlost robota a podobně. Tlačítku lze nastavit klávesovou zkratku a slideru zkratku pro \uv{zaostření}, aby ho uživatel poté mohl posouvat pomocí šipek na klávesnici.
+These two widgets are used for interaction with script -- callback method in script is invoked in script on button click. In this method user can for example send command to robot. Similarly, callback method is invoked after moving slider, so that user can for example change robot's movement speed. Keyboard shortcut can be assigned to button "click" action and for slider to gain focus, so that user can move it useing arrow keys.
 \begin{listing}[H]
 \begin{jscode}
 function Slider_valueChanged() {
-    appendTerm("Hodnota slideru " + Slider.getValue() + "\n");
+    appendTerm("Slider value: " + Slider.getValue() + "\n");
 }
 
-function Tlacitko_clicked() {
-    appendTerm("Tlacitko stisknuto\n");
+function Button_clicked() {
+    appendTerm("Button clicked\n");
 }
 \end{jscode}
-\caption{Metody volané widgety \It{slider} a \It{tlačítko}}
+\caption{\It{Slider} and \It{button} callbacks}
 \end{listing}
 
-\subsection{Widget: vstup}
+\subsection{Widget: input}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_input.png}
-\caption{Widget \It{vstup} s nastavením joysticku}
+\caption{Joystick settings in widget \It{input}}
 \label{input}
 \end{center}
 \end{figure}
-Tento widget je také určený k interakci se scriptem (tj. vstupu uživatele), přičemž script také určuje prvky rozhraní -- widget je v základu prázdný a až script do něj přidá například tlačítko nebo textové pole. Tento widget je mírně složitější na obsluhu, ale lze díky němu použít všechny prveky UI, které Qt Framework obsahuje -- tlačítka, posuvníky, textová pole, vysouvací seznamy a podobně. V příkladu \ref{input_script} je script pro vytvoření prvků jako v obrázku \ref{input}.
+This widget is also for interaction with script (user \It{input}), but script also defines interface itself -- the widget is empty by default and script has to create UI components, for example button or text field. This widget is a bit more complex, but it can create any of the UI components Qt Framerk contains -- buttons, slider, text fields, combo boxes and so on. Code sample \ref{input_script} creates UI from image \ref{input}.
 
 \begin{listing}[H]
 \begin{jscode}
-// parametry: jmeno Qt widgetu, "stretch" hodnota
+// args: Qt widget name, stretch value
 var joyList = joy_settings.newWidget("QComboBox");
 var maxSpdLabel = joy_settings.newWidget("QLabel", 1);
 var maxSpd = joy_settings.newWidget("QSpinBox");
@@ -644,10 +633,10 @@ var turnSpdLabel = joy_settings.newWidget("QLabel", 1);
 var turnSpd = joy_settings.newWidget("QSpinBox");
 var invert = input.newWidget("QCheckBox");
 
-// Nastaveni textu do QLabel
+// set QLabel text
 maxSpdLabel.text = "Max speed:";
 \end{jscode}
-\caption{Přidání prvků do widgetu \It{vstup}}
+\caption{Adding UI components to widget \It{input}}
 \label{input_script}
 \end{listing}
 
@@ -658,259 +647,256 @@ maxSpdLabel.text = "Max speed:";
 \caption{Widget status}
 \end{center}
 \end{figure}
-Widget status je určený k zobrazování stavu například tlačítka (stisknuté/nestisknuté) nebo chybového stavu z enkodéru (0 = vše je v pořádku, ostatní čísla je možné dohledat v datasheetu enkodéru). Uživatel k příchozím hodnotám přiřadí jednotlivé stavy (text a barvu, viz obrázek \ref{status_dlg}) a widget je poté zobrazuje. Lze nastavit i \uv{neznámou hodnotu}, která se zobrazí pokud žádný z nadefinovaných stavů neodpovídá příchozí hodnotě.
+\It{Status} is designed to show state of for example button (pressed/released) or error status from encoder (0 == okay, other values are error codes). User assigns states to incoming values (state consists of text and it's color, see image \ref{status_dlg}) and widget then shows active states. It suports "Unknown value", which is shown when incoming data don't match any defined status.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_status_dlg.png}
-\caption{Nastavení stavů}
+\caption{State definitions dialog}
 \label{status_dlg}
 \end{center}
 \end{figure} 
 
-\subsection{Widget: terminál}
+\subsection{Widget: terminal}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.70]{img/w_terminal.png}
 \caption{Widget terminál}
 \end{center}
 \end{figure}
-Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It{script} ve kterém je přednastavený kód díky kterému se tento widget chová stejně jako terminál. Uživatel může script tohoto widgetu libovolně upravovat.
+This widget exists only for convenience of the user, it is widget \It{script} with preset code which works exactly as terminal (sending keypresses, showing incoming data). User can edit this predefined script, just like it was regular widget \It{script}.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
-\section{Modul: Proxy mezi sériovým portem a TCP socketem}
+\section{Module: Proxy between serial port and TCP socket}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/proxy.png}
-\caption{Proxy mezi sériovým portem a TCP socketem}
+\caption{Proxy between serial port and TCP socket}
 \label{Shupito}
 \end{center}
 \end{figure}
-Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
+Simple proxy which transfers data between serial port and TCP socket. It creates server to which user can connect from Lorris or other program on different computer. Data are transfered between serial port and connected clients.
 
-\subsection{Proxy tunel}
-Tento modul také přidává nové umělé připojení - \uv{proxy tunel}. Pokud toto připojení použije nějáký další z modulů v Lorris, tak může posílat a přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v modulu analyzér je script, který generuje data a přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
+\subsection{Proxy tunnel}
+This module also adds new virtual connection - "proxy tunnel". If another Lorris module uses this connection, it can send and receive data from all clients connected to proxy. This can be used to for example generate data in analyzer and then send them to multiple TCP clients.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-\section{Modul: Programátor}
+\section{Module: programmer}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/programmer.png}
-\caption{Modul Programátor}
+\caption{Module programmer}
 \label{prog_full}
 \end{center}
 \end{figure}
 
 %TODO: rozšířit
-Tento modul funguje jako grafické rozhraní pro několik typů programátorů a bootloaderů. Podporuje dva typy rozhraní -- plné (obrázek \ref{prog_full}) a zmenšené (obrázek \ref{prog_mini}). Plné rozhraní obsahuje tlačítka a nastavení pro programování všech pamětí čipu, zmenšené rozhraní pak obsahuje pouze tlačítko na programování hlavní paměti a zastavení čipu. Zmenšený mód je vhodný při rozdělení okna na více částí protože obsahuje pouze nejpoužívanější prvky a nezabírá zbytečně místo.
+This module acts as graphical interface for several types of programmers and bootloaders. The interface has two modes -- full (image \ref{prog_full}) and minimal (image \ref{prog_mini}. Full interface contains all buttons and settings for programming all memories of the chip, minimal interface contains only button which flashes main memory and button to stop chip. Minimal interface is convenient when using the split feature as demonstrated in image \ref{prog_mini}, because it uses only a small amount of space.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/programmer_mini.png}
-\caption{Zmenšené UI modulu \It{programátor} (nalevo) s otevřeným \It{terminálem}}
+\caption{Minimal interface of module \It{programmer} (left) along with \It{terminal}}
 \label{prog_mini}
 \end{center}
 \end{figure}
 
-\subsection{Programátor Shupito}
-Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standardu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
+\subsection{Shupito programmer}
+Shupito is microchip programmer created by Martin Vejnár. It can program microcontrollers using ISP\footnote{\It{In-system programming} -- interface which can programm chips directly on their PCB}, PDI\footnote{\It{Program and Debug Interface} -- interface by company Atmel with features similar to ISP} a JTAG\footnote{\It{Joint Test Action Group} -- interface standard IEEE 1149.1 which can be used to program and debug chips} interfaces.
 
-Modul programátor v mojí práci slouží jako oficiální rozhraní pro Shupito. Převážná část komunikace s programátor je napsána samotným Martinem Vejnárem.
+Module programmer in Lorris is official interface for Shupito programmer. Most of Shupito communication is written by Martin Vejnár.
 
-\subsubsection{RS232 tunel}
+\subsubsection{RS232 tunnel}
 \label{tunel}
-Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
+Shupito can create tunnel\footnote{Direct connection between programmed chip and computer via programmer} for RS232 interface from programmed chip to computer. Lorris can use this feature -- active tunnel creates new virtual connection and other modules can connect to it.
 
 \subsection{Bootloader avr232boot}
-Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v čipu co nejméně místa. Původně uměl pouze programovat flash paměť čipu (ta, ve které je uložen program), já jsem do něj přidal podporu čtení a zapisování paměti EEPROM\footnote{Typ flash paměťi, která udrží data i bez proudu. V čipech se používá na uložení např. nastavení}.
+Author of this bootloader is also Martin Vejnár. Avr232boot supports only Atmel ATmega chips and it is inspired by reference bootloader code for these chips, but it is designed to be as small as possible. It originally could only program flash memory of the chip (the one where program is stored) and I added support for programming and reading of EEPROM\footnote{Flash memory which keeps data even without electricity. It is used to store for example program settings.} memory.
 
-Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a programovat EEPROM.
+Lorris can use this bootloader to program flash memory and read and program EEPROM.
 
 \subsection{Bootloader AVROSP}
-\It{AVR Open Source Programmer} je protokol používaný několika bootloadery firmy Atmel pro čipy ATmega a ATxmega. Lorris dokáže pomocí toho bootloaderu programovat a číst flash i EEPROM paměť čipu.
-
+\It{AVR Open Source Programmer} is protocol used by several bootloaders by Atmel for chips ATmega and ATxmega. Lorris can use this protocol to program and read both flash and EEPROM memory of the chip.
 
 \newpage
-\section{Modul: Terminál}
+\section{Module: terminal}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/terminal.png}
-\caption{Modul terminál}
+\caption{Module terminal}
 \label{Terminal}
 \end{center}
 \end{figure}
-Základní pomůcka při práci s mikrokontroléry, klasický terminál. Zobrazuje data přijatá přes sériový port a posílá stisky kláves a kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
+Fundamental tool for every developer, classic terminal. It shows incoming data in either text mode or as hexadecimal values of each byte and sends keypresses.
 
-Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká sekvence kontrolních znaků se má odeslat při stisknutí klávesy enter a chování některých kontrolních znaků (například jestli má znak \verb|\n| vytvořit nový řádek nebo ne).
+User can set terminal's colors, font size, which sequnce of control characters should be send after return key press and behavior of several control characters (for example if character \verb|\n| should create new line or not).
 
 \newpage
-\section{Příklady použití}
-\subsection{Testování barevného senzoru}
-{\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k měření a vyčítat z něj RGB hodnoty, které následně pošle do RS232 linky.\\
+\section{Usage examples}
+\subsection{Color sensor testing}
+{\bf Situation:} I'm builing robot for some competition (Eurobot, RobotChallange, ...) and I want to use color sensor to direct the robot. I also want to test the color sensor, so I've made simple circuit with chip and color sensor. Chip will instruct the sensor to measure the colors and sending color values to computer via RS232 interface.\\
 \\
-{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu \uv{barva} mohu vidět barvu, kterou senzor rozpoznal.
+\noindent{\bf Solution:} I use Shupito to program the chip and it's shupito tunnel to read data from RS232 interface. I connect analyzer module to shupito tunnel and then use widget \It{color} to show me color measured by the sensor.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics{img/use_color.png}
-\caption{Barva v modulu Analyzér}
-\label{Terminal}
+\caption{Color in analyzer module}
 \end{center}
 \end{figure}
 
 \newpage
-\subsection{Testování enkodérů}
-{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bajtech v takovém formátu, který znemožňuje použití např. terminálu.\\
+\subsection{Encoder testing}
+{\bf Situation:} I need to test the precision of magnetic encoders, but they are sending the angle in several bytes which are not in one sequence, so I can't use terminal.\\
 \\
-{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
+\noindent{\bf Solution:} I don't want to make and program another PCB with chip to process data from encoder, so I connect the encoder to computer and to analyzer module in Lorris. Then I use widget \It{script} to assemble the angle value and to show it in widget \It{number}.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_enc_term.png}
-\caption{Surová data z enkodérů s vyznačenými bajty, které obsahují úhel natočení}
-\label{Terminal}
+\caption{Raw encoder data. Highlighted bytes are parts of the angle.}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_enc_analyzer.png}
-\caption{Data z enkodérů zpracovaná analyzérem}
-\label{Terminal}
+\caption{Encoder data processed by analyzer}
 \end{center}
 \end{figure}
 
 \newpage
-\subsection{Ladění PID regulátoru}
-{\bf Situace:} Robot kvůli rozdílnému výkonu motorů nejede rovně. Tento problém jsem se rozhodl řešit pomocí PID regulátoru, pro jehož správnou funkci je potřeba nastavit několik konstant. \\
+\subsection{Tuning of PID regulator}
+{\bf Situation:} Robot can't go straight because each motor has slightly different speed. I decided to solve this problem using PID regulator. But PID regulator needs several constants to be correctly set. \\
 \\
-{\bf Řešení:} Program v robotovi mi posílá aktualní výkon motorů a nastavení konstant PID regulátoru a umožňuje přenastavení těchto konstant a ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v sobě bootloader -- díky tomu nemusím mít připojený programátor.  
+{\bf Solution:} Robot's program is sending current motor speed and PID constants values to computer and also allows changing those constants via RS232 interface. This program is flashed into robot over bluetooth using avr232boot bootloader -- I don't have to use any programmer, which would require cable connection.
 
-V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
+I use widgets \It{number} and \It{graph} to show current PID constants and speed of both motors. Then I write simple script which will change PID constants after keypress and starts/stops robot.
 
-Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}.
+I've used this process to tune PID regulator on my 3pi\cite{3pi} robot. I've attened to \It{Line Follower Standard} competition on Robotic Day 2012 in Prague\cite{rob_den} with this robot and I've won second place from total of 22 robots.
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{img/use_pid.png}
-\caption{Ladění PID regulátoru}
+\caption{PID regulator tuning}
 \end{center}
 \end{figure}
 
 \newpage
-\subsection{Vývoj robota pro soutěž Eurobot 2011}
-V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
+\subsection{Developement of robot for Eurobot 2011 competition}
+I've participated in Eurobot\cite{eurobot} contest in 2011. Goal and game mechanics are different each year, in 2011, the goal was to play something like simplified chess game. Game field was colored chessboard and robots were supposed to move "pawns" (yellow discs) to fields of their color and optionally to build towers from said pawns. Winner was the robot with the highest score. Score was calculated by number of built towers and pawns on fields of correct color. In addition to that, robots must not crash into each other, so they must have some means to detect the opponent (eg. ultrasound range meters). You can find complete rules and result list on Eurobot's website\cite{eurobot11}.
 
-Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
+Our robot was quite simple, but it had 5 ultrasound range meters, two encoders and 5 buttons nevertheless. These sensors make a lot of data, and terminal is not ideal to show all of them.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david1.png}
-\caption{Data z robota v terminálu}
+\caption{Data from robot in terminal}
 \end{center}
 \end{figure}
 
-Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris by se mohla tato data zobrazovat například takto:
+This experience with programming and debugging of robot was one of the main reasons to make this work. If I'd use Lorris to show data from our robot, it would look like this:
 \begin{figure}[H]
 \begin{center}
 \includegraphics{img/use_david2.png}
-\caption{Simulovaná data v analyzéru}
+\caption{Data simulation in Lorris}
 \end{center}
 \end{figure}
 
-Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
+All the widgets are positioned same as sensors on robot -- 2 ultrasound range meters measure the distance in front and 3 in back; buttons for detecting collisiton with the border are on each corner, button inside the robot checks if robot has pawn inside or not and encoders on both wheels measure the covered distance.
 
-Widget \It{script} s názvem \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Widget \It{script} named "Robot" in the center represents robot's body. Widgets \It{number} named "Ultra E0..8" display distance measured by the ultrasound meters. Widget "Ultra E0" has value lesser than 25 cm, which means robot has to stop in order not to crash into opponent, so it is colored red.
 
-Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko, které se stiskne, pokud je v robotovi pěšec. Tlačítko, které má zelenou barvu, není stisklé, tlačítko s červenou barvou stisklé je.
+Widgets \It{color} named "btn" are buttons which detect collision with game field border and "pwn" is button inside robot which is pressed if robot is carrying a pawn. Green means the button is released, red means it is pressed.
 
-Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
-
+And finally, widgets \It{number} named "Enc left" and "Enc right" display distance measured by encoders on right and left wheel.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.24]{img/use_david_robot.jpg}
-\caption{Náš robot \It{David} skončil na 4. místě v celostátním kole soutěže Eurobot 2011}
+\caption{\It{David} -- our robot ended up on the 4th place from total of 11 robots in national Eurobot 2011 competition}
 \end{center}
 \end{figure}
 
-\section{Podpora joysticku}
-Lorris podporuje použití joysticku v modulu analyzér například k řízení robota. Nejdříve jsem k přístupu k joysticku používal knihovnu SDL\cite{sdl}, která však pro moje použití nebyla příliš vhodná -- její předpokládané použijí je v počítačových hrách, a podpora joysticku je jen jedna z mnoha částí které knihovna obsahuje. Její architektura se také nehodila ke zbytku Lorris.
+\section{Joystick support}
+Lorris supports joystick in module analyzer to for example control robot. At first, I've used SDL\cite{sdl} library to access joystick, but it was not really suitable for my use -- SDL is video game library, joystick support is only one of many subsystems this library contains. It's architecture also wasn't ideal to use in Lorris.
 
-Při hledání náhrady jsem ale nenašel žádnou vhodnou knihovnu, jejíž funkce by byla pouze přistupování k joysticku a neměla žádné zbytečné funkce které bych v Lorris nepoužil, a tak jsem si napsal vlastní knihovnu.
+I haven't found any suitable replacemnt of SDL, so I wrote my own library.
 
-Jmenuje se {\bf libenjoy}, funguje pod Windows a Linuxem a je velmi malá a jednoduchá. Oproti SDL si dokáže zapamatovat připojené joysticky, a když joystick odpojíte a zase ho připojíte zpět (například kvůli přeskládání kabelů u počítače nebo se joystick odpojí sám kvůli špatnému kontaktu), tak není třeba ho znovu vybírat jako aktivní -- sám se připojí bez jakékoliv interakce uživatele.
+It is called {\bf libenjoy}, it works under Windows and Linux and it is very small and simple. One major advantage over SDL is that it can remember connected joysticks -- if you disconnect joystick and then plug it in again (because you want to reorganize cables on your desktop or because of bad USB connection), it will open the joystick again by itself -- without any user interaction.
 
-Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
-
+Libenjoy is released under GNU LGPLv2.1\cite{lgpl} license.
 \begin{itemize}
-\item GIT repozitář: \url{https://github.com/Tasssadar/libenjoy}
+\item GIT repository: \url{https://github.com/Tasssadar/libenjoy}
 \end{itemize}
 
 \newpage
-\section{Aplikace pro Android}
+\section{Android application}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/mobile.png}
 \caption{Lorris mobile}
 \end{center}
 \end{figure}
-Aplikace {\bf Lorris mobile} pro operační systém Google Android$^{tm}$ slouží jako přenosný doplněk k počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce dekstopové aplikace ale má pomoci zejména když je v terénu potřeba rychle něco přenastavit či poupravit.
 
-Aplikace funguje telefonech a tabletech s OS Android ve verzi 2.2 a vyšší, je optimalizována i pro větší obrazovky tabletů a je dostupná v oficiálním distribučním kanále Android aplíkací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
+{\bf Lorris mobile} is application for Google Android$^{tm}$ OS and it acts as mobile addition to desktop version of Lorris -- it may not have all the features of desktop versio, but helps when you need to quickly correct or debug something in the field.
 
-Lorris mobile má podobnou architekturu jako desktopová verze Lorris. Začíná se vytvořením sezení, do kterého se ukládá vše, co uživatel v aplikaci otevře (obrázek \ref{mobile_session}). Po vytvoření a otevření sezení se uživatel dostane na hlavní obrazovku programu, kde si může otevřit jednotlivé moduly v záložkách podobně jako v desktopové aplikaci (obrázek \ref{mobile_tabs}).
+App works on all tablets and phones with Android OS version 2.2 and higher, it is optimized also for bigger tablet screens and can be obtained in official distribution channel of Android application -- in Google Play Store\cite{gplay}. You can find it by searching for "Lorris".
+
+Lorris mobile has similiar architecture as desktop Lorris. User has to create session first, so that everything he opens can be saved (image \ref{mobile_session}). After user loads the sessions, he gets to main screen of the application, where he can open modules in tabs, much like in desktop Lorris (image \ref{mobile_tabs}).
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/mobile_session.png}
-\caption{Lorris mobile - výběr sezení}
+\caption{Lorris mobile -- session selection}
 \label{mobile_session}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/mobile_tabs.png}
-\caption{Lorris mobile - přepínání záložek}
+\caption{Lorris mobile -- switching tabs}
 \label{mobile_tabs}
 \end{center}
 \end{figure}
 
-\subsection{Programátor}
+\subsection{Programmer}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/mobile_programmer.png}
-\caption{Lorris mobile - programátor}
+\caption{Lorris mobile -- programmer}
 \end{center}
 \end{figure}
-Modul programátor dokáže programovat čipy pomocí bootloaderů {\bf avr232boot} a {\bf AVROSP} a také pomocí programátoru Shupito, pokud tablet nebo telefon na kterém aplikace běží podporuje připojení USB zařízení.
-Tato část Lorris mobile používá části nativního kódu z desktopové verze Lorris, díky tomu se kód lépe spravuje a je rychlejší.
+Module programmer can program chips using bootloaders {\bf avr232boot} and {\bf AVROSP} and also using Shupito programmer, if the device has USB host capabilities.
 
-\subsection{Terminál}
+This part of Lorris mobile uses parts of native code from desktop Lorris, which means the code is faster and easier to maintain.
+
+\subsection{Terminal}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/mobile_term.png}
-\caption{Lorris mobile - terminál}
+\caption{Lorris mobile -- terminal}
 \end{center}
 \end{figure}
-Klasický terminál. Umí většinu funkcí terminálu v desktopové verzi Lorris -- zobrazuje data (jako text nebo hexadecimální hodnoty bajtů), odesílá stisky kláves, lze nastavit velikost a barva textu, barvu pozadí a jaké kontrolní znaky se mají odeslat při stisknutí klávesy enter. 
+Classic terminal. Is has most of the features of desktop Lorris -- it displays data (as text or hexadecimal values), sends keypresses and user can set terminal's colors, font size and which control characters are send after return key press.
 
 \newpage
-\section*{Závěr}
-\addcontentsline{toc}{section}{Závěr}
-Vytvořená aplikace splňuje všechny stanovené požadavky:
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+Lorris meets all the requirements which have been set:
 \begin{enumerate}[label=\Has\hspace{1.5mm}\arabic{*}.]
-    \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat% 1
-    \item Podpora co nejvíce formátů příchozích dat% 2
-    \item Snadné a rychlé používání % 3
-    \item Možnost běhu i na jiných systémech než je MS Windows % 4
-    \item Co možná nejnižší cena -- program je dostupný zdarma% 5
-    \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
-    \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
+    \item Ability to process data from device and cleary show them % 1
+    \item Support for many formats of incoming data% 2
+    \item Quick and simple to use% 3
+    \item Support for other operating systems than MS Windows % 4
+    \item Low price% 5
+    \item Ability to easily expand program, ideally open-source % 6
+    \item No dependencies on other applications (eg. MS Office Excel) % 7
 \end{enumerate}
-Program navíc výrazně přesáhl původní cíle -- mimo zobrazování dat dokáže posílat data i zpět do zařízení, programovat mikročipy a vytvořit proxy mezi sériovým portem a TCP socketem. Ve srovnání s~nalezenými programy s~podobným zaměřením (viz úvod) je také jediný, který umožňuje uživateli napsat vlastní script pro parsování dat.
+On top of that, the program greatly outdoes original goals -- it also send data to device, program microchips and create proxy between serial port and TCP socket. In comparison to other applications I've found (as described in introduction) Lorris is also the only one which allows user to write his own script to parse data.
 
 Přestože se jedná o zcela nový software, byl již použit při testování barevného senzoru, ladění PID regulátoru pro robota na sledování čáry a je používán pro ovládání programátoru Shupito. Další možnosti použití jsou uvedeny v kapitole 6.
 
