@@ -247,7 +247,7 @@ zákonů (autorský zákon) v~platném znění.
 \vspace{100mm}
 
 \section*{Poděkování}
-Děkují Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, Martinu Vejnárovi za informace o programátoru Shupito, panu profesorovi Mgr. Miroslavu Burdovi za velkou pomoc s prací a v neposlední řadě Bc. Martinu Foučkovi za rady a pomoc při práci s Qt Frameworkem. Dále děkuji organizaci DDM Junior za poskytnutí podpory.
+Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětné připomínky poskytované během práce na tomto projektu, Martinu Vejnárovi za informace o programátoru Shupito, panu profesorovi Mgr. Miroslavu Burdovi za velkou pomoc s prací a v neposlední řadě Bc. Martinu Foučkovi za rady a pomoc při práci s Qt Frameworkem. Dále děkuji organizaci DDM Junior za poskytnutí podpory.
 
 \D Tato práce byla vypracována za finanční podpory JMK a JCMM.
 
@@ -428,15 +428,15 @@ V případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a spustí s
 
 Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a zobrazuje je v grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a boxu v horní části okna. Data (přijatá data, struktura packetů a rozestavení a nastavení widgetů) je také možné uložit do souboru a později zase v programu otevřít.
 
-Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bytů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start bajt}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
+Struktura dat se nastavuje v samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bajtů v paměti počítače}, přitomnost hlavičky a její obsah -- statická data (\uv{start bajt}), délka packetu (pokud je proměnná), příkaz a ID zařízení. Podle příkazu a ID zařízení je možno později data filtrovat.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
 \pagestyle{plain}
 
-Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu \uv{vytahat} na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bytu dat na widget. 
+Po nastavení struktury se přijatá data začnou po packetech zobrazovat v horní části okna, a v pravé části se zobrazí sloupeček s dostupnými zobrazovacími widgety. Widgety se dají pomocí drag\&drop principu \uv{vytahat} na plochu v prostřední části okna. Data se k widgetu přiřadí taktéž pomocí drag\&drop, tentokrát přetažení prvního bajtu dat na widget. 
 
-Poté widget zobrazuje data tohoto bytu, nebo tento bajt bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který bajt je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
+Poté widget zobrazuje data tohoto bajtu, nebo tento bajt bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který bajt je k widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
 Nastavení widgetu jsou přistupná v kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a velikost.
 
@@ -632,7 +632,7 @@ function Tlacitko_clicked() {
 \label{input}
 \end{center}
 \end{figure}
-Tento widget je také určený k interakci se scriptem (tj. vstupu uživatele), přičemž script také určuje prvky rozhraní -- widget je v základu prázdný a až script do něj přidá například tlačítko nebo textové pole. Tento widget je mírně složitější na obsluhu, ale lze díky němu použít všechny prveky UI, které Qt Framework obsahuje -- tlačítka, posuvníky, textová pole, vysouvací seznamy a podobně. V příkladu \ref{input_script} je script pro vytvoření prvků jako v obrázku \ref{input}.
+Tento widget je také určený k interakci se scriptem (tj. vstupu uživatele), přičemž script také určuje prvky rozhraní -- widget je v základu prázdný a až script do něj přidá například tlačítko nebo textové pole. Tento widget je mírně složitější na obsluhu, ale lze díky němu použít všechny prvky UI, které Qt Framework obsahuje -- tlačítka, posuvníky, textová pole, vysouvací seznamy a podobně. V příkladu \ref{input_script} je script pro vytvoření prvků jako v obrázku \ref{input}.
 
 \begin{listing}[H]
 \begin{jscode}
@@ -690,7 +690,7 @@ Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It
 Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
 
 \subsection{Proxy tunel}
-Tento modul také přidává nové umělé připojení - \uv{proxy tunel}. Pokud toto připojení použije nějáký další z modulů v Lorris, tak může posílat a přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v modulu analyzér je script, který generuje data a přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
+Tento modul také přidává nové umělé připojení - \uv{proxy tunel}. Pokud toto připojení použije nějáký z dalších modulů v Lorris, tak může posílat a přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v modulu analyzér je script, který generuje data a přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -758,7 +758,6 @@ Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká se
 \begin{center}
 \includegraphics{img/use_color.png}
 \caption{Barva v modulu Analyzér}
-\label{Terminal}
 \end{center}
 \end{figure}
 
@@ -772,7 +771,6 @@ Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká se
 \begin{center}
 \includegraphics{img/use_enc_term.png}
 \caption{Surová data z enkodérů s vyznačenými bajty, které obsahují úhel natočení}
-\label{Terminal}
 \end{center}
 \end{figure}
 
@@ -780,7 +778,6 @@ Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká se
 \begin{center}
 \includegraphics{img/use_enc_analyzer.png}
 \caption{Data z enkodérů zpracovaná analyzérem}
-\label{Terminal}
 \end{center}
 \end{figure}
 
