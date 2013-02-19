@@ -3,6 +3,11 @@
 
 % A POŘÁD ZÁLOHUJTE. POŘÁD !!!
 
+% priklady update
+% proxy lip
+% libenjoy -> reference
+% libenjoy neni prilis rozsahla
+
 \documentclass[12pt, a4paper, oneside]{article} 
 % velikost písma, stránky, typ dokumentu -- detaily viz literatura
 
@@ -229,11 +234,7 @@
 
 \section*{Prohlášení}
 
-Prohlašuji, že jsem svou práci vypracoval samostatně, použil jsem pouze 
-podklady (literaturu, SW atd.) citované v~práci a~uvedené v~přiloženém seznamu 
-a~postup při zpracování práce je v~souladu se zákonem č. 121/2000 Sb., o~právu 
-autorském, o~právech souvisejících s~právem autorským a~o~změně některých 
-zákonů (autorský zákon) v~platném znění. 
+Prohlašuji, že jsem svou práci vypracoval samostatně, použil jsem pouze podklady (literaturu, SW atd.) citované v~práci a~uvedené v~přiloženém seznamu a~postup při zpracování práce je v~souladu se zákonem č. 121/2000 Sb., o~právu autorském, o~právech souvisejících s~právem autorským a~o~změně některých zákonů (autorský zákon) v~platném znění. 
  
 \vspace{20mm} 
  
@@ -305,7 +306,7 @@ Main asset of this software is quick, well arranged and simple developement and 
 
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
-Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových měřáků vzdálenosti, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
+Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových dálkoměrů, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
 %Nenašel jsem žádný program, který by mi vyhovoval.
 \subsection*{Požadavky na aplikaci}
 \addcontentsline{toc}{subsection}{Požadavky na aplikaci}
@@ -369,7 +370,7 @@ GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář prog
 \end{itemize}
 V repozitáři nadále probíhá aktivní vývoj.
 \subsection{Struktura aplikace}
-Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči. Lorris umí otevřit několik oken zaráz a dokáže také rozdělit okno na několik částí, na obrázku \ref{split_img} je nalevo modul analyzér a napravo terminál. \\
+Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči. Lorris umí otevřít několik oken zaráz a dokáže také rozdělit okno na několik částí, na obrázku \ref{split_img} je nalevo modul analyzér a napravo terminál. \\
 \\
 \noindent Možnosti připojení k zařízení:
 \begin{itemize}
@@ -471,7 +472,7 @@ U některých widgetů se může hodit následující funkce: widgety je možné
 \end{figure}
 
 \subsection{Filtrování dat}
-Analyzér umí příchozí data filtrovat pomocí filtrů. Tyto filtry obsahují podmínky, podle kterých se určí, zda příchozí packet projde nebo ne.
+Analyzér umí příchozí data filtrovat, přičemž každý filtr může obsahovat několik podmínek podle kterých se určí, zda příchozí packet projde nebo ne.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/filters.png}
@@ -581,7 +582,7 @@ Editor scriptu má v sobě vestavěné ukázky kódu, například jak nastavit h
 \caption{Widget: kolo}
 \end{center}
 \end{figure}
-Widget kolo zobrazuje příchozí hodnotu jako úhel v kruhu, což se hodí například při zobrazování natočení kola robota. Dokáže zobrazit data přicházející jako úhel ve stupních, radiánech nebo jako číslo v určitém rozmezí (například enkodér s rozlišením 12 bitů vrací číslo od 0 do 4096).
+Widget kolo zobrazuje příchozí hodnotu jako úhel v kruhu, což se hodí například při zobrazování natočení kola robota. Dokáže zobrazit data přicházející jako úhel ve stupních, radiánech nebo jako číslo v určitém rozmezí (například enkodér s rozlišením 12 bitů vrací číslo od 0 do 4095).
 
 \subsection{Widget: plátno}
 \begin{figure}[H]
@@ -690,7 +691,7 @@ Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It
 Jednoduchá proxy mezi sériovým portem a TCP socketem. Vytvoří server, na který je možné se připojit z Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a naopak.
 
 \subsection{Proxy tunel}
-Tento modul také přidává nové umělé připojení - \uv{proxy tunel}. Pokud toto připojení použije nějáký z dalších modulů v Lorris, tak může posílat a přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v modulu analyzér je script, který generuje data a přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
+Tento modul také přidává nové virtuální připojení - \uv{proxy tunel}. Pokud toto připojení použije nějáký z dalších modulů v Lorris, tak může posílat a přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v modulu analyzér je script, který generuje data a přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -717,16 +718,16 @@ Tento modul funguje jako grafické rozhraní pro několik typů programátorů a
 \end{figure}
 
 \subsection{Programátor Shupito}
-Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy bez dalšího zařízení přímo v desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standardu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
+Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy přímo na desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standardu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
 Modul programátor v mojí práci slouží jako oficiální rozhraní pro Shupito. Převážná část komunikace s programátor je napsána samotným Martinem Vejnárem.
 
-\subsubsection{RS232 tunel}
+\subsubsection{UART tunel}
 \label{tunel}
-Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro RS232 linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
+Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro UART linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
 
 \subsection{Bootloader avr232boot}
-Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v čipu co nejméně místa. Původně uměl pouze programovat flash paměť čipu (ta, ve které je uložen program), já jsem do něj přidal podporu čtení a zapisování paměti EEPROM\footnote{Typ flash paměťi, která udrží data i bez proudu. V čipech se používá na uložení např. nastavení}.
+Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v čipu co nejméně místa. Původně uměl pouze programovat flash paměť čipu (ta, ve které je uložen program), já jsem do něj přidal podporu čtení a zapisování paměti EEPROM\footnote{Typ paměti, která udrží data i bez proudu. V čipech se používá na uložení např. nastavení}.
 
 Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a programovat EEPROM.
 
@@ -743,7 +744,7 @@ Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a 
 \label{Terminal}
 \end{center}
 \end{figure}
-Základní pomůcka při práci s mikrokontroléry, klasický terminál. Zobrazuje data přijatá přes sériový port a posílá stisky kláves a kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
+Základní pomůcka při práci s mikrokontroléry, klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
 
 Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká sekvence kontrolních znaků se má odeslat při stisknutí klávesy enter a chování některých kontrolních znaků (například jestli má znak \verb|\n| vytvořit nový řádek nebo ne).
 
@@ -799,9 +800,9 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 
 \newpage
 \subsection{Vývoj robota pro soutěž Eurobot 2011}
-V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových měřičů vzdálenosti). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
+V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových dálkoměrů). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
-Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových měřáků vzdálenosti, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
+Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových dálkoměrů, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
 
 \begin{figure}[H]
 \begin{center}
@@ -820,7 +821,7 @@ Zkušenost s programováním a laděním robota byla jedním z hlavních důvod�
 
 Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
 
-Widget \It{script} s názvem \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových měřáků. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Widget \It{script} s názvem \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových dálkoměrů. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
 
 Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko, které se stiskne, pokud je v robotovi pěšec. Tlačítko, které má zelenou barvu, není stisklé, tlačítko s červenou barvou stisklé je.
 
@@ -856,9 +857,9 @@ Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
 \end{figure}
 Aplikace {\bf Lorris mobile} pro operační systém Google Android$^{tm}$ slouží jako přenosný doplněk k počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce dekstopové aplikace ale má pomoci zejména když je v terénu potřeba rychle něco přenastavit či poupravit.
 
-Aplikace funguje telefonech a tabletech s OS Android ve verzi 2.2 a vyšší, je optimalizována i pro větší obrazovky tabletů a je dostupná v oficiálním distribučním kanále Android aplíkací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
+Aplikace funguje na telefonech a tabletech s OS Android ve verzi 2.2 a vyšší, je optimalizována i pro větší obrazovky tabletů a je dostupná v oficiálním distribučním kanále Android aplikací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
 
-Lorris mobile má podobnou architekturu jako desktopová verze Lorris. Začíná se vytvořením sezení, do kterého se ukládá vše, co uživatel v aplikaci otevře (obrázek \ref{mobile_session}). Po vytvoření a otevření sezení se uživatel dostane na hlavní obrazovku programu, kde si může otevřit jednotlivé moduly v záložkách podobně jako v desktopové aplikaci (obrázek \ref{mobile_tabs}).
+Lorris mobile má podobnou architekturu jako desktopová verze Lorris. Začíná se vytvořením sezení, do kterého se ukládá vše, co uživatel v aplikaci otevře (obrázek \ref{mobile_session}). Po vytvoření a otevření sezení se uživatel dostane na hlavní obrazovku programu, kde si může otevřít jednotlivé moduly v záložkách podobně jako v desktopové aplikaci (obrázek \ref{mobile_tabs}).
 
 \begin{figure}[H]
 \begin{center}
@@ -882,7 +883,7 @@ Lorris mobile má podobnou architekturu jako desktopová verze Lorris. Začíná
 \caption{Lorris mobile - programátor}
 \end{center}
 \end{figure}
-Modul programátor dokáže programovat čipy pomocí bootloaderů {\bf avr232boot} a {\bf AVROSP} a také pomocí programátoru Shupito, pokud tablet nebo telefon na kterém aplikace běží podporuje připojení USB zařízení.
+Modul programátor dokáže programovat čipy pomocí bootloaderů {\bf avr232boot} a {\bf AVROSP} a také pomocí programátoru Shupito.
 Tato část Lorris mobile používá části nativního kódu z desktopové verze Lorris, díky tomu se kód lépe spravuje a je rychlejší.
 
 \subsection{Terminál}
@@ -1014,7 +1015,7 @@ jsou volány při přidání/odebrání widgetu z plochy
 Jsou dostupné základní javascriptové knihovny (\verb/Math/, \verb/Date/, ...) a samotná Lorris poskytuje další rozšiřující funkce. 
 
 \begin{itemize}
-    \item {\color{blue}\verb/appendTerm(string)/} -- přidá do terminálu text.\\
+    \item {\color{blue}\verb/appendTerm(String)/} -- přidá do terminálu text.\\
         \begin{listing}[H]
         \begin{jscode}
 function onKeyPress(key) {
@@ -1078,8 +1079,8 @@ newWidget(typ, "jméno", šířka, výška, Xoffset, Yoffset);
     \item \verb/jméno/ -- {\bf String}, jméno widgetu, zobrazí se v titulku
     \item \verb/šířka/ -- {\bf Integer}, šířka widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
     \item \verb/výška/ -- {\bf Integer}, výška widgetu v pixelech. Může být 0, poté se zvolí minimální velikost.
-    \item \verb/Xoffset/ -- {\bf Integer}, vodorovná vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
-     \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Může být 0, widget se poté vytvoří v levém horním rohu aktuálně viditelné plochy.
+    \item \verb/Xoffset/ -- {\bf Integer}, vodorovná vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Pokud není tento paramter zadán, vytvoří se nový widget v levém horním rohu aktuálně viditelné plochy.
+    \item \verb/Yoffset/ -- {\bf Integer}, svislá vzdálenost v pixelech od levého horního rohu mateřského ScriptWidgetu. Pokud není tento paramter zadán, vytvoří se nový widget v levém horním rohu aktuálně viditelné plochy.
 \end{itemize}
 
 \begin{listing}[H]
@@ -1355,7 +1356,10 @@ c.drawRect(10, 55, 110, 20);
 \subsubsection*{Widget status}
 \addcontentsline{toc}{subsubsection}{Widget status}
 \begin{itemize}
-    \item {\color{blue}\verb/addStatus(int id, bool bitMaska, String text, String barvaPozadí, String barvaTextu)/} -- Přidá nový status. \verb|bitMask| určuje, zda se má použít přímé porovnání s hodnotou \verb|id| nebo bitový operátor \verb|AND|.
+    \item {\color{blue}
+    \begin{verbatim}addStatus(int id, bool bitMaska, String text
+    String barvaPozadí, String barvaTextu)
+    \end{verbatim}} Přidá nový status. \verb|bitMask| určuje, zda se má použít přímé porovnání s hodnotou \verb|id| nebo bitový operátor \verb|AND|.
     \item {\color{blue}\verb/removeStatus(int id, bool bitMaska/} -- Odebere status
     \item {\color{blue}\verb/setValue(Integer)/} -- Nastaví vstupní hodnotu
     \item {\color{blue}\verb/getValue()/} -- Vrátí aktuální hodnotu
@@ -1462,13 +1466,13 @@ Na uložení hodnot použitých ve scriptu (například nastavení) je připrave
 \begin{itemize}
     \item {\color{blue}\verb/clear()/} -- Vymaže všechna uložená dataPass
     \item {\color{blue}\verb/exists(String klíč)/} -- Vrátí \verb|true| pokud hodnota s tímto klíčem existuje.
-    \item {\color{blue}\verb/setXXXX(String klíč, XXX hodnota)/} \\
-        {\color{blue}\verb/getXXXX(String klíč, XXX pokudKlíčNeexistuje)/} \\
-        {\color{blue}\verb/setYYYYArray(String klíč, PoleYYY hodnota)/} \\
-        {\color{blue}\verb/getYYYYArray(String klíč, PoleYYY pokudKlíčNeexistuje)/} \\
+    \item {\color{blue}\verb/setXXXX(String klíč, XXXX hodnota)/} \\
+        {\color{blue}\verb/getXXXX(String klíč, XXXX pokudKlíčNeexistuje)/} \\
+        {\color{blue}\verb/setYYYYArray(String klíč, PoleYYYY hodnota)/} \\
+        {\color{blue}\verb/getYYYYArray(String klíč, PoleYYYY pokudKlíčNeexistuje)/} \\
             Funkce pro uložení a načtení hodnoty.
 
-        \verb|XXX| typy mohou být \verb|Bool, Uint32, Int32, Float| nebo \verb|String|. Pole \verb|YYYY| může být s prvky typu \verb|UInt32, Int32| nebo \verb|Float|. Druhý parametr u \verb|getXXX| metod je výchozí hodnota, která se vrátí pokud klíč neexistuje.
+        \verb|XXX| typy mohou být \verb|Bool, UInt32, Int32, Float| nebo \verb|String|. Pole \verb|YYYY| může být s prvky typu \verb|UInt32, Int32| nebo \verb|Float|. Druhý parametr u \verb|getXXXX| metod je výchozí hodnota, která se vrátí pokud klíč neexistuje.
 \end{itemize}
 
 \begin{listing}[H]
@@ -1557,15 +1561,15 @@ function buttonChanged(id, state) {
 \end{jscode}
 \caption{Otevření joysticku a čtení jeho hodnot}
 \end{listing}
-\newpage
-\subsection*{Pár věcí, na které je třeba při programování myslet}
-\addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
-\begin{itemize}
-    \item Widgety vytvořené ze scriptu se neukládájí do datového souboru -- po načtení se vytvoří znovu, bez dat.
-    \item Stav proměnných ve scritptu se zatím neukládá do souboru.
-    \item Po stisknutí \uv{Ok} nebo \uv{Použít} v dialogu nastavení scritpu se script načte znovu -- staré widgety se smažou a vytvoří nové, bez dat.
-    \item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
-\end{itemize}
+%\newpage
+%\subsection*{Pár věcí, na které je třeba při programování myslet}
+%\addcontentsline{toc}{subsection}{Pár věcí na které je třeba myslet}
+%\begin{itemize}
+    %\item Widgety vytvořené ze scriptu se neukládají do datového souboru -- po načtení se vytvoří znovu, bez dat.
+    %\item Stav proměnných ve scritptu se neukládá do souboru.
+    %\item Po stisknutí \uv{Ok} nebo \uv{Použít} v dialogu nastavení scritpu se script načte znovu -- staré widgety vytvořené scriptem se smažou a vytvoří nové, bez dat.
+    %\item Jazyk nemá žádné pojistky proti \uv{špatnému} kódu -- pokud ve scritpu bude nekonečná smyčka, Lorris prostě zamrzne
+%\end{itemize}
 
 \newpage
 \section*{PŘÍLOHA B:}
