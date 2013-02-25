@@ -25,7 +25,7 @@
 \usepackage{bbding}
 \usepackage{enumitem}
 \usepackage{breakurl}
-
+\usepackage{pdflscape}
 %\usepackage{indentfirst}
 
 \usepackage{tocloft} %přidá tečky do obsahu ke kapitolám /sekcím 
@@ -763,24 +763,92 @@ Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká se
 \end{figure}
 
 \newpage
-\subsection{Testování enkodérů}
-{\bf Situace:} Potřebuji otestovat přesnost magnetických enkodérů, které však odesílají data o úhlu natočení rozdělené v několika bajtech v takovém formátu, který znemožňuje použití např. terminálu.\\
-\\
-{\bf Řešení:} Nechci za tímto účelem stavět a programovat novou desku s dalším mikročipem, připojím tedy enkodér k počítači. V Lorris otevřu modul analyzér a ve widgetu \uv{script} napíši  jednoduchý script, který složí úhel do jednoho čísla a zobrazí ho ve widgetu \uv{číslo}.
+\subsection{Testování enkodéru}
+V roce 2012 vypracoval můj spolužák Marek Ortcikr práci SOČ \It{Modulární stavba robota} ve které byl jedním z modulů magnetický vlečný enkodér. Tento modul vypadá jako další kolečko, které se na robota připevní, uvniř osy kola je však magnet a naproti němu napevno uchycený čip enkodéru. Čip snímá orientaci magnetického pole vytvořeného magnetem v ose kola a~podle toho dokáže určit jeho natočení. Enkodér poté sleduje změny v natočení kola podle kterých je možné zjistit ujetou vzdálenost, rychlost a zrychlení robota.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/enc_real.png}
+\caption{Magnetický enkodér}
+\end{center}
+\end{figure}
+Pro demonstraci enkodéru na celostatním kole soutěže SOČ byla použita moje aplikace Lorris. Celé rozhraní je vidět na obrázku \ref{analyzer_all}, dále je popsána každá část zvlášť.
+
+\newpage
+\pagestyle{empty}
+\textheight=\paperheight
+\voffset=-130pt
+\begin{landscape}
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/enc_full.png}
+\caption{Data z enkodéru zpracovaná analyzérem}
+\label{analyzer_all}
+\end{center}
+\end{figure}
+\end{landscape}
+
+\textheight=592pt
+\pagestyle{plain}
+\newpage
+\voffset=0mm
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth-40pt]{img/enc_circle.png}
+\caption{Natočení kola}
+\end{center}
+\end{figure}
+Widget \It{kolo} zde znázorňuje aktuální natočení kolečka enkodéru. V pravém horním rohu je aktuální hodnota z enkodéru (0 až 4095), vlevo je hodnota přepočítaná na radiány a stupně.
+
+Widget \It{bar} pojmenovaný \uv{gain} ukazuje sílu magnetického pole, tedy jak daleko je magnet v ose kolečka od čipu enkodéru. Hodnota má rozmezí od 0 do 63, ideální je zhruba střed tohoto rozmezí.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics{img/use_enc_term.png}
-\caption{Surová data z enkodérů s vyznačenými bajty, které obsahují úhel natočení}
+\includegraphics[width=\textwidth-60pt]{img/enc_dist.png}
+\caption{Ujetá vzdálenost}
 \end{center}
 \end{figure}
+Tento widget \It{číslo} zobrazuje naměřenou vzdálenost v milimetrech. Enkodér odesílá tuto informaci v $\frac{1}{4096}$ obvodu kolečka, takže je třeba ji přepočítat pomocí výrazu \verb|%n/32.5949|.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics{img/use_enc_analyzer.png}
-\caption{Data z enkodérů zpracovaná analyzérem}
+\includegraphics[width=\textwidth-60pt]{img/enc_spd.png}
+\caption{Rychlost a zrychlení}
 \end{center}
 \end{figure}
+Dva widgety \It{číslo} jsou zde použity k zobrazení aktuální rychlosti a zrychlení. Pod nimi je widget \It{graf} ve kterém je rychlost jako červená křivka a zrychlení jako modrá.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/enc_status.png}
+\caption{Stav enkodéru}
+\end{center}
+\end{figure}
+Čip enkodéru také informuje o svém stavu, pokud je vše v pořádku vrací číslo \verb|0x0|, pokud narazí-li na nějáký problém vrátí některý z chybových kódů (například \verb|0x8| při nepřítomnosti magnetu v ose kola). Widget \It{status} ukazuje chybový kód a barvu podle informací z enkodéru.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth-50pt]{img/enc_ctrl.png}
+\caption{Ovládání enkodéru}
+\end{center}
+\end{figure}
+Tyto widget \It{tlačítko} a \It{vstup} obstarávají ovládání enkodéru. Tlačítko \uv{reset} vrátí počítadlo ujeté vzdálenosti na nulu, tlačítko \uv{clear} pošle enkodéru příkaz k resetu chybového kódu (kód po chybě zůstává i když příčina již byla napravena, je třeba ho resetovat) a tlačítko \uv{Ovladani} zastavuje a spouští posílání dat z enkodéru. Všechny tyto widgety jsou připojené na script (do obrázku \ref{analyzer_all} se už widget script nevešel), který po kliknutí na tlačíka odešle do enkodéru příslušné příkazy.
+\begin{listing}[H]
+\begin{jscode}
+var run = true;
+function reset_clicked() {
+    sendData(new Array(0xFF, 0x01, 0x01, 0x00));
+}
+function clear_clicked() {
+    sendData(new Array(0xFF, 0x01, 0x01, 0x01));
+}
+function startStop_clicked() {
+    run = !run;
+    startStopBtn.text = run ? "Stop" : "Start";
+    sendData(new Array(0xFF, 0x01, 0x02, 0x02, run ? 1 : 0));
+}
+\end{jscode}
+\caption{Script, který odesílá příkazy do enkodéru}
+\end{listing}
 
 \newpage
 \subsection{Ladění PID regulátoru}
@@ -799,38 +867,54 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 \end{figure}
 
 \newpage
-\subsection{Vývoj robota pro soutěž Eurobot 2011}
-V minulém roce jsem se zúčastnil soutěže Eurobot\cite{eurobot}. Cíl soutěže je každý rok jiný, v minulém ročníku bylo cílem hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových dálkoměrů). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
+\subsection{Stavba robota pro soutěž Eurobot 2011}
+Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot}.
 
-Robot našeho týmu byl poměrně jednoduchý, přesto však obsahoval 5 ultrazvukových dálkoměrů, dva enkodéry a 5 tlačítek (detekce nárazu na mantinel a pěšce, kterého mohl robot převážet). Tyto senzory produkují poměrně značné množství dat, které se v terminálu zobrazuje nepřehledně.
+Cíl soutěže je každý rok jiný, v roce 2011 měli roboti za úkol hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových dálkoměrů). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
-\begin{figure}[H]
+Právě při vývoji tohoto robota vyvstala palčivá potřeba mít k dispozici nástroj, který by umožňoval ve všech fázích jeho vývoje snadné a rychlé testování a ladění všech funkcí a komponent robota. Vzhledem k tomu, že nejviditelnější částí programu Lorris je nástroj Analyzér, je v této ukázce prezentováno především jeho použití, ostatní nástroje (Programátor, Terminál) však byly také použity, například při programování mikročipu v robotovi.
+
+V příkladu je vytvořeno jednoduché uživatelské prostředí pro ovládání, testování a programování pro jednoho robota. Toto prostředí však lze znovu použít i pro jiného robota anebo vytvořit nové, pokud je robot příliš atypický a vyžaduje jiný typ ovládání.
+
+
+\newpage
+\subsubsection{Mechanická kostra robota}
+Jako první byla navržena mechanická konstrukce robota. Již v této fázi byla využita moje aplikace Lorris. Pro otestování funkčnosti a chování motorů a servomotorů bylo použito ovládání pomocí joysticku. V Lorris jsem sestavil menší skupinu widgetů: \It{Script}, který čte data z joysticku, přepočítává je na rychlosti, které je třeba nastavit motorům a odesílá je do robota. Dále widget \It{Vstup}, ve kterém je nastavení ovládání pomocí joysticku a 2 widgety \It{Číslo}, které zobrazují aktuální rychlosti motorů.
+\vspace{30mm}
 \begin{center}
-\includegraphics{img/use_david1.png}
-\caption{Data z robota v terminálu}
+\includegraphics[width=\textwidth]{img/joystick_david.png}
 \end{center}
-\end{figure}
 
-Zkušenost s programováním a laděním robota byla jedním z hlavních důvodů pro výběr zvoleného tématu práce. S použitím programu Lorris by se mohla tato data zobrazovat například takto:
-\begin{figure}[H]
+\newpage
+\subsubsection{Ladění a nastavení senzorů}
+Po vyladění mechanické části robota byl osazen senzory. Po jejich umístění jsem v nástroji Analyzér vytvořil rozhraní, které využívá zejména widgetů \It{Script}, \It{Číslo}, \It{Barva} a \It{Status}. Každý z těchto widgetů je možné na pracovní ploše Analyzéru přesouvat, zmenšovat nebo zvětšovat, díky čemuž je možné jejich rozmístění tak, aby odpovídalo skutečným pozicím senzorů na robotu. Jako optimální se jeví zobrazení jako při pohledu shora.
+\vspace{10mm}
 \begin{center}
-\includegraphics{img/use_david2.png}
-\caption{Simulovaná data v analyzéru}
+\includegraphics[width=\textwidth]{img/sensors_david.png}
 \end{center}
-\end{figure}
 
-Všechny widgety jsou rozmístěné stejně jako na robotovi -- 2 ultrazvuky měří vzdálenost vepředu, 3 vzadu; tlačítka pro detekci mantinelu jsou na každém rohu, tlačítko uvnitř robota ověřuje,  zda robot nabral pěšce a enkodéry na obou kolech měří ujetou vzdálenost.
+\newpage
+\subsubsection{Programování reaktivního chování robota}
+Vrcholem vývoje robota bylo programování jeho chování na herní ploše. Při této příležitosti se v plné míře uplatnil widget \It{Script} programu Lorris. V tomto widgetu bylo vytvořeno scriptovací prostředí, které zapouzdřilo nejtypičtější povelové sady, pomocí kterých lze s výhodou konstruovat složitější vzorce chování robota. Widget \It{Script} by umožnil i přímé psaní scriptu pro řízení robota, ale zmíněné prostředí tuto práci výrazně zjednodušilo.
 
-Widget \It{script} s názvem \uv{Robot} uprostřed reprezentuje tělo robota. Widgety \It{číslo} s názvy \uv{Ultra E0...8} ukazují vzdálenost z ultrazvukových dálkoměrů. Ve widgetu \uv{Ultra E0} je vzdálenost menší než 25 cm, což je hraniční vzdálenost, po které se robot zastaví, aby nevrazil do soupeře -- aby widget na tuto skutečnost upozornil, má červené pozadí.
+Za povšimnutí stojí také to, že zde byl widget script využit nejen pro řízení robota, ale i pro vylepšení fungování samotného nástroje Analyzér.
 
-Widgety \It{barva} s názvy \uv{btn} jsou tlačítka značící náraz do mantinelu a \uv{pwn} je tlačítko, které se stiskne, pokud je v robotovi pěšec. Tlačítko, které má zelenou barvu, není stisklé, tlačítko s červenou barvou stisklé je.
+V tomto příkladu používám jednoduché \uv{akce}, které robot postupně provádí. Každá akce má 3 hlavní parametry - směr jízdy, kdy se má robot zastavit a co má vykonat, když se zastaví na cílovém místě. Všechny akce je možné ve scriptovacím prostředí rovnou měnit, bez nutnosti přeprogramovávat robota. Všechny ostatní části prostředí Lorris stále fungují, i když robot je právě řízen nastaveným scriptem. Díky tomu lze sledovat stav robota i všech jeho senzorů a rychle zjistit zdroj případného neočekávaného chování.
 
-Poslední widgety \It{číslo} s názvy \uv{Enc left} a \uv{Enc right} vypisují ujetou vzdálenost z enkodérů pravého a levého kola.
+\newpage
+\enlargethispage{400mm}
+\voffset = -35mm % posun začátku textu výš
+\begin{center}
+\includegraphics[height=750pt]{img/control_david.png}
+\end{center}
 
+
+\newpage
+\voffset = 0mm
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.24]{img/use_david_robot.jpg}
-\caption{Náš robot \It{David} skončil na 4. místě v celostátním kole soutěže Eurobot 2011}
+\includegraphics[width=\textwidth]{img/use_david_robot.jpg}
+\caption{Náš robot \It{David} skončil na 4. místě z 11 v celostátním kole soutěže Eurobot 2011}
 \end{center}
 \end{figure}
 
