@@ -266,14 +266,18 @@ Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětn
 
 \section*{Anotace}
 
+Tato práce popisuje komplexní sadu nástrojů pro vývoj a ovládání libovolného zařízení schopného komunikovat po sériové lince nebo TCP socketu.
 
-Tato práce popisuje sadu nástrojů pro vývoj a ovládání libovolného zařízení schopného komunikovat po sériové lince nebo TCP socketu.
+Protože se nejedná o jednoduchou aplikaci ani o jednostranně zaměřenou sadu nástrojů, protože se navíc celá sada průběžně rozrůstá a protože je rozsah a záběr použití všech funkcí a modulů této sady příliš velký, nelze ji stručně popsat v omezeném prostoru anotace.
 
-Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
+% TODO: odkaz
+Pro získání ucelenější představy o tom co vše lze pomocí sady Lorris dosáhnout, prosím nahlédněte do kapitoly XXXXXX
 
-Hlavním přínosem tohoto softwaru je, že výrazně urychluje, zpřehledňuje a zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
+%Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
 
-\D \B{Klíčová slova:} analýza dat, počítačový program, robot, grafické zobrazení, vývoj a testování aplikací
+Hlavním přínosem tohoto softwarového balíku je, že výrazně urychluje, zpřehledňuje a hlavně výrazně zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
+
+\D \B{Klíčová slova:} analýza binárních dat, programování a řízení robotů, vývoj pro mikrokontroléry, programování mikročipů
 
 \section*{Annotation}
 
@@ -303,7 +307,7 @@ Main asset of this software is quick, well arranged and simple developement and 
 %\pagestyle{headings} % znovu zapne číslování
 \pagestyle{plain}
 \section*{Úvod}
-
+% TODO: Motivace
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 % zde začne text úvodu
 Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových dálkoměrů, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
@@ -1663,6 +1667,14 @@ function buttonChanged(id, state) {
     \item {\bf Qwt}\cite{qwt} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloucové ukazatele, kompasy a podobně. Ve svojí práci zatím z této knihovny používám pouze graf (v modulu analyzéru).
     \item {\bf QExtSerialPort}\cite{qext} poskytuje připojení k sériovému portu a také dokáže vypsat seznam nalezených portů v počítačí.
     \item {\bf QHexEdit2}\cite{qhex} je hex editor použitý v modulu programátoru Shupito na zobrazování obsahu paměti. V této knihovně jsem upravoval několik málo drobností, týkajících se především vzhledu.
+    \item {\bf Tanto Icon Library}\cite{tango} je sada ikon vydaných jako volné dílo. Lorris použivá ikonky z této sady na mnoha místech napříč celým programem.
+    \item {\bf EcWin7}\cite{ecwin7} je knihovna, která poskytuje jednoduché rozhraní k indikátoru průběhu
+    \item {\bf QScintilla2}\cite{qsci} je distribuována pod GNU GPL v2 a v3
+    \item {\bf libenjoy}\cite{libenjoy} je distribuována pod GNU LGPLv2.1
+    \item {\bf PythonQt}\cite{pythonqt} je distribuována pod GNU LGPLv2.1
+    \item {\bf Python}\cite{python} je distribuován pod PSF License agreement\cite{psf}
+    \item {\bf Qt Solutions}\cite{qtsolutions} je distribuován pod The New BSD License
+    \item {\bf libyb}\cite{libyb} je distribuován pod Boost Software License\cite{boost}
 \end{itemize}
 
 \section*{PŘÍLOHA C:}
@@ -1674,7 +1686,14 @@ Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých progr
     \item {\bf Qwt} je distribuováno pod Qwt license\cite{qwtlicense}, která je založená na GNU LGPLv2.1
     \item {\bf QExtSerialPort} je distribuován pod The New BSD License\cite{newbsd}
     \item {\bf QHexEdit2} je distribuován pod licencí GNU LGPLv2.1
-    \item {\bf avr232client} je distribuován pod licencí Boost Software License v1.0\cite{boost}
+    \item {\bf Tanto Icon Library}\cite{tango} je vydána jako volné dílo (\It{Public domain})
+    \item {\bf EcWin7} je distribuováno pod GNU GPLv2
+    \item {\bf QScintilla2} je distribuována pod GNU GPL v2 a v3
+    \item {\bf libenjoy} je distribuována pod GNU LGPLv2.1
+    \item {\bf PythonQt} je distribuována pod GNU LGPLv2.1
+    \item {\bf Python} je distribuován pod PSF License agreement\cite{psf}
+    \item {\bf Qt Solutions} je distribuován pod The New BSD License
+    \item {\bf libyb} je distribuován pod Boost Software License\cite{boost}
 \end{itemize}
 
 Všechny tyto licence umožňují svobodné používání a šíření kódu.
@@ -1776,6 +1795,42 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
 
     \bibitem{newbsd} \It{The New BSD License} \\
     \url{http://www.opensource.org/licenses/bsd-license.php}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{tango} \It{Tango Icon Library} \\
+    \url{http://tango.freedesktop.org/Tango_Icon_Library}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{ecwin7} \It{EcWin7} -- Windows 7 taskbar progress indicator \\
+    \url{http://www.msec.it/blog/?p=118}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{qsci} \It{QScintilla2} -- Code editor \\
+    \url{http://www.riverbankcomputing.co.uk/software/qscintilla/intro}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{libenjoy} \It{libenjoy} -- Small & simple joystick library \\
+    \url{https://github.com/Tasssadar/libenjoy}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{pythonqt} \It{PythonQt} -- Python bindings for Qt \\
+    \url{http://pythonqt.sourceforge.net/}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{python} \It{Python}, the programming language \\
+    \url{http://www.python.org/}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{psf} \It{PSF License agreement} \\
+    \url{http://docs.python.org/2/license.html}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{qtsolutions} \It{Qt Solutions}, a collection of minor Qt add-ons\\
+    \url{http://qt.gitorious.org/qt-solutions}\\
+    (Stav ke dni 25.2.2013)
+
+    \bibitem{libyb} \It{libyb}, a collection of minor Qt add-ons\\
+    \url{https://github.com/avakar/libyb}\\
     (Stav ke dni 25.2.2013)
 
     \bibitem{boost} \It{The Boost Software License} \\
