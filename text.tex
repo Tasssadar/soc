@@ -262,7 +262,7 @@ Děkuji Jakubu Streitovi za rady, obětavou pomoc, velkou trpělivost a~podnětn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage   % Anotace 
 ~ % musí to tu být, aby fungovala svislá mezera
-\vspace{10mm}
+\vspace{-20mm}
 
 \section*{Anotace}
 
@@ -270,8 +270,7 @@ Tato práce popisuje komplexní sadu nástrojů pro vývoj a ovládání libovol
 
 Protože se nejedná o jednoduchou aplikaci ani o jednostranně zaměřenou sadu nástrojů, protože se navíc celá sada průběžně rozrůstá a protože je rozsah a záběr použití všech funkcí a modulů této sady příliš velký, nelze ji stručně popsat v omezeném prostoru anotace.
 
-% TODO: odkaz
-Pro získání ucelenější představy o tom co vše lze pomocí sady Lorris dosáhnout, prosím nahlédněte do kapitoly XXXXXX
+Pro získání ucelenější představy o tom co vše lze pomocí sady Lorris dosáhnout, prosím nahlédněte do \hyperref[uvod]{úvodu práce}.
 
 %Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
 
@@ -281,13 +280,15 @@ Hlavním přínosem tohoto softwarového balíku je, že výrazně urychluje, zp
 
 \section*{Annotation}
 
-This work describes a toolbox designed for developement and control of any device capable of connecting to serial port or TCP socket.
+This work describes a complex set of tools designed for developement and control of any device capable of connecting to serial port or TCP socket.
 
-The application contains several modules. Each module is designed for one particular function -- parsing and displaying data, programming microcontrollers etc.
+Because Lorris isn't a simple application nor is it a toolbox focused on one narrow area of use, because the whole set is continuously growing and because scope of use for all features and modules of Lorris is too big, it is impossible to briefly describe it all in limited scope of annotation.
 
-Main asset of this software is quick, well arranged and simple developement and testing of applications for microcontrollers -- typically programming and controling various kinds of robots.
+To get better notion of what can one achieve with Lorris, please refer to introductory chapter of this work (English version of this text is available on enclosed CD as PDF file).
 
-\D \B{Key words:} data analysis, computer program, robot, graphical interface, developement and testing of applications
+Main asset of this software package is the ability to speed-up and simplify developement and testing of various applications for microcontrollers, typically programming and controlling various kinds of robots.
+
+\D \B{Key words:} binary data analysis, programming and control of robots, developement for microcontrollers, programming of microchips
 
 \addtolength{\textheight}{30mm} % prodlouží následující stránku
 
@@ -306,14 +307,57 @@ Main asset of this software is quick, well arranged and simple developement and 
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patří
 %\pagestyle{headings} % znovu zapne číslování
 \pagestyle{plain}
+
 \section*{Úvod}
-% TODO: Motivace
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
-% zde začne text úvodu
+\label{uvod}
+Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat při vývoji, ladění a řízení zejména robotů, ale i jiných elektronických zařízení. V této kapitole najdete stručně popsány nejdůležitější vlastnosti jednotlivých modulů a dále v práci jsou pak všechny moduly důkladně popsány v jednotlivých kapitolách.
+
+\subsection*{Modul: analyzér}
+\addcontentsline{toc}{subsection}{Modul: analyzér}
+\begin{itemize} 
+    \item Soustřeďuje se na zobrazování dat z robota v grafické podobě.
+    \item Analyzér pro zobrazování používá tzv. widgety -- malá \uv{okna}, která zobrazují určitou část dat.
+    \item Widgety mají individuální nastavení a uživatel si je může umístit na libovolné místo na pracovní ploše.
+    \item Lorris obsahuje několik typů widgetů, například \It{Číslo, Barva, Sloupcový bar, Kolo} (zobrazení úhlu v kružnici) či \It{Graf}.
+    \item Pomocí widgetů lze sestavit rozhraní vyhovující prakticky jakémukoliv robotovi.
+    \item Analyzér je ideální i pro snadné zobrazování dat z prvků, u kterých není vhodné jako výstup použít čísla -- například barevný senzor.
+    \item Některé widgety mohou posílat data i směrem do robota. Díky tomu je možné kromě zobrazování dat jejich prostřednictvím robota i ovládat.
+    \item Pozornost si zaslouží widget \uv{script}. Uživatel v něm může napsat vlastní script, který zpracovává příchozí data. Script může využít ostatní widgety a další části Lorris, díky tomu lze zobrazit i jinými způsoby interpretovat takřka jakákoliv data.
+    \item Pomocí scriptu lze upravovat i samotný program Lorris.
+\end{itemize}
+
+\subsection*{Modul: programátor}
+\addcontentsline{toc}{subsection}{Modul: programátor}
+\begin{itemize}
+    \item Grafické rozhraní pro několik typů bootloaderů a programátorů pro mikročipy.
+    \item Dokáže do čipu zapistovat program, číst a mazat paměť čipu nebo programovat pojistky.
+    \item Oficiální GUI k programátoru Shupito.
+    \item Shupito je programátor mikrokontrolérů. Na jeden konec programátoru se připojí čip, na druhý počítač -- bez programátoru nelze do některých mikrokontrolérů nahrát program.
+\end{itemize}
+
+\subsection*{Modul: terminál}
+\addcontentsline{toc}{subsection}{Modul: terminál}
+\begin{itemize}
+    \item Klasický terminál - zobrazuje příchozí data jako text nebo vypisuje byty jako hexadecimální čísla.
+\end{itemize}
+
+\subsection*{Modul: proxy mezi sériovým portem a TCP socketem}
+\addcontentsline{toc}{subsection}{Modul: proxy mezi sériovým portem a TCP socketem}
+\begin{itemize}
+    \item Vytvoří server připojený na sériový port - k tomuto portu se pak lze připojit odkudkoliv z internetu.
+\end{itemize}
+
+\subsection*{Anglická verze a poster}
+\addcontentsline{toc}{subsection}{Anglická verze a poster}
+Anglická verze tohoto textu a propagační poster jsou dostupné na přiloženém CD ve formátu PDF.\\
+\\
+\noindent\It{Enclosed CD contains English version of this work and promotional poster as PDF files.}
+
+\section{Motivace}
 Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových dálkoměrů, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
-%Nenašel jsem žádný program, který by mi vyhovoval.
-\subsection*{Požadavky na aplikaci}
-\addcontentsline{toc}{subsection}{Požadavky na aplikaci}
+\subsection{Požadavky na aplikaci}
+%\addcontentsline{toc}{subsection}{Požadavky na aplikaci}
 Od programu vyžaduji tyto vlastnosti:
 \begin{enumerate}
     \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat % 1
@@ -325,10 +369,8 @@ Od programu vyžaduji tyto vlastnosti:
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
 
-% Z tohoto důvodu jsem se rozhodl napsat vlastní program.
-
-\subsection*{Existující programy}
-\addcontentsline{toc}{subsection}{Existující programy}
+\subsection{Existující programy}
+%\addcontentsline{toc}{subsection}{Existující programy}
 Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového portu a jejich zobrazování), jsem našel pouze několik. K dispozici jsou buď komerční aplikace, které stojí poměrně velké množství peněz (a přesto nesplňují všechny požadavky), anebo aplikace, které dokáží zobrazovat data pouze v jednom formátu -- typicky graf.
 
 \begin{itemize}
@@ -336,12 +378,11 @@ Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového p
     \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, má však horší ovládání a užší možnosti použití (hlavně kvůli nutnosti použít další program pro zobrazování). Je dostupný pouze pro MS~Windows a základní verze stojí \$ 259.
     \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
     \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod verzí 7 nefunguje.
-% pod win Xp se pripoji
 \end{itemize}
 
 
-\subsection*{Porovnání aplikací}
-\addcontentsline{toc}{subsection}{Porovnání aplikací}
+\subsection{Porovnání aplikací}
+%\addcontentsline{toc}{subsection}{Porovnání aplikací}
 Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v kapitole \uv{Požadavky na aplikaci}.
 
 \vspace{5mm}
@@ -370,9 +411,11 @@ GIT\footnote{\It{GIT} -- distribuovaný systém správy verzí} repozitář prog
     \item Repozitář: \url{https://github.com/Tasssadar/Lorris}
     \item Web (česká verze):\\ \url{http://tasssadar.github.com/Lorris/cz/index.html}
     \item Web (anglická verze):\\ \url{http://tasssadar.github.com/Lorris/index.html}
-    \item Prezentace práce: \\ \burl{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
+    \item Prezentace práce: \\ \url{http://www.sokolska.cz/soc-2012/bocek-vojtech-lorris-sada-nastroju-pro-robotiku/}
 \end{itemize}
 V repozitáři nadále probíhá aktivní vývoj.
+
+
 \subsection{Struktura aplikace}
 Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik samostatných částí, které však mají podobnou oblast použití. Základní část programu poskytuje připojení k zařízení (např. robot, deska s čipem) a ukládání nastavení aplikace, samotné zpracování dat probíhá v modulech, které jsou otevírány v panelech -- podobně jako stránky ve webovém prohlížeči. Lorris umí otevřít několik oken zaráz a dokáže také rozdělit okno na několik částí, na obrázku \ref{split_img} je nalevo modul analyzér a napravo terminál. \\
 \\
