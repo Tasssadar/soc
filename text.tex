@@ -818,29 +818,11 @@ V roce 2012 vypracoval můj spolužák Marek Ortcikr práci SOČ \It{Modulární
 \caption{Magnetický enkodér}
 \end{center}
 \end{figure}
-Pro demonstraci enkodéru na celostatním kole soutěže SOČ byla použita moje aplikace Lorris. Celé rozhraní je vidět na obrázku \ref{analyzer_all}, dále je popsána každá část zvlášť.
+Pro demonstraci enkodéru na celostatním kole soutěže SOČ byla použita moje aplikace Lorris. Celé rozhraní je vidět na obrázku \ref{analyzer_all} na straně \pageref{analyzer_all}, zde jsou popsány jednotlivé části zvlášť.
 
-\newpage
-\pagestyle{empty}
-\textheight=\paperheight
-\voffset=-130pt
-\begin{landscape}
-\begin{figure}[h]
-\begin{center}
-\includegraphics{img/enc_full.png}
-\caption{Data z enkodéru zpracovaná analyzérem}
-\label{analyzer_all}
-\end{center}
-\end{figure}
-\end{landscape}
-
-\textheight=592pt
-\pagestyle{plain}
-\newpage
-\voffset=0mm
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth-40pt]{img/enc_circle.png}
+\includegraphics[width=\textwidth-45pt]{img/enc_circle.png}
 \caption{Natočení kola}
 \end{center}
 \end{figure}
@@ -850,7 +832,7 @@ Widget \It{bar} pojmenovaný \uv{gain} ukazuje sílu magnetického pole, tedy ja
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth-60pt]{img/enc_dist.png}
+\includegraphics[scale=0.85]{img/enc_dist.png}
 \caption{Ujetá vzdálenost}
 \end{center}
 \end{figure}
@@ -905,7 +887,7 @@ function startStop_clicked() {
 
 V modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
 
-Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}.
+Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}. Na soutěži jsem skončil na 2. místě z 22 robotů\cite{robotday_res}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{img/use_pid.png}
@@ -915,7 +897,7 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 
 \newpage
 \subsection{Stavba robota pro soutěž Eurobot 2011}
-Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot}.
+Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot} (fotku robota najdete v přílohách na straně \pageref{david}, obrázek č. \ref{david}).
 
 Cíl soutěže je každý rok jiný, v roce 2011 měli roboti za úkol hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových dálkoměrů). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
@@ -947,24 +929,11 @@ Vrcholem vývoje robota bylo programování jeho chování na herní ploše. Př
 Za povšimnutí stojí také to, že zde byl widget script využit nejen pro řízení robota, ale i pro vylepšení fungování samotného nástroje Analyzér.
 
 V tomto příkladu používám jednoduché \uv{akce}, které robot postupně provádí. Každá akce má 3 hlavní parametry - směr jízdy, kdy se má robot zastavit a co má vykonat, když se zastaví na cílovém místě. Všechny akce je možné ve scriptovacím prostředí rovnou měnit, bez nutnosti přeprogramovávat robota. Všechny ostatní části prostředí Lorris stále fungují, i když robot je právě řízen nastaveným scriptem. Díky tomu lze sledovat stav robota i všech jeho senzorů a rychle zjistit zdroj případného neočekávaného chování.
+\\
+\\
+\noindent\It{Obrázek č. \ref{david_ctrl}, který patří této části textu, najdete v přílohách na straně \pageref{david_ctrl}.}
 
 \newpage
-\enlargethispage{400mm}
-\voffset = -35mm % posun začátku textu výš
-\begin{center}
-\includegraphics[height=750pt]{img/control_david.png}
-\end{center}
-
-
-\newpage
-\voffset = 0mm
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=\textwidth]{img/use_david_robot.jpg}
-\caption{Náš robot \It{David} skončil na 4. místě z 11 v celostátním kole soutěže Eurobot 2011}
-\end{center}
-\end{figure}
-
 \section{Podpora joysticku}
 Lorris podporuje použití joysticku v modulu analyzér například k řízení robota. Nejdříve jsem k přístupu k joysticku používal knihovnu SDL\cite{sdl}, která však pro moje použití nebyla příliš vhodná -- její předpokládané použijí je v počítačových hrách, a podpora joysticku je jen jedna z mnoha částí které knihovna obsahuje. Její architektura se také nehodila ke zbytku Lorris.
 
@@ -1052,6 +1021,13 @@ Aplikace je nadále vyvíjena, mohu prakticky donekonečna přídávat buďto da
 \end{figure}
 
 Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu rád vytvořil podobný program (hlavně vlastnosti modulu Analyzér) pro přenosná zařízení (chytrý mobilní telefon či tablet), protože pro tato zařízení žádná taková aplikace v současné době neexistuje a chtěl bych vyzkoušet programování pro tyto platformy (zejména pro Google Android\cite{android}).
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1787,6 +1763,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.robotickyden.cz/2012/}\\
     (Stav ke dni 25.2.2013)
 
+    \bibitem{robotday_res} \It{Robotický den 2012} -- výsledky soutěže Line Follower standard\\
+    \url{http://www.robotickyden.cz/2012/results/lfs.php}\\
+    (Stav ke dni 28.2.2013)
+
     \bibitem{eurobot} \It{Eurobot} \\
     \url{http://www.eurobot.org/}\\
     (Stav ke dni 25.2.2013)
@@ -1882,10 +1862,52 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
 \end{thebibliography}
 
 \newpage
-\section*{PŘÍLOHA E:}
+\pagestyle{empty}
+\textheight=\paperheight
+\textwidth=\paperwidth
+\voffset=-130pt
+\begin{landscape}
+
+\begin{center}
+\section*{PŘÍLOHA E: Velké obrázky}
+\addcontentsline{toc}{section}{PŘÍLOHA E: Velké obrázky}
+\end{center}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{img/enc_full.png}
+\caption{Data z enkodéru zpracovaná analyzérem}
+\label{analyzer_all}
+\end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=750pt]{img/control_david.png}
+\caption{Programování chování robota v modulu \It{Analyzér}}
+\label{david_ctrl}
+\end{center}
+\end{figure}
+\end{landscape}
+
+\pagestyle{plain}
+\textheight=592pt
+\textwidth=392pt
+\newpage
+\voffset = 0mm
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/use_david_robot.jpg}
+\caption{Náš robot \It{David} skončil na 4. místě z 11 v celostátním kole soutěže Eurobot 2011}
+\label{david}
+\end{center}
+\end{figure}
+
+
+\newpage
+\section*{PŘÍLOHA F:}
 \listoffigures   % seznam obrázkù 
-\addcontentsline{toc}{section}{PŘÍLOHA E: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
-
-
+\addcontentsline{toc}{section}{PŘÍLOHA F: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
 \end{document}
