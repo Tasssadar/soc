@@ -212,7 +212,7 @@
 \hspace{10mm} \= \hspace{30mm}  \=   \kill % nastavení zarážek 
   \> \B{Autor:}  \> \B{Vojtěch Boček}        \\[8mm] 
   \> \B{Škola:}   \> \B{SPŠ a~VOŠ technická, }     \\
-  \>              \> \B{Sokolská 1 602 00 Brno}    \\[8mm]
+  \>              \> \B{Sokolská 1, 602 00 Brno}    \\[8mm]
 
   \> \B{Konzultant:} \> \B {Jakub Streit} 
 \end{tabbing}
@@ -274,7 +274,7 @@ Pro získání ucelenější představy o tom co vše lze pomocí sady Lorris do
 
 %Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
 
-Hlavním přínosem tohoto softwarového balíku je, že výrazně urychluje, zpřehledňuje a hlavně výrazně zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
+Hlavním přínosem tohoto softwarového balíku je, že urychluje, zpřehledňuje a hlavně výrazně zjednodušuje vývoj a testování aplikací pro mikročipy, typicky programování a řízení různých druhů robotů.
 
 \D \B{Klíčová slova:} analýza binárních dat, programování a řízení robotů, vývoj pro mikrokontroléry, programování mikročipů
 
@@ -286,7 +286,7 @@ Because Lorris isn't a simple application nor is it a toolbox focused on one nar
 
 To get better notion of what can one achieve with Lorris, please refer to introductory chapter of this work (English version of this text is available on enclosed CD as PDF file).
 
-Main asset of this software package is the ability to speed-up and simplify developement and testing of various applications for microcontrollers, typically programming and controlling various kinds of robots.
+Main asset of this software package is the ability to significantly speed-up and simplify developement and testing of various applications for microcontrollers, typically programming and controlling various kinds of robots.
 
 \D \B{Key words:} binary data analysis, programming and control of robots, developement for microcontrollers, programming of microchips
 
@@ -316,15 +316,15 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
 \subsection*{Modul: analyzér}
 \addcontentsline{toc}{subsection}{Modul: analyzér}
 \begin{itemize} 
-    \item Soustřeďuje se na zobrazování dat z robota v grafické podobě.
+    \item Soustřeďuje se na zobrazování dat ze zařízení v grafické podobě.
     \item Analyzér pro zobrazování používá tzv. widgety -- malá \uv{okna}, která zobrazují určitou část dat.
     \item Widgety mají individuální nastavení a uživatel si je může umístit na libovolné místo na pracovní ploše.
     \item Lorris obsahuje několik typů widgetů, například \It{Číslo, Barva, Sloupcový bar, Kolo} (zobrazení úhlu v kružnici) či \It{Graf}.
-    \item Pomocí widgetů lze sestavit rozhraní vyhovující prakticky jakémukoliv robotovi.
+    \item Pomocí widgetů lze sestavit rozhraní vyhovující prakticky jakémukoliv zařízení.
     \item Analyzér je ideální i pro snadné zobrazování dat z prvků, u kterých není vhodné jako výstup použít čísla -- například barevný senzor.
-    \item Některé widgety mohou posílat data i směrem do robota. Díky tomu je možné kromě zobrazování dat jejich prostřednictvím robota i ovládat.
+    \item Některé widgety mohou posílat data i směrem do zařízení. Díky tomu je možné kromě zobrazování dat jejich prostřednictvím zařízení i ovládat.
     \item Pozornost si zaslouží widget \uv{script}. Uživatel v něm může napsat vlastní script, který zpracovává příchozí data. Script může využít ostatní widgety a další části Lorris, díky tomu lze zobrazit i jinými způsoby interpretovat takřka jakákoliv data.
-    \item Pomocí scriptu lze upravovat i samotný program Lorris.
+    \item Pomocí scriptu lze upravovat i samotnou sadu Lorris.
 \end{itemize}
 
 \subsection*{Modul: programátor}
@@ -346,17 +346,23 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
 \addcontentsline{toc}{subsection}{Modul: proxy mezi sériovým portem a TCP socketem}
 \begin{itemize}
     \item Vytvoří server připojený na sériový port - k tomuto portu se pak lze připojit odkudkoliv z internetu.
+    \item Umonžňuje vzdáleně ladit, řídit, či jinak komunikovat se zařízením pomocí sítě Internet.
 \end{itemize}
+~
+\vspace{7mm}
 
-\subsection*{Anglická verze a poster}
-\addcontentsline{toc}{subsection}{Anglická verze a poster}
-Anglická verze tohoto textu a propagační poster jsou dostupné na přiloženém CD ve formátu PDF.\\
+\noindent Anglická verze tohoto textu a propagační poster jsou dostupné na přiloženém CD ve formátu PDF.\\
 \\
 \noindent\It{Enclosed CD contains English version of this work and promotional poster as PDF files.}
 
 \section{Motivace}
+\label{motivace}
 Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových dálkoměrů, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
+
+V zájmu zjednodušení a zrychlení vývoje robota jsem se rozhodl najít nějákou aplikaci, která by přehledně zobrazovala data z robota. Seznam požadavků, které jsem na tuto aplikaci stanovil, je sepsaný v kapitole \ref{reqs}.
+
 \subsection{Požadavky na aplikaci}
+\label{reqs}
 %\addcontentsline{toc}{subsection}{Požadavky na aplikaci}
 Od programu vyžaduji tyto vlastnosti:
 \begin{enumerate}
@@ -399,7 +405,7 @@ Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Čí
 
 \vspace{5mm}
 
-Z těchto důvodů jsem se rozhodl napsat vlastní aplikaci, která bude všechny výše uvedené požadavky splňovat.
+Žádný z dostupných programů nesplňuje všechny požadavky, proto jsem se rozhodl napsat vlastní aplikaci, která bude obsahovat všechny stanovené vlastnosti. 
 
 \section{Popis rozhraní}
 Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v C++ a využívá Qt Framework\cite{qtfrm}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více operačních systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a Windows 7.
@@ -722,7 +728,7 @@ Widget status je určený k zobrazování stavu například tlačítka (stisknut
 \caption{Widget terminál}
 \end{center}
 \end{figure}
-Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It{script} ve kterém je přednastavený kód díky kterému se tento widget chová stejně jako terminál. Uživatel může script tohoto widgetu libovolně upravovat.
+Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o widget \It{script} ve kterém je přednastavený kód díky kterému se widget chová stejně jako terminál. Uživatel může script tohoto widgetu libovolně upravovat.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
@@ -773,6 +779,15 @@ Modul programátor v mojí práci slouží jako oficiální rozhraní pro Shupit
 \label{tunel}
 Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čipu a počítače přes programátor.} pro UART linku z programovaného čipu do počítače. Lorris umí této funkce využít -- aktivní tunel se zobrazí jako další typ připojení a je možné se na něj připojit v ostatních modulech.
 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/shupito_promo.jpg}
+\caption{Programátor \It{Shupito}}
+\label{prog_mini}
+\end{center}
+\end{figure}
+
 \subsection{Bootloader avr232boot}
 Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v čipu co nejméně místa. Původně uměl pouze programovat flash paměť čipu (ta, ve které je uložen program), já jsem do něj přidal podporu čtení a zapisování paměti EEPROM\footnote{Typ paměti, která udrží data i bez proudu. V čipech se používá na uložení např. nastavení}.
 
@@ -791,9 +806,23 @@ Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a 
 \label{Terminal}
 \end{center}
 \end{figure}
-Základní pomůcka při práci s mikrokontroléry, klasický terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
+Základní pomůcka při práci s mikrokontroléry, běžný textový -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
 
 Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká sekvence kontrolních znaků se má odeslat při stisknutí klávesy enter a chování některých kontrolních znaků (například jestli má znak \verb|\n| vytvořit nový řádek nebo ne).
+
+\newpage
+\section{Podpora joysticku}
+Lorris podporuje použití joysticku v modulu analyzér například k řízení robota. Nejdříve jsem k přístupu k joysticku používal knihovnu SDL\cite{sdl}, ta však pro moje použití nebyla příliš vhodná -- tuto knihovnu autoři vytvořili jako základ pro tvorbu počítačových her a podpora joysticku je tedy jen jedna z mnoha částí, které knihovna obsahuje. Její architektura se také nehodila ke zbytku Lorris.
+
+Při hledání náhrady jsem ale nenašel žádnou vhodnou knihovnu, jejíž funkce by byla pouze přistupování k joysticku a neměla žádné zbytečné funkce které bych v Lorris nepoužil, a tak jsem si napsal vlastní knihovnu.
+
+Jmenuje se {\bf libenjoy}, funguje pod Windows a Linuxem a je velmi malá a jednoduchá. Oproti SDL si dokáže zapamatovat připojené joysticky, a když joystick odpojíte a zase ho připojíte zpět (například kvůli přeskládání kabelů u počítače nebo se joystick odpojí sám kvůli špatnému kontaktu), není třeba ho znovu vybírat jako aktivní, sám se připojí bez jakékoliv interakce uživatele.
+
+Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
+
+\begin{itemize}
+\item GIT repozitář: \url{https://github.com/Tasssadar/libenjoy}
+\end{itemize}
 
 \newpage
 \section{Příklady použití}
@@ -852,7 +881,7 @@ Dva widgety \It{číslo} jsou zde použity k zobrazení aktuální rychlosti a z
 \caption{Stav enkodéru}
 \end{center}
 \end{figure}
-Čip enkodéru také informuje o svém stavu, pokud je vše v pořádku vrací číslo \verb|0x0|, pokud narazí-li na nějáký problém vrátí některý z chybových kódů (například \verb|0x8| při nepřítomnosti magnetu v ose kola). Widget \It{status} ukazuje chybový kód a barvu podle informací z enkodéru.
+Čip enkodéru také informuje o svém stavu, pokud je vše v pořádku vrací číslo \verb|0x0|, narazí-li na nějáký problém, vrátí některý z chybových kódů (například \verb|0x8| při nepřítomnosti magnetu v ose kola). Widget \It{status} ukazuje chybový kód a barvu podle informací z enkodéru.
 
 \begin{figure}[H]
 \begin{center}
@@ -899,6 +928,8 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 \subsection{Stavba robota pro soutěž Eurobot 2011}
 Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot} (fotku robota najdete v přílohách na straně \pageref{david}, obrázek č. \ref{david}).
 
+Ačkoliv je robot již 2 roky starý a celá sada Lorris se od té doby značně posunula vpřed, robot \It{David} představuje velmi dobrý příklad využití velké části funkcí celého balíku nástrojů.
+
 Cíl soutěže je každý rok jiný, v roce 2011 měli roboti za úkol hrát něco jako zjednodušené šachy. Herní hřiště bylo rozděleno na barevnou šachovnici a leželi na něm \uv{pěšci} (žluté disky), které měli roboti posouvat na políčka svojí barvy, případně z nich stavět věže. Vyhrával robot s největším počtem bodů, které získával za pěšce na polích svojí barvy a postavené věže. Roboti navíc musí mít vyřešenou detekci soupeře, aby do sebe nenaráželi (např. pomocí ultrazvukových dálkoměrů). Kompletní pravidla, výsledková listina a další informace jsou na webu ročníku 2011\cite{eurobot11}.
 
 Právě při vývoji tohoto robota vyvstala palčivá potřeba mít k dispozici nástroj, který by umožňoval ve všech fázích jeho vývoje snadné a rychlé testování a ladění všech funkcí a komponent robota. Vzhledem k tomu, že nejviditelnější částí programu Lorris je nástroj Analyzér, je v této ukázce prezentováno především jeho použití, ostatní nástroje (Programátor, Terminál) však byly také použity, například při programování mikročipu v robotovi.
@@ -934,20 +965,6 @@ V tomto příkladu používám jednoduché \uv{akce}, které robot postupně pro
 \noindent\It{Obrázek č. \ref{david_ctrl}, který patří této části textu, najdete v přílohách na straně \pageref{david_ctrl}.}
 
 \newpage
-\section{Podpora joysticku}
-Lorris podporuje použití joysticku v modulu analyzér například k řízení robota. Nejdříve jsem k přístupu k joysticku používal knihovnu SDL\cite{sdl}, která však pro moje použití nebyla příliš vhodná -- její předpokládané použijí je v počítačových hrách, a podpora joysticku je jen jedna z mnoha částí které knihovna obsahuje. Její architektura se také nehodila ke zbytku Lorris.
-
-Při hledání náhrady jsem ale nenašel žádnou vhodnou knihovnu, jejíž funkce by byla pouze přistupování k joysticku a neměla žádné zbytečné funkce které bych v Lorris nepoužil, a tak jsem si napsal vlastní knihovnu.
-
-Jmenuje se {\bf libenjoy}, funguje pod Windows a Linuxem a je velmi malá a jednoduchá. Oproti SDL si dokáže zapamatovat připojené joysticky, a když joystick odpojíte a zase ho připojíte zpět (například kvůli přeskládání kabelů u počítače nebo se joystick odpojí sám kvůli špatnému kontaktu), tak není třeba ho znovu vybírat jako aktivní -- sám se připojí bez jakékoliv interakce uživatele.
-
-Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
-
-\begin{itemize}
-\item GIT repozitář: \url{https://github.com/Tasssadar/libenjoy}
-\end{itemize}
-
-\newpage
 \section{Aplikace pro Android}
 \begin{figure}[H]
 \begin{center}
@@ -955,7 +972,9 @@ Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
 \caption{Lorris mobile}
 \end{center}
 \end{figure}
-Aplikace {\bf Lorris mobile} pro operační systém Google Android$^{tm}$ slouží jako přenosný doplněk k počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce dekstopové aplikace ale má pomoci zejména když je v terénu potřeba rychle něco přenastavit či poupravit.
+Jako další vývojový stupeň jsem začal s vývojem Lorris pro platformu Google Android\cite{android}, protože chytrá zařízení s tímto operačním systémem jsou často při ruce a stačí k rychlému vyřešení menšího problému.
+
+Aplikace {\bf Lorris mobile} slouží jako přenosný doplněk k počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce desktopové aplikace ale má pomoci zejména když je v terénu potřeba rychle něco přenastavit či poupravit.
 
 Aplikace funguje na telefonech a tabletech s OS Android ve verzi 2.2 a vyšší, je optimalizována i pro větší obrazovky tabletů a je dostupná v oficiálním distribučním kanále Android aplikací -- v obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
 
@@ -993,13 +1012,13 @@ Tato část Lorris mobile používá části nativního kódu z desktopové verz
 \caption{Lorris mobile - terminál}
 \end{center}
 \end{figure}
-Klasický terminál. Umí většinu funkcí terminálu v desktopové verzi Lorris -- zobrazuje data (jako text nebo hexadecimální hodnoty bajtů), odesílá stisky kláves, lze nastavit velikost a barva textu, barvu pozadí a jaké kontrolní znaky se mají odeslat při stisknutí klávesy enter. 
+Tento modul představuje běžný textový terminál. Umí většinu funkcí terminálu v desktopové verzi Lorris -- zobrazuje data (jako text nebo hexadecimální hodnoty bajtů), odesílá stisky kláves, lze nastavit velikost a barva textu, barvu pozadí a jaké kontrolní znaky se mají odeslat při stisknutí klávesy enter. 
 
 \newpage
 \section*{Závěr}
 \addcontentsline{toc}{section}{Závěr}
-Vytvořená aplikace splňuje všechny stanovené požadavky:
-\begin{enumerate}[label=\Has\hspace{1.5mm}\arabic{*}.]
+Po několikaletém vývoji mohu konstatovat že aplikace splňuje všechny požadavky požadavky stanovené v kapitole \ref{motivace}:
+\begin{enumerate}[label=\Has\hspace{1.5mm}\arabic{*}.] 
     \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat% 1
     \item Podpora co nejvíce formátů příchozích dat% 2
     \item Snadné a rychlé používání % 3
@@ -1008,11 +1027,13 @@ Vytvořená aplikace splňuje všechny stanovené požadavky:
     \item Snadná rozšířitelnost (ideálně otevřený zdrojový kód) % 6
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
-Program navíc výrazně přesáhl původní cíle -- mimo zobrazování dat dokáže posílat data i zpět do zařízení, programovat mikročipy a vytvořit proxy mezi sériovým portem a TCP socketem. Ve srovnání s~nalezenými programy s~podobným zaměřením (viz úvod) je také jediný, který umožňuje uživateli napsat vlastní script pro parsování dat.
+Program navíc výrazně přesáhl původní cíle -- kromě zobrazování dat dokáže posílat data i zpět do zařízení, programovat mikročipy a vytvořit proxy mezi sériovým portem a TCP socketem. Ve srovnání s~nalezenými programy s~podobným zaměřením (viz úvod) je také jediný, který umožňuje uživateli napsat vlastní script pro parsování dat.
 
-Přestože se jedná o zcela nový software, byl již použit při testování barevného senzoru, ladění PID regulátoru pro robota na sledování čáry a je používán pro ovládání programátoru Shupito. Další možnosti použití jsou uvedeny v kapitole 6.
+Lorris již má za sebou řadu ostrých nasazení a také rozšiřující se okruh věrných uživatelů, jak je podrobněji popsáno v kapitole \ref{usage}.
 
-Aplikace je nadále vyvíjena, mohu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříž, ...) nebo celé nové moduly (například ovládání robota pomocí joysticku). Program má v současné době (19.4.2012) asi 15 a půl tisíce řádků kódu (bez knihoven třetích stran). Zdrojové kódy a instruktážní video jsou přiloženy na CD. 
+Aplikace je nadále vyvíjena, mohu prakticky donekonečna přídávat buďto další typy widgetů do modulu Analyzér (například kompas, směrový kříž, ...) nebo celé nové moduly (například rozhraní pro novou levnou logickou sondu, kterou vyvíjí Martin Vejnár). Program má v současné době (4.3.2013) asi 32 tisíc řádků kódu (bez knihoven třetích stran).
+
+Přiložené CD obsahuje zdrojový kód, instruktážní video, propagační poster a anglickou verzi textu.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{img/cloc_edit.png}
@@ -1020,10 +1041,33 @@ Aplikace je nadále vyvíjena, mohu prakticky donekonečna přídávat buďto da
 \end{center}
 \end{figure}
 
-Kromě přidávání dalších vlastností do tohoto programu bych v budoucnu rád vytvořil podobný program (hlavně vlastnosti modulu Analyzér) pro přenosná zařízení (chytrý mobilní telefon či tablet), protože pro tato zařízení žádná taková aplikace v současné době neexistuje a chtěl bych vyzkoušet programování pro tyto platformy (zejména pro Google Android\cite{android}).
+
+V budoucnu bych rád pokračoval v přidávání dalších funkcí do počítačové i mobilní verze Lorris a případně také v rozšiřování povědomí o celém balíku.
 
 
+\subsection*{Reálné nasazení}
+\label{usage}
+%Já používám Lorris kdykoliv potřebuji naprogramovat, přenastavit či jinak
+Prvními uživateli sady Lorris se stali od samého začátku vývoje před několika lety členové některých technicky zaměřených kroužků na DDM Junior\cite{junior} v Brně. Lorris zde pomáhá při stavbě různých zařízení, zejména robotů, a žáci, kteří se učí programovat mikrokontroléry, používají programátor \It{Shupito} a tím pádem i modul Programátor z balíku Lorris. V průběhu výuky programování mikrokontrolérů pomáhá také modul Terminál (jednoduchá komunikace s čipem) a později i Analyzér (pokročilé zpracovávání dat z čipu).
 
+Lorris je pro použití v DDM Junior vhodná také díky nulové pořizovací ceně -- větší firma, zabývající se vývojem aplikací pro mikrokontroléry, by pravděpodobně pořídila drahý komerční program s podobnými funkcemi jako má Lorris nebo vyvinula vlastní jednoúčelové aplikace. Pro příspěvkové organizace typu DDM je však řešení používané velkými firmami poněkud nedostupné.
+
+K dnešnímu dni má Lorris přibližně 20 uživatelů jen z řad DDM Junior. Díky postupnému rozšiřování programátoru \It{Shupito} mezi uživatele po celé ČR se ale okruh uživatelů Lorris utěšeně rozrůstá.
+
+\vspace{10mm}
+
+\noindent Já Lorris používám kdykoliv pracuji s roboty a mikrokontroléry -- pro zobrazování dat, programování mikročipů či ovládání celých zařízení. Následující seznam představuje pouze několik významnějších aplikací, pro které již byla sada Lorris použita ostatními uživateli:
+\begin{itemize}
+    \item Vývoj několika robotů pro soutěže letošního Robotického dne\cite{rob_den_new}
+    \item Programování velkého počtu typů mikročipů, ať už pomocí programátoru \It{Shupito} nebo pomocí bootloaderů
+    \item Vývoj samotného programátoru \It{Shupito}
+    \item Já používám desktopovou Lorris ke generování testovacích dat pro mobilní verzi Lorris
+    \item Vývoj levné logické sondy
+    \item Ladění čipů pro ovládání třífazového motoru (tzv. \It{driver})
+    \item Vývoj systému pro řízení až 128 RGB diod pro osvětlení modelu letadla
+    \item Stavba a programování digitální vysílačky používající ARM procesor (semestrální práce)
+    \item Vývoj robota pro sledování čáry (maturitní práce)
+\end{itemize}
 
 
 
@@ -1755,6 +1799,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://qt-project.org/doc/qt-4.8/scripting.html}\\
     (Stav ke dni 25.2.2013)
 
+    \bibitem{sdl} \It{SDL} -- Simple Directmedia Layer \\
+    \url{http://www.libsdl.org/}\\
+    (Stav ke dni 13.2.2013)
+
     \bibitem{3pi} \It{Pololu 3pi Robot} \\
     \url{http://www.pololu.com/catalog/product/975}\\
     (Stav ke dni 25.2.2013)
@@ -1775,13 +1823,13 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.eurobot.cz/eurobot2011.php}\\
     (Stav ke dni 25.2.2013)
 
-    \bibitem{sdl} \It{SDL} -- Simple Directmedia Layer \\
-    \url{http://www.libsdl.org/}\\
-    (Stav ke dni 13.2.2013)
+    \bibitem{junior} \It{DDM Junior, Dornych 2, Brno, 656 20}\\
+    \url{http://www.junior.cz}\\
+    (Stav ke dni 4.3.2013)
 
-    \bibitem{cloc} \It{CLOC} -- Count Lines of Code \\
-    \url{http://cloc.sourceforge.net/}\\
-    (Stav ke dni 25.2.2013)
+    \bibitem{rob_den_new} \It{Robotický den} \\
+    \url{http://www.robotickyden.cz/}\\
+    (Stav ke dni 4.3.2013)
 
     \bibitem{android} \It{Google Android} -- Operační systém pro chytré telefony\\
     \url{http://www.android.com/}\\
@@ -1790,6 +1838,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \bibitem{gplay} \It{Google Play Store} -- Obchod s aplikacemi pro OS Android\\
     \url{http://play.google.com/store}\\
     (Stav ke dni 14.2.2013)
+
+    \bibitem{cloc} \It{CLOC} -- Count Lines of Code \\
+    \url{http://cloc.sourceforge.net/}\\
+    (Stav ke dni 25.2.2013)
 
     \bibitem{qwt} \It{Qwt} -- Qt Widgets for Technical Applications \\
     \url{http://qwt.sourceforge.net/}\\
@@ -1907,7 +1959,8 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
 
 \newpage
 \section*{PŘÍLOHA F:}
+~
+\addcontentsline{toc}{section}{PŘÍLOHA F: Seznam obrázků}
 \listoffigures   % seznam obrázkù 
-\addcontentsline{toc}{section}{PŘÍLOHA F: Seznam obrázků} % pøidá seznam obrázkù do obsahu 
 
 \end{document}
