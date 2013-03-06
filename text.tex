@@ -375,6 +375,7 @@ Od programu vyžaduji tyto vlastnosti:
     \item Nezávislost na další aplikaci (např. MS Office Excel) % 7
 \end{enumerate}
 
+\newpage
 \subsection{Existující programy}
 %\addcontentsline{toc}{subsection}{Existující programy}
 Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového portu a jejich zobrazování), jsem našel pouze několik. K dispozici jsou buď komerční aplikace, které stojí poměrně velké množství peněz (a přesto nesplňují všechny požadavky), anebo aplikace, které dokáží zobrazovat data pouze v jednom formátu -- typicky graf.
@@ -384,9 +385,10 @@ Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového p
     \item {\bf WinWedge}\cite{winwedge} je komerční program který dokáže zpracovávat data přicházející sériovým portem a zobrazovat je jako graf v MS Excel nebo ve webové stránce. Dokáže také posílat příkazy zpět do zařízení, má však horší ovládání a užší možnosti použití (hlavně kvůli nutnosti použít další program pro zobrazování). Je dostupný pouze pro MS~Windows a základní verze stojí \$ 259.
     \item {\bf Advanced Serial Data Logger}\cite{serialdatalogger} je zaměřený primárně na export dat ze sériové linky do souboru, data dokáže zobrazovat pouze přeposláním do jiné aplikace (např. MS Office Excel), podobně jako WinWedge.
     \item {\bf StampPlot Pro}\cite{stamplot} dokáže zobrazovat příchozí data ve widgetech zvolených uživatelem, má však komplikované ovládání, nemá otevřený zdrojový kód, je dostupný pouze pro MS Windows a pod verzí 7 nefunguje.
+    \item {\bf LabVIEW}\cite{labview} je obrovský softwarový balík s dlouho historií, který lze použít k velké škále operací -- různá laboratorní měření, analýzu signálů, ovládání robotů, ovládání celých systémů pro laboratorní měření a mnoho dalšího. LabVIEW je ale uzavřený software a díky svému zaměření je velmi drahý, ceny základní verze začínají asi na 20 000 kč.
 \end{itemize}
 
-
+\newpage
 \subsection{Porovnání aplikací}
 %\addcontentsline{toc}{subsection}{Porovnání aplikací}
 Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v kapitole \uv{Požadavky na aplikaci}.
@@ -400,6 +402,7 @@ Následující tabulka shrnuje funkce a vlastnosti jednotlivých programů. Čí
     WinWedge                    & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
     Advanced Serial Data Logger & \NoHas & \Has   & \Has   & \NoHas & \NoHas & \NoHas & \NoHas \\ \hline 
     StampPlot Pro               & \Has   & \Has   & \NoHas & \NoHas & \Has   & \NoHas & \Has   \\ \hline 
+    LabVIEW                     & \Has   & \Has   & \NoHas & \Has   & \NoHas & \NoHas & \Has   \\ \hline
 %    Lorris                      & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   \\ \hline 
 \end{tabular}
 
@@ -450,6 +453,10 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{center}
 \end{figure}
 
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+\setlength{\voffset}{-20mm}
+\addtolength{\textheight}{20mm}
+\newpage
 \subsection{Sezení}
 Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a tímto se vrátit k předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu jako když aplikaci opouštěl.
 
@@ -464,11 +471,13 @@ Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zd
 V případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a spustí se malý pomocný program, který stáhne novou verzi a nainstaluje ji. Zobrazuje při tom seznam změn oproti staré verzi.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{img/updater.png}
+\includegraphics[scale=0.65]{img/updater.png}
 \caption{Probíhající aktualizace}
 \end{center}
 \end{figure}
 
+\setlength{\voffset}{0mm}
+\addtolength{\textheight}{-20mm}
 \newpage
 \section{Modul: Analyzér}
 
@@ -524,6 +533,7 @@ U některých widgetů se může hodit následující funkce: widgety je možné
 \end{center}
 \end{figure}
 
+\newpage
 \subsection{Filtrování dat}
 Analyzér umí příchozí data filtrovat, přičemž každý filtr může obsahovat několik podmínek podle kterých se určí, zda příchozí packet projde nebo ne.
 \begin{figure}[H]
@@ -546,7 +556,7 @@ function dataPass(data, dev, cmd) {
 
 % TODO: newpage
 \subsection{Widget: číslo}
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_num.png}
 \caption{Widget: číslo}
@@ -595,7 +605,7 @@ Tento widget dokáže zobrazit příchozí hodnoty jako barevný obdélník. Pod
 Widget také dokáže provést korekci jasu všech barev zaráz nebo každé z barev RGB zvlášť.
 
 \subsection{Widget: graf}
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.65]{img/w_graph.png}
 \caption{Widget: graf}
@@ -794,7 +804,7 @@ Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čip
 Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a programovat EEPROM.
 
 \subsection{Bootloader AVROSP}
-\It{AVR Open Source Programmer} je protokol používaný několika bootloadery firmy Atmel pro čipy ATmega a ATxmega. Lorris dokáže pomocí toho bootloaderu programovat a číst flash i EEPROM paměť čipu.
+\It{AVR Open Source Programmer} je protokol používaný poměrně velkým množstvím bootloaderů, například referenčními bootloadery firmy Atmel pro čipy ATmega a ATxmega a rozšířitelným a modulárním bootloaderem XBoot\cite{xboot}. Lorris dokáže pomocí tohoto protokolu programovat a číst flash i EEPROM paměť čipu.
 
 
 \newpage
@@ -806,7 +816,7 @@ Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a číst a 
 \label{Terminal}
 \end{center}
 \end{figure}
-Základní pomůcka při práci s mikrokontroléry, běžný textový -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
+Základní pomůcka při práci s mikrokontroléry, běžný textový terminál -- zobrazuje data přijatá přes sériový port a posílá stisky kláves. Kromě klasického textového módu dokáže příchozí data zobrazovat jako hexadecimální hodnoty všech příchozích bajtů.
 
 Terminálu je možné nastavit barevné schéma, velikost a font textu, jaká sekvence kontrolních znaků se má odeslat při stisknutí klávesy enter a chování některých kontrolních znaků (například jestli má znak \verb|\n| vytvořit nový řádek nebo ne).
 
@@ -1783,6 +1793,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.selmaware.com/stampplot/index.htm}\\
     (Stav ke dni 25.2.2013)
 
+    \bibitem{labview} \It{LabVIEW} -- Laboratory Virtual Instrumentation Engineering Workbench \\
+    \url{http://sine.ni.com/np/app/main/p/docid/nav-104/lang/cs/}\\
+    (Stav ke dni 6.3.2013)
+
     \bibitem{qtfrm} \It{Qt} -- Cross--platform application and UI framework \\
     \url{http://qt-project.org/}\\
     (Stav ke dni 25.2.2013)
@@ -1798,6 +1812,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \bibitem{qtscript} \It{Making Applications Scriptable} \\
     \url{http://qt-project.org/doc/qt-4.8/scripting.html}\\
     (Stav ke dni 25.2.2013)
+
+    \bibitem{xboot} \It{XBoot} -- Extensible bootloader for ATMEL XMEGA microcontrollers \\
+    \url{http://code.google.com/p/avr-xboot/}\\
+    (Stav ke dni 6.3.2013)
 
     \bibitem{sdl} \It{SDL} -- Simple Directmedia Layer \\
     \url{http://www.libsdl.org/}\\
@@ -1823,10 +1841,6 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \url{http://www.eurobot.cz/eurobot2011.php}\\
     (Stav ke dni 25.2.2013)
 
-    \bibitem{junior} \It{DDM Junior, Dornych 2, Brno, 656 20}\\
-    \url{http://www.junior.cz}\\
-    (Stav ke dni 4.3.2013)
-
     \bibitem{rob_den_new} \It{Robotický den} \\
     \url{http://www.robotickyden.cz/}\\
     (Stav ke dni 4.3.2013)
@@ -1842,6 +1856,10 @@ Všechny tyto licence umožňují svobodné používání a šíření kódu.
     \bibitem{cloc} \It{CLOC} -- Count Lines of Code \\
     \url{http://cloc.sourceforge.net/}\\
     (Stav ke dni 25.2.2013)
+
+    \bibitem{junior} \It{DDM Junior, Dornych 2, Brno, 656 20}\\
+    \url{http://www.junior.cz}\\
+    (Stav ke dni 4.3.2013)
 
     \bibitem{qwt} \It{Qwt} -- Qt Widgets for Technical Applications \\
     \url{http://qwt.sourceforge.net/}\\
