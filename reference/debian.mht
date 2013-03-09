@@ -1,12 +1,12 @@
-Content-Type: multipart/related; start=<op.mhtml.1331063169099.a4319d7154353ca0@169.254.9.172>; boundary=----------nq6mZ3k6vZtPPFJKKqDEYH
+Content-Type: multipart/related; start=<op.mhtml.1361794589828.e07d6d715435b32c@172.16.1.116>; boundary=----------lDtVZPpG4tQyOsCFtOA8xT
 Content-Location: http://www.debian.org/
 Subject: =?utf-8?Q?Debian=20--=20Univerz=C3=A1ln=C3=AD=20opera=C4=8Dn=C3=AD=20syst=C3=A9m?=
 MIME-Version: 1.0
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=index.cs.html
 Content-Type: text/html; charset=utf-8; name=index.cs.html
-Content-ID: <op.mhtml.1331063169099.a4319d7154353ca0@169.254.9.172>
+Content-ID: <op.mhtml.1361794589828.e07d6d715435b32c@172.16.1.116>
 Content-Location: http://www.debian.org/
 Content-Transfer-Encoding: 8bit
 
@@ -16,9 +16,9 @@ Content-Transfer-Encoding: 8bit
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Debian -- Univerzální operační systém </title>
   <link rev="made" href="mailto:webmaster@debian.org">
-  <meta name="Description" content="Debian GNU/Linux je svobodná distribuce operačního systému GNU/Linux. Je spravován a udržován za pomoci mnoha dobrovolníků, kteří mu věnují svůj čas a zkušenosti.">
-  <meta name="Generator" content="WML 2.0.11 (19-Aug-2006)">
-  <meta name="Modified" content="2012-03-06 04:41:22">
+  <meta name="Description" content="Debian is an operating system and a distribution of Free Software. It is maintained and updated through the work of many users who volunteer their time and effort.">
+  <meta name="Generator" content="WML 2.0.12 (16-Apr-2008)">
+  <meta name="Modified" content="2013-02-24 23:42:27">
   <meta name="viewport" content="width=device-width">
   <meta name="mobileoptimized" content="300">
   <meta name="HandheldFriendly" content="true">
@@ -34,6 +34,7 @@ Content-Transfer-Encoding: 8bit
   <link href="./debian-cs.css" rel="stylesheet" type="text/css" media="all">
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="Keywords" content="debian, GNU, linux, unix, open source, svobodný, DFSG">
+<link rel="search" type="application/opensearchdescription+xml" title="Debian website search" href="./search.cs.xml">
 </head>
 <body>
 <div id="header">
@@ -65,20 +66,18 @@ Content-Transfer-Encoding: 8bit
 </div> <!-- end header -->
 <!--/UdmComment-->
 <div id="content">
-<span class="download"><a href="http://cdimage.debian.org/debian-cd/6.0.4/multi-arch/iso-cd/debian-6.0.4-amd64-i386-netinst.iso">Stáhnout Debian 6.0<em>(síťový instalátor pro 32/64bitové PC)</em></a> </span>
+<span class="download"><a href="http://cdimage.debian.org/debian-cd/6.0.7/multi-arch/iso-cd/debian-6.0.7-amd64-i386-netinst.iso">Stáhnout Debian 6.0<em>(síťový instalátor pro 32/64bitové PC)</em></a> </span>
 <div id="splash">
-	<h1>Debian GNU/Linux</h1>
+	<h1>Debian</h1>
 </div>
 <div id="intro">
 <p><a href="http://www.debian.org/">Debian</a>
 je <a href="intro/free">svobodný</a> operační systém (OS) pro váš počítač.
 Operační systém se skládá ze základního
 programového vybavení a&nbsp;dalších nástrojů, kterých je k&nbsp;provozu
-počítače třeba. Vlastním základem OS je jádro. Jelikož Debian používá jádro
-<a href="http://www.kernel.org/">Linux</a> a&nbsp;většina základních systémových
-programů byla vytvořena v&nbsp;rámci <a href="http://www.gnu.org/">projektu GNU</a>,
-nese systém označení GNU/Linux.</p>
-<p>Debian GNU/Linux je však více než jen samotný operační systém. Obsahuje přes
+počítače třeba. Vlastním základem OS je jádro.
+</p>
+<p>Debian je však více než jen samotný operační systém. Obsahuje přes
 29000 <a href="distrib/packages">balíčků</a>
 s&nbsp;(předkompilovanými) programy a&nbsp;dokumentací, připravených
 pro snadnou instalaci. <a href="intro/about">Podrobnosti...</a></p>
@@ -100,9 +99,9 @@ pro snadnou instalaci. <a href="intro/about">Podrobnosti...</a></p>
 <ul id="hometoc-colb">
   <li><a href="distrib/">Jak&nbsp;získat&nbsp;Debian</a>
     <ul>
-      <li><a href="./CD/vendors/">Prodejci CD</a></li>
-      <li><a href="./CD/">ISO obrazy CD</a></li>
       <li><a href="distrib/netinst">Síťová instalace</a></li>
+      <li><a href="./CD/">ISO obrazy CD</a></li>
+      <li><a href="./CD/vendors/">Prodejci CD</a></li>
       <li><a href="distrib/pre-installed">Předinstalovaný</a></li>
     </ul>
   </li>
@@ -149,7 +148,7 @@ pro snadnou instalaci. <a href="intro/about">Podrobnosti...</a></p>
 </div> <!-- end hometoc -->
 <p class="infobar"><a href="releases/stable/">Poslední stabilní verze Debianu</a> má číslo
 6.0. Tato verze byla naposledy aktualizována
-28. ledna 2012. Přečtěte si více
+23. února 2013. Přečtěte si více
 o&nbsp;<a href="releases/">dostupných verzích Debianu</a>.</p>
 <h2>Začínáme</h2>
 <ul>
@@ -171,12 +170,12 @@ o&nbsp;<a href="releases/">dostupných verzích Debianu</a>.</p>
 <hr>
 <a class="rss_logo" href="News/news">RSS</a>
 <h2>Aktuality</h2>
-<p><tt>[03.03.2012]</tt> <strong><a href="News/2012/20120304">Make DebConf12 a success: donate or become a sponsor</a></strong><br>
-<tt>[01.03.2012]</tt> <strong><a href="News/2012/20120301">Switzerland to host Debian Conference 2013</a></strong><br>
-<tt>[19.02.2012]</tt> <strong><a href="News/2012/20120219">Debian Position on Software Patents</a></strong><br>
-<tt>[18.02.2012]</tt> <strong><a href="News/2012/20120218">New machine for Debian archive main mirror</a></strong><br>
-<tt>[15.02.2012]</tt> <strong><a href="News/2012/20120215">Upcoming Debian Bug Squashing Parties</a></strong><br>
-<tt>[13.02.2012]</tt> <strong><a href="News/2012/20120213"><q>Wheezy</q> artwork contest: call for proposals</a></strong><br>
+<p><tt>[23.02.2013]</tt> <strong><a href="News/2013/20130223">Updated Debian 6.0: 6.0.7 released</a></strong><br>
+<tt>[19.02.2013]</tt> <strong><a href="News/2013/20130219">Debian Installer 7.0 Release Candidate 1 published</a></strong><br>
+<tt>[10.11.2012]</tt> <strong><a href="News/2012/20121110">Help us to release <q>Wheezy</q>: participate to our BSP marathon</a></strong><br>
+<tt>[29.09.2012]</tt> <strong><a href="News/2012/20120929">Updated Debian 6.0: 6.0.6 released</a></strong><br>
+<tt>[16.08.2012]</tt> <strong><a href="News/2012/20120816">Debian Community celebrates its 19th birthday</a></strong><br>
+<tt>[13.08.2012]</tt> <strong><a href="News/2012/20120813">Organize a Debian Birthday party in your city</a></strong><br>
 </p>
 <p>Starší aktuality naleznete v&nbsp;<a href="./News/">archivu aktualit</a>.
 Pokud chcete být o&nbsp;novinkách ze světa Debianu informováni elektronickou
@@ -185,18 +184,19 @@ poštou, přihlaste se do konference
 <hr>
 <a class="rss_logo" href="security/dsa">RSS</a>
 <h2>Bezpečnostní zprávy</h2>
-<p><tt>[04.03.2012]</tt> <strong><a href="security/2012/dsa-2425">DSA-2425 plib</a></strong> - buffer overflow <br>
-<tt>[04.03.2012]</tt> <strong><a href="security/2012/dsa-2424">DSA-2424 libxml-atom-perl</a></strong> - XML external entity expansion <br>
-<tt>[02.03.2012]</tt> <strong><a href="security/2012/dsa-2423">DSA-2423 movabletype-opensource</a></strong> - several vulnerabilities <br>
-<tt>[29.02.2012]</tt> <strong><a href="security/2012/dsa-2422">DSA-2422 file</a></strong> - missing bounds checks <br>
-<tt>[29.02.2012]</tt> <strong><a href="security/2012/dsa-2421">DSA-2421 moodle</a></strong> - several vulnerabilities <br>
-<tt>[28.02.2012]</tt> <strong><a href="security/2012/dsa-2420">DSA-2420 openjdk-6</a></strong> - several vulnerabilities <br>
-<tt>[27.02.2012]</tt> <strong><a href="security/2012/dsa-2419">DSA-2419 puppet</a></strong> - several vulnerabilities <br>
-<tt>[27.02.2012]</tt> <strong><a href="security/2012/dsa-2418">DSA-2418 postgresql-8.4</a></strong> - several vulnerabilities <br>
-<tt>[25.02.2012]</tt> <strong><a href="security/2012/dsa-2414">DSA-2414 fex</a></strong> - insufficient input sanitization <br>
-<tt>[22.02.2012]</tt> <strong><a href="security/2012/dsa-2417">DSA-2417 libxml2</a></strong> - computational denial of service <br>
-<tt>[22.02.2012]</tt> <strong><a href="security/2012/dsa-2416">DSA-2416 notmuch</a></strong> - information disclosure <br>
-<tt>[21.02.2012]</tt> <strong><a href="security/2012/dsa-2415">DSA-2415 libmodplug</a></strong> - several vulnerabilities <br>
+<p><tt>[24.02.2013]</tt> <strong><a href="security/2013/dsa-2631">DSA-2631 squid3</a></strong> - denial of service <br>
+<tt>[20.02.2013]</tt> <strong><a href="security/2013/dsa-2630">DSA-2630 postgresql-8.4</a></strong> - programming error <br>
+<tt>[18.02.2013]</tt> <strong><a href="security/2013/dsa-2628">DSA-2628 nss-pam-ldapd</a></strong> - buffer overflow <br>
+<tt>[17.02.2013]</tt> <strong><a href="security/2013/dsa-2627">DSA-2627 nginx</a></strong> - information leak <br>
+<tt>[17.02.2013]</tt> <strong><a href="security/2013/dsa-2626">DSA-2626 lighttpd</a></strong> - several issues <br>
+<tt>[17.02.2013]</tt> <strong><a href="security/2013/dsa-2625">DSA-2625 wireshark</a></strong> - several vulnerabilities <br>
+<tt>[16.02.2013]</tt> <strong><a href="security/2013/dsa-2624">DSA-2624 ffmpeg</a></strong> - several vulnerabilities <br>
+<tt>[14.02.2013]</tt> <strong><a href="security/2013/dsa-2623">DSA-2623 openconnect</a></strong> - buffer overflow <br>
+<tt>[13.02.2013]</tt> <strong><a href="security/2013/dsa-2622">DSA-2622 polarssl</a></strong> - several vulnerabilities <br>
+<tt>[13.02.2013]</tt> <strong><a href="security/2013/dsa-2621">DSA-2621 openssl</a></strong> - several vulnerabilities <br>
+<tt>[12.02.2013]</tt> <strong><a href="security/2013/dsa-2620">DSA-2620 rails</a></strong> - several vulnerabilities <br>
+<tt>[10.02.2013]</tt> <strong><a href="security/2013/dsa-2619">DSA-2619 xen-qemu-dm-4.0</a></strong> - buffer overflow <br>
+<tt>[10.02.2013]</tt> <strong><a href="security/2013/dsa-2612">DSA-2612 ircd-ratbox</a></strong> - programming error <br>
 </p>
 <p>Starší bezpečnostní zprávy se nachází na stránce
 s&nbsp;<a href="./security/">bezpečnostními informacemi</a>.
@@ -224,6 +224,7 @@ Tato stránka je také dostupná v následujících jazycích:
  <a href="index.eo.html" title="esperanto" hreflang="eo" lang="eo" rel="alternate">Esperanto</a>
  <a href="index.fa.html" title="perština" hreflang="fa" lang="fa" rel="alternate">&#x0641;&#x0627;&#x0631;&#x0633;&#x06cc;&nbsp;(Farsi)</a>
  <a href="index.fr.html" title="francouzština" hreflang="fr" lang="fr" rel="alternate">fran&ccedil;ais</a>
+ <a href="index.gl.html" title="haličština" hreflang="gl" lang="gl" rel="alternate">Galego</a>
  <a href="index.ko.html" title="korejština" hreflang="ko" lang="ko" rel="alternate">&#54620;&#44397;&#50612;&nbsp;(Hangul)</a>
  <a href="index.hy.html" title="arménština" hreflang="hy" lang="hy" rel="alternate">&#1344;&#1377;&#1397;&#1381;&#1408;&#1381;&#1398;&nbsp;(hayeren)</a>
  <a href="index.hr.html" title="chorvatština" hreflang="hr" lang="hr" rel="alternate">hrvatski</a>
@@ -256,9 +257,9 @@ Jak nastavit <a href="./intro/cn">výchozí jazyk</a>
 <div id="fineprint">
   <p>To report a problem with the web site, e-mail <a href="mailto:debian-www@lists.debian.org">debian-www@lists.debian.org</a>. For other contact information, see the Debian <a href="./contact">contact page</a>. Web site source code is <a href="./devel/website/using_cvs">available</a>.</p>
 <p>
-Poslední změna: po, 2. led 23:29:11 UTC 2012
+Poslední změna: po, 7. led 07:59:22 UTC 2013
   <br>
-  Copyright &copy; 1997-2012
+  Copyright &copy; 1997-2013
  <a href="http://www.spi-inc.org/">SPI</a> and others; Přečtete si <a href="./license" rel="copyright">licenční podmínky</a><br>
   Debian je registrovaná <a href="./trademark">obchodní známka</a> organizace Software in the Public Interest, Inc.
 </p>
@@ -268,9 +269,9 @@ Poslední změna: po, 2. led 23:29:11 UTC 2012
 </body>
 </html>
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline
-Content-Type: text/css; charset=utf-8
+Content-Type: text/css
 Content-Location: http://www.debian.org/debian.css
 Content-Transfer-Encoding: 8bit
 
@@ -292,7 +293,7 @@ Content-Transfer-Encoding: 8bit
 	Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 	The license text can also be found at http://www.gnu.org/copyleft/gpl.html and
-	/usr/share/common-licenses/GPL-2 on Debian GNU/Linux.  
+	/usr/share/common-licenses/GPL-2 on Debian.
 */
 	
 /*	
@@ -1253,7 +1254,7 @@ ul.nodecoration {
     }
 }
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://www.debian.org/Pics/gradient.png
@@ -1266,7 +1267,7 @@ QVQY012OwRHAMAjDJO+/X6/fLkIfcEnTF1iHbbjuJ4aIQQKzx1hEm4vRCiTKZswu
 Afue9unOdRjHJOhks1h7Tj9z09469Ope2X5+/DGIGU19u15WfQeCuEqAAgAAAABJ
 RU5ErkJggg==
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://www.debian.org/Pics/emblem-downloads.png
@@ -1287,7 +1288,7 @@ yAmDRg2AIZraYaZoCGA69tPqmLntmEK/nksYB/1PzzHGz5jz8o7xQmjZ5G75OJst
 1b7L3H41l9GSqnLQhXrvo1cvHLQI0dLZmlXLprUgRBCJxtVTNR6NeOsP79JJD5P1
 T8MAAAAASUVORK5CYII=
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://www.debian.org/Pics/spacefun-bg.png
@@ -1356,7 +1357,7 @@ p7+tG3ohfjSfe2UaeM7bQFYor/UhgN2Yz76affRr95Ufhud/4lWQG9J1PgawD33X
 4zOzbxaf/vvui/92jL5uGH7ReO5Vy4XvWi9+Vzv41+LuJ/xLwLHoRwoEAJD0f/Jz
 TyZSmBWvAAAAAElFTkSuQmCC
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://www.debian.org/Pics/spacefun.png
@@ -1887,9 +1888,9 @@ RLELQRuE5iDqyGFPjsAOEAGgSCSKbRDaQLTDPG47PxkHKBKJYhiE9hhCd9iuT9yf
 SCSKYRBGHwI/kUj0JKndkJNqr0gkEiCK4xOJRCKRSCQSiUQikUgkEolEIpFIBP0L
 66TyZXdkkkEAAAAASUVORK5CYII=
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=debhome.css
-Content-Type: text/css; charset=utf-8; name=debhome.css
+Content-Type: text/css; name=debhome.css
 Content-Location: http://www.debian.org/debhome.css
 Content-Transfer-Encoding: 8bit
 
@@ -1911,7 +1912,7 @@ Content-Transfer-Encoding: 8bit
 	Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 	The license text can also be found at http://www.gnu.org/copyleft/gpl.html and
-	/usr/share/common-licenses/GPL-2 on Debian GNU/Linux.  
+	/usr/share/common-licenses/GPL-2 on Debian.
 */
 
 @import url("debian.css");
@@ -2069,12 +2070,12 @@ ul#hometoc-cole {
 	text-indent: -1em;
 }
 li.sponsorbutton {
-	padding-top: 1.25em;
-	text-align: left;
+	padding-top: 1.25em; 
+	text-align: left; 
 	display: block;
 	width: 100%;
 	border-top: dotted grey;
-	border-width: 1px;
+	border-width: 1px; 
 }
 .infobar {
 	margin: 0 0 2em 0;
@@ -2105,9 +2106,9 @@ span.download {
 }
 }
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=debian-cs.css
-Content-Type: text/css; charset=utf-8; name=debian-cs.css
+Content-Type: text/css; name=debian-cs.css
 Content-Location: http://www.debian.org/debian-cs.css
 Content-Transfer-Encoding: 8bit
 
@@ -2127,113 +2128,138 @@ html[lang=cs] blockquote.quote p:after { content: ""; }
 html[lang=cs] blockquote.quote p.last:after { content: "\201D"; }
 
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=favicon.ico
 Content-Type: image/x-icon; name=favicon.ico
 Content-Location: http://www.debian.org/favicon.ico
 Content-Transfer-Encoding: Base64
 
-AAABAAQAICAAAAEACACoCAAARgAAACAgEAABAAQA6AIAAO4IAAAQEAAAAQAIAGgF
-AADWCwAAEBAQAAEABAAoAQAAPhEAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDc
-wADwyqYAACBAAAAgYAAAIIAAACCgAAAgwAAAIOAAAEAAAABAIAAAQEAAAEBgAABA
-gAAAQKAAAEDAAABA4AAAYAAAAGAgAABgQAAAYGAAAGCAAABgoAAAYMAAAGDgAACA
-AAAAgCAAAIBAAACAYAAAgIAAAICgAACAwAAAgOAAAKAAAACgIAAAoEAAAKBgAACg
-gAAAoKAAAKDAAACg4AAAwAAAAMAgAADAQAAAwGAAAMCAAADAoAAAwMAAAMDgAADg
-AAAA4CAAAOBAAADgYAAA4IAAAOCgAADgwAAA4OAAQAAAAEAAIABAAEAAQABgAEAA
-gABAAKAAQADAAEAA4ABAIAAAQCAgAEAgQABAIGAAQCCAAEAgoABAIMAAQCDgAEBA
-AABAQCAAQEBAAEBAYABAQIAAQECgAEBAwABAQOAAQGAAAEBgIABAYEAAQGBgAEBg
-gABAYKAAQGDAAEBg4ABAgAAAQIAgAECAQABAgGAAQICAAECAoABAgMAAQIDgAECg
-AABAoCAAQKBAAECgYABAoIAAQKCgAECgwABAoOAAQMAAAEDAIABAwEAAQMBgAEDA
-gABAwKAAQMDAAEDA4ABA4AAAQOAgAEDgQABA4GAAQOCAAEDgoABA4MAAQODgAIAA
-AACAACAAgABAAIAAYACAAIAAgACgAIAAwACAAOAAgCAAAIAgIACAIEAAgCBgAIAg
-gACAIKAAgCDAAIAg4ACAQAAAgEAgAIBAQACAQGAAgECAAIBAoACAQMAAgEDgAIBg
-AACAYCAAgGBAAIBgYACAYIAAgGCgAIBgwACAYOAAgIAAAICAIACAgEAAgIBgAICA
-gACAgKAAgIDAAICA4ACAoAAAgKAgAICgQACAoGAAgKCAAICgoACAoMAAgKDgAIDA
-AACAwCAAgMBAAIDAYACAwIAAgMCgAIDAwACAwOAAgOAAAIDgIACA4EAAgOBgAIDg
-gACA4KAAgODAAIDg4ADAAAAAwAAgAMAAQADAAGAAwACAAMAAoADAAMAAwADgAMAg
-AADAICAAwCBAAMAgYADAIIAAwCCgAMAgwADAIOAAwEAAAMBAIADAQEAAwEBgAMBA
-gADAQKAAwEDAAMBA4ADAYAAAwGAgAMBgQADAYGAAwGCAAMBgoADAYMAAwGDgAMCA
-AADAgCAAwIBAAMCAYADAgIAAwICgAMCAwADAgOAAwKAAAMCgIADAoEAAwKBgAMCg
-gADAoKAAwKDAAMCg4ADAwAAAwMAgAMDAQADAwGAAwMCAAMDAoADw+/8ApKCgAICA
-gAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAADnTpen
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl0YAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAl0ZOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGTgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAARkYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAACXRpcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAEZGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABORgAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAEZGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AABGRkYAAAAAAAAAAAAA75ef7wAAAAAAAAAAAAAAAAAAAJ9GAAAAAAAAAAAAV05O
-RkZGRp8AAAAAAAAAAAAAAAAARkYAAAAAAAAAp05OTqcAAADvRkbvAAAAAAAAAAAA
-AKdGRgAAAAAAAADvTp8AAAAAAAAA70aXAAAAAAAAAAAAp0aXAAAAAAAAAE5GAAAA
-p1cAAAAA70bvAAAAAAAAAACnRqcAAAAAAACnRu8AAAAAAABXAAAATkbvAAAAAAAA
-AJdGlwAAAAAAAKdGAAAAAAAAAKcAAAAARu8AAAAAAAAAp0ZOAAAAAAAAp0YAAAAA
-AAAAAAAAAABGTgAAAAAAAACnRkYAAAAAAAAARgAAAAAAAAAA5wAAAEZG7wAAAAAA
-AJ9GRgAAAAAAAADvnwAAAAAAAAAAAAAARkbvAAAAAAAA70ZGpwAAAAAAAABO7wAA
-AAAApwAAAABGTqcAAAAAAADvV0ZOAAAAAAAAAKdGpwAAAADvAAAA70ZO7wAAAAAA
-AO9GRkYAAAAAAAAAAO9ORkZGpwAAAACfRlfvAAAAAAAAAABGRk4AAAAAAAAAAAAA
-AAAAAAAAAEZGp6cAAAAAAAAApwBGRk4AAAAAAAAAAAAAAAAAAACnRkZGAAAAAAAA
-AAAAAJ9GRkbvAAAAAAAAAAAAAAAAAEZGRk4AAAAAAAAAAAAAAEZGRkanAAAAAAAA
-AAAAAABGRkZGAAAAAAAAAAAAAAAAAEZGRkZGlwAAAAAAAABORkZGRgAAAAAAAAAA
-AAAAAAAAAE5GRkZGRkZGRkZGRkZGRkYAAAAAAAAAAAAAAAAAAAAAAABGRkZGRkZG
-RkZGRk7vAAAAAAAAAAAAAAAAAAAAAAAAAAAATkZGTleXn6cAAAAAAAAAAAAAAP/8
-P///+f///+P////P////n////z////5////8f////P////n////5////8f+H//P+
-Af/z+Dh/4/j+P+P5zx/j8fuP4/P7z+Pz/8/j+/3H4/n/x+H8+8fh/HuH4f4Hh/j/
-/4f0f/8P/B//D/4P/h//A/g//4AAf//gAP//+Af/KAAAACAAAABAAAAAAQAEAAAA
-AACAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICA
-AACAgIAAwMDAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAAAAAAAAAACZkA
-AAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAACZkAAAAAAAAAAAAAAAAAAJkAAAAA
-AAAAAAAAAAAAAAmQAAAAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAAAJkAAAAAAA
-AAAAAAAAAAAAmZAAAAAAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAAAAAAmZAAAAAAAA
-AAAAAAAAAAAJmQAAAAAAAAAAAAAAAAAACZAAAAAAAJkAAAAAAAAAAJkAAAAACZmZ
-mZAAAAAAAACZAAAAAJmQAACZkAAAAAAAmQAAAAmQAAAAAJkAAAAAAJkAAAAJAAAJ
-AAAJkAAAAAmZAAAAmQAAAAkACZAAAAAJmQAAAJkAAAAAkACQAAAACZkAAACQAAAA
-AAAAmQAAAAmZAAAAmQAAAACQAJkAAAAJmQAAAAmQAAAAAACZkAAAAJkAAAAAkAAA
-AJAAmZAAAACZkAAAAAkAAAkAAJmQAAAACZAAAAAAmZkAAAmZAAAAAAmZAAAAAAAA
-AAAJmQAAAAAAmZAAAAAAAAAAmZkAAAAAAJmZAAAAAAAAAJmQAAAAAAAJmZAAAAAA
-AAmZkAAAAAAAAJmZmQAAAAmZmQAAAAAAAAAJmZmZmZmZmZAAAAAAAAAAAAmZmZmZ
-mZAAAAAAAAAAAAAACZmZmQAAAAAAAP/+P///+f///+P////P////n////z////5/
-///8f////P////j////4////+f/P//P+Af/z/Hx/8/n/P/P775/j8/uf4/P93+P3
-/8/j8/3P4/n/x/P9/cfx/vvH+f8Pj/j//4/8f/8P/D//H/4f/h//A/g//4AAf//g
-Af//+A//KAAAABAAAAAgAAAAAQAIAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAA
-AAAAAIAAAIAAAACAgACAAAAAgACAAICAAADAwMAAwNzAAPDKpgAAIEAAACBgAAAg
-gAAAIKAAACDAAAAg4AAAQAAAAEAgAABAQAAAQGAAAECAAABAoAAAQMAAAEDgAABg
-AAAAYCAAAGBAAABgYAAAYIAAAGCgAABgwAAAYOAAAIAAAACAIAAAgEAAAIBgAACA
-gAAAgKAAAIDAAACA4AAAoAAAAKAgAACgQAAAoGAAAKCAAACgoAAAoMAAAKDgAADA
-AAAAwCAAAMBAAADAYAAAwIAAAMCgAADAwAAAwOAAAOAAAADgIAAA4EAAAOBgAADg
-gAAA4KAAAODAAADg4ABAAAAAQAAgAEAAQABAAGAAQACAAEAAoABAAMAAQADgAEAg
-AABAICAAQCBAAEAgYABAIIAAQCCgAEAgwABAIOAAQEAAAEBAIABAQEAAQEBgAEBA
-gABAQKAAQEDAAEBA4ABAYAAAQGAgAEBgQABAYGAAQGCAAEBgoABAYMAAQGDgAECA
-AABAgCAAQIBAAECAYABAgIAAQICgAECAwABAgOAAQKAAAECgIABAoEAAQKBgAECg
-gABAoKAAQKDAAECg4ABAwAAAQMAgAEDAQABAwGAAQMCAAEDAoABAwMAAQMDgAEDg
-AABA4CAAQOBAAEDgYABA4IAAQOCgAEDgwABA4OAAgAAAAIAAIACAAEAAgABgAIAA
-gACAAKAAgADAAIAA4ACAIAAAgCAgAIAgQACAIGAAgCCAAIAgoACAIMAAgCDgAIBA
-AACAQCAAgEBAAIBAYACAQIAAgECgAIBAwACAQOAAgGAAAIBgIACAYEAAgGBgAIBg
-gACAYKAAgGDAAIBg4ACAgAAAgIAgAICAQACAgGAAgICAAICAoACAgMAAgIDgAICg
-AACAoCAAgKBAAICgYACAoIAAgKCgAICgwACAoOAAgMAAAIDAIACAwEAAgMBgAIDA
-gACAwKAAgMDAAIDA4ACA4AAAgOAgAIDgQACA4GAAgOCAAIDgoACA4MAAgODgAMAA
-AADAACAAwABAAMAAYADAAIAAwACgAMAAwADAAOAAwCAAAMAgIADAIEAAwCBgAMAg
-gADAIKAAwCDAAMAg4ADAQAAAwEAgAMBAQADAQGAAwECAAMBAoADAQMAAwEDgAMBg
-AADAYCAAwGBAAMBgYADAYIAAwGCgAMBgwADAYOAAwIAAAMCAIADAgEAAwIBgAMCA
-gADAgKAAwIDAAMCA4ADAoAAAwKAgAMCgQADAoGAAwKCAAMCgoADAoMAAwKDgAMDA
-AADAwCAAwMBAAMDAYADAwIAAwMCgAPD7/wCkoKAAgICAAAAA/wAA/wAAAP//AP8A
-AAD/AP8A//8AAP///wAAAAAAAADvTqfvAAAAAAAAAAAAAACXTu8AAAAAAAAAAAAA
-AACfTu8AAAAAAAAAAAAAAACfTu8AAAAAAAAAAAAAAADvRqcAAAAAAAAAAAAAAAAA
-VkYAAAAAp6fvAAAAAAAA70bvAACnl05GRpfvAAAAAKdGAAAAl6cAAABOTu8AAACf
-RgAAp1YA76cAAJeXAAAAn04AAKdWAAAApwCfTu8AAKdGAAAAnwAAAAAAp0bvAADv
-Rp8AAACfl58AAJdO7wAAAJdO7wAAAAAAAO9GlwAAAADvTkanAAAAAO+XRu8AAAAA
-AO9ORlaXl1ZORu8AAAAAAAAA76dWRkZWp+8AAAAA/D/vgfj/74Hx/wAA4/86AMf/
-AgDPHysBjAcAApzjAgCZM0oBmdEAAp3xBACOMVgBx+OBAcPDAALgB08C8A/OAigA
-AAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAACA
-AAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
-AAD///8AAAAACZAAAAAAAAmQAAAAAAAAmQAAAAAAAAmQAAAAAAAAmQAAAAAAAACQ
-AAmZkAAACZAAmQCZkAAJkAmQAACZAAmQCQCZAJkACZAJAACQCZAJkACQAJAJkACZ
-AAmZAAmQAJmQAAAAmQAACZkAAAmZAAAAmZmZmZAAAAAJmZmQAAD+f++B+f/vgfP/
-PALn/+sCz/8CAN4fCgKcx+sCmfMGAJszJwKb2RICndmAAs456wLH8wIA4+M1AvAH
-6wL4H++B
+AAABAAQAICAAAAEAIACoEAAARgAAACAgAgABAAEAMAEAAO4QAAAQEAAAAQAgAGgE
+AAAeEgAAEBACAAEAAQCwAAAAhhYAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAwX8lALffVQDWvwAAwX8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AABVANa/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVANa/QADA/yUAt98AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABAAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AA
+wP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFUA1r9AAMD/VQDWvwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99AAMD/AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA
+wP9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AABWAKxfVQDWvzMAzZ9WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwDNn0AAwP8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANa/JQC33yUAt99AAMD/QADA/0AA
+wP9AAMD/MwDNnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABAAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAMF/JQC33yUAt98lALffAADBfwAAAAAAAAAAAAAAAFYArF9AAMD/QADA/1YA
+rF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBf0AA
+wP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8lALffMwDNnwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/1UA1r8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/1UA1r8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAJQC330AAwP8AAAAAAAAAAAAAAAAAAMF/AADWvwAA
+AAAAAAAAAAAAAAAAAABWAKxfQADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAwX9AAMD/AADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wX9AAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1r8AAAAAAAAAAAAA
+AAAlALffQADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQDWv0AA
+wP9VANa/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBf0AAwP8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAADBfwAAAAAAAAAAAAAAAAAAAABAAMD/VgCsXwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/yUAt98AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAMF/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAwX9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AABAAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAMF/AAAAAAAA
+AAAAAAAAQADA/0AAwP9WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwDNn0AA
+wP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8zAM2fAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMD/QADA/1YA
+rF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/0AAwP8AAMF/AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99WAKxfAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAMF/AAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAADBfwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAFYArF8AANa/QADA/yUAt98AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAADBf0AAwP8AAMF/AAAAAAAAAAAAAAAAAAAAAFYArF8AAAAAAAAAAAAA
+AABWAKxfQADA/yUAt99WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsX0AA
+wP9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsXyUA
+t99AAMD/QADA/0AAwP8AAMF/AAAAAAAAAAAAAAAAAAAAADMAzZ9AAMD/AADWv1YA
+rF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP9AAMD/JQC33wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAMF/AADBfwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAMF/AAAAAEAAwP9AAMD/JQC33wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wX9AAMD/QADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAMwDNn0AAwP9AAMD/QADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP9AAMD/JQC33wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AA
+wP9AAMD/QADA/wAAwX8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAEAAwP9AAMD/QADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP9AAMD/QADA/0AA
+wP9VANa/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99AAMD/QADA/0AA
+wP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAJQC330AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AA
+wP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAEAAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AA
+wP9AAMD/JQC331YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAlALffQADA/0AAwP8lALffAADWv1UA1r8zAM2fAADBfwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//5////5////4////8////+f
+////P////n////x////8////+f////n////x/8//8/4B//P8fP/z/P8/8/nvv/f7
++5/j+//f8/v/z/P7/8/j/f/P8/3/z/H+/8/x/w+P+P//n/x//4/8P/8P/h/+H/8D
++D//gAB//+AB///4D/8oAAAAIAAAAEAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAD/AAAAAAD//j////n////j////z////5////8////+f////H////z/
+///4////+P////n/z//z/gH/8/x8f/P5/z/z+++f4/P7n+Pz/d/j9//P4/P9z+P5
+/8fz/f3H8f77x/n/D4/4//+P/H//D/w//x/+H/4f/wP4P/+AAH//4AH///gP///+
+P///+f///+P////P////n////z////5////8f////P////j////4////+f/P//P+
+Af/z/Hx/8/n/P/P775/j8/uf4/P93+P3/8/j8/3P4/n/x/P9/cfx/vvH+f8Pj/j/
+/4/8f/8P/D//H/4f/h//A/g//4AAf//gAf//+A//KAAAABAAAAAgAAAAAQAgAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYA
+rF8lALffAADBf1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAFUA1r8lALffVgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAADMAzZ8lALffVgCsXwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMAzZ8lALffVgCsXwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYA
+rF9AAMD/AADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAKu/QADA/wAAAAAAAAAAAAAAAAAAAAAAAMF/AADBf1YA
+rF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/1YArF8AAAAAAAAAAAAA
+wX9VANa/JQC330AAwP9AAMD/VQDWv1YArF8AAAAAAAAAAAAAAAAAAAAAAADBf0AA
+wP8AAAAAAAAAAAAAAABVANa/AADBfwAAAAAAAAAAAAAAACUAt98lALffVgCsXwAA
+AAAAAAAAAAAAADMAzZ9AAMD/AAAAAAAAAAAAAMF/AACrvwAAAABWAKxfAADBfwAA
+AAAAAAAAVQDWv1UA1r8AAAAAAAAAAAAAAAAzAM2fJQC33wAAAAAAAAAAAADBfwAA
+q78AAAAAAAAAAAAAAAAAAMF/AAAAADMAzZ8lALffVgCsXwAAAAAAAAAAAADBf0AA
+wP8AAAAAAAAAAAAAAAAzAM2fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/1YA
+rF8AAAAAAAAAAFYArF9AAMD/MwDNnwAAAAAAAAAAAAAAADMAzZ9VANa/MwDNnwAA
+AAAAAAAAVQDWvyUAt99WAKxfAAAAAAAAAAAAAAAAVQDWvyUAt99WAKxfAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAVgCsX0AAwP9VANa/AAAAAAAAAAAAAAAAAAAAAFYA
+rF8lALffQADA/wAAwX8AAAAAAAAAAAAAAAAAAAAAVgCsX1UA1r9AAMD/VgCsXwAA
+AAAAAAAAAAAAAAAAAAAAAAAAVgCsXyUAt99AAMD/AACrv1UA1r9VANa/AACrvyUA
+t99AAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfAADBfwAA
+q79AAMD/QADA/wAAq78AAMF/VgCsXwAAAAAAAAAAAAAAAAAAAAD+/wAA+f8AAPP/
+AADn/wAA7/8AAM//AADeDwAA3ecAAJ3zAACd8wAA3fsAAM4zAADP8wAA5+cAAPAP
+AAD8PwAAKAAAABAAAAAgAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+/wAAAAAA/n8AAPn/AADz/wAA5/8AAM//AADeHwAAnMcAAJnzAACbMwAAm9kAAJ3Z
+AADOOQAAx/MAAOPjAADwBwAA+B8AAP5/AAD5/wAA8/8AAOf/AADP/wAA3h8AAJzH
+AACZ8wAAmzMAAJvZAACd2QAAzjkAAMfzAADj4wAA8AcAAPgfAAA=
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=openlogo-50.png
 Content-Type: image/png; name=openlogo-50.png
 Content-Location: http://www.debian.org/Pics/openlogo-50.png
@@ -2282,7 +2308,7 @@ eQqtQDKO25HKz7AMTRpdqPI+hryrZAN0/6bRIx3Um1sN/Rzn3IkdPpPh/krJ2gfp
 EabWwEFjKGwEVig/WDr8kbBHsgLl+RvlVUN3t4YDqX3+6XBPbJfW0KXOTMkWGPYI
 MjQ7lc9Sr223vKBRkp09U/sXKl3FkyLcuogAAAAASUVORK5CYII=
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=identica.png
 Content-Type: image/png; name=identica.png
 Content-Location: http://www.debian.org/Pics/identica.png
@@ -2305,26 +2331,21 @@ x2mxJOzdQquRnv/sJxqNYDZVIcsykCI0O0vw1ThyKESt282Cx0NRczP3envzrg88
 tJGud7T8s8MKIbhYXYO1xIxvcBBvfz8Ri4WHnZ35fZTTDE+V9qSouJim1lbKbDam
 hodxu93UNTbm73EuUwoXdPhZWCr8jTme/gAvNiP4LlzZzgAAAABJRU5ErkJggg==
 
-------------nq6mZ3k6vZtPPFJKKqDEYH
+------------lDtVZPpG4tQyOsCFtOA8xT
 Content-Disposition: inline; filename=planet.png
 Content-Type: image/png; name=planet.png
 Content-Location: http://www.debian.org/Pics/planet.png
 Content-Transfer-Encoding: Base64
 
-iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAA
-AAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sF
-DwcZGd6KzjcAAAI7SURBVEjHY2RQqGIYSYCFgYHh//3WEeJbRsVqFvwqfvz6fvv+
-k3cvXjIwMAhJiKsqynCwceJRH5rSO2h9u3pOMTSGcYHLN29fPHaU/fu3Vy/fiYkL
-nTr0Yz0DW2CYu6666tBO0ljBlWuXbxw4zPzu8b1n7yAiJ699Y2BgePlmUUZW3ND1
-MwuulLz/wI2Pz/8JCUgxSYoqCHNcuPNBXZaHk5vvyu17PR3dM2dOxJ+24UkIOZ2v
-nlOMluYhapAVYGpBFsFUQCpgwip6+/6TV+9+vvv6/+u335IyQj85udgF+d59/nX2
-ym3Gfz/PnT55584dYkwPTekNTemFuxIzRDAV4BJB9iclJQX2GH734uXvPxwMDAxc
-f74xP3195sGnZ58YfvxmYWBgePjs+cvXr6/fuKWjpUtkOYHHfbjCgiRDqJOHf3/5
-ysDAcOXZHydDWWXOv99uvH3x5j07OzNJphN0JVpCpUPJjz1JC0mIKyhxcTJ8FuJl
-e/D2h7aJYUSMi7jgX3bOLy+eXWRgYNDUUCO7biAmVinUgq8qZlCowmx4/Pj1fdbM
-pR8+/FCS4WFgYGDn5z1++NT9+/fu3Ln18vVra0vr5asWYS20Bnk9jLPhwcHG6eRs
-3t09+ekTRlFxkW+f/9y/f+/ipXNfvn4XFxVtbqsjWEQPWsCES0JHS7e0NPfHr/8b
-123ZsHHN0eNHGRgYrC2tl61dQ0xxNXhbl1iTNHLavnPnzvUbtxgYGDS09Qg2LQd/
-W5pxpPWWAGSVCvcYU/EcAAAAAElFTkSuQmCC
+iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAA
+AAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sFDwcZGd6KzjcAAAB7UExURQAg
+ehUWGSEhIiwrLjk7UVBPVFBQblNUeVRjjFdXcVhVal5gZWZmZmdha2hkf2pufHFw
+dnFxknJjanJzoHd/q3pxhXt9enyDo4GCk4N8k4hpZoqCjZGSm5KVqpR+g5WMkqOe
+n6aDeKqVlaqtrMDAw9LY2tPV0vf59v///wuqafoAAAABYktHRCi9sLWyAAAAxElE
+QVQ4y62TfQ+CIBDGRUNTyrSiVFKR9+//CfvDEmbWynh2426w/e7ZuAsC7zJe5QK1
+FEJq+7ZdIRcoKesYqaQvoGJD03RJcpB+gLqte8IwrlOkHeCYRvZY2nOppwXKa0ko
+rfI4i5QLfIZTmqnDJ4fiXHbDMYvjDeDLDserRzjG3wFPZc76PE5nQGvlR4eyxZgI
+sUchUK9AM6N94VDfKkp5ASMAtaexQbtLAUMw/cnfg61QFIIQehtsY7Ti3F29tbvs
+WXfmqVYoUunjNQAAAABJRU5ErkJggg==
 
-------------nq6mZ3k6vZtPPFJKKqDEYH--
+------------lDtVZPpG4tQyOsCFtOA8xT--

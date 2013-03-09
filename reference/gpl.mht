@@ -1,12 +1,12 @@
-Content-Type: multipart/related; start=<op.mhtml.1331063394723.dd6a4736432f17a3@169.254.9.172>; boundary=----------IDXvFFQfbOQk7LcHlSNz1l
+Content-Type: multipart/related; start=<op.mhtml.1361795200767.3f1f8736432f982e@172.16.1.116>; boundary=----------UvPDBpIoJDHAKDnIiQdrei
 Content-Location: http://gplv3.fsf.org/
 Subject: =?utf-8?Q?Welcome=20to=20GPLv3=20=E2=80=94=20GPLv3?=
 MIME-Version: 1.0
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=default.htm
 Content-Type: text/html; charset=utf-8; name=default.htm
-Content-ID: <op.mhtml.1331063394723.dd6a4736432f17a3@169.254.9.172>
+Content-ID: <op.mhtml.1361795200767.3f1f8736432f982e@172.16.1.116>
 Content-Location: http://gplv3.fsf.org/
 Content-Transfer-Encoding: 8bit
 
@@ -836,7 +836,7 @@ var fsf_associate_id = "2442"; // change this to your own associate ID
         <div id="portal-footer">
 
       <p>
-        Portál <a href="http://plone.org">Plone - systém správy obsahu (CMS) s otevřeným zdrojovým kódem</a> Copyright &copy;2000-<span>2012</span> <a href="http://plone.org/foundation">Plone Foundation</a> a jiní.
+        Portál <a href="http://plone.org">Plone - systém správy obsahu (CMS) s otevřeným zdrojovým kódem</a> Copyright &copy;2000-<span>2013</span> <a href="http://plone.org/foundation">Plone Foundation</a> a jiní.
         <span>Plone a jeho logo jsou registrované obchodní známky společnosti <a href="http://plone.org/foundation">Plone Foundation</a>.</span>
 
         <span>Šířeno v rámci <a href="http://www.gnu.org/licenses/gpl.html">Licence GNU GPL</a>.</span>
@@ -906,7 +906,7 @@ var fsf_associate_id = "2442"; // change this to your own associate ID
 
 
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=ploneScripts1392.js
 Content-Type: application/x-javascript; charset=utf-8; name=ploneScripts1392.js
 Content-Location: http://gplv3.fsf.org/portal_javascripts/ploneScripts1392.js
@@ -2780,7 +2780,7 @@ YWdlKCdlbmFibGVfY29va2llc19tZXNzYWdlJykNCn0NCi8vIENhbGwgc2hvd0Vu
 YWJsZUNvb2tpZXNNZXNzYWdlIGFmdGVyIHRoZSBwYWdlIGxvYWRzDQpyZWdpc3Rl
 clBsb25lRnVuY3Rpb24oc2hvd0VuYWJsZUNvb2tpZXNNZXNzYWdlKTsNCgo=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=formsubmithelpers.js
 Content-Type: application/x-javascript; charset=utf-8; name=formsubmithelpers.js
 Content-Location: http://gplv3.fsf.org/portal_javascripts/formsubmithelpers.js
@@ -2800,9 +2800,9 @@ aWYgKCFub2RlLm9uY2xpY2spIHsKICAgICAgICAgICAgbm9kZS5vbmNsaWNrID0g
 aW5wdXRTdWJtaXRPbkNsaWNrOwogICAgICAgIH0KICAgIH0KfQpyZWdpc3RlclBs
 b25lRnVuY3Rpb24ocmVnaXN0ZXJTdWJtaXRIYW5kbGVyKTsKCg==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
-Content-Type: text/css; charset=utf-8
+Content-Type: text/css
 Content-Location: http://gplv3.fsf.org/portal_css/ploneStyles7347.css
 Content-Transfer-Encoding: 8bit
 
@@ -7330,7 +7330,7 @@ div.portletFooter {
 }
 
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/bullet.gif
@@ -7339,7 +7339,7 @@ Content-Transfer-Encoding: Base64
 R0lGODlhBQANAIAAAGOMnP///yH5BAEAAAEALAAAAAAFAA0AAAIJjI+pu+APo4Sp
 ADs=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/info_icon.gif
@@ -7367,7 +7367,7 @@ TVhUGEiIjB47a9SEYXJjBQweFBIIfMOF0RgxX2raUPFhCgQBAuFg8aPFyZKaLUps
 gPIggMBBVeps8aGjJooMJmYsMDDQS5YyMl7UzGCBhoYJBJHEkEIFxyNHJ2qkcECg
 IIkQOYBciVJDQwMAB4VwuCAhAoMJBRoK9HBgAALRqAcGBAA7
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/mail_icon.gif
@@ -7394,7 +7394,7 @@ ocOGAAQWKEGRoggQHTJUiHAgIomJFUeE8KDhAoEBHSWWCGAggEsOGCYMEJDyY8WL
 GSlEcLCg5kSWLg1YkPCAQQKfJUR+2HBhAoQGChD4PEC1qlWqHgsA2Mq1K1eFYMOK
 HVswIAA7
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/linkTransparent.gif
@@ -7404,7 +7404,7 @@ R0lGODlhBgALALMAAP+lAP/Oe////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAACH5BAEAAAIALAAAAAAGAAsAAAQTUMhJJbjzgoxr+NMXhJ/G
 bVYnRAA7
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/search_icon.gif
@@ -7416,7 +7416,7 @@ R0lGODlhEAANAIQAAOXl5cbGxtXV1aOjo83g+MTc97HR9U5OTtHR0d/s+urz/MXc
 rDgkSrIwR/0NiobC8ejVbgrIzshyRSSTA8X3ERyulEOFOhJYLltu9Rvmei8Y8Tij
 ro5CADs=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/folder_icon.gif
@@ -7443,7 +7443,7 @@ oAIWGRIMANAwgIIOAjIKAMCRI8GHLEKKFJmBosCHKlCUCMEBQ4UIDxhsPLkihYkR
 HjJcmADBQYKZFlOSALEBAwWYCw4AVXDChAgPGizwbIDAwFIUQ4sefZC0wNISIjpk
 sCABQoMDBggs1ci2rckAHePKrUi3boCAAAA7
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/site_icon.gif
@@ -7473,7 +7473,7 @@ QgIAAAAAGCDggAEDFyBUsDAhQgIAAAAAADCgAIIKEAJYmOAgAQAAAAAAADCAggUH
 EShMiKAgAQAAAAAAAABgwAAJDiJESJAAAAAAAAAAAAAAAIABCRIkAAAAAAAAAAAA
 JQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAQAOw==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/document_icon.gif
@@ -7500,7 +7500,7 @@ YQABGyJugNgwocQMEDdULAhxwIYBAgCI3Dgw4wYMFAioJCmw44UBMAcQYPlQg4UJ
 ERosQDDToIAKAyDElElTgIQHDBQcMFCgJ0cHAxIMdUpQgMqrV2mO3DrSodevBQMC
 ADs=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/print_icon.gif
@@ -7527,9 +7527,9 @@ QMIMECM6PFgggsWLEwky3LhwYIEHIEOKBDnxI4KTKBEYGCDgQUkEB2LKnImg5AEC
 AHLqzEngQEYAPQs0YLAgQQCfGQUSQFCgAoUJEgLUNEiggAOIFi4oyElxp06EYMOC
 DQgAOw==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=textSmall.css
-Content-Type: text/css; charset=utf-8; name=textSmall.css
+Content-Type: text/css; name=textSmall.css
 Content-Location: http://gplv3.fsf.org/portal_css/textSmall.css
 Content-Transfer-Encoding: 8bit
 
@@ -7543,9 +7543,9 @@ body {
 }
 
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=textLarge.css
-Content-Type: text/css; charset=utf-8; name=textLarge.css
+Content-Type: text/css; name=textLarge.css
 Content-Location: http://gplv3.fsf.org/portal_css/textLarge.css
 Content-Transfer-Encoding: 8bit
 
@@ -7559,9 +7559,9 @@ body {
 }
 
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
-Content-Type: text/css; charset=utf-8
+Content-Type: text/css
 Content-Location: http://gplv3.fsf.org/portal_css/ploneStyles7210.css
 Content-Transfer-Encoding: 8bit
 
@@ -8082,7 +8082,7 @@ table#gpl-compat-matrix td.nok { background-color: #dddddd; }
 }
 
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://gplv3.fsf.org/portal_css/logo.jpg
@@ -8284,7 +8284,7 @@ TqrqLuoNhUFePg4ISPXJcuWCvD8fkDkA1k23Tvb6q7DfHYlp7rlZClL8cVB21eYb
 Bt3bPruM6QsuYQ4SQ7uS6GoTy++bYhljE54ONpJrEMkXSYd/9xG0ZeMnM+mgjUXf
 GEr7f8u1NOUtcjpbAAAAAElFTkSuQmCC
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/portal_css/linkOpaque.gif
@@ -8294,7 +8294,7 @@ R0lGODlhBgANALMAAGOMnLXGzv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAACH5BAEAAAIALAAAAAAGAA0AAAQVUMhJJbjzgoxr+NMXhJ/G
 bVZXrVIEADs=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=favicon.png
 Content-Type: image/png; name=favicon.png
 Content-Location: http://gplv3.fsf.org/favicon.ico
@@ -8320,7 +8320,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGuLjDf9F8oBAAAA
 AElFTkSuQmCC
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=dogear.png
 Content-Type: image/png; name=dogear.png
 Content-Location: http://gplv3.fsf.org/dogear.png
@@ -8450,7 +8450,7 @@ XC5ubkpKymSVSvVbXQVlgz/0tsF5eXnw8fHJTU5OtonbgNEKXGVnXl4evL29c8Vi
 Tg5RKBRXrBqZDV6ocHBBQYG2zZ2mUCguWzUqG7whoJTC3d1d6urq6piSkjJDLpdf
 snZQNvhDBACFhYX5BQUFn5SUlNjEbWT8P6TXA3SQPXtzAAAAAElFTkSuQmCC
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=gplv3-rms.jpg
 Content-Type: image/jpeg; name=gplv3-rms.jpg
 Content-Location: http://gplv3.fsf.org/gplv3-rms.jpg
@@ -8668,7 +8668,7 @@ A+jig6aZ3OWQ/FxQQWYO/nu++k/xFK+VZX9Zm/xlBBGDA+V5X9Zm/wAZR/K8v+tT
 nxxbioFDieaB/fu/ih+F+Lf+Tzf8938UEESUPwvxb/yeb/nu/imMnJycl4kyMiWZ
 4FB0jy4geW6CCGXo2Ht//9k=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=gplv3-rms2.jpg
 Content-Type: image/jpeg; name=gplv3-rms2.jpg
 Content-Location: http://gplv3.fsf.org/gplv3-rms2.jpg
@@ -8947,7 +8947,7 @@ JFFFA9p+5D+c/Q1O5/wWPaP+KaKKDLr/ABEf7ivrV+If/srb2J/5GiigmP3UfzD/
 AJVrn7tc/wA5/wCQoooKJ/f2/wCdf1NZdf4rntc/4iiig4rz94V/fKu139yP+0j7
 UUUHTY/vD38y/qK5r394X/tr+poooOxP7i97F1417+9Pfzn60UUEaKKKAooooP/Z
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=gplv3-88x31.png
 Content-Type: image/png; name=gplv3-88x31.png
 Content-Location: http://gplv3.fsf.org/gplv3-88x31.png
@@ -9010,7 +9010,7 @@ XCRKP89nrXVUmJPGx8Y7/8Uz0boC31kdk54iTZ9a4eFGI3PY5YhsO6vfhYHWOoa9
 U4/22q1WW1hiYL8DJ4ozNAuXBHAFDLSXp7X8X0VxyIhuH6ZHT893CSPa+KjOpTcZ
 2NUgc+f4lXi//wIt5PEDOE7ozwAAAABJRU5ErkJggg==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=gplv3-127x51.png
 Content-Type: image/png; name=gplv3-127x51.png
 Content-Location: http://gplv3.fsf.org/gplv3-127x51.png
@@ -9110,9 +9110,9 @@ Ohz8GFyvX5LXjB9gBughxi4fY0UMKxXeEG/vmxpl0R8Y4DWCHmalmmcJzNoLc9Nt
 qe5w8A/9ZwtZky79gbMEzlYjzYN9TLJRzD74BhdWK8ypUl3xZXi2/wcYQF/3js/e
 0QAAAABJRU5ErkJggg==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline; filename=widget.js
-Content-Type: text/html; charset=utf-8; name=widget.js
+Content-Type: text/html; name=widget.js
 Content-Location: http://gplv3.fsf.org/static/widget/widget.js
 Content-Transfer-Encoding: 8bit
 
@@ -9145,13 +9145,13 @@ if (fsf_widget_text == "Help fight DRM!") {
     var fsf_widget_text = "Get updates from the FSF";
 	}
 
-document.write("<link href=\"http://www.fsf.org/graphics/widget/campaignwidget.css?1.0.1\" rel=\"stylesheet\" type=\"text/css\" />");
+document.write("<link href=\"//www.fsf.org/graphics/widget/campaignwidget.css?1.0.1\" rel=\"stylesheet\" type=\"text/css\" />");
 document.write("");
 document.write("<div id=\"fsf_campaign_widget\" class=\"" + fsf_widget_size + "\">");
 document.write("<div id=\"fsf_campaign_widget_bg\"><div id=\"fsf_campaign_widget_bg_logo\">");
-document.write("<h1 id=\"fsf_widget_title\"><span><a href=\"http://www.fsf.org\">Free Software Foundation</a></span></h1>");
-document.write("<p style='text-align:center;'><a href=\"http://www.fsf.org/associate/support_freedom/join_fsf?referrer=" +  fsf_associate_id + "\">Support software freedom!</a></p>");
-document.write("<p style='text-align:center;'>Get <span id='thinhide'>the new monthly newsletter &mdash; <br /><em></span>the Free Software Supporter</em></p>");
+document.write("<h1 id=\"fsf_widget_title\"><span><a href=\"//www.fsf.org\">Free Software Foundation</a></span></h1>");
+document.write("<p style='text-align:center;'><a href=\"//www.fsf.org/associate/support_freedom/join_fsf?referrer=" +  fsf_associate_id + "\">Support software freedom!</a></p>");
+document.write("<p style='text-align:center;'>Get <span id='thinhide'>the monthly newsletter &mdash; <br /><em></span>the Free Software Supporter</em></p>");
 document.write("<form action=\"https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31\" method=\"post\">");
 document.write("<p style='text-align:center;'><input type=\"text\" id=\"frmEmail\" name=\"email-Primary\" size=\"10\" /></p>");
 document.write("<p style='text-align: center; margin-top: 10px;'><input type=\"submit\" name=\"_qf_Edit_next\" value=\"Subscribe Me\" /></p>");
@@ -9162,7 +9162,7 @@ document.write("</div></div>");
 document.write("</div>");
 document.write("");
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/plone_powered.gif
@@ -9194,7 +9194,7 @@ n8+2WRv9dNsgE0zIO2AA95SgRQsGPFKu8OWLRQXdgIW9J110XEW0XQMLcMZgSmZ9
 5tJESSmV2nkkRYWThjtpyGGHCVLYQAMMLIBSWkw5NROFErHFYVUZamWTh1ppGKKE
 KOGX4o5ooQjVjDd9uOFbMybo0ZFIJqnkRw016eSTUBYUEAAAOw==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/colophon_sec508.gif
@@ -9225,7 +9225,7 @@ KSMmnJT62LHqsZKzbuWq9/Xl5mJhV4EAZYWBBycXDGBiZMFwuHNXWYNnTfSo+ZsT
 lthQkEEDhgg8WkzhcMIB8aBUz+tv7EDFFBAJMIAADFN8MMUUUdinX3777WeSAENM
 UUMKQkzhQgEsyLCBgudRldGHIIYoIkUNlWjiiSgaFBAAADs=
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://gplv3.fsf.org/colophon_wai-aa.gif
@@ -9239,7 +9239,7 @@ PgMHCWEjkGIhlpdnaJ9uBAsfW66Pe5OVladjmCAFAwuKrUlujh8KoraUtJO3Trk6
 VA1CCFpZCY0GAGp8ytp/qVcHOjybrggCAMLZ28rMJgt3DsQi6enrLPX29/Yd+vv8
 /RYRAAA7
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://gplv3.fsf.org/colophon_xhtml.png
@@ -9255,7 +9255,7 @@ TExMSwQpShNMxFCo+WP17pb+vkCIZ8TSEgVBCsXEMBSK/+/8ZajxGeJruIlYrBba
 b/zLRPKvoGgg3I1QhYJoCmeJ7JjVte7unYcEfC1YIThTY7XhhLOKhBQCvStkArKZ
 kELi4ppYAABJFJqcxck+yAAAAABJRU5ErkJggg==
 
-------------IDXvFFQfbOQk7LcHlSNz1l
+------------UvPDBpIoJDHAKDnIiQdrei
 Content-Disposition: inline
 Content-Type: image/png
 Content-Location: http://gplv3.fsf.org/colophon_css.png
@@ -9270,4 +9270,4 @@ rSquq3WEKIQYKopNodi7ipeK4o8EYSaGQhCmQsF1Si+VJd4IijhC3CgIRtgUdgov
 76yce+b0RQK+FkwX7BCfpdiwh1CAg4EyyGZiFBKOa2IBAGypiEIXj2hdAAAAAElF
 TkSuQmCC
 
-------------IDXvFFQfbOQk7LcHlSNz1l--
+------------UvPDBpIoJDHAKDnIiQdrei--

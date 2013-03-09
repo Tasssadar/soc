@@ -1,13 +1,13 @@
-Content-Type: multipart/related; start=<op.mhtml.1361795108568.31dbe52d6b0dfd3c@172.16.1.116>; boundary=----------VwEwWpylDKnHQw6CxWGvsj
-Content-Location: http://code.google.com/p/qextserialport/
-Subject: =?utf-8?Q?qextserialport=20-=20Serial=20port=20library=20for=20Qt2,=20Qt3,=20Qt4=20and=20Qt5=20-=20Google=20Project=20Hosting?=
+Content-Type: multipart/related; start=<op.mhtml.1362606169162.cea2c02b597e8105@192.168.0.154>; boundary=----------lb8P0URdVXQaMPT0u8sLbH
+Content-Location: http://code.google.com/p/avr-xboot/
+Subject: =?utf-8?Q?avr-xboot=20-=20XBoot:=20Extensible=20bootloader=20for=20ATMEL=20XMEGA=20microcontrollers=20-=20Google=20Project=20Hosting?=
 MIME-Version: 1.0
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=default.htm
 Content-Type: text/html; charset=UTF-8; name=default.htm
-Content-ID: <op.mhtml.1361795108568.31dbe52d6b0dfd3c@172.16.1.116>
-Content-Location: http://code.google.com/p/qextserialport/
+Content-ID: <op.mhtml.1362606169162.cea2c02b597e8105@192.168.0.154>
+Content-Location: http://code.google.com/p/avr-xboot/
 Content-Transfer-Encoding: Quoted-Printable
 
 
@@ -33,33 +33,23 @@ Content-Transfer-Encoding: Quoted-Printable
  <script type=3D"text/javascript">
  =
 
- (function(){(function(){function b(a){this.t=3D{};this.tick=3Dfunction(=
-a,b,c){b=3Dvoid 0!=3Dc?c:(new Date).getTime();this.t[a]=3Db};this.tick("=
-start",null,a)}var a=3Dnew b;window.jstiming=3D{Timer:b,load:a};try{a=3D=
-null,window.chrome&&window.chrome.csi&&(a=3DMath.floor(window.chrome.csi=
-().pageT)),null=3D=3Da&&window.gtbExternal&&(a=3Dwindow.gtbExternal.page=
-T()),null=3D=3Da&&window.external&&(a=3Dwindow.external.pageT),a&&(windo=
-w.jstiming.pt=3Da)}catch(d){}})();})();
-
  =
 
  =
 
  =
 
+ var codesite_token =3D "92Z_Fc8jTyfkJasoZBi43DzPQ1Q:1362605790450";
  =
 
- var codesite_token =3D "GLfDcVOq-OMiL8RcMmbHgG_kiak:1361795076332";
  =
 
- =
-
- var CS_env =3D {"loggedInUserEmail":"vbocek@gmail.com","projectName":"q=
-extserialport","assetHostPath":"http://www.gstatic.com/codesite/ph","dom=
-ainName":null,"relativeBaseUrl":"","token":"GLfDcVOq-OMiL8RcMmbHgG_kiak:=
-1361795076332","projectHomeUrl":"/p/qextserialport","profileUrl":"/u/106=
-544733723469872647/","assetVersionPath":"http://www.gstatic.com/codesite=
-/ph/10432160532581480325"};
+ var CS_env =3D {"loggedInUserEmail":"vbocek@gmail.com","projectHomeUrl"=
+:"/p/avr-xboot","assetHostPath":"http://www.gstatic.com/codesite/ph","pr=
+ofileUrl":"/u/106544733723469872647/","token":"92Z_Fc8jTyfkJasoZBi43DzPQ=
+1Q:1362605790450","assetVersionPath":"http://www.gstatic.com/codesite/ph=
+/17200360115907490597","relativeBaseUrl":"","projectName":"avr-xboot","d=
+omainName":null};
  var _gaq =3D _gaq || [];
  _gaq.push(
  ['siteTracker._setAccount', 'UA-18071-1'],
@@ -67,7 +57,7 @@ ainName":null,"relativeBaseUrl":"","token":"GLfDcVOq-OMiL8RcMmbHgG_kiak:=
  =
 
  _gaq.push(
- ['projectTracker._setAccount', 'UA-30080470-1'],
+ ['projectTracker._setAccount', 'UA-18390633-2'],
  ['projectTracker._trackPageview']);
  =
 
@@ -87,19 +77,20 @@ ame('body')[0]).appendChild(ga);
  =
 
  <title>
- qextserialport -
+ avr-xboot -
  =
 
  =
 
- Serial port library for Qt2, Qt3, Qt4 and Qt5 - Google Project Hosting
+ XBoot: Extensible bootloader for ATMEL XMEGA microcontrollers - Google =
+Project Hosting
  </title>
  <link type=3D"text/css" rel=3D"stylesheet" href=3D"http://www.gstatic.c=
-om/codesite/ph/10432160532581480325/css/core.css">
+om/codesite/ph/17200360115907490597/css/core.css">
  =
 
  <link type=3D"text/css" rel=3D"stylesheet" href=3D"http://www.gstatic.c=
-om/codesite/ph/10432160532581480325/css/ph_detail.css" >
+om/codesite/ph/17200360115907490597/css/ph_detail.css" >
  =
 
  =
@@ -110,7 +101,7 @@ om/codesite/ph/10432160532581480325/css/ph_detail.css" >
 
 <!--[if IE]>
  <link type=3D"text/css" rel=3D"stylesheet" href=3D"http://www.gstatic.c=
-om/codesite/ph/10432160532581480325/css/d_ie.css" >
+om/codesite/ph/17200360115907490597/css/d_ie.css" >
 <![endif]-->
  <style type=3D"text/css">
  .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesi=
@@ -197,7 +188,7 @@ ofile');"
  title=3D"Profile, Updates, and Settings"
  ><u>Profile</u></a>
  | <a href=3D"https://www.google.com/accounts/Logout?continue=3Dhttp%3A%=
-2F%2Fcode.google.com%2Fp%2Fqextserialport%2F" =
+2F%2Fcode.google.com%2Fp%2Favr-xboot%2F" =
 
  onclick=3D"_CS_click('/gb/ph/signout');"
  ><u>Sign out</u></a>
@@ -238,8 +229,8 @@ padding=3D"0" cellspacing=3D"0"
  =
 
  <td id=3D"plogo">
- <link itemprop=3D"url" href=3D"/p/qextserialport">
- <a href=3D"/p/qextserialport/">
+ <link itemprop=3D"url" href=3D"/p/avr-xboot">
+ <a href=3D"/p/avr-xboot/">
  =
 
  <img src=3D"http://www.gstatic.com/codesite/ph/images/defaultlogo.png" =
@@ -254,15 +245,14 @@ alt=3D"Logo" itemprop=3D"image">
  =
 
  <div id=3D"pname">
- <a href=3D"/p/qextserialport/"><span itemprop=3D"name">qextserialport</=
-span></a>
+ <a href=3D"/p/avr-xboot/"><span itemprop=3D"name">avr-xboot</span></a>
  </div>
  =
 
  <div id=3D"psum">
  <a id=3D"project_summary_link"
- href=3D"/p/qextserialport/"><span itemprop=3D"description">Serial port =
-library for Qt2, Qt3, Qt4 and Qt5</span></a>
+ href=3D"/p/avr-xboot/"><span itemprop=3D"description">XBoot: Extensible=
+ bootloader for ATMEL XMEGA microcontrollers</span></a>
  =
 
  </div>
@@ -293,8 +283,7 @@ library for Qt2, Qt3, Qt4 and Qt5</span></a>
 
 <div id=3D"mt" class=3D"gtb"> =
 
- <a href=3D"/p/qextserialport/" class=3D"tab active">Project&nbsp;Home</=
-a>
+ <a href=3D"/p/avr-xboot/" class=3D"tab active">Project&nbsp;Home</a>
  =
 
  =
@@ -303,20 +292,7 @@ a>
 
  =
 
- <a href=3D"/p/qextserialport/wiki/Downloads?tm=3D2" class=3D"tab ">Down=
-loads</a>
- =
-
- =
-
- =
-
- =
-
- =
-
- <a href=3D"/p/qextserialport/wiki/Welcome?tm=3D6" class=3D"tab ">Wiki</=
-a>
+ <a href=3D"/p/avr-xboot/downloads/list" class=3D"tab ">Downloads</a>
  =
 
  =
@@ -327,7 +303,18 @@ a>
 
  =
 
- <a href=3D"/p/qextserialport/issues/list"
+ <a href=3D"/p/avr-xboot/w/list" class=3D"tab ">Wiki</a>
+ =
+
+ =
+
+ =
+
+ =
+
+ =
+
+ <a href=3D"/p/avr-xboot/issues/list"
  class=3D"tab ">Issues</a>
  =
 
@@ -339,7 +326,7 @@ a>
 
  =
 
- <a href=3D"/p/qextserialport/source/checkout"
+ <a href=3D"/p/avr-xboot/source/checkout"
  class=3D"tab ">Source</a>
  =
 
@@ -380,7 +367,7 @@ r" border=3D"0" class=3D"st">
  <div class=3D"st1">
  <div class=3D"isf">
  <span class=3D"inst1">
- <a href=3D"/p/qextserialport/">Summary</a>
+ <a href=3D"/p/avr-xboot/">Summary</a>
  </span>
  =
 
@@ -390,7 +377,7 @@ r" border=3D"0" class=3D"st">
 
  &nbsp;
  <span class=3D"inst3">
- <a href=3D"/p/qextserialport/people/list">People</a>
+ <a href=3D"/p/avr-xboot/people/list">People</a>
  </span>
  =
 
@@ -454,7 +441,7 @@ ne>
  onclick=3D"_CS_toggleStar(this,
  {'scope': 'projects',
  'user': '_CURRENT_USER',
- 'item': 'qextserialport'
+ 'item': 'avr-xboot'
  },
  true,
  '',
@@ -464,8 +451,8 @@ ne>
  'plural');"/>
  </div>
  <span>
- Starred by <span id=3D"star_count">156</span>&nbsp;user<span id=3D"plur=
-al">s</span>
+ Starred by <span id=3D"star_count">15</span>&nbsp;user<span id=3D"plura=
+l">s</span>
  </span>
  </div> =
 
@@ -481,7 +468,7 @@ al">s</span>
  =
 
  <li class=3D"psmeta">
- <a href=3D"/p/qextserialport/feeds">Project feeds</a>
+ <a href=3D"/p/avr-xboot/feeds">Project feeds</a>
  </li>
  <li class=3D"psgap"/>
  =
@@ -516,22 +503,63 @@ ofollow">MIT License</a>
  =
 
  <a class=3D"label"
- href=3D"/hosting/search?q=3Dlabel:Qt">Qt</a>, =
+ href=3D"/hosting/search?q=3Dlabel:Atmel">Atmel</a>, =
 
  =
 
  <a class=3D"label"
- href=3D"/hosting/search?q=3Dlabel:SerialPort">SerialPort</a>, =
+ href=3D"/hosting/search?q=3Dlabel:AVR">AVR</a>, =
 
  =
 
  <a class=3D"label"
- href=3D"/hosting/search?q=3Dlabel:IO">IO</a>, =
+ href=3D"/hosting/search?q=3Dlabel:XMEGA">XMEGA</a>, =
 
  =
 
  <a class=3D"label"
- href=3D"/hosting/search?q=3Dlabel:QML">QML</a>
+ href=3D"/hosting/search?q=3Dlabel:MCU">MCU</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:C">C</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:Microcontroller">Microcontroller</a>,=
+ =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:Firmware">Firmware</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:Electronics">Electronics</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:Prototyping">Prototyping</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:ATxmega">ATxmega</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:Bootloader">Bootloader</a>, =
+
+ =
+
+ <a class=3D"label"
+ href=3D"/hosting/search?q=3Dlabel:I2C">I2C</a>
  =
 
  </span>
@@ -560,34 +588,7 @@ ofollow">MIT License</a>
 
 
  <a class=3D"userlink"
- href=3D"/u/111850686937103325796/">bfosd...@gmail.com</a
->, =
-
- =
-
- =
-
-
- <a class=3D"userlink"
- href=3D"/u/103113683963175926453/">lst...@gmail.com</a
->, =
-
- =
-
- =
-
-
- <a class=3D"userlink"
- href=3D"/u/112757002972241583988/">dbzhang...@gmail.com</a
->, =
-
- =
-
- =
-
-
- <a class=3D"userlink"
- href=3D"/u/111931596217849815281/">michpoli...@gmail.com</a
+ href=3D"/u/114059947803429764675/">alex.for...@gmail.com</a
 >
  =
 
@@ -595,79 +596,18 @@ ofollow">MIT License</a>
 
  =
 
- =
-
- <li class=3D"psgap"/>
- =
-
- =
-
- </ul>
- =
-
- =
-
- <div class=3D"phead pfeatured">Featured</div>
- =
-
- <div class=3D"psicon">
- <div class=3D"psicon-container goog-inline-block">
- <div style=3D"float:right" class=3D"SPRITE_filedownload-g16 goog-inline=
--block vt"></div>
- </div>
- <span><b>Downloads</b></span>
- </div>
- <ul class=3D"pslist">
- =
-
- <li class=3D"psmeta nowrap">
- <a title=3D"Download" href=3D"//qextserialport.googlecode.com/files/qex=
-tserialport-1.2rc.zip" onclick=3D"_gaq.push(['siteTracker._trackEvent', =
-'Download - Downloaded', '//qextserialport.googlecode.com/files/qextseri=
-alport-1.2rc.zip', 'Featured, OpSys-All, Type-Source']);_gaq.push(['proj=
-ectTracker._trackEvent', 'Download - Downloaded', '//qextserialport.goog=
-lecode.com/files/qextserialport-1.2rc.zip', 'Featured, OpSys-All, Type-S=
-ource']);">
- </a>
- <a href=3D"downloads/detail?name=3Dqextserialport-1.2rc.zip"
- title=3D"Released in 2012 for Qt4&amp;amp; Qt5">qextserialport-1.2rc.zi=
-p</a>
- </li>
- =
-
- <li class=3D"psmeta"><a href=3D"downloads/list">Show all &raquo</a></li=
->
- <li class=3D"psgap"/>
- </ul>
- =
-
- =
-
- <div class=3D"psicon">
- <div class=3D"psicon-container goog-inline-block">
- <div style=3D"float:right" class=3D"SPRITE_paper_pencil-y16 goog-inline=
--block vt"></div>
- </div>
- <span><b>Wiki pages</b></span>
- </div>
- <ul class=3D"pslist nowrap">
- =
-
  <li class=3D"psmeta">
- <a href=3D"wiki/License" title=3D"License and License history of qextse=
-rialport"
- >License</a>
+ <a href=3D"people/list">1 committer</a>
  </li>
  =
 
- <li class=3D"psmeta">
- <a href=3D"wiki/QextSerialPort_1_2_RC" title=3D"QextSerialPort_1_2_RC"
- >QextSerialPort_1_2_RC</a>
- </li>
  =
 
- <li class=3D"psmeta"><a href=3D"w/list">Show all &raquo</a></li>
  <li class=3D"psgap"/>
+ =
+
+ =
+
  </ul>
  =
 
@@ -681,6 +621,36 @@ rialport"
  <ul class=3D"pslist" style=3D"white-space:nowrap">
  =
 
+ <li class=3D"psmeta"><b>Blogs</b></li>
+ =
+
+ <li class=3D"psmeta">
+ <a href=3D"http://www.alexforencich.com/blog" rel=3D"nofollow">Gishi no=
+ Mokusou</a>
+ </li>
+ =
+
+ <li class=3D"psgap"/>
+ =
+
+ =
+
+ <li class=3D"psmeta"><b>External links</b></li>
+ =
+
+ <li class=3D"psmeta">
+ <a href=3D"http://alexforencich.com/wiki/en/xboot/" rel=3D"nofollow">XB=
+oot Wiki</a>
+ </li>
+ =
+
+ <li class=3D"psmeta">
+ <a href=3D"https://github.com/alexforencich/xboot" rel=3D"nofollow">XBo=
+ot GitHub</a>
+ </li>
+ =
+
+ <li class=3D"psgap"/>
  =
 
  =
@@ -689,8 +659,8 @@ rialport"
  =
 
  <li class=3D"psmeta">
- <a href=3D"http://groups.google.com/group/qextserialport" rel=3D"nofoll=
-ow">Qesp Mailing List</a>
+ <a href=3D"http://groups.google.com/group/avr-xboot" rel=3D"nofollow">a=
+vr-xboot</a>
  </li>
  =
 
@@ -702,91 +672,42 @@ ow">Qesp Mailing List</a>
 
  </td>
  <td id=3D"wikicontent" class=3D"psdescription">
- <ul><li><font color=3D"blue">&quot;New old&quot; version of QextSerialP=
-ort available in <a href=3D"http://code.google.com/p/qextserialport/down=
-loads/list?can=3D1&amp;q=3D" rel=3D"nofollow">Downloads</a> section. See=
- <a href=3D"https://groups.google.com/forum/?fromgroups#!topic/qextseria=
-lport/kH-dnpZjJiw" rel=3D"nofollow">Qesp Mailing List</a> for explanatio=
-n.</font> </li><li><font color=3D"red"><strong>NOTE:</strong> As of May =
-2009, this is the new location of the project. The <a href=3D"http://qex=
-tserialport.sourceforge.net" rel=3D"nofollow">sourceforge</a> project is=
- <strong>no longer active</strong> .</font> </li><li><font color=3D"blue=
-">From <tt>QextSerialPort 1.2-beta1</tt> on, license of the project has =
-been changed to <strong>MIT</strong> .</font> </li></ul><h2><a name=3D"O=
-verview"></a>Overview<a href=3D"#Overview" class=3D"section_anchor"></a>=
-</h2><p>QextSerialPort provides an interface to old fashioned serial por=
-ts for Qt-based applications. It currently supports Mac OS X, Windows, L=
-inux, FreeBSD. </p><p>QextSerialPort can be used with Qt2, Qt3, Qt4 and =
-Qt5. </p><h2><a name=3D"Download"></a>Download<a href=3D"#Download" clas=
-s=3D"section_anchor"></a></h2><p>You can get the latest source code usin=
-g the following command: </p><pre class=3D"prettyprint">git clone https:=
-//code.google.com/p/qextserialport/</pre><p>Or get one of the released v=
-ersions from <a href=3D"http://code.google.com/p/qextserialport/download=
-s/list?can=3D1&amp;q=3D" rel=3D"nofollow">ALL Downloads</a> </p><blockqu=
-ote>Feel free to report bugs and commit patches, thanks. =
-
-</blockquote><h2><a name=3D"Installation"></a>Installation<a href=3D"#In=
-stallation" class=3D"section_anchor"></a></h2><p>Installation instructio=
-ns can be found from the README file in the source package. </p><p>An on=
-line and more readable version for <a href=3D"/p/qextserialport/wiki/Qex=
-tSerialPort_1_2_RC">QextSerialPort_1_2_RC</a> is available too. </p><h2>=
-<a name=3D"Documents"></a>Documents<a href=3D"#Documents" class=3D"secti=
-on_anchor"></a></h2><h3><a name=3D"Offline"></a>Offline<a href=3D"#Offli=
-ne" class=3D"section_anchor"></a></h3><p>The user manual of the library =
-is included in the latest qextserialport-XXX.tar.gz packages. </p><block=
-quote>Open the file <strong>doc/html/index.html</strong> using your favo=
-rite web browser. =
-
-</blockquote><blockquote>Or integrate the <strong>doc/html/qesp.qch</str=
-ong> into your Qt Creator. =
-
-</blockquote><ul><li>For Qt Assistant:  </li><pre class=3D"prettyprint">=
-Edit =3D=3D&gt; Preferences =3D=3D&gt;  Documentations =3D=3D&gt; Add...=
-</pre></ul><ul><li>For Qt Creator </li><pre class=3D"prettyprint">Tools =
-=3D=3D&gt; Options =3D=3D&gt; Help =3D=3D&gt; Documentations =3D=3D&gt; =
-Add...</pre></ul><h3><a name=3D"Online"></a>Online<a href=3D"#Online" cl=
-ass=3D"section_anchor"></a></h3><ul><li><a href=3D"http://docs.qextseria=
-lport.googlecode.com/git/2.0/index.html" rel=3D"nofollow">QextSerialPort=
- 2.0</a>Preview </li><li><a href=3D"http://docs.qextserialport.googlecod=
-e.com/git/1.2/index.html" rel=3D"nofollow">QextSerialPort 1.2</a> </li><=
-li><a href=3D"http://docs.qextserialport.googlecode.com/git/1.1/index.ht=
-ml" rel=3D"nofollow">QextSerialPort 1.1</a> </li><li><a href=3D"http://d=
-ocs.qextserialport.googlecode.com/git/0.9.0/index.html" rel=3D"nofollow"=
->QextSerialPort 0.9</a> </li></ul><h2><a name=3D"Resources"></a>Resource=
-s<a href=3D"#Resources" class=3D"section_anchor"></a></h2><p>Resources f=
-or Serial Port Developer of Qt. </p><ul><li>Qt Project </li><ul><li><a h=
-ref=3D"http://qt-project.org/doc/qt-4.8/qiodevice.html" rel=3D"nofollow"=
->Qt 4.8: QIODevice Class Reference</a> </li><li><a href=3D"http://doc.qt=
-.nokia.com/qq/qq12-iodevice.html" rel=3D"nofollow">Writing a Custom I/O =
-Device</a> </li><li><a href=3D"http://doc.qt.nokia.com/3.3/qiodevice.htm=
-l" rel=3D"nofollow">Qt 3.3: QIODevice Class Reference</a> </li></ul><li>=
-MSDN </li><ul><li><a href=3D"http://msdn.microsoft.com/library/default.a=
-sp?url=3D/library/en-us/devio/base/communications_resources.asp" rel=3D"=
-nofollow">Communications Resources</a> </li><li><a href=3D"http://msdn.m=
-icrosoft.com/library/default.asp?url=3D/library/en-us/devio/base/about_c=
-ommunications_resources.asp" rel=3D"nofollow">About Communications Resou=
-rces</a> </li><li><a href=3D"http://msdn.microsoft.com/library/default.a=
-sp?url=3D/library/en-us/devio/base/using_communications_resources.asp" r=
-el=3D"nofollow">Using Communications Resources</a> </li><li><a href=3D"h=
-ttp://msdn.microsoft.com/library/default.asp?url=3D/library/en-us/devio/=
-base/communications_functions.asp" rel=3D"nofollow">Communications Funct=
-ions</a> </li><li><a href=3D"http://msdn.microsoft.com/library/default.a=
-sp?url=3D/library/en-us/devio/base/communications_structures.asp" rel=3D=
-"nofollow">Communications Structures</a> </li></ul><li>TLDP </li><ul><li=
-><a href=3D"http://www.tldp.org/HOWTO/Serial-HOWTO.html" rel=3D"nofollow=
-">Serial HOWTO</a> </li><li><a href=3D"http://www.tldp.org/HOWTO/Serial-=
-Programming-HOWTO" rel=3D"nofollow">Serial Programming HOWTO</a> </li></=
-ul><li>Other </li><ul><li><a href=3D"http://www.easysw.com/~mike/serial/=
-serial.html" rel=3D"nofollow">Serial Programming Guide for POSIX Operati=
-ng Systems</a> </li></ul></ul><p>If this project does not meet your requ=
-irements, you can give to try to <a href=3D"/p/qextserialport/wiki/Other=
-SerialPortLibraries">OtherSerialPortLibraries</a> such as QSerialDevice,=
- QtSerialPort, QSerialPort ..., but don&#x27;t forget to file bugs ;-)  =
-</p>
+ <h1><a name=3D"XBoot_Intrduction"></a>XBoot Intrduction<a href=3D"#XBoo=
+t_Intrduction" class=3D"section_anchor"></a></h1><p>XBoot is an extensib=
+le, modular bootloader for the ATMEL AVR processor series, compatible wi=
+th both AVR ATMEGA and AVR XMEGA devices with sufficient memory. It is c=
+ompatible with the AVR109 (butterfly) bootloader protocol with a few XME=
+GA specific extensions for access to the user and production signature r=
+ows. XBoot includes several advanced features including multiple serial =
+busses and an API providing the ability for the running application to u=
+pdate itself without the need for external programming hardware. Many bo=
+otloaders only support RS232 for programming from a PC, but XBoot&#x27;s=
+ modularity allows it to support the exact same set of commands over any=
+ hardware serial port. Currently, I=C2=B2C, RS485, and parallel FIFO sup=
+port have been incorporated. This allows for easy in-system reconfigurat=
+ion of XBoot equipped chips with little additional time investment. Also=
+, XBoot includes support for I=C2=B2C address autonegotiation for when m=
+ultiple, identically configured processors sit on the same I=C2=B2C bus.=
+  </p><p>Note: This repository has been moved to <a href=3D"https://gith=
+ub.com/alexforencich/xboot" rel=3D"nofollow">https://github.com/alexfore=
+ncich/xboot</a> </p><p>Official xboot wiki is located at <a href=3D"http=
+://alexforencich.com/wiki/en/xboot/" rel=3D"nofollow">http://alexforenci=
+ch.com/wiki/en/xboot/</a> </p><h1><a name=3D"Features"></a>Features<a hr=
+ef=3D"#Features" class=3D"section_anchor"></a></h1><ul><li>Supports all =
+ATMEL XMEGA series processors </li><li>Supports any ATMEL ATMEGA process=
+or with sufficient memory (needs 4K of boot space) </li><li>AVR109 (AVR =
+Butterfly) compatible protocol </li><li>RS232, RS485, I=C2=B2C, and para=
+llel FIFO communication </li><li>Highly reconfigurable </li><li>Firmware=
+ update API to allow updating client firmware with no external programmi=
+ng hardware </li><li>Supports I=C2=B2C bus address autonegotiation (XMEG=
+A only) </li></ul><h1><a name=3D"Documentation"></a>Documentation<a href=
+=3D"#Documentation" class=3D"section_anchor"></a></h1><ul><li><a href=3D=
+"http://alexforencich.com/wiki/en/xboot/" rel=3D"nofollow">http://alexfo=
+rencich.com/wiki/en/xboot/</a> </li></ul>
  </td>
  </tr>
 </table>
-<script src=3D"http://www.gstatic.com/codesite/ph/10432160532581480325/j=
+<script src=3D"http://www.gstatic.com/codesite/ph/17200360115907490597/j=
 s/prettify/prettify_core_compiled.js"></script>
 <script type=3D"text/javascript">
  prettyPrint();
@@ -799,7 +720,7 @@ s/prettify/prettify_core_compiled.js"></script>
  =
 
  <script type=3D"text/javascript" src=3D"http://www.gstatic.com/codesite=
-/ph/10432160532581480325/js/ph_core.js"></script>
+/ph/17200360115907490597/js/ph_core.js"></script>
  =
 
  =
@@ -831,16 +752,11 @@ google.com/projecthosting/">Google Project Hosting</a></span>
 
  =
 
- =
-
- <script type=3D"text/javascript">_CS_reportToCsi();</script>
- =
-
  </body>
 </html>
 
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=phosting.ico
 Content-Type: image/x-icon; name=phosting.ico
 Content-Location: http://www.gstatic.com/codesite/ph/images/phosting.ico
@@ -915,7 +831,7 @@ zcBYPw9YPw/VrnXVlkezXgChVgBNMwBNMwC9s6D///+yppCFc1B9ZjqFc1C9s6D/
 AAPAAAADwAAAA8AAAAPAAAADwAAAA4AAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAeAA
 AAPwAAAH+AAAB/wAAAf+AAAH/wAAB/+AAA//wAAP/+AEH//wD///+B////5//w==
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline
 Content-Type: image/gif
 Content-Location: http://ssl.gstatic.com/codesite/ph/images/button-bg.gif
@@ -932,10 +848,10 @@ t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm
 58IR6uvs7Abv8AYJ8/QJDff4DQz7/AwZNRs2ZBCIoKBBBAcSKjzwoKHDBxIiSpSw
 oKLFBRYyyggBI4QHDyxiqPBgIwgAOw==
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline
 Content-Type: image/png
-Content-Location: http://www.gstatic.com/codesite/ph/10432160532581480325/css/sprite.png
+Content-Location: http://www.gstatic.com/codesite/ph/17200360115907490597/css/sprite.png
 Content-Transfer-Encoding: Base64
 
 iVBORw0KGgoAAAANSUhEUgAAALQAAAAgCAYAAAC7OlJnAAAABmJLR0QA/wD/AP+g
@@ -1045,17 +961,17 @@ CHjFXULkaIwB5ufv1neHAm3/tRyakYOB/FpYP6MQP96O7G/SJ5cU6H/2Zq+LD0Dh
 uogfABvODIAhPEYfHBv7PH+Lk4rbFTGeK6D1fx3wsXpW1nDnfxWg7b18FNCiggEB
 cGz5BPC5Xj5qH5jt8Zn+H1w8eA2Urr7DAAAAAElFTkSuQmCC
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=core.css
 Content-Type: text/css; name=core.css
-Content-Location: http://www.gstatic.com/codesite/ph/10432160532581480325/css/core.css
+Content-Location: http://www.gstatic.com/codesite/ph/17200360115907490597/css/core.css
 Content-Transfer-Encoding: 8bit
 
 body{background:#fff;font:82% arial,sans-serif;margin:3px 0 3px 0;min-width:768px}.headbg{margin:0 8px}a:link,a:focus{color:#00c}a:active{color:red}select,input{font-family:arial,sans-serif}input[type="text"]{border-color:#999 #ccc #ccc;border-style:solid;border-width:1px;padding:2px 1px}input[type=button],input[type=submit],.buttonify{font-size:100%;background:url("//ssl.gstatic.com/codesite/ph/images/button-bg.gif") repeat-x scroll left top #e3e3e3;background:-webkit-gradient(linear,0% 40%,0% 70%,from(#f9f9f9),to(#e3e3e3));background:-moz-linear-gradient(top,#fff,#ddd);vertical-align:baseline;padding:1px 3px 1px 3px;border:1px solid #aaa;border-top-color:#ccc;border-bottom-color:#888;border-radius:3px;cursor:pointer;text-decoration:none}.buttonify{color:#000!important}@-moz-document url-prefix(){.buttonify{padding:2px 3px 2px 3px}}input[type=button]:hover,input[type=submit]:hover,.buttonify:hover{border-color:#666;text-decoration:none!important}.capsule_left{border-right:0;border-top-right-radius:0;border-bottom-right-radius:0}.capsule_right{border-top-left-radius:0;border-bottom-left-radius:0}.capsule_middle{border-radius:0;border-right:0}.mode_button_active,.buttonify:active,input[type=button]:active,input[type=submit]:active{background:url("//ssl.gstatic.com/codesite/ph/images/button-bg.gif") repeat-x scroll left bottom #bbb;background:-webkit-gradient(linear,0% 40%,0% 70%,from(#e3e3e3),to(#f9f9f9));background:-moz-linear-gradient(top,#e3e3e3,#f9f9f9);border-color:#aaa}textarea{border-color:#999 #ccc #ccc;border-style:solid;border-width:1px}td td,th th,th td,td th{font-size:100%}pre{font-size:110%}form{padding:0;margin:0}.gtb{background:#ebeff9;border-bottom:1px solid #6b90da;padding:5px 10px 0 5px;white-space:nowrap}.gtb .tab{color:#00c;cursor:pointer;float:left;margin:5px 15px 6px 10px}.gtb .active{background:#fff;border:1px solid #6b90da;border-bottom:0;color:#000;cursor:default;font-weight:bold;margin:0 5px -1px 0;padding:5px 9px 6px;text-decoration:none}.gtb .gtbc{clear:left}.subt{background:#fff;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f1f1f1');background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));background:-moz-linear-gradient(top,#fff,#f1f1f1);border-bottom:1px solid #ccc;padding:0 0 0 14px;height:33px}table{border-collapse:separate}.box-inner{margin:0;padding:0 13px 0 13px}.round1{border-left:1px solid #fff;border-right:1px solid #fff}.round2{border-left:2px solid #fff;border-right:2px solid #fff}.round4{border-left:4px solid #fff;border-right:4px solid #fff}.round1,.round2,.round4{font-size:0;margin:0;padding:0;height:1px}.bevel-left,.bevel-right{padding:0}.bevel-right .round4,.bevel-right .round2,.bevel-right .round1{border-left:none}.bevel-left .round4,.bevel-left .round2,.bevel-left .round1{border-right:none}.bevel-left .box-inner,.bevel-right .box-inner{padding:0}.bubble_bg{background:#c3d9ff;margin-bottom:0.6em}.bubble{padding:4px}#bub{padding:0 1px 0 1px}.bub-top{margin:0 2px 2px}.bub-bottom{margin:2px 2px 0}.drop-down-bub{font-size:80%;margin-top:-1px}.t5 h4{background-color:#e5ecf9;margin:4px 4px 0 4px;border-top:1px solid #3366cc;padding:2px}.t5 .section{margin:0 4px 1.6em 4px;padding:4px}.t5 .section .submit{margin:8px}#maincol{padding:3px;background:#fff}.isf a,.at a,.isf a:visited,.at a:visited{color:#0000cc;text-decoration:none}.isf a:hover,.at a:hover{color:#0000cc;text-decoration:underline}.st1 .inst1 a,.st2 .inst2 a,.st3 .inst3 a,.st4 .inst4 a,.st5 .inst5 a,.st6 .inst6 a,.st7 .inst7 a,.st8 .inst8 a,.st9 .inst9 a{color:#000;font-weight:bold;text-decoration:none;height:20px}.notice,.error{background:#fff1a8;font-weight:bold}.adminonly{color:#a00;font-style:italic}.fieldhelp{color:grey}.fielderror{color:#a00;font-weight:bold;padding:4px}.tip{background:#e5ecf9;font-size:92%;margin:5px;width:14em}.tip .box-inner{padding:6px}.gbh{border-top:1px solid #c9d7f1;font-size:1px;height:0;position:absolute;top:24px;width:100%}#plogo{width:55px;text-align:center;vertical-align:bottom}#pname{font-size:300%;margin:0;padding:0}#pname a,#pname a:visited{text-decoration:none;color:#666}#project_summary_link{text-decoration:none;color:#444}.vt{vertical-align:top}.indicator{font-size:x-small;color:#00c}div.h4,table.h4{background-color:#e5ecf9;margin-bottom:2px;border-top:1px solid #3366cc;padding:2px;font-weight:bold;position:relative;margin-top:2px}.mainhdr{background-color:#ebeff9;border-bottom:1px solid #6b90da;font-weight:bold;font-size:133%;padding:2px}.secondaryhdr{background-color:#eee;padding:10px;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd}.messagebox{background-color:#eee;padding:10px;border:1px solid #ddd}h1{font-size:x-large;margin-top:0px}h2{font-size:large}h3{font-size:medium;background:#e5ecf9;border-top:1px solid #3366cc;padding:0.5ex 0.5em 0.5ex 0.5em;margin-right:2em}h4{font-size:small}img{border:0}#gaia{text-align:right;margin-bottom:10px}#gaia a{color:#00c;text-decoration:none}#header{position:relative;height:55px;padding-top:6px;margin-bottom:-9px}#logo{padding-right:18px;position:absolute;top:0;left:0}#logo img{width:153px;height:55px}#title{margin-left:171px;border-top:1px solid #3366cc;background-color:#e5ecf9;font-size:large;font-weight:bold;padding-left:3px;padding-top:1px;padding-bottom:1px}#footer{clear:both;text-align:center;margin-top:3.5em;margin-bottom:1em;height:53px;background-repeat:no-repeat;background-position:left center}#footer .text{padding-top:20px}.label{text-decoration:none;color:green!important}.label:hover{text-decoration:underline}.results{border-left:1px solid #bbb;border-right:1px solid #bbb}#colcontrol{padding:5px}.cuetip{background:#e5ecf9;border-bottom:1px solid white}.results th{border:1px solid #ccc}.results th{border-left:0}.results th:last-child{border-right:0}.results tr td{border-bottom:1px solid #ccc}.results tr:last-child{border-bottom:0}.results th,.results_lite th{background:#eeeeee;text-align:left;padding-right:1px;border-top:1px solid #ccc;border-bottom:1px solid #ccc}.results th a,.results th a:visited{color:#0000cc;padding-right:4px;margin-right:4px}.results td{background:#fff}.results td{cursor:pointer}.results td{padding:4px}.results td a{color:#000;text-decoration:none}.results td.id a{color:#0000cc;text-decoration:underline;white-space:nowrap}.results td.id a:visited{color:purple;text-decoration:underline}.results td.id a:hover{color:red;text-decoration:underline}table.results tr.hover td{color:#009;background-color:#f4f4ff}table.results tr.hover td a{color:#009}.results .label{font-size:80%}.results .selected td{background:#ffc}.results td tt{color:#999;font-style:italic;font-weight:bold}.results .displayproperties{font-size:80%;color:#666}.grid td{border-right:1px solid #ccc}.grid td{border-left:0}.grid td:last-child{border-right:0}.flipper{font-family:monospace;font-size:120%}.flipper ul{list-style-type:none;padding:0;margin:0em 0.3em}.flipper b{margin:0em 0.3em}.closed .ifOpened{display:none}.closed .opened span.ifOpened{display:inline}.opened .ifClosed{display:none}.opened .closed span.ifClosed{display:inline}.h3{font-size:130%;font-weight:bolder}input{padding-left:1px;padding-right:1px}textarea{padding-left:1px;padding-right:1px}.pagination{font-size:100%;float:right;white-space:nowrap}.pagination a{margin-left:0.3em;margin-right:0.3em}.author{margin-bottom:1em}#searchtips{padding-left:2em}#searchtips p{margin-left:2em}.issueList .inIssueList span,.issueAdvSearch .inIssueAdvSearch a,.issueSubscriptions .inIssueSubscriptions a,.issueSearchTips .inIssueSearchTips a{font-weight:bold;text-decoration:none;color:#000}iframe[frameborder="1"]{border:1px solid #999}.menuDiv{margin-top:5px;border-color:#c9d7f1 #3366cc #3366cc #a2bae7;border-style:solid;border-width:1px;z-index:1001;padding:0;width:175px;background:#fff;overflow:hidden}.menuDiv .menuText{padding:3px;text-decoration:none;background:#fff}.menuDiv .menuItem{color:#0000cc;padding:3px;text-decoration:none;background:#fff}.menuDiv .menuItem:hover{color:#fff;background:#3366cc;cursor:hand}.menuDiv .categoryTitle{padding-left:1px}.menuDiv .menuCategory,.menuDiv .categoryTitle{margin-top:4px}.menuDiv .menuSeparator{margin:0 0.5em;border:0;border-top:1px solid #c9d7f1}.hostedBy{text-align:center;vertical-align:center}.fullscreen-popup{position:fixed;right:4%;left:4%;top:5%;max-height:90%;opacity:0.85;-moz-opacity:0.85;filter:alpha(opacity=85);border-radius:10px;background:#000;color:white;text-shadow:#000 1px 1px 7px;padding:1em;z-index:10;overflow-x:hidden;overflow-y:hidden}.fullscreen-popup a{color:#dd0}div#keys_help th{color:yellow;text-align:left}div#keys_help td{font-weight:normal;color:white}td.shortcut{text-align:right}span.letter{color:#8d0;font-family:monospace;font-size:medium}#ac-list{border:1px solid #bbb;background:#fff;color:#00c;padding:2px;z-index:10;max-height:18em;overflow-x:hidden;overflow-y:auto}#ac-list{font-size:95%}#ac-list tr{margin:1px;cursor:pointer;padding:0 10px}#ac-list th{color:#333;text-align:left}#ac-list .selected,#ac-list .selected td{background:#c3d9ff}#ac-list td,#ac-list th{white-space:nowrap;padding-right:22px}.list{background-color:#ebeff9;border-top:1px solid #bbb;border-left:1px solid #bbb;border-right:1px solid #bbb;padding:5px}.list-foot{background-color:#ebeff9;border-bottom:1px solid #bbb;border-left:1px solid #bbb;border-right:1px solid #bbb;padding:5px;height:20px}.graytext{color:#666}.vspacer{margin-top:1em}.hspacer{margin-right:1em}.emphasis{font-weight:bold}.formrow{vertical-align:top;padding-bottom:.569em;white-space:nowrap;overflow:hidden;padding-top:.2em}.forminline{display:inline-block;vertical-align:top}.formlabelgutter{margin-top:0.3em;text-align:right;vertical-align:top;white-space:normal;width:13em}.formlabel{font-weight:bold;text-align:right}.forminputgutter{margin-top:0.3em;text-align:left;vertical-align:top;white-space:normal;width:36em}.forminputgutter input[type="checkbox"]{float:left}.forminput{width:100%}.formshortinput{width:11em}.formselectgutter{margin-top:0.3em;text-align:left;vertical-align:top;white-space:normal;width:18em}.formselect{width:18em}.formqm{margin-left:0.25em;margin-right:0.25em}.formerror{color:#a00;display:block;text-align:left}.tablerow{vertical-align:top;padding-bottom:.569em;white-space:nowrap;overflow:hidden;padding-top:.2em}.tablelabelgutter{margin-top:0.3em;text-align:left;vertical-align:top;white-space:normal;width:10em}.tablelabel{font-weight:bold;text-align:left}.userlink{white-space:nowrap}.ph-visibility-icon{margin:10px;vertical-align:bottom}dl.displaychoicelist dd{margin-bottom:1em}dl.displaychoicelist input{vertical-align:top}html>body .goog-inline-block{display:-moz-inline-box;display:inline-block}.goog-inline-block{position:relative;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}.uploads-disabled{background-color:yellow;color:red;text-align:center;font-weight:bold}.SPRITE_close_icon{background:no-repeat url(sprite.png) -79px -16px;width:16px;height:16px}.SPRITE_comments{background:no-repeat url(sprite.png) -95px 0;width:14px;height:12px}.SPRITE_dl_arrow{background:no-repeat url(sprite.png) -119px 0;width:25px;height:16px}.SPRITE_downarrow{background:no-repeat url(sprite.png) -30px 0;width:10px;height:12px}.SPRITE_filedownload-g16{background:no-repeat url(sprite.png) -14px -16px;width:16px;height:16px}.SPRITE_lock_grey{background:no-repeat url(sprite.png) -15px 0;width:15px;height:16px}.SPRITE_minus{background:no-repeat url(sprite.png) -30px -12px;width:9px;height:9px}.SPRITE_new-24{background:no-repeat url(sprite.png) -55px 0;width:24px;height:24px}.SPRITE_pagination-first{background:no-repeat url(sprite.png) -111px -16px;width:16px;height:16px}.SPRITE_pagination-last{background:no-repeat url(sprite.png) -127px -16px;width:16px;height:16px}.SPRITE_pagination-next{background:no-repeat url(sprite.png) -144px 0;width:16px;height:16px}.SPRITE_pagination-prev{background:no-repeat url(sprite.png) -164px -16px;width:16px;height:16px}.SPRITE_paper_pencil-y16{background:no-repeat url(sprite.png) -164px 0;width:16px;height:16px}.SPRITE_paperclip{background:no-repeat url(sprite.png) 0 0;width:15px;height:15px}.SPRITE_pencil-y14{background:no-repeat url(sprite.png) 0 -16px;width:14px;height:14px}.SPRITE_people-y16{background:no-repeat url(sprite.png) -79px 0;width:16px;height:16px}.SPRITE_plus{background:no-repeat url(sprite.png) -30px -21px;width:9px;height:9px}.SPRITE_question-16{background:no-repeat url(sprite.png) -95px -16px;width:16px;height:16px}.SPRITE_show-arrow{background:no-repeat url(sprite.png) -160px 0;width:4px;height:12px}.SPRITE_star_off{background:no-repeat url(sprite.png) -40px -15px;width:15px;height:15px}.SPRITE_star_on{background:no-repeat url(sprite.png) -40px 0;width:15px;height:15px}.SPRITE_tearoff_icon{background:no-repeat url(sprite.png) -144px -16px;width:16px;height:16px}.SPRITE_triangle{background:no-repeat url(sprite.png) -109px 0;width:10px;height:12px}
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=ph_detail.css
 Content-Type: text/css; name=ph_detail.css
-Content-Location: http://www.gstatic.com/codesite/ph/10432160532581480325/css/ph_detail.css
+Content-Location: http://www.gstatic.com/codesite/ph/17200360115907490597/css/ph_detail.css
 Content-Transfer-Encoding: 8bit
 
 .pmeta_bubble_bg { background: #e5ecf9; margin-bottom: 0.6em;}
@@ -1396,7 +1312,7 @@ div td .questionmark { color: #a03;}
 #derived_labels_target .label {font-weight: bold;}
 #derived_labels_target .label:hover {text-decoration: none;}
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=defaultlogo.png
 Content-Type: image/png; name=defaultlogo.png
 Content-Location: http://www.gstatic.com/codesite/ph/images/defaultlogo.png
@@ -1426,7 +1342,7 @@ EXskCL8sGIKtbPs+inJcSrwQ6Li1QlSCKUGapCcPBDxprJ6b7mzuWt+Dp3p48L24
 UyqkpW4KDYWH0nvpcP05g9K3+etP+Ev7H3/o/AHSZrxBYW5xrQAAAABJRU5ErkJg
 gg==
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=star_off.gif
 Content-Type: image/gif; name=star_off.gif
 Content-Location: http://www.gstatic.com/codesite/ph/images/star_off.gif
@@ -1437,10 +1353,10 @@ R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q
 MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYd
 zILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=prettify_core_compiled.js
 Content-Type: text/javascript; name=prettify_core_compiled.js
-Content-Location: http://www.gstatic.com/codesite/ph/10432160532581480325/js/prettify/prettify_core_compiled.js
+Content-Location: http://www.gstatic.com/codesite/ph/17200360115907490597/js/prettify/prettify_core_compiled.js
 Content-Transfer-Encoding: Quoted-Printable
 
 (function() {
@@ -1756,10 +1672,10 @@ nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"s=
 tr",PR_TAG:"tag",PR_TYPE:"typ"}})();
 })();
 
-------------VwEwWpylDKnHQw6CxWGvsj
+------------lb8P0URdVXQaMPT0u8sLbH
 Content-Disposition: inline; filename=ph_core.js
 Content-Type: text/javascript; name=ph_core.js
-Content-Location: http://www.gstatic.com/codesite/ph/10432160532581480325/js/ph_core.js
+Content-Location: http://www.gstatic.com/codesite/ph/17200360115907490597/js/ph_core.js
 Content-Transfer-Encoding: Quoted-Printable
 
 function Za(a){throw a;}
@@ -1823,36 +1739,38 @@ a,f=3D0;f<d;f++)f in e&&b.call(c,e[f],f,a)},Zwa=3DZo.filter?function(a,b=
 ,c){Zn(a.length!=3DZd);return Zo.filter.call(a,
 b,c)}:function(a,b,c){for(var d=3Da.length,e=3D[],f=3D0,g=3DZh(a)?a.spli=
 t(""):a,k=3D0;k<d;k++)if(k in g){var h=3Dg[k];b.call(c,h,k,a)&&(e[f++]=3D=
-h)}return e},Zp=3Dfunction(a,b){return 0<=3DZua(a,b)},Zxa=3Dfunction(a,b=
-){var c=3DZua(a,b);0<=3Dc&&(Zn(a.length!=3DZd),Zo.splice.call(a,c,1))},Z=
-ya=3Dfunction(a){return Zo.concat.apply(Zo,arguments)},Zza=3Dfunction(a)=
-{var b=3Da.length;if(0<b){for(var c=3DArray(b),d=3D0;d<b;d++)c[d]=3Da[d]=
-;return c}return[]},ZBa=3Dfunction(a,b,c,d){Zn(a.length!=3DZd);Zo.splice=
-.apply(a,ZAa(arguments,1))},ZAa=3Dfunction(a,
-b,c){Zn(a.length!=3DZd);return 2>=3Darguments.length?Zo.slice.call(a,b):=
-Zo.slice.call(a,b,c)};var Zq=3Dfunction(a,b){this.width=3Da;this.height=3D=
-b};Zq.prototype.na=3Dfunction(){return new Zq(this.width,this.height)};Z=
-q.prototype.toString=3Dfunction(){return"("+this.width+" x "+this.height=
-+")"};Zq.prototype.round=3Dfunction(){this.width=3DMath.round(this.width=
-);this.height=3DMath.round(this.height);return this};var ZCa=3Dfunction(=
-a,b){for(var c in a)b.call(Zb,a[c],c,a)},ZDa=3Dfunction(a){var b=3D[],c=3D=
-0,d;for(d in a)b[c++]=3Da[d];return b},ZEa=3Dfunction(a){var b=3D[],c=3D=
-0,d;for(d in a)b[c++]=3Dd;return b},ZFa=3D"constructor hasOwnProperty is=
-PrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(=
-" "),ZGa=3Dfunction(a,b){for(var c,d,e=3D1;e<arguments.length;e++){d=3Da=
-rguments[e];for(c in d)a[c]=3Dd[c];for(var f=3D0;f<ZFa.length;f++)c=3DZF=
-a[f],Object.prototype.hasOwnProperty.call(d,c)&&(a[c]=3Dd[c])}};var Zr,Z=
-Ha,ZIa,ZJa,ZKa=3Dfunction(){return Zf.navigator?Zf.navigator.userAgent:Z=
-d};ZJa=3DZIa=3DZHa=3DZr=3DZe;var ZLa;if(ZLa=3DZKa()){var ZMa=3DZf.naviga=
-tor;Zr=3D0=3D=3DZLa.indexOf("Opera");ZHa=3D!Zr&&-1!=3DZLa.indexOf("MSIE"=
-);ZIa=3D!Zr&&-1!=3DZLa.indexOf("WebKit");ZJa=3D!Zr&&!ZIa&&"Gecko"=3D=3DZ=
-Ma.product}var ZNa=3DZr,Zs=3DZHa,Zt=3DZJa,Zu=3DZIa,ZOa=3DZf.navigator,ZP=
-a=3D-1!=3D(ZOa&&ZOa.platform||"").indexOf("Win"),ZQa=3Dfunction(){var a=3D=
-Zf.document;return a?a.documentMode:Zb},ZRa;
-a:{var ZSa=3D"",ZTa;if(ZNa&&Zf.opera)var ZUa=3DZf.opera.version,ZSa=3D"f=
+h)}return e},Zya=3Dfunction(a){var b;a:{b=3DZxa;for(var c=3Da.length,d=3D=
+Zh(a)?a.split(""):a,e=3D0;e<c;e++)if(e in d&&b.call(Zb,d[e],e,a)){b=3De;=
+break a}b=3D-1}return 0>b?Zd:Zh(a)?a.charAt(b):a[b]},Zp=3Dfunction(a,b){=
+return 0<=3DZua(a,b)},Zza=3Dfunction(a,b){var c=3DZua(a,b);0<=3Dc&&(Zn(a=
+.length!=3DZd),Zo.splice.call(a,c,1))},ZAa=3Dfunction(a){return Zo.conca=
+t.apply(Zo,arguments)},ZBa=3Dfunction(a){var b=3D
+a.length;if(0<b){for(var c=3DArray(b),d=3D0;d<b;d++)c[d]=3Da[d];return c=
+}return[]},ZDa=3Dfunction(a,b,c,d){Zn(a.length!=3DZd);Zo.splice.apply(a,=
+ZCa(arguments,1))},ZCa=3Dfunction(a,b,c){Zn(a.length!=3DZd);return 2>=3D=
+arguments.length?Zo.slice.call(a,b):Zo.slice.call(a,b,c)};var Zq=3Dfunct=
+ion(a,b){this.width=3Da;this.height=3Db};Zq.prototype.na=3Dfunction(){re=
+turn new Zq(this.width,this.height)};Zq.prototype.toString=3Dfunction(){=
+return"("+this.width+" x "+this.height+")"};Zq.prototype.round=3Dfunctio=
+n(){this.width=3DMath.round(this.width);this.height=3DMath.round(this.he=
+ight);return this};var ZEa=3Dfunction(a,b){for(var c in a)b.call(Zb,a[c]=
+,c,a)},ZFa=3Dfunction(a){var b=3D[],c=3D0,d;for(d in a)b[c++]=3Da[d];ret=
+urn b},ZGa=3Dfunction(a){var b=3D[],c=3D0,d;for(d in a)b[c++]=3Dd;return=
+ b},ZHa=3D"constructor hasOwnProperty isPrototypeOf propertyIsEnumerable=
+ toLocaleString toString valueOf".split(" "),ZIa=3Dfunction(a,b){for(var=
+ c,d,e=3D1;e<arguments.length;e++){d=3Darguments[e];for(c in d)a[c]=3Dd[=
+c];for(var f=3D0;f<ZHa.length;f++)c=3DZHa[f],Object.prototype.hasOwnProp=
+erty.call(d,c)&&(a[c]=3Dd[c])}};var Zr,ZJa,ZKa,ZLa,ZMa=3Dfunction(){retu=
+rn Zf.navigator?Zf.navigator.userAgent:Zd};ZLa=3DZKa=3DZJa=3DZr=3DZe;var=
+ ZNa;if(ZNa=3DZMa()){var ZOa=3DZf.navigator;Zr=3D0=3D=3DZNa.indexOf("Ope=
+ra");ZJa=3D!Zr&&-1!=3DZNa.indexOf("MSIE");ZKa=3D!Zr&&-1!=3DZNa.indexOf("=
+WebKit");ZLa=3D!Zr&&!ZKa&&"Gecko"=3D=3DZOa.product}var ZPa=3DZr,Zs=3DZJa=
+,Zt=3DZLa,Zu=3DZKa,ZQa=3Dfunction(){var a=3DZf.document;return a?a.docum=
+entMode:Zb},ZRa;
+a:{var ZSa=3D"",ZTa;if(ZPa&&Zf.opera)var ZUa=3DZf.opera.version,ZSa=3D"f=
 unction"=3D=3Dtypeof ZUa?ZUa():ZUa;else if(Zt?ZTa=3D/rv\:([^\);]+)(\)|;)=
 /:Zs?ZTa=3D/MSIE\s+([^\);]+)(\)|;)/:Zu&&(ZTa=3D/WebKit\/(\S+)/),ZTa)var =
-ZVa=3DZTa.exec(ZKa()),ZSa=3DZVa?ZVa[1]:"";if(Zs){var ZWa=3DZQa();if(ZWa>=
+ZVa=3DZTa.exec(ZMa()),ZSa=3DZVa?ZVa[1]:"";if(Zs){var ZWa=3DZQa();if(ZWa>=
 parseFloat(ZSa)){ZRa=3DString(ZWa);break a}}ZRa=3DZSa}
 var ZXa=3DZRa,ZYa=3D{},Zv=3Dfunction(a){var b;if(!(b=3DZYa[a])){b=3D0;fo=
 r(var c=3DString(ZXa).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),d=3D=
@@ -1869,10 +1787,10 @@ b)}b=3DZYa[a]=3D0<=3Db}return b},ZZa=3DZf.document,Z_a=3D!ZZa||!Zs?Zb:ZQ=
 a()||("CSS1Compat"=3D=3DZZa.compatMode?parseInt(ZXa,10):5);var Z0a=3D!Zs=
 ||Zs&&9<=3DZ_a,Z1a=3D!Zt&&!Zs||Zs&&Zs&&9<=3DZ_a||Zt&&Zv("1.9.1"),Z2a=3DZ=
 s&&!Zv("9");var Zw=3Dfunction(a){a=3Da.className;return Zh(a)&&a.match(/=
-\S+/g)||[]},Z3a=3Dfunction(a,b){for(var c=3DZw(a),d=3DZAa(arguments,1),e=
+\S+/g)||[]},Z3a=3Dfunction(a,b){for(var c=3DZw(a),d=3DZCa(arguments,1),e=
 =3Dc.length+d.length,f=3Dc,g=3D0;g<d.length;g++)Zp(f,d[g])||f.push(d[g])=
 ;a.className=3Dc.join(" ");return c.length=3D=3De},Z4a=3Dfunction(a,b,c)=
-{for(var d=3DZw(a),e=3DZe,f=3D0;f<d.length;f++)d[f]=3D=3Db&&(ZBa(d,f--,1=
+{for(var d=3DZw(a),e=3DZe,f=3D0;f<d.length;f++)d[f]=3D=3Db&&(ZDa(d,f--,1=
 ),e=3DZc);e&&(d.push(c),a.className=3Dd.join(" "))};var Zx=3Dfunction(a)=
 {return Zh(a)?document.getElementById(a):a},Z5a=3Dfunction(a,b,c){var d=3D=
 document;c=3Dc||d;a=3Da&&"*"!=3Da?a.toUpperCase():"";if(c.querySelectorA=
@@ -1882,7 +1800,7 @@ var d=3D{},e=3D0,f=3D0,g;g=3Dc[f];f++)a=3D=3Dg.nodeName&&(d[e++]=3Dg);d.=
 length=3De;return d}return c}c=3Dc.getElementsByTagName(a||"*");if(b){d=3D=
 {};for(f=3De=3D0;g=3Dc[f];f++)a=3Dg.className,"function"=3D=3Dtypeof a.s=
 plit&&Zp(a.split(/\s+/),
-b)&&(d[e++]=3Dg);d.length=3De;return d}return c},Z7a=3Dfunction(a,b){ZCa=
+b)&&(d[e++]=3Dg);d.length=3De;return d}return c},Z7a=3Dfunction(a,b){ZEa=
 (b,function(b,d){"style"=3D=3Dd?a.style.cssText=3Db:"class"=3D=3Dd?a.cla=
 ssName=3Db:"for"=3D=3Dd?a.htmlFor=3Db:d in Z6a?a.setAttribute(Z6a[d],b):=
 0=3D=3Dd.lastIndexOf("aria-",0)||0=3D=3Dd.lastIndexOf("data-",0)?a.setAt=
@@ -1895,12 +1813,12 @@ cumentElement:a.body;return new Zq(a.clientWidth,a.clientHeight)},Zy=3Df=
 unction(a,b,c){return Z9a(document,arguments)},Z9a=3Dfunction(a,b){var c=
 =3Db[0],d=3Db[1];if(!Z0a&&d&&(d.name||d.type)){c=3D["<",c];d.name&&c.pus=
 h(' name=3D"',Zm(d.name),'"');if(d.type){c.push(' type=3D"',Zm(d.type),'=
-"');var e=3D{};ZGa(e,d);delete e.type;d=3De}c.push(">");c=3Dc.join("")}c=
+"');var e=3D{};ZIa(e,d);delete e.type;d=3De}c.push(">");c=3Dc.join("")}c=
 =3Da.createElement(c);d&&(Zh(d)?c.className=3Dd:"array"=3D=3DZg(d)?Z3a.a=
 pply(Zd,[c].concat(d)):Z7a(c,d));2<
 b.length&&Z$a(a,c,b,2);return c},Z$a=3Dfunction(a,b,c,d){function e(c){c=
 &&b.appendChild(Zh(c)?a.createTextNode(c):c)}for(;d<c.length;d++){var f=3D=
-c[d];Zda(f)&&!(Zea(f)&&0<f.nodeType)?Zva(Zab(f)?Zza(f):f,e):e(f)}},Zbb=3D=
+c[d];Zda(f)&&!(Zea(f)&&0<f.nodeType)?Zva(Zab(f)?ZBa(f):f,e):e(f)}},Zbb=3D=
 function(a,b){Z$a(9=3D=3Da.nodeType?a:a.ownerDocument||a.document,a,argu=
 ments,1)},Zcb=3Dfunction(a,b){b.parentNode&&b.parentNode.insertBefore(a,=
 b.nextSibling)},Zdb=3D{SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},Zeb=3D=
@@ -1917,22 +1835,22 @@ a.length){if(Zea(a))return"function"=3D=3D
 typeof a.item||"string"=3D=3Dtypeof a.item;if("function"=3D=3DZg(a))retu=
 rn"function"=3D=3Dtypeof a.item}return Ze},Zhb=3Dfunction(a,b){for(var c=
 =3D0;a;){if(b(a))return a;a=3Da.parentNode;c++}return Zd},Zib=3Dfunction=
-(a){this.La=3Da||Zf.document||document};Z=3DZib.prototype;Z.Kc=3Dfunctio=
-n(a,b,c){return Z9a(this.La,arguments)};Z.createElement=3Dfunction(a){re=
-turn this.La.createElement(a)};Z.createTextNode=3Dfunction(a){return thi=
-s.La.createTextNode(String(a))};Z.appendChild=3Dfunction(a,b){a.appendCh=
+(a){this.Ka=3Da||Zf.document||document};Z=3DZib.prototype;Z.Ic=3Dfunctio=
+n(a,b,c){return Z9a(this.Ka,arguments)};Z.createElement=3Dfunction(a){re=
+turn this.Ka.createElement(a)};Z.createTextNode=3Dfunction(a){return thi=
+s.Ka.createTextNode(String(a))};Z.appendChild=3Dfunction(a,b){a.appendCh=
 ild(b)};
-Z.Xb=3Dfunction(a){return Z1a&&a.children!=3DZb?a.children:Zwa(a.childNo=
+Z.Vb=3Dfunction(a){return Z1a&&a.children!=3DZb?a.children:Zwa(a.childNo=
 des,function(a){return 1=3D=3Da.nodeType})};var Zjb=3Dfunction(a){Zjb[" =
 "](a);return a};Zjb[" "]=3DZca;var Zkb=3D!Zs||Zs&&9<=3DZ_a,Zlb=3DZs&&!Zv=
-("9");!Zu||Zv("528");Zt&&Zv("1.9b")||Zs&&Zv("8")||ZNa&&Zv("9.5")||Zu&&Zv=
-("528");Zt&&!Zv("8")||Zs&&Zv("9");var Zmb=3Dfunction(){};Zmb.prototype.W=
-b=3DZe;Zmb.prototype.bc=3Dfunction(){this.Wb||(this.Wb=3DZc,this.B())};Z=
-mb.prototype.B=3Dfunction(){if(this.ec)for(;this.ec.length;)this.ec.shif=
+("9");!Zu||Zv("528");Zt&&Zv("1.9b")||Zs&&Zv("8")||ZPa&&Zv("9.5")||Zu&&Zv=
+("528");Zt&&!Zv("8")||Zs&&Zv("9");var Zmb=3Dfunction(){};Zmb.prototype.U=
+b=3DZe;Zmb.prototype.$b=3Dfunction(){this.Ub||(this.Ub=3DZc,this.B())};Z=
+mb.prototype.B=3Dfunction(){if(this.cc)for(;this.cc.length;)this.cc.shif=
 t()()};var Zz=3Dfunction(a,b){this.type=3Da;this.currentTarget=3Dthis.ta=
-rget=3Db};Z=3DZz.prototype;Z.B=3Dfunction(){};Z.bc=3Dfunction(){};Z.Q=3D=
-Ze;Z.defaultPrevented=3DZe;Z.Fa=3DZc;Z.stopPropagation=3Dfunction(){this=
-.Q=3DZc};Z.preventDefault=3Dfunction(){this.defaultPrevented=3DZc;this.F=
+rget=3Db};Z=3DZz.prototype;Z.B=3Dfunction(){};Z.$b=3Dfunction(){};Z.Q=3D=
+Ze;Z.defaultPrevented=3DZe;Z.Da=3DZc;Z.stopPropagation=3Dfunction(){this=
+.Q=3DZc};Z.preventDefault=3Dfunction(){this.defaultPrevented=3DZc;this.D=
 a=3DZe};var ZA=3Dfunction(a,b){a&&this.va(a,b)};Zk(ZA,Zz);Z=3DZA.prototy=
 pe;Z.target=3DZd;Z.relatedTarget=3DZd;Z.offsetX=3D0;Z.offsetY=3D0;Z.clie=
 ntX=3D0;Z.clientY=3D0;Z.screenX=3D0;Z.screenY=3D0;Z.button=3D0;Z.keyCode=
@@ -1957,46 +1875,46 @@ Z.preventDefault=3Dfunction(){ZA.C.preventDefault.call(this);var a=3Dthi=
 s.la;if(a.preventDefault)a.preventDefault();else if(a.returnValue=3DZe,Z=
 lb)try{if(a.ctrlKey||112<=3Da.keyCode&&123>=3Da.keyCode)a.keyCode=3D-1}c=
 atch(b){}};Z.B=3Dfunction(){};var Znb=3D0;var Zob=3Dfunction(){};Z=3DZob=
-.prototype;Z.key=3D0;Z.N=3DZe;Z.wa=3DZe;Z.va=3Dfunction(a,b,c,d,e,f){"fu=
-nction"=3D=3DZg(a)?this.Nb=3DZc:a&&a.handleEvent&&"function"=3D=3DZg(a.h=
-andleEvent)?this.Nb=3DZe:Za(Error("Invalid listener argument"));this.K=3D=
-a;this.vb=3Db;this.src=3Dc;this.type=3Dd;this.capture=3D!!e;this.Va=3Df;=
-this.wa=3DZe;this.key=3D++Znb;this.N=3DZe};Z.handleEvent=3Dfunction(a){r=
-eturn this.Nb?this.K.call(this.Va||this.src,a):this.K.handleEvent.call(t=
-his.K,a)};var Zpb=3D{},ZB=3D{},ZC=3D{},ZD=3D{},ZE=3Dfunction(a,b,c,d,e){=
+.prototype;Z.key=3D0;Z.O=3DZe;Z.wa=3DZe;Z.va=3Dfunction(a,b,c,d,e,f){"fu=
+nction"=3D=3DZg(a)?this.Lb=3DZc:a&&a.handleEvent&&"function"=3D=3DZg(a.h=
+andleEvent)?this.Lb=3DZe:Za(Error("Invalid listener argument"));this.L=3D=
+a;this.ub=3Db;this.src=3Dc;this.type=3Dd;this.capture=3D!!e;this.Ua=3Df;=
+this.wa=3DZe;this.key=3D++Znb;this.O=3DZe};Z.handleEvent=3Dfunction(a){r=
+eturn this.Lb?this.L.call(this.Ua||this.src,a):this.L.handleEvent.call(t=
+his.L,a)};var Zpb=3D{},ZB=3D{},ZC=3D{},ZD=3D{},ZE=3Dfunction(a,b,c,d,e){=
 if("array"=3D=3DZg(b)){for(var f=3D0;f<b.length;f++)ZE(a,b[f],c,d,e);ret=
 urn Zd}a:{b||Za(Error("Invalid event type"));d=3D!!d;var g=3DZB;b in g||=
 (g[b]=3D{b:0,o:0});g=3Dg[b];d in g||(g[d]=3D{b:0,o:0},g.b++);var g=3Dg[d=
 ],f=3DZha(a),k;g.o++;if(g[f]){k=3Dg[f];for(var h=3D0;h<k.length;h++)if(g=
-=3Dk[h],g.K=3D=3Dc&&g.Va=3D=3De){if(g.N)break;k[h].wa=3DZe;a=3Dk[h];brea=
+=3Dk[h],g.L=3D=3Dc&&g.Ua=3D=3De){if(g.O)break;k[h].wa=3DZe;a=3Dk[h];brea=
 k a}}else k=3Dg[f]=3D[],g.b++;h=3DZqb();g=3Dnew Zob;g.va(c,h,a,b,d,e);g.=
-wa=3DZe;h.src=3Da;h.K=3Dg;k.push(g);ZC[f]||(ZC[f]=3D[]);ZC[f].push(g);a.=
+wa=3DZe;h.src=3Da;h.L=3Dg;k.push(g);ZC[f]||(ZC[f]=3D[]);ZC[f].push(g);a.=
 addEventListener?
-(a=3D=3DZf||!a.pb)&&a.addEventListener(b,h,d):a.attachEvent(b in ZD?ZD[b=
+(a=3D=3DZf||!a.ob)&&a.addEventListener(b,h,d):a.attachEvent(b in ZD?ZD[b=
 ]:ZD[b]=3D"on"+b,h);a=3Dg}b=3Da.key;Zpb[b]=3Da;return b},Zqb=3Dfunction(=
-){var a=3DZrb,b=3DZkb?function(c){return a.call(b.src,b.K,c)}:function(c=
-){c=3Da.call(b.src,b.K,c);if(!c)return c};return b},Zsb=3Dfunction(a,b,c=
+){var a=3DZrb,b=3DZkb?function(c){return a.call(b.src,b.L,c)}:function(c=
+){c=3Da.call(b.src,b.L,c);if(!c)return c};return b},Zsb=3Dfunction(a,b,c=
 ,d,e){if("array"=3D=3DZg(b))for(var f=3D0;f<b.length;f++)Zsb(a,b[f],c,d,=
 e);else{d=3D!!d;a:{f=3DZB;if(b in f&&(f=3Df[b],d in f&&(f=3Df[d],a=3DZha=
 (a),f[a]))){a=3Df[a];break a}a=3DZd}if(a)for(f=3D0;f<a.length;f++)if(a[f=
-].K=3D=3Dc&&a[f].capture=3D=3Dd&&a[f].Va=3D=3De){Ztb(a[f].key);
-break}}},Ztb=3Dfunction(a){var b=3DZpb[a];if(b&&!b.N){var c=3Db.src,d=3D=
-b.type,e=3Db.vb,f=3Db.capture;c.removeEventListener?(c=3D=3DZf||!c.pb)&&=
+].L=3D=3Dc&&a[f].capture=3D=3Dd&&a[f].Ua=3D=3De){Ztb(a[f].key);
+break}}},Ztb=3Dfunction(a){var b=3DZpb[a];if(b&&!b.O){var c=3Db.src,d=3D=
+b.type,e=3Db.ub,f=3Db.capture;c.removeEventListener?(c=3D=3DZf||!c.ob)&&=
 c.removeEventListener(d,e,f):c.detachEvent&&c.detachEvent(d in ZD?ZD[d]:=
-ZD[d]=3D"on"+d,e);c=3DZha(c);ZC[c]&&(e=3DZC[c],Zxa(e,b),0=3D=3De.length&=
-&delete ZC[c]);b.N=3DZc;if(b=3DZB[d][f][c])b.Db=3DZc,Zub(d,f,c,b);delete=
- Zpb[a]}},Zub=3Dfunction(a,b,c,d){if(!d.Da&&d.Db){for(var e=3D0,f=3D0;e<=
-d.length;e++)d[e].N?d[e].vb.src=3DZd:(e!=3Df&&(d[f]=3Dd[e]),f++);d.lengt=
-h=3Df;d.Db=3DZe;0=3D=3Df&&(delete ZB[a][b][c],ZB[a][b].b--,
+ZD[d]=3D"on"+d,e);c=3DZha(c);ZC[c]&&(e=3DZC[c],Zza(e,b),0=3D=3De.length&=
+&delete ZC[c]);b.O=3DZc;if(b=3DZB[d][f][c])b.Cb=3DZc,Zub(d,f,c,b);delete=
+ Zpb[a]}},Zub=3Dfunction(a,b,c,d){if(!d.Ba&&d.Cb){for(var e=3D0,f=3D0;e<=
+d.length;e++)d[e].O?d[e].ub.src=3DZd:(e!=3Df&&(d[f]=3Dd[e]),f++);d.lengt=
+h=3Df;d.Cb=3DZe;0=3D=3Df&&(delete ZB[a][b][c],ZB[a][b].b--,
 0=3D=3DZB[a][b].b&&(delete ZB[a][b],ZB[a].b--),0=3D=3DZB[a].b&&delete ZB=
 [a])}},Zvb=3Dfunction(a){var b=3D0;if(a!=3DZd){if(a=3DZha(a),ZC[a]){a=3D=
-ZC[a];for(var c=3Da.length-1;0<=3Dc;c--)Ztb(a[c].key),b++}}else ZCa(Zpb,=
+ZC[a];for(var c=3Da.length-1;0<=3Dc;c--)Ztb(a[c].key),b++}}else ZEa(Zpb,=
 function(a,c){Ztb(c);b++})},Zxb=3Dfunction(a,b,c,d,e){var f=3D1;b=3DZha(=
-b);if(a[b]){var g=3D--a.o,k=3Da[b];k.Da?k.Da++:k.Da=3D1;try{for(var h=3D=
-k.length,m=3D0;m<h;m++){var l=3Dk[m];l&&!l.N&&(f&=3DZwb(l,e)!=3D=3DZe)}}=
-finally{a.o=3DMath.max(g,a.o),k.Da--,Zub(c,d,b,k)}}return Boolean(f)},Zw=
+b);if(a[b]){var g=3D--a.o,k=3Da[b];k.Ba?k.Ba++:k.Ba=3D1;try{for(var h=3D=
+k.length,m=3D0;m<h;m++){var l=3Dk[m];l&&!l.O&&(f&=3DZwb(l,e)!=3D=3DZe)}}=
+finally{a.o=3DMath.max(g,a.o),k.Ba--,Zub(c,d,b,k)}}return Boolean(f)},Zw=
 b=3Dfunction(a,b){a.wa&&Ztb(a.key);return a.handleEvent(b)},
-Zrb=3Dfunction(a,b){if(a.N)return Zc;var c=3Da.type,d=3DZB;if(!(c in d))=
+Zrb=3Dfunction(a,b){if(a.O)return Zc;var c=3Da.type,d=3DZB;if(!(c in d))=
 return Zc;var d=3Dd[c],e,f;if(!Zkb){e=3Db||Zba("window.event");var g=3DZ=
 c in d,k=3DZe in d;if(g){if(0>e.keyCode||e.returnValue!=3DZb)return Zc;a=
 :{var h=3DZe;if(0=3D=3De.keyCode)try{e.keyCode=3D-1;break a}catch(m){h=3D=
@@ -2008,23 +1926,23 @@ if(k){f=3Dd[Ze];f.o=3Df.b;for(p=3D0;!h.Q&&p<l.length&&f.o;p++)h.currentT=
 arget=3Dl[p],e&=3DZxb(f,l[p],c,Ze,h)}}else e=3DZwb(a,h)}finally{l&&(l.le=
 ngth=3D0)}return e}c=3Dnew ZA(b,this);return e=3DZwb(a,c)};var Zyb=3D"St=
 opIteration"in Zf?Zf.StopIteration:Error("StopIteration"),Zzb=3Dfunction=
-(){};Zzb.prototype.next=3Dfunction(){Za(Zyb)};Zzb.prototype.Xc=3Dfunctio=
+(){};Zzb.prototype.next=3Dfunction(){Za(Zyb)};Zzb.prototype.Vc=3Dfunctio=
 n(){return this};var ZAb=3Dfunction(a){if("function"=3D=3Dtypeof a.F)ret=
 urn a.F();if(Zh(a))return a.split("");if(Zda(a)){for(var b=3D[],c=3Da.le=
-ngth,d=3D0;d<c;d++)b.push(a[d]);return b}return ZDa(a)},ZBb=3Dfunction(a=
-){if("function"=3D=3Dtypeof a.O)return a.O();if("function"!=3Dtypeof a.F=
+ngth,d=3D0;d<c;d++)b.push(a[d]);return b}return ZFa(a)},ZBb=3Dfunction(a=
+){if("function"=3D=3Dtypeof a.G)return a.G();if("function"!=3Dtypeof a.F=
 ){if(Zda(a)||Zh(a)){var b=3D[];a=3Da.length;for(var c=3D0;c<a;c++)b.push=
-(c);return b}return ZEa(a)}},ZCb=3Dfunction(a,b,c){if("function"=3D=3Dty=
+(c);return b}return ZGa(a)}},ZCb=3Dfunction(a,b,c){if("function"=3D=3Dty=
 peof a.forEach)a.forEach(b,c);else if(Zda(a)||Zh(a))Zva(a,b,c);else for(=
 var d=3DZBb(a),e=3DZAb(a),f=3De.length,g=3D0;g<f;g++)b.call(c,
 e[g],d&&d[g],a)};var ZF=3Dfunction(a,b){this.A=3D{};this.j=3D[];var c=3D=
 arguments.length;if(1<c){c%2&&Za(Error("Uneven number of arguments"));fo=
 r(var d=3D0;d<c;d+=3D2)this.set(arguments[d],arguments[d+1])}else if(a){=
-a instanceof ZF?(c=3Da.O(),d=3Da.F()):(c=3DZEa(a),d=3DZDa(a));for(var e=3D=
+a instanceof ZF?(c=3Da.G(),d=3Da.F()):(c=3DZGa(a),d=3DZFa(a));for(var e=3D=
 0;e<c.length;e++)this.set(c[e],d[e])}};Z=3DZF.prototype;Z.b=3D0;Z.ka=3D0=
 ;Z.F=3Dfunction(){ZDb(this);for(var a=3D[],b=3D0;b<this.j.length;b++)a.p=
-ush(this.A[this.j[b]]);return a};Z.O=3Dfunction(){ZDb(this);return this.=
-j.concat()};Z.S=3Dfunction(a){return ZG(this.A,a)};
+ush(this.A[this.j[b]]);return a};Z.G=3Dfunction(){ZDb(this);return this.=
+j.concat()};Z.ha=3Dfunction(a){return ZG(this.A,a)};
 Z.clear=3Dfunction(){this.A=3D{};this.ka=3Dthis.b=3Dthis.j.length=3D0};Z=
 .remove=3Dfunction(a){return ZG(this.A,a)?(delete this.A[a],this.b--,thi=
 s.ka++,this.j.length>2*this.b&&ZDb(this),Zc):Ze};var ZDb=3Dfunction(a){i=
@@ -2035,7 +1953,7 @@ r e=3D{},c=3Db=3D0;b<a.j.length;)d=3Da.j[b],ZG(e,d)||(a.j[c++]=3Dd,e[d]=3D=
 A,a)?this.A[a]:b};
 ZF.prototype.set=3Dfunction(a,b){ZG(this.A,a)||(this.b++,this.j.push(a),=
 this.ka++);this.A[a]=3Db};ZF.prototype.na=3Dfunction(){return new ZF(thi=
-s)};ZF.prototype.Xc=3Dfunction(a){ZDb(this);var b=3D0,c=3Dthis.j,d=3Dthi=
+s)};ZF.prototype.Vc=3Dfunction(a){ZDb(this);var b=3D0,c=3Dthis.j,d=3Dthi=
 s.A,e=3Dthis.ka,f=3Dthis,g=3Dnew Zzb;g.next=3Dfunction(){for(;;){e!=3Df.=
 ka&&Za(Error("The map has changed since the iterator was created"));b>=3D=
 c.length&&Za(Zyb);var g=3Dc[b++];return a?g:d[g]}};return g};var ZG=3Dfu=
@@ -2053,29 +1971,29 @@ c.push(f)}b.push(a);c.push(")\n");try{c.push(ZEb(a.caller,b))}catch(g){c=
 ck...]"):c.push("[end]");return c.join("")},ZGb=3Dfunction(a){if(ZHb[a])=
 return ZHb[a];a=3DString(a);if(!ZHb[a]){var b=3D/function ([^\(]+)/.exec=
 (a);ZHb[a]=3Db?b[1]:"[Anonymous]"}return ZHb[a]},ZHb=3D{};var ZIb=3Dfunc=
-tion(a,b,c,d,e){this.reset(a,b,c,d,e)};ZIb.prototype.Tb=3DZd;ZIb.prototy=
-pe.Sb=3DZd;var ZJb=3D0;ZIb.prototype.reset=3Dfunction(a,b,c,d,e){"number=
-"=3D=3Dtypeof e||ZJb++;d||Zla();this.ma=3Da;this.Jc=3Db;delete this.Tb;d=
-elete this.Sb};ZIb.prototype.Yb=3Dfunction(a){this.ma=3Da};var ZH=3Dfunc=
-tion(a){this.Uc=3Da};ZH.prototype.Ma=3DZd;ZH.prototype.ma=3DZd;ZH.protot=
-ype.jb=3DZd;ZH.prototype.Zb=3DZd;var ZKb=3Dfunction(a,b){this.name=3Da;t=
+tion(a,b,c,d,e){this.reset(a,b,c,d,e)};ZIb.prototype.Rb=3DZd;ZIb.prototy=
+pe.Qb=3DZd;var ZJb=3D0;ZIb.prototype.reset=3Dfunction(a,b,c,d,e){"number=
+"=3D=3Dtypeof e||ZJb++;d||Zla();this.ma=3Da;this.Hc=3Db;delete this.Rb;d=
+elete this.Qb};ZIb.prototype.Wb=3Dfunction(a){this.ma=3Da};var ZH=3Dfunc=
+tion(a){this.Sc=3Da};ZH.prototype.La=3DZd;ZH.prototype.ma=3DZd;ZH.protot=
+ype.ib=3DZd;ZH.prototype.Xb=3DZd;var ZKb=3Dfunction(a,b){this.name=3Da;t=
 his.value=3Db};ZKb.prototype.toString=3Dfunction(){return this.name};var=
  ZLb=3Dnew ZKb("SEVERE",1E3),ZMb=3Dnew ZKb("WARNING",900),ZNb=3Dnew ZKb(=
 "CONFIG",700),ZOb=3Dnew ZKb("FINE",500);ZH.prototype.getParent=3Dfunctio=
-n(){return this.Ma};ZH.prototype.Xb=3Dfunction(){this.jb||(this.jb=3D{})=
-;return this.jb};ZH.prototype.Yb=3Dfunction(a){this.ma=3Da};
-var ZPb=3Dfunction(a){if(a.ma)return a.ma;if(a.Ma)return ZPb(a.Ma);Zta("=
+n(){return this.La};ZH.prototype.Vb=3Dfunction(){this.ib||(this.ib=3D{})=
+;return this.ib};ZH.prototype.Wb=3Dfunction(a){this.ma=3Da};
+var ZPb=3Dfunction(a){if(a.ma)return a.ma;if(a.La)return ZPb(a.La);Zta("=
 Root logger has no level set.");return Zd};ZH.prototype.log=3Dfunction(a=
-,b,c){if(a.value>=3DZPb(this).value){a=3Dthis.Vc(a,b,c);b=3D"log:"+a.Jc;=
+,b,c){if(a.value>=3DZPb(this).value){a=3Dthis.Tc(a,b,c);b=3D"log:"+a.Hc;=
 Zf.console&&(Zf.console.timeStamp?Zf.console.timeStamp(b):Zf.console.mar=
 kTimeline&&Zf.console.markTimeline(b));Zf.msWriteProfilerMark&&Zf.msWrit=
-eProfilerMark(b);for(b=3Dthis;b;){c=3Db;var d=3Da;if(c.Zb)for(var e=3D0,=
-f=3DZb;f=3Dc.Zb[e];e++)f(d);b=3Db.getParent()}}};
-ZH.prototype.Vc=3Dfunction(a,b,c){var d=3Dnew ZIb(a,String(b),this.Uc);i=
-f(c){d.Tb=3Dc;var e;var f=3Darguments.callee.caller;try{var g;var k=3DZb=
+eProfilerMark(b);for(b=3Dthis;b;){c=3Db;var d=3Da;if(c.Xb)for(var e=3D0,=
+f=3DZb;f=3Dc.Xb[e];e++)f(d);b=3Db.getParent()}}};
+ZH.prototype.Tc=3Dfunction(a,b,c){var d=3Dnew ZIb(a,String(b),this.Sc);i=
+f(c){d.Rb=3Dc;var e;var f=3Darguments.callee.caller;try{var g;var k=3DZb=
 a("window.location.href");if(Zh(c))g=3D{message:c,name:"Unknown error",l=
 ineNumber:"Not available",fileName:k,stack:"Not available"};else{var h,m=
-,l=3DZe;try{h=3Dc.lineNumber||c.hd||"Not available"}catch(n){h=3D"Not av=
+,l=3DZe;try{h=3Dc.lineNumber||c.fd||"Not available"}catch(n){h=3D"Not av=
 ailable",l=3DZc}try{m=3Dc.fileName||c.filename||c.sourceURL||Zf.$googDeb=
 ugFname||k}catch(p){m=3D"Not available",l=3DZc}g=3Dl||!c.lineNumber||!c.=
 fileName||!c.stack?{message:c.message,
@@ -2084,25 +2002,25 @@ name:c.name,lineNumber:h,fileName:m,stack:c.stack||"Not available"}:c}e=3D=
  target=3D"_new">'+g.fileName+"</a>\nLine: "+g.lineNumber+"\n\nBrowser s=
 tack:\n"+Zm(g.stack+"-> ")+"[end]\n\nJS stack traversal:\n"+Zm(ZFb(f)+"-=
 > ")}catch(q){e=3D"Exception trying to expose exception! You win, we los=
-e. "+q}d.Sb=3De}return d};
+e. "+q}d.Qb=3De}return d};
 var ZI=3Dfunction(a,b){a.log(ZOb,b,Zb)},ZQb=3D{},ZRb=3DZd,ZSb=3Dfunction=
-(a){ZRb||(ZRb=3Dnew ZH(""),ZQb[""]=3DZRb,ZRb.Yb(ZNb));var b;if(!(b=3DZQb=
+(a){ZRb||(ZRb=3Dnew ZH(""),ZQb[""]=3DZRb,ZRb.Wb(ZNb));var b;if(!(b=3DZQb=
 [a])){b=3Dnew ZH(a);var c=3Da.lastIndexOf("."),d=3Da.substr(c+1),c=3DZSb=
-(a.substr(0,c));c.Xb()[d]=3Db;b.Ma=3Dc;ZQb[a]=3Db}return b};var ZJ=3Dfun=
-ction(){};Zk(ZJ,Zmb);Z=3DZJ.prototype;Z.pb=3DZc;Z.Za=3DZd;Z.addEventList=
+(a.substr(0,c));c.Vb()[d]=3Db;b.La=3Dc;ZQb[a]=3Db}return b};var ZJ=3Dfun=
+ction(){};Zk(ZJ,Zmb);Z=3DZJ.prototype;Z.ob=3DZc;Z.Ya=3DZd;Z.addEventList=
 ener=3Dfunction(a,b,c,d){ZE(this,a,b,c,d)};Z.removeEventListener=3Dfunct=
 ion(a,b,c,d){Zsb(this,a,b,c,d)};
 Z.dispatchEvent=3Dfunction(a){var b=3Da.type||a,c=3DZB;if(b in c){if(Zh(=
 a))a=3Dnew Zz(a,this);else if(a instanceof Zz)a.target=3Da.target||this;=
-else{var d=3Da;a=3Dnew Zz(b,this);ZGa(a,d)}var d=3D1,e,c=3Dc[b],b=3DZc i=
-n c,f;if(b){e=3D[];for(f=3Dthis;f;f=3Df.Za)e.push(f);f=3Dc[Zc];f.o=3Df.b=
+else{var d=3Da;a=3Dnew Zz(b,this);ZIa(a,d)}var d=3D1,e,c=3Dc[b],b=3DZc i=
+n c,f;if(b){e=3D[];for(f=3Dthis;f;f=3Df.Ya)e.push(f);f=3Dc[Zc];f.o=3Df.b=
 ;for(var g=3De.length-1;!a.Q&&0<=3Dg&&f.o;g--)a.currentTarget=3De[g],d&=3D=
-Zxb(f,e[g],a.type,Zc,a)&&a.Fa!=3DZe}if(Ze in c)if(f=3Dc[Ze],f.o=3Df.b,b)=
+Zxb(f,e[g],a.type,Zc,a)&&a.Da!=3DZe}if(Ze in c)if(f=3Dc[Ze],f.o=3Df.b,b)=
 for(g=3D0;!a.Q&&g<e.length&&f.o;g++)a.currentTarget=3De[g],d&=3DZxb(f,e[=
-g],a.type,Ze,a)&&a.Fa!=3DZe;else for(e=3Dthis;!a.Q&&
-e&&f.o;e=3De.Za)a.currentTarget=3De,d&=3DZxb(f,e,a.type,Ze,a)&&a.Fa!=3DZ=
+g],a.type,Ze,a)&&a.Da!=3DZe;else for(e=3Dthis;!a.Q&&
+e&&f.o;e=3De.Ya)a.currentTarget=3De,d&=3DZxb(f,e,a.type,Ze,a)&&a.Da!=3DZ=
 e;a=3DBoolean(d)}else a=3DZc;return a};Z.B=3Dfunction(){ZJ.C.B.call(this=
-);Zvb(this);this.Za=3DZd};var ZTb=3Dfunction(a){a=3DString(a);if(/^\s*$/=
+);Zvb(this);this.Ya=3DZd};var ZTb=3Dfunction(a){a=3DString(a);if(/^\s*$/=
 .test(a)?0:/^[\],:{}\s\u2028\u2029]*$/.test(a.replace(/\\["\\\/bfnrtu]/g=
 ,"@").replace(/"[^"\\\n\r\u2028\u2029\x00-\x08\x0a-\x1f]*"|true|false|nu=
 ll|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,"]").replace(/(?:^|:|,)(?:[\s\u20=
@@ -2116,61 +2034,62 @@ Zc,Za(Error())}}return b.match(ZVb)[a]||Zd};var ZYb=3Dfunction(){};ZYb.p=
 rototype.ra=3DZd;var ZZb,Z_b=3Dfunction(){};Zk(Z_b,ZYb);var Z1b=3Dfuncti=
 on(a){return(a=3DZ0b(a))?new ActiveXObject(a):new XMLHttpRequest},Z2b=3D=
 function(a){var b=3D{};Z0b(a)&&(b[0]=3DZc,b[1]=3DZc);return b},Z0b=3Dfun=
-ction(a){if(!a.dc&&"undefined"=3D=3Dtypeof XMLHttpRequest&&"undefined"!=3D=
+ction(a){if(!a.bc&&"undefined"=3D=3Dtypeof XMLHttpRequest&&"undefined"!=3D=
 typeof ActiveXObject){for(var b=3D["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.=
 3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=3D0;c<b.length;c++){var d=3D=
-b[c];try{return new ActiveXObject(d),a.dc=3Dd}catch(e){}}Za(Error("Could=
+b[c];try{return new ActiveXObject(d),a.bc=3Dd}catch(e){}}Za(Error("Could=
  not create ActiveXObject. ActiveX might be disabled, or MSXML might not=
- be installed"))}return a.dc};
-ZZb=3Dnew Z_b;var ZK=3Dfunction(a){this.headers=3Dnew ZF;this.T=3Da||Zd}=
+ be installed"))}return a.bc};
+ZZb=3Dnew Z_b;var ZK=3Dfunction(a){this.headers=3Dnew ZF;this.S=3Da||Zd}=
 ;Zk(ZK,ZJ);ZK.prototype.q=3DZSb("goog.net.XhrIo");var Z3b=3D/^https?$/i,=
 Z4b=3D[],ZL=3Dfunction(a,b,c,d,e,f){var g=3Dnew ZK;Z4b.push(g);b&&ZE(g,"=
-complete",b);ZE(g,"ready",Zka(Z5b,g));f&&(g.ca=3DMath.max(0,f));g.send(a=
-,c,d,e)},Z5b=3Dfunction(a){a.bc();Zxa(Z4b,a)};Z=3DZK.prototype;Z.G=3DZe;=
-Z.d=3DZd;Z.pa=3DZd;Z.qa=3D"";Z.lb=3D"";Z.I=3D"";Z.Oa=3DZe;Z.oa=3DZe;Z.Na=
-=3DZe;Z.P=3DZe;Z.ca=3D0;Z.L=3DZd;Z.mb=3D"";Z.gc=3DZe;
+complete",b);ZE(g,"ready",Zka(Z5b,g));f&&(g.ba=3DMath.max(0,f));g.send(a=
+,c,d,e)},Z5b=3Dfunction(a){a.$b();Zza(Z4b,a)};Z=3DZK.prototype;Z.H=3DZe;=
+Z.d=3DZd;Z.pa=3DZd;Z.qa=3D"";Z.kb=3D"";Z.J=3D"";Z.Na=3DZe;Z.oa=3DZe;Z.Ma=
+=3DZe;Z.P=3DZe;Z.ba=3D0;Z.M=3DZd;Z.lb=3D"";Z.ec=3DZe;
 Z.send=3Dfunction(a,b,c,d){this.d&&Za(Error("[goog.net.XhrIo] Object is =
 active with another request=3D"+this.qa+"; newUri=3D"+a));b=3Db?b.toUppe=
-rCase():"GET";this.qa=3Da;this.I=3D"";this.lb=3Db;this.Oa=3DZe;this.G=3D=
-Zc;this.d=3Dthis.T?Z1b(this.T):Z1b(ZZb);this.pa=3Dthis.T?this.T.ra||(thi=
-s.T.ra=3DZ2b(this.T)):ZZb.ra||(ZZb.ra=3DZ2b(ZZb));this.d.onreadystatecha=
-nge=3DZi(this.kb,this);try{ZI(this.q,ZM(this,"Opening Xhr")),this.Na=3DZ=
-c,this.d.open(b,a,Zc),this.Na=3DZe}catch(e){ZI(this.q,ZM(this,"Error ope=
+rCase():"GET";this.qa=3Da;this.J=3D"";this.kb=3Db;this.Na=3DZe;this.H=3D=
+Zc;this.d=3Dthis.S?Z1b(this.S):Z1b(ZZb);this.pa=3Dthis.S?this.S.ra||(thi=
+s.S.ra=3DZ2b(this.S)):ZZb.ra||(ZZb.ra=3DZ2b(ZZb));this.d.onreadystatecha=
+nge=3DZi(this.jb,this);try{ZI(this.q,ZM(this,"Opening Xhr")),this.Ma=3DZ=
+c,this.d.open(b,a,Zc),this.Ma=3DZe}catch(e){ZI(this.q,ZM(this,"Error ope=
 ning Xhr: "+e.message));Z6b(this,
 e);return}a=3Dc||"";var f=3Dthis.headers.na();d&&ZCb(d,function(a,b){f.s=
-et(b,a)});d=3DZf.FormData&&a instanceof Zf.FormData;"POST"=3D=3Db&&(!f.S=
-("Content-Type")&&!d)&&f.set("Content-Type","application/x-www-form-urle=
-ncoded;charset=3Dutf-8");ZCb(f,function(a,b){this.d.setRequestHeader(b,a=
-)},this);this.mb&&(this.d.responseType=3Dthis.mb);"withCredentials"in th=
-is.d&&(this.d.withCredentials=3Dthis.gc);try{this.L&&(Zf.clearTimeout(th=
-is.L),this.L=3DZd),0<this.ca&&(ZI(this.q,ZM(this,"Will abort after "+thi=
-s.ca+"ms if incomplete")),
-this.L=3DZf.setTimeout(Zi(this.fc,this),this.ca)),ZI(this.q,ZM(this,"Sen=
+et(b,a)});d=3DZya(f.G());c=3DZf.FormData&&a instanceof Zf.FormData;"POST=
+"=3D=3Db&&(!d&&!c)&&f.set("Content-Type","application/x-www-form-urlenco=
+ded;charset=3Dutf-8");ZCb(f,function(a,b){this.d.setRequestHeader(b,a)},=
+this);this.lb&&(this.d.responseType=3Dthis.lb);"withCredentials"in this.=
+d&&(this.d.withCredentials=3Dthis.ec);try{this.M&&(Zf.clearTimeout(this.=
+M),this.M=3DZd),0<this.ba&&(ZI(this.q,ZM(this,"Will abort after "+this.b=
+a+"ms if incomplete")),
+this.M=3DZf.setTimeout(Zi(this.dc,this),this.ba)),ZI(this.q,ZM(this,"Sen=
 ding request")),this.oa=3DZc,this.d.send(a),this.oa=3DZe}catch(g){ZI(thi=
-s.q,ZM(this,"Send error: "+g.message)),Z6b(this,g)}};Z.fc=3Dfunction(){"=
-undefined"!=3Dtypeof Zaa&&this.d&&(this.I=3D"Timed out after "+this.ca+"=
-ms, aborting",ZI(this.q,ZM(this,this.I)),this.dispatchEvent("timeout"),t=
-his.abort(8))};
-var Z6b=3Dfunction(a,b){a.G=3DZe;a.d&&(a.P=3DZc,a.d.abort(),a.P=3DZe);a.=
-I=3Db;Z7b(a);Z8b(a)},Z7b=3Dfunction(a){a.Oa||(a.Oa=3DZc,a.dispatchEvent(=
+s.q,ZM(this,"Send error: "+g.message)),Z6b(this,g)}};var Zxa=3Dfunction(=
+a){return"content-type"=3D=3Da.toLowerCase()};ZK.prototype.dc=3Dfunction=
+(){"undefined"!=3Dtypeof Zaa&&this.d&&(this.J=3D"Timed out after "+this.=
+ba+"ms, aborting",ZI(this.q,ZM(this,this.J)),this.dispatchEvent("timeout=
+"),this.abort(8))};
+var Z6b=3Dfunction(a,b){a.H=3DZe;a.d&&(a.P=3DZc,a.d.abort(),a.P=3DZe);a.=
+J=3Db;Z7b(a);Z8b(a)},Z7b=3Dfunction(a){a.Na||(a.Na=3DZc,a.dispatchEvent(=
 "complete"),a.dispatchEvent("error"))};ZK.prototype.abort=3Dfunction(){t=
-his.d&&this.G&&(ZI(this.q,ZM(this,"Aborting")),this.G=3DZe,this.P=3DZc,t=
+his.d&&this.H&&(ZI(this.q,ZM(this,"Aborting")),this.H=3DZe,this.P=3DZc,t=
 his.d.abort(),this.P=3DZe,this.dispatchEvent("complete"),this.dispatchEv=
-ent("abort"),Z8b(this))};ZK.prototype.B=3Dfunction(){this.d&&(this.G&&(t=
-his.G=3DZe,this.P=3DZc,this.d.abort(),this.P=3DZe),Z8b(this,Zc));ZK.C.B.=
+ent("abort"),Z8b(this))};ZK.prototype.B=3Dfunction(){this.d&&(this.H&&(t=
+his.H=3DZe,this.P=3DZc,this.d.abort(),this.P=3DZe),Z8b(this,Zc));ZK.C.B.=
 call(this)};
-ZK.prototype.kb=3Dfunction(){!this.Na&&!this.oa&&!this.P?this.Lc():Z9b(t=
-his)};ZK.prototype.Lc=3Dfunction(){Z9b(this)};
-var Z9b=3Dfunction(a){if(a.G&&"undefined"!=3Dtypeof Zaa)if(a.pa[1]&&4=3D=
+ZK.prototype.jb=3Dfunction(){!this.Ma&&!this.oa&&!this.P?this.Jc():Z9b(t=
+his)};ZK.prototype.Jc=3Dfunction(){Z9b(this)};
+var Z9b=3Dfunction(a){if(a.H&&"undefined"!=3Dtypeof Zaa)if(a.pa[1]&&4=3D=
 =3DZ$b(a)&&2=3D=3DZac(a))ZI(a.q,ZM(a,"Local request error detected and i=
-gnored"));else if(a.oa&&4=3D=3DZ$b(a))Zf.setTimeout(Zi(a.kb,a),0);else i=
+gnored"));else if(a.oa&&4=3D=3DZ$b(a))Zf.setTimeout(Zi(a.jb,a),0);else i=
 f(a.dispatchEvent("readystatechange"),4=3D=3DZ$b(a)){ZI(a.q,ZM(a,"Reques=
-t complete"));a.G=3DZe;try{if(ZN(a))a.dispatchEvent("complete"),a.dispat=
+t complete"));a.H=3DZe;try{if(ZN(a))a.dispatchEvent("complete"),a.dispat=
 chEvent("success");else{var b;try{b=3D2<Z$b(a)?a.d.statusText:""}catch(c=
-){ZI(a.q,"Can not get status: "+c.message),b=3D""}a.I=3Db+" ["+Zac(a)+"]=
+){ZI(a.q,"Can not get status: "+c.message),b=3D""}a.J=3Db+" ["+Zac(a)+"]=
 ";Z7b(a)}}finally{Z8b(a)}}},
 Z8b=3Dfunction(a,b){if(a.d){var c=3Da.d,d=3Da.pa[0]?Zca:Zd;a.d=3DZd;a.pa=
-=3DZd;a.L&&(Zf.clearTimeout(a.L),a.L=3DZd);b||a.dispatchEvent("ready");t=
+=3DZd;a.M&&(Zf.clearTimeout(a.M),a.M=3DZd);b||a.dispatchEvent("ready");t=
 ry{c.onreadystatechange=3Dd}catch(e){a.q.log(ZLb,"Problem encountered re=
 setting onreadystatechange: "+e.message,Zb)}}},ZN=3Dfunction(a){var b=3D=
 Zac(a),c;a:switch(b){case 200:case 201:case 202:case 204:case 206:case 3=
@@ -2182,8 +2101,8 @@ dyState:0},Zac=3Dfunction(a){try{return 2<Z$b(a)?a.d.status:-1}catch(b){=
 return a.q.log(ZMb,"Can not get status: "+b.message,Zb),-1}},Zbc=3Dfunct=
 ion(a){try{return a.d?a.d.responseText:""}catch(b){return ZI(a.q,"Can no=
 t get responseText: "+b.message),""}},ZO=3Dfunction(a){if(a.d)return ZTb=
-(a.d.responseText)},Zcc=3Dfunction(a){return Zh(a.I)?a.I:String(a.I)},ZM=
-=3Dfunction(a,b){return b+" ["+a.lb+" "+a.qa+" "+Zac(a)+"]"};var Zec=3Df=
+(a.d.responseText)},Zcc=3Dfunction(a){return Zh(a.J)?a.J:String(a.J)},ZM=
+=3Dfunction(a,b){return b+" ["+a.kb+" "+a.qa+" "+Zac(a)+"]"};var Zec=3Df=
 unction(a,b){var c=3D1,d;c instanceof Zq?(d=3Dc.height,c=3Dc.width):(b=3D=
 =3DZb&&Za(Error("missing height argument")),d=3Db);a.style.width=3DZdc(c=
 );a.style.height=3DZdc(d)},Zdc=3Dfunction(a){"number"=3D=3Dtypeof a&&(a=3D=
@@ -2201,7 +2120,7 @@ tRect?(b=3Da.getBoundingClientRect(),Zs&&(a=3Da.ownerDocument,b.left-=3D=
 a.documentElement.clientLeft+a.body.clientLeft,b.top-=3Da.documentElemen=
 t.clientTop+a.body.clientTop),new Zq(b.right-
 b.left,b.bottom-b.top)):new Zq(b,c)},ZP=3Dfunction(a,b){a.style.display=3D=
-b?"":"none"};var ZQ=3Dfunction(a,b,c){this.z=3Da||Zd;this.Sc=3D!!c},ZS=3D=
+b?"":"none"};var ZQ=3Dfunction(a,b,c){this.z=3Da||Zd;this.Qc=3D!!c},ZS=3D=
 function(a){if(!a.g&&(a.g=3Dnew ZF,a.b=3D0,a.z))for(var b=3Da.z.split("&=
 "),c=3D0;c<b.length;c++){var d=3Db[c].indexOf("=3D"),e=3DZd,f=3DZd;0<=3D=
 d?(e=3Db[c].substring(0,d),f=3Db[c].substring(d+1)):e=3Db[c];e=3DdecodeU=
@@ -2210,31 +2129,31 @@ nt(f.replace(/\+/g," ")):"")}},Zhc=3Dfunction(a){var b=3DZBb(a);"undefin=
 ed"=3D=3Dtypeof b&&Za(Error("Keys are undefined"));var c=3Dnew ZQ(Zd,0,Z=
 b);a=3DZAb(a);for(var d=3D0;d<b.length;d++){var e=3Db[d],f=3Da[d];
 if("array"=3D=3DZg(f)){var g=3Dc;g.remove(e);0<f.length&&(g.z=3DZd,g.g.s=
-et(ZR(g,e),Zza(f)),g.b+=3Df.length)}else c.add(e,f)}return c};Z=3DZQ.pro=
+et(ZR(g,e),ZBa(f)),g.b+=3Df.length)}else c.add(e,f)}return c};Z=3DZQ.pro=
 totype;Z.g=3DZd;Z.b=3DZd;Z.add=3Dfunction(a,b){ZS(this);this.z=3DZd;a=3D=
 ZR(this,a);var c=3Dthis.g.get(a);c||this.g.set(a,c=3D[]);c.push(b);this.=
 b++;return this};Z.remove=3Dfunction(a){ZS(this);a=3DZR(this,a);return t=
-his.g.S(a)?(this.z=3DZd,this.b-=3Dthis.g.get(a).length,this.g.remove(a))=
-:Ze};Z.clear=3Dfunction(){this.g=3Dthis.z=3DZd;this.b=3D0};Z.S=3Dfunctio=
-n(a){ZS(this);a=3DZR(this,a);return this.g.S(a)};
-Z.O=3Dfunction(){ZS(this);for(var a=3Dthis.g.F(),b=3Dthis.g.O(),c=3D[],d=
+his.g.ha(a)?(this.z=3DZd,this.b-=3Dthis.g.get(a).length,this.g.remove(a)=
+):Ze};Z.clear=3Dfunction(){this.g=3Dthis.z=3DZd;this.b=3D0};Z.ha=3Dfunct=
+ion(a){ZS(this);a=3DZR(this,a);return this.g.ha(a)};
+Z.G=3Dfunction(){ZS(this);for(var a=3Dthis.g.F(),b=3Dthis.g.G(),c=3D[],d=
 =3D0;d<b.length;d++)for(var e=3Da[d],f=3D0;f<e.length;f++)c.push(b[d]);r=
-eturn c};Z.F=3Dfunction(a){ZS(this);var b=3D[];if(a)this.S(a)&&(b=3DZya(=
-b,this.g.get(ZR(this,a))));else{a=3Dthis.g.F();for(var c=3D0;c<a.length;=
-c++)b=3DZya(b,a[c])}return b};Z.set=3Dfunction(a,b){ZS(this);this.z=3DZd=
-;a=3DZR(this,a);this.S(a)&&(this.b-=3Dthis.g.get(a).length);this.g.set(a=
-,[b]);this.b++;return this};Z.get=3Dfunction(a,b){var c=3Da?this.F(a):[]=
-;return 0<c.length?String(c[0]):b};
+eturn c};Z.F=3Dfunction(a){ZS(this);var b=3D[];if(a)this.ha(a)&&(b=3DZAa=
+(b,this.g.get(ZR(this,a))));else{a=3Dthis.g.F();for(var c=3D0;c<a.length=
+;c++)b=3DZAa(b,a[c])}return b};Z.set=3Dfunction(a,b){ZS(this);this.z=3DZ=
+d;a=3DZR(this,a);this.ha(a)&&(this.b-=3Dthis.g.get(a).length);this.g.set=
+(a,[b]);this.b++;return this};Z.get=3Dfunction(a,b){var c=3Da?this.F(a):=
+[];return 0<c.length?String(c[0]):b};
 Z.toString=3Dfunction(){if(this.z)return this.z;if(!this.g)return"";for(=
-var a=3D[],b=3Dthis.g.O(),c=3D0;c<b.length;c++)for(var d=3Db[c],e=3Denco=
+var a=3D[],b=3Dthis.g.G(),c=3D0;c<b.length;c++)for(var d=3Db[c],e=3Denco=
 deURIComponent(String(d)),d=3Dthis.F(d),f=3D0;f<d.length;f++){var g=3De;=
 ""!=3D=3Dd[f]&&(g+=3D"=3D"+encodeURIComponent(String(d[f])));a.push(g)}r=
 eturn this.z=3Da.join("&")};Z.na=3Dfunction(){var a=3Dnew ZQ;a.z=3Dthis.=
 z;this.g&&(a.g=3Dthis.g.na(),a.b=3Dthis.b);return a};var ZR=3Dfunction(a=
-,b){var c=3DString(b);a.Sc&&(c=3Dc.toLowerCase());return c};
+,b){var c=3DString(b);a.Qc&&(c=3Dc.toLowerCase());return c};
 ZQ.prototype.extend=3Dfunction(a){for(var b=3D0;b<arguments.length;b++)Z=
 Cb(arguments[b],function(a,b){this.add(b,a)},this)};if(window.jstiming){=
-window.jstiming.$b=3D{};window.jstiming.Wc=3D1;var Zic=3Dfunction(a,b,c)=
+window.jstiming.Yb=3D{};window.jstiming.Uc=3D1;var Zic=3Dfunction(a,b,c)=
 {var d=3D"";window.jstiming.pt&&(d+=3D"&srt=3D"+window.jstiming.pt,delet=
 e window.jstiming.pt);try{window.external&&window.external.tran?d+=3D"&t=
 ran=3D"+window.external.tran:window.gtbExternal&&window.gtbExternal.tran=
@@ -2251,8 +2170,8 @@ start;if(b)for(var n in b)d+=3D"&"+n+"=3D"+b[n];(b=3Dc)||(b=3D"https:"=3D=
 gstatic.com/csi");return[b,"?v=3D3","&s=3D"+(window.jstiming.sn||"codesi=
 te")+"&action=3D",a.name,"",d,"&rt=3D",f.join(",")].join("")},
 Zjc=3Dfunction(a,b,c){a=3DZic(a,b,c);if(!a)return"";b=3Dnew Image;var d=3D=
-window.jstiming.Wc++;window.jstiming.$b[d]=3Db;b.onload=3Db.onerror=3Dfu=
-nction(){window.jstiming&&delete window.jstiming.$b[d]};b.src=3Da;b=3DZd=
+window.jstiming.Uc++;window.jstiming.Yb[d]=3Db;b.onload=3Db.onerror=3Dfu=
+nction(){window.jstiming&&delete window.jstiming.Yb[d]};b.src=3Da;b=3DZd=
 ;return a};window.jstiming.report=3Dfunction(a,b,c){if("prerender"=3D=3D=
 document.webkitVisibilityState){var d=3DZe,e=3Dfunction(){if(!d){b?b.pre=
 render=3D"1":b=3D{prerender:"1"};var f;"prerender"=3D=3Ddocument.webkitV=
@@ -2263,16 +2182,16 @@ Ze))}};document.addEventListener("webkitvisibilitychange",e,Ze);return""=
 e&&c.set("token",CS_env.token);return c.toString()}function ZT(a,b,c){ZL=
 (a,function(a){a=3Da.target;ZN(a)&&b(a)},"POST",Zkc(c))};function Zlc(a,=
 b){ZT(CS_env.relativeBaseUrl+"/hosting/stars.do",Zka(Zmc,a),b)}function =
-Zmc(a,b){var c=3DZO(b).starred;a.Mc.src=3DCS_env.assetHostPath+(c?"/imag=
-es/star_on.gif":"/images/star_off.gif");a.Ub&&(a.Ub.innerHTML=3Dc?a.Oc:a=
-.Nc);a.Pc&&Znc()}_CS_setStar=3DZlc;
+Zmc(a,b){var c=3DZO(b).starred;a.Kc.src=3DCS_env.assetHostPath+(c?"/imag=
+es/star_on.gif":"/images/star_off.gif");a.Sb&&(a.Sb.innerHTML=3Dc?a.Mc:a=
+.Lc);a.Nc&&Znc()}_CS_setStar=3DZlc;
 _CS_toggleStar=3Dfunction(a,b,c,d,e,f,g,k){var h=3D-1!=3Da.src.indexOf("=
 /images/star_off.gif")?1:0;a.src=3DCS_env.assetHostPath+(h?"/images/star=
 _on.gif":"/images/star_off.gif");if(d){var m=3Ddocument.getElementById(d=
 );m&&(m.innerHTML=3Dh?e:f)}if(g&&(d=3Ddocument.getElementById(g)))if(g=3D=
 parseInt(d.innerHTML,10),g=3Dh?g+1:g-1,d.innerHTML=3Dg,k&&(k=3Ddocument.=
-getElementById(k)))k.innerHTML=3D1=3D=3Dg?"":"s";a=3D{Oc:e,Nc:f,Mc:a,Ub:=
-m,Pc:c};b.starred=3Dh;Zlc(a,b)};_CS_dismissCue=3Dfunction(a){ZP(Zx("cue"=
+getElementById(k)))k.innerHTML=3D1=3D=3Dg?"":"s";a=3D{Mc:e,Lc:f,Kc:a,Sb:=
+m,Nc:c};b.starred=3Dh;Zlc(a,b)};_CS_dismissCue=3Dfunction(a){ZP(Zx("cue"=
 ),Ze);CS_env.token&&ZL(CS_env.relativeBaseUrl+"/hosting/cues.do",Zd,"POS=
 T",Zkc({cue_id:a}));return Ze};function Zoc(a){for(;a;){if(Zp(Zw(a),"col=
 lapse"))return Z4a(a,"collapse","expand"),Zc;if(Zp(Zw(a),"expand"))retur=
@@ -2296,40 +2215,40 @@ return a.join(",")}function Zrc(){var a=3Dwindow.jstiming.load;a.tick("p=
 lt");a.name=3DZqc();window.setTimeout(function(){window.jstiming.report(=
 a)},500)}_CS_reportToCsi=3Dfunction(){ZE(window,"load",Zrc)};function Zs=
 c(a){window.setTimeout(function(){_gaq.push("siteTracker._trackPageview"=
-,a)},0)}_CS_click=3DZsc;var ZU=3Dfunction(a,b){this.Ca=3DZtc.length;Ztc[=
-this.Ca]=3Dthis;this.target=3Da;this.$a=3Db||Zd;this.aa=3Da;this.s=3D[];=
-this.ia=3D[];this.i=3Dthis.createElement("div","menuDiv instance"+this.C=
-a);this.cb=3Dthis.target.getAttribute("id");this.i.setAttribute("id",thi=
-s.cb!=3DZd?"menuDiv-"+this.cb:"menuDiv-instance"+this.Ca);this.za();Zuc(=
-this,"default");ZE(this.aa,"click",Zi(this.toggle,this));ZE(window,"resi=
-ze",Zi(this.yb,this));ZE(document,"click",Zi(this.za,this));ZE(this.i,"c=
-lick",function(a){a.stopPropagation()});ZE(this.aa,
+,a)},0)}_CS_click=3DZsc;var ZU=3Dfunction(a,b){this.Aa=3DZtc.length;Ztc[=
+this.Aa]=3Dthis;this.target=3Da;this.Za=3Db||Zd;this.$=3Da;this.s=3D[];t=
+his.ia=3D[];this.i=3Dthis.createElement("div","menuDiv instance"+this.Aa=
+);this.ab=3Dthis.target.getAttribute("id");this.i.setAttribute("id",this=
+.ab!=3DZd?"menuDiv-"+this.ab:"menuDiv-instance"+this.Aa);this.za();Zuc(t=
+his,"default");ZE(this.$,"click",Zi(this.toggle,this));ZE(window,"resize=
+",Zi(this.xb,this));ZE(document,"click",Zi(this.za,this));ZE(this.i,"cli=
+ck",function(a){a.stopPropagation()});ZE(this.$,
 "click",function(a){a.stopPropagation()})};Z=3DZU.prototype;Z.target=3DZ=
-d;Z.cb=3DZd;Z.aa=3DZd;Z.$a=3DZd;Z.e=3DZd;Z.Ca=3D-1;Z.s=3DZd;Z.ia=3DZd;Z.=
-createElement=3Dfunction(a,b,c){return Zy(a,{className:b},c)};var Zuc=3D=
-function(a,b,c){a.e=3Da.e||[];var d=3Da.createElement("div","menuCategor=
-y "+b);d.xb=3Db;c&&(c=3Da.createElement("b","categoryTitle "+b,c),c.styl=
-e.display=3D"block",Zbb(a.i,c),d.ab=3Dc);Zbb(a.i,d);return a.e[a.e.lengt=
-h]=3Da.e[b]=3Dd};
+d;Z.ab=3DZd;Z.$=3DZd;Z.Za=3DZd;Z.e=3DZd;Z.Aa=3D-1;Z.s=3DZd;Z.ia=3DZd;Z.c=
+reateElement=3Dfunction(a,b,c){return Zy(a,{className:b},c)};var Zuc=3Df=
+unction(a,b,c){a.e=3Da.e||[];var d=3Da.createElement("div","menuCategory=
+ "+b);d.wb=3Db;c&&(c=3Da.createElement("b","categoryTitle "+b,c),c.style=
+.display=3D"block",Zbb(a.i,c),d.$a=3Dc);Zbb(a.i,d);return a.e[a.e.length=
+]=3Da.e[b]=3Dd};
 ZU.prototype.clear=3Dfunction(){for(var a=3D0;a<this.e.length;a++)this.e=
-[this.e[a].xb]=3DZd;this.s.splice(0,this.s.length);this.e.splice(0,this.=
+[this.e[a].wb]=3DZd;this.s.splice(0,this.s.length);this.e.splice(0,this.=
 e.length);this.e=3D[];this.s=3D[];this.i.innerHTML=3D"";Zuc(this,"defaul=
 t")};ZU.prototype.removeItem=3Dfunction(a){for(var b=3DZd,c=3D0;c<this.s=
 .length;c++)this.s[c]=3D=3Da&&(b=3Dthis.s[c],this.s.splice(c,1)),this.s[=
-c].item.eb=3Dc;return b};
-var Zvc=3Dfunction(a){var b=3DZV;if((a=3Db.e[a])&&a.parentNode){a.ab&&a.=
-ab.parentNode.removeChild(a.ab);a.parentNode.removeChild(a);for(var c=3D=
-0;c<b.e.length;c++)if(b.e[c]=3D=3D=3Da){b.e[b.e[c].xb]=3DZd;b.e.splice(c=
-,1);return}for(c=3D0;c<a.childNodes.length;c++)a.childNodes[c].eb?b.s.sp=
-lice(a.childNodes[c].eb,1):b.removeItem(a.childNodes[c])}},ZW=3Dfunction=
+c].item.cb=3Dc;return b};
+var Zvc=3Dfunction(a){var b=3DZV;if((a=3Db.e[a])&&a.parentNode){a.$a&&a.=
+$a.parentNode.removeChild(a.$a);a.parentNode.removeChild(a);for(var c=3D=
+0;c<b.e.length;c++)if(b.e[c]=3D=3D=3Da){b.e[b.e[c].wb]=3DZd;b.e.splice(c=
+,1);return}for(c=3D0;c<a.childNodes.length;c++)a.childNodes[c].cb?b.s.sp=
+lice(a.childNodes[c].cb,1):b.removeItem(a.childNodes[c])}},ZW=3Dfunction=
 (a,b,c,d,e){d=3Dd?a.e[d]||Zuc(a,d,e):a.e["default"];c=3Dc=3D=3DZb?"#":c;=
 e=3DZb;e=3Dc?a.createElement("a","menuItem",b):a.createElement("span","m=
 enuText",b);b=3D"string"=3D=3Dtypeof b?
 b:b.innerText||"ERROR";e.style.display=3D"block";c&&e.setAttribute("href=
-",c);e.eb=3Da.s.length;Zbb(d,e);a.s[a.s.length]=3D{item:e,text:b}},Zwc=3D=
+",c);e.cb=3Da.s.length;Zbb(d,e);a.s[a.s.length]=3D{item:e,text:b}},Zwc=3D=
 function(a){var b=3Da.e.controls||Zuc(a,"controls","");a=3Da.createEleme=
 nt("hr","menuSeparator");Zbb(b,a)};Z=3DZU.prototype;
-Z.yb=3Dfunction(){var a=3Dthis.i.style;a.position=3D"absolute";for(var b=
+Z.xb=3Dfunction(){var a=3Dthis.i.style;a.position=3D"absolute";for(var b=
 =3DZd,c=3D0;c<this.e.length;c++)this.e[c].className=3Dthis.e[c].classNam=
 e.replace(/ first/,""),0=3D=3Dthis.e[c].childNodes.length?this.e[c].styl=
 e.display=3D"none":(this.e[c].style.display=3D"",b||(b=3Dthis.e[c],b.cla=
@@ -2349,10 +2268,9 @@ parseInt(a.width,10)+13+"px");e.x+k>b&&(a.left=3De.x-(k-f)+"px")};Z.togg=
 le=3Dfunction(){"none"=3D=3Dthis.i.style.display?this.show():this.za()};=
 Z.show=3Dfunction(){if(""!=3Dthis.i.style.display){for(var a=3D0;a<this.=
 ia.length;a++)this.ia[a].call(Zd,this);this.i.style.visibility=3D"hidden=
-";this.i.style.display=3D"";this.yb();this.aa.nodeName&&"A"=3D=3Dthis.aa=
-.nodeName&&this.aa.blur();this.i.style.visibility=3D"visible";for(a=3D0;=
-a<Ztc.length;a++){var b=3DZtc[a];b!=3Dthis&&b.za()}this.$a&&this.$a()}};=
-
+";this.i.style.display=3D"";this.xb();this.$.nodeName&&"A"=3D=3Dthis.$.n=
+odeName&&this.$.blur();this.i.style.visibility=3D"visible";for(a=3D0;a<Z=
+tc.length;a++){var b=3DZtc[a];b!=3Dthis&&b.za()}this.Za&&this.Za()}};
 Z.za=3Dfunction(){this.i.style.display=3D"none"};Z.find=3Dfunction(a){va=
 r b=3D0,c=3D0;if(a.offsetParent){do b+=3Da.offsetLeft,c+=3Da.offsetTop;w=
 hile((a=3Da.offsetParent)&&a.style&&"relative"!=3Da.style.position&&"abs=
@@ -2405,4 +2323,4 @@ indow.location.reload()},{exp:"issuenav redirect",add:a?1:0})}(function(=
 a.preventDefault();ZEc(Zc)}):b&&ZE(b,"click",function(a){a.preventDefaul=
 t();ZEc(Ze)})})();
 
-------------VwEwWpylDKnHQw6CxWGvsj--
+------------lb8P0URdVXQaMPT0u8sLbH--

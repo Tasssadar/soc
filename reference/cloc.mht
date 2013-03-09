@@ -1,19 +1,22 @@
-Content-Type: multipart/related; start=<op.mhtml.1331244780046.eaa5fb097d4c787e@169.254.9.172>; boundary=----------Cyp1Kbbv0kW9wu2sf3EOPY
+Content-Type: multipart/related; start=<op.mhtml.1361794946471.c35f6b097d4cf62f@172.16.1.116>; boundary=----------Frd41nWbON4bPSAmVsNDld
 Content-Location: http://cloc.sourceforge.net/
 Subject: =?utf-8?Q?CLOC=20--=20Count=20Lines=20of=20Code?=
 MIME-Version: 1.0
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY
+------------Frd41nWbON4bPSAmVsNDld
 Content-Disposition: inline; filename=default.htm
-Content-Type: text/html; name=default.htm
-Content-ID: <op.mhtml.1331244780046.eaa5fb097d4c787e@169.254.9.172>
+Content-Type: text/html; charset=iso-8859-1; name=default.htm
+Content-ID: <op.mhtml.1361794946471.c35f6b097d4cf62f@172.16.1.116>
 Content-Location: http://cloc.sourceforge.net/
 Content-Transfer-Encoding: 8bit
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
- <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
   <link rel="stylesheet" href="style.css" type="text/css">
+  <!--
+  <link rel="stylesheet" href="index_files/style.css" type="text/css">
+    -->
   <title>CLOC -- Count Lines of Code</title>
   <meta http-equiv="refresh" content="86400">
  </head>
@@ -23,7 +26,7 @@ Content-Transfer-Encoding: 8bit
  <a name="_top"></a>
  
  <center>
- <div class=path>
+ <div class="path">
  <b><big><big>CLOC</big></big></b>
  <br>
 Count Lines of Code
@@ -31,35 +34,35 @@ Count Lines of Code
  </center>
 
 <!-- top index {{{1 --> 
-<div class=pod> <a name="___top"></a>
-<div class=pod>
-<div class=toc>
-<div class='indexgroup'>
-<ul   class='indexList indexList1'>
-  <li class='indexItem indexItem1'><a href='#Overview'>Overview</a>
-  <li class='indexItem indexItem1'><a href=http://sourceforge.net/project/showfiles.php?group_id=174787>Download</a>  (latest version: 1.55, released 2011-10-14)
-  <li class='indexItem indexItem1'><a href=http://sourceforge.net/projects/cloc/>SourceForge Project Page</a>
-  <li class='indexItem indexItem1'><a href='#License'>License</a>
-  <li class='indexItem indexItem1'><a href='#why_use'>Why Use cloc?</a>
-  <li class='indexItem indexItem1'><a href='#Other_Counters'>Other Counters</a>
-  <li class='indexItem indexItem1'><a href='#Basic_Use'>Basic Use</a>
-  <li class='indexItem indexItem1'><a href='#Options'>Options</a>
-  <li class='indexItem indexItem1'><a href='#Languages'>Recognized Languages</a>
-  <li class='indexItem indexItem1'><a href='#How_it_works'>How it Works</a>
-  <li class='indexItem indexItem1'><a href='#Advanced_Use'>Advanced Use</a>
-    <ul   class='indexList indexList2>
-    <li class='indexItem indexItem2'><a href='#strip_comments'>Remove Comments from Source Code</a>
-    <li class='indexItem indexItem2'><a href='#compressed_arch'>Work with Compressed Archives</a>
-    <li class='indexItem indexItem2'><a href='#diff'>Differences</a>
-    <li class='indexItem indexItem2'><a href='#custom_lang'>Create Custom Language Definitions</a>
-    <li class='indexItem indexItem2'><a href='#combine_reports'>Combine Reports</a>
-    <li class='indexItem indexItem2'><a href='#sql'>SQL</a>
-    <li class='indexItem indexItem2'><a href='#scale_factors'>Third Generation Language Scale Factors</a>
+<div class="pod"> <a name="___top"></a>
+<div class="pod">
+<div class="toc">
+<div class="indexgroup">
+<ul class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#Overview">Overview</a>
+  </li><li class="indexItem indexItem1"><a href="http://sourceforge.net/project/showfiles.php?group_id=174787">Download</a>  (latest version: 1.56, released 2012-04-09)
+  </li><li class="indexItem indexItem1"><a href="http://sourceforge.net/projects/cloc/">SourceForge Project Page</a>
+  </li><li class="indexItem indexItem1"><a href="#License">License</a>
+  </li><li class="indexItem indexItem1"><a href="#why_use">Why Use cloc?</a>
+  </li><li class="indexItem indexItem1"><a href="#Other_Counters">Other Counters</a>
+  </li><li class="indexItem indexItem1"><a href="#Basic_Use">Basic Use</a>
+  </li><li class="indexItem indexItem1"><a href="#Options">Options</a>
+  </li><li class="indexItem indexItem1"><a href="#Languages">Recognized Languages</a>
+  </li><li class="indexItem indexItem1"><a href="#How_it_works">How it Works</a>
+  </li><li class="indexItem indexItem1"><a href="#Advanced_Use">Advanced Use</a>
+    <ul class="indexList indexList2&gt;
+    &lt;li class=" indexitem="" indexitem2'=""><a href="#strip_comments">Remove Comments from Source Code</a>
+    <li class="indexItem indexItem2"><a href="#compressed_arch">Work with Compressed Archives</a>
+    </li><li class="indexItem indexItem2"><a href="#diff">Differences</a>
+    </li><li class="indexItem indexItem2"><a href="#custom_lang">Create Custom Language Definitions</a>
+    </li><li class="indexItem indexItem2"><a href="#combine_reports">Combine Reports</a>
+    </li><li class="indexItem indexItem2"><a href="#sql">SQL</a>
+    </li><li class="indexItem indexItem2"><a href="#scale_factors">Third Generation Language Scale Factors</a>
     <!--
     <li class='indexItem indexItem2'><a href='#no3_output'>Suppress Third Generation Language Output</a>
       -->
-    </ul>
-  <li class='indexItem indexItem1'><a href='#Limitations'>Limitations</a>
+    </li></ul>
+  </li><li class="indexItem indexItem1"><a href="#Limitations">Limitations</a>
   <!--
   <li class='indexItem indexItem1'><a href='#Troubleshooting'>Troubleshooting</a>
     <ul   class='indexList indexList2>
@@ -67,47 +70,51 @@ Count Lines of Code
     <li class='indexItem indexItem2'><a href='#extra_lang'>Why does cloc say I have files in language <i>XXX</i>?</a>
     </ul>
   -->
-  <li class='indexItem indexItem1'><a href='#Author'>Author</a>
-  <li class='indexItem indexItem1'><a href='#Acknowledgments'>Acknowledgments</a>
-  <li class='indexItem indexItem1'><a href='#Copyright'>Copyright</a>
-  <li class='indexItem indexItem1'><a href='#License'>License</a>
-</ul>
+  </li><li class="indexItem indexItem1"><a href="#Author">Author</a>
+  </li><li class="indexItem indexItem1"><a href="#Acknowledgments">Acknowledgments</a>
+  </li><li class="indexItem indexItem1"><a href="#Copyright">Copyright</a>
+  </li><li class="indexItem indexItem1"><a href="#License">License</a>
+</li></ul>
 </div>
 </div>
 <!-- 1}}} -->
 
 <!-- Overview {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Overview">Overview <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Overview">Overview <img alt="^" src="up.gif"></a></h1>
+
+<p>
+[Translations: <a href="http://science.webhostinggeeks.com/cloc">Serbo-Croatian</a>] 
+</p>
 
 <p>
 cloc 
 counts blank lines, comment lines,
-and physical lines of source code in <a href='#Languages'>many programming languages</a>.
-Given two versions of a code base, cloc can also compute
+and physical lines of source code in <a href="#Languages">many programming languages</a>.
+Given two versions of a code base, cloc can compute
 differences in blank, comment, and source lines.
 It is written entirely in Perl with no dependencies outside the
 standard distribution of Perl v5.6 and higher 
-(code from some external modules is <a href='index.html#regexp_common'>embedded within cloc</a>)
+(code from some external modules is <a href="http://cloc.sourceforge.net/index.html#regexp_common">embedded within cloc</a>)
 and so is quite portable.
 cloc is known to run on many flavors of Linux, 
 Mac OS X, AIX, Solaris, IRIX, z/OS, and Windows.
 (To run the Perl source version of cloc on Windows one needs 
-ActiveState Perl 5.6.1 or higher, or Cygwin installed.
+ActiveState Perl 5.6.1 or higher, Cygwin, or MobaXTerm with
+the Perl plug-in installed.
 Alternatively one can use the 
 Windows binary of cloc generated with 
-<a href=http://www.indigostar.com/perl2exe.htm>perl2exe</a>
+<a href="http://www.indigostar.com/perl2exe.htm">perl2exe</a>
 to run on Windows computers that have neither Perl nor Cygwin.)
 </p>
 <p>
 cloc contains code from David Wheeler's 
-<a href=http://www.dwheeler.com/sloccount/>SLOCCount</a>,
+<a href="http://www.dwheeler.com/sloccount/">SLOCCount</a>,
 Damian Conway and Abigail's Perl module
-<a href=http://search.cpan.org/~abigail/Regexp-Common-2.120/lib/Regexp/Common.pm>Regexp::Common</a>,
+<a href="http://search.cpan.org/%7Eabigail/Regexp-Common-2.120/lib/Regexp/Common.pm">Regexp::Common</a>,
 Sean M. Burke's Perl module
-<a href=http://search.cpan.org/~sburke/Win32-Autoglob-1.01/Autoglob.pm>Win32::Autoglob</a>, and Tye McQueen's Perl module
-<a href=http://search.cpan.org/~tyemq/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm>Algorithm::Diff</a>.
-Language scale factors were derived from Mayes Consulting, LLC web site <a href=http://softwareestimator.com/IndustryData2.htm>http://softwareestimator.com/IndustryData2.htm</a>.
+<a href="http://search.cpan.org/%7Esburke/Win32-Autoglob-1.01/Autoglob.pm">Win32::Autoglob</a>, and Tye McQueen's Perl module
+<a href="http://search.cpan.org/%7Etyemq/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm">Algorithm::Diff</a>.
+Language scale factors were derived from Mayes Consulting, LLC web site <a href="http://softwareestimator.com/IndustryData2.htm">http://softwareestimator.com/IndustryData2.htm</a>.
 <!--
 and Tye McQueen's module
 <a href=http://search.cpan.org/~tyemq/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm>Algorithm::Diff</a>.
@@ -115,74 +122,71 @@ and Tye McQueen's module
 </p>
 <!-- 1}}} -->
 <!-- License {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="License">License<img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="License">License<img alt="^" src="up.gif"></a></h1>
 <p>
 cloc is licensed under the 
-<a href=http://www.gnu.org/licenses/gpl-2.0.html>GNU General Public License, v2</a>
+<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License, v2</a>
 , excluding
 portions which are copied from other sources.  Code copied from the 
 Regexp::Common, Win32::Autoglob, and Algorithm::Diff Perl 
 modules is subject to the 
-<a href=http://www.opensource.org/licenses/artistic-license-2.0.php>Artistic License</a>.
+<a href="http://www.opensource.org/licenses/artistic-license-2.0.php">Artistic License</a>.
 </p>
 <!-- 1}}}
 <!-- Why use cloc? {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="why_use">Why Use cloc? <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="why_use">Why Use cloc? <img alt="^" src="up.gif"></a></h1>
 <p>
 cloc has many features that make it easy to use, thorough,
 extensible, and portable:
-<ol>
+</p><ol>
     <li> Exists as a single, self-contained file that requires minimal
          installation effort---just download the file and run it.
-    <li> Can read language comment definitions from a file and thus
+    </li><li> Can read language comment definitions from a file and thus
          potentially work with computer languages that do not yet exist.
-    <li> Allows results from multiple runs to be summed together
+    </li><li> Allows results from multiple runs to be summed together
          by language and by project.
-    <li> Can produce results in a variety of formats:
+    </li><li> Can produce results in a variety of formats:
          plain text, SQL, XML, YAML, comma separated values.
-    <li> Can count code within compressed archives (tar balls, Zip files, 
+    </li><li> Can count code within compressed archives (tar balls, Zip files, 
          Java .ear files).
-    <li> Has numerous troubleshooting options.
-    <li> Handles file and directory names with spaces and other unusual 
+    </li><li> Has numerous troubleshooting options.
+    </li><li> Handles file and directory names with spaces and other unusual 
          characters.
-    <li> Has no dependencies outside the standard Perl distribution.
-    <li> Runs on Linux, FreeBSD, NetBSD, Mac OS X, AIX, HP-UX, Solaris, IRIX,
+    </li><li> Has no dependencies outside the standard Perl distribution.
+    </li><li> Runs on Linux, FreeBSD, NetBSD, Mac OS X, AIX, HP-UX, Solaris, IRIX,
          and z/OS systems that have Perl 5.6 or higher.
          The source version runs on Windows with either ActiveState
          Perl or cygwin.  Alternatively on Windows one can run
          the Windows binary which has no dependencies.
-</ol>
-</p>
+</li></ol>
+<p></p>
 <!-- 1}}} -->
 <!-- Other Counters {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Other_Counters">Other Counters <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Other_Counters">Other Counters <img alt="^" src="up.gif"></a></h1>
 <p>
 If cloc does not suit your needs here are other freely available
 counters to consider:
-<ul>
-<li> <a href=http://www.sonarsource.org/>Sonar</a>
-<li> <a href=http://labs.ohloh.net/ohcount>Ohcount</a>
-<li> <a href=http://www.dwheeler.com/sloccount/>SLOCCount</a>
-<li> <a href=http://www.cmcrossroads.com/bradapp/clearperl/sclc.html>sclc</a>
-<li> USC's <a href=http://sunset.usc.edu/research/CODECOUNT/>CODECOUNT</a>
-<li> <a href=http://freshmeat.net/projects/loc/>loc</a>
-</ul>
-</p>
+</p><ul>
+<li> <a href="http://www.sonarsource.org/">Sonar</a>
+</li><li> <a href="http://labs.ohloh.net/ohcount">Ohcount</a>
+</li><li> <a href="http://www.dwheeler.com/sloccount/">SLOCCount</a>
+</li><li> <a href="http://www.cmcrossroads.com/bradapp/clearperl/sclc.html">sclc</a>
+</li><li> USC's <a href="http://sunset.usc.edu/research/CODECOUNT/">CODECOUNT</a>
+</li><li> <a href="http://freshmeat.net/projects/loc/">loc</a>
+</li></ul>
+<p></p>
 <p>
 Other references:
-<ul>
-<li> QSM's <a href=http://www.qsm.com/CodeCounters.html>directory</a>
+</p><ul>
+<li> QSM's <a href="http://www.qsm.com/CodeCounters.html">directory</a>
      of code counting tools.
-<li> The <a href=http://en.wikipedia.org/wiki/Source_lines_of_code>Wikipedia entry</a> 
+</li><li> The <a href="http://en.wikipedia.org/wiki/Source_lines_of_code">Wikipedia entry</a> 
      for source code line counts.
-</ul>
-</p>
+</li></ul>
+<p></p>
 <!-- 1}}} -->
 <!-- Regexp::Common {{{1 -->
-<h1><a name='regexp_common'>Regexp::Common, Digest::MD5, Win32::Autoglob, Algorithm::Diff</a></h1>
+<h1><a name="regexp_common">Regexp::Common, Digest::MD5, Win32::Autoglob, Algorithm::Diff</a></h1>
 <p>
 Although cloc does not need Perl modules outside those found in the 
 standard distribution, cloc does rely on a few external modules.
@@ -217,8 +221,7 @@ and Digest::MD5 installed locally.
 </p>
 <!-- 1}}} -->
 <!-- Basic Use {{{1 -->
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Basic_Use">Basic Use <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Basic_Use">Basic Use <img alt="^" src="up.gif"></a></h1>
 <p>
 cloc is a command line program that takes file, directory, and/or archive
 names as inputs.
@@ -266,47 +269,46 @@ directly with compressed files.  See the
 section for details.
 -->
 
-</p>
+<p></p>
 <!-- 1}}} -->
 <!-- Options {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Options">Options <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Options">Options <img alt="^" src="up.gif"></a></h1>
 
 <pre>  
 <i>prompt&gt;</i> cloc
 
 Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt;report files&gt;
 
- Count, or compute differences of, physical lines of source code in the 
- given files (may be archives such as compressed tarballs or zip files) 
+ Count, or compute differences of, physical lines of source code in the
+ given files (may be archives such as compressed tarballs or zip files)
  and/or recursively below the given directories.
 
- <b>Input Options</b>
+ Input Options
    --extract-with=&lt;cmd&gt;      This option is only needed if cloc is unable
                              to figure out how to extract the contents of
                              the input file(s) by itself.
                              Use &lt;cmd&gt; to extract binary archive files (e.g.:
-                             .tar.gz, .zip, .Z).  Use the literal '&gt;FILE&lt;' as 
+                             .tar.gz, .zip, .Z).  Use the literal '&gt;FILE&lt;' as
                              a stand-in for the actual file(s) to be
                              extracted.  For example, to count lines of code
-                             in the input files 
-                                gcc-4.2.tar.gz  perl-5.8.8.tar.gz  
-                             on Unix use  
+                             in the input files
+                                gcc-4.2.tar.gz  perl-5.8.8.tar.gz
+                             on Unix use
                                --extract-with='gzip -dc &gt;FILE&lt; | tar xf -'
                              or, if you have GNU tar,
-                               --extract-with='tar zxf &gt;FILE&lt;' 
-                             and on Windows use: 
+                               --extract-with='tar zxf &gt;FILE&lt;'
+                             and on Windows use:
                                --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ."
                              (if WinZip is installed there).
-   --list-file=&lt;file&gt;        Take the list of file and/or directory names to 
-                             process from &lt;file&gt; which has one file/directory 
+   --list-file=&lt;file&gt;        Take the list of file and/or directory names to
+                             process from &lt;file&gt; which has one file/directory
                              name per line.  See also --exclude-list-file.
    --unicode                 Check binary files to see if they contain Unicode
                              expanded ASCII text.  This causes performance to
                              drop noticably.
 
- <b>Processing Options</b>
-   --autoconf                Count .in files (as processed by GNU autoconf) of 
+ Processing Options
+   --autoconf                Count .in files (as processed by GNU autoconf) of
                              recognized languages.
    --by-file                 Report results for every source file encountered.
    --by-file-by-lang         Report results for every source file encountered
@@ -320,32 +322,32 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
    --follow-links            [Unix only] Follow symbolic links to directories
                              (sym links to files are always followed).
    --force-lang=&lt;lang&gt;[,&lt;ext&gt;]
-                             Process all files that have a &lt;ext&gt; extension 
-                             with the counter for language &lt;lang&gt;.  For 
-                             example, to count all .f files with the 
-                             Fortran 90 counter (which expects files to 
-                             end with .f90) instead of the default Fortran 77 
+                             Process all files that have a &lt;ext&gt; extension
+                             with the counter for language &lt;lang&gt;.  For
+                             example, to count all .f files with the
+                             Fortran 90 counter (which expects files to
+                             end with .f90) instead of the default Fortran 77
                              counter, use
                                --force-lang="Fortran 90",f
                              If &lt;ext&gt; is omitted, every file will be counted
-                             with the &lt;lang&gt; counter.  This option can be 
+                             with the &lt;lang&gt; counter.  This option can be
                              specified multiple times (but that is only
-                             useful when &lt;ext&gt; is given each time).  
+                             useful when &lt;ext&gt; is given each time).
                              See also --script-lang, --lang-no-ext.
    --ignore-whitespace       Ignore horizontal white space when comparing files
                              with --diff.  See also --ignore-case.
    --ignore-case             Ignore changes in case; consider upper- and lower-
                              case letters equivalent when comparing files with
                              --diff.  See also --ignore-whitespace.
-   --lang-no-ext=&lt;lang&gt;      Count files without extensions using the &lt;lang&gt; 
-                             counter.  This option overrides internal logic 
-                             for files without extensions (where such files 
+   --lang-no-ext=&lt;lang&gt;      Count files without extensions using the &lt;lang&gt;
+                             counter.  This option overrides internal logic
+                             for files without extensions (where such files
                              are checked against known scripting languages
-                             by examining the first line for #!).  See also 
+                             by examining the first line for #!).  See also
                              --force-lang, --script-lang.
    --read-binary-files       Process binary files in addition to text files.
                              This is usually a bad idea and should only be
-                             attempted with text files that have embedded 
+                             attempted with text files that have embedded
                              binary data.
    --read-lang-def=&lt;file&gt;    Load from &lt;file&gt; the language processing filters.
                              (see also --write-lang-def) then use these filters
@@ -358,7 +360,7 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
                                 --script-lang=Perl,perl5.8.8
                              The language name is case insensitive but the
                              name of the script language executable, &lt;s&gt;,
-                             must have the right case.  This option can be 
+                             must have the right case.  This option can be
                              specified multiple times.  See also --force-lang,
                              --lang-no-ext.
    --sdir=&lt;dir&gt;              Use &lt;dir&gt; as the scratch directory instead of
@@ -369,45 +371,53 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
                              a performance boost at the expense of counting
                              files with identical contents multiple times
                              (if such duplicates exist).
+   --stdin-name=&lt;file&gt;       Give a file name to use to determine the language
+                             for standard input.
    --strip-comments=&lt;ext&gt;    For each file processed, write to the current
                              directory a version of the file which has blank
                              lines and comments removed.  The name of each
-                             stripped file is the original file name with 
+                             stripped file is the original file name with
                              .&lt;ext&gt; appended to it.  It is written to the
                              current directory unless --original-dir is on.
-   --original-dir            [Only effective in combination with 
-                             --strip-comments]  Write the stripped files 
+   --original-dir            [Only effective in combination with
+                             --strip-comments]  Write the stripped files
                              to the same directory as the original files.
    --sum-reports             Input arguments are report files previously
                              created with the --report-file option.  Makes
                              a cumulative set of results containing the
                              sum of data from the individual report files.
+   --unix                    Override the operating system autodetection
+                             logic and run in UNIX mode.  See also
+                             --windows, --show-os.
+   --windows                 Override the operating system autodetection
+                             logic and run in Microsoft Windows mode.
+                             See also --unix, --show-os.
 
- <b>Filter Options</b>
+ Filter Options
    --exclude-dir=&lt;D1&gt;[,D2,]  Exclude the given comma separated directories
                              D1, D2, D3, et cetera, from being scanned.  For
                              example  --exclude-dir=.cache,test  will skip
                              all files that have /.cache/ or /test/ as part
                              of their path.
-                             Directories named .cvs and .svn are always
-                             excluded.
+                             Directories named .bzr, .cvs, .hg, .git, and
+                             .svn are always excluded.
    --exclude-ext=&lt;ext1&gt;[,&lt;ext2&gt;[...]]
-                             Do not count files having the given file name 
+                             Do not count files having the given file name
                              extensions.
    --exclude-lang=&lt;L1&gt;[,L2,] Exclude the given comma separated languages
                              L1, L2, L3, et cetera, from being counted.
-   --exclude-list-file=&lt;file&gt;  Ignore files and/or directories whose names 
-                             appear in &lt;file&gt;.  &lt;file&gt; should have one entry 
-                             per line.  Relative path names will be resolved 
-                             starting from the directory where cloc is 
+   --exclude-list-file=&lt;file&gt;  Ignore files and/or directories whose names
+                             appear in &lt;file&gt;.  &lt;file&gt; should have one entry
+                             per line.  Relative path names will be resolved
+                             starting from the directory where cloc is
                              invoked.  See also --list-file.
-   --match-f=&lt;regex&gt;         Only count files whose basenames match the Perl 
+   --match-f=&lt;regex&gt;         Only count files whose basenames match the Perl
                              regex.  For example
                                --match-f=^[Ww]idget
                              only counts files that start with Widget or widget.
    --not-match-f=&lt;regex&gt;     Count all files except those whose basenames
                              match the Perl regex.
-   --match-d=&lt;regex&gt;         Only count files in directories matching the Perl 
+   --match-d=&lt;regex&gt;         Only count files in directories matching the Perl
                              regex.  For example
                                --match-d=/src/
                              only counts files in directories containing
@@ -416,10 +426,10 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
                              matching the Perl regex.
    --skip-win-hidden         On Windows, ignore hidden files.
 
- <b>Debug Options</b>
+ Debug Options
    --categorized=&lt;file&gt;      Save names of categorized files to &lt;file&gt;.
    --counted=&lt;file&gt;          Save names of processed source files to &lt;file&gt;.
-   --diff-alignment=&lt;file&gt;   Write to &lt;file&gt; a list of files and file pairs 
+   --diff-alignment=&lt;file&gt;   Write to &lt;file&gt; a list of files and file pairs
                              showing which files were added, removed, and/or
                              compared during a run with --diff.  This switch
                              forces the --diff mode on.
@@ -427,12 +437,14 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
    --found=&lt;file&gt;            Save names of every file found to &lt;file&gt;.
    --ignored=&lt;file&gt;          Save names of ignored files and the reason they
                              were ignored to &lt;file&gt;.
-   --print-filter-stages     Print to STDOUT processed source code before and 
+   --print-filter-stages     Print to STDOUT processed source code before and
                              after each filter is applied.
    --show-ext[=&lt;ext&gt;]        Print information about all known (or just the
                              given) file extensions and exit.
    --show-lang[=&lt;lang&gt;]      Print information about all known (or just the
                              given) languages and exit.
+   --show-os                 Print the value of the operating system mode
+                             and exit.  See also --unix, --windows.
    -v[=&lt;n&gt;]                  Verbose switch (optional numeric value).
    --version                 Print the version of this program and exit.
 
@@ -440,7 +452,7 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
                              then exits.  Useful as a first step to creating
                              custom language definitions (see --read-lang-def).
 
- <b>Output Options</b>
+ Output Options
    --3                       Print third-generation language output.
                              (This option can cause report summation to fail
                              if some reports were produced with this option
@@ -454,31 +466,32 @@ Usage: cloc [options] &lt;file(s)/dir(s)&gt; | &lt;set 1&gt; &lt;set 2&gt; | &lt
    --report-file=&lt;file&gt;      Write the results to &lt;file&gt; instead of STDOUT.
    --out=&lt;file&gt;              Synonym for --report-file=&lt;file&gt;.
    --csv                     Write the results as comma separated values.
+   --csv-delimiter=&lt;C&gt;       Use the character &lt;C&gt; as the delimiter for comma
+                             separated files instead of ,.  This switch forces
+                             --csv to be on.
    --sql=&lt;file&gt;              Write results as SQL create and insert statements
                              which can be read by a database program such as
-                             SQLite.  If &lt;file&gt; is 1, output is sent to STDOUT.
-   --sql-project=&lt;name&gt;      Use &lt;name&gt; as the project identifier for the 
+                             SQLite.  If &lt;file&gt; is -, output is sent to STDOUT.
+   --sql-project=&lt;name&gt;      Use &lt;name&gt; as the project identifier for the
                              current run.  Only valid with the --sql option.
    --sql-append              Append SQL insert statements to the file specified
-                             by --sql and do not generate table creation 
+                             by --sql and do not generate table creation
                              statements.  Only valid with the --sql option.
-   --sum-one                 For plain text reports, show the SUM: output line 
+   --sum-one                 For plain text reports, show the SUM: output line
                              even if only one input file is processed.
    --xml                     Write the results in XML.
    --xsl=&lt;file&gt;              Reference &lt;file&gt; as an XSL stylesheet within
-                             the XML output.  If &lt;file&gt; is 1 (numeric one), 
-                             writes a default stylesheet, cloc.xsl (or 
-                             cloc-diff.xsl if --diff is also given).  
+                             the XML output.  If &lt;file&gt; is 1 (numeric one),
+                             writes a default stylesheet, cloc.xsl (or
+                             cloc-diff.xsl if --diff is also given).
                              This switch forces --xml on.
    --yaml                    Write the results in YAML.
 
 </pre>
 <!-- 1}}} -->
 <!-- Recognized Languages {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Languages">Recognized Languages <img alt='^' src='up.gif'></a></h1>
-<pre>
-<i>prompt&gt;</i> cloc --show-lang
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Languages">Recognized Languages <img alt="^" src="up.gif"></a></h1>
+<pre><i>prompt&gt;</i> cloc --show-lang
 
 ABAP                       (abap)
 ActionScript               (as)
@@ -488,6 +501,7 @@ AMPLE                      (ample, dofile, startup)
 ASP                        (asa, asp)
 ASP.Net                    (asax, ascx, asmx, aspx, config, master, sitemap, webinfo)
 Assembly                   (asm, S, s)
+AutoHotkey                 (ahk)
 awk                        (awk)
 Bourne Again Shell         (bash)
 Bourne Shell               (sh)
@@ -497,13 +511,18 @@ C#                         (cs)
 C++                        (C, cc, cpp, cxx, pcc)
 C/C++ Header               (H, h, hh, hpp)
 CCS                        (ccs)
+Clojure                    (clj)
+ClojureScript              (cljs)
 CMake                      (CMakeLists.txt)
 COBOL                      (cbl, CBL, cob, COB)
+CoffeeScript               (coffee)
 ColdFusion                 (cfm)
+ColdFusion CFScript        (cfc)
 CSS                        (css)
 Cython                     (pyx)
 D                          (d)
 DAL                        (da)
+Dart                       (dart)
 DOS Batch                  (bat, BAT)
 DTD                        (dtd)
 Erlang                     (erl, hrl)
@@ -524,7 +543,8 @@ JSP                        (jsp)
 Kermit                     (ksc)
 Korn Shell                 (ksh)
 lex                        (l)
-Lisp                       (cl, el, jl, lisp, lsp, sc, scm)
+Lisp                       (el, jl, lisp, lsp, sc, scm)
+Lisp/OpenCL                (cl)
 LiveLink OScript           (oscript)
 Lua                        (lua)
 m4                         (ac, m4)
@@ -547,6 +567,7 @@ Perl                       (perl, PL, pl, plh, plx, pm)
 PHP                        (php, php3, php4, php5)
 PHP/Pascal                 (inc)
 Python                     (py)
+QML                        (qml)
 Rexx                       (rexx)
 Ruby                       (rb)
 Ruby HTML                  (rhtml)
@@ -565,7 +586,7 @@ Teamcenter met             (met)
 Teamcenter mth             (mth)
 VHDL                       (vhd, VHD, VHDL, vhdl)
 vim script                 (vim)
-Visual Basic               (bas, cls, frm, vb, VB, vba, VBA, vbs, VBS)
+Visual Basic               (bas, cls, ctl, dsr, frm, vb, VB, vba, VBA, vbs, VBS)
 XAML                       (xaml)
 XML                        (XML, xml)
 XSD                        (xsd, XSD)
@@ -579,19 +600,21 @@ from a file with the <code>--read-lang-def</code> option.
 </p>
 <p>
 Two file extensions have multiple language mappings:
-<ul>
+</p><ul>
 <li>  <code>.m</code> files could be MATLAB, MUMPS, or Objective C
-<li>  <code>.inc</code> files could be PHP or Pascal
-</ul>
+</li><li>  <code>.inc</code> files could be PHP or Pascal
+</li></ul>
 cloc has subroutines 
 that attempt to identify the correct language
-based on the file's contents for these special cases.
-</p>
+based on the file's contents for these special cases.  Language identification
+accuracy is a function of how much code the file contains; <tt>.m</tt>
+files with just one or two lines for example, seldom have enough
+information to correctly between MATLAB, MUMPS, or Objective C.
+<p></p>
 
 <!-- 1}}} -->
 <!-- How it Works {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="How_it_works">How it Works <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="How_it_works">How it Works <img alt="^" src="up.gif"></a></h1>
 <p>
 cloc's method of operation resembles SLOCCount's:  First, create
 a list of files to consider.  Next, attempt to determine whether or not
@@ -601,7 +624,7 @@ to count the number of source lines.
 </p>
 <p>
 A more detailed description:
-<ol>
+</p><ol>
 <li> If the input file is an archive (such as a <tt>.tar.gz</tt> or 
      <tt>.zip</tt> file), create a temporary directory and expand the 
      archive there
@@ -609,14 +632,14 @@ A more detailed description:
      <tt>bzip2</tt>, <tt>unzip</tt>, etc) then add this temporary directory
      as one of the inputs.  (This works more reliably on Unix than on
      Windows.)
-<li> Use File::Find to recursively descend the input directories and 
+</li><li> Use File::Find to recursively descend the input directories and 
      make a list of candidate file names.  Ignore binary and zero-sized files.
-<li> Make sure the files in the candidate list have unique contents
+</li><li> Make sure the files in the candidate list have unique contents
      (first by comparing file sizes, then for, similarly sized files,
      compare MD5 hashes of the file contents with Digest::MD5).
-<li> Scan the candidate file list for 
+</li><li> Scan the candidate file list for 
      file extensions which cloc associates with programming languages 
-     (see the <code><a href='#Languages'>--show-lang</a></code>
+     (see the <code><a href="#Languages">--show-lang</a></code>
      and <code>--show-ext</code> options).  Files which match are
      classified as containing source code for that language.  
      Each file without an extensions is opened and its first 
@@ -626,27 +649,27 @@ A more detailed description:
      language (if the language is recognized).  If the file does not
      have a recognized extension or is not a recognzied
      scripting language, the file is ignored.
-<li> All remaining files in the candidate list should now be source
+</li><li> All remaining files in the candidate list should now be source
      files for known programming languages.  For each of these files:
     <ol>
     <li>  Read the entire file into memory.
-    <li>  Count the number of lines (= L<sub>original</sub>).
-    <li>  Remove blank lines, then count again (= L<sub>non_blank</sub>).
-    <li>  Loop over the <i>comment filters</i> defined for
+    </li><li>  Count the number of lines (= L<sub>original</sub>).
+    </li><li>  Remove blank lines, then count again (= L<sub>non_blank</sub>).
+    </li><li>  Loop over the <i>comment filters</i> defined for
           this language.  (For example, C++ has two filters:  
           (1) remove lines that start with optional whitespace
           followed by <code>//</code>  and 
           (2) remove text between <code>/*</code> and <code>*/</code>)
           Apply each filter to the code to remove comments.  
           Count the left over lines (= L<sub>code</sub>).
-    <li>  Save the counts for this language:<br>
+    </li><li>  Save the counts for this language:<br>
           blank lines = L<sub>original</sub> - L<sub>non_blank</sub><br>
           comment lines = L<sub>original</sub> - L<sub>non_blank</sub>
                           - L<sub>code</sub><br>
           code lines = L<sub>code</sub>
-    </ol>
-</ol>
-</p>
+    </li></ol>
+</li></ol>
+<p></p>
 <p>
 The options modify the algorithm slightly.  The
 <code>--read-lang-def</code> option for example allows the user to
@@ -656,14 +679,12 @@ between Steps 2 and 3.
 </p>
 <!-- 1}}} -->
 <!-- Advanced Use {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Advanced_Use">Advanced Use <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Advanced_Use">Advanced Use <img alt="^" src="up.gif"></a></h1>
 <p>
 </p>
 <!-- 1}}} -->
 <!--   Remove Comments from Source Code {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="strip_comments">Remove Comments from Source Code<img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="strip_comments">Remove Comments from Source Code<img alt="^" src="up.gif"></a></h2>
 <p>
 How can you tell if cloc correctly identifies comments?
 One way to convince yourself cloc is doing the right thing is to 
@@ -672,11 +693,10 @@ remove comments and blank lines from files, then compare the
 stripped-down files to originals.  
 </p>
 Let's try this out with the SQLite 
-<a href=http://www.sqlite.org/cvstrac/wiki?p=TheAmalgamation>amalgamation</a>,
+<a href="http://www.sqlite.org/cvstrac/wiki?p=TheAmalgamation">amalgamation</a>,
 a C file containing all code needed to build the SQLite library along
 with a header file:
-<pre>
-<i>prompt</i>&gt; tar zxf sqlite-amalgamation-3.5.6.tar.gz 
+<pre><i>prompt</i>&gt; tar zxf sqlite-amalgamation-3.5.6.tar.gz 
 <i>prompt</i>&gt; cd sqlite-3.5.6/
 <i>prompt</i>&gt; cloc --strip-comments=nc sqlite.c
        1 text file.
@@ -699,8 +719,7 @@ here <tt>nc</tt> was used as an abbreviation for "no comments".
 <p>
 cloc removed over 31,000 lines from the file:
 </p>
-<pre>
-<i>prompt</i>&gt; wc -l sqlite3.c sqlite3.c.nc 
+<pre><i>prompt</i>&gt; wc -l sqlite3.c sqlite3.c.nc 
   82895 sqlite3.c
   50901 sqlite3.c.nc
  133796 total
@@ -721,16 +740,14 @@ resulting object files.
 <p>
 First, the original source file:
 </p>
-<pre>
-<i>prompt</i>&gt; gcc -c sqlite3.c
+<pre><i>prompt</i>&gt; gcc -c sqlite3.c
 <i>prompt</i>&gt; md5sum sqlite3.o
 cce5f1a2ea27c7e44b2e1047e2588b49  sqlite3.o
 </pre>
 <p>
 Next, the version without comments:
 </p>
-<pre>
-<i>prompt</i>&gt; mv sqlite3.c.nc sqlite3.c
+<pre><i>prompt</i>&gt; mv sqlite3.c.nc sqlite3.c
 <i>prompt</i>&gt; gcc -c sqlite3.c
 <i>prompt</i>&gt; md5sum sqlite3.o
 cce5f1a2ea27c7e44b2e1047e2588b49  sqlite3.o
@@ -740,8 +757,7 @@ the source code in any significant way since the resulting object file
 matches the original.
 <!-- 1}}} -->
 <!--   Work with Compressed Archives {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="compressed_arch">Work with Compressed Archives <img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="compressed_arch">Work with Compressed Archives <img alt="^" src="up.gif"></a></h2>
 <p>
 Versions of cloc before v1.07 required an
  <code>--extract-with=<i>&lt;cmd&gt;</i></code> option to tell cloc how
@@ -756,12 +772,12 @@ reasonably well on Unix-type OS's for the following file types:
 Some of these extensions work on Windows if one has WinZip installed
 in the default location (<tt>C:\Program Files\WinZip\WinZip32.exe</tt>).
 Additionally, with newer versions of WinZip, the 
-<a href=http://www.winzip.com/downcl.htm>command line add-on</a>
+<a href="http://www.winzip.com/downcl.htm">command line add-on</a>
 is needed for correct operation; in this case one would invoke cloc with
 something like<br>
 <code>
  --extract-with="\"c:\Program Files\WinZip\wzunzip\" -e -o &gt;FILE&lt; ."
- </code> (ref. <a href=http://sourceforge.net/projects/cloc/forums/forum/600963/topic/4021070?message=8938196>forum post</a>).
+ </code> (ref. <a href="http://sourceforge.net/projects/cloc/forums/forum/600963/topic/4021070?message=8938196">forum post</a>).
 </p>
 <p>
 In situations where the automatic extraction fails, one can try the 
@@ -782,28 +798,26 @@ For example, say you have the following source tarballs on a Unix machine<br>
 &nbsp;&nbsp;  &nbsp; <code>Python-2.4.2.tar.gz</code><br>
 and you want to count all the code within them.  The command would be
 </p>
-<pre>
-cloc --extract-with='gzip -dc &gt;FILE&lt; | tar xf -' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+<pre>cloc --extract-with='gzip -dc &gt;FILE&lt; | tar xf -' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
 </pre>
 If that Unix machine has GNU tar (which can uncompress and extract in one step) the command can be shortened to
-<pre>
-cloc --extract-with='tar zxf &gt;FILE&lt;' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+<pre>cloc --extract-with='tar zxf &gt;FILE&lt;' perl-5.8.5.tar.gz Python-2.4.2.tar.gz
 </pre>
 On a Windows computer with WinZip installed in <code>c:\Program Files\WinZip</code> the command would look like
-<pre>
-cloc.exe --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ." perl-5.8.5.tar.gz Python-2.4.2.tar.gz
+<pre>cloc.exe --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ." perl-5.8.5.tar.gz Python-2.4.2.tar.gz
 </pre>
-Java <code>.ear</code> files are Zip files that contain additional Zip files.  cloc can handle nested compressed archives without difficulty--provided all such files are compressed and archived in the same way.  Examples of counting a
+Java <code>.ear</code> files are Zip files that contain additional Zip 
+files.  cloc can handle nested compressed archives without 
+difficulty--provided all such files are compressed and archived in the 
+same way.  Examples of counting a
 Java <code>.ear</code> file in Unix and Windows:
-<pre>
-<i>Unix&gt;</i> cloc --extract-with="unzip -d . &gt;FILE&lt; " Project.ear
+<pre><i>Unix&gt;</i> cloc --extract-with="unzip -d . &gt;FILE&lt; " Project.ear
 
 <i>DOS&gt;</i> cloc.exe --extract-with="\"c:\Program Files\WinZip\WinZip32.exe\" -e -o &gt;FILE&lt; ." Project.ear
 </pre>
 <!-- 1}}} -->
 <!--   Differences {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="diff">Differences<img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="diff">Differences<img alt="^" src="up.gif"></a></h2>
 <p>
 The <tt>--diff</tt> switch allows one to measure the relative change in
 source code and comments between two versions of a file, directory,
@@ -825,31 +839,28 @@ and a directory.  cloc will try to align
 file pairs within the directories or archives and compare diffs
 for each pair.  For example, to see what changed between
 GCC 4.4.0 and 4.5.0 one could do
-<pre>
-  cloc --diff gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
+</p><pre>  cloc --diff gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
 </pre>
 
 Be prepared to wait a while for the results though; the <tt>--diff</tt>
 option runs much more slowly than an absolute code count.
-</p>
+<p></p>
 <p>
 To see how cloc aligns files between the two archives, use the
 <tt>--diff-alignment</tt> option
 
-<pre>
-  cloc --diff-aligment=align.txt gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
+</p><pre>  cloc --diff-aligment=align.txt gcc-4.4.0.tar.bz2  gcc-4.5.0.tar.bz2
 </pre>
 
 to produce the file <tt>align.txt</tt> which shows the file pairs as well
 as files added and deleted.  The symbols == and != before each
 file pair indicate if the files are identical (==)
 or if they have different content (!=).
-</p>
+<p></p>
 <p>
 Here's sample output showing the difference between the Python 2.6.6 and 2.7
 releases:
-<pre>
-<i>prompt&gt;</i> cloc --diff  Python-2.6.6.tar.bz2 Python-2.7.tar.bz2
+</p><pre><i>prompt&gt;</i> cloc --diff  Python-2.6.6.tar.bz2 Python-2.7.tar.bz2
       3870 text files.
       4130 text files.s
       2177 files ignored.                                         
@@ -981,11 +992,10 @@ regular expression.  Nested C comments yield erroneous results however.
 There's also output for the language "(unknown)".  Files in this
 category are non-source files and therefore not counted; their
 presence is merely noted as having been removed, added, or modified.
-</p>
+<p></p>
 <!-- 1}}} -->
 <!--   Create Custom Language Definitions {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="custom_lang">Create Custom Language Definitions <img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="custom_lang">Create Custom Language Definitions <img alt="^" src="up.gif"></a></h2>
 <p>
 cloc can write its language comment definitions to a file or can read
 comment definitions from a file, overriding the built-in definitions.
@@ -996,30 +1006,27 @@ to languages, or to modify the way existing languages are counted.
 <p>
 The easiest way to create a custom language definition file is to
 make cloc write its definitions to a file, then modify that file:
-<pre>
-<i>Unix&gt;</i> cloc --write-lang-def=my_definitions.txt
+</p><pre><i>Unix&gt;</i> cloc --write-lang-def=my_definitions.txt
 </pre>
 creates the file <code>my_definitions.txt</code> which can be modified
 then read back in with
-<pre>
-<i>Unix&gt;</i> cloc --read-lang-def=my_definitions.txt  <i>file1 file2 dir1 ...</i>
+<pre><i>Unix&gt;</i> cloc --read-lang-def=my_definitions.txt  <i>file1 file2 dir1 ...</i>
 </pre>
-</p>
+<p></p>
 <p>
 Each language entry has four parts:
-<ol>
+</p><ol>
     <li> The language name starting in column 1.
-    <li> One or more comment <i>filters</i> starting in column 5.
-    <li> One or more filename extensions starting in column 5.
-    <li> A 3rd generation scale factor starting in column 5.  This entry must be provided
+    </li><li> One or more comment <i>filters</i> starting in column 5.
+    </li><li> One or more filename extensions starting in column 5.
+    </li><li> A 3rd generation scale factor starting in column 5.  This entry must be provided
          but its value is not important
          unless you want to compare your language to a hypothetical
          third generation programming language.
-</ol>
+</li></ol>
 A filter defines a method to remove comment text from the source file.
 For example the entry for C++ looks like this
-<pre>
-C++
+<pre>C++
     filter remove_matches ^\s*//
     filter call_regexp_common C
     extension C
@@ -1034,7 +1041,7 @@ whitespace and are followed by <code>//</code>.
 Next, remove all C comments.  C comments are difficult to express
 as regular expressions so a call is made to Regexp::Common to get the
 appropriate regular expression to match C comments which are then removed.
-</p>
+<p></p>
 <p>
 A more complete discussion of the different filter options may appear
 here in the future.  The output of cloc's 
@@ -1043,8 +1050,7 @@ for motivated individuals to modify or extend cloc's language definitions.
 </p>
 <!-- 1}}} -->
 <!--   Combine Reports {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="combine_reports">Combine Reports <img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="combine_reports">Combine Reports <img alt="^" src="up.gif"></a></h2>
 <p>
 If you manage multiple software projects you might be interested in
 seeing line counts by project, not just by language.
@@ -1052,13 +1058,11 @@ Say you manage three software projects called MySQL, PostgreSQL, and SQLite.
 The teams responsible for each of these projects run cloc on their
 source code and provide you with the output.
 For example MySQL team does
-<pre>
-cloc --report-file=mysql-5.1.42.txt mysql-5.1.42.tar.gz
+</p><pre>cloc --report-file=mysql-5.1.42.txt mysql-5.1.42.tar.gz
 </pre>
 and provides you with the file <code>mysql-5.1.42.txt</code>.
 The contents of the three files you get are
-<pre>
-<i>Unix&gt;</i> cat mysql-5.1.42.txt
+<pre><i>Unix&gt;</i> cat mysql-5.1.42.txt
 http://cloc.sourceforge.net v 1.50  T=26.0 s (108.1 files/s, 65774.5 lines/s)
 --------------------------------------------------------------------------------
 Language                      files          blank        comment           code
@@ -1125,14 +1129,13 @@ Python                           1              5              1             12
 SUM:                          2066         129258         204842         697498
 -------------------------------------------------------------------------------
 </pre>
-</p>
+<p></p>
 <p>
 While these three files are interesting, you also want to see
 the combined counts from all projects.
 That can be done with cloc's <code>--sum_reports</code>
 option:
-<pre>
-<i>Unix&gt;</i> cloc --sum-reports --report_file=databases mysql-5.1.42.txt  postgresql-8.4.2.txt  sqlite-3.6.22.txt
+</p><pre><i>Unix&gt;</i> cloc --sum-reports --report_file=databases mysql-5.1.42.txt  postgresql-8.4.2.txt  sqlite-3.6.22.txt
 Wrote databases.lang
 Wrote databases.file
 </pre>
@@ -1140,8 +1143,7 @@ The report combination produces two output files, one for sums by
 programming language (<code>databases.lang</code>) and one by project 
 (<code>databases.file</code>).
 Their contents are
-<pre>
-<i>Unix&gt;</i> cat databases.lang
+<pre><i>Unix&gt;</i> cat databases.lang
 http://cloc.sourceforge.net v 1.50
 --------------------------------------------------------------------------------
 Language                      files          blank        comment           code
@@ -1185,19 +1187,17 @@ SUM:                             4891         378336         542758        19821
 ----------------------------------------------------------------------------------
 
 </pre>
-</p>
+<p></p>
 <p>
 Report files themselves can be summed together.  Say you also manage
 development of Perl and Python and you want to keep track
 of those line counts separately from your database projects.  First
 create reports for Perl and Python separately:
-<pre>
-cloc --report-file=perl-5.10.0.txt perl-5.10.0.tar.gz
+</p><pre>cloc --report-file=perl-5.10.0.txt perl-5.10.0.tar.gz
 cloc --report-file=python-2.6.4.txt Python-2.6.4.tar.bz2
 </pre>
 then sum these together with
-<pre>
-<i>Unix&gt;</i> cloc --sum-reports --report_file=script_lang perl-5.10.0.txt python-2.6.4.txt
+<pre><i>Unix&gt;</i> cloc --sum-reports --report_file=script_lang perl-5.10.0.txt python-2.6.4.txt
 Wrote script_lang.lang
 Wrote script_lang.file
 
@@ -1244,8 +1244,7 @@ SUM:                          5256         277761         317172        1360024
 
 </pre>
 Finally, combine the combination files:
-<pre>
-<i>Unix&gt;</i> cloc --sum-reports --report_file=everything databases.lang script_lang.lang
+<pre><i>Unix&gt;</i> cloc --sum-reports --report_file=everything databases.lang script_lang.lang
 Wrote everything.lang
 Wrote everything.file
 
@@ -1299,12 +1298,11 @@ SUM:                         10147         656097         859930        3342166
 -------------------------------------------------------------------------------
 
 </pre>
-</p>
+<p></p>
 
 <!-- 1}}} -->
 <!--   SQL {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="sql">SQL<img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="sql">SQL<img alt="^" src="up.gif"></a></h2>
 <p>
 Cloc can write results in the form of SQL table create and insert
 statements for use
@@ -1316,21 +1314,21 @@ the information can be interrogated and displayed in interesting ways.
 A database created from cloc SQL output has two tables, 
 <b>metadata</b> and <b>t</b>:  
 
-<center>
+</p><center>
 <table border="0">
-<tr>
+<tbody><tr>
 <td valign="top">
 
 <h4>metadata</h4>
 <table border="1">
-<tr>
+<tbody><tr>
   <th>Field</th>
   <th>Type</th>
 </tr>
 <tr> <td>&nbsp; timestamp &nbsp; &nbsp; </td> <td>&nbsp; text</td> </tr>
 <tr> <td>&nbsp; project</td>                  <td>&nbsp; text</td> </tr>
 <tr> <td>&nbsp; elapsed_s</td>                <td>&nbsp; real</td> </tr>
-</table>
+</tbody></table>
 </td>
 
 <td>
@@ -1341,7 +1339,7 @@ A database created from cloc SQL output has two tables,
 <td valign="top">
 <h4>t</h4>
 <table border="1">
-<tr>
+<tbody><tr>
   <th>Field</th>
   <th>Type</th>
 </tr>
@@ -1352,13 +1350,13 @@ A database created from cloc SQL output has two tables,
 <tr> <td>&nbsp; nComment</td>               <td>&nbsp; integer</td> </tr>
 <tr> <td>&nbsp; nCode</td>                  <td>&nbsp; integer</td> </tr>
 <tr> <td>&nbsp; nScaled</td>                <td>&nbsp; real</td> </tr>
-</table>
+</tbody></table>
 
 </td>
 </tr>
-</table>
+</tbody></table>
 </center>
-</p>
+<p></p>
 <p>
 
 The <b>metadata</b> table contains information about when the cloc run 
@@ -1369,10 +1367,10 @@ The code count information resides in table <b>t</b>.
 </p>
 <p>
 Let's repeat the code count examples of Perl, Python, SQLite, MySQL and 
-PostgreSQL tarballs shown in the <a href=#combine_reports>combine reports</a>
+PostgreSQL tarballs shown in the <a href="#combine_reports">combine reports</a>
 example above, this time
 using the SQL output options and the 
-<a href=http://www.sqlite.org>SQLite</a> database engine.
+<a href="http://www.sqlite.org/">SQLite</a> database engine.
 </p>
 <p>
 The <tt>--sql</tt> switch tells cloc to generate output in the form
@@ -1383,26 +1381,24 @@ Since the SQLite command line program, <tt>sqlite3</tt>, can read
 commands from STDIN, we can dispense with storing SQL statements to
 a file and use <tt>--sql 1</tt> to pipe data directly into the
 SQLite executable:
-<pre>
-cloc --sql 1 --sql-project mysql mysql-5.1.42.tar.gz    | sqlite3 code.db
+</p><pre>cloc --sql 1 --sql-project mysql mysql-5.1.42.tar.gz    | sqlite3 code.db
 </pre>
 The <tt>--sql-project mysql</tt> part is optional; there's no need
 to specify a project name when working with just one code base.  However,
 since we'll be adding code counts from four other tarballs, we'll only
 be able to identify data by input source if we supply a
 project name for each run.
-</p>
+<p></p>
 <p>
 Now that we have a database we will need to pass in the
 <tt>--sql-append</tt> switch to tell cloc not to wipe out this
 database but instead add more data:
-<pre>
-cloc --sql 1 --sql-project postgresql --sql-append postgresql-8.4.2.tar.bz2          | sqlite3 code.db
+</p><pre>cloc --sql 1 --sql-project postgresql --sql-append postgresql-8.4.2.tar.bz2          | sqlite3 code.db
 cloc --sql 1 --sql-project sqlite     --sql-append sqlite-amalgamation-3.6.22.tar.gz | sqlite3 code.db
 cloc --sql 1 --sql-project python     --sql-append Python-2.6.4.tar.bz2              | sqlite3 code.db
 cloc --sql 1 --sql-project perl       --sql-append perl-5.10.0.tar.gz                | sqlite3 code.db
 </pre>
-</p>
+<p></p>
 <p>
 Now the fun begins--we have a database, <tt>code.db</tt>, with lots of
 information about the five projects and can begin querying it for all
@@ -1410,8 +1406,7 @@ manner of interesting facts.
 </p>
 <h4><i>Which is the longest file over all projects?</i></h4>
 
-<pre>
-&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)'
+<pre>&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)'
 <font color="darkgreen">
 sqlite|sqlite-3.6.22/sqlite3.c|110860
 </font>
@@ -1432,10 +1427,9 @@ since the widths of entries in the first row govern
 the maximum width for all subsequent rows.  Often this leads
 to truncated output--not at all desireable.
 One option is to write a custom SQLite output formatter such
-as <a href=sqlite_formatter><tt>sqlite_formatter</tt></a>.
+as <a href="http://cloc.sourceforge.net/sqlite_formatter"><tt>sqlite_formatter</tt></a>.
 It is used like so:
-<pre>
-&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)' | sqlite_formatter
+<pre>&gt;  sqlite3 code.db 'select project,file,nBlank+nComment+nCode as nL from t where nL = (select max(nBlank+nComment+nCode) from t)' | sqlite_formatter
 <font color="darkgreen">
 Project File                    nL     
 _______ _______________________ ______ 
@@ -1446,8 +1440,7 @@ Note also that <tt>sqlite3</tt> has an HTML output option, <tt>--html</tt>,
 that might also prove useful.
 
 <h4><i>Which is the longest file in each project?</i></h4>
-<pre>
-&gt; sqlite3 code.db 'select project,file,max(nBlank+nComment+nCode) as nL from t group by project order by nL;' | sqlite_formatter
+<pre>&gt; sqlite3 code.db 'select project,file,max(nBlank+nComment+nCode) as nL from t group by project order by nL;' | sqlite_formatter
 <font color="darkgreen">
 Project    File                                          nL     
 __________ _____________________________________________ ______ 
@@ -1460,8 +1453,7 @@ sqlite     sqlite-3.6.22/config.sub                      110860
 </pre>
 
 <h4><i>Which files in each project have the most code lines?</i></h4>
-<pre>
-&gt; sqlite3 code.db 'select project,file,max(nCode) as nL from t group by project order by nL desc;' | sqlite_formatter
+<pre>&gt; sqlite3 code.db 'select project,file,max(nCode) as nL from t group by project order by nL desc;' | sqlite_formatter
 <font color="darkgreen">
 Project    File                                          nL    
 __________ _____________________________________________ _____ 
@@ -1474,8 +1466,7 @@ perl       perl-5.10.0/t/op/mkdir.t                      20079
 </pre>
 
 <h4><i>Which C source files with more than 300 lines have a comment ratio below 1%?</i></h4>
-<pre>
-&gt; sqlite3 code.db 'select project, language, file, nCode, nComment, (100.0*nComment)/(nComment+nCode) as comment_ratio from t 
+<pre>&gt; sqlite3 code.db 'select project, language, file, nCode, nComment, (100.0*nComment)/(nComment+nCode) as comment_ratio from t 
    where language="C" and nCode &gt; 300 and comment_ratio &lt; 1 order by comment_ratio;' | sqlite_formatter
 <font color="darkgreen">
 Project    Language File                                                                          nCode nComment comment_ratio      
@@ -1541,8 +1532,7 @@ python     C        Python-2.6.4/Mac/Modules/folder/_Foldermodule.c             
 </pre>
 
 <h4><i>What are the ten longest files (based on code lines) that have no comments at all?  Exclude header and YAML files.</i></h4>
-<pre>
-&gt; sqlite3 code.db 'select project, file, nCode from t where nComment = 0 and language not in ("C/C++ Header", "YAML") order by nCode desc limit 10;' | sqlite_formatter
+<pre>&gt; sqlite3 code.db 'select project, file, nCode from t where nComment = 0 and language not in ("C/C++ Header", "YAML") order by nCode desc limit 10;' | sqlite_formatter
 <font color="darkgreen">
 Project File                                                  nCode 
 _______ _____________________________________________________ _____ 
@@ -1561,8 +1551,7 @@ python  Python-2.6.4/Tools/pybench/Arithmetic.py                596
 
 <h4><i>What are the most popular languages (in terms of lines
 of code) in each project?</i></h4>
-<pre>
-&gt; sqlite3 code.db 'select project, language, sum(nCode) as SumCode from t group by project,language order by project,SumCode desc;' | sqlite_formatter
+<pre>&gt; sqlite3 code.db 'select project, language, sum(nCode) as SumCode from t group by project,language order by project,SumCode desc;' | sqlite_formatter
 <font color="darkgreen">
 Project    Language           SumCode 
 __________ __________________ _______ 
@@ -1642,8 +1631,7 @@ sqlite     make                    13
 
 <!-- 1}}} -->
 <!--   Third Generation Language Scale Factors {{{1 --> 
-<h2><a class='u' href='#___top' title='click to go to top of document'
-name="scale_factors">Third Generation Language Scale Factors<img alt='^' src='up.gif'></a></h2>
+<h2><a class="u" href="#___top" title="click to go to top of document" name="scale_factors">Third Generation Language Scale Factors<img alt="^" src="up.gif"></a></h2>
 <p>
 cloc versions before 1.50 by default computed, for the provided inputs, a
 rough estimate of how many lines of code would be needed to write the
@@ -1652,8 +1640,7 @@ To produce this output one must now use the <tt>--3</tt> switch.
 </p>
 <p>
 Scale factors were derived from the 2006 version of language gearing ratios
-listed at Mayes Consulting web site, <a href=http://softwareestimator.com/IndustryData2.htm
->http://softwareestimator.com/IndustryData2.htm</a>, using this equation:</p>
+listed at Mayes Consulting web site, <a href="http://softwareestimator.com/IndustryData2.htm">http://softwareestimator.com/IndustryData2.htm</a>, using this equation:</p>
 <p>
 cloc scale factor for language X = 3rd generation default gearing ratio / language X gearing ratio
 </p>
@@ -1724,23 +1711,21 @@ name="Troubleshooting">Troubleshooting <img alt='^' src='up.gif'></a></h1>
 <!-- Limitations {{{1 --> 
 <!--
  -->
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Limitations">Limitations <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Limitations">Limitations <img alt="^" src="up.gif"></a></h1>
 <p>
 Identifying comments within source code is trickier than one might expect.
 Many languages would need a complete parser to be counted correctly.
 cloc does not attempt to parse any of 
 the languages it aims to count and therefore is an imperfect tool.
 The following are known problems:
-<ol>
+</p><ol>
 <li>  Lines containing both source code and comments are counted as lines of code.
-<li>  Comment markers within strings or 
-<a href=http://www.faqs.org/docs/abs/HTML/here-docs.html>here-documents</a>
+</li><li>  Comment markers within strings or 
+<a href="http://www.faqs.org/docs/abs/HTML/here-docs.html">here-documents</a>
 are treated as actual comment markers and not string literals.  
 For example the following lines of C code
-<pre>
-printf(" <font color="red">/* ");
-for (i = 0; i < 100; i++) {
+<pre>printf(" <font color="red">/* ");
+for (i = 0; i &lt; 100; i++) {
     a += i;
 }
 printf(" */</font> ");
@@ -1748,23 +1733,21 @@ printf(" */</font> ");
 appear to cloc as two lines of C code (the lines with black text) and three
 lines of comments (the lines which have only red text--lines with both
 black and red text are treated as code).
-<li>  Lua long comments are not recognized.
-</ol>
-</p>
+</li><li>  Lua long comments are not recognized.
+</li></ol>
+<p></p>
 <!-- 1}}} -->
 <!-- Author {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Author">Author <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Author">Author <img alt="^" src="up.gif"></a></h1>
 <p>
-Al Danial <img src='address.png'>
+Al Danial <img src="address.png">
 </p>
 <!-- 1}}} -->
 <!-- Acknowledgments {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Acknowledgments">Acknowledgments <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Acknowledgments">Acknowledgments <img alt="^" src="up.gif"></a></h1>
 <p>
-Wolfram R&ouml;sler provided most of the code examples in the test suite.
-These examples come from his <a href=http://www.roesler-ac.de/wolfram/hello.htm>
+Wolfram Rösler provided most of the code examples in the test suite.
+These examples come from his <a href="http://www.roesler-ac.de/wolfram/hello.htm">
 Hello World Collection</a>.
 </p>
 <p>
@@ -1780,8 +1763,9 @@ and wrote the XML ouput generator for the <tt>--xml</tt> option.
 </p>
 <p>
 Reuben Thomas pointed out that ISO C99 allows <tt>//</tt> as a comment 
-marker, provided code for the <tt>--no3</tt> option and for counting
-the m4 language, and suggested several user-interface enhancements.
+marker, provided code for the <tt>--no3</tt> and <tt>--stdin-name</tt> 
+options, counting the m4 language, 
+and suggested several user-interface enhancements.
 </p>
 <p>
 Michael Bello provided code for the <tt>--opt-match-f</tt>,
@@ -1826,24 +1810,36 @@ allow <tt>--diff</tt> output from multiple runs to be summed
 together with <tt>--sum-reports</tt>.
 </p>
 <p>
+Jari Aalto created the initial version of <tt>cloc.1.pod</tt>.
+</p>
+<p>
+Mikkel Christiansen (mikkels@gmail.com) provided counter definitions
+for Clojure and ClojureScript.
+</p>
+<p>
+Vera Djuraskovic from <a href="http://webhostinggeeks.com/">
+Webhostinggeeks.com</a>
+provided the 
+<a href="http://science.webhostinggeeks.com/cloc">Serbo-Croatian</a>
+translation.
+</p>
+<p>
 The development of cloc was partially funded by the Northrop Grumman 
 Corporation.
 </p>
 <!-- 1}}} -->
 <!-- Copyright {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="Copyright">Copyright <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="Copyright">Copyright <img alt="^" src="up.gif"></a></h1>
 <p>
-Copyright (c) 2006-2011, Northrop Grumman Corporation.<br>
+Copyright (c) 2006-2013, Northrop Grumman Corporation.<br>
 </p>
 <!-- 1}}} -->
 <!-- License {{{1 --> 
-<h1><a class='u' href='#___top' title='click to go to top of document'
-name="License">License <img alt='^' src='up.gif'></a></h1>
+<h1><a class="u" href="#___top" title="click to go to top of document" name="License">License <img alt="^" src="up.gif"></a></h1>
 <p>
 This program is free software; you can redistribute it and/or modify
 it under the terms of the 
-<a href=http://www.gnu.org/licenses/gpl.txt>
+<a href="http://www.gnu.org/licenses/gpl.txt">
 GNU General Public License</a>
 as published by
 the Free Software Foundation; either version 2 of the License, or
@@ -1855,9 +1851,9 @@ the Free Software Foundation; either version 2 of the License, or
 </div>
 <hr>
 <center>
-<a href="http://sourceforge.net/projects/cloc"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=174787&type=14" width="150" height="40" border="0" alt="Get cloc at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+<a href="http://sourceforge.net/projects/cloc"><img src="sflogo.gif" alt="Get cloc at SourceForge.net. Fast, secure and Free Open Source software downloads" height="40" border="0" width="150"></a>
 </center>
-<script type="text/javascript">
+<script src="ga.js" async="" type="text/javascript"></script><script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-22462821-1']);
   _gaq.push(['_trackPageview']);
@@ -1867,10 +1863,11 @@ the Free Software Foundation; either version 2 of the License, or
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script> 
- </body>
-</html>
+ 
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY
+</body></html>
+
+------------Frd41nWbON4bPSAmVsNDld
 Content-Disposition: inline; filename=style.css
 Content-Type: text/css; name=style.css
 Content-Location: http://cloc.sourceforge.net/style.css
@@ -2257,7 +2254,7 @@ table.dlsip     {
   border-top: none;
 }
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY
+------------Frd41nWbON4bPSAmVsNDld
 Content-Disposition: inline; filename=up.gif
 Content-Type: image/gif; name=up.gif
 Content-Location: http://cloc.sourceforge.net/up.gif
@@ -2266,7 +2263,7 @@ Content-Transfer-Encoding: Base64
 R0lGODlhDwAPAIAAAABmmf///yH5BAEAAAEALAAAAAAPAA8AAAIjhI8Jwe1tXlgv
 ulMpS1crT33WuGBkpm3pZEEr1qGZHEuSKBYAOw==
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY
+------------Frd41nWbON4bPSAmVsNDld
 Content-Disposition: inline; filename=address.png
 Content-Type: image/png; name=address.png
 Content-Location: http://cloc.sourceforge.net/address.png
@@ -2334,10 +2331,10 @@ tkL363o8MpWXl5eXl+8+JxmjqI9SqNLhPo7qb7mPtrD9706z5A8WVPIoMRBXkR4j
 QcWbOZK93edBPYZ0FKwpGG9Ug/jxIEZ2dnZ2dnYi/Wbh/9cIy5/92wTv0vi9MepD
 JNUglsiXapawIjNLWMKSf0BY/zaIJSw5IvJfQjCLRryLMn0AAAAASUVORK5CYII=
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY
+------------Frd41nWbON4bPSAmVsNDld
 Content-Disposition: inline; filename=sflogo.gif
 Content-Type: image/gif; name=sflogo.gif
-Content-Location: http://sflogo.sourceforge.net/sflogo.php?group_id=174787&type=14
+Content-Location: http://cloc.sourceforge.net/sflogo.gif
 Content-Transfer-Encoding: Base64
 
 R0lGODlhlgAoAPcAAPLx8P7+/v/+/vHv7/b29kBAQfb19fn4+Pj4+Pv5+fXz8/v7
@@ -2411,4 +2408,597 @@ sIRlJwkSy1jOUiAieGVB6qBLV2jglbc0SC5rWYAW0JKYsCzIBTOIEFcS05gDeeUH
 EdKELLzPFZsooAGdMJBfIrOYPsnIMktSgVIgsBF3DGdJliBHP4xEBIicYwqYqc6S
 BOINBSBJHuY4HYlBKLGeAA2oQAdK0IIa9KAITahCF8rQhjpUJwEBADs=
 
-------------Cyp1Kbbv0kW9wu2sf3EOPY--
+------------Frd41nWbON4bPSAmVsNDld
+Content-Disposition: inline; filename=ga.js
+Content-Type: text/javascript; name=ga.js
+Content-Location: http://cloc.sourceforge.net/ga.js
+Content-Transfer-Encoding: Quoted-Printable
+
+(function(){var g=3Dvoid 0,h=3D!0,i=3Dnull,l=3D!1,aa=3DencodeURIComponen=
+t,ba=3DInfinity,ca=3DsetTimeout,da=3DisNaN,m=3DMath,ea=3DdecodeURICompon=
+ent;function ha(a,b){return a.name=3Db}
+var n=3D"push",ia=3D"test",ja=3D"slice",p=3D"replace",ka=3D"load",la=3D"=
+floor",ma=3D"charAt",na=3D"value",q=3D"indexOf",oa=3D"match",pa=3D"port"=
+,qa=3D"createElement",ra=3D"path",r=3D"name",u=3D"host",v=3D"toString",w=
+=3D"length",x=3D"prototype",sa=3D"clientWidth",y=3D"split",ta=3D"stopPro=
+pagation",ua=3D"scope",z=3D"location",va=3D"search",A=3D"protocol",wa=3D=
+"clientHeight",xa=3D"href",B=3D"substring",ya=3D"apply",za=3D"navigator"=
+,C=3D"join",D=3D"toLowerCase",E;function Aa(a,b){switch(b){case 0:return=
+""+a;case 1:return 1*a;case 2:return!!a;case 3:return 1E3*a}return a}fun=
+ction Ba(a){return"function"=3D=3Dtypeof a}function Ca(a){return a!=3Dg&=
+&-1<(a.constructor+"")[q]("String")}function F(a,b){return g=3D=3Da||"-"=
+=3D=3Da&&!b||""=3D=3Da}function Da(a){if(!a||""=3D=3Da)return"";for(;a&&=
+-1<" \n\r\t"[q](a[ma](0));)a=3Da[B](1);for(;a&&-1<" \n\r\t"[q](a[ma](a[w=
+]-1));)a=3Da[B](0,a[w]-1);return a}function Ea(){return m.round(21474836=
+47*m.random())}function Fa(){}
+function G(a,b){if(aa instanceof Function)return b?encodeURI(a):aa(a);H(=
+68);return escape(a)}function I(a){a=3Da[y]("+")[C](" ");if(ea instanceo=
+f Function)try{return ea(a)}catch(b){H(17)}else H(68);return unescape(a)=
+}var Ga=3Dfunction(a,b,c,d){a.addEventListener?a.addEventListener(b,c,!!=
+d):a.attachEvent&&a.attachEvent("on"+b,c)},Ha=3Dfunction(a,b,c,d){a.remo=
+veEventListener?a.removeEventListener(b,c,!!d):a.detachEvent&&a.detachEv=
+ent("on"+b,c)};
+function Ia(a,b){if(a){var c=3DJ[qa]("script");c.type=3D"text/javascript=
+";c.async=3Dh;c.src=3Da;c.id=3Db;var d=3DJ.getElementsByTagName("script"=
+)[0];d.parentNode.insertBefore(c,d);return c}}function K(a){return a&&0<=
+a[w]?a[0]:""}function L(a){var b=3Da?a[w]:0;return 0<b?a[b-1]:""}var Ja=3D=
+function(){this.prefix=3D"ga.";this.R=3D{}};Ja[x].set=3Dfunction(a,b){th=
+is.R[this.prefix+a]=3Db};Ja[x].get=3Dfunction(a){return this.R[this.pref=
+ix+a]};Ja[x].contains=3Dfunction(a){return this.get(a)!=3D=3Dg};function=
+ Ka(a){0=3D=3Da[q]("www.")&&(a=3Da[B](4));return a[D]()}function La(a,b)=
+{var c,d=3D{url:a,protocol:"http",host:"",path:"",d:new Ja,anchor:""};if=
+(!a)return d;c=3Da[q]("://");0<=3Dc&&(d.protocol=3Da[B](0,c),a=3Da[B](c+=
+3));c=3Da[va]("/|\\?|#");if(0<=3Dc)d.host=3Da[B](0,c)[D](),a=3Da[B](c);e=
+lse return d.host=3Da[D](),d;c=3Da[q]("#");0<=3Dc&&(d.anchor=3Da[B](c+1)=
+,a=3Da[B](0,c));c=3Da[q]("?");0<=3Dc&&(Na(d.d,a[B](c+1)),a=3Da[B](0,c));=
+d.anchor&&b&&Na(d.d,d.anchor);a&&"/"=3D=3Da[ma](0)&&(a=3Da[B](1));d.path=
+=3Da;return d}
+function Oa(a,b){function c(a){var b=3D(a.hostname||"")[y](":")[0][D](),=
+c=3D(a[A]||"")[D](),c=3D1*a[pa]||("http:"=3D=3Dc?80:"https:"=3D=3Dc?443:=
+"");a=3Da.pathname||"";0=3D=3Da[q]("/")||(a=3D"/"+a);return[b,""+c,a]}va=
+r d=3Db||J[qa]("a");d.href=3DJ[z][xa];var e=3D(d[A]||"")[D](),f=3Dc(d),j=
+=3Dd[va]||"",k=3De+"//"+f[0]+(f[1]?":"+f[1]:"");0=3D=3Da[q]("//")?a=3De+=
+a:0=3D=3Da[q]("/")?a=3Dk+a:!a||0=3D=3Da[q]("?")?a=3Dk+f[2]+(a||j):0>a[y]=
+("/")[0][q](":")&&(a=3Dk+f[2][B](0,f[2].lastIndexOf("/"))+"/"+a);d.href=3D=
+a;e=3Dc(d);return{protocol:(d[A]||"")[D](),host:e[0],
+port:e[1],path:e[2],Oa:d[va]||"",url:a||""}}function Na(a,b){function c(=
+b,c){a.contains(b)||a.set(b,[]);a.get(b)[n](c)}for(var d=3DDa(b)[y]("&")=
+,e=3D0;e<d[w];e++)if(d[e]){var f=3Dd[e][q]("=3D");0>f?c(d[e],"1"):c(d[e]=
+[B](0,f),d[e][B](f+1))}}function Pa(a,b){if(F(a)||"["=3D=3Da[ma](0)&&"]"=
+=3D=3Da[ma](a[w]-1))return"-";var c=3DJ.domain;return a[q](c+(b&&"/"!=3D=
+b?b:""))=3D=3D(0=3D=3Da[q]("http://")?7:0=3D=3Da[q]("https://")?8:0)?"0"=
+:a};var Qa=3D0;function Ra(a,b,c){!(1<=3DQa)&&!(1<=3D100*m.random())&&(a=
+=3D["utmt=3Derror","utmerr=3D"+a,"utmwv=3D5.3.9","utmn=3D"+Ea(),"utmsp=3D=
+1"],b&&a[n]("api=3D"+b),c&&a[n]("msg=3D"+G(c[B](0,100))),M.w&&a[n]("aip=3D=
+1"),Sa(a[C]("&")),Qa++)};var Ta=3D0,Ua=3D{};function N(a){return Va("x"+=
+Ta++,a)}function Va(a,b){Ua[a]=3D!!b;return a}
+var Wa=3DN(),Xa=3DVa("anonymizeIp"),Ya=3DN(),$a=3DN(),ab=3DN(),bb=3DN(),=
+O=3DN(),P=3DN(),cb=3DN(),db=3DN(),eb=3DN(),fb=3DN(),gb=3DN(),hb=3DN(),ib=
+=3DN(),jb=3DN(),kb=3DN(),lb=3DN(),nb=3DN(),ob=3DN(),pb=3DN(),qb=3DN(),rb=
+=3DN(),sb=3DN(),tb=3DN(),ub=3DN(),vb=3DN(),wb=3DN(),xb=3DN(),yb=3DN(),zb=
+=3DN(),Ab=3DN(),Bb=3DN(),Cb=3DN(),Db=3DN(),Eb=3DN(),Fb=3DN(h),Gb=3DVa("c=
+urrencyCode"),Hb=3DVa("page"),Ib=3DVa("title"),Jb=3DN(),Kb=3DN(),Lb=3DN(=
+),Mb=3DN(),Nb=3DN(),Ob=3DN(),Pb=3DN(),Qb=3DN(),Rb=3DN(),Q=3DN(h),Sb=3DN(=
+h),Tb=3DN(h),Ub=3DN(h),Vb=3DN(h),Wb=3DN(h),Zb=3DN(h),$b=3DN(h),ac=3DN(h)=
+,bc=3DN(h),cc=3DN(h),R=3DN(h),dc=3DN(h),ec=3DN(h),fc=3D
+N(h),gc=3DN(h),hc=3DN(h),ic=3DN(h),jc=3DN(h),S=3DN(h),kc=3DN(h),lc=3DN(h=
+),mc=3DN(h),nc=3DN(h),oc=3DN(h),pc=3DN(h),qc=3DN(h),rc=3DVa("campaignPar=
+ams"),sc=3DN(),tc=3DVa("hitCallback"),uc=3DN();N();var vc=3DN(),wc=3DN()=
+,xc=3DN(),yc=3DN(),zc=3DN(),Ac=3DN(),Bc=3DN(),Cc=3DN(),Dc=3DN(),Ec=3DN()=
+,Fc=3DN(),Gc=3DN(),Hc=3DN(),Ic=3DN();N();var Mc=3DN(),Nc=3DN(),Oc=3DN();=
+function Pc(a){var b=3Dthis.plugins_;if(b)return b.get(a)}var T=3Dfuncti=
+on(a,b,c,d){a[b]=3Dfunction(){try{return d!=3Dg&&H(d),c[ya](this,argumen=
+ts)}catch(a){throw Ra("exc",b,a&&a[r]),a;}}},Qc=3Dfunction(a,b,c,d){U[x]=
+[a]=3Dfunction(){try{return H(c),Aa(this.a.get(b),d)}catch(e){throw Ra("=
+exc",a,e&&e[r]),e;}}},V=3Dfunction(a,b,c,d,e){U[x][a]=3Dfunction(f){try{=
+H(c),e=3D=3Dg?this.a.set(b,Aa(f,d)):this.a.set(b,e)}catch(j){throw Ra("e=
+xc",a,j&&j[r]),j;}}};var Rc=3DRegExp(/(^|\.)doubleclick\.net$/i),Sc=3Dfu=
+nction(a,b){return Rc[ia](J[z].hostname)?h:"/"!=3D=3Db?l:(0=3D=3Da[q]("w=
+ww.google.")||0=3D=3Da[q](".google.")||0=3D=3Da[q]("google."))&&!(-1<a[q=
+]("google.org"))?h:l},Tc=3Dfunction(a){var b=3Da.get(bb),c=3Da.c(P,"/");=
+Sc(b,c)&&a[ta]()};var Zc=3Dfunction(){var a=3D{},b=3D{},c=3Dnew Uc;this.=
+g=3Dfunction(a,b){c.add(a,b)};var d=3Dnew Uc;this.e=3Dfunction(a,b){d.ad=
+d(a,b)};var e=3Dl,f=3Dl,j=3Dh;this.T=3Dfunction(){e=3Dh};this.j=3Dfuncti=
+on(a){this[ka]();this.set(sc,a,h);a=3Dnew Vc(this);e=3Dl;d.execute(this)=
+;e=3Dh;b=3D{};this.n();a.Ja()};this.load=3Dfunction(){e&&(e=3Dl,this.Ka(=
+),Wc(this),f||(f=3Dh,c.execute(this),Xc(this),Wc(this)),e=3Dh)};this.n=3D=
+function(){if(e)if(f)e=3Dl,Xc(this),e=3Dh;else this[ka]()};this.get=3Dfu=
+nction(c){Ua[c]&&this[ka]();return b[c]!=3D=3Dg?b[c]:a[c]};this.set=3D
+function(c,d,e){Ua[c]&&this[ka]();e?b[c]=3Dd:a[c]=3Dd;Ua[c]&&this.n()};t=
+his.z=3Dfunction(b){a[b]=3Dthis.b(b,0)+1};this.b=3Dfunction(a,b){var c=3D=
+this.get(a);return c=3D=3Dg||""=3D=3D=3Dc?b:1*c};this.c=3Dfunction(a,b){=
+var c=3Dthis.get(a);return c=3D=3Dg?b:c+""};this.Ka=3Dfunction(){if(j){v=
+ar b=3Dthis.c(bb,""),c=3Dthis.c(P,"/");Sc(b,c)||(a[O]=3Da[hb]&&""!=3Db?Y=
+c(b):1,j=3Dl)}}};Zc[x].stopPropagation=3Dfunction(){throw"aborted";};
+var Vc=3Dfunction(a){var b=3Dthis;this.q=3D0;var c=3Da.get(tc);this.Ua=3D=
+function(){0<b.q&&c&&(b.q--,b.q||c())};this.Ja=3Dfunction(){!b.q&&c&&ca(=
+c,10)};a.set(uc,b,h)};function $c(a,b){b=3Db||[];for(var c=3D0;c<b[w];c+=
++){var d=3Db[c];if(""+a=3D=3Dd||0=3D=3Dd[q](a+"."))return d}return"-"}
+var bd=3Dfunction(a,b,c){c=3Dc?"":a.c(O,"1");b=3Db[y](".");if(6!=3D=3Db[=
+w]||ad(b[0],c))return l;c=3D1*b[1];var d=3D1*b[2],e=3D1*b[3],f=3D1*b[4];=
+b=3D1*b[5];if(!(0<=3Dc&&0<d&&0<e&&0<f&&0<=3Db))return l;a.set(Q,c);a.set=
+(Vb,d);a.set(Wb,e);a.set(Zb,f);a.set($b,b);return h},cd=3Dfunction(a){va=
+r b=3Da.get(Q),c=3Da.get(Vb),d=3Da.get(Wb),e=3Da.get(Zb),f=3Da.b($b,1);r=
+eturn[a.b(O,1),b!=3Dg?b:"-",c||"-",d||"-",e||"-",f][C](".")},dd=3Dfuncti=
+on(a){return[a.b(O,1),a.b(cc,0),a.b(R,1),a.b(dc,0)][C](".")},ed=3Dfuncti=
+on(a,b,c){c=3Dc?"":a.c(O,"1");var d=3Db[y](".");
+if(4!=3D=3Dd[w]||ad(d[0],c))d=3Di;a.set(cc,d?1*d[1]:0);a.set(R,d?1*d[2]:=
+10);a.set(dc,d?1*d[3]:a.get(ab));return d!=3Di||!ad(b,c)},fd=3Dfunction(=
+a,b){var c=3DG(a.c(Tb,"")),d=3D[],e=3Da.get(Fb);if(!b&&e){for(var f=3D0;=
+f<e[w];f++){var j=3De[f];j&&1=3D=3Dj[ua]&&d[n](f+"=3D"+G(j[r])+"=3D"+G(j=
+[na])+"=3D1")}0<d[w]&&(c+=3D"|"+d[C]("^"))}return c?a.b(O,1)+"."+c:i},gd=
+=3Dfunction(a,b,c){c=3Dc?"":a.c(O,"1");b=3Db[y](".");if(2>b[w]||ad(b[0],=
+c))return l;b=3Db[ja](1)[C](".")[y]("|");0<b[w]&&a.set(Tb,I(b[0]));if(1>=
+=3Db[w])return h;b=3Db[1][y](-1=3D=3Db[1][q](",")?
+"^":",");for(c=3D0;c<b[w];c++){var d=3Db[c][y]("=3D");if(4=3D=3Dd[w]){va=
+r e=3D{};ha(e,I(d[1]));e.value=3DI(d[2]);e.scope=3D1;a.get(Fb)[d[0]]=3De=
+}}return h},hd=3Dfunction(a){var b;b=3Dfunction(b,e){if(!F(a.get(b))){va=
+r f=3Da.c(b,""),f=3Df[y](" ")[C]("%20"),f=3Df[y]("+")[C]("%20");c[n](e+"=
+=3D"+f)}};var c=3D[];b(ic,"utmcid");b(nc,"utmcsr");b(S,"utmgclid");b(kc,=
+"utmgclsrc");b(lc,"utmdclid");b(mc,"utmdsid");b(jc,"utmccn");b(oc,"utmcm=
+d");b(pc,"utmctr");b(qc,"utmcct");return(b=3Dc[C]("|"))?[a.b(O,1),a.b(ec=
+,0),a.b(fc,1),a.b(gc,1),b][C]("."):
+""},id=3Dfunction(a,b,c){c=3Dc?"":a.c(O,"1");b=3Db[y](".");if(5>b[w]||ad=
+(b[0],c))return a.set(ec,g),a.set(fc,g),a.set(gc,g),a.set(ic,g),a.set(jc=
+,g),a.set(nc,g),a.set(oc,g),a.set(pc,g),a.set(qc,g),a.set(S,g),a.set(kc,=
+g),a.set(lc,g),a.set(mc,g),l;a.set(ec,1*b[1]);a.set(fc,1*b[2]);a.set(gc,=
+1*b[3]);var d=3Db[ja](4)[C](".");b=3Dfunction(a){return(a=3Dd[oa](a+"=3D=
+(.*?)(?:\\|utm|$)"))&&2=3D=3Da[w]?a[1]:g};c=3Dfunction(b,c){c?(c=3De?I(c=
+):c[y]("%20")[C](" "),a.set(b,c)):a.set(b,g)};-1=3D=3Dd[q]("=3D")&&(d=3D=
+I(d));var e=3D"2"=3D=3Db("utmcvr");
+c(ic,b("utmcid"));c(jc,b("utmccn"));c(nc,b("utmcsr"));c(oc,b("utmcmd"));=
+c(pc,b("utmctr"));c(qc,b("utmcct"));c(S,b("utmgclid"));c(kc,b("utmgclsrc=
+"));c(lc,b("utmdclid"));c(mc,b("utmdsid"));return h},ad=3Dfunction(a,b){=
+return b?a!=3Db:!/^\d+$/[ia](a)};var Uc=3Dfunction(){this.filters=3D[]};=
+Uc[x].add=3Dfunction(a,b){this.filters[n]({name:a,s:b})};Uc[x].execute=3D=
+function(a){try{for(var b=3D0;b<this.filters[w];b++)this.filters[b].s.ca=
+ll(W,a)}catch(c){}};function jd(a){100!=3Da.get(vb)&&a.get(Q)%1E4>=3D100=
+*a.get(vb)&&a[ta]()}function kd(a){ld(a.get(Wa))&&a[ta]()}function md(a)=
+{"file:"=3D=3DJ[z][A]&&a[ta]()}function nd(a){a.get(Ib)||a.set(Ib,J.titl=
+e,h);a.get(Hb)||a.set(Hb,J[z].pathname+J[z][va],h)};var od=3Dnew functio=
+n(){var a=3D[];this.set=3Dfunction(b){a[b]=3Dh};this.Xa=3Dfunction(){for=
+(var b=3D[],c=3D0;c<a[w];c++)a[c]&&(b[m[la](c/6)]=3Db[m[la](c/6)]^1<<c%6=
+);for(c=3D0;c<b[w];c++)b[c]=3D"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmno=
+pqrstuvwxyz0123456789-_"[ma](b[c]||0);return b[C]("")+"~"}};function H(a=
+){od.set(a)};var W=3Dwindow,J=3Ddocument,ld=3Dfunction(a){var b=3DW._gaU=
+serPrefs;return b&&b.ioo&&b.ioo()||!!a&&W["ga-disable-"+a]=3D=3D=3Dh},pd=
+=3Dfunction(a){var b=3D[],c=3DJ.cookie[y](";");a=3DRegExp("^\\s*"+a+"=3D=
+\\s*(.*?)\\s*$");for(var d=3D0;d<c[w];d++){var e=3Dc[d][oa](a);e&&b[n](e=
+[1])}return b},X=3Dfunction(a,b,c,d,e,f){e=3Dld(e)?l:Sc(d,c)?l:h;if(e){i=
+f(b&&0<=3DW[za].userAgent[q]("Firefox")){b=3Db[p](/\n|\r/g," ");e=3D0;fo=
+r(var j=3Db[w];e<j;++e){var k=3Db.charCodeAt(e)&255;if(10=3D=3Dk||13=3D=3D=
+k)b=3Db[B](0,e)+"?"+b[B](e+1)}}b&&2E3<b[w]&&(b=3Db[B](0,2E3),H(69));
+a=3Da+"=3D"+b+"; path=3D"+c+"; ";f&&(a+=3D"expires=3D"+(new Date((new Da=
+te).getTime()+f)).toGMTString()+"; ");d&&(a+=3D"domain=3D"+d+";");J.cook=
+ie=3Da}};var qd,rd,sd=3Dfunction(){if(!qd){var a=3D{},b=3DW[za],c=3DW.sc=
+reen;a.Q=3Dc?c.width+"x"+c.height:"-";a.P=3Dc?c.colorDepth+"-bit":"-";a.=
+language=3D(b&&(b.language||b.browserLanguage)||"-")[D]();a.javaEnabled=3D=
+b&&b.javaEnabled()?1:0;a.characterSet=3DJ.characterSet||J.charset||"-";t=
+ry{var d;var e=3DJ.documentElement,f=3DJ.body,j=3Df&&f[sa]&&f[wa],b=3D[]=
+;e&&(e[sa]&&e[wa])&&("CSS1Compat"=3D=3D=3DJ.compatMode||!j)?b=3D[e[sa],e=
+[wa]]:j&&(b=3D[f[sa],f[wa]]);d=3D0>=3Db[0]||0>=3Db[1]?"":b[C]("x");a.Wa=3D=
+d}catch(k){H(135)}qd=3Da}},td=3Dfunction(){sd();for(var a=3D
+qd,b=3DW[za],a=3Db.appName+b.version+a.language+b.platform+b.userAgent+a=
+.javaEnabled+a.Q+a.P+(J.cookie?J.cookie:"")+(J.referrer?J.referrer:""),b=
+=3Da[w],c=3DW.history[w];0<c;)a+=3Dc--^b++;return Yc(a)},ud=3Dfunction(a=
+){sd();var b=3Dqd;a.set(Lb,b.Q);a.set(Mb,b.P);a.set(Pb,b.language);a.set=
+(Qb,b.characterSet);a.set(Nb,b.javaEnabled);a.set(Rb,b.Wa);if(a.get(ib)&=
+&a.get(jb)){if(!(b=3Drd)){var c,d,e;d=3D"ShockwaveFlash";if((b=3D(b=3DW[=
+za])?b.plugins:g)&&0<b[w])for(c=3D0;c<b[w]&&!e;c++)d=3Db[c],-1<d[r][q]("=
+Shockwave Flash")&&(e=3Dd.description[y]("Shockwave Flash ")[1]);
+else{d=3Dd+"."+d;try{c=3Dnew ActiveXObject(d+".7"),e=3Dc.GetVariable("$v=
+ersion")}catch(f){}if(!e)try{c=3Dnew ActiveXObject(d+".6"),e=3D"WIN 6,0,=
+21,0",c.AllowScriptAccess=3D"always",e=3Dc.GetVariable("$version")}catch=
+(j){}if(!e)try{c=3Dnew ActiveXObject(d),e=3Dc.GetVariable("$version")}ca=
+tch(k){}e&&(e=3De[y](" ")[1][y](","),e=3De[0]+"."+e[1]+" r"+e[2])}b=3De?=
+e:"-"}rd=3Db;a.set(Ob,rd)}else a.set(Ob,"-")};var vd=3Dfunction(a){if(Ba=
+(a))this.s=3Da;else{var b=3Da[0],c=3Db.lastIndexOf(":"),d=3Db.lastIndexO=
+f(".");this.h=3Dthis.i=3Dthis.l=3D"";-1=3D=3Dc&&-1=3D=3Dd?this.h=3Db:-1=3D=
+=3Dc&&-1!=3Dd?(this.i=3Db[B](0,d),this.h=3Db[B](d+1)):-1!=3Dc&&-1=3D=3Dd=
+?(this.l=3Db[B](0,c),this.h=3Db[B](c+1)):c>d?(this.i=3Db[B](0,d),this.l=3D=
+b[B](d+1,c),this.h=3Db[B](c+1)):(this.i=3Db[B](0,d),this.h=3Db[B](d+1));=
+this.k=3Da[ja](1);this.Ma=3D!this.l&&"_require"=3D=3Dthis.h;this.J=3D!th=
+is.i&&!this.l&&"_provide"=3D=3Dthis.h}},Y=3Dfunction(){T(Y[x],"push",Y[x=
+][n],5);T(Y[x],"_getPlugin",Pc,121);T(Y[x],
+"_createAsyncTracker",Y[x].Sa,33);T(Y[x],"_getAsyncTracker",Y[x].Ta,34);=
+this.I=3Dnew Ja;this.p=3D[]};E=3DY[x];E.Na=3Dfunction(a,b,c){var d=3Dthi=
+s.I.get(a);if(!Ba(d))return l;b.plugins_=3Db.plugins_||new Ja;b.plugins_=
+.set(a,new d(b,c||{}));return h};E.push=3Dfunction(a){var b=3DZ.Va[ya](t=
+his,arguments),b=3DZ.p.concat(b);for(Z.p=3D[];0<b[w]&&!Z.O(b[0])&&!(b.sh=
+ift(),0<Z.p[w]););Z.p=3DZ.p.concat(b);return 0};E.Va=3Dfunction(a){for(v=
+ar b=3D[],c=3D0;c<arguments[w];c++)try{var d=3Dnew vd(arguments[c]);d.J?=
+this.O(d):b[n](d)}catch(e){}return b};
+E.O=3Dfunction(a){try{if(a.s)a.s[ya](W);else if(a.J)this.I.set(a.k[0],a.=
+k[1]);else{var b=3D"_gat"=3D=3Da.i?M:"_gaq"=3D=3Da.i?Z:M.u(a.i);if(a.Ma)=
+{if(!this.Na(a.k[0],b,a.k[2])){if(!a.Pa){var c=3DOa(""+a.k[1]);var d=3Dc=
+[A],e=3DJ[z][A];var f;if(f=3D"https:"=3D=3Dd||d=3D=3De?h:"http:"!=3Dd?l:=
+"http:"=3D=3De){var j;a:{var k=3DOa(J[z][xa]);if(!(c.Oa||0<=3Dc.url[q]("=
+?")||0<=3Dc[ra][q]("://")||c[u]=3D=3Dk[u]&&c[pa]=3D=3Dk[pa]))for(var s=3D=
+"http:"=3D=3Dc[A]?80:443,t=3DM.S,b=3D0;b<t[w];b++)if(c[u]=3D=3Dt[b][0]&&=
+(c[pa]||s)=3D=3D(t[b][1]||s)&&0=3D=3Dc[ra][q](t[b][2])){j=3Dh;break a}j=3D=
+
+l}f=3Dj&&!ld()}f&&(a.Pa=3DIa(c.url))}return h}}else a.l&&(b=3Db.plugins_=
+.get(a.l)),b[a.h][ya](b,a.k)}}catch(Za){}};E.Sa=3Dfunction(a,b){return M=
+.r(a,b||"")};E.Ta=3Dfunction(a){return M.u(a)};var yd=3Dfunction(){funct=
+ion a(a,b,c,d){g=3D=3Df[a]&&(f[a]=3D{});g=3D=3Df[a][b]&&(f[a][b]=3D[]);f=
+[a][b][c]=3Dd}function b(a,b,c){if(g!=3Df[a]&&g!=3Df[a][b])return f[a][b=
+][c]}function c(a,b){if(g!=3Df[a]&&g!=3Df[a][b]){f[a][b]=3Dg;var c=3Dh,d=
+;for(d=3D0;d<j[w];d++)if(g!=3Df[a][j[d]]){c=3Dl;break}c&&(f[a]=3Dg)}}fun=
+ction d(a){var b=3D"",c=3Dl,d,e;for(d=3D0;d<j[w];d++)if(e=3Da[j[d]],g!=3D=
+e){c&&(b+=3Dj[d]);for(var c=3D[],f=3Dg,ga=3Dg,ga=3D0;ga<e[w];ga++)if(g!=3D=
+e[ga]){f=3D"";ga!=3Dmb&&g=3D=3De[ga-1]&&(f+=3Dga[v]()+Za);for(var Cd=3De=
+[ga],Jc=3D"",Yb=3Dg,Kc=3Dg,Lc=3Dg,Yb=3D0;Yb<Cd[w];Yb++)Kc=3D
+Cd[ma](Yb),Lc=3DMa[Kc],Jc+=3Dg!=3DLc?Lc:Kc;f+=3DJc;c[n](f)}b+=3Dk+c[C](t=
+)+s;c=3Dl}else c=3Dh;return b}var e=3Dthis,f=3D[],j=3D["k","v"],k=3D"(",=
+s=3D")",t=3D"*",Za=3D"!",Ma=3D{"'":"'0"};Ma[s]=3D"'1";Ma[t]=3D"'2";Ma[Za=
+]=3D"'3";var mb=3D1;e.Ra=3Dfunction(a){return g!=3Df[a]};e.A=3Dfunction(=
+){for(var a=3D"",b=3D0;b<f[w];b++)g!=3Df[b]&&(a+=3Db[v]()+d(f[b]));retur=
+n a};e.Qa=3Dfunction(a){if(a=3D=3Dg)return e.A();for(var b=3Da.A(),c=3D0=
+;c<f[w];c++)g!=3Df[c]&&!a.Ra(c)&&(b+=3Dc[v]()+d(f[c]));return b};e.f=3Df=
+unction(b,c,d){if(!wd(d))return l;a(b,"k",c,d);return h};e.o=3Dfunction(=
+b,
+c,d){if(!xd(d))return l;a(b,"v",c,d[v]());return h};e.getKey=3Dfunction(=
+a,c){return b(a,"k",c)};e.N=3Dfunction(a,c){return b(a,"v",c)};e.L=3Dfun=
+ction(a){c(a,"k")};e.M=3Dfunction(a){c(a,"v")};T(e,"_setKey",e.f,89);T(e=
+,"_setValue",e.o,90);T(e,"_getKey",e.getKey,87);T(e,"_getValue",e.N,88);=
+T(e,"_clearKey",e.L,85);T(e,"_clearValue",e.M,86)};function wd(a){return=
+"string"=3D=3Dtypeof a}function xd(a){return"number"!=3Dtypeof a&&(g=3D=3D=
+Number||!(a instanceof Number))||m.round(a)!=3Da||da(a)||a=3D=3Dba?l:h};=
+var zd=3Dfunction(a){var b=3DW.gaGlobal;a&&!b&&(W.gaGlobal=3Db=3D{});ret=
+urn b},Ad=3Dfunction(){var a=3Dzd(h).hid;a=3D=3Di&&(a=3DEa(),zd(h).hid=3D=
+a);return a},Dd=3Dfunction(a){a.set(Kb,Ad());var b=3Dzd();if(b&&b.dh=3D=3D=
+a.get(O)){var c=3Db.sid;c&&("0"=3D=3Dc&&H(112),a.set(Zb,c),a.get(Sb)&&a.=
+set(Wb,c));b=3Db.vid;a.get(Sb)&&b&&(b=3Db[y]("."),1*b[1]||H(112),a.set(Q=
+,1*b[0]),a.set(Vb,1*b[1]))}};var Ed,Fd=3Dfunction(a,b,c,d){var e=3Da.c(b=
+b,""),f=3Da.c(P,"/");d=3Dd!=3Dg?d:a.b(cb,0);a=3Da.c(Wa,"");X(b,c,f,e,a,d=
+)},Xc=3Dfunction(a){var b=3Da.c(bb,"");a.b(O,1);var c=3Da.c(P,"/"),d=3Da=
+.c(Wa,"");X("__utma",cd(a),c,b,d,a.get(cb));X("__utmb",dd(a),c,b,d,a.get=
+(db));X("__utmc",""+a.b(O,1),c,b,d);var e=3Dhd(a,h);e?X("__utmz",e,c,b,d=
+,a.get(eb)):X("__utmz","",c,b,"",-1);(e=3Dfd(a,l))?X("__utmv",e,c,b,d,a.=
+get(cb)):X("__utmv","",c,b,"",-1)},Wc=3Dfunction(a){var b=3Da.b(O,1);if(=
+!bd(a,$c(b,pd("__utma"))))return a.set(Ub,h),l;var c=3D!ed(a,
+$c(b,pd("__utmb")));a.set(bc,c);id(a,$c(b,pd("__utmz")));gd(a,$c(b,pd("_=
+_utmv")));Ed=3D!c;return h},Gd=3Dfunction(a){!Ed&&!(0<pd("__utmb")[w])&&=
+(X("__utmd","1",a.c(P,"/"),a.c(bb,""),a.c(Wa,""),1E4),0=3D=3Dpd("__utmd"=
+)[w]&&a[ta]())};var Jd=3Dfunction(a){a.get(Q)=3D=3Dg?Hd(a):a.get(Ub)&&!a=
+.get(Mc)?Hd(a):a.get(bc)&&Id(a)},Kd=3Dfunction(a){a.get(hc)&&!a.get(ac)&=
+&(Id(a),a.set(fc,a.get($b)))},Hd=3Dfunction(a){var b=3Da.get(ab);a.set(S=
+b,h);a.set(Q,Ea()^td(a)&2147483647);a.set(Tb,"");a.set(Vb,b);a.set(Wb,b)=
+;a.set(Zb,b);a.set($b,1);a.set(ac,h);a.set(cc,0);a.set(R,10);a.set(dc,b)=
+;a.set(Fb,[]);a.set(Ub,l);a.set(bc,l)},Id=3Dfunction(a){a.set(Wb,a.get(Z=
+b));a.set(Zb,a.get(ab));a.z($b);a.set(ac,h);a.set(cc,0);a.set(R,10);a.se=
+t(dc,a.get(ab));a.set(bc,l)};var Ld=3D"daum:q eniro:search_word naver:qu=
+ery pchome:q images.google:q google:q yahoo:p yahoo:q msn:q bing:q aol:q=
+uery aol:q lycos:q lycos:query ask:q netscape:query cnn:query about:term=
+s mamma:q voila:rdata virgilio:qs live:q baidu:wd alice:qs yandex:text n=
+ajdi:q seznam:q rakuten:qt biglobe:q goo.ne:MT wp:szukaj onet:qt yam:k k=
+vasir:q ozu:q terra:query rambler:query conduit:q babylon:q search-resul=
+ts:q avg:q comcast:q incredimail:q startsiden:q go.mail.ru:q search.cent=
+rum.cz:q 360.cn:q".split(" "),
+Sd=3Dfunction(a){if(a.get(kb)&&!a.get(Mc)){for(var b=3D!F(a.get(ic))||!F=
+(a.get(nc))||!F(a.get(S))||!F(a.get(lc)),c=3D{},d=3D0;d<Md[w];d++){var e=
+=3DMd[d];c[e]=3Da.get(e)}(d=3Da.get(rc))?(H(149),e=3Dnew Ja,Na(e,d),d=3D=
+e):d=3DLa(J[z][xa],a.get(gb)).d;if(!("1"=3D=3DL(d.get(a.get(ub)))&&b)){v=
+ar f=3Dd,j=3Dfunction(b,c){c=3Dc||"-";var d=3DL(f.get(a.get(b)));return =
+d&&"-"!=3Dd?I(d):c},d=3DL(f.get(a.get(nb)))||"-",e=3DL(f.get(a.get(qb)))=
+||"-",k=3DL(f.get(a.get(pb)))||"-",s=3DL(f.get("gclsrc"))||"-",t=3DL(f.g=
+et("dclid"))||"-",Za=3Dj(ob,"(not set)"),Ma=3D
+j(rb,"(not set)"),mb=3Dj(sb),j=3Dj(tb);if(F(d)&&F(k)&&F(t)&&F(e))d=3Dl;e=
+lse{var Xb=3D!F(k)&&!F(s),Xb=3DF(e)&&(!F(t)||Xb),Bd=3DF(mb);if(Xb||Bd){v=
+ar fa=3DNd(a),fa=3DLa(fa,h);if((fa=3DOd(a,fa))&&!F(fa[1]&&!fa[2]))Xb&&(e=
+=3Dfa[0]),Bd&&(mb=3Dfa[1])}Pd(a,d,e,k,s,t,Za,Ma,mb,j);d=3Dh}d=3Dd||Qd(a)=
+;!d&&(!b&&a.get(ac))&&(Pd(a,g,"(direct)",g,g,g,"(direct)","(none)",g,g),=
+d=3Dh);if(d&&(a.set(hc,Rd(a,c)),b=3D"(direct)"=3D=3Da.get(nc)&&"(direct)=
+"=3D=3Da.get(jc)&&"(none)"=3D=3Da.get(oc),a.get(hc)||a.get(ac)&&!b))a.se=
+t(ec,a.get(ab)),a.set(fc,a.get($b)),a.z(gc)}}},
+Qd=3Dfunction(a){var b=3DNd(a),c=3DLa(b,h);if(!(b!=3Dg&&b!=3Di&&""!=3Db&=
+&"0"!=3Db&&"-"!=3Db&&0<=3Db[q]("://"))||c&&-1<c[u][q]("google")&&c.d.con=
+tains("q")&&"cse"=3D=3Dc[ra])return l;if((b=3DOd(a,c))&&!b[2])return Pd(=
+a,g,b[0],g,g,g,"(organic)","organic",b[1],g),h;if(b||!a.get(ac))return l=
+;a:{for(var b=3Da.get(Bb),d=3DKa(c[u]),e=3D0;e<b[w];++e)if(-1<d[q](b[e])=
+){a=3Dl;break a}Pd(a,g,d,g,g,g,"(referral)","referral",g,"/"+c[ra]);a=3D=
+h}return a},Od=3Dfunction(a,b){for(var c=3Da.get(zb),d=3D0;d<c[w];++d){v=
+ar e=3Dc[d][y](":");if(-1<b[u][q](e[0][D]())){var f=3D
+b.d.get(e[1]);if(f&&(f=3DK(f),!f&&-1<b[u][q]("google.")&&(f=3D"(not prov=
+ided)"),!e[3]||-1<b.url[q](e[3]))){a:{for(var c=3Df,d=3Da.get(Ab),c=3DI(=
+c)[D](),j=3D0;j<d[w];++j)if(c=3D=3Dd[j]){c=3Dh;break a}c=3Dl}return[e[2]=
+||e[0],f,c]}}}return i},Pd=3Dfunction(a,b,c,d,e,f,j,k,s,t){a.set(ic,b);a=
+.set(nc,c);a.set(S,d);a.set(kc,e);a.set(lc,f);a.set(jc,j);a.set(oc,k);a.=
+set(pc,s);a.set(qc,t)},Md=3D[jc,ic,S,lc,nc,oc,pc,qc],Rd=3Dfunction(a,b){=
+function c(a){a=3D(""+a)[y]("+")[C]("%20");return a=3Da[y](" ")[C]("%20"=
+)}function d(c){var d=3D""+(a.get(c)||
+"");c=3D""+(b[c]||"");return 0<d[w]&&d=3D=3Dc}if(d(S)||d(lc))return H(13=
+1),l;for(var e=3D0;e<Md[w];e++){var f=3DMd[e],j=3Db[f]||"-",f=3Da.get(f)=
+||"-";if(c(j)!=3Dc(f))return h}return l},Td=3DRegExp(/^https:\/\/(www\.)=
+?google(\.com?)?(\.[a-z]{2}t?)?\/?$/i),Nd=3Dfunction(a){a=3DPa(a.get(Jb)=
+,a.get(P));try{if(Td[ia](a))return H(136),a+"?q=3D"}catch(b){H(145)}retu=
+rn a};var Ud,Vd,Wd=3Dfunction(a){Ud=3Da.c(S,"");Vd=3Da.c(kc,"")},Xd=3Dfu=
+nction(a){var b=3Da.c(S,""),c=3Da.c(kc,"");b!=3DUd&&(-1<c[q]("ds")?a.set=
+(mc,g):!F(Ud)&&-1<Vd[q]("ds")&&a.set(mc,Ud))};var Zd=3Dfunction(a){Yd(a,=
+J[z][xa])?(a.set(Mc,h),H(12)):a.set(Mc,l)},Yd=3Dfunction(a,b){if(!a.get(=
+fb))return l;var c=3DLa(b,a.get(gb)),d=3DK(c.d.get("__utma")),e=3DK(c.d.=
+get("__utmb")),f=3DK(c.d.get("__utmc")),j=3DK(c.d.get("__utmx")),k=3DK(c=
+.d.get("__utmz")),s=3DK(c.d.get("__utmv")),c=3DK(c.d.get("__utmk"));if(Y=
+c(""+d+e+f+j+k+s)!=3Dc){d=3DI(d);e=3DI(e);f=3DI(f);j=3DI(j);f=3D$d(d+e+f=
++j,k,s,c);if(!f)return l;k=3Df[0];s=3Df[1]}if(!bd(a,d,h))return l;ed(a,e=
+,h);id(a,k,h);gd(a,s,h);ae(a,j,h);return h},ce=3Dfunction(a,b,c){var d;d=
+=3Dcd(a)||"-";
+var e=3Ddd(a)||"-",f=3D""+a.b(O,1)||"-",j=3Dbe(a)||"-",k=3Dhd(a,l)||"-";=
+a=3Dfd(a,l)||"-";var s=3DYc(""+d+e+f+j+k+a),t=3D[];t[n]("__utma=3D"+d);t=
+[n]("__utmb=3D"+e);t[n]("__utmc=3D"+f);t[n]("__utmx=3D"+j);t[n]("__utmz=3D=
+"+k);t[n]("__utmv=3D"+a);t[n]("__utmk=3D"+s);d=3Dt[C]("&");if(!d)return =
+b;e=3Db[q]("#");if(c)return 0>e?b+"#"+d:b+"&"+d;c=3D"";f=3Db[q]("?");0<e=
+&&(c=3Db[B](e),b=3Db[B](0,e));return 0>f?b+"?"+d+c:b+"&"+d+c},$d=3Dfunct=
+ion(a,b,c,d){for(var e=3D0;3>e;e++){for(var f=3D0;3>f;f++){if(d=3D=3DYc(=
+a+b+c))return H(127),[b,c];var j=3Db[p](/ /g,"%20"),
+k=3Dc[p](/ /g,"%20");if(d=3D=3DYc(a+j+k))return H(128),[j,k];j=3Dj[p](/\=
++/g,"%20");k=3Dk[p](/\+/g,"%20");if(d=3D=3DYc(a+j+k))return H(129),[j,k]=
+;try{var s=3Db[oa]("utmctr=3D(.*?)(?:\\|utm|$)");if(s&&2=3D=3Ds[w]&&(j=3D=
+b[p](s[1],G(I(s[1]))),d=3D=3DYc(a+j+c)))return H(139),[j,c]}catch(t){}b=3D=
+I(b)}c=3DI(c)}};var de=3D"|",fe=3Dfunction(a,b,c,d,e,f,j,k,s){var t=3Dee=
+(a,b);t||(t=3D{},a.get(Cb)[n](t));t.id_=3Db;t.affiliation_=3Dc;t.total_=3D=
+d;t.tax_=3De;t.shipping_=3Df;t.city_=3Dj;t.state_=3Dk;t.country_=3Ds;t.i=
+tems_=3Dt.items_||[];return t},ge=3Dfunction(a,b,c,d,e,f,j){a=3Dee(a,b)|=
+|fe(a,b,"",0,0,0,"","","");var k;a:{if(a&&a.items_){k=3Da.items_;for(var=
+ s=3D0;s<k[w];s++)if(k[s].sku_=3D=3Dc){k=3Dk[s];break a}}k=3Di}s=3Dk||{}=
+;s.transId_=3Db;s.sku_=3Dc;s.name_=3Dd;s.category_=3De;s.price_=3Df;s.qu=
+antity_=3Dj;k||a.items_[n](s);return s},ee=3Dfunction(a,b){for(var c=3D
+a.get(Cb),d=3D0;d<c[w];d++)if(c[d].id_=3D=3Db)return c[d];return i};var =
+he,ie=3Dfunction(a){if(!he){var b;b=3DJ[z].hash;var c=3DW[r],d=3D/^#?gas=
+o=3D([^&]*)/;if(c=3D(b=3D(b=3Db&&b[oa](d)||c&&c[oa](d))?b[1]:K(pd("GASO"=
+)))&&b[oa](/^(?:!([-0-9a-z.]{1,40})!)?([-.\w]{10,1200})$/i))Fd(a,"GASO",=
+""+b,0),M._gasoDomain=3Da.get(bb),M._gasoCPath=3Da.get(P),a=3Dc[1],Ia("h=
+ttps://www.google.com/analytics/web/inpage/pub/inpage.js?"+(a?"prefix=3D=
+"+a+"&":"")+Ea(),"_gasojs");he=3Dh}};var ae=3Dfunction(a,b,c){c&&(b=3DI(=
+b));c=3Da.b(O,1);b=3Db[y](".");!(2>b[w])&&/^\d+$/[ia](b[0])&&(b[0]=3D""+=
+c,Fd(a,"__utmx",b[C]("."),g))},be=3Dfunction(a,b){var c=3D$c(a.get(O),pd=
+("__utmx"));"-"=3D=3Dc&&(c=3D"");return b?G(c):c};var ke=3Dfunction(a,b)=
+{var c=3Dm.min(a.b(Dc,0),100);if(a.b(Q,0)%100>=3Dc)return l;a:{if(c=3D(c=
+=3DW.performance||W.webkitPerformance)&&c.timing){var d=3Dc.navigationSt=
+art;if(0=3D=3Dd)H(133);else{c=3D[c.loadEventStart-d,c.domainLookupEnd-c.=
+domainLookupStart,c.connectEnd-c.connectStart,c.responseStart-c.requestS=
+tart,c.responseEnd-c.responseStart,c.fetchStart-d,c.domInteractive-d,c.d=
+omContentLoadedEventStart-d];break a}}c=3Dg}c||(W.top!=3DW?c=3Dg:(d=3D(c=
+=3DW.external)&&c.onloadT,c&&!c.isValidLoadTime&&(d=3Dg),2147483648<d&&(=
+d=3Dg),
+0<d&&c.setPageReadyTime(),c=3Dd=3D=3Dg?g:[d]));if(c=3D=3Dg)return l;d=3D=
+c[0];if(d=3D=3Dg||d=3D=3Dba||da(d))return l;if(0<d){a:{for(d=3D1;d<c[w];=
+d++)if(da(c[d])||c[d]=3D=3Dba||0>c[d]){d=3Dl;break a}d=3Dh}d?b(je(c)):b(=
+je(c[ja](0,1)))}else Ga(W,"load",function(){ke(a,b)},l);return h},me=3Df=
+unction(a,b,c,d){var e=3Dnew yd;e.f(14,90,b[B](0,500));e.f(14,91,a[B](0,=
+150));e.f(14,92,""+le(c));d!=3Dg&&e.f(14,93,d[B](0,500));e.o(14,90,c);re=
+turn e},le=3Dfunction(a){return da(a)||0>a?0:5E3>a?10*m[la](a/10):5E4>a?=
+100*m[la](a/100):41E5>a?1E3*m[la](a/
+1E3):41E5},je=3Dfunction(a){for(var b=3Dnew yd,c=3D0;c<a[w];c++)b.f(14,c=
++1,""+le(a[c])),b.o(14,c+1,a[c]);return b};var U=3Dfunction(a,b,c){funct=
+ion d(a){return function(b){if((b=3Db.get(Nc)[a])&&b[w])for(var c=3D{typ=
+e:a,target:e,stopPropagation:function(){throw"aborted";}},d=3D0;d<b[w];d=
+++)b[d].call(e,c)}}var e=3Dthis;this.a=3Dnew Zc;this.get=3Dfunction(a){r=
+eturn this.a.get(a)};this.set=3Dfunction(a,b,c){this.a.set(a,b,c)};this.=
+set(Wa,b||"UA-XXXXX-X");this.set($a,a||"");this.set(Ya,c||"");this.set(a=
+b,m.round((new Date).getTime()/1E3));this.set(P,"/");this.set(cb,63072E6=
+);this.set(eb,15768E6);this.set(db,18E5);this.set(fb,l);
+this.set(yb,50);this.set(gb,l);this.set(hb,h);this.set(ib,h);this.set(jb=
+,h);this.set(kb,h);this.set(lb,h);this.set(ob,"utm_campaign");this.set(n=
+b,"utm_id");this.set(pb,"gclid");this.set(qb,"utm_source");this.set(rb,"=
+utm_medium");this.set(sb,"utm_term");this.set(tb,"utm_content");this.set=
+(ub,"utm_nooverride");this.set(vb,100);this.set(Dc,1);this.set(Ec,l);thi=
+s.set(wb,"/__utm.gif");this.set(xb,1);this.set(Cb,[]);this.set(Fb,[]);th=
+is.set(zb,Ld[ja](0));this.set(Ab,[]);this.set(Bb,[]);this.B("auto");this=
+.set(Jb,
+J.referrer);a=3Dthis.a;try{var f=3DLa(J[z][xa],l),j=3Dea(L(f.d.get("utm_=
+referrer")))||"";j&&a.set(Jb,j);var k=3DW.gaData&&W.gaData.expId;k||(k=3D=
+ea(K(f.d.get("utm_expid")))||"");k&&a.set(Oc,""+k)}catch(s){H(146)}this.=
+set(Nc,{hit:[],load:[]});this.a.g("0",Zd);this.a.g("1",Wd);this.a.g("2",=
+Jd);this.a.g("3",Sd);this.a.g("4",Xd);this.a.g("5",Kd);this.a.g("6",d("l=
+oad"));this.a.g("7",ie);this.a.e("A",kd);this.a.e("B",md);this.a.e("C",J=
+d);this.a.e("D",jd);this.a.e("E",Tc);this.a.e("F",ne);this.a.e("G",Gd);t=
+his.a.e("H",
+nd);this.a.e("I",ud);this.a.e("J",Dd);this.a.e("K",d("hit"));this.a.e("L=
+",oe);this.a.e("M",pe);0=3D=3D=3Dthis.get(ab)&&H(111);this.a.T();this.H=3D=
+g};E=3DU[x];E.m=3Dfunction(){var a=3Dthis.get(Db);a||(a=3Dnew yd,this.se=
+t(Db,a));return a};E.La=3Dfunction(a){for(var b in a){var c=3Da[b];a.has=
+OwnProperty(b)&&this.set(b,c,h)}};E.K=3Dfunction(a){if(this.get(Ec))retu=
+rn l;var b=3Dthis,c=3Dke(this.a,function(c){b.set(Hb,a,h);b.t(c)});this.=
+set(Ec,c);return c};
+E.Fa=3Dfunction(a){a&&Ca(a)?(H(13),this.set(Hb,a,h)):"object"=3D=3D=3Dty=
+peof a&&a!=3D=3Di&&this.La(a);this.H=3Da=3Dthis.get(Hb);this.a.j("page")=
+;this.K(a)};E.F=3Dfunction(a,b,c,d,e){if(""=3D=3Da||(!wd(a)||""=3D=3Db||=
+!wd(b))||c!=3Dg&&!wd(c)||d!=3Dg&&!xd(d))return l;this.set(wc,a,h);this.s=
+et(xc,b,h);this.set(yc,c,h);this.set(zc,d,h);this.set(vc,!!e,h);this.a.j=
+("event");return h};
+E.Ha=3Dfunction(a,b,c,d,e){var f=3Dthis.a.b(Dc,0);1*e=3D=3D=3De&&(f=3De)=
+;if(this.a.b(Q,0)%100>=3Df)return l;c=3D1*(""+c);if(""=3D=3Da||(!wd(a)||=
+""=3D=3Db||!wd(b)||!xd(c)||da(c)||0>c||0>f||100<f)||d!=3Dg&&(""=3D=3Dd||=
+!wd(d)))return l;this.t(me(a,b,c,d));return h};E.Ga=3Dfunction(a,b,c,d){=
+if(!a||!b)return l;this.set(Ac,a,h);this.set(Bc,b,h);this.set(Cc,c||J[z]=
+[xa],h);d&&this.set(Hb,d,h);this.a.j("social");return h};E.Ea=3Dfunction=
+(){this.set(Dc,10);this.K(this.H)};E.Ia=3Dfunction(){this.a.j("trans")};=
+
+E.t=3Dfunction(a){this.set(Eb,a,h);this.a.j("event")};E.ia=3Dfunction(a)=
+{this.v();var b=3Dthis;return{_trackEvent:function(c,d,e){H(91);b.F(a,c,=
+d,e)}}};E.ma=3Dfunction(a){return this.get(a)};E.xa=3Dfunction(a,b){if(a=
+)if(Ca(a))this.set(a,b);else if("object"=3D=3Dtypeof a)for(var c in a)a.=
+hasOwnProperty(c)&&this.set(c,a[c])};E.addEventListener=3Dfunction(a,b){=
+var c=3Dthis.get(Nc)[a];c&&c[n](b)};E.removeEventListener=3Dfunction(a,b=
+){for(var c=3Dthis.get(Nc)[a],d=3D0;c&&d<c[w];d++)if(c[d]=3D=3Db){c.spli=
+ce(d,1);break}};E.qa=3Dfunction(){return"5.3.9"};
+E.B=3Dfunction(a){this.get(hb);a=3D"auto"=3D=3Da?Ka(J.domain):!a||"-"=3D=
+=3Da||"none"=3D=3Da?"":a[D]();this.set(bb,a)};E.va=3Dfunction(a){this.se=
+t(hb,!!a)};E.na=3Dfunction(a,b){return ce(this.a,a,b)};E.link=3Dfunction=
+(a,b){if(this.a.get(fb)&&a){var c=3Dce(this.a,a,b);J[z].href=3Dc}};E.ua=3D=
+function(a,b){this.a.get(fb)&&(a&&a.action)&&(a.action=3Dce(this.a,a.act=
+ion,b))};
+E.za=3Dfunction(){this.v();var a=3Dthis.a,b=3DJ.getElementById?J.getElem=
+entById("utmtrans"):J.utmform&&J.utmform.utmtrans?J.utmform.utmtrans:i;i=
+f(b&&b[na]){a.set(Cb,[]);for(var b=3Db[na][y]("UTM:"),c=3D0;c<b[w];c++){=
+b[c]=3DDa(b[c]);for(var d=3Db[c][y](de),e=3D0;e<d[w];e++)d[e]=3DDa(d[e])=
+;"T"=3D=3Dd[0]?fe(a,d[1],d[2],d[3],d[4],d[5],d[6],d[7],d[8]):"I"=3D=3Dd[=
+0]&&ge(a,d[1],d[2],d[3],d[4],d[5],d[6])}}};E.$=3Dfunction(a,b,c,d,e,f,j,=
+k){return fe(this.a,a,b,c,d,e,f,j,k)};E.Y=3Dfunction(a,b,c,d,e,f){return=
+ ge(this.a,a,b,c,d,e,f)};
+E.Aa=3Dfunction(a){de=3Da||"|"};E.ea=3Dfunction(){this.set(Cb,[])};E.wa=3D=
+function(a,b,c,d){var e=3Dthis.a;if(0>=3Da||a>e.get(yb))a=3Dl;else if(!b=
+||!c||128<b[w]+c[w])a=3Dl;else{1!=3Dd&&2!=3Dd&&(d=3D3);var f=3D{};ha(f,b=
+);f.value=3Dc;f.scope=3Dd;e.get(Fb)[a]=3Df;a=3Dh}a&&this.a.n();return a}=
+;E.ka=3Dfunction(a){this.a.get(Fb)[a]=3Dg;this.a.n()};E.ra=3Dfunction(a)=
+{return(a=3Dthis.a.get(Fb)[a])&&1=3D=3Da[ua]?a[na]:g};E.Ca=3Dfunction(a,=
+b,c){this.m().f(a,b,c)};E.Da=3Dfunction(a,b,c){this.m().o(a,b,c)};E.sa=3D=
+function(a,b){return this.m().getKey(a,b)};
+E.ta=3Dfunction(a,b){return this.m().N(a,b)};E.fa=3Dfunction(a){this.m()=
+.L(a)};E.ga=3Dfunction(a){this.m().M(a)};E.ja=3Dfunction(){return new yd=
+};E.W=3Dfunction(a){a&&this.get(Ab)[n](a[D]())};E.ba=3Dfunction(){this.s=
+et(Ab,[])};E.X=3Dfunction(a){a&&this.get(Bb)[n](a[D]())};E.ca=3Dfunction=
+(){this.set(Bb,[])};E.Z=3Dfunction(a,b,c,d,e){if(a&&b){a=3D[a,b[D]()][C]=
+(":");if(d||e)a=3D[a,d,e][C](":");d=3Dthis.get(zb);d.splice(c?0:d[w],0,a=
+)}};E.da=3Dfunction(){this.set(zb,[])};
+E.ha=3Dfunction(a){this.a[ka]();var b=3Dthis.get(P),c=3Dbe(this.a);this.=
+set(P,a);this.a.n();ae(this.a,c);this.set(P,b)};E.ya=3Dfunction(a,b){if(=
+0<a&&5>=3Da&&Ca(b)&&""!=3Db){var c=3Dthis.get(Fc)||[];c[a]=3Db;this.set(=
+Fc,c)}};E.V=3Dfunction(a){a=3D""+a;if(a[oa](/^[A-Za-z0-9]{1,5}$/)){var b=
+=3Dthis.get(Ic)||[];b[n](a);this.set(Ic,b)}};E.v=3Dfunction(){this.a[ka]=
+()};E.Ba=3Dfunction(a){a&&""!=3Da&&(this.set(Tb,a),this.a.j("var"))};var=
+ ne=3Dfunction(a){"trans"!=3D=3Da.get(sc)&&500<=3Da.b(cc,0)&&a[ta]();if(=
+"event"=3D=3D=3Da.get(sc)){var b=3D(new Date).getTime(),c=3Da.b(dc,0),d=3D=
+a.b(Zb,0),c=3Dm[la](1*((b-(c!=3Dd?c:1E3*c))/1E3));0<c&&(a.set(dc,b),a.se=
+t(R,m.min(10,a.b(R,0)+c)));0>=3Da.b(R,0)&&a[ta]()}},pe=3Dfunction(a){"ev=
+ent"=3D=3D=3Da.get(sc)&&a.set(R,m.max(0,a.b(R,10)-1))};var qe=3Dfunction=
+(){var a=3D[];this.add=3Dfunction(b,c,d){d&&(c=3DG(""+c));a[n](b+"=3D"+c=
+)};this.toString=3Dfunction(){return a[C]("&")}},re=3Dfunction(a,b){(b||=
+2!=3Da.get(xb))&&a.z(cc)},se=3Dfunction(a,b){b.add("utmwv","5.3.9");b.ad=
+d("utms",a.get(cc));b.add("utmn",Ea());var c=3DJ[z].hostname;F(c)||b.add=
+("utmhn",c,h);c=3Da.get(vb);100!=3Dc&&b.add("utmsp",c,h)},te=3Dfunction(=
+a,b){b.add("utmac",Da(a.get(Wa)));a.get(Oc)&&b.add("utmxkey",a.get(Oc),h=
+);a.get(vc)&&b.add("utmni",1);var c=3Da.get(Ic);c&&0<c[w]&&b.add("utmdid=
+",c[C]("."));
+var c=3Dfunction(a,b){b&&d[n](a+"=3D"+b+";")},d=3D[];c("__utma",cd(a));c=
+("__utmz",hd(a,l));c("__utmv",fd(a,h));c("__utmx",be(a));b.add("utmcc",d=
+[C]("+"),h);a.get(Xa)!=3D=3Dl&&(a.get(Xa)||M.w)&&b.add("aip",1);b.add("u=
+tmu",od.Xa())},ue=3Dfunction(a,b){for(var c=3Da.get(Fc)||[],d=3D[],e=3D1=
+;e<c[w];e++)c[e]&&d[n](e+":"+G(c[e][p](/%/g,"%25")[p](/:/g,"%3A")[p](/,/=
+g,"%2C")));d[w]&&b.add("utmpg",d[C](","))},ve=3Dfunction(a,b){a.get(ib)&=
+&(b.add("utmcs",a.get(Qb),h),b.add("utmsr",a.get(Lb)),a.get(Rb)&&b.add("=
+utmvp",a.get(Rb)),
+b.add("utmsc",a.get(Mb)),b.add("utmul",a.get(Pb)),b.add("utmje",a.get(Nb=
+)),b.add("utmfl",a.get(Ob),h))},we=3Dfunction(a,b){a.get(lb)&&a.get(Ib)&=
+&b.add("utmdt",a.get(Ib),h);b.add("utmhid",a.get(Kb));b.add("utmr",Pa(a.=
+get(Jb),a.get(P)),h);b.add("utmp",G(a.get(Hb),h),h)},xe=3Dfunction(a,b){=
+for(var c=3Da.get(Db),d=3Da.get(Eb),e=3Da.get(Fb)||[],f=3D0;f<e[w];f++){=
+var j=3De[f];j&&(c||(c=3Dnew yd),c.f(8,f,j[r]),c.f(9,f,j[na]),3!=3Dj[ua]=
+&&c.f(11,f,""+j[ua]))}!F(a.get(wc))&&!F(a.get(xc),h)&&(c||(c=3Dnew yd),c=
+.f(5,1,a.get(wc)),
+c.f(5,2,a.get(xc)),e=3Da.get(yc),e!=3Dg&&c.f(5,3,e),e=3Da.get(zc),e!=3Dg=
+&&c.o(5,1,e));c?b.add("utme",c.Qa(d),h):d&&b.add("utme",d.A(),h)},ye=3Df=
+unction(a,b,c){var d=3Dnew qe;re(a,c);se(a,d);d.add("utmt","tran");d.add=
+("utmtid",b.id_,h);d.add("utmtst",b.affiliation_,h);d.add("utmtto",b.tot=
+al_,h);d.add("utmttx",b.tax_,h);d.add("utmtsp",b.shipping_,h);d.add("utm=
+tci",b.city_,h);d.add("utmtrg",b.state_,h);d.add("utmtco",b.country_,h);=
+xe(a,d);ve(a,d);we(a,d);(b=3Da.get(Gb))&&d.add("utmcu",b,h);c||(ue(a,d),=
+te(a,d));return d[v]()},
+ze=3Dfunction(a,b,c){var d=3Dnew qe;re(a,c);se(a,d);d.add("utmt","item")=
+;d.add("utmtid",b.transId_,h);d.add("utmipc",b.sku_,h);d.add("utmipn",b.=
+name_,h);d.add("utmiva",b.category_,h);d.add("utmipr",b.price_,h);d.add(=
+"utmiqt",b.quantity_,h);xe(a,d);ve(a,d);we(a,d);(b=3Da.get(Gb))&&d.add("=
+utmcu",b,h);c||(ue(a,d),te(a,d));return d[v]()},Ae=3Dfunction(a,b){var c=
+=3Da.get(sc);if("page"=3D=3Dc)c=3Dnew qe,re(a,b),se(a,c),xe(a,c),ve(a,c)=
+,we(a,c),b||(ue(a,c),te(a,c)),c=3D[c[v]()];else if("event"=3D=3Dc)c=3Dne=
+w qe,re(a,b),se(a,c),
+c.add("utmt","event"),xe(a,c),ve(a,c),we(a,c),b||(ue(a,c),te(a,c)),c=3D[=
+c[v]()];else if("var"=3D=3Dc)c=3Dnew qe,re(a,b),se(a,c),c.add("utmt","va=
+r"),!b&&te(a,c),c=3D[c[v]()];else if("trans"=3D=3Dc)for(var c=3D[],d=3Da=
+.get(Cb),e=3D0;e<d[w];++e){c[n](ye(a,d[e],b));for(var f=3Dd[e].items_,j=3D=
+0;j<f[w];++j)c[n](ze(a,f[j],b))}else"social"=3D=3Dc?b?c=3D[]:(c=3Dnew qe=
+,re(a,b),se(a,c),c.add("utmt","social"),c.add("utmsn",a.get(Ac),h),c.add=
+("utmsa",a.get(Bc),h),c.add("utmsid",a.get(Cc),h),xe(a,c),ve(a,c),we(a,c=
+),ue(a,c),te(a,c),c=3D[c[v]()]):
+"feedback"=3D=3Dc?b?c=3D[]:(c=3Dnew qe,re(a,b),se(a,c),c.add("utmt","fee=
+dback"),c.add("utmfbid",a.get(Gc),h),c.add("utmfbpr",a.get(Hc),h),xe(a,c=
+),ve(a,c),we(a,c),ue(a,c),te(a,c),c=3D[c[v]()]):c=3D[];return c},oe=3Dfu=
+nction(a){var b,c=3Da.get(xb),d=3Da.get(uc),e=3Dd&&d.Ua,f=3D0;if(0=3D=3D=
+c||2=3D=3Dc){var j=3Da.get(wb)+"?";b=3DAe(a,h);for(var k=3D0,s=3Db[w];k<=
+s;k++)Sa(b[k],e,j,h),f++}if(1=3D=3Dc||2=3D=3Dc){b=3DAe(a);k=3D0;for(s=3D=
+b[w];k<s;k++)try{Sa(b[k],e),f++}catch(t){t&&Ra(t[r],g,t.message)}}d&&(d.=
+q=3Df)};var Be=3Dfunction(){return"https:"=3D=3DJ[z][A]||M.G?"https://ss=
+l.google-analytics.com":"http://www.google-analytics.com"},Ce=3Dfunction=
+(a){ha(this,"len");this.message=3Da+"-8192"},De=3Dfunction(a){ha(this,"f=
+f2post");this.message=3Da+"-2036"},Sa=3Dfunction(a,b,c,d){b=3Db||Fa;if(d=
+||2036>=3Da[w]){var e=3Db;b=3Dc||Be()+"/__utm.gif?";var f=3Dnew Image(1,=
+1);f.src=3Db+a;f.onload=3Dfunction(){f.onload=3Di;f.onerror=3Di;e()};f.o=
+nerror=3Dfunction(){f.onload=3Di;f.onerror=3Di;e()}}else if(8192>=3Da[w]=
+){var j=3Db;if(0<=3DW[za].userAgent[q]("Firefox")&&
+![].reduce)throw new De(a[w]);var k;b=3DBe()+"/p/__utm.gif";if(c=3DW.XDo=
+mainRequest)k=3Dnew c,k.open("POST",b);else if(c=3DW.XMLHttpRequest)c=3D=
+new c,"withCredentials"in c&&(k=3Dc,k.open("POST",b,h),k.setRequestHeade=
+r("Content-Type","text/plain"));k?(k.onreadystatechange=3Dfunction(){4=3D=
+=3Dk.readyState&&(j(),k=3Di)},k.send(a),b=3Dh):b=3Dg;b||Ee(a,j)}else thr=
+ow new Ce(a[w]);},Ee=3Dfunction(a,b){if(J.body){a=3Daa(a);try{var c=3DJ[=
+qa]('<iframe name=3D"'+a+'"></iframe>')}catch(d){c=3DJ[qa]("iframe"),ha(=
+c,a)}c.height=3D"0";c.width=3D"0";
+c.style.display=3D"none";c.style.visibility=3D"hidden";var e=3DJ[z],e=3D=
+Be()+"/u/post_iframe.html#"+aa(e[A]+"//"+e[u]+"/favicon.ico"),f=3Dfuncti=
+on(){c.src=3D"";c.parentNode&&c.parentNode.removeChild(c)};Ga(W,"beforeu=
+nload",f);var j=3Dl,k=3D0,s=3Dfunction(){if(!j){try{if(9<k||c.contentWin=
+dow[z][u]=3D=3DJ[z][u]){j=3Dh;f();Ha(W,"beforeunload",f);b();return}}cat=
+ch(a){}k++;ca(s,200)}};Ga(c,"load",s);J.body.appendChild(c);c.src=3De}el=
+se ca(function(){Ee(a,b)},100)};var $=3Dfunction(){this.G=3Dthis.w=3Dl;t=
+his.C=3D{};this.D=3D[];this.U=3D0;this.S=3D[["www.google-analytics.com",=
+"","/plugins/"]];this._gasoCPath=3Dthis._gasoDomain=3Dg;var a=3Dfunction=
+(a,c,d){T($[x],a,c,d)};a("_createTracker",$[x].r,55);a("_getTracker",$[x=
+].oa,0);a("_getTrackerByName",$[x].u,51);a("_getTrackers",$[x].pa,130);a=
+("_anonymizeIp",$[x].aa,16);a("_forceSSL",$[x].la,125);a("_getPlugin",Pc=
+,120);a=3Dfunction(a,c,d){T(U[x],a,c,d)};Qc("_getName",$a,58);Qc("_getAc=
+count",Wa,64);Qc("_visitCode",Q,54);Qc("_getClientInfo",
+ib,53,1);Qc("_getDetectTitle",lb,56,1);Qc("_getDetectFlash",jb,65,1);Qc(=
+"_getLocalGifPath",wb,57);Qc("_getServiceMode",xb,59);V("_setClientInfo"=
+,ib,66,2);V("_setAccount",Wa,3);V("_setNamespace",Ya,48);V("_setAllowLin=
+ker",fb,11,2);V("_setDetectFlash",jb,61,2);V("_setDetectTitle",lb,62,2);=
+V("_setLocalGifPath",wb,46,0);V("_setLocalServerMode",xb,92,g,0);V("_set=
+RemoteServerMode",xb,63,g,1);V("_setLocalRemoteServerMode",xb,47,g,2);V(=
+"_setSampleRate",vb,45,1);V("_setCampaignTrack",kb,36,2);V("_setAllowAnc=
+hor",
+gb,7,2);V("_setCampNameKey",ob,41);V("_setCampContentKey",tb,38);V("_set=
+CampIdKey",nb,39);V("_setCampMediumKey",rb,40);V("_setCampNOKey",ub,42);=
+V("_setCampSourceKey",qb,43);V("_setCampTermKey",sb,44);V("_setCampCIdKe=
+y",pb,37);V("_setCookiePath",P,9,0);V("_setMaxCustomVariables",yb,0,1);V=
+("_setVisitorCookieTimeout",cb,28,1);V("_setSessionCookieTimeout",db,26,=
+1);V("_setCampaignCookieTimeout",eb,29,1);V("_setReferrerOverride",Jb,49=
+);V("_setSiteSpeedSampleRate",Dc,132);a("_trackPageview",U[x].Fa,1);a("_=
+trackEvent",
+U[x].F,4);a("_trackPageLoadTime",U[x].Ea,100);a("_trackSocial",U[x].Ga,1=
+04);a("_trackTrans",U[x].Ia,18);a("_sendXEvent",U[x].t,78);a("_createEve=
+ntTracker",U[x].ia,74);a("_getVersion",U[x].qa,60);a("_setDomainName",U[=
+x].B,6);a("_setAllowHash",U[x].va,8);a("_getLinkerUrl",U[x].na,52);a("_l=
+ink",U[x].link,101);a("_linkByPost",U[x].ua,102);a("_setTrans",U[x].za,2=
+0);a("_addTrans",U[x].$,21);a("_addItem",U[x].Y,19);a("_clearTrans",U[x]=
+.ea,105);a("_setTransactionDelim",U[x].Aa,82);a("_setCustomVar",U[x].wa,=
+
+10);a("_deleteCustomVar",U[x].ka,35);a("_getVisitorCustomVar",U[x].ra,50=
+);a("_setXKey",U[x].Ca,83);a("_setXValue",U[x].Da,84);a("_getXKey",U[x].=
+sa,76);a("_getXValue",U[x].ta,77);a("_clearXKey",U[x].fa,72);a("_clearXV=
+alue",U[x].ga,73);a("_createXObj",U[x].ja,75);a("_addIgnoredOrganic",U[x=
+].W,15);a("_clearIgnoredOrganic",U[x].ba,97);a("_addIgnoredRef",U[x].X,3=
+1);a("_clearIgnoredRef",U[x].ca,32);a("_addOrganic",U[x].Z,14);a("_clear=
+Organic",U[x].da,70);a("_cookiePathCopy",U[x].ha,30);a("_get",U[x].ma,
+106);a("_set",U[x].xa,107);a("_addEventListener",U[x].addEventListener,1=
+08);a("_removeEventListener",U[x].removeEventListener,109);a("_addDevId"=
+,U[x].V);a("_getPlugin",Pc,122);a("_setPageGroup",U[x].ya,126);a("_track=
+Timing",U[x].Ha,124);a("_initData",U[x].v,2);a("_setVar",U[x].Ba,22);V("=
+_setSessionTimeout",db,27,3);V("_setCookieTimeout",eb,25,3);V("_setCooki=
+ePersistence",cb,24,1);a("_setAutoTrackOutbound",Fa,79);a("_setTrackOutb=
+oundSubdomains",Fa,81);a("_setHrefExamineLimit",Fa,80)};E=3D$[x];
+E.oa=3Dfunction(a,b){return this.r(a,g,b)};E.r=3Dfunction(a,b,c){b&&H(23=
+);c&&H(67);b=3D=3Dg&&(b=3D"~"+M.U++);a=3Dnew U(b,a,c);M.C[b]=3Da;M.D[n](=
+a);return a};E.u=3Dfunction(a){a=3Da||"";return M.C[a]||M.r(g,a)};E.pa=3D=
+function(){return M.D[ja](0)};E.aa=3Dfunction(){this.w=3Dh};E.la=3Dfunct=
+ion(){this.G=3Dh};var Fe=3Dfunction(a){if("prerender"=3D=3DJ.webkitVisib=
+ilityState)return l;a();return h};var M=3Dnew $;var Ge=3DW._gat;Ge&&Ba(G=
+e._getTracker)?M=3DGe:W._gat=3DM;var Z=3Dnew Y;var He=3Dfunction(){var a=
+=3DW._gaq,b=3Dl;if(a&&Ba(a[n])&&(b=3D"[object Array]"=3D=3DObject[x][v].=
+call(Object(a)),!b)){Z=3Da;return}W._gaq=3DZ;b&&Z[n][ya](Z,a)};if(!Fe(He=
+)){H(123);var Ie=3Dl,Je=3Dfunction(){!Ie&&Fe(He)&&(Ie=3Dh,Ha(J,"webkitvi=
+sibilitychange",Je))};Ga(J,"webkitvisibilitychange",Je)};function Yc(a){=
+var b=3D1,c=3D0,d;if(a){b=3D0;for(d=3Da[w]-1;0<=3Dd;d--)c=3Da.charCodeAt=
+(d),b=3D(b<<6&268435455)+c+(c<<14),c=3Db&266338304,b=3D0!=3Dc?b^c>>21:b}=
+return b};})();
+
+------------Frd41nWbON4bPSAmVsNDld--
