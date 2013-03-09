@@ -270,7 +270,7 @@ Tato práce popisuje komplexní sadu nástrojů pro vývoj a ovládání libovol
 
 Protože se nejedná o jednoduchou aplikaci ani o jednostranně zaměřenou sadu nástrojů, protože se navíc celá sada průběžně rozrůstá a protože je rozsah a záběr použití všech funkcí a modulů této sady příliš velký, nelze ji stručně popsat v omezeném prostoru anotace.
 
-Pro získání ucelenější představy o tom co vše lze pomocí sady Lorris dosáhnout, prosím nahlédněte do \hyperref[uvod]{úvodu práce}.
+Pro získání ucelenější představy o tom, co vše lze pomocí sady Lorris dosáhnout, prosím nahlédněte do \hyperref[uvod]{úvodu práce}.
 
 %Aplikace zastřešuje několik modulů. Každý modul je určen pro specifickou činnost -- parsování a zobrazování dat, programování mikročipů atd.
 
@@ -359,7 +359,7 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
 \label{motivace}
 Při stavbě robotů na robotické soutěže jsem se setkal s problémem zpracovávání dat z poměrně velkého množství senzorů (několik ultrazvukových dálkoměrů, enkodéry, které měří ujetou vzdálenost, tlačítka hlídající náraz do mantinelu, ...), které robot obsahuje, a jejich přehledného zobrazování. 
 
-V zájmu zjednodušení a zrychlení vývoje robota jsem se rozhodl najít nějákou aplikaci, která by přehledně zobrazovala data z robota. Seznam požadavků, které jsem na tuto aplikaci stanovil, je sepsaný v kapitole \ref{reqs}.
+V zájmu zjednodušení a zrychlení vývoje robota jsem se rozhodl najít nějakou aplikaci, která by přehledně zobrazovala data z robota. Seznam požadavků, které jsem na tuto aplikaci stanovil, je sepsaný v kapitole \ref{reqs}.
 
 \subsection{Požadavky na aplikaci}
 \label{reqs}
@@ -458,7 +458,7 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \addtolength{\textheight}{20mm}
 \newpage
 \subsection{Sezení}
-Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a tímto se vrátit k předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu jako když aplikaci opouštěl.
+Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a tímto se vrátit k předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu, jako když aplikaci opouštěl.
 
 \subsection{Automatická aktualizace}
 Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zda je dostupná nová verze a pokud ano, zobrazí uživateli malé upozornění:
@@ -571,7 +571,7 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
     \item Binární -- zobrazí číslo ve dvojkové soustavě.  Dostupné pouze pro přirozená čísla.
 \end{itemize}
 
-Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených senzorů vzdálenosti, kdy se hodnota, kterou na senzoru naměří AD převodník, musí přepočítat pomocí určité rovnice abychom dostali hodnotu v centimetrech. Výraz může vypadat například takto:
+Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených senzorů vzdálenosti, kdy se hodnota, kterou na senzoru naměří AD převodník, musí přepočítat pomocí určité rovnice, abychom dostali hodnotu v centimetrech. Výraz může vypadat například takto:
 \begin{center}
 \verb|2914/(%n+5)-1|
 \end{center}
@@ -783,7 +783,7 @@ Tento modul funguje jako grafické rozhraní pro několik typů programátorů a
 \subsection{Programátor Shupito}
 Shupito je programátor mikročipů vytvořený Martinem Vejnárem, který dokáže programovat mikrokontroléry pomocí ISP\footnote{\It{In-system programming} -- rozhraní, které umožňuje programovat čipy přímo na desce plošného spoje.}, PDI\footnote{\It{Program and Debug Interface} -- rozhraní firmy Atmel umožňující programování čipů přímo na desce, podobně jako ISP} a JTAG\footnote{\It{Joint Test Action Group} -- rozhraní podle standardu IEEE 1149.1 umožňující mimo jiné programování a debugování čipů} rozhraní. 
 
-Modul programátor v mojí práci slouží jako oficiální rozhraní pro Shupito. Převážná část komunikace s programátor je napsána samotným Martinem Vejnárem.
+Modul programátor v mojí práci slouží jako oficiální rozhraní pro Shupito. Převážná část komunikace s programátorem je napsána samotným Martinem Vejnárem.
 
 \subsubsection{UART tunel}
 \label{tunel}
@@ -899,7 +899,7 @@ Dva widgety \It{číslo} jsou zde použity k zobrazení aktuální rychlosti a z
 \caption{Ovládání enkodéru}
 \end{center}
 \end{figure}
-Tyto widget \It{tlačítko} a \It{vstup} obstarávají ovládání enkodéru. Tlačítko \uv{reset} vrátí počítadlo ujeté vzdálenosti na nulu, tlačítko \uv{clear} pošle enkodéru příkaz k resetu chybového kódu (kód po chybě zůstává i když příčina již byla napravena, je třeba ho resetovat) a tlačítko \uv{Ovladani} zastavuje a spouští posílání dat z enkodéru. Všechny tyto widgety jsou připojené na script (do obrázku \ref{analyzer_all} se už widget script nevešel), který po kliknutí na tlačíka odešle do enkodéru příslušné příkazy.
+Tyto widgety \It{tlačítko} a \It{vstup} obstarávají ovládání enkodéru. Tlačítko \uv{reset} vrátí počítadlo ujeté vzdálenosti na nulu, tlačítko \uv{clear} pošle enkodéru příkaz k resetu chybového kódu (kód po chybě zůstává, i když příčina již byla napravena, je třeba ho resetovat) a tlačítko \uv{Ovladani} zastavuje a spouští posílání dat z enkodéru. Všechny tyto widgety jsou připojené na script (do obrázku \ref{analyzer_all} se už widget script nevešel), který po kliknutí na tlačíka odešle do enkodéru příslušné příkazy.
 \begin{listing}[H]
 \begin{jscode}
 var run = true;
@@ -936,7 +936,7 @@ Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} bě
 
 \newpage
 \subsection{Stavba robota pro soutěž Eurobot 2011}
-Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot} (fotku robota najdete v přílohách na straně \pageref{david}, obrázek č. \ref{david}).
+Použití mého programu Lorris je zde prezentováno na příkladu stavby robota, který vznikal na naší škole (SPŠ a VOŠ technická, Sokolská 1, Brno) v roce 2011 pro soutěž Eurobot\cite{eurobot} (fotografii robota najdete v přílohách na straně \pageref{david}, obrázek č. \ref{david}).
 
 Ačkoliv je robot již 2 roky starý a celá sada Lorris se od té doby značně posunula vpřed, robot \It{David} představuje velmi dobrý příklad využití velké části funkcí celého balíku nástrojů.
 
@@ -1024,10 +1024,36 @@ Tato část Lorris mobile používá části nativního kódu z desktopové verz
 \end{figure}
 Tento modul představuje běžný textový terminál. Umí většinu funkcí terminálu v desktopové verzi Lorris -- zobrazuje data (jako text nebo hexadecimální hodnoty bajtů), odesílá stisky kláves, lze nastavit velikost a barva textu, barvu pozadí a jaké kontrolní znaky se mají odeslat při stisknutí klávesy enter. 
 
+
 \newpage
+\section{Reálné nasazení}
+\label{usage}
+%Já používám Lorris kdykoliv potřebuji naprogramovat, přenastavit či jinak
+Prvními uživateli sady Lorris se stali od samého začátku vývoje před několika lety členové některých technicky zaměřených kroužků na DDM Junior\cite{junior} v Brně. Lorris zde pomáhá při stavbě různých zařízení, zejména robotů, a žáci, kteří se učí programovat mikrokontroléry, používají programátor \It{Shupito} a tím pádem i modul Programátor z balíku Lorris. V průběhu výuky programování mikrokontrolérů pomáhá také modul Terminál (jednoduchá komunikace s čipem) a později i Analyzér (pokročilé zpracovávání dat z čipu).
+
+Lorris je pro použití v DDM Junior vhodná také díky nulové pořizovací ceně -- větší firma, zabývající se vývojem aplikací pro mikrokontroléry, by pravděpodobně pořídila drahý komerční program s podobnými funkcemi jako má Lorris nebo vyvinula vlastní jednoúčelové aplikace. Pro příspěvkové organizace typu DDM je však řešení používané velkými firmami poněkud nedostupné.
+
+K dnešnímu dni má Lorris přibližně 20 uživatelů jen z řad DDM Junior. Díky postupnému rozšiřování programátoru \It{Shupito} mezi uživatele po celé ČR se ale okruh uživatelů Lorris utěšeně rozrůstá.
+
+\vspace{10mm}
+
+\noindent Já Lorris používám kdykoliv pracuji s roboty a mikrokontroléry -- pro zobrazování dat, programování mikročipů či ovládání celých zařízení. Následující seznam představuje pouze několik významnějších aplikací, pro které již byla sada Lorris použita ostatními uživateli:
+\begin{itemize}
+    \item Vývoj několika robotů pro soutěže letošního Robotického dne\cite{rob_den_new}
+    \item Programování velkého počtu typů mikročipů, ať už pomocí programátoru \It{Shupito} nebo pomocí bootloaderů
+    \item Vývoj samotného programátoru \It{Shupito}
+    \item Já používám desktopovou Lorris ke generování testovacích dat pro mobilní verzi Lorris
+    \item Vývoj levné logické sondy
+    \item Ladění čipů pro ovládání třífazového motoru (tzv. \It{driver})
+    \item Vývoj systému pro řízení až 128 RGB diod pro osvětlení modelu letadla
+    \item Stavba a programování digitální vysílačky používající ARM procesor (semestrální práce)
+    \item Vývoj robota pro sledování čáry (maturitní práce)
+\end{itemize}
+
+%\newpage
 \section*{Závěr}
 \addcontentsline{toc}{section}{Závěr}
-Po několikaletém vývoji mohu konstatovat že aplikace splňuje všechny požadavky požadavky stanovené v kapitole \ref{motivace}:
+Po několikaletém vývoji mohu konstatovat, že aplikace splňuje všechny požadavky požadavky stanovené v kapitole \ref{motivace}:
 \begin{enumerate}[label=\Has\hspace{1.5mm}\arabic{*}.] 
     \item Možnost zpracovávat data přicházející ze zařízení a přehledně je zobrazovat% 1
     \item Podpora co nejvíce formátů příchozích dat% 2
@@ -1053,33 +1079,6 @@ Přiložené CD obsahuje zdrojový kód, instruktážní video, propagační pos
 
 
 V budoucnu bych rád pokračoval v přidávání dalších funkcí do počítačové i mobilní verze Lorris a případně také v rozšiřování povědomí o celém balíku.
-
-
-\subsection*{Reálné nasazení}
-\label{usage}
-%Já používám Lorris kdykoliv potřebuji naprogramovat, přenastavit či jinak
-Prvními uživateli sady Lorris se stali od samého začátku vývoje před několika lety členové některých technicky zaměřených kroužků na DDM Junior\cite{junior} v Brně. Lorris zde pomáhá při stavbě různých zařízení, zejména robotů, a žáci, kteří se učí programovat mikrokontroléry, používají programátor \It{Shupito} a tím pádem i modul Programátor z balíku Lorris. V průběhu výuky programování mikrokontrolérů pomáhá také modul Terminál (jednoduchá komunikace s čipem) a později i Analyzér (pokročilé zpracovávání dat z čipu).
-
-Lorris je pro použití v DDM Junior vhodná také díky nulové pořizovací ceně -- větší firma, zabývající se vývojem aplikací pro mikrokontroléry, by pravděpodobně pořídila drahý komerční program s podobnými funkcemi jako má Lorris nebo vyvinula vlastní jednoúčelové aplikace. Pro příspěvkové organizace typu DDM je však řešení používané velkými firmami poněkud nedostupné.
-
-K dnešnímu dni má Lorris přibližně 20 uživatelů jen z řad DDM Junior. Díky postupnému rozšiřování programátoru \It{Shupito} mezi uživatele po celé ČR se ale okruh uživatelů Lorris utěšeně rozrůstá.
-
-\vspace{10mm}
-
-\noindent Já Lorris používám kdykoliv pracuji s roboty a mikrokontroléry -- pro zobrazování dat, programování mikročipů či ovládání celých zařízení. Následující seznam představuje pouze několik významnějších aplikací, pro které již byla sada Lorris použita ostatními uživateli:
-\begin{itemize}
-    \item Vývoj několika robotů pro soutěže letošního Robotického dne\cite{rob_den_new}
-    \item Programování velkého počtu typů mikročipů, ať už pomocí programátoru \It{Shupito} nebo pomocí bootloaderů
-    \item Vývoj samotného programátoru \It{Shupito}
-    \item Já používám desktopovou Lorris ke generování testovacích dat pro mobilní verzi Lorris
-    \item Vývoj levné logické sondy
-    \item Ladění čipů pro ovládání třífazového motoru (tzv. \It{driver})
-    \item Vývoj systému pro řízení až 128 RGB diod pro osvětlení modelu letadla
-    \item Stavba a programování digitální vysílačky používající ARM procesor (semestrální práce)
-    \item Vývoj robota pro sledování čáry (maturitní práce)
-\end{itemize}
-
-
 
 
 
