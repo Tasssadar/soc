@@ -220,29 +220,10 @@
 
 \end{center}
 \normalsize
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage  % Prohlášení o autorství  
-\voffset = 0mm % posun začátku textu zpět
-
-~ % musí to tu být, aby fungovala svislá mezera
-
-\vspace{10mm}
-
-\section*{Prohlášení}
-
-Prohlašuji, že jsem svou práci vypracoval samostatně, použil jsem pouze 
-podklady (literaturu, SW atd.) citované v~práci a~uvedené v~přiloženém seznamu 
-a~postup při zpracování práce je v~souladu se zákonem č. 121/2000 Sb., o~právu 
-autorském, o~právech souvisejících s~právem autorským a~o~změně některých 
-zákonů (autorský zákon) v~platném znění. 
- 
-\vspace{20mm} 
- 
-\noindent V~Brně  dne: 6.3.2013 \hspace{50mm}                 podpis:   
- 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage   % Poděkování -- nepovinné 
+\voffset = 0mm % posun začátku textu zpět
 
 ~ % musí to tu být, aby fungovala svislá mezera
 \vspace{100mm}
@@ -436,6 +417,10 @@ It is possible to connect multiple modules to one device.
 \end{center}
 \end{figure}
 
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+\setlength{\voffset}{-20mm}
+\addtolength{\textheight}{20mm}
+\newpage
 \subsection{Session}
 Lorris can save everything user opened (tabs, their layout, connection, data of each tab, ...) as session. User can later load saved session and thus return to his previous work. Lorris automatically saves session before it is closed, so when user starts Lorris again, all his work is in the same state as it was before he left.
 
@@ -450,11 +435,13 @@ Lorris can update itself under MS Windows. It checks for new version on start, a
 In case user confirms the update, Lorris closes itself and runs little updater application. Updater shows changelog and downloads new version and installs it.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{img/updater.png}
+\includegraphics[scale=0.65]{img/updater.png}
 \caption{Ongoing update}
 \end{center}
 \end{figure}
 
+\setlength{\voffset}{0mm}
+\addtolength{\textheight}{-20mm}
 \newpage
 \section{Module: Analyzer}
 
@@ -500,6 +487,10 @@ Some widgets might profit from following feature: if user grasps widget with mou
 \end{center}
 \end{figure}
 
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+\setlength{\voffset}{-25mm}
+\addtolength{\textheight}{20mm}
+\newpage
 \begin{figure}[H]
 \begin{center}
 \subfloat[List of widgets]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets_new.png}}
@@ -514,10 +505,14 @@ Some widgets might profit from following feature: if user grasps widget with mou
 Analyzer can filter incoming data and each filter may contain several conditions, which determine if packet is filtered out or not.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=1]{img/filters.png}
+\includegraphics[scale=0.9]{img/filters.png}
 \caption{Filter settings}
 \end{center}
 \end{figure}
+
+\setlength{\voffset}{0mm}
+\addtolength{\textheight}{-20mm}
+\newpage
 Each condition can check command or device ID from packet's header, value of byte in packet or  it can run simple user script. Thanks to the script, it is possible to write almost any kind of condition.
 
 \begin{listing}[H]
@@ -714,11 +709,11 @@ maxSpdLabel.text = "Max speed:";
 \subsection{Widget: terminal}
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.70]{img/w_terminal.png}
+\includegraphics[scale=0.8]{img/w_terminal.png}
 \caption{Widget terminal}
 \end{center}
 \end{figure}
-This widget exists only for convenience of the user, it is widget \It{script} with preset code which works exactly as terminal (sending keypresses, showing incoming data). User can edit this predefined script, just like it was regular widget \It{script}.
+This widget exists only for convenience of the user, it's widget \It{script} with preset code working exactly as terminal (sends keypresses, shows incoming data). User can edit predefined script, just like it was regular widget \It{script}.
 
 \newpage
 \setlength{\voffset}{0mm} % posune text/obrázek na této stránce, kam patøí
