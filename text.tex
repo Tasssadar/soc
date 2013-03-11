@@ -408,8 +408,11 @@ Následující tabulka shrnuje funkce a~vlastnosti jednotlivých programů. Čí
 
 \vspace{5mm}
 
-Žádný z~dostupných programů nesplňuje všechny požadavky, proto jsem se rozhodl napsat vlastní aplikaci, která bude obsahovat všechny stanovené vlastnosti. 
+Žádný z~dostupných programů nesplňuje všechny požadavky, proto jsem se rozhodl napsat vlastní aplikaci, která všechny požadované funkce obsahovat bude.  Přestože se dalo očekávat že to bude náročný a rozsáhlý úkol, množství potenciálních uživatelů, kteří by ho potřebovali, mě přesvědčilo, že tato práce rozhodně nebude zbytečná. Díky tomu v průběhu několika let vznikla rozsáhlá sada nástrojů a dnes již mohu s uspokojením konstatovat, že svým záběrem v této oblasti dalece překonává ostatní dostupné nástroje.
 
+Její schopnosti a použití v reálných projektech jsou popsány v následujícím textu.
+
+\newpage
 \section{Popis rozhraní}
 Svůj program jsem pojmenoval \uv{Lorris}, je vytvořený v~C++ a~využívá Qt Framework\cite{qtfrm}, což je multiplatformní framework, který mimo jiné umožňuje spustit aplikaci na více operačních systémech -- testoval jsem na Debian Linux\cite{debian} (Wheezy, 64bit) a~Windows 7.
 
@@ -453,10 +456,6 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 \end{center}
 \end{figure}
 
-\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
-\setlength{\voffset}{-20mm}
-\addtolength{\textheight}{20mm}
-\newpage
 \subsection{Sezení}
 Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o~připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a~tímto se vrátit k~předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu, jako když aplikaci opouštěl.
 
@@ -476,8 +475,6 @@ V~případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a~spustí s
 \end{center}
 \end{figure}
 
-\setlength{\voffset}{0mm}
-\addtolength{\textheight}{-20mm}
 \newpage
 \section{Modul: Analyzér}
 
@@ -523,6 +520,11 @@ U~některých widgetů se může hodit následující funkce: widgety je možné
 \end{center}
 \end{figure}
 
+\addtolength{\textheight}{30mm}
+\newpage
+\voffset = -30mm % posun začátku textu výš
+\enlargethispage{60mm} % zvětší oblast tisku pro tuto stránku   
+
 \begin{figure}[H]
 \begin{center}
 \subfloat[Seznam widgetů]{\label{analyzer_widgets}\includegraphics[scale=1]{img/analyzer_widgets_new.png}}
@@ -533,15 +535,18 @@ U~některých widgetů se může hodit následující funkce: widgety je možné
 \end{center}
 \end{figure}
 
-\newpage
 \subsection{Filtrování dat}
 Analyzér umí příchozí data filtrovat, přičemž každý filtr může obsahovat několik podmínek podle kterých se určí, zda příchozí packet projde nebo ne.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=1]{img/filters.png}
+\includegraphics[scale=0.9]{img/filters.png}
 \caption{Nastavení filtrů}
 \end{center}
 \end{figure}
+
+\addtolength{\textheight}{-30mm}
+\newpage
+\voffset = 0mm
 Podmínka může kontrolovat buďto příkaz nebo zařízení z~hlavičky packetu, hodnotu bajtu v~packetu nebo může spustit jednoduchý uživatelský script. Díky scriptu je možné napsat takřka jakoukoliv podmínku pro filtrování.
 
 \begin{listing}[H]
@@ -648,14 +653,7 @@ Editor scriptu má v~sobě vestavěné ukázky kódu, například jak nastavit h
 Widget kolo zobrazuje příchozí hodnotu jako úhel v~kruhu, což se hodí například při zobrazování natočení kola robota. Dokáže zobrazit data přicházející jako úhel ve stupních, radiánech nebo jako číslo v~určitém rozmezí (například enkodér s~rozlišením 12 bitů vrací číslo od 0 do 4095).
 
 \subsection{Widget: plátno}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=1]{img/w_canvas.png}
-\caption{Widget: plátno}
-\end{center}
-\end{figure}
 Plátno je widget který lze ovládat pouze ze scriptu a~je určen ke kreslení 2D grafiky. Dokáže zobrazit čáry, obdélníky, kruhy a~elipsy. V~následujícím příkladu je kód pro nakreslení červeného kříže uprosřed widgetu.
-
 \begin{listing}[H]
 \begin{jscode}
 Canvas.setLineColor("red");
@@ -666,6 +664,13 @@ Canvas.drawRect(10, 55, 110, 20);
 \end{jscode}
 \caption{Ovládání widgetu plátno}
 \end{listing}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=1]{img/w_canvas.png}
+\caption{Widget: plátno}
+\end{center}
+\end{figure}
 
 \subsection{Widgety tlačítko a~slider}
 \begin{figure}[H]
@@ -839,7 +844,7 @@ Libenjoy je vydána pod licencí GNU LGPLv2.1\cite{lgpl}.
 \subsection{Testování barevného senzoru}
 {\bf Situace:} Stavím robota do soutěže (Eurobot, RobotChallange, ...), ve které je možné se na herním poli orientovat podle barvy. Chci barevný senzor otestovat, proto jsem na nepájivém poli postavil jednoduchý obvod s~čipem, na který je senzor připojený. Čip bude dávat senzoru pokyny k~měření a~vyčítat z~něj RGB hodnoty, které následně pošle do RS232 linky.\\
 \\
-{\bf Řešení:} Program, který bude ze senzoru číst hodnoty naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro RS232 linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu \uv{barva} mohu vidět barvu, kterou senzor rozpoznal.
+{\bf Řešení:} Program, který bude ze senzoru číst hodnoty, naprogramuji do čipu pomocí programátoru Shupito, který také poskytne tunel pro USART linku. Na tento tunel se připojím modulem Analyzér, ve kterém díky widgetu \uv{barva} mohu vidět barvu, kterou senzor rozpoznal.
 
 \begin{figure}[h]
 \begin{center}
@@ -957,7 +962,7 @@ Jako první byla navržena mechanická konstrukce robota. Již v~této fázi byl
 
 \newpage
 \subsubsection{Ladění a~nastavení senzorů}
-Po vyladění mechanické části robota byl osazen senzory. Po jejich umístění jsem v~nástroji Analyzér vytvořil rozhraní, které využívá zejména widgetů \It{Script}, \It{Číslo}, \It{Barva} a~\It{Status}. Každý z~těchto widgetů je možné na pracovní ploše Analyzéru přesouvat, zmenšovat nebo zvětšovat, díky čemuž je možné jejich rozmístění tak, aby odpovídalo skutečným pozicím senzorů na robotu. Jako optimální se jeví zobrazení jako při pohledu shora.
+Po vyladění mechanické části byl robot osazen senzory. Po jejich umístění jsem v~nástroji Analyzér vytvořil rozhraní, které využívá zejména widgetů \It{Script}, \It{Číslo}, \It{Barva} a~\It{Status}. Každý z~těchto widgetů je možné na pracovní ploše Analyzéru přesouvat, zmenšovat nebo zvětšovat, díky čemuž je možné jejich rozmístění tak, aby odpovídalo skutečným pozicím senzorů na robotu. Jako optimální se jeví zobrazení jako při pohledu shora.
 \vspace{10mm}
 \begin{center}
 \includegraphics[width=\textwidth]{img/sensors_david.png}
@@ -1050,7 +1055,7 @@ K~dnešnímu dni má Lorris přibližně 20 uživatelů jen z~řad DDM Junior. D
     \item Vývoj robota pro sledování čáry (maturitní práce)
 \end{itemize}
 
-%\newpage
+\newpage
 \section*{Závěr}
 \addcontentsline{toc}{section}{Závěr}
 Po několikaletém vývoji mohu konstatovat, že aplikace splňuje všechny požadavky požadavky stanovené v~kapitole \ref{motivace}:
