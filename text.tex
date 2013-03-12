@@ -284,9 +284,9 @@ This work describes a~complex set of tools designed for developement and control
 
 Because Lorris isn't a~simple application nor is it a~toolbox focused on one narrow area of use, because the whole set is continuously growing and because scope of use for all features and modules of Lorris is too big, it is impossible to briefly describe it all in limited scope of annotation.
 
-To get better notion of what can one achieve with Lorris, please refer to introductory chapter of this work (English version of this text is available on enclosed CD as PDF file).
+To get better notion of what one can achieve with Lorris, please refer to introductory chapter of this work (English version of this text is available on enclosed CD as PDF file).
 
-Main asset of this software package is the ability to significantly speed-up and simplify developement and testing of various applications for microcontrollers, typically programming and controlling various kinds of robots.
+Main asset of this software package is the ability to speed-up and simplify developement and testing of various applications for microcontrollers, typically programming and controlling various kinds of robots.
 
 \D \B{Key words:} binary data analysis, programming and control of robots, developement for microcontrollers, programming of microchips
 
@@ -311,7 +311,7 @@ Main asset of this software package is the ability to significantly speed-up and
 \section*{Úvod}
 \addcontentsline{toc}{section}{Úvod} % přidá položku úvod do obsahu
 \label{uvod}
-Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat při vývoji, ladění a~řízení zejména robotů, ale i~jiných elektronických zařízení. V~této kapitole najdete stručně popsány nejdůležitější vlastnosti jednotlivých modulů a~dále v~práci jsou pak všechny moduly důkladně popsány v~jednotlivých kapitolách.
+Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat při vývoji, ladění a~řízení zejména robotů, ale i~jiných elektronických zařízení. V~této kapitole najdete stručně popsány nejdůležitější vlastnosti jednotlivých modulů a~dále v~práci jsou pak všechny moduly důkladně popsány v~samostatných kapitolách.
 
 \subsection*{Modul: analyzér}
 \addcontentsline{toc}{subsection}{Modul: analyzér}
@@ -324,16 +324,16 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
     \item Analyzér je ideální i~pro snadné zobrazování dat z~prvků, u~kterých není vhodné jako výstup použít čísla -- například barevný senzor.
     \item Některé widgety mohou posílat data i~směrem do zařízení. Díky tomu je možné kromě zobrazování dat jejich prostřednictvím zařízení i~ovládat.
     \item Pozornost si zaslouží widget \uv{script}. Uživatel v~něm může napsat vlastní script, který zpracovává příchozí data. Script může využít ostatní widgety a~další části Lorris, díky tomu lze zobrazit i~jinými způsoby interpretovat takřka jakákoliv data.
-    \item Pomocí scriptu lze upravovat i~samotnou sadu Lorris.
+    %\item Pomocí scriptu lze upravovat i~samotnou sadu Lorris.
 \end{itemize}
 
 \subsection*{Modul: programátor}
 \addcontentsline{toc}{subsection}{Modul: programátor}
 \begin{itemize}
-    \item Grafické rozhraní pro několik typů bootloaderů a~programátorů pro mikročipy.
+    \item Grafické rozhraní pro několik typů bootloaderů\footnote{\It{Bootloader} -- zde malý vedlejší program, který mimo jiné umožňuje programování hlavního programu čipu bez nutnosti použít programátor} a~programátorů pro mikročipy.
     \item Dokáže do čipu zapistovat program, číst a~mazat paměť čipu nebo programovat pojistky.
     \item Oficiální GUI k~programátoru Shupito.
-    \item Shupito je programátor mikrokontrolérů. Na jeden konec programátoru se připojí čip, na druhý počítač -- bez programátoru nelze do některých mikrokontrolérů nahrát program.
+    \item Shupito je programátor mikrokontrolérů. Na jeden konec programátoru se připojí čip, na druhý počítač -- bez programátoru nelze do některých čipů nahrát program.
 \end{itemize}
 
 \subsection*{Modul: terminál}
@@ -349,10 +349,9 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
     \item Umonžňuje vzdáleně ladit, řídit, či jinak komunikovat se zařízením pomocí sítě Internet.
 \end{itemize}
 ~
-\vspace{7mm}
+\vspace{5mm}
 
 \noindent Anglická verze tohoto textu a~propagační poster jsou dostupné na přiloženém CD ve formátu PDF.\\
-\\
 \noindent\It{Enclosed CD contains English version of this work and promotional poster as PDF files.}
 
 \section{Motivace}
@@ -391,7 +390,7 @@ Aplikací, které mají podobné určení (tj. vyčítání dat ze sériového p
 \newpage
 \subsection{Porovnání aplikací}
 %\addcontentsline{toc}{subsection}{Porovnání aplikací}
-Následující tabulka shrnuje funkce a~vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v~kapitole \uv{Požadavky na aplikaci}.
+Následující tabulka shrnuje funkce a~vlastnosti jednotlivých programů. Číslování požadavků odpovídá seznamu v~kapitole \ref{reqs}.
 
 \vspace{5mm}
 
@@ -435,10 +434,10 @@ Program je navrhnutý jako modulární aplikace, aby mohl zastřešit několik s
 \begin{itemize}
     \item Sériový port
     \item Shupito Tunel (virtuální sériový port, viz kapitola \ref{tunel})
-    \item TCP socket\footnote{\It{Transmission Control Protocol} -- připojení přes internet.}
+    \item TCP socket (připojení přes internet)
     \item Načtení dat ze souboru
 \end{itemize}
-Je možné mít připojeno více různých modulů na jedno zařízení.  
+Je možné mít připojeno více různých modulů na jedno zařízení.
 
 
 \begin{figure}[H]
@@ -460,7 +459,7 @@ Je možné mít připojeno více různých modulů na jedno zařízení.
 Lorris dokáže uložit vše, co má uživatel aktuálně otevřené (záložky, jejich uspořádání, informace o~připojení, data jednotlivých záložek atd.), jako tzv. sezení (anglicky \It{session}). Sezení je možné později načíst a~tímto se vrátit k~předchozí práci. Lorris automaticky ukládá sezení před svým ukončením, takže když uživatel program znovu otevře, vše je ve stejném stavu, jako když aplikaci opouštěl.
 
 \subsection{Automatická aktualizace}
-Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zda je dostupná nová verze a~pokud ano, zobrazí uživateli malé upozornění:
+Lorris se pod Windows dokáže sama aktualizovat. Při spuštění kontroluje zda je dostupná nová verze a~pokud ano, zobrazí uživateli malé upozornění.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/update_notify.png}
@@ -486,7 +485,7 @@ V~případě, že uživatel aktualizaci potvrdí, se Lorris ukončí a~spustí s
 \end{center}
 \end{figure}
 
-Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a~zobrazuje je v~grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a~boxu v~horní části okna. Data (přijatá data, struktura packetů a~rozestavení a~nastavení widgetů) je také možné uložit do souboru a~později zase v~programu otevřít.
+Tento modul parsuje data (strukturované do packetů) přicházející ze zařízení a~zobrazuje je v~grafických \uv{widgetech}. Zpracovaná data si aplikace ukládá do paměti -- listování packety je možné pomocí posuvníku a~boxu v~horní části okna. Data (přijatá data, strukturu packetů a~rozestavení a~nastavení widgetů) je také možné uložit do souboru a~později zase v~programu otevřít.
 
 Struktura dat se nastavuje v~samostatném dialogu (viz obrázek \ref{Analyzer_struct}), kde je možno nastavit délku packetu, jeho endianness\footnote{\It{Endianness} -- pořadí uložení bajtů v~paměti počítače}, přitomnost hlavičky a~její obsah -- statická data (\uv{start bajt}), délka packetu (pokud je proměnná), příkaz a~ID zařízení. Podle příkazu a~ID zařízení je možno později data filtrovat.
 
@@ -500,9 +499,9 @@ Poté widget zobrazuje data tohoto bajtu, nebo tento bajt bere jako první, poku
 
 Nastavení widgetu jsou přistupná v~kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a~další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u~jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a~velikost.
 
-Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k~síti anebo k~ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a~rychle duplikovat -- stačí přemístit widget se stiknutou klávesou control.
+Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k~síti anebo k~ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a~rychle duplikovat pomocí chycení a přetažení se stiknutou klávesou control -- místo přesunutí se widget zkopíruje a uživatel v té chvíli přesunuje jeho kopii.
 
-U~některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí gesta myší--stačí widget chytit jako při přesouvání a~\uv{zatřepat} s~ním zleva doprava. Při přesunutí se pak widget změnší na svoji původní velikost.
+U~některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí jednoduchého  gesta myší~--~stačí widget chytit jako při přesouvání a~\uv{zatřepat} s~ním zleva doprava. Při opětovném přesunutí se pak widget změnší na svoji původní velikost.
 
 \begin{figure}[H]
 \begin{center}
@@ -576,11 +575,11 @@ Widget dále dokáže zarovnat číslo na maximální délku jeho datového typu
     \item Binární -- zobrazí číslo ve dvojkové soustavě.  Dostupné pouze pro přirozená čísla.
 \end{itemize}
 
-Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených senzorů vzdálenosti, kdy se hodnota, kterou na senzoru naměří AD převodník, musí přepočítat pomocí určité rovnice, abychom dostali hodnotu v~centimetrech. Výraz může vypadat například takto:
+Další funkcí je přepočítávání hodnoty pomocí výrazu. Toto se hodí například u~infračervených dálkoměrů, kdy se hodnota, kterou na dálkoměru naměří AD převodník, musí přepočítat pomocí určité rovnice, abychom dostali hodnotu v~centimetrech. Výraz může vypadat například takto:
 \begin{center}
 \verb|2914/(%n+5)-1|
 \end{center}
-kde \verb|%n| je zástupná sekvence pro číslo, které by se jinak ve widgetu zobrazilo. Tento výraz je pro přepočítání vzdálenosti na centimetry podle hodnoty přečtené z infračerveného senzoru vzdálenosti Sharp GP2Y0A41.
+kde \verb|%n| je zástupná sekvence pro číslo, které by se jinak ve widgetu zobrazilo. Tento výraz je pro přepočítání vzdálenosti na centimetry podle hodnoty přečtené z infračerveného dálkoměru Sharp GP2Y0A41.
 
 \subsection{Widget: sloupcový bar}
 \begin{figure}[H]
@@ -589,7 +588,7 @@ kde \verb|%n| je zástupná sekvence pro číslo, které by se jinak ve widgetu 
 \caption{Widget: sloupcový bar}
 \end{center}
 \end{figure}
-Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u~čísla), orientaci (vertikální nebo horizontální) a~rozmezí zobrazovaných hodnot. Stejně jako widget číslo také dokáže přepočívat hodnotu podle výrazu.
+Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupních dat (stejně jako u~\It{čísla}), orientaci (vertikální nebo horizontální) a~rozmezí zobrazovaných hodnot. Stejně jako widget \It{číslo} také dokáže přepočívat hodnotu podle výrazu.
 
 \subsection{Widget: barva}
 \begin{figure}[H]
@@ -601,6 +600,7 @@ Widget zobrazuje hodnotu ve sloupcovém baru. Lze nastavit datový typ vstupníc
 Tento widget dokáže zobrazit příchozí hodnoty jako barevný obdélník. Podporované formáty:
 \begin{itemize}
     \item {\bf RGB} (8b/kanál, 3x uint8)
+    \item {\bf RGB} (8b/kanál, 1x uint32)
     \item {\bf RGB} (10b/kanál, 3x uint16)
     \item {\bf RGB} (10b/kanál, 1x uint32)
     \item {\bf Odstíny šedé} (8b/kanál, 1x uint8)
@@ -632,7 +632,7 @@ Widget graf zobrazuje hodnoty v~grafu -- na osu $x$ se vynáší pořadí dat a~
 \label{script_w}
 \end{center}
 \end{figure}
-Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Může při tom použít buďto Python nebo QtScript\cite{qtscript} (jazyk založený na standardu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a~ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a~posílat data do zařízení. Základní výstup může být zobrazen v~terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a~nastavuje do nich data. Reference k~vestavěným funkcím, které lze použít ve scriptu, je v~\hyperref[script_ref]{příloze A}.
+Tento widget umožňuje zpracovávání dat pomocí scriptu, který si napíše sám uživatel. Může při tom použít buďto Python nebo QtScript\cite{qtscript} (jazyk založený na standardu ECMAScript\footnote{\It{ECMAScript} -- scriptovací jazyk stadartu ECMA-262 a~ISO/IEC 16262}, stejně jako JavaScript\footnote{\It{JavaScript} -- objektově orientovaný skriptovací jazyk, používaný hlavně na webu}, díky tomu jsou tyto jazyky velmi podobné). Script může zpracovávat příchozí data, reagovat na stisky kláves a~posílat data do zařízení. Základní výstup může být zobrazen v~terminálu (viz obrázek \ref{script_w}), je však možné využít ke zobrazování také ostatní widgety (číslo, bar, ...) -- script si je vytvoří jako objekt a~nastavuje do nich data. Reference k~vestavěným funkcím, které lze ve scriptu použít, je v~\hyperref[script_ref]{příloze A}.
 
 Editor scriptu má v~sobě vestavěné ukázky kódu, například jak nastavit hodnotu existujícího widgetu \It{číslo}, jak odeslat data nebo jak reagovat na stisknutí klávesy (na obrázku \ref{script_src} jsou skryté pod ikonkou žárovky). Je v~něm také odkaz na automaticky generovanou dokumentaci, která je na adrese \url{http://technika.junior.cz/docs/Lorris/}.
 \begin{figure}[h]
@@ -679,7 +679,7 @@ Canvas.drawRect(10, 55, 110, 20);
 \caption{Widgety tlačítko a~slider}
 \end{center}
 \end{figure}
-Tyto dva widgety pouze umožňují interakci se scriptem -- po stisknutí tlačítka se zavolá metoda ve scriptu, ve které může uživatel například poslat příkaz do robota, při posunutí slideru se ve scriptu zavolá metoda, ve které může uživatel například změnit rychlost robota a~podobně. Tlačítku lze nastavit klávesovou zkratku a~slideru zkratku pro \uv{zaostření}, aby ho uživatel poté mohl posouvat pomocí šipek na klávesnici.
+Tyto dva widgety pouze umožňují interakci se scriptem -- po stisknutí tlačítka se zavolá metoda ve scriptu, ve které může uživatel například poslat příkaz do robota, při posunutí slideru se ve scriptu zavolá metoda, ve které může uživatel například změnit rychlost robota a~podobně. Tlačítku lze nastavit klávesovou zkratku a~slideru zkratku pro \uv{zaostření}(\It{focus}), aby ho uživatel poté mohl posouvat pomocí šipek na klávesnici.
 \begin{listing}[H]
 \begin{jscode}
 function Slider_valueChanged() {
@@ -727,7 +727,7 @@ maxSpdLabel.text = "Max speed:";
 \caption{Widget status}
 \end{center}
 \end{figure}
-Widget status je určený k~zobrazování stavu například tlačítka (stisknuté/nestisknuté) nebo chybového stavu z~enkodéru (0 = vše je v~pořádku, ostatní čísla je možné dohledat v~datasheetu enkodéru). Uživatel k~příchozím hodnotám přiřadí jednotlivé stavy (text a~barvu, viz obrázek \ref{status_dlg}) a~widget je poté zobrazuje. Lze nastavit i~\uv{neznámou hodnotu}, která se zobrazí pokud žádný z~nadefinovaných stavů neodpovídá příchozí hodnotě.
+Widget status je určený k~zobrazování stavu například tlačítka (stisknuté/nestisknuté) nebo chybového stavu z~enkodéru (0 = vše je v~pořádku, ostatní čísla je možné dohledat v~dokumentaci enkodéru). Uživatel k~příchozím hodnotám přiřadí jednotlivé stavy (text a~barvu, viz obrázek \ref{status_dlg}) a~widget je poté zobrazuje. Lze nastavit i~\uv{neznámou hodnotu}, která se zobrazí pokud žádný z~nadefinovaných stavů neodpovídá příchozí hodnotě.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{img/w_status_dlg.png}
@@ -757,6 +757,8 @@ Tento widget je zde pouze pro pohodlí uživatele, jedná se totiž o~widget \It
 \end{center}
 \end{figure}
 Jednoduchá proxy mezi sériovým portem a~TCP socketem. Vytvoří server, na který je možné se připojit z~Lorris nebo jiného programu na jiném počítači. Po připojení se přeposílají data ze sériového portu připojeným klientům a~naopak.
+
+V praxi to znamená, že je možné přes internet na dálku ovládat robota nebo nahrát program do čipu.
 
 \subsection{Proxy tunel}
 Tento modul také přidává nové virtuální připojení -- \uv{proxy tunel}. Pokud toto připojení použije nějáký z~dalších modulů v~Lorris, tak může posílat a~přijímat data od všech TCP klientů připojených na proxy. Toto je možné využít například tak, že v~modulu analyzér je script, který generuje data a~přes proxy tunel je pak odesílá všem klientům připojeným na proxy.
@@ -799,12 +801,11 @@ Shupito dokáže vytvořit tunel\footnote{Přímé spojení programovaného čip
 \begin{center}
 \includegraphics[width=\textwidth]{img/shupito_promo.jpg}
 \caption{Programátor \It{Shupito}}
-\label{prog_mini}
 \end{center}
 \end{figure}
 
 \subsection{Bootloader avr232boot}
-Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a~je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v~čipu co nejméně místa. Původně uměl programovat jen flash paměť čipu (ta, ve které program), já jsem do něj přidal podporu čtení a~zapisování paměti EEPROM\footnote{Typ paměti, která udrží data i~bez proudu. V~čipech se používá na uložení např. nastavení}.
+Autorem tohoto bootloaderu je také Martin Vejnár. Avr232boot je pouze pro čipy Atmel ATmega a~je inspirovaný referenčním bootloaderem pro tyto mikrokontroléry, je však napsaný tak, aby zabíral v~čipu co nejméně místa. Původně uměl programovat jen flash paměť čipu (ta, ve které je program), já jsem do něj přidal podporu čtení a~zapisování paměti EEPROM\footnote{Typ paměti, která udrží data i~bez proudu. V~čipech se používá na uložení např. nastavení}.
 
 Lorris dokáže pomocí tohoto bootloaderu programovat flash paměť a~číst a~programovat EEPROM.
 
@@ -904,7 +905,7 @@ Dva widgety \It{číslo} jsou zde použity k~zobrazení aktuální rychlosti a~z
 \caption{Ovládání enkodéru}
 \end{center}
 \end{figure}
-Tyto widgety \It{tlačítko} a~\It{vstup} obstarávají ovládání enkodéru. Tlačítko \uv{reset} vrátí počítadlo ujeté vzdálenosti na nulu, tlačítko \uv{clear} pošle enkodéru příkaz k~resetu chybového kódu (kód po chybě zůstává, i~když příčina již byla napravena, je třeba ho resetovat) a~tlačítko \uv{Ovladani} zastavuje a~spouští posílání dat z~enkodéru. Všechny tyto widgety jsou připojené na script (do obrázku \ref{analyzer_all} se už widget script nevešel), který po kliknutí na tlačíka odešle do enkodéru příslušné příkazy.
+Tyto widgety \It{tlačítko} a~\It{vstup} obstarávají ovládání enkodéru. Tlačítko \uv{reset} vrátí počítadlo ujeté vzdálenosti na nulu, tlačítko \uv{clear} pošle enkodéru příkaz k~resetu chybového kódu (kód po chybě zůstává, i~když příčina již byla napravena, je třeba ho resetovat) a~tlačítko \uv{Ovladani} zastavuje a~spouští posílání dat z~enkodéru. Všechny tyto widgety jsou připojené na script (do obrázku \ref{analyzer_all} se už widget \It{script} nevešel), který po kliknutí na tlačíka odešle do enkodéru příslušné příkazy.
 \begin{listing}[H]
 \begin{jscode}
 var run = true;
@@ -927,9 +928,9 @@ function startStop_clicked() {
 \subsection{Ladění PID regulátoru}
 {\bf Situace:} Robot kvůli rozdílnému výkonu motorů nejede rovně. Tento problém jsem se rozhodl řešit pomocí PID regulátoru, pro jehož správnou funkci je potřeba nastavit několik konstant. \\
 \\
-{\bf Řešení:} Program v~robotovi mi posílá aktualní výkon motorů a~nastavení konstant PID regulátoru a~umožňuje přenastavení těchto konstant a~ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Terminál, protože čip má v~sobě bootloader -- díky tomu nemusím mít připojený programátor.  
+{\bf Řešení:} Program v~robotovi mi posílá aktualní výkon motorů a~nastavení konstant PID regulátoru a~umožňuje přenastavení těchto konstant a~ovládání robota. Tento program do robota nahrávám přes bluetooth pomocí modulu Programátor, protože čip má v~sobě bootloader avr232boot -- díky tomu nemusím mít připojený programátor.  
 
-V~modulu analyzér si zobrazím aktuální hodnoty PID regulátoru (jako číslo) a~výkon motorů (jako graf či číslo). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
+V~modulu analyzér si zobrazím aktuální hodnoty konstant PID regulátoru (widget \It{vstup}) a~výkon motorů (jako \It{graf} či \It{číslo}). Do widgetu script napíši jednoduchý script, který po stisku kláves změní nastavení konstant regulátoru nebo rozjede/zastaví robota.
 
 Tento postup jsem použil při ladění PID regulátoru robota 3pi\cite{3pi} během přípravy na soutěž \It{Line Follower Standard}, která je součástí Robotického dne 2012\cite{rob_den}. Na soutěži jsem skončil na 2. místě z~22 robotů\cite{robotday_res}.
 \begin{figure}[H]
@@ -989,7 +990,7 @@ V~tomto příkladu používám jednoduché \uv{akce}, které robot postupně pro
 \end{figure}
 Jako další vývojový stupeň jsem začal s~vývojem Lorris pro platformu Google Android\cite{android}, protože chytrá zařízení s~tímto operačním systémem jsou často při ruce a~stačí k~rychlému vyřešení menšího problému.
 
-Aplikace {\bf Lorris mobile} slouží jako přenosný doplněk k~počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce desktopové aplikace ale má pomoci zejména když je v~terénu potřeba rychle něco přenastavit či poupravit.
+Aplikace {\bf Lorris mobile} slouží jako přenosný doplněk k~počítačové verzi Lorris -- nemusí nutně obsahovat všechny funkce desktopové aplikace, ale má pomoci zejména když je v~terénu potřeba rychle něco přenastavit či poupravit.
 
 Aplikace funguje na telefonech a~tabletech s~OS Android ve verzi 2.2 a~vyšší, je optimalizována i~pro větší obrazovky tabletů a~je dostupná v~oficiálním distribučním kanále Android aplikací -- v~obchodě Google Play\cite{gplay}, stačí hledat heslo \uv{Lorris}.
 
@@ -1089,13 +1090,30 @@ V~budoucnu bych rád pokračoval v~přidávání dalších funkcí do počítač
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\hoffset=-1in
+\voffset=-1in
+\topmargin=20pt
+\headsep=0pt
+\headheight=0pt
 
-%\section*{PŘÍLOHY}
-%\addcontentsline{toc}{section}{PŘÍLOHY}
+\section*{~~~~~~~~PŘÍLOHA A: PPP}
+\addcontentsline{toc}{section}{PŘÍLOHA A: PPP}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.9]{img/junior.png}
+\end{center}
+\end{figure}
 
-\section*{PŘÍLOHA A:}
+\newpage
+\hoffset=0pt
+\voffset=0pt
+\topmargin=20pt
+\headsep=25pt
+\headheight=12pt
+
+\section*{PŘÍLOHA B:}
 \section*{Reference k~widgetu \It{script}}
-\addcontentsline{toc}{section}{PŘÍLOHA A: Reference k~widgetu \It{script}}
+\addcontentsline{toc}{section}{PŘÍLOHA B: Reference k~widgetu \It{script}}
 \label{script_ref}
 Widget \It{script} umožňuje parsování dat pomocí scriptu, který se píše v~QtScriptu, který je založený na standardu ECMAScript, na kterém je založený JavaScript. Jazyk je hodně podobný JavaScriptu a~většinou můžete použít jeho referenci. Tento text předpokládá alespoň základní znalost JavaScriptu nebo podobného programovacího jazyku.
 
@@ -1387,7 +1405,7 @@ var sin = graf.addCurve("sin", "blue");
 
 // pridani bodu do krivky sin
 var sinVal = 0;
-for(var i~= 0; i~< 500; ++i) {
+for(var i = 0; i < 500; ++i) {
     sin.addPoint(i, Math.sin(sinVal)*100);
     sinVal += 0.1;
 }
@@ -1415,8 +1433,8 @@ var vstup = newWidget(WIDGET_INPUT,
 var label = vstup.newWidget("QLabel", 1);
 
 // zarovnani textu na stred. 
-// 0x0080 a~0x0004 jsou konstanty Qt Frameworku 
-// Qt::AlignHCenter a~Qt::AlignVCenter
+// 0x0080 a 0x0004 jsou konstanty Qt Frameworku 
+// Qt::AlignHCenter a Qt::AlignVCenter
 label.alignment = 0x0080 | 0x0004;
 
 // nastaveni textu
@@ -1533,7 +1551,7 @@ c.drawRect(10, 55, 110, 20);
 
 \begin{listing}[H]
 \begin{jscode}
-var s~= newWidget(WIDGET_STATUS, "stav", 0, 0, 200, 0);
+var s = newWidget(WIDGET_STATUS, "stav", 0, 0, 200, 0);
 
 s.addStatus(2, false, "Porucha", "orange", "black");
 s.setValue(2);
@@ -1611,7 +1629,7 @@ function Slider_orientationChanged() {
 
 \begin{listing}[H]
 \begin{jscode}
-var s~= newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
+var s = newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
 
 s.setType(true); // desetinna cisla
 s.setMax(6.28);
@@ -1642,15 +1660,15 @@ Na uložení hodnot použitých ve scriptu (například nastavení) je připrave
 
 \begin{listing}[H]
 \begin{jscode}
-var s~= newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
+var s = newWidget(WIDGET_SLIDER, "Slider", 0, 0, 300, 0);
 s.setType(true); // desetinna cisla
 s.setMax(6.28);
 
-// Nacte hodnotu, ktera byla pred tim ulozena v~metode save()
+// Nacte hodnotu, ktera byla pred tim ulozena v metode save()
 var ulozene = storage.getFloat("hodnotaPosuvniku", 3.14);
 s.setValue(ulozene);
 
-// Nacte pokusne pole cisel ulozene v~metode save()
+// Nacte pokusne pole cisel ulozene v metode save()
 var pokus = storage.getInt32Array("pokusnePole", new Array());
 appendTerm("Ulozene pole: " + pokus + "\n");
 
@@ -1714,7 +1732,7 @@ if(joy) {
 }
 
 function axesChanged(axes) {
-    for(var i~= 0; i~< axes.length; ++i) {
+    for(var i = 0; i < axes.length; ++i) {
         var hodnota = joy.getAxisVal(axes[i]);
         appendTerm("Osa " + axes[i] + ": " + hodnota + "\n");
     }
@@ -1737,9 +1755,9 @@ function buttonChanged(id, state) {
 %\end{itemize}
 
 \newpage
-\section*{PŘÍLOHA B:}
+\section*{PŘÍLOHA C:}
 \section*{Knihovny třetích stran}
-\addcontentsline{toc}{section}{PŘÍLOHA B: Knihovny třetích stran}
+\addcontentsline{toc}{section}{PŘÍLOHA C: Knihovny třetích stran}
 \begin{itemize}
     \item {\bf Qwt}\cite{qwt} je knihovna pro Qt Framework obsahující tzv. widgety pro aplikace technického charakteru -- grafy, sloupcové ukazatele, kompasy a~podobně.
     \item {\bf QExtSerialPort}\cite{qext} poskytuje připojení k~sériovému portu a~také dokáže vypsat seznam nalezených portů v~počítačí.
@@ -1753,9 +1771,9 @@ function buttonChanged(id, state) {
     \item {\bf libyb}\cite{libyb} je knihovna která obstarává komunikaci s~programátorem Shupito
 \end{itemize}
 
-\section*{PŘÍLOHA C:}
+\section*{PŘÍLOHA D:}
 \section*{Licence}
-\addcontentsline{toc}{section}{PŘÍLOHA C: Licence}
+\addcontentsline{toc}{section}{PŘÍLOHA D: Licence}
 Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých programů a~knihoven jsou následující:
 \begin{itemize}
     \item {\bf Qt Framework} je distribuován pod licencí GNU LGPLv2.1\cite{lgpl}
@@ -1775,9 +1793,9 @@ Lorris je dostupný pod licencí GNU GPLv3\cite{gpl3}, licence použitých progr
 Všechny tyto licence umožňují svobodné používání a~šíření kódu.
 
 \newpage
- \section*{PŘÍLOHA D:}
+ \section*{PŘÍLOHA E:}
  \begin{thebibliography}{99}
-\addcontentsline{toc}{section}{PŘÍLOHA D: Reference}
+\addcontentsline{toc}{section}{PŘÍLOHA E: Reference}
  %% 99 znamená, že maximální délka čísla literatury jsou dva znaky
 % seznam samozřejmě změníte podle svého, tohle je pouze ukázka formátování
 
@@ -1943,8 +1961,8 @@ Všechny tyto licence umožňují svobodné používání a~šíření kódu.
 \begin{landscape}
 
 \begin{center}
-\section*{PŘÍLOHA E: Velké obrázky}
-\addcontentsline{toc}{section}{PŘÍLOHA E: Velké obrázky}
+\section*{PŘÍLOHA F: Velké obrázky}
+\addcontentsline{toc}{section}{PŘÍLOHA F: Velké obrázky}
 \end{center}
 
 \begin{figure}[h]
@@ -1978,11 +1996,10 @@ Všechny tyto licence umožňují svobodné používání a~šíření kódu.
 \end{center}
 \end{figure}
 
-
 \newpage
-\section*{PŘÍLOHA F:}
+\section*{PŘÍLOHA G:}
 ~
-\addcontentsline{toc}{section}{PŘÍLOHA F: Seznam obrázků}
+\addcontentsline{toc}{section}{PŘÍLOHA G: Seznam obrázků}
 \listoffigures   % seznam obrázkù 
 
 \end{document}
