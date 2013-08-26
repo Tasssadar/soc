@@ -107,7 +107,7 @@
 %\makeindex % příprava pro výrobu indexu (jestli ho chcete)
 
 %%    VLNKA <fileinput>  KkSsVvZzOoUuAaIi        
-% Defaultni  koncovka pro <fileinput> je  ".tex"
+% Defaultni  koncovka pro <fileinput> je  ".tex"
 %FIXME: haze error
 %\cstieon % Vypne chovani vlnky jako tvrde mezery v matematickem rezimu
 
@@ -346,7 +346,7 @@ Lorris je rozsáhlá sada nástrojů, které mají společný cíl -- pomáhat p
 \addcontentsline{toc}{subsection}{Modul: proxy mezi sériovým portem a~TCP socketem}
 \begin{itemize}
     \item Vytvoří server připojený na sériový port -- k~tomuto portu se pak lze připojit odkudkoliv z~internetu.
-    \item Umonžňuje vzdáleně ladit, řídit, či jinak komunikovat se zařízením pomocí sítě Internet.
+    \item Umožňuje vzdáleně ladit, řídit, či jinak komunikovat se zařízením pomocí sítě Internet.
 \end{itemize}
 ~
 \vspace{5mm}
@@ -403,6 +403,17 @@ Následující tabulka shrnuje funkce a~vlastnosti jednotlivých programů. Čí
     StampPlot Pro               & \Has   & \Has   & \NoHas & \NoHas & \Has   & \NoHas & \Has   \\ \hline 
     LabVIEW                     & \Has   & \Has   & \NoHas & \Has   & \NoHas & \NoHas & \Has   \\ \hline
 %    Lorris                      & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   & \Has   \\ \hline 
+
+%    \hline                     %                            oss      nezavislost cena
+%    Požadavky:                  & 1      & 2      & 3       & 4      & 5      & 6      & cena      \\ \hline
+%    LabVIEW                     & \Has   & \Has   & \NoHas  & \NoHas & \Has   & \NoHas & 65000,- kč\\ \hline
+%    MATLAB+Simulink             & \Has   & \Has   & \NoHas  & \NoHas & \Has   & \NoHas & 95000,- kč \\ \hline
+%    ControlWeb                  & \Has   & \Has   & \NoHas  & \NoHas & \Has   & \NoHas & 19000,- kč \\ \hline
+%    SerialChart                 & \Has   & \NoHas & \Has    & \Has   & \Has   & \Has   & Open-source \\ \hline
+%    WinWedge                    & \NoHas & \Has   & \Has    & \NoHas & \NoHas & \NoHas & 5000,- kč \\ \hline
+%    Advanced Serial Data Logger & \NoHas & \Has   & \Has    & \NoHas & \NoHas & \NoHas & 2000,- kč \\ \hline
+%    StampPlot Pro               & \Has   & \Has   & \NoHas  & \NoHas & \Has   & \Has   & Freeware  \\ \hline
+%    Lorris                      & \Has   & \Has   & \Has    & \Has   & \Has   & \Has  \\ \hline
 \end{tabular}
 
 \vspace{5mm}
@@ -497,11 +508,11 @@ Po nastavení struktury se přijatá data začnou po packetech zobrazovat v~horn
 
 Poté widget zobrazuje data tohoto bajtu, nebo tento bajt bere jako první, pokud jsou data delší. Aby bylo možné zpětně poznat, který bajt je k~widgetu přiřazen, je po najetí myši na widget červeně zvýrazněn.
 
-Nastavení widgetu jsou přistupná v~kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a~další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u~jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a~velikost.
+Nastavení widgetu jsou přístupná v~kontextovém menu po pravém kliknutí myší na widget. Nastavit lze jméno a~další parametry podle typu widgetu -- podrobněji jsou možnosti nastavení popsány u~jednotlivých widgetů. Widgety je taktéž možné \uv{uzamknout}, aby nebylo možné je zavřít, měnit jejich pozici a~velikost.
 
-Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k~síti anebo k~ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a~rychle duplikovat pomocí chycení a přetažení se stiknutou klávesou control -- místo přesunutí se widget zkopíruje a uživatel v té chvíli přesunuje jeho kopii.
+Widgety je možné přesně rozmisťovat pomocí \uv{přichytávání} k~síti anebo k~ostatním widgetům pomocí zarovnávacích čar (viz obrázek \ref{widget_lines}). Lze je také jednoduše a~rychle duplikovat pomocí chycení a přetažení se stisknutou klávesou control -- místo přesunutí se widget zkopíruje a uživatel v té chvíli přesunuje jeho kopii.
 
-U~některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí jednoduchého  gesta myší~--~stačí widget chytit jako při přesouvání a~\uv{zatřepat} s~ním zleva doprava. Při opětovném přesunutí se pak widget změnší na svoji původní velikost.
+U~některých widgetů se může hodit následující funkce: widgety je možné rychle zvětšit tak, aby zabraly celou viditelnou plochu pomocí jednoduchého  gesta myší~--~stačí widget chytit jako při přesouvání a~\uv{zatřepat} s~ním zleva doprava. Při opětovném přesunutí se pak widget zmenší na svoji původní velikost.
 
 \begin{figure}[H]
 \begin{center}

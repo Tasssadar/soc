@@ -123,3 +123,77 @@ Použití
 
 
 
+- upoutávky z praxe, cad, excel, hledání chyb, prehledny zobrazeni, rychle se daji najit chyby
+
+
+Vážená poroto, vážení diváci, rád bych vám představil Lorris....
+Lorris je sada nástrojů, které mají za cíl pomáhat při vývoji robotů, ale i jiných el. zařízení - jak to vypadá ...
+...toto je hlavní okno Lorris....
+- uživatel musí otevřít některý  vfrrrrrffffz nástrojů, které Lorris obsahuje. V současné době má na výběr ze 4, přičemž všechny mají pomáhat při vývoji nějákého elektronického zařízení, typicky robota. Jednotlivé nástroje vám ukážu později, teď se soustředím na to, jak funguje uživatelské rozhraní lorris.
+jednotlivé nástroje se otevírají v záložkách podobně jako stránky v internetovém prohlížeči.
+- více oken
+- dají se dát vedle sebe
+- ukládání sezení
+
+----popis nástrojů, analyzer+enkodér
+
+- slide popis
+
+- důvody proč, ohlasy ukázali že je to potřeba, kuba, letadlo
+
+další porovnání mám naživo, robot david....fotka...popis
+
+...tohle vše umí na PC, ale občas je potřeba něco rychle upravit, nebo přeprogramovat čip, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- představení
+- Motivace - potřeba zobrazovat proud
+  - takhle to vypada v hexu
+
+
+
+- slide hlavní výhody 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
